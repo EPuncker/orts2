@@ -668,7 +668,7 @@
 	<house name="Greenshore Village 4" houseid="2092" entryx="32259" entryy="32041" entryz="7" rent="780" townid="2" size="10" />
 	<house name="Greenshore Village 6" houseid="2093" entryx="32258" entryy="32041" entryz="6" rent="4360" townid="2" size="62" />
 	<house name="Greenshore Village 7" houseid="2094" entryx="32266" entryy="32032" entryz="7" rent="1260" townid="2" size="18" />
-	<house name="The Tibianic" houseid="2095" entryx="32277" entryy="32011" entryz="5" rent="34500" townid="2" size="450" />
+	<house name="The Tibianic" houseid="2095" entryx="32277" entryy="32011" entryz="5" rent="34500" townid="2" size="449" />
 	<house name="Fibula Village 5" houseid="2097" entryx="32171" entryy="32440" entryz="7" rent="1790" townid="2" size="21" />
 	<house name="Fibula Village 4" houseid="2098" entryx="32175" entryy="32440" entryz="7" rent="1790" townid="2" size="21" />
 	<house name="Fibula Village, Tower Flat" houseid="2099" entryx="32159" entryy="32439" entryz="7" rent="5105" townid="2" size="73" />
@@ -971,7 +971,7 @@
 	<house name="Outlaw Camp 12 (Shop)" houseid="2404" entryx="32661" entryy="32200" entryz="8" rent="280" townid="3" size="6" />
 	<house name="Outlaw Camp 13 (Shop)" houseid="2405" entryx="32666" entryy="32200" entryz="8" rent="280" townid="3" size="6" />
 	<house name="Outlaw Camp 14 (Shop)" houseid="2406" entryx="32665" entryy="32199" entryz="8" rent="640" townid="3" size="15" />
-	<house name="Open-Air Theatre" houseid="2407" entryx="32262" entryy="32237" entryz="7" rent="2700" townid="2" size="55" />
+	<house name="Open-Air Theatre" houseid="2407" entryx="32262" entryy="32237" entryz="7" rent="2700" townid="2" size="51" />
 	<house name="The Lair" houseid="2408" entryx="32993" entryy="32153" entryz="7" rent="7625" townid="1" size="154" />
 	<house name="Upper Barracks 2" houseid="2409" entryx="32605" entryy="31920" entryz="5" rent="210" townid="3" size="4" />
 	<house name="Upper Barracks 3" houseid="2410" entryx="32605" entryy="31917" entryz="5" rent="210" townid="3" size="4" />

@@ -5,10 +5,6 @@
 	<movevent event="AddItem" tileitem="1" itemid="8058" script="others/itemteleports.lua" />
 	<movevent event="AddItem" tileitem="1" fromaid="50240" toaid="50241" script="others/itemteleports.lua" />
 
-	<!-- allowMovement -->
-	<movevent event="StepIn" actionid="60000" script="allowMovement.lua" />
-	<movevent event="StepOut" actionid="60000" script="allowMovement.lua" />
-
 	<!-- Rookgaard -->
 	<movevent event="StepIn" fromaid="50058" toaid = "50069" script="rookgaard/rookgaard tutorial island/tutorialTiles.lua" />
 	<movevent event="StepIn" fromaid="50075" toaid = "50079" script="rookgaard/rookgaard tutorial island/tutorialTiles.lua" />

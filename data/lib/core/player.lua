@@ -15,10 +15,6 @@ function Player.addSkillTries(...)
 	return ret
 end
 
-function Player.allowMovement(self, allow)
-	return self:setStorageValue(STORAGE.blockMovementStorage, allow and -1 or 1)
-end
-
 function Player.checkGnomeRank(self)
 	local points = self:getStorageValue(STORAGE.BIGFOOTBURDEN.RANK)
 	local questProgress = self:getStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE)
@@ -135,10 +131,6 @@ function Player.getLossPercent(self)
 		end
 	end
 	return lossPercent[blessings]
-end
-
-function Player.hasAllowMovement(self)
-	return self:getStorageValue(STORAGE.blockMovementStorage) ~= 1
 end
 
 function Player.hasRookgaardShield(self)

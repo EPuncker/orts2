@@ -4,9 +4,6 @@ Last Used Aid = 50244
 Last Used Uid = 50147
 ---//////////////////////////////////////////----
 ---//////////////////Storages////////////////////////----
-allowMovement Storage	=		100000 --Reserved to cancel player movement
-allowMovement actionId = 		60000 --Reserved to cancel player movement
----/////////////////////////////////////////////////////////////----
 Default Start Outfits Quest:		12010
 citizen Outfits (Feather Hat):		12011
 citizen Outfits (Backpack):		12012

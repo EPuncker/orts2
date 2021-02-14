@@ -934,7 +934,6 @@ Storage = {
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
-	blockMovementStorage = 100000
 }
 
 GlobalStorage = {

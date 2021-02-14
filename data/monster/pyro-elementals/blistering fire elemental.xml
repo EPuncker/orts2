@@ -43,7 +43,8 @@
 		<voice sentence="FCHHHRRR" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="166" chance="89000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="89000" />	<!-- gold coin -->
+		<item id="2148" countmax="66" chance="89000" />	<!-- gold coin -->
 		<item id="10553" chance="9300" />				<!-- fiery heart -->
 		<item id="8299" chance="9300" />					<!-- glimmering soil -->
 		<item id="2147" countmax="2" chance="4000" />	<!-- small ruby -->

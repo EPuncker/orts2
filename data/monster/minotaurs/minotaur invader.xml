@@ -27,7 +27,8 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="160" chance="59640" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="59640" />	<!-- gold coin -->
+		<item id="2148" countmax="60" chance="59640" />	<!-- gold coin -->
 		<item id="12428" countmax="2" chance="8330" />	<!-- minotaur horn -->
 		<item id="12438" chance="5040" />				<!-- piece of warrior armor -->
 		<item id="2465" chance="4390" />					<!-- brass armor -->

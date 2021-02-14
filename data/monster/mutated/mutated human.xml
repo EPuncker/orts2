@@ -55,7 +55,8 @@
 		<voice sentence="Oh by the gods! What is this... aaaaaargh!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="130" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="30" chance="88000" />	<!-- gold coin -->
 		<item id="11225" chance="19940" />				<!-- mutated flesh -->
 		<item id="2226" chance="10050" />				<!-- fishbone -->
 		<item id="2696" chance="8000" />					<!-- cheese -->

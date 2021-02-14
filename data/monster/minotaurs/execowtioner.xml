@@ -46,7 +46,8 @@
 		<voice sentence="There is excellence in execution!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="186" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="86" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="3" chance="65000" />		<!-- platinum coin -->
 		<item id="5878" chance="14000" />					<!-- minotaur leather -->
 		<!-- execowtioner mask -->

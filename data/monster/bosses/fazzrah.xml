@@ -40,7 +40,9 @@
 		<voice sentence="Zztand and fight!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="292" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="92" chance="100000" />	<!-- gold coin -->
 		<item id="5876" chance="100000" />					<!-- lizard leather -->
 		<item id="5881" chance="100000" />					<!-- lizard scale -->
 		<item id="2152" countmax="5" chance="100000" />		<!-- platinum coin -->

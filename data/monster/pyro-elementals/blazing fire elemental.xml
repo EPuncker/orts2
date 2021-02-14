@@ -39,7 +39,8 @@
 		<element icePercent="-25" />
 	</elements>
 	<loot>
-		<item id="2148" countmax="125" chance="77000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="77000" />	<!-- gold coin -->
+		<item id="2148" countmax="25" chance="77000" />	<!-- gold coin -->
 		<item id="10553" chance="5200" />				<!-- fiery heart -->
 		<item id="8299" chance="4500" />					<!-- glimmering soil -->
 		<item id="7840" countmax="3" chance="3700" />	<!-- flaming arrow -->

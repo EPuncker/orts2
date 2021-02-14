@@ -41,7 +41,8 @@
 	</immunities>
 	<loot>
 		<!-- roll of covering 100% -->
-		<item id="2148" countmax="195" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="95" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="2" chance="58000" />		<!-- platinum coin -->
 		<!-- moohtant horn -->
 		<!-- giant pacifier -->

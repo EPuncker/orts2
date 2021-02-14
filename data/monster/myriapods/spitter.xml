@@ -45,7 +45,8 @@
 		<voice sentence="Spotz!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="190" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="90" chance="100000" />	<!-- gold coin -->
 		<item id="2152" chance="75250" />					<!-- platinum coin -->
 		<item id="15481" chance="18000" />					<!-- spitter nose -->
 		<item id="15486" chance="15000" />					<!-- compound eye -->

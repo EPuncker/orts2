@@ -52,7 +52,8 @@
 		<voice sentence="Your lifeforce is waning!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="197" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="97" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="5" chance="100000" />		<!-- platinum coin -->
 		<item id="2694" chance="50000" />					<!-- bunch of wheat -->
 		<item id="7590" countmax="3" chance="31360" />		<!-- great mana potion -->

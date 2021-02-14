@@ -53,7 +53,8 @@
 		<voice sentence="You will all die!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="150" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="50" chance="100000" />	<!-- gold coin -->
 		<item id="9813" chance="59000" />					<!-- rusty legs (rare) -->
 		<item id="9810" chance="40000" />					<!-- rusty armor (rare) -->
 		<item id="7443" chance="33000" />					<!-- bullseye potion -->

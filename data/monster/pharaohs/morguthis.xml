@@ -62,7 +62,9 @@
 	</voices>
 	<loot>
 		<item id="2350" chance="100000" />				<!-- sword hilt -->
-		<item id="2148" countmax="221" chance="91000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="91000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="91000" />	<!-- gold coin -->
+		<item id="2148" countmax="21" chance="91000" />	<!-- gold coin -->
 		<item id="2144" chance="10000" />				<!-- black pearl -->
 		<item id="7368" countmax="3" chance="10000" />	<!-- assassin star -->
 		<item id="7591" chance="9500" />					<!-- great health potion -->

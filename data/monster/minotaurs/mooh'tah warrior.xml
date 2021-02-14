@@ -44,7 +44,8 @@
 		<voice sentence="Ommm!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="120" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="20" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="3" chance="40000" />		<!-- platinum coin -->
 		<item id="23573" chance="15120" />					<!-- mooh'tah shell -->
 		<item id="7589" chance="7000" />						<!-- strong mana potion -->

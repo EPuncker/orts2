@@ -59,7 +59,9 @@
 		<voice sentence="I bring your deathhh, mortalssss" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="242" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="42" chance="97000" />	<!-- gold coin -->
 		<item id="2796" chance="18200" />				<!-- green mushroom -->
 		<item id="10611" chance="14800" />				<!-- snake skin -->
 		<item id="2146" chance="11000" />				<!-- small sapphire -->

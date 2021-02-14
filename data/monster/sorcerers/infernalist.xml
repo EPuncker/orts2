@@ -71,7 +71,8 @@
 		<voice sentence="Feel the heat of battle!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="151" chance="96000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="96000" />	<!-- gold coin -->
+		<item id="2148" countmax="51" chance="96000" />	<!-- gold coin -->
 		<item id="7590" chance="19000" />				<!-- great mana potion -->
 		<item id="7591" chance="19000" />				<!-- great health potion -->
 		<item id="8840" countmax="5" chance="8500" />	<!-- raspberry -->

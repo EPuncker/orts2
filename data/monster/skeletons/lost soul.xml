@@ -45,7 +45,8 @@
 		<voice sentence="Help meeee!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="198" chance="99950" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99950" />	<!-- gold coin -->
+		<item id="2148" countmax="98" chance="99950" />	<!-- gold coin -->
 		<item id="2152" countmax="7" chance="99950" />	<!-- platinum coin -->
 		<item id="2260" countmax="3" chance="35250" />	<!-- blank rune -->
 		<item id="11233" chance="33010" />				<!-- unholy bone -->

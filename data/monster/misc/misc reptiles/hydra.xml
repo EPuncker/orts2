@@ -55,7 +55,9 @@
 		<voice sentence="HISSSS" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="246" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="46" chance="88000" />	<!-- gold coin -->
 		<item id="2671" countmax="4" chance="60000" />	<!-- ham -->
 		<item id="2152" countmax="3" chance="48000" />	<!-- platinum coin -->
 		<item id="11199" chance="10120" />				<!-- hydra head -->

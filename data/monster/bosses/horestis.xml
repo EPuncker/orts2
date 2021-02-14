@@ -60,7 +60,9 @@
 	</voices>
 	<loot>
 		<item id="13498" chance="100000" />				<!-- scorpion sceptre -->
-		<item id="2148" countmax="243" chance="95000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="95000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="95000" />	<!-- gold coin -->
+		<item id="2148" countmax="43" chance="95000" />	<!-- gold coin -->
 		<item id="2152" countmax="5" chance="36000" />	<!-- platinum coin -->
 		<item id="13472" chance="17000" />				<!-- pharaoh banner -->
 		<item id="2159" countmax="5" chance="14000" />	<!-- scarab coin -->

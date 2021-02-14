@@ -56,7 +56,8 @@
 		<voice sentence="Your mortality is disgusting!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="115" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="15" chance="100000" />	<!-- gold coin -->
 		<item id="7589" chance="17500" />					<!-- strong mana potion -->
 		<item id="2144" chance="15960" />					<!-- black pearl -->
 		<item id="2143" chance="15000" />					<!-- white pearl -->

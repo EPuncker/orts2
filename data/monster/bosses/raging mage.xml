@@ -49,7 +49,8 @@
 		<summon name="Golden Servant" interval="2000" chance="50" />
 	</summons>
 	<loot>
-		<item id="2148" countmax="169" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="69" chance="97000" />	<!-- gold coin -->
 		<item id="2152" countmax="9" chance="77400" />	<!-- platinum coin -->
 		<item id="5911" chance="31100" />				<!-- red piece of cloth -->
 		<item id="7591" countmax="5" chance="26830" />	<!-- great health potion -->

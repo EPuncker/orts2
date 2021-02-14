@@ -57,7 +57,8 @@
 		<voice sentence="Fcccccchhhhhh" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="130" chance="78000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="78000" />	<!-- gold coin -->
+		<item id="2148" countmax="30" chance="78000" />	<!-- gold coin -->
 		<item id="2229" chance="20180" />				<!-- skull -->
 		<item id="2799" chance="4920" />					<!-- stone herb -->
 		<item id="10585" chance="3750" />				<!-- mutated rat tail -->

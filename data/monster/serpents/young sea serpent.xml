@@ -52,7 +52,8 @@
 		<element deathPercent="-15" />
 	</elements>
 	<loot>
-		<item id="2148" countmax="174" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="74" chance="98000" />	<!-- gold coin -->
 		<item id="2394" chance="40000" />				<!-- morning star -->
 		<item id="2378" chance="8000" />					<!-- battle axe -->
 		<item id="9809" chance="7940" />					<!-- rusty armor -->

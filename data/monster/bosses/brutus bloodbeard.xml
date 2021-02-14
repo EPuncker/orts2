@@ -36,7 +36,8 @@
 	</immunities>
 	<loot>
 		<item id="6099" chance="100000" />					<!-- brutus bloodbeard's hat -->
-		<item id="2148" countmax="200" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
 		<item id="2229" countmax="2" chance="75000" />		<!-- skull -->
 		<item id="2379" chance="25000" />					<!-- dagger -->
 		<item id="2476" chance="25000" />					<!-- knight armor -->

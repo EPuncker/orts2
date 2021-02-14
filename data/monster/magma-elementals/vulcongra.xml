@@ -43,7 +43,8 @@
 		<voice sentence="Yag! Yag! Yag!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="107" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="7" chance="100000" />	<!-- gold coin -->
 		<item id="2152" chance="14550" />					<!-- platinum coin -->
 		<item id="18424" chance="12440" />					<!-- Magma Clump -->
 		<item id="2676" countmax="10" chance="10000" />		<!-- banana -->

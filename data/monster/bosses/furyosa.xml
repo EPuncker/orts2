@@ -67,7 +67,8 @@
 		<voice sentence="Ahhhhrrrr!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="200" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
 		<item id="8844" countmax="5" chance="100000" />		<!-- jalapeño peppers -->
 		<item id="21400" chance="45000" />					<!-- silver raid token -->
 		<item id="2152" countmax="25" chance="85000" />		<!-- platinum coin -->

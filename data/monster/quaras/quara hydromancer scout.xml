@@ -59,7 +59,8 @@
 		<voice sentence="Blup." />
 	</voices>
 	<loot>
-		<item id="2148" countmax="139" chance="90000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="90000" />	<!-- gold coin -->
+		<item id="2148" countmax="39" chance="90000" />	<!-- gold coin -->
 		<item id="2667" countmax="3" chance="19000" />	<!-- fish -->
 		<item id="12444" chance="12720" />				<!-- quara eye -->
 		<item id="2670" countmax="4" chance="9200" />	<!-- shrimp -->

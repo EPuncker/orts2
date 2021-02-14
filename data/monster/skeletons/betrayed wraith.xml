@@ -54,7 +54,8 @@
 		<voice sentence="Tcharrr!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="198" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="98" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="8" chance="100000" />		<!-- platinum coin -->
 		<item id="6558" chance="65250" />					<!-- concentrated demonic blood -->
 		<item id="2547" countmax="15" chance="50000" />		<!-- power bolt -->

@@ -68,7 +68,9 @@
 	</voices>
 	<loot>
 		<item id="2353" chance="100000" />				<!-- burning heart -->
-		<item id="2148" countmax="230" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="88000" />	<!-- gold coin -->
+		<item id="2148" countmax="30" chance="88000" />	<!-- gold coin -->
 		<item id="2147" countmax="3" chance="12000" />	<!-- small ruby -->
 		<item id="7591" chance="10000" />				<!-- great health potion -->
 		<item id="2168" chance="7000" />					<!-- life ring -->

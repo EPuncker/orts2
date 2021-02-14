@@ -64,7 +64,8 @@
 	</voices>
 	<loot>
 		<item id="2352" chance="100000" />				<!-- crystal arrow -->
-		<item id="2148" countmax="160" chance="85000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="85000" />	<!-- gold coin -->
+		<item id="2148" countmax="60" chance="85000" />	<!-- gold coin -->
 		<item id="2674" countmax="2" chance="74000" />	<!-- red apple -->
 		<item id="2545" countmax="19" chance="49000" />	<!-- poison arrow -->
 		<item id="2546" countmax="15" chance="44000" />	<!-- burst arrow -->

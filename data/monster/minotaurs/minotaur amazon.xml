@@ -53,7 +53,8 @@
 		<voice sentence="I will not allow your evil to continue!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="191" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="91" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="3" chance="59000" />		<!-- platinum coin -->
 		<item id="2671" chance="56000" />					<!-- ham -->
 		<item id="5878" chance="19000" />					<!-- minotaur leather -->

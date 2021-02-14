@@ -47,7 +47,8 @@
 		<voice sentence="Shriiiiiek" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="130" chance="92000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="92000" />	<!-- gold coin -->
+		<item id="2148" countmax="30" chance="92000" />	<!-- gold coin -->
 		<item id="9809" chance="6200" />					<!-- rusty armor (semi-rare) -->
 		<item id="9808" chance="6200" />					<!-- rusty armor (common) -->
 		<item id="2513" chance="7760" />					<!-- battle shield -->

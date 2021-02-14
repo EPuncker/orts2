@@ -43,7 +43,9 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="212" chance="99970" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99970" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99970" />	<!-- gold coin -->
+		<item id="2148" countmax="12" chance="99970" />	<!-- gold coin -->
 		<item id="2152" chance="14000" />				<!-- platinum coin -->
 		<item id="9809" chance="8000" />					<!-- rusty armor (semi-rare) -->
 		<item id="2147" countmax="2" chance="6100" />	<!-- small ruby -->

@@ -65,7 +65,10 @@
 		<voice sentence="You will be history soon." />
 	</voices>
 	<loot>
-		<item id="2148" countmax="304" chance="93000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="93000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="93000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="93000" />	<!-- gold coin -->
+		<item id="2148" countmax="4" chance="93000" />	<!-- gold coin -->
 		<item id="7590" chance="12000" />				<!-- great mana potion -->
 		<item id="2164" chance="4550" />					<!-- might ring -->
 		<item id="2134" chance="4120" />					<!-- silver brooch -->

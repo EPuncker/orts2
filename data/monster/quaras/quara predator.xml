@@ -43,7 +43,8 @@
 		<voice sentence="Rraaar!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="153" chance="78000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="78000" />	<!-- gold coin -->
+		<item id="2148" countmax="53" chance="78000" />	<!-- gold coin -->
 		<item id="12447" chance="9800" />				<!-- quara bone -->
 		<item id="7378" countmax="7" chance="9100" />	<!-- royal spear -->
 		<item id="2145" countmax="2" chance="5200" />	<!-- small diamond -->

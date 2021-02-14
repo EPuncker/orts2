@@ -63,7 +63,8 @@
 		<voice sentence="Your cold dead body will be a marvelous ice statue." />
 	</voices>
 	<loot>
-		<item id="2148" countmax="200" chance="92000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="92000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="92000" />	<!-- gold coin -->
 		<item id="21400" chance="92000" />				<!-- silver raid token -->
 		<item id="7290" chance="57000" />				<!-- shard -->
 		<item id="7449" chance="42000" />				<!-- crystal sword -->

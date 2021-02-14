@@ -55,7 +55,9 @@
 	</voices>
 	<loot>
 		<item id="7290" chance="100000" />				<!-- shard -->
-		<item id="2148" countmax="283" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="97000" />	<!-- gold coin -->
+		<item id="2148" countmax="83" chance="97000" />	<!-- gold coin -->
 		<item id="5912" chance="74000" />				<!-- blue piece of cloth -->
 		<item id="7440" chance="65000" />				<!-- mastermind potion -->
 		<item id="9971" chance="33000" />				<!-- gold ingot -->

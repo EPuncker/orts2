@@ -1,137 +1,75 @@
--- Players cannot throw items on teleports if set to true
-local blockTeleportTrashing = false
-
 function Player:onBrowseField(position)
-	return true
+	if hasEventCallback(EVENT_CALLBACK_ONBROWSEFIELD) then
+		return EventCallback(EVENT_CALLBACK_ONBROWSEFIELD, self, position)
+	else
+		return true
+	end
 end
 
 function Player:onLook(thing, position, distance)
-	local description = 'You see '
-	if thing:isItem() then
-		if thing.actionid == 5640 then
-			description = description .. 'a honeyflower patch.'
-		elseif thing.actionid == 5641 then
-			description = description .. 'a banana palm.'
-		else
-			description = description .. thing:getDescription(distance)
-		end
-	else
-		description = description .. thing:getDescription(distance)
-	end
-
-	if self:getGroup():getAccess() then
-		if thing:isItem() then
-			description = string.format('%s\nItem ID: %d', description, thing.itemid)
-
-			local actionId = thing.actionid
-			if actionId ~= 0 then
-				description = string.format('%s, Action ID: %d', description, actionId)
-			end
-
-			local uniqueId = thing:getAttribute(ITEM_ATTRIBUTE_UNIQUEID)
-			if uniqueId > 0 and uniqueId < 65536 then
-				description = string.format('%s, Unique ID: %d', description, uniqueId)
-			end
-
-			description = description .. '.'
-			local itemType = thing:getType()
-
-			local transformEquipId = itemType:getTransformEquipId()
-			local transformDeEquipId = itemType:getTransformDeEquipId()
-			if transformEquipId ~= 0 then
-				description = string.format('%s\nTransforms to: %d (onEquip)', description, transformEquipId)
-			elseif transformDeEquipId ~= 0 then
-				description = string.format('%s\nTransforms to: %d (onDeEquip)', description, transformDeEquipId)
-			end
-
-			local decayId = itemType:getDecayId()
-			if decayId ~= -1 then
-				description = string.format('%s\nDecays to: %d', description, decayId)
-			end
-		elseif thing:isCreature() then
-			local str = '%s\nHealth: %d / %d'
-			if thing:getMaxMana() > 0 then
-				str = string.format('%s, Mana: %d / %d', str, thing:getMana(), thing:getMaxMana())
-			end
-			description = string.format(str, description, thing:getHealth(), thing:getMaxHealth()) .. '.'
-		end
-
-		local position = thing:getPosition()
-		description = string.format(
-			'%s\nPosition: %d, %d, %d',
-			description, position.x, position.y, position.z
-		)
-
-		if thing:isCreature() and thing:isPlayer() then
-			description = string.format('%s\nIP: %s.', description, Game.convertIpToString(thing:getIp()))
-		end
-	end
-	self:sendTextMessage(MESSAGE_INFO_DESCR, description)
+	local ret = EventCallback(EVENT_CALLBACK_ONLOOK, self, thing, position, distance)
+	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)
 end
 
 function Player:onLookInBattleList(creature, distance)
-	local description = 'You see ' .. creature:getDescription(distance)
-	if self:getGroup():getAccess() then
-		local str = '%s\nHealth: %d / %d'
-		if creature:getMaxMana() > 0 then
-			str = string.format('%s, Mana: %d / %d', str, creature:getMana(), creature:getMaxMana())
-		end
-		description = string.format(str, description, creature:getHealth(), creature:getMaxHealth()) .. '.'
-
-		local position = creature:getPosition()
-		description = string.format(
-			'%s\nPosition: %d, %d, %d',
-			description, position.x, position.y, position.z
-		)
-
-		if creature:isPlayer() then
-			description = string.format('%s\nIP: %s.', description, Game.convertIpToString(creature:getIp()))
-		end
-	end
-	self:sendTextMessage(MESSAGE_INFO_DESCR, description)
+	local ret = EventCallback(EVENT_CALLBACK_ONLOOKINBATTLELIST, self, creature, distance)
+	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)
 end
 
 function Player:onLookInTrade(partner, item, distance)
-	self:sendTextMessage(MESSAGE_INFO_DESCR, 'You see ' .. item:getDescription(distance))
+	local description = "You see " .. item:getDescription(distance)
+	local ret = hasEventCallback(EVENT_CALLBACK_ONLOOKINTRADE) and EventCallback(EVENT_CALLBACK_ONLOOKINTRADE, self, partner, item, distance, description) or description
+	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)
 end
 
 function Player:onLookInShop(itemType, count)
-	return true
+	local description = "You see " .. description
+	local ret = hasEventCallback(EVENT_CALLBACK_ONLOOKINSHOP) and EventCallback(EVENT_CALLBACK_ONLOOKINSHOP, self, itemType, count, description) or description
+	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)
 end
 
 function Player:onMoveItem(item, count, fromPosition, toPosition)
-	if blockTeleportTrashing and toPosition.x ~= CONTAINER_POSITION then
-		local thing = Tile(toPosition):getItemByType(ITEM_TYPE_TELEPORT)
-		if thing then
-			self:sendCancelMessage('Sorry, not possible.')
-			self:getPosition():sendMagicEffect(CONST_ME_POFF)
-			return false
-		end
+	if hasEventCallback(EVENT_CALLBACK_ONMOVEITEM) then
+		return EventCallback(EVENT_CALLBACK_ONMOVEITEM, self, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+	else
+		return true
 	end
+end
 
-	if table.contains({1714, 1715, 1716, 1717, 1738, 1740, 1741, 1747, 1748, 1749}, item.itemid) and item.actionid > 0 or item.actionid == 5640 then
-		self:sendCancelMessage('You cannot move this object.')
-		return false
-	elseif item.itemid == 7466 then
-		self:sendCancelMessage('You cannot move this object.')
-		return false
+function Player:onItemMoved(item, count, fromPosition, toPosition, fromCylinder, toCylinder)
+	if hasEventCallback(EVENT_CALLBACK_ONITEMMOVED) then
+		EventCallback(EVENT_CALLBACK_ONITEMMOVED, self, item, count, fromPosition, toPosition, fromCylinder, toCylinder)
 	end
-
-	if fromPosition.x == CONTAINER_POSITION and toPosition.x == CONTAINER_POSITION
-			and item.itemid == 8710 and self:getItemCount(8710) == 2 and self:getStorageValue(Storage.RookgaardTutorialIsland.cockroachLegsMsgStorage) ~= 1 then
-		self:sendTextMessage(MESSAGE_INFO_DESCR, 'Well done, you have enough cockroach legs! You should head back to Santiago with them. Climb the ladder to the north to exit.')
-		self:setStorageValue(Storage.RookgaardTutorialIsland.cockroachLegsMsgStorage, 1)
-		self:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 6)
-	end
-	return true
 end
 
 function Player:onMoveCreature(creature, fromPosition, toPosition)
-	return true
+	if hasEventCallback(EVENT_CALLBACK_ONMOVECREATURE) then
+		return EventCallback(EVENT_CALLBACK_ONMOVECREATURE, self, creature, fromPosition, toPosition)
+	else
+		return true
+	end
+end
+
+function Player:onReportRuleViolation(targetName, reportType, reportReason, comment, translation)
+	if hasEventCallback(EVENT_CALLBACK_ONREPORTRULEVIOLATION) then
+		EventCallback(EVENT_CALLBACK_ONREPORTRULEVIOLATION, self, targetName, reportType, reportReason, comment, translation)
+	end
+end
+
+function Player:onReportBug(message, position, category)
+	if hasEventCallback(EVENT_CALLBACK_ONREPORTBUG) then
+		return EventCallback(EVENT_CALLBACK_ONREPORTBUG, self, message, position, category)
+	else
+		return true
+	end
 end
 
 function Player:onTurn(direction)
-	return true
+	if hasEventCallback(EVENT_CALLBACK_ONTURN) then
+		return EventCallback(EVENT_CALLBACK_ONTURN, self, direction)
+	else
+		return true
+	end
 end
 
 function Player:onTradeRequest(target, item)
@@ -143,7 +81,17 @@ function Player:onTradeRequest(target, item)
 end
 
 function Player:onTradeAccept(target, item, targetItem)
-	return true
+	if hasEventCallback(EVENT_CALLBACK_ONTRADEACCEPT) then
+		return EventCallback(EVENT_CALLBACK_ONTRADEACCEPT, self, target, item, targetItem)
+	else
+		return true
+	end
+end
+
+function Player:onTradeCompleted(target, item, targetItem, isSuccess)
+	if hasEventCallback(EVENT_CALLBACK_ONTRADECOMPLETED) then
+		EventCallback(EVENT_CALLBACK_ONTRADECOMPLETED, self, target, item, targetItem, isSuccess)
+	end
 end
 
 local soulCondition = Condition(CONDITION_SOUL, CONDITIONID_DEFAULT)
@@ -204,20 +152,59 @@ function Player:onGainExperience(source, exp, rawExp)
 		end
 	end
 
-	return exp
+	return hasEventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONGAINEXPERIENCE, self, source, exp, rawExp) or exp
 end
 
 function Player:onLoseExperience(exp)
-	return exp
+	return hasEventCallback(EVENT_CALLBACK_ONLOSEEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONLOSEEXPERIENCE, self, exp) or exp
 end
 
 function Player:onGainSkillTries(skill, tries)
 	if APPLY_SKILL_MULTIPLIER == false then
-		return tries
+		return hasEventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES) and EventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES, self, skill, tries) or tries
 	end
 
 	if skill == SKILL_MAGLEVEL then
-		return tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		tries = tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		return hasEventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES) and EventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES, self, skill, tries) or tries
 	end
-	return tries * configManager.getNumber(configKeys.RATE_SKILL)
+	tries = tries * configManager.getNumber(configKeys.RATE_SKILL)
+	return hasEventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES) and EventCallback(EVENT_CALLBACK_ONGAINSKILLTRIES, self, skill, tries) or tries
+end
+
+function Player:onWrapItem(item)
+	local topCylinder = item:getTopParent()
+	if not topCylinder then
+		return
+	end
+
+	local tile = Tile(topCylinder:getPosition())
+	if not tile then
+		return
+	end
+
+	local house = tile:getHouse()
+	if not house then
+		self:sendCancelMessage("You can only wrap and unwrap this item inside a house.")
+		return
+	end
+
+	if house ~= self:getHouse() and not string.find(house:getAccessList(SUBOWNER_LIST):lower(), "%f[%a]" .. self:getName():lower() .. "%f[%A]") then
+		self:sendCancelMessage("You cannot wrap or unwrap items from a house, which you are only guest to.")
+		return
+	end
+
+	local wrapId = item:getAttribute("wrapid")
+	if wrapId == 0 then
+		return
+	end
+
+	if not hasEventCallback(EVENT_CALLBACK_ONWRAPITEM) or EventCallback(EVENT_CALLBACK_ONWRAPITEM, self, item) then
+		local oldId = item:getId()
+		item:remove(1)
+		local item = tile:addItem(wrapId)
+		if item then
+			item:setAttribute("wrapid", oldId)
+		end
+	end
 end

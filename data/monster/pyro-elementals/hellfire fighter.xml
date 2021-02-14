@@ -40,7 +40,9 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="246" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="46" chance="100000" />	<!-- gold coin -->
 		<item id="2239" chance="50000" />					<!-- burnt scroll -->
 		<item id="2260" countmax="2" chance="30000" />		<!-- blank rune -->
 		<item id="6500" chance="15000" />					<!-- demonic essence -->

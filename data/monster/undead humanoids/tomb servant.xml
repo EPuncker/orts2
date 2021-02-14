@@ -33,7 +33,8 @@
 		<voice sentence="Ngl..Nglll...Gll" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="108" chance="82350" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="82350" />	<!-- gold coin -->
+		<item id="2148" countmax="8" chance="82350" />	<!-- gold coin -->
 		<item id="2230" chance="49000" />				<!-- bone -->
 		<item id="3976" countmax="12" chance="25325" />	<!-- worm -->
 		<item id="2159" chance="8210" />					<!-- scarab coin -->

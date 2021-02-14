@@ -59,7 +59,8 @@
 		<voice sentence="You won't regret you came to me, sweetheart." />
 	</voices>
 	<loot>
-		<item id="2148" countmax="149" chance="90000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="90000" />	<!-- gold coin -->
+		<item id="2148" countmax="49" chance="90000" />	<!-- gold coin -->
 		<item id="7589" chance="10210" />				<!-- strong mana potion -->
 		<item id="10602" chance="10000" />				<!-- vampire teeth -->
 		<item id="2152" chance="9910" />					<!-- platinum coin -->

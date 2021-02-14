@@ -54,7 +54,8 @@
 		<voice sentence="Blood for the dark god!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="176" chance="99900" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99900" />	<!-- gold coin -->
+		<item id="2148" countmax="76" chance="99900" />	<!-- gold coin -->
 		<item id="21242" chance="14600" />				<!-- lancet -->
 		<item id="21246" chance="14500" />				<!-- incantation notes -->
 		<item id="11237" chance="14300" />				<!-- book of necromantic rituals -->

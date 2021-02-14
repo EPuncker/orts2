@@ -51,7 +51,9 @@
 		<element deathPercent="10" />
 	</elements>
 	<loot>
-		<item id="2148" countmax="236" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="36" chance="98000" />	<!-- gold coin -->
 		<item id="2672" countmax="2" chance="60000" />	<!-- dragon ham -->
 		<item id="2152" countmax="3" chance="25000" />	<!-- platinum coin -->
 		<item id="10583" chance="10200" />				<!-- sea serpent scale -->

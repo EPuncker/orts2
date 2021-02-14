@@ -46,7 +46,8 @@
 		<voice sentence="CHHHHHHHHHHH" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="105" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="5" chance="100000" />	<!-- gold coin -->
 		<item id="2666" countmax="2" chance="29500" />		<!-- meat -->
 		<item id="11210" chance="20130" />					<!-- striped fur -->
 		<item id="11228" chance="10600" />					<!-- sabretooth -->

@@ -61,7 +61,8 @@
 		<voice sentence="Delicious!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="198" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="98" chance="100000" />	<!-- gold coin -->
 		<item id="9813" chance="50000" />					<!-- rusty legs (rare) -->
 		<item id="8473" countmax="2" chance="42000" />		<!-- ultimate health potion -->
 		<item id="8901" chance="32000" />					<!-- spellbook of warding -->

@@ -55,7 +55,8 @@
 		<voice sentence="Die, filth!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="135" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="35" chance="100000" />	<!-- gold coin -->
 		<item id="21245" chance="15000" />					<!-- blood tincture in a vial -->
 		<item id="21242" chance="10680" />					<!-- lancet -->
 		<item id="21246" chance="9600" />					<!-- incantation notes -->

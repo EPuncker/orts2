@@ -70,7 +70,8 @@
 	</voices>
 	<loot>
 		<item id="5903" chance="100000" />				<!-- ferumbras' hat -->
-		<item id="2148" countmax="184" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="98000" />	<!-- gold coin -->
+		<item id="2148" countmax="84" chance="98000" />	<!-- gold coin -->
 		<item id="9971" countmax="2" chance="75000" />	<!-- gold ingot -->
 		<item id="2522" chance="26000" />				<!-- great shield -->
 		<item id="8903" chance="26000" />				<!-- spellbook of lost souls -->

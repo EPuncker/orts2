@@ -58,7 +58,9 @@
 		<voice sentence="GRROARR" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="225" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="25" chance="99000" />	<!-- gold coin -->
 		<item id="11234" chance="10500" />				<!-- werewolf fur -->
 		<item id="2510" chance="10000" />				<!-- plate shield -->
 		<item id="9809" chance="7770" />					<!-- rusty armor (semi-rare) -->

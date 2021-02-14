@@ -51,7 +51,9 @@
 		<voice sentence="We are the brothers of fear!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="273" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="73" chance="100000" />	<!-- gold coin -->
 		<item id="7591" chance="55000" />					<!-- great health potion -->
 		<item id="2387" chance="30000" />					<!-- double axe -->
 		<item id="6300" chance="25000" />					<!-- death ring -->

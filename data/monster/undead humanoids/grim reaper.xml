@@ -59,7 +59,9 @@
 		<voice sentence="The end is near!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="263" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="99000" />	<!-- gold coin -->
+		<item id="2148" countmax="63" chance="99000" />	<!-- gold coin -->
 		<item id="6558" chance="35000" />				<!-- concentrated demonic blood -->
 		<item id="6500" chance="10600" />				<!-- demonic essence -->
 		<item id="7590" chance="10000" />				<!-- great mana potion -->

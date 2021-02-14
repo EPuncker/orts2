@@ -54,7 +54,10 @@
 		<voice sentence="What have you done!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="340" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="40" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="5" chance="48000" />		<!-- platinum coin -->
 		<item id="7589" countmax="5" chance="21000" />		<!-- strong mana potion -->
 		<item id="7588" countmax="5" chance="17000" />		<!-- strong health potion -->

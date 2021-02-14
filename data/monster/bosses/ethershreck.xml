@@ -59,7 +59,9 @@
 	</voices>
 	<loot>
 		<item id="11366" chance="100000" />					<!-- ghastly dragon head -->
-		<item id="2148" countmax="230" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="30" chance="100000" />	<!-- gold coin -->
 		<item id="2152" countmax="15" chance="100000" />		<!-- platinum coin -->
 		<item id="11367" chance="100000" />					<!-- undead heart -->
 		<item id="6500" chance="97000" />					<!-- demonic essence -->

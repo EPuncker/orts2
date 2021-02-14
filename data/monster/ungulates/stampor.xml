@@ -46,7 +46,9 @@
 		<voice sentence="KRRRRRNG" yell="1" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="242" chance="30000" />		<!-- gold coin -->
+		<item id="2148" countmax="100" chance="30000" />		<!-- gold coin -->
+		<item id="2148" countmax="100" chance="30000" />		<!-- gold coin -->
+		<item id="2148" countmax="42" chance="30000" />		<!-- gold coin -->
 		<item id="13300" countmax="2" chance="9950" />		<!-- stampor talon -->
 		<item id="2152" countmax="2" chance="9920" />		<!-- platinum coin -->
 		<item id="9970" countmax="2" chance="7940" />		<!-- small topaz -->

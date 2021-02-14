@@ -67,7 +67,8 @@
 	</voices>
 	<loot>
 		<item id="6500" chance="100000" />					<!-- demonic essence -->
-		<item id="2148" countmax="194" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="94" chance="100000" />	<!-- gold coin -->
 		<item id="9813" chance="54000" />					<!-- rusty legs (rare) -->
 		<item id="9810" chance="45000" />					<!-- rusty armor (rare) -->
 		<item id="7590" chance="27000" />					<!-- great mana potion -->

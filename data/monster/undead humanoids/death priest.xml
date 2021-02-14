@@ -37,7 +37,8 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="144" chance="70000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="70000" />	<!-- gold coin -->
+		<item id="2148" countmax="44" chance="70000" />	<!-- gold coin -->
 		<item id="13739" chance="27000" />				<!-- hieroglyph banner -->
 		<item id="7618" chance="15000" />				<!-- health potion -->
 		<item id="7620" chance="15000" />				<!-- mana potion -->

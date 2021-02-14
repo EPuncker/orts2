@@ -57,7 +57,8 @@
 		<voice sentence="Put it there!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="137" chance="100000" /><!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+		<item id="2148" countmax="37" chance="100000" /><!-- gold coin -->
 		<item id="2152" chance="24470" /><!-- platinum coin -->
 		<item id="11233" chance="9570" /><!-- unholy bone -->
 		<item id="2268" countmaxe="9" chance="7300" /><!-- sudden death rune -->

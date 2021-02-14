@@ -45,7 +45,8 @@
 		<voice sentence="Another foolish adventurer who tries to beat me." />
 	</voices>
 	<loot>
-		<item id="2148" countmax="148" chance="94000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="94000" />	<!-- gold coin -->
+		<item id="2148" countmax="48" chance="94000" />	<!-- gold coin -->
 		<item id="2399" countmax="18" chance="16700" />	<!-- throwing star -->
 		<item id="2419" chance="11280" />				<!-- scimitar -->
 		<item id="8872" chance="5500" />					<!-- belted cape -->

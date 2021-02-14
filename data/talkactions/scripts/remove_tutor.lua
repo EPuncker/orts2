@@ -11,11 +11,12 @@ function onSay(player, words, param)
 
 	if result.getNumber(resultId, "account_type") ~= ACCOUNT_TYPE_TUTOR then
 		player:sendCancelMessage("You can only demote a tutor to a normal player.")
+		result.free(resultId)
 		return false
 	end
 
 	local target = Player(param)
-	if target ~= nil then
+	if target then
 		target:setAccountType(ACCOUNT_TYPE_NORMAL)
 	else
 		db.query("UPDATE `accounts` SET `type` = " .. ACCOUNT_TYPE_NORMAL .. " WHERE `id` = " .. result.getNumber(resultId, "account_id"))

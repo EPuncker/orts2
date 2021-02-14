@@ -1,5 +1,4 @@
 function onSay(player, words, param)
-
 	local fragTime = configManager.getNumber(configKeys.FRAG_TIME)
 	if fragTime <= 0 then
 		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "You do not have any unjustified kill.")
@@ -13,7 +12,7 @@ function onSay(player, words, param)
 	end
 
 	local kills = math.ceil(skullTime / fragTime)
-	local remainingSeconds = math.floor((skullTime % fragTime) / 1000)
+	local remainingSeconds = math.floor(skullTime % fragTime)
 
 	local hours = math.floor(remainingSeconds / 3600)
 	local minutes = math.floor((remainingSeconds % 3600) / 60)

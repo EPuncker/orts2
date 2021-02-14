@@ -1,4 +1,4 @@
-local condition = Condition(CONDITION_OUTFIT)
+local condition = Condition(CONDITION_OUTFIT, CONDITIONID_COMBAT)
 condition:setTicks(-1)
 
 function onSay(player, words, param)

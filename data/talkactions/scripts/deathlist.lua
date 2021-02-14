@@ -39,7 +39,7 @@ function onSay(player, words, param)
 				local killed_by = result.getString(resultId, "killed_by")
 				if result.getNumber(resultId, "is_player") == 0 then
 					article = getArticle(killed_by) .. " "
-					killed_by = killed_by:lower()
+					killed_by = string.lower(killed_by)
 				end
 
 				if date.day < 10 then date.day = "0" .. date.day end

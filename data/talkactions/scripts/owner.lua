@@ -7,7 +7,8 @@ function onSay(player, words, param)
 		return false
 	end
 
-	local house = Tile(player:getPosition()):getHouse()
+	local tile = Tile(player:getPosition())
+	local house = tile and tile:getHouse()
 	if not house then
 		player:sendCancelMessage("You are not inside a house.")
 		return false

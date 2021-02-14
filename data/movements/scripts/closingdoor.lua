@@ -1,5 +1,5 @@
 function onStepOut(creature, item, position, fromPosition)
-	local tile = position:getTile()
+	local tile = Tile(position)
 	if tile:getCreatureCount() > 0 then
 		return true
 	end
@@ -13,13 +13,13 @@ function onStepOut(creature, item, position, fromPosition)
 	end
 
 	if query == RETURNVALUE_NOERROR or query ~= RETURNVALUE_NOTENOUGHROOM then
-		tile:relocateTo(newPosition)
+		doRelocate(position, newPosition)
 	end
 
 	local i, tileItem, tileCount = 1, true, tile:getThingCount()
 	while tileItem and i < tileCount do
 		tileItem = tile:getThing(i)
-		if tileItem and tileItem.uid ~= item.uid and tileItem:getType():isMovable() then
+		if tileItem and tileItem:getUniqueId() ~= item.uid and tileItem:getType():isMovable() then
 			tileItem:remove()
 		else
 			i = i + 1

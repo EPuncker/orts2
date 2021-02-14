@@ -3,49 +3,48 @@ local decreasing = {[417] = 416, [425] = 426, [447] = 446, [3217] = 3216, [3215]
 
 function onStepIn(creature, item, position, fromPosition)
 	if not increasing[item.itemid] then
-		return false
+		return true
 	end
 
-	local player = creature:getPlayer()
-	if not player or player:isInGhostMode() then
+	if not creature:isPlayer() or creature:isInGhostMode() then
 		return true
 	end
 
 	item:transform(increasing[item.itemid])
 
-	if item.actionid >= 1000 then
-		if player:getLevel() < item.actionid - 1000 then
-			player:teleportTo(fromPosition, false)
+	if item.actionid >= actionIds.levelDoor then
+		if creature:getLevel() < item.actionid - actionIds.levelDoor then
+			creature:teleportTo(fromPosition, false)
 			position:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The tile seems to be protected against unwanted intruders.")
+			creature:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The tile seems to be protected against unwanted intruders.")
 		end
 		return true
 	end
 
-	if position:getTile():hasFlag(TILESTATE_PROTECTIONZONE) then
-		local lookPos = player:getPosition()
-		lookPos:getNextPosition(player:getDirection())
-		local depotItem = lookPos:getTile():getItemByType(ITEM_TYPE_DEPOT)
-		if depotItem ~= nil then
-			local depotItems = player:getDepotChest(getDepotId(depotItem.uid), true):getItemHoldingCount()
-			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Your depot contains " .. depotItems .. " item" .. (depotItems > 1 and "s." or "."))
+	if Tile(position):hasFlag(TILESTATE_PROTECTIONZONE) then
+		local lookPosition = creature:getPosition()
+		lookPosition:getNextPosition(creature:getDirection())
+		local depotItem = Tile(lookPosition):getItemByType(ITEM_TYPE_DEPOT)
+		if depotItem then
+			local depotItems = creature:getDepotChest(getDepotId(depotItem:getUniqueId()), true):getItemHoldingCount()
+			creature:sendTextMessage(MESSAGE_STATUS_DEFAULT, "Your depot contains " .. depotItems .. " item" .. (depotItems > 1 and "s." or "."))
+			creature:addAchievementProgress("Safely Stored Away", 1000)
 			return true
 		end
 	end
 
-	if item.actionid ~= 0 and player:getStorageValue(item.actionid) <= 0 then
-		player:teleportTo(fromPosition, false)
+	if item.actionid ~= 0 and creature:getStorageValue(item.actionid) <= 0 then
+		creature:teleportTo(fromPosition, false)
 		position:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The tile seems to be protected against unwanted intruders.")
+		creature:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The tile seems to be protected against unwanted intruders.")
 		return true
 	end
-
 	return true
 end
 
 function onStepOut(creature, item, position, fromPosition)
 	if not decreasing[item.itemid] then
-		return false
+		return true
 	end
 
 	if creature:isPlayer() and creature:isInGhostMode() then

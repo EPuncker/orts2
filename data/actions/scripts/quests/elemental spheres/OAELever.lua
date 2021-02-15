@@ -46,7 +46,7 @@ local config = {
 local function resetRoom(players)
 	for i = 1, #players do
 		local player = Player(players[i])
-		if player and isInRange(player:getPosition(), config.area.from, config.area.to) then
+		if player and player:getPosition():isInRange(config.area.from, config.area.to) then
 			player:teleportTo(config.exitPosition)
 			config.exitPosition:sendMagicEffect(CONST_ME_TELEPORT)
 		end
@@ -87,7 +87,7 @@ local function warnPlayers(players)
 	local player
 	for i = 1, #players do
 		player = Player(players[i])
-		if player and isInRange(player:getPosition(), config.roomArea.from, config.roomArea.to) then
+		if player and player:getPosition():isInRange(config.roomArea.from, config.roomArea.to) then
 			break
 		end
 		player = nil

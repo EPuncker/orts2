@@ -36,7 +36,7 @@ local MusicEffect = {
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 2071 then
-		if isInRange(player:getPosition(), Position(32695, 31717, 2), Position(32699, 31719, 2)) then
+		if player:getPosition():isInRange(Position(32695, 31717, 2), Position(32699, 31719, 2)) then
 			local lyreProgress = player:getStorageValue(Storage.Diapason.Lyre)
 			if lyreProgress < 7
 					and player:getStorageValue(Storage.Diapason.Edala) ~= 1

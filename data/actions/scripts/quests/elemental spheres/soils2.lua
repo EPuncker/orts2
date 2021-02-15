@@ -17,7 +17,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if not isInRange(toPosition, {x=33238, y=31806, z=12}, {x=33297, y=31865, z=12}) then
+	if not toPosition:isInRange(Position(33238, 31806, 12), Position(33297, 31865, 12)) then
 		return false
 	end
 

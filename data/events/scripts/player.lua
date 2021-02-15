@@ -73,11 +73,11 @@ function Player:onTurn(direction)
 end
 
 function Player:onTradeRequest(target, item)
-	if table.contains({1738, 1740, 1747, 1748, 1749, 8766}, item.itemid) and item.actionid > 0 or item.actionid == 5640 then
-		self:sendCancelMessage('Sorry, not possible.')
-		return false
+	if hasEventCallback(EVENT_CALLBACK_ONTRADEREQUEST) then
+		return EventCallback(EVENT_CALLBACK_ONTRADEREQUEST, self, target, item)
+	else
+		return true
 	end
-	return true
 end
 
 function Player:onTradeAccept(target, item, targetItem)

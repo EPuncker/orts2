@@ -22,7 +22,7 @@ function Player:onLookInTrade(partner, item, distance)
 	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)
 end
 
-function Player:onLookInShop(itemType, count)
+function Player:onLookInShop(itemType, count, description)
 	local description = "You see " .. description
 	local ret = hasEventCallback(EVENT_CALLBACK_ONLOOKINSHOP) and EventCallback(EVENT_CALLBACK_ONLOOKINSHOP, self, itemType, count, description) or description
 	self:sendTextMessage(MESSAGE_INFO_DESCR, ret)

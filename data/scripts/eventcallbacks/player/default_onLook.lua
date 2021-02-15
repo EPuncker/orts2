@@ -2,13 +2,6 @@ local ec = EventCallback
 
 ec.onLook = function(self, thing, position, distance, description)
 	local description = "You see " .. thing:getDescription(distance)
-	if thing:isItem() then
-		if thing.actionid == 5640 then
-			description = description .. 'a honeyflower patch.'
-		elseif thing.actionid == 5641 then
-			description = description .. 'a banana palm.'
-		end
-	end
 	if self:getGroup():getAccess() then
 		if thing:isItem() then
 			description = string.format("%s\nItem ID: %d", description, thing:getId())
@@ -55,6 +48,13 @@ ec.onLook = function(self, thing, position, distance, description)
 			if thing:isPlayer() then
 				description = string.format("%s\nIP: %s.", description, Game.convertIpToString(thing:getIp()))
 			end
+		end
+	end
+	if thing:isItem() then
+		if thing.actionid == 5640 then
+			description = description .. "a honeyflower patch."
+		elseif thing.actionid == 5641 then
+			description = description .. "a banana palm."
 		end
 	end
 	return description

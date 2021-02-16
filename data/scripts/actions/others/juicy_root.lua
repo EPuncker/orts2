@@ -9,6 +9,13 @@ function juicyRoot.onUse(player, item, fromPosition, target, toPosition, isHotke
 	if math.random(2) == 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You successfully harvest some juicy roots.")
 		player:addItem(23662, 1) -- juicy roots
+		if player:getStorageValue(Storage.Oramond.MissionToTakeRoots) < 0 then
+			player:setStorageValue(Storage.Oramond.HarvestedRootCount, 1)
+			player:setStorageValue(Storage.Oramond.MissionToTakeRoots, 1)
+			player:setStorageValue(Storage.Oramond.QuestLine, 1)
+		elseif player:getStorageValue(Storage.Oramond.MissionToTakeRoots) == 1 then
+			player:setStorageValue(Storage.Oramond.HarvestedRootCount, harvestedCount + 1)
+		end
 	else
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your harvesting attempt destroyed more of the juicy roots than you could salvage.")
 	end

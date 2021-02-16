@@ -22,8 +22,9 @@ When [creating a pull request](https://github.com/EPuncker/orts2/pulls) please m
 **Scripting related links:**
 - [Script Interface](https://github.com/otland/forgottenserver/wiki/Script-Interface)
 
-## Engine
-ORTS uses The Forgotten Server 1.4 as an engine. [The Forgotten Server 1.4](https://github.com/otland/forgottenserver) is being developed by [Mark Samman](https://github.com/marksamman).
+Other Applications
+==========
 
-## Client
-In order to login [Otclient](https://github.com/edubart/otclient) by [edubart](https://github.com/edubart) can be used.
+* To host your MMORPG game server, you can use [The Forgotten Server](https://github.com/otland/forgottenserver)
+* To play your MMORPG game, you can use [OTClient](https://github.com/edubart/otclient)
+* To map your MMORPG game, you can use [RME] (https://github.com/hjnilsson/rme/releases)

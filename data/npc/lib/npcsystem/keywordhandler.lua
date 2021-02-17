@@ -44,17 +44,31 @@ if not KeywordHandler then
 	end
 
 	-- Returns true if message contains all patterns/strings found in keywords.
-	function KeywordNode:checkMessage(message)
+	function KeywordNode:checkMessage(cid, message)
 		if self.keywords.callback then
-			return self.keywords.callback(self.keywords, message)
+			local ret, data = self.keywords.callback(self.keywords, message)
+			if not ret then
+				return false
+			end
+
+			if self.condition and not self.condition(Player(cid), data) then
+				return false
+			end
+			return true
 		end
 
-		for _, v in ipairs(self.keywords) do
-			if type(v) == 'string' then
-				local a, b = string.find(message, v)
-				if not a or not b then
+		local data = {}
+		local last = 0
+		for _, keyword in ipairs(self.keywords) do
+			if type(keyword) == 'string' then
+				local a, b = string.find(message, keyword)
+				if a == nil or b == nil or a < last then
 					return false
 				end
+				if keyword:sub(1, 1) == '%' then
+					data[#data + 1] = tonumber(message:sub(a, b)) or nil
+				end
+				last = a
 			end
 		end
 

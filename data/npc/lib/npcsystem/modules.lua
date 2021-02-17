@@ -95,14 +95,12 @@ if Modules == nil then
 		if npcHandler == nil then
 			error("StdModule.promotePlayer called without any npcHandler instance.")
 		end
-
 		if not npcHandler:isFocused(cid) then
 			return false
 		end
 
 		local player = Player(cid)
 		if player:isPremium() or not parameters.premium then
-			local promotion = player:getVocation():getPromotion()
 			if player:getStorageValue(Storage.Promotion) == 1 then
 				npcHandler:say("You are already promoted!", cid)
 			elseif player:getLevel() < parameters.level then
@@ -110,9 +108,10 @@ if Modules == nil then
 			elseif not player:removeTotalMoney(parameters.cost) then
 				npcHandler:say("You do not have enough money!", cid)
 			else
-				npcHandler:say(parameters.text, cid)
-				player:setVocation(promotion)
 				player:setStorageValue(Storage.Promotion, 1)
+				player:setVocation(player:getVocation():getPromotion())
+				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
+				npcHandler:say(parameters.text or "Congratulations! You are now promoted.", cid)
 			end
 		else
 			npcHandler:say("You need a premium account in order to get promoted.", cid)
@@ -132,21 +131,18 @@ if Modules == nil then
 		end
 
 		local player = Player(cid)
-		if player:isPremium() or not parameters.premium then
-			if player:hasLearnedSpell(parameters.spellName) then
-				npcHandler:say("You already know this spell.", cid)
-			elseif not player:canLearnSpell(parameters.spellName) then
-				npcHandler:say("You cannot learn this spell.", cid)
-			elseif not player:removeTotalMoney(parameters.price) then
-				npcHandler:say("You do not have enough money, this spell costs " .. parameters.price .. " gold.", cid)
-			else
-				npcHandler:say("Here you are. Look in your spellbook for the pronunciation of this spell.", cid)
-				player:learnSpell(parameters.spellName)
-				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-			end
+		if player:hasLearnedSpell(parameters.spellName) then
+			npcHandler:say("You already know how to cast this spell.", cid)
+		elseif player:getLevel() < parameters.level then
+			npcHandler:say("You have to be level " .. parameters.level .. " to learn this spell.", cid)
+		elseif not player:removeTotalMoney(parameters.price) then
+			npcHandler:say("Return when you have enough gold.", cid)
 		else
-			npcHandler:say("You need a premium account in order to buy " .. parameters.spellName .. ".", cid)
+			npcHandler:say("Here you are. Look in your spellbook for the pronunciation of this spell.", cid)
+			player:learnSpell(parameters.spellName)
+			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
+
 		npcHandler:resetNpc(cid)
 		return true
 	end
@@ -169,7 +165,7 @@ if Modules == nil then
 			npcHandler:say("You need the blessing of the great geomancer first.", cid)
 		elseif parameters.bless == 6 and player:getBlessings() == 0 and not player:getItemById(2173, true) then
 			npcHandler:say("You don't have any of the other blessings nor an amulet of loss, so it wouldn't make sense to bestow this protection on you now. Remember that it can only protect you from the loss of those!", cid)
-		elseif not player:removeMoney(type(parameters.cost) == "string" and npcHandler:parseMessage(parameters.cost, parseInfo) or parameters.cost) then
+		elseif not player:removeTotalMoney(type(parameters.cost) == "string" and npcHandler:parseMessage(parameters.cost, parseInfo) or parameters.cost) then
 			npcHandler:say("Oh. You do not have enough money.", cid)
 		else
 			npcHandler:say(parameters.text or "You have been blessed by one of the five gods!", cid)
@@ -179,6 +175,7 @@ if Modules == nil then
 			player:addBlessing(parameters.bless)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
+
 		npcHandler:resetNpc(cid)
 		return true
 	end
@@ -213,7 +210,7 @@ if Modules == nil then
 			npcHandler:say("You must reach level " .. parameters.level .. " before I can let you go there.", cid)
 		elseif player:isPzLocked() then
 			npcHandler:say("First get rid of those blood stains! You are not going to ruin my vehicle!", cid)
-		elseif not player:removeMoney(cost) then
+		elseif not player:removeTotalMoney(cost) then
 			npcHandler:say("You don't have enough money.", cid)
 		else
 			npcHandler:releaseFocus(cid)
@@ -412,7 +409,7 @@ if Modules == nil then
 	end
 
 	function KeywordModule:addKeyword(keywords, reply)
-		self.npcHandler.keywordHandler:addKeyword(keywords, StdModule.say, {npcHandler = self.npcHandler, onlyFocus = true, text = reply, reset = true})
+		self.npcHandler.keywordHandler:addKeyword(keywords, StdModule.say, {npcHandler = self.npcHandler, text = reply, reset = true})
 	end
 
 	TravelModule = {
@@ -421,7 +418,6 @@ if Modules == nil then
 		yesNode = nil,
 		noNode = nil,
 	}
-
 	-- Add it to the parseable module list.
 	Modules.parseableModules["module_travel"] = TravelModule
 
@@ -544,30 +540,29 @@ if Modules == nil then
 			return false
 		end
 
-		if shop_npcuid[cid] ~= Npc().uid then
+		if shop_npcuid[cid] ~= getNpcCid() then
 			return false
 		end
 
 		local npcHandler = module.npcHandler
 
+		local parentParameters = node:getParent():getParameters()
 		local cost = shop_cost[cid]
-		local destination = Position(shop_destination[cid])
+		local destination = shop_destination[cid]
+		local premium = shop_premium[cid]
 
 		local player = Player(cid)
-		if player:isPremium() or not shop_premium[cid] then
+		if not isPlayerPremiumCallback or isPlayerPremiumCallback(player) or shop_premium[cid] ~= true then
 			if not player:removeTotalMoney(cost) then
 				npcHandler:say("You do not have enough money!", cid)
-			elseif player:isPzLocked(cid) then
+			elseif player:isPzLocked() then
 				npcHandler:say("Get out of there with this blood.", cid)
 			else
 				npcHandler:say("It was a pleasure doing business with you.", cid)
 				npcHandler:releaseFocus(cid)
-
-				local position = player:getPosition()
+				-- Todo convert all destionation parameters to Position(x, y, z) instead of lua tables
 				player:teleportTo(destination)
-
-				position:sendMagicEffect(CONST_ME_TELEPORT)
-				destination:sendMagicEffect(CONST_ME_TELEPORT)
+				Position(destination):sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		else
 			npcHandler:say("I can only allow premium players to travel there.", cid)
@@ -598,16 +593,14 @@ if Modules == nil then
 		end
 
 		local cost = parameters.cost
-		local destination = Position(parameters.destination)
+		local destination = parameters.destination
+		local premium = parameters.premium
 
-		local player = Player(cid)
-		if player:isPremium() or not parameters.premium then
+		if(not isPlayerPremiumCallback or isPlayerPremiumCallback(cid) or parameters.premium ~= true) then
+			local player = Player(cid)
 			if player:removeTotalMoney(cost) then
-				local position = player:getPosition()
 				player:teleportTo(destination)
-
-				position:sendMagicEffect(CONST_ME_TELEPORT)
-				destination:sendMagicEffect(CONST_ME_TELEPORT)
+				Position(destination):sendMagicEffect(CONST_ME_TELEPORT)
 			end
 		end
 		return true
@@ -860,7 +853,7 @@ if Modules == nil then
 		self.noText = handler:getMessage(MESSAGE_DECLINE)
 
 		if SHOPMODULE_MODE ~= SHOPMODULE_MODE_TALK then
-			for i, word in pairs(SHOP_TRADEREQUEST) do
+			for _, word in pairs(SHOP_TRADEREQUEST) do
 				local obj = {}
 				obj[#obj + 1] = word
 				obj.callback = SHOP_TRADEREQUEST.callback or ShopModule.messageMatcher
@@ -873,7 +866,7 @@ if Modules == nil then
 
 	-- Custom message matching callback function for requesting trade messages.
 	function ShopModule.messageMatcher(keywords, message)
-		for i, word in pairs(keywords) do
+		for _, word in pairs(keywords) do
 			if type(word) == "string" then
 				if string.find(message, word) and not string.find(message, "[%w+]" .. word) and not string.find(message, word .. "[%w+]") then
 					return true
@@ -911,7 +904,7 @@ if Modules == nil then
 	--	itemid = The itemid of the buyable item
 	--	cost = The price of one single item
 	--	subType - The subType of each rune or fluidcontainer item. Can be left out if it is not a rune/fluidcontainer. Default value is 1.
-	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (ItemType(itemId):getName() will be used)
+	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (getName will be used)
 	function ShopModule:addBuyableItem(names, itemid, cost, itemSubType, realName)
 		if SHOPMODULE_MODE ~= SHOPMODULE_MODE_TALK then
 			if itemSubType == nil then
@@ -927,7 +920,7 @@ if Modules == nil then
 		end
 
 		if names and SHOPMODULE_MODE ~= SHOPMODULE_MODE_TRADE then
-			for i, name in pairs(names) do
+			for _, name in pairs(names) do
 				local parameters = {
 						itemid = itemid,
 						cost = cost,
@@ -978,10 +971,10 @@ if Modules == nil then
 	--	itemid = The itemid of the buyable item
 	--	cost = The price of one single item
 	--	subType - The subType of each rune or fluidcontainer item. Can be left out if it is not a rune/fluidcontainer. Default value is 1.
-	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (ItemType(itemId):getName() will be used)
+	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (getName will be used)
 	function ShopModule:addBuyableItemContainer(names, container, itemid, cost, subType, realName)
 		if names then
-			for i, name in pairs(names) do
+			for _, name in pairs(names) do
 				local parameters = {
 						container = container,
 						itemid = itemid,
@@ -1006,7 +999,7 @@ if Modules == nil then
 	--	names = A table containing one or more strings of alternative names to this item. Used only by old buy/sell system.
 	--	itemid = The itemid of the sellable item
 	--	cost = The price of one single item
-	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (ItemType(itemId):getName() will be used)
+	--	realName - The real, full name for the item. Will be used as ITEMNAME in MESSAGE_ONBUY and MESSAGE_ONSELL if defined. Default value is nil (getName will be used)
 	function ShopModule:addSellableItem(names, itemid, cost, realName, itemSubType)
 		if SHOPMODULE_MODE ~= SHOPMODULE_MODE_TALK then
 			if itemSubType == nil then
@@ -1015,14 +1008,14 @@ if Modules == nil then
 
 			local shopItem = self:getShopItem(itemid, itemSubType)
 			if shopItem == nil then
-				self.npcHandler.shopItems[#self.npcHandler.shopItems + 1] = {id = itemid, buy = -1, sell = cost, subType = itemSubType, name = realName or ItemType(itemid):getName()}
+				table.insert(self.npcHandler.shopItems, {id = itemid, buy = -1, sell = cost, subType = itemSubType, name = realName or ItemType(itemid):getName()})
 			else
 				shopItem.sell = cost
 			end
 		end
 
 		if names and SHOPMODULE_MODE ~= SHOPMODULE_MODE_TRADE then
-			for i, name in pairs(names) do
+			for i = 1, #names do
 				local parameters = {
 					itemid = itemid,
 					cost = cost,
@@ -1032,9 +1025,8 @@ if Modules == nil then
 				}
 
 				keywords = {}
-				keywords[#keywords + 1] = "sell"
-				keywords[#keywords + 1] = name
-
+				table.insert(keywords, "sell")
+				table.insert(keywords, name)
 				local node = self.npcHandler.keywordHandler:addKeyword(keywords, ShopModule.tradeItem, parameters)
 				node:addChildKeywordNode(self.yesNode)
 				node:addChildKeywordNode(self.noNode)
@@ -1169,7 +1161,7 @@ if Modules == nil then
 
 		local itemWindow = {}
 		for i = 1, #module.npcHandler.shopItems do
-			itemWindow[#itemWindow + 1] = module.npcHandler.shopItems[i]
+			table.insert(itemWindow, module.npcHandler.shopItems[i])
 		end
 
 		if itemWindow[1] == nil then
@@ -1197,9 +1189,8 @@ if Modules == nil then
 		shop_npcuid[cid] = 0
 
 		local parentParameters = node:getParent():getParameters()
-		local player = Player(cid)
 		local parseInfo = {
-			[TAG_PLAYERNAME] = player:getName(),
+			[TAG_PLAYERNAME] = Player(cid):getName(),
 			[TAG_ITEMCOUNT] = shop_amount[cid],
 			[TAG_TOTALCOST] = shop_cost[cid] * shop_amount[cid],
 			[TAG_ITEMNAME] = shop_rlname[cid]
@@ -1218,7 +1209,7 @@ if Modules == nil then
 			end
 		elseif shop_eventtype[cid] == SHOPMODULE_BUY_ITEM then
 			local cost = shop_cost[cid] * shop_amount[cid]
-			if player:getTotalMoney() < cost then
+			if Player(cid):getMoney() < cost then
 				local msg = module.npcHandler:getMessage(MESSAGE_MISSINGMONEY)
 				msg = module.npcHandler:parseMessage(msg, parseInfo)
 				module.npcHandler:say(msg, cid)
@@ -1236,7 +1227,7 @@ if Modules == nil then
 				msg = module.npcHandler:parseMessage(msg, parseInfo)
 				module.npcHandler:say(msg, cid)
 				if a > 0 then
-					if not player:removeTotalMoney(a * shop_cost[cid]) then
+					if not Player(cid):removeTotalMoney(a * shop_cost[cid]) then
 						return false
 					end
 					if shop_itemid[cid] == ITEM_PARCEL then
@@ -1249,7 +1240,7 @@ if Modules == nil then
 				local msg = module.npcHandler:getMessage(MESSAGE_ONBUY)
 				msg = module.npcHandler:parseMessage(msg, parseInfo)
 				module.npcHandler:say(msg, cid)
-				if not player:removeTotalMoney(cost) then
+				if not Player(cid):removeTotalMoney(cost) then
 					return false
 				end
 				if shop_itemid[cid] == ITEM_PARCEL then
@@ -1259,7 +1250,7 @@ if Modules == nil then
 			end
 		elseif shop_eventtype[cid] == SHOPMODULE_BUY_ITEM_CONTAINER then
 			local ret = doPlayerBuyItemContainer(cid, shop_container[cid], shop_itemid[cid], shop_amount[cid], shop_cost[cid] * shop_amount[cid], shop_subtype[cid])
-			if ret == true then
+			if ret then
 				local msg = module.npcHandler:getMessage(MESSAGE_ONBUY)
 				msg = module.npcHandler:parseMessage(msg, parseInfo)
 				module.npcHandler:say(msg, cid)
@@ -1380,7 +1371,7 @@ if Modules == nil then
 	function VoiceModule:callbackOnThink()
 		if self.lastVoice < os.time() then
 			self.lastVoice = os.time() + self.timeout
-			if math.random(100) <= self.chance  then
+			if math.random(100) <= self.chance then
 				local voice = self.voices[math.random(self.voiceCount)]
 				Npc():say(voice.text, voice.talktype)
 			end

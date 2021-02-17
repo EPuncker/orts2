@@ -179,7 +179,7 @@ if not KeywordHandler then
 	function KeywordHandler:processNodeMessage(node, cid, message)
 		local messageLower = string.lower(message)
 		for i, childNode in pairs(node.children) do
-			if childNode:checkMessage(messageLower) then
+			if childNode:checkMessage(cid, messageLower) then
 				local oldLast = self.lastNode[cid]
 				self.lastNode[cid] = childNode
 				childNode.parent = node -- Make sure node is the parent of childNode (as one node can be parent to several nodes).

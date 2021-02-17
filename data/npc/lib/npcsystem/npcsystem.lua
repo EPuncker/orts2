@@ -55,7 +55,7 @@ if not NpcSystem then
 	-- Gets an npcparameter with the specified key. Returns nil if no such parameter is found.
 	function NpcSystem.getParameter(key)
 		local ret = getNpcParameter(tostring(key))
-		if (type(ret) == 'number' and ret == 0) then
+		if (type(ret) == 'number' and ret == 0) or ret == nil then
 			return nil
 		else
 			return ret

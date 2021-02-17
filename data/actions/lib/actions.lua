@@ -331,7 +331,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	 -- The Banshee Quest
+	-- The Banshee Quest
 	if target.itemid == 9025 and target.actionid == 101 then
 		target:transform(392)
 		target:decay()
@@ -339,7 +339,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	 -- The Hidden City of Beregar Quest
+	-- The Hidden City of Beregar Quest
 	if target.actionid == 50090 then
 		if player:getStorageValue(Storage.hiddenCityOfBeregar.WayToBeregar) == 1 then
 			player:teleportTo(Position(32566, 31338, 10))

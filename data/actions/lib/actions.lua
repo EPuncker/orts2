@@ -280,7 +280,7 @@ end
 
 function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 	-- The Ice Islands Quest, Nibelor 1: Breaking the Ice
-	if tile.itemid == 3621 and tile.actionid == 12026 then
+	if target.itemid == 3621 and target.actionid == 12026 then
 		local missionProgress, pickAmount = player:getStorageValue(Storage.TheIceIslands.Mission02), player:getStorageValue(Storage.TheIceIslands.PickAmount)
 		if missionProgress < 1 or pickAmount >= 3 or player:getStorageValue(Storage.TheIceIslands.Questline) ~= 3 then
 			return false
@@ -331,7 +331,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	 --The Banshee Quest
+	 -- The Banshee Quest
 	if target.itemid == 9025 and target.actionid == 101 then
 		target:transform(392)
 		target:decay()

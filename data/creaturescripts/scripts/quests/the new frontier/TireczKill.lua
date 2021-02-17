@@ -23,7 +23,7 @@ function onKill(creature, target)
 		return true
 	end
 
-	local spectators, spectator = Game.getSpectators(Position({x = 33063, y = 31034, z = 3}), false, true, 10, 10, 10, 10)
+	local spectators, spectator = Game.getSpectators(Position(33063, 31034, 3), false, true, 10, 10, 10, 10)
 	for i = 1, #spectators do
 		spectator = spectators[i]
 		spectator:teleportTo(exitPosition[1])

@@ -45,12 +45,12 @@ local function clearArena()
 end
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local player1 = Tile(Position({x = 33080, y = 31014, z = 2})):getTopCreature()
+	local player1 = Tile(Position(33080, 31014, 2)):getTopCreature()
 	if not(player1 and player1:isPlayer()) then
 		return true
 	end
 
-	local player2 = Tile(Position({x = 33081, y = 31014, z = 2})):getTopCreature()
+	local player2 = Tile(Position(33081, 31014, 2)):getTopCreature()
 	if not(player2 and player2:isPlayer()) then
 		return true
 	end

@@ -2,19 +2,19 @@ local config = {
 	[23700] = {
 		storage = GlobalStorage.InServiceOfYalahar.WarGolemsMachine1,
 		machines = {
-			{x = 32882, y = 31323, z = 10},
-			{x = 32882, y = 31320, z = 10},
-			{x = 32882, y = 31318, z = 10},
-			{x = 32882, y = 31316, z = 10}
+			Position(32882, 31323, 10),
+			Position(32882, 31320, 10),
+			Position(32882, 31318, 10),
+			Position(32882, 31316, 10)
 		}
 	},
 	[23701] = {
 		storage = GlobalStorage.InServiceOfYalahar.WarGolemsMachine2,
 		machines = {
-			{x = 32869, y = 31322, z = 10},
-			{x = 32869, y = 31320, z = 10},
-			{x = 32869, y = 31318, z = 10},
-			{x = 32869, y = 31316, z = 10}
+			Position(32869, 31322, 10),
+			Position(32869, 31320, 10),
+			Position(32869, 31318, 10),
+			Position(32869, 31316, 10)
 		}
 	}
 }

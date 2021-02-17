@@ -1,10 +1,10 @@
 local waterpos = {
-	Position({x = 33282, y = 31036, z = 10}),
-	Position({x = 33282, y = 31037, z = 10}),
-	Position({x = 33283, y = 31037, z = 10}),
-	Position({x = 33283, y = 31036, z = 10}),
-	Position({x = 33283, y = 31038, z = 10}),
-	Position({x = 33283, y = 31035, z = 10})
+	Position(33282, 31036, 10),
+	Position(33282, 31037, 10),
+	Position(33283, 31037, 10),
+	Position(33283, 31036, 10),
+	Position(33283, 31038, 10),
+	Position(33283, 31035, 10)
 }
 
 local function revertWater(position)
@@ -13,7 +13,6 @@ local function revertWater(position)
 		waterTile:transform(11450)
 	end
 end
-
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	-- clay with the sacred earth
@@ -41,7 +40,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:remove()
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 4 then
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 5)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission02, 2) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
+			player:setStorageValue(Storage.WrathoftheEmperor.Mission02, 2) -- Questlog, Wrath of the Emperor "Mission 02: First Contact"
 		end
 		for i = 1, 4 do
 			waterpos[i]:sendMagicEffect(CONST_ME_GREEN_RINGS)

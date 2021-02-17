@@ -15,18 +15,18 @@ local config = {
 	bonebeastCount = 4,
 	waves = 10,
 	questArea = {
-		fromPosition = {x = 32706, y = 32345, z = 7},
-		toPosition = {x = 32725, y = 32357, z = 7}
+		fromPosition = Position(32706, 32345, 7),
+		toPosition = Position(32725, 32357, 7)
 	},
 	summonPositions = {
-		{x = 32714, y = 32348, z = 7},
-		{x = 32712, y = 32349, z = 7},
-		{x = 32711, y = 32351, z = 7},
-		{x = 32713, y = 32354, z = 7},
-		{x = 32716, y = 32354, z = 7},
-		{x = 32719, y = 32354, z = 7},
-		{x = 32721, y = 32351, z = 7},
-		{x = 32719, y = 32348, z = 7}
+		Position(32714, 32348, 7),
+		Position(32712, 32349, 7),
+		Position(32711, 32351, 7),
+		Position(32713, 32354, 7),
+		Position(32716, 32354, 7),
+		Position(32719, 32354, 7),
+		Position(32721, 32351, 7),
+		Position(32719, 32348, 7)
 	},
 	summons = {
 		[8288] = {
@@ -64,7 +64,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	local totalProgress = 0
-	for k,v in pairs(config.storages) do
+	for k, v in pairs(config.storages) do
 		totalProgress = totalProgress + math.max(0, player:getStorageValue(v))
 	end
 
@@ -123,6 +123,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	toPosition:sendMagicEffect(CONST_ME_DRAWBLOOD)
 	player:setStorageValue(cStorage, progress + 1)
 	player:say('-krrrrak-', TALKTYPE_MONSTER_YELL, false, player, toPosition)
-	doTargetCombatHealth(0, player, COMBAT_EARTHDAMAGE, -170, -210, CONST_ME_BIGPLANTS)
+	doTargetCombat(0, player, COMBAT_EARTHDAMAGE, -170, -210, CONST_ME_BIGPLANTS)
 	return true
 end

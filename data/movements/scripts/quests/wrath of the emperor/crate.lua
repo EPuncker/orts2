@@ -2,7 +2,7 @@ function catchPlayer(cid)
 	local player = Player(cid)
 	player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, 1)
 	player:setStorageValue(Storage.WrathoftheEmperor.CrateStatus, 0)
-	player:teleportTo({x = 33361, y = 31206, z = 8}, false)
+	player:teleportTo(Position(33361, 31206, 8), false)
 	player:say("The guards have spotted you. You were forcibly dragged into a small cell. It looks like you need to build another disguise.", TALKTYPE_MONSTER_SAY)
 	return true
 end

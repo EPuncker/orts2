@@ -24,12 +24,12 @@ SvargrondArena = {
 
 -- Script automatically derives other pit positions from this one
 local firstPit = {
-	fromPos = {x = 32205, y = 31094, z = 7},
-	toPos = {x = 32214, y = 31103, z = 7},
-	center = {x = 32210, y = 31098, z = 7},
-	pillar = {x = 32204, y = 31098, z = 7},
-	tp = {x = 32204, y = 31098, z = 7},
-	summon = {x = 32210, y = 31100, z = 7}
+	fromPos = Position(32205, 31094, 7),
+	toPos = Position(32214, 31103, 7),
+	center = Position(32210, 31098, 7),
+	pillar = Position(32204, 31098, 7),
+	tp = Position(32204, 31098, 7),
+	summon = Position(32210, 31100, 7)
 }
 
 PITS = {

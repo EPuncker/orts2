@@ -5,7 +5,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	if player:getStorageValue(Storage.TheApeCity.Questline) >= 17 then
-		player:teleportTo({x = 32749, y = 32536, z = 10})
+		player:teleportTo(Position(32749, 32536, 10))
 	else
 		player:teleportTo(fromPosition)
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have access to this area.')
@@ -15,5 +15,3 @@ function onStepIn(creature, item, position, fromPosition)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
-
-

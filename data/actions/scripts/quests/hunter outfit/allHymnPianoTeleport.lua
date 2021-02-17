@@ -1,4 +1,4 @@
-local portpos = Position({x = 32402, y = 32794, z = 9})
+local portpos = Position(32402, 32794, 9)
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.actionid ~= 33216 then

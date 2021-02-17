@@ -7,7 +7,7 @@ function onStepIn(creature, item, position, fromPosition)
 	if item.actionid == 50014 then
 		position:sendMagicEffect(CONST_ME_MAGIC_GREEN)
 	else
-		player:teleportTo({x = 32185, y = 31939, z = 14}, false)
+		player:teleportTo(Position(32185, 31939, 14), false)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	end
 	return true

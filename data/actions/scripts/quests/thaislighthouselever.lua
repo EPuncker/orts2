@@ -1,7 +1,7 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	--first lever to open the ladder
 	if item.actionid == 50023 then
-		local laddertile = Tile(Position({x = 32225, y = 32276, z = 8}))
+		local laddertile = Tile(Position(32225, 32276, 8))
 			if item.itemid == 1945 then
 				laddertile:getItemById(9021):transform(8280)
 				item:transform(1946)
@@ -11,12 +11,12 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			end
 	--second lever to open the portal to cyclops
 	elseif item.actionid == 50024 then
-		local portaltile = Tile(Position({x = 32232, y = 32276, z = 9}))
+		local portaltile = Tile(Position(32232, 32276, 9))
 		if item.itemid == 1945 then
 			if portaltile:getItemById(1387) then
 				portaltile:getItemById(1387):remove()
 			else
-				local portal = Game.createItem(1387, 1, {x = 32232, y = 32276, z = 9})
+				local portal = Game.createItem(1387, 1, Position(32232, 32276, 9))
 				if portal then
 					portal:setActionId(50026)
 				end

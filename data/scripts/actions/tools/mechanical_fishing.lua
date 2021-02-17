@@ -25,5 +25,5 @@ function mechanicalFishing.onUse(player, item, fromPosition, target, toPosition,
 end
 
 mechanicalFishing:id(10223)
-mechanicalFishing::allowFarUse(true)
+mechanicalFishing:allowFarUse(true)
 mechanicalFishing:register()

@@ -10,14 +10,14 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		elseif Game.getStorageValue(Storage.WrathoftheEmperor.Mission03) == 5 then
 			Game.setStorageValue(Storage.WrathoftheEmperor.Mission03, 6)
 			toPosition:sendMagicEffect(CONST_ME_YELLOW_RINGS)
-			Game.createMonster('the keeper', {x = 33171, y = 31058, z = 11})
-			Position({x = 33171, y = 31058, z = 11}):sendMagicEffect(CONST_ME_TELEPORT)
+			Game.createMonster('the keeper', Position(33171, 31058, 11))
+			Position(33171, 31058, 11):sendMagicEffect(CONST_ME_TELEPORT)
 			addEvent(revertKeeperstorage, 60 * 1000)
 		end
 	elseif item.itemid == 12316 then
 		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 7 then
 			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 8)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission03, 2) --Questlog, Wrath of the Emperor "Mission 03: The Keeper"
+			player:setStorageValue(Storage.WrathoftheEmperor.Mission03, 2) -- Questlog, Wrath of the Emperor "Mission 03: The Keeper"
 			player:addItem(12323, 1)
 		end
 	end

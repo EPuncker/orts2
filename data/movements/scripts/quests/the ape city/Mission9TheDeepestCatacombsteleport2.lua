@@ -1,11 +1,8 @@
-local config = {
-	amphoraPositions = {
-		Position(32792, 32527, 10),
-		Position(32823, 32525, 10),
-		Position(32876, 32584, 10),
-		Position(32744, 32586, 10)
-	},
-	brokenAmphoraId = 4997
+local amphoraPositions = {
+	Position(32792, 32527, 10),
+	Position(32823, 32525, 10),
+	Position(32876, 32584, 10),
+	Position(32744, 32586, 10)
 }
 
 
@@ -15,10 +12,10 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	for i = 1, #config.amphoraPositions do
-		local amphoraItem = Tile(config.amphoraPositions[i]):getItemById(config.brokenAmphoraId)
+	for i = 1, #amphoraPositions do
+		local amphoraItem = Tile(amphoraPositions[i]):getItemById(4997)
 		if not amphoraItem then
-			player:teleportTo({x = 32852, y = 32544, z = 10})
+			player:teleportTo(Position(32852, 32544, 10))
 			position:sendMagicEffect(CONST_ME_TELEPORT)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:sendTextMessage(MESSAGE_STATUS_SMALL, "There are 4 large amphoras that must be broken in order to open the teleporter.")
@@ -26,10 +23,8 @@ function onStepIn(creature, item, position, fromPosition)
 		end
 	end
 
-	player:teleportTo({x = 32885, y = 32632, z = 11})
+	player:teleportTo(Position(32885, 32632, 11))
 	position:sendMagicEffect(CONST_ME_TELEPORT)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
-
-

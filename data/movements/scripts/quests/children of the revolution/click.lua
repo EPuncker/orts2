@@ -1,9 +1,9 @@
 local config = {
 	positions = {
-		Position({x = 33258, y = 31080, z = 8}),
-		Position({x = 33266, y = 31084, z = 8}),
-		Position({x = 33259, y = 31089, z = 8}),
-		Position({x = 33263, y = 31093, z = 8})
+		Position(33258, 31080, 8),
+		Position(33266, 31084, 8),
+		Position(33259, 31089, 8),
+		Position(33263, 31093, 8)
 	},
 	stairPosition = Position(33265, 31116, 8),
 	areaCenter = Position(33268, 31119, 7),

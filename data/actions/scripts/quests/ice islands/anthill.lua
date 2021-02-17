@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local mast = {x = 32360, y = 31365, z = 7}
+	local mast = Position(32360, 31365, 7)
 	if target.itemid == 3323 and item.itemid == 7243 then
 		if player:getStorageValue(Storage.TheIceIslands.Questline) == 6 then
 			toPosition:sendMagicEffect(CONST_ME_GROUNDSHAKER)

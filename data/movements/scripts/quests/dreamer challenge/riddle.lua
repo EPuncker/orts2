@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 	local index = item.actionid == 2245 and 'x' or 'y'
 
 	local new_position = Position(position.x, position.y, position.z)
-	
+
 	for i = 1, 6 do
 		new_position[index] = position[index] + 2 + i - 1
 		local tile = Tile(new_position)

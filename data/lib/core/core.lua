@@ -1,3 +1,7 @@
+-- Priority reading:
+dofile('data/lib/features/storages.lua')
+
+-- Normal reading:
 dofile('data/lib/core/actionids.lua')
 dofile('data/lib/core/combat.lua')
 dofile('data/lib/core/constants.lua')

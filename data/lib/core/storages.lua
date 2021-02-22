@@ -1,12 +1,14 @@
--- STORAGES --
--- (HIGHLY RECOMMENDED -> ONE mission per STORAGE) --
--- Sort it in Values -
+-- Reserved storages:
+-- 300000 to 301000+ reserved for achievements
+-- 20000 to 21000+ reserved for achievement progress
+-- 10000000 to 20000000 reserved for outfits and mounts on source
 
 Storage = {
 	SweetyCyclops = {
 		AmuletTimer = 48,
 		AmuletStatus = 49
 	},
+
 	ExplorerSociety = {
 		QuestLine = 90,
 		bansheeDoor = 91,
@@ -17,6 +19,7 @@ Storage = {
 		orcDoor = 96,
 		urnDoor = 97
 	},
+
 	TravellingTrader = {
 		Mission01 = 101,
 		Mission02 = 102,
@@ -27,6 +30,7 @@ Storage = {
 		Mission07 = 107,
 		packageDoor = 108
 	},
+
 	DjinnWar = {
 		Faction = {
 			Greeting = 50717,
@@ -46,6 +50,7 @@ Storage = {
 			DoorToLamp = 115,
 			DoorToEfreetTerritory = 116
 		},
+
 		-- green djinn
 		EfreetFaction = {
 			Start = 120,
@@ -56,9 +61,11 @@ Storage = {
 			DoorToMaridTerritory = 125
 		}
 	},
+
 	VampireHunter = {
 		Rank = 402
 	},
+
 	BigfootBurden = {
 		QuestLine = 900,
 		Test = 901,
@@ -117,18 +124,22 @@ Storage = {
 		Warzone2Reward = 959,
 		Warzone3Reward = 960
 	},
+
 	TheirMastersVoice = {
 		SlimeGobblerTimeout = 984,
 		SlimeGobblerReceived = 985
 	},
+
 	KosheiTheDeathless = {
 		RewardDoor = 3066
 	},
+
 	ElementalSphere = {
 		QuestLine = 10000,
 		BossStorage = 10001,
 		MachineGemCount = 10002
 	},
+
 	GravediggerOfDrefia = {
 		-- Just numbered the storages by the order they are used in the quest
 		-- should be renamed to the correct mission names etc.
@@ -214,6 +225,7 @@ Storage = {
 		Mission73 = 9949,
 		Mission74 = 9876
 	},
+
 	Oramond = {
 		QuestLine = 10060,
 		VotingPoints = 10061,
@@ -221,12 +233,14 @@ Storage = {
 		MissionToTakeRoots = 20060,
 		HarvestedRootCount = 20061,
 	},
+
 	RathletonQuest = {
 		QuestLine = 10080,
 		VotesCasted = 10081,
 
 		Rank = 10082,
 	},
+
 	OutfitQuest = {
 		DefaultStart = 12010, -- until all outfit quests are completed
 		Ref = 12010,
@@ -331,6 +345,7 @@ Storage = {
 		firstOrientalAddon = 50137,
 		secondOrientalAddon = 50138
 	},
+
 	TheAncientTombs = {
 		DefaultStart = 12100,
 		VashresamunInstruments = 12109,
@@ -342,6 +357,7 @@ Storage = {
 		MorguthisBlueFlameStorage6 = 50219,
 		MorguthisBlueFlameStorage7 = 50220
 	},
+
 	TheApeCity = {
 		Started = 12120,
 		Questline = 12121, -- Storage through the Quest
@@ -356,6 +372,7 @@ Storage = {
 		SnakeDestroyer = 12151,
 		ShamanOufit = 12152
 	},
+
 	TheNewFrontier = {
 		Questline = 12130, -- Storage through the Quest
 		Mission01 = 12131,
@@ -379,6 +396,7 @@ Storage = {
 		BribeTelas = 12149,
 		BribeHumgolf = 12150
 	},
+
 	TheInquisition = {
 		Questline = 12160, -- Storage through the Quest
 		Mission01 = 12161,
@@ -398,6 +416,7 @@ Storage = {
 		Reward = 12177,
 		RewardRoomText = 12178
 	},
+
 	BarbarianTest = {
 		Questline = 12190, -- Storage through the Quest
 		Mission01 = 12191,
@@ -406,6 +425,7 @@ Storage = {
 		MeadTotalSips = 12194,
 		MeadSuccessSips = 12195
 	},
+
 	TheIceIslands = {
 		Questline = 12200, -- Storage through the Quest
 		Mission01 = 12201, -- Befriending the Musher
@@ -434,9 +454,11 @@ Storage = {
 		Obelisk04 = 12224,
 		yakchalDoor = 7814
 	},
+
 	TheWayToYalahar = {
 		QuestLine = 30
 	},
+
 	InServiceofYalahar = {
 		Questline = 12240, -- Storage through the Quest
 		Mission01 = 12241,
@@ -479,6 +501,7 @@ Storage = {
 		DoorToQuara = 12278,
 		DoorToReward = 12279
 	},
+
 	ChildrenoftheRevolution = {
 		Questline = 12300, -- Storage through the Quest
 		Mission00 = 12301, -- Prove Your Worzz!
@@ -492,6 +515,7 @@ Storage = {
 		SpyBuilding03 = 12309,
 		StrangeSymbols = 12310
 	},
+
 	UnnaturalSelection = {
 		Questline = 12330, -- Storage through the Quest
 		Mission01 = 12331,
@@ -502,6 +526,7 @@ Storage = {
 		Mission06 = 12336,
 		DanceStatus = 12337
 	},
+
 	WrathoftheEmperor = {
 		Questline = 12350, -- Storage through the Quest
 		Mission01 = 12351,
@@ -539,6 +564,7 @@ Storage = {
 		TheBlessedStake = 12403,
 		TheBlessedStakeWaitTime = 12404
 	},
+
 	postman = {
 		Mission01 = 12450,
 		Mission02 = 12451,
@@ -558,6 +584,7 @@ Storage = {
 		TravelVenore = 253,
 		TravelCormaya = 254
 	},
+
 	thievesGuild = {
 		Quest = 12501,
 		Mission01 = 12502,
@@ -572,6 +599,7 @@ Storage = {
 		Reward = 12513,
 		TheatreScript = 12514
 	},
+
 	CaptainHaba = 12540,
 	secretService = {
 		Quest = 12550,
@@ -596,6 +624,7 @@ Storage = {
 		Mission07 = 12569,
 		RottenTree = 12578
 	},
+
 	hiddenCityOfBeregar = {
 		DefaultStart = 12600,
 		WayToBeregar = 12601,
@@ -612,6 +641,7 @@ Storage = {
 		DoorSouthMine = 12612,
 		BrownMushrooms = 12613
 	},
+
 	TibiaTales = {
 		DefaultStart = 12650,
 		ultimateBoozeQuest = 12651,
@@ -643,6 +673,7 @@ Storage = {
 			}
 		}
 	},
+
 	TheShatteredIsles = {
 		DefaultStart = 12700,
 		TheGovernorDaughter = 12701,
@@ -656,6 +687,7 @@ Storage = {
 		DragahsSpellbook = 12709,
 		TheCounterspell = 12710
 	},
+
 	KillingInTheNameOf = {
 		LugriNecromancers = 50000,
 		LugriNecromancerCount = 50001,
@@ -666,6 +698,7 @@ Storage = {
 		DemodrasTeleport = 22556
 
 	},
+
 	QueenOfBansheesQuest = {
 		FirstSeal = 50013,
 		SecondSeal = 50019,
@@ -678,12 +711,14 @@ Storage = {
 		ThirdSealWarlocks = 50017,
 		Kiss = 50020
 	},
+
 	HotCuisineQuest = {
 		QuestStart = 50022,
 		CurrentDish = 50023,
 		QuestLog = 50024,
 		CookbookDoor = 50028
 	},
+
 	RookgaardTutorialIsland = {
 		tutorialHintsStorage = 50085,
 		SantiagoNpcGreetStorage = 50086,
@@ -696,8 +731,10 @@ Storage = {
 		CarlosNpcGreetStorage = 50097,
 		CarlosQuestLog = 50098
 	},
+
 	DeeperBanutaShortcut = 50095,
 	AnnihilatorDone = 2215,
+
 	DemonOak = {
 		Done = 1010,
 		Progress = 1013,
@@ -708,6 +745,7 @@ Storage = {
 		AxeBlowsRight = 8290,
 		AxeBlowsFace = 8291
 	},
+
 	SvargrondArena = {
 		Arena = 1100,
 		Pit = 1101,
@@ -729,6 +767,7 @@ Storage = {
 		Scrapper = 27100,
 		Warlord = 28100
 	},
+
 	QuestChests = {
 		-- Todo: Move to a seperate range
 		KosheiTheDeathlessLegs = 3067,
@@ -785,6 +824,7 @@ Storage = {
 
 		DragahsSpellbook = 50148
 	},
+
 	PitsOfInferno = {
 		ShortcutHub = 8819,
 		ShortcutLevers = 8818,
@@ -800,6 +840,7 @@ Storage = {
 		ThroneAshfalor = 2085,
 		ThronePumin = 2086
 	},
+
 	HorestisTomb = {
 		JarFloor1 = 50006,
 		JarFloor2 = 50007,
@@ -807,11 +848,13 @@ Storage = {
 		JarFloor4 = 50009,
 		JarFloor5 = 50010
 	},
+
 	WhiteRavenMonasteryQuest = {
 		QuestLog = 50200,
 		Passage = 50201,
 		Diary = 50202
 	},
+
 	FathersBurdenQuest = {
 		QuestLog = 50203,
 		Progress = 50204,
@@ -830,6 +873,7 @@ Storage = {
 			Sinew = 3007
 		}
 	},
+
 	WhatAFoolishQuest = {
 		Questline = 3900,
 		Mission1 = 3901,
@@ -868,6 +912,7 @@ Storage = {
 			Wyda = 3933,
 			Hjaern = 3934
 		},
+
 		OldWornCloth = 3935,
 		LostDisguise = 3936,
 		ScaredKazzan = 3937
@@ -948,23 +993,28 @@ Storage = {
 
 GlobalStorage = {
 	FuryGates = 100,
+
 	TheirMastersVoice = {
 		CurrentServantWave = 984,
 		ServantsKilled = 985
 	},
+
 	InServiceOfYalahar = {
 		LastFight = 982,
 		WarGolemsMachine1 = 23700,
 		WarGolemsMachine2 = 23701
 	},
+
 	Yakchal = 987,
 	PitsOfInfernoLevers = 1000,
 	Warzones = 3143,
 	Weeper = 3144,
+
 	Versperoth = {
 		Battle = 3147,
 		Health = 3148
 	},
+
 	WrathOfTheEmperor = {
 		Light01 = 8018,
 		Light02 = 8019,
@@ -978,6 +1028,7 @@ GlobalStorage = {
 			Spite = 3192
 		}
 	},
+
 	ElementalSphere = {
 		BossRoom = 10004,
 
@@ -991,11 +1042,13 @@ GlobalStorage = {
 		Machine3 = 10007,
 		Machine4 = 10008
 	},
+
 	TheAncientTombs = {
 		ThalasSwitchesGlobalStorage = 200,
 		DiprathSwitchesGlobalStorage = 201,
 		AshmunrahSwitchesGlobalStorage = 202
 	},
+
 	NaginataStone = 50058,
 	SwordOfFury = 5635
 }

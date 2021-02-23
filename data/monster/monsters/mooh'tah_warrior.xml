@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
@@ -55,7 +54,8 @@
 		<voice sentence="Ommm!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmax="120" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="20" chance="100000"/>
 		<item name="platinum coin" countmax="3" chance="39880"/>
 		<item name="mooh'tah shell" chance="15110"/>
 		<item name="strong mana potion" chance="7080"/>

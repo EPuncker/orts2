@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushcreatures="1"/>
 		<flag canpushitems="1"/>
 		<flag staticattack="90"/>
@@ -54,7 +53,8 @@
 		<voice sentence="*shglib*"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmin="2" countmax="175" chance="100000"/>
+		<item name="gold coin" countmin="2" countmax="100" chance="100000"/>
+		<item name="gold coin" countmin="2" countmax="75" chance="100000"/>
 		<item name="platinum coin" countmin="1" countmax="3" chance="60160"/>
 		<item name="slimy leaf tentacle" chance="17940"/>
 		<item name="bowl of glooth soup" chance="10130"/>

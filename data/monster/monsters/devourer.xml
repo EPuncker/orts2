@@ -8,7 +8,6 @@
 		<flag attackable="1"/>
 		<flag hostile="1"/>
 		<flag illusionable="0"/>
-		<flag isblockable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
 		<flag canpushcreatures="1"/>
@@ -60,7 +59,8 @@
 		<voice sentence="*omnnommm nomm*"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmax="161" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="61" chance="100000"/>
 		<item name="platinum coin" countmax="2" chance="60030"/>
 		<item name="glob of glooth" chance="14860"/>
 		<item name="small sapphire" chance="6060"/>

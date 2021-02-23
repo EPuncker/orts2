@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
@@ -49,7 +48,8 @@
 		<immunity invisible="1"/>
 	</immunities>
 	<loot>
-		<item name="gold coin" countmax="195" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="95" chance="100000"/>
 		<item name="platinum coin" countmax="2" chance="55890"/>
 		<item name="moohtant horn" countmax="2" chance="15530"/>
 		<item name="giant pacifier" chance="11300"/>

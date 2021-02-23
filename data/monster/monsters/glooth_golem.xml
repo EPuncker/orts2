@@ -11,7 +11,6 @@
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
-		<flag isblockable="0"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
 		<flag staticattack="90"/>
@@ -55,7 +54,8 @@
 		<item id="23554" chance="720"/> <!-- glooth amulet -->
 		<item id="23541" chance="1720"/> <!-- gearwheel chain -->
 		<item id="23536" chance="370"/> <!-- rubber cap -->
-		<item id="2148" countmax="200" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/> <!-- gold coin -->
 		<item id="24124" chance="1470"/> <!-- bronze gear wheel -->
 		<item id="9690" chance="690"/> <!-- gear wheel -->
 		<item id="23514" chance="1970"/> <!-- glooth sandwich -->

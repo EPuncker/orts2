@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushcreatures="1"/>
 		<flag canpushitems="1"/>
 		<flag staticattack="90"/>
@@ -54,7 +53,8 @@
 		<item id="23549" chance="2010"/> <!-- poisoned fang -->
 		<item id="10557" chance="3080"/> <!-- poisonous slime -->
 		<item id="23517" chance="2720"/> <!-- glooth steak -->
-		<item id="2148" countmax="139" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="39" chance="100000"/> <!-- gold coin -->
 		<item id="23565" chance="1040"/> <!-- slime heart -->
 		<item id="7588" chance="7710"/> <!-- strong health potion -->
 		<item id="7366" countmax="5" chance="1290"/> <!-- viper star -->

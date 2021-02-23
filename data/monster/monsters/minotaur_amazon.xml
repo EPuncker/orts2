@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="4"/>
@@ -53,7 +52,8 @@
 		<voice sentence="You won't hurt us!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmin="5" countmax="199" chance="100000"/>
+		<item name="gold coin" countmin="5" countmax="100" chance="100000"/>
+		<item name="gold coin" countmin="5" countmax="99" chance="100000"/>
 		<item name="platinum coin" countmax="3" chance="64980"/>
 		<item name="ham" chance="59470"/>
 		<item name="cowbell" chance="19660"/>

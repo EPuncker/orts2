@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="4"/>
@@ -60,7 +59,8 @@
 		<voice sentence="You'll make a fine trophy!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmax="199" chance="99460"/>
+		<item name="gold coin" countmin="5" countmax="100" chance="100000"/>
+		<item name="gold coin" countmin="5" countmax="99" chance="100000"/>
 		<item name="platinum coin" countmax="3" chance="35000"/>
 		<item name="hunting spear" countmax="5" chance="15000"/>
 		<item name="blank rune" countmax="2" chance="14970"/>

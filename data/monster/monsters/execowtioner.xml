@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
@@ -49,7 +48,8 @@
 		<voice sentence="Your sentence is death!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmax="198" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="98" chance="100000"/>
 		<item name="platinum coin" countmax="3" chance="65600"/>
 		<item name="execowtioner mask" chance="16370"/>
 		<item name="minotaur leather" chance="15710"/>

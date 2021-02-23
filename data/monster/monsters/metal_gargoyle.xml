@@ -9,7 +9,6 @@
 		<flag hostile="1"/>
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
-		<flag isblockable="0"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
@@ -47,7 +46,8 @@
 		<voice sentence="clonk"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="200" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/> <!-- gold coin -->
+		<item id="2148" countmax="100" chance="100000"/> <!-- gold coin -->
 		<item id="24124" chance="1490"/> <!-- bronze gear wheel -->
 		<item id="23564" chance="17160"/> <!-- metal jaw -->
 		<item id="2152" countmax="2" chance="43280"/> <!-- platinum coin -->

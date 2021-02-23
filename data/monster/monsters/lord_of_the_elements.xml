@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Lord Of The Elements" nameDescription="Lord Of The Elements" race="undead" experience="8000" speed="370" manacost="0">
+<monster name="Lord of the Elements" nameDescription="Lord of the Elements" race="undead" experience="8000" speed="370">
 	<health now="8000" max="8000" />
 	<look type="290" corpse="9009" />
 	<targetchange interval="5000" chance="10" />
@@ -15,9 +15,11 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonfire="0" />
+		<flag isboss="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="110" attack="115" />
+		<attack name="melee" interval="2000" min="0" max="-690" />
 	</attacks>
 	<defenses armor="30" defense="30">
 		<defense name="healing" interval="1000" chance="25" min="100" max="195">
@@ -60,12 +62,12 @@
 		<voice sentence="I'LL FREEZE YOU THEN I CRUSH YOU!" yell="1" />
 	</voices>
 	<loot>
-		<item id="2152" countmax="9" chance="50000" /><!-- platinum coin -->
-		<item id="9971" chance="25000" /><!-- gold ingot -->
-		<item id="2149" countmax="4" chance="11111" /><!-- small emerald -->
-		<item id="2150" countmax="3" chance="11111" /><!-- small amethyst -->
-		<item id="2147" countmax="4" chance="11111" /><!-- small ruby -->
-		<item id="2146" countmax="4" chance="7142" /><!-- small sapphire -->
-		<item id="8882" chance="2063" /><!-- earthborn titan armor -->
+		<item name="small sapphire" countmax="4" chance="7142" />
+		<item name="small ruby" countmax="4" chance="11111" />
+		<item name="small emerald" countmax="4" chance="11111" />
+		<item name="small amethyst" countmax="3" chance="11111" />
+		<item name="platinum coin" countmax="9" chance="50000" />
+		<item name="earthborn titan armor" chance="2063" />
+		<item name="gold ingot" chance="25000" />
 	</loot>
 </monster>

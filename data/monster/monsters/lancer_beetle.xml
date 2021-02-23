@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Lancer Beetle" nameDescription="a lancer beetle" race="venom" experience="275" speed="200" manacost="0">
+<monster name="Lancer Beetle" nameDescription="a lancer beetle" race="venom" experience="275" speed="200">
 	<health now="400" max="400" />
 	<look type="348" corpse="11375" />
 	<targetchange interval="4000" chance="10" />
@@ -15,9 +15,11 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="30" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="40" attack="46" />
+		<attack name="melee" interval="2000" min="0" max="-115" />
 		<attack name="poisonfield" interval="2000" chance="10" target="0" radius="4">
 			<attribute key="areaEffect" value="poison" />
 		</attack>
@@ -43,16 +45,16 @@
 		<immunity lifedrain="1" />
 		<immunity paralyze="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Crump!" yell="1" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="61" chance="60000" /><!-- gold coin -->
-		<item id="2148" countmax="79" chance="60000" /><!-- gold coin -->
-		<item id="11372" chance="16666" /><!-- lancer beetle shell -->
-		<item id="10557" chance="8333" /><!-- poisonous slime -->
-		<item id="10609" chance="4166" /><!-- lump of dirt -->
-		<item id="11374" chance="1123" /><!-- beetle necklace -->
-		<item id="2150" chance="247" /><!-- small amethyst -->
+		<item name="gold coin" countmax="61" chance="60000" />
+		<item name="gold coin" countmax="79" chance="60000" />
+		<item name="small amethyst" chance="247" />
+		<item name="poisonous slime" chance="8333" />
+		<item name="lump of dirt" chance="4166" />
+		<item name="lancer beetle shell" chance="16666" />
+		<item name="beetle necklace" chance="1123" />
 	</loot>
 </monster>

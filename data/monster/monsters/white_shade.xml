@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="White Shade" nameDescription="a white shade" race="undead" experience="120" speed="190" manacost="0">
+<monster name="White Shade" nameDescription="a white shade" race="undead" experience="120" speed="190">
 	<health now="260" max="260" />
-	<look type="560" corpse="21367" />
+	<look type="560" corpse="21376" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
 		<flag summonable="0" />
@@ -17,7 +17,7 @@
 		<flag runonhealth="30" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="20" attack="5" />
+		<attack name="melee" interval="2000" min="0" max="-8" />
 		<attack name="lifedrain" interval="2000" chance="20" range="7" min="-4" max="-6">
 			<attribute key="shootEffect" value="suddendeath" />
 			<attribute key="areaEffect" value="yalaharighost" />
@@ -43,12 +43,12 @@
 		<immunity death="1" />
 		<immunity drown="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Leave this place... save yourself..." />
 		<voice sentence="The dark ones.. must be stopped... unholy, twisted, EVIL!" />
 		<voice sentence="No... don't go further stranger... danger lies in every step..." />
 	</voices>
 	<loot>
-		<item id="5909" chance="3370" /><!-- white piece of cloth -->
+		<item name="white piece of cloth" chance="3370" />
 	</loot>
 </monster>

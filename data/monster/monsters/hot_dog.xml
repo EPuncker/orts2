@@ -15,6 +15,8 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="1200" min="0" max="-55" />
@@ -26,22 +28,22 @@
 		</attack>
 	</attacks>
 	<defenses armor="1" defense="2" />
+	<elements>
+		<element holyPercent="-5" />
+		<element physicalPercent="-20" />
+	</elements>
 	<immunities>
 		<immunity fire="1" />
 		<immunity drown="1" />
 		<immunity lifedrain="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<elements>
-		<element holyPercent="-5" />
-		<element physicalPercent="-20" />
-	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Wuff Wuff" />
 		<voice sentence="Grrr Wuff" />
 		<voice sentence="Show me how good you are without some rolled newspaper!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="75" chance="50000" /><!-- gold coins -->
+		<item name="gold coin" countmax="75" chance="50000" />
 	</loot>
 </monster>

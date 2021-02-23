@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Dwarf Dispenser" nameDescription="a dwarf dispenser" race="energy" experience="0" speed="0" manacost="0">
+<monster name="Dwarf Dispenser" nameDescription="a dwarf dispenser" race="undead" experience="0" speed="0">
 	<health now="100" max="100" />
 	<look typeex="6116" />
 	<targetchange interval="5000" chance="16" />
@@ -21,6 +21,6 @@
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="5">
-		<summon name="Dwarf Henchmen" interval="1000" chance="55" />
+		<summon name="Dwarf Henchman" interval="1000" chance="55" />
 	</summons>
 </monster>

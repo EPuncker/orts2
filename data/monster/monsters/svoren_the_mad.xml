@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Svoren The Mad" nameDescription="Svoren The Mad" race="blood" experience="3000" speed="180" manacost="0">
-	<health now="6300" max="6300" />
-	<look type="254" head="80" body="99" legs="118" feet="38" corpse="7349" />
+<monster name="Svoren the Mad" nameDescription="Svoren the Mad" race="blood" experience="3000" speed="180">
+	<health now="6310" max="6310" />
+	<look type="254" head="61" body="61" legs="61" feet="4" corpse="7349" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -13,7 +13,7 @@
 		<flag targetdistance="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="60" attack="150" />
+		<attack name="melee" interval="2000" min="0" max="-525" />
 		<attack name="speed" interval="3500" chance="35" radius="1" target="1" range="1" duration="40" speedchange="-250">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
@@ -24,6 +24,8 @@
 		<immunity ice="1" />
 		<immunity energy="1" />
 		<immunity earth="1" />
+		<immunity outfit="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<voices interval="2000" chance="5">

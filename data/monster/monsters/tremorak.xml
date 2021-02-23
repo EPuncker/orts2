@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Tremorak" nameDescription="Tremorak" race="undead" experience="1300" speed="290" manacost="0">
+<monster name="Tremorak" nameDescription="Tremorak" race="undead" experience="1300" speed="290">
 	<health now="10000" max="10000" />
 	<look type="285" corpse="8933" />
 	<targetchange interval="2000" chance="5" />
@@ -11,14 +11,13 @@
 		<flag convinceable="0" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="80" />
-		<flag lightlevel="0" />
-		<flag lightcolor="0" />
+		<flag staticattack="90" />
 		<flag targetdistance="1" />
-		<flag runonhealth="1" />
+		<flag runonhealth="0" />
+		<flag isboss="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="36" attack="50" />
+		<attack name="melee" interval="2000" min="0" max="-115" />
 		<attack name="earth" interval="2000" chance="16" radius="7" target="0" min="0" max="-255">
 			<attribute key="areaEffect" value="groundshaker" />
 		</attack>
@@ -36,7 +35,7 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element deathPercent="45" />
+		<element deathPercent="35" />
 		<element icePercent="20" />
 		<element physicalPercent="50" />
 		<element holyPercent="50" />
@@ -47,7 +46,7 @@
 		<immunity earth="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="9">
+		<voices interval="5000" chance="10">
 		<voice sentence="STOMP STOMP!" yell="1" />
 	</voices>
 </monster>

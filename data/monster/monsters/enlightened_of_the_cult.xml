@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Enlightened Of The Cult" nameDescription="an enlightened of the cult" race="blood" experience="500" speed="210" manacost="0">
+<monster name="Enlightened of the Cult" nameDescription="an enlightened of the cult" race="blood" experience="500" speed="210">
 	<health now="700" max="700" />
 	<look type="193" corpse="20391" />
 	<targetchange interval="4000" chance="10" />
@@ -15,6 +15,9 @@
 		<flag staticattack="50" />
 		<flag targetdistance="4" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-100" poison="4" />
@@ -53,31 +56,31 @@
 		<summon name="Crypt Shambler" interval="2000" chance="10" />
 		<summon name="Ghost" interval="2000" chance="10" />
 	</summons>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Praise to my master Urgith!" />
 		<voice sentence="You will rise as my servant!" />
 		<voice sentence="Praise to my masters! Long live the triangle!" />
 		<voice sentence="You will die in the name of the triangle!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="70" chance="64550" />	<!-- gold coin -->
-		<item id="10555" chance="10250" />				<!-- cultish mask -->
-		<item id="1962" chance="910" />					<!-- orange book -->
-		<item id="12411" chance="890" />					<!-- cultish symbol -->
-		<item id="2200" chance="790" />					<!-- protection amulet -->
-		<item id="7589" chance="740" />					<!-- strong mana potion -->
-		<item id="2146" chance="550" />					<!-- small sapphire -->
-		<item id="6090" chance="490" />					<!-- music sheet 4th verse -->
-		<item id="2167" chance="450" />					<!-- energy ring -->
-		<item id="5810" chance="430" />					<!-- pirate voodoo doll -->
-		<item id="2436" chance="350" />					<!-- skull staff -->
-		<item id="2171" chance="200" />					<!-- platinum amulet -->
-		<item id="2187" chance="180" />					<!-- wand of inferno -->
-		<item id="5670" chance="130" />					<!-- mysterious voodoo skull -->
-		<item id="2114" chance="130" />					<!-- piggy bank -->
-		<item id="7426" chance="100" />					<!-- amber staff -->
-		<item id="12608" chance="100" />					<!-- broken key ring -->
-		<item id="5801" chance="100" />					<!-- jewelled backpack -->
-		<item id="2656" chance="40" />					<!-- blue robe -->
+		<item id="1962" chance="910" /><!-- orange book -->
+		<item name="piggy bank" chance="130" />
+		<item name="small sapphire" chance="550" />
+		<item name="gold coin" countmax="70" chance="64550" />
+		<item name="energy ring" chance="450" />
+		<item name="platinum amulet" chance="200" />
+		<item name="wand of inferno" chance="180" />
+		<item name="protection amulet" chance="790" />
+		<item name="skull staff" chance="350" />
+		<item name="blue robe" chance="40" />
+		<item name="enigmatic voodoo skull" chance="130" />
+		<item name="jewelled backpack" chance="100" />
+		<item name="pirate voodoo doll" chance="430" />
+		<item id="6090" chance="490" /><!-- music sheet 4th verse -->
+		<item name="amber staff" chance="100" />
+		<item name="strong mana potion" chance="740" />
+		<item name="cultish mask" chance="10250" />
+		<item name="cultish symbol" chance="890" />
+		<item name="broken key ring" chance="100" />
 	</loot>
 </monster>

@@ -15,23 +15,26 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="10" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="20" />
+		<attack name="melee" interval="2000" min="0" max="-40" />
 	</attacks>
-	<defenses armor="10" defense="10" />
+	<defenses armor="6" defense="6" />
 	<elements>
 		<element earthPercent="20" />
 		<element holyPercent="20" />
 		<element icePercent="-15" />
 		<element deathPercent="-8" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Groarrr!" />
 	</voices>
 	<loot>
-		<item id="2671" countmax="2" chance="18430" /><!-- ham -->
-		<item id="2666" countmax="4" chance="45000" /><!-- meat -->
-		<item id="10608" chance="1400" /><!-- lion's mane -->
+		<item name="meat" countmax="4" chance="45000" />
+		<item name="ham" countmax="2" chance="18430" />
+		<item name="lion's mane" chance="1400" />
 	</loot>
 </monster>

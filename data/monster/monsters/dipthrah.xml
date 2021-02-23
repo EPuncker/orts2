@@ -34,6 +34,7 @@
 		<attack name="melee" interval="3000" chance="34" radius="3" target="0" min="-50" max="-600">
 			<attribute key="areaEffect" value="bluebubble" />
 		</attack>
+		<attack name="dipthrah skill reducer" interval="2000" chance="10" />
 	</attacks>
 	<defenses armor="25" defense="25">
 		<defense name="healing" interval="1000" chance="25" min="100" max="200">

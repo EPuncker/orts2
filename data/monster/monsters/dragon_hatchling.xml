@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Dragon Hatchling" nameDescription="a dragon hatchling" race="blood" experience="185" speed="170" manacost="0">
+<monster name="Dragon Hatchling" nameDescription="a dragon hatchling" race="blood" experience="185" speed="170">
 	<health now="380" max="380" />
 	<look type="271" corpse="7621" />
 	<targetchange interval="4000" chance="10" />
@@ -15,9 +15,11 @@
 		<flag targetdistance="1" />
 		<flag runonhealth="20" />
 		<flag staticattack="90" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="45" attack="20" />
+		<attack name="melee" interval="2000" min="0" max="-55" />
 		<attack name="fire" interval="2000" chance="10" length="5" spread="2" min="-60" max="-90">
 			<attribute key="areaEffect" value="firearea" />
 		</attack>
@@ -41,14 +43,14 @@
 		<immunity invisible="1" />
 		<immunity fire="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Fchu?" />
 		<voice sentence="Rooawwrr" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="55" chance="67500" /><!-- gold coin -->
-		<item id="2672" chance="61000" /><!-- dragon ham -->
-		<item id="7618" chance="400" /><!-- health potion -->
-		<item id="12413" chance="4300" /><!-- dragon's tail -->
+		<item name="gold coin" countmax="55" chance="67500" />
+		<item name="dragon ham" chance="61000" />
+		<item name="health potion" chance="400" />
+		<item name="dragon's tail" chance="4300" />
 	</loot>
 </monster>

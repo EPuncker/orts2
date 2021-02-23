@@ -1,13 +1,11 @@
 ORTS - A Real Map Datapack
- * Client version 10.98
- * Map version 10.76
 ===============
 
 ### Getting Started
 * [AppVeyor builds for Windows](https://ci.appveyor.com/project/otland/forgottenserver)
 * [The Forgotten Server](https://github.com/otland/forgottenserver)
 * [OTClient](https://github.com/edubart/otclient)
-* [RME] (https://github.com/hjnilsson/rme/releases)
+* [Remere's Map Editor](https://github.com/hjnilsson/rme/releases)
 * [Compiling](https://github.com/otland/forgottenserver/wiki/Compiling)
 * [Scripting Reference](https://github.com/otland/forgottenserver/wiki/Script-Interface)
 * [Contributing](https://github.com/otland/forgottenserver/wiki/Contributing)

@@ -1,50 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Glooth Blob" nameDescription="a glooth blob" race="blood" experience="150" speed="200" manacost="490">
-	<health now="260" max="260" />
-	<look type="614" corpse="23479" />
-	<targetchange interval="4000" chance="10" />
+<monster name="Glooth Blob" nameDescription="a glooth blob" race="venom" experience="700" speed="160">
+	<health now="750" max="750"/>
+	<look type="614" corpse="23479"/>
+	<targetchange interval="5000" chance="0"/>
 	<flags>
-		<flag summonable="1" />
-		<flag attackable="1" />
-		<flag hostile="1" />
-		<flag illusionable="1" />
-		<flag convinceable="1" />
-		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
-		<flag targetdistance="1" />
-		<flag staticattack="90" />
-		<flag runonhealth="0" />
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag isblockable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="60" attack="30" />
+		<attack name="melee" interval="2000" skill="45" attack="40" poison="280"/>
+		<attack name="poisoncondition" interval="2000" chance="13" radius="4" target="0" min="-400" max="-480">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="poison" interval="2000" chance="11" radius="3" target="1" min="-85" max="-180">
+			<attribute key="areaEffect" value="greenbubble"/>
+			<attribute key="shootEffect" value="envenomedarrow"/>
+		</attack>
+		<attack name="poison" interval="2000" chance="10" range="7" target="1" min="-60" max="-105">
+			<attribute key="areaEffect" value="poison"/>
+			<attribute key="shootEffect" value="poison"/>
+		</attack>
 	</attacks>
-	<defenses armor="20" defense="20" />
+	<defenses armor="30" defense="30"/>
 	<elements>
-		<element energyPercent="25" />
-		<element holyPercent="20" />
-		<element earthPercent="-10" />
-		<element deathPercent="-10" />
+		<element firePercent="-10"/>
+		<element icePercent="20"/>
+		<element energyPercent="-10"/>
 	</elements>
-	<voices interval="2000" chance="7">
-		<voice sentence="Il lorstok human!" />
-		<voice sentence="Toks utat." />
-		<voice sentence="Human, uh whil dyh!" />
-		<voice sentence="Youh ah trak!" />
-		<voice sentence="Let da mashing begin!" />
-	</voices>
+	<immunities>
+		<immunity earth="1"/>
+		<immunity death="1"/>
+		<immunity lifedrain="1"/>
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Glooth Blob" interval="2000" chance="6"/>
+	</summons>
 	<loot>
-		<item id="2148" countmax="47" chance="82000" /><!-- gold coin -->
-		<item id="7618" chance="210" /><!-- health potion -->
-		<item id="2666" chance="30070" /><!-- meat -->
-		<item id="2510" chance="2500" /><!-- plate shield -->
-		<item id="2406" chance="8000" /><!-- short sword -->
-		<item id="2513" chance="1400" /><!-- battle shield -->
-		<item id="2129" chance="190" /><!-- wolf tooth chain -->
-		<item id="2381" chance="1003" /><!-- halberd -->
-		<item id="2490" chance="220" /><!-- dark helmet -->
-		<item id="2209" chance="90" /><!-- club ring -->
-		<item id="7398" chance="80" /><!-- cyclops trophy -->
-		<item id="10574" chance="4930" /><!-- cyclops toe -->
+		<item name="gold coin" countmax="70" chance="100000"/>
+		<item name="glob of glooth" chance="14740"/>
+		<item name="small sapphire" countmax="2" chance="3220"/>
+		<item name="small topaz" countmax="2" chance="2800"/>
+		<item name="glooth axe" chance="650"/>
+		<item name="glooth club" chance="580"/>
+		<item name="glooth blade" chance="530"/>
+		<item name="glooth amulet" chance="520"/>
 	</loot>
 </monster>

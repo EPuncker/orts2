@@ -1,77 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Minotaur Hunter" nameDescription="a minotaur hunter" race="blood" experience="1700" speed="200" manacost="0">
-	<health now="1400" max="1400" />
-	<look type="612" corpse="23466" />
-	<targetchange interval="4000" chance="10" />
+<monster name="Minotaur Hunter" nameDescription="a minotaur hunter" race="blood" experience="1700" speed="230">
+	<health now="1400" max="1400"/>
+	<look type="612" corpse="23466"/>
+	<targetchange interval="2000" chance="11"/>
 	<flags>
-		<flag summonable="0" />
-		<flag attackable="1" />
-		<flag hostile="1" />
-		<flag illusionable="0" />
-		<flag convinceable="0" />
-		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
-		<flag targetdistance="4" />
-		<flag staticattack="90" />
-		<flag runonhealth="100" />
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag isblockable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="300"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-200" />
-		<attack name="physical" interval="2000" chance="15" range="7" target="1" radius="3" min="0" max="-135">
-			<attribute key="shootEffect" value="throwingknife" />
-			<attribute key="areaEffect" value="blackspark" />
+		<attack name="melee" interval="2000" skill="50" attack="50"/>
+		<attack name="physical" interval="2000" chance="22" range="7" min="0" max="-150">
+			<attribute key="shootEffect" value="spear"/>
+			<attribute key="areaEffect" value="explosionarea"/>
 		</attack>
-		<attack name="physical" interval="2000" chance="30" range="7" radius="2" target="1" min="0" max="-245">
-			<attribute key="shootEffect" value="explosion" />
-			<attribute key="areaEffect" value="explosionarea" />
+		<attack name="bleedcondition" interval="2000" chance="40" range="7" target="1" radius="3" min="-300" max="-400">
+			<attribute key="shootEffect" value="throwingknife"/>
+			<attribute key="areaEffect" value="blackspark"/>
 		</attack>
-		<attack name="physical" interval="2000" chance="15" radius="4" target="0" min="0" max="-45">
-			<attribute key="areaEffect" value="groundshaker" />
+		<attack name="fire" interval="2000" chance="15" range="7" radius="2" target="1" min="-160" max="-260">
+			<attribute key="shootEffect" value="burstarrow"/>
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="14" radius="4" target="0" min="-35" max="-150">
+			<attribute key="areaEffect" value="explosionarea"/>
 		</attack>
 	</attacks>
-	<defenses armor="30" defense="30">
-		<defense name="healing" interval="4000" chance="15" min="130" max="245">
-			<attribute key="areaEffect" value="blueshimmer" />
+	<defenses armor="36" defense="36">
+		<defense name="healing" interval="2000" chance="7" min="95" max="180">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="speed" interval="2000" chance="10" speedchange="520" duration="5000">
+			<attribute key="areaEffect" value="poff"/>
 		</defense>
 	</defenses>
 	<elements>
-		<element firePercent="10" />
-		<element holyPercent="1" />
-		<element icePercent="-1" />
+		<element firePercent="10"/>
+		<element holyPercent="10"/>
+		<element icePercent="-5"/>
 	</elements>
 	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
 	</immunities>
-	<voices interval="2000" chance="7">
-		<voice sentence="You are marked for death!" />
-		<voice sentence="This time the prey is you!" />
-		<voice sentence="You are hunted!" />
-		<voice sentence="You'll make a fine trophy!" />
+	<voices interval="2000" chance="5">
+		<voice sentence="You are marked for death!"/>
+		<voice sentence="This time the prey is you!"/>
+		<voice sentence="You are hunted!"/>
+		<voice sentence="Bullseye!"/>
+		<voice sentence="You'll make a fine trophy!"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="99500" />	<!-- gold coin -->
-		<item id="2148" countmax="99" chance="99500" />	<!-- gold coin -->
-		<item id="2152" countmax="3" chance="33000" />	<!-- platinum coin -->
-		<item id="3965" countmax="5" chance="15000" />	<!-- hunting spear -->
-		<item id="2260" countmax="2" chance="13000" />	<!-- blank rune -->
-		<item id="7378" countmax="5" chance="11000" />	<!-- royal spear -->
-		<item id="7589" countmax="2" chance="10000" />	<!-- strong mana potion -->
-		<item id="7588" countmax="2" chance="10000" />	<!-- strong health potion -->
-		<item id="5944" chance="7500" />					<!-- soul orb -->
-		<item id="5878" chance="5000" />					<!-- minotaur leather -->
-		<item id="12428" countmax="2" chance="4700" />	<!-- minotaur horn -->
-		<item id="2147" countmax="3" chance="2600" />	<!-- small ruby -->
-		<item id="2150" countmax="3" chance="2500" />	<!-- small amethyst -->
-		<item id="2165" chance="2200" />					<!-- stealth ring -->
-		<item id="5912" chance="1600" />					<!-- blue piece of cloth -->
-		<item id="5910" chance="1400" />					<!-- green piece of cloth -->
-		<item id="5911" chance="1300" />					<!-- red piece of cloth -->
-		<item id="23546" chance="750" />					<!-- mino shield -->
-		<item id="2154" chance="470" />					<!-- yellow gem -->
-		<item id="2156" chance="400" />					<!-- red gem -->
-		<item id="7401" chance="190" />					<!-- minotaur trophy -->
-		<item id="23537" chance="110" />					<!-- mooh'tah plate -->
+		<item name="gold coin" countmax="199" chance="99460"/>
+		<item name="platinum coin" countmax="3" chance="35000"/>
+		<item name="hunting spear" countmax="5" chance="15000"/>
+		<item name="blank rune" countmax="2" chance="14970"/>
+		<item name="royal spear" countmax="5" chance="11760"/>
+		<item name="strong mana potion" countmax="2" chance="10160"/>
+		<item name="strong health potion" countmax="2" chance="9880"/>
+		<item name="soul orb" chance="7030"/>
+		<item name="minotaur horn" countmax="2" chance="5030"/>
+		<item name="minotaur leather" chance="4850"/>
+		<item name="small ruby" countmax="3" chance="2540"/>
+		<item name="small amethyst" countmax="3" chance="2440"/>
+		<item name="stealth ring" chance="2400"/>
+		<item name="green piece of cloth" chance="1540"/>
+		<item name="blue piece of cloth" chance="1510"/>
+		<item name="red piece of cloth" chance="1480"/>
+		<item name="mino shield" chance="750"/>
+		<item name="yellow gem" chance="560"/>
+		<item name="red gem" chance="530"/>
+		<item id="7401" chance="160"/>
+		<item name="mooh'tah plate" chance="100"/>
 	</loot>
 </monster>

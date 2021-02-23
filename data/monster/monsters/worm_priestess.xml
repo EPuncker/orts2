@@ -1,87 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Worm Priestess" nameDescription="a worm priestess" race="blood" experience="1500" speed="200" manacost="0">
-	<health now="1100" max="1100" />
-	<look type="613" corpse="23470" />
-	<targetchange interval="4000" chance="10" />
+<monster name="Worm Priestess" nameDescription="a worm priestess" race="blood" experience="1500" speed="198">
+	<health now="1100" max="1100"/>
+	<look type="613" corpse="23470"/>
+	<targetchange interval="4000" chance="10"/>
 	<flags>
-		<flag summonable="0" />
-		<flag attackable="1" />
-		<flag hostile="1" />
-		<flag illusionable="0" />
-		<flag convinceable="0" />
-		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
-		<flag targetdistance="5" />
-		<flag staticattack="90" />
-		<flag runonhealth="0" />
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag isblockable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="4"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="200"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-100" />
-		<attack name="energy" interval="2000" chance="15" range="7" min="0" max="-165">
-			<attribute key="shootEffect" value="energy" />
-			<attribute key="areaEffect" value="energy" />
+		<attack name="melee" interval="2000" skill="50" attack="50"/>
+		<attack name="lifedrain" interval="2000" chance="24" range="7" target="1" min="-50" max="-130">
+			<attribute key="shootEffect" value="smallstone"/>
 		</attack>
-		<attack name="physical" interval="2000" chance="10" range="7" min="0" max="-80">
-			<attribute key="shootEffect" value="smallstone" />
+		<attack name="energy" interval="2000" chance="16" range="4" min="-100" max="-165">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="poison"/>
 		</attack>
-		<attack name="death" interval="2000" chance="15" radius="3" range="7" min="0" max="-170">
-			<attribute key="shootEffect" value="suddendeath" />
-			<attribute key="areaEffect" value="smallclouds" />
+		<attack name="worm priestess paralyze" interval="2000" chance="12"/>
+		<attack name="death" interval="2000" chance="10" range="7" target="1" radius="3" min="-115" max="-200">
+			<attribute key="shootEffect" value="death"/>
+			<attribute key="areaEffect" value="mortarea"/>
 		</attack>
-		<attack name="death" interval="2000" chance="15" radius="3" range="7" min="0" max="-300">
-			<attribute key="shootEffect" value="poison" />
-			<attribute key="areaEffect" value="poison" />
-		</attack>
-		<attack name="speed" interval="2000" chance="15" target="0" length="7" spread="3" speedchange="-350" duration="8000">
-			<attribute key="areaEffect" value="blackspark" />
+		<attack name="earth" interval="2000" chance="13" range="7" target="1" radius="4" min="-200" max="-300">
+			<attribute key="shootEffect" value="smallearth"/>
+			<attribute key="areaEffect" value="greenspark"/>
 		</attack>
 	</attacks>
-	<defenses armor="30" defense="30">
-		<defense name="healing" interval="4000" chance="15" min="80" max="145">
-			<attribute key="areaEffect" value="blueshimmer" />
+	<defenses armor="38" defense="36">
+		<defense name="healing" interval="2000" chance="8" min="100" max="150">
+			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
-		<defense name="speed" interval="2000" chance="15" speedchange="205" duration="5000">
-			<attribute key="areaEffect" value="redshimmer" />
+		<defense name="haste" interval="2000" chance="9" speedchange="198" duration="1000">
+			<attribute key="areaEffect" value="redshimmer"/>
 		</defense>
 	</defenses>
 	<elements>
-		<element icePercent="1" />
-		<element earthPercent="1" />
-		<element deathPercent="1" />
-		<element firePercent="10" />
+		<element firePercent="10"/>
+		<element earthPercent="20"/>
+		<element deathPercent="5"/>
+		<element icePercent="5"/>
 	</elements>
-	<immunities>
-		<immunity invisible="1" />
-	</immunities>
-	<voices interval="2000" chance="7">
-		<voice sentence="An enemy of the worm shall become his food!" />
-		<voice sentence="The great worm will swallow you!" />
-		<voice sentence="From the earthy depths he comes and brings freedom!" />
+	<voices interval="2000" chance="5">
+		<voice sentence="An enemy of the worm shall become his food!"/>
+		<voice sentence="The great worm will swallow you!"/>
+		<voice sentence="From the earthy depths he comes and brings freedom!"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
-		<item id="2148" countmax="50" chance="100000" />	<!-- gold coin -->
-		<item id="2152" countmax="3" chance="40000" />		<!-- platinum coin -->
-		<item id="12429" chance="15000" />					<!-- purple robe -->
-		<item id="7589" countmax="3" chance="12000" />		<!-- strong mana potion -->
-		<item id="2182" chance="11000" />					<!-- snakebite rod -->
-		<item id="7425" chance="5000" />						<!-- taurus mace -->
-		<item id="2050" chance="5000" />						<!-- torch -->
-		<item id="5878" chance="4900" />						<!-- minotaur leather -->
-		<item id="12428" countmax="2" chance="3000" />		<!-- minotaur horn -->
-		<item id="2147" countmax="2" chance="2500" />		<!-- small ruby -->
-		<item id="2149" countmax="2" chance="2500" />		<!-- small emerald -->
-		<item id="2150" countmax="2" chance="2500" />		<!-- small amethyst -->
-		<item id="9970" countmax="2" chance="2500" />		<!-- small topaz -->
-		<item id="2146" countmax="2" chance="2500" />		<!-- small sapphire -->
-		<item id="2145" countmax="2" chance="2500" />		<!-- small diamond -->
-		<item id="5912" chance="1600" />						<!-- blue piece of cloth -->
-		<item id="8910" chance="1540" />						<!-- underworld rod -->
-		<item id="5911" chance="1450" />						<!-- red piece of cloth -->
-		<item id="5910" chance="1440" />						<!-- green piece of cloth -->
-		<item id="2154" chance="540" />						<!-- yellow gem -->
-		<item id="2156" chance="490" />						<!-- red gem -->
-		<item id="7401" chance="140" />						<!-- minotaur trophy -->
+		<item name="gold coin" countmax="150" chance="100000"/>
+		<item name="platinum coin" countmax="3" chance="39900"/>
+		<item name="purple robe" chance="15990"/>
+		<item name="strong mana potion" chance="12270"/>
+		<item name="snakebite rod" chance="11910"/>
+		<item name="taurus mace" chance="5090"/>
+		<item id="2050" chance="4970"/>
+		<item name="minotaur leather" chance="4940"/>
+		<item name="minotaur horn" countmax="2" chance="2900"/>
+		<item name="small amethyst" countmax="2" chance="2600"/>
+		<item name="small topaz" countmax="2" chance="2490"/>
+		<item name="small emerald" countmax="2" chance="2460"/>
+		<item name="small diamond" countmax="2" chance="2410"/>
+		<item name="small sapphire" countmax="2" chance="2410"/>
+		<item name="small ruby" countmax="2" chance="2410"/>
+		<item name="blue piece of cloth" chance="1570"/>
+		<item name="underworld rod" chance="1530"/>
+		<item name="red piece of cloth" chance="1490"/>
+		<item name="green piece of cloth" chance="1460"/>
+		<item name="yellow gem" chance="520"/>
+		<item name="red gem" chance="480"/>
+		<item id="7401" chance="140"/>
 	</loot>
 </monster>

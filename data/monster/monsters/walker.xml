@@ -1,50 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Walker" nameDescription="a walker" race="blood" experience="150" speed="200" manacost="490">
-	<health now="260" max="260" />
-	<look type="605" corpse="5962" />
-	<targetchange interval="4000" chance="10" />
+<monster name="Walker" nameDescription="a walker" race="energy" experience="2200" speed="300">
+	<health now="3000" max="3000"/>
+	<look type="605" corpse="23343"/>
+	<targetchange interval="2000" chance="5"/>
 	<flags>
-		<flag summonable="1" />
-		<flag attackable="1" />
-		<flag hostile="1" />
-		<flag illusionable="1" />
-		<flag convinceable="1" />
-		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
-		<flag targetdistance="1" />
-		<flag staticattack="90" />
-		<flag runonhealth="0" />
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag isblockable="0"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="90"/>
+		<flag runonhealth="0"/>
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="60" attack="30" />
+		<attack name="melee" interval="2000" skill="70" attack="50"/>
+		<attack name="walker skill reducer" interval="2000" chance="21"/>
+		<attack name="fire" interval="2000" chance="17" length="8" spread="0" min="-125" max="-245">
+			<attribute key="areaEffect" value="explosion"/>
+		</attack>
 	</attacks>
-	<defenses armor="20" defense="20" />
+	<defenses armor="47" defense="47"/>
 	<elements>
-		<element energyPercent="25" />
-		<element holyPercent="20" />
-		<element earthPercent="-10" />
-		<element deathPercent="-10" />
+		<element firePercent="35"/>
+		<element physicalPercent="5"/>
+		<element deathPercent="15"/>
+		<element icePercent="5"/>
+		<element earthPercent="50"/>
+		<element holyPercent="40"/>
 	</elements>
-	<voices interval="2000" chance="7">
-		<voice sentence="Il lorstok human!" />
-		<voice sentence="Toks utat." />
-		<voice sentence="Human, uh whil dyh!" />
-		<voice sentence="Youh ah trak!" />
-		<voice sentence="Let da mashing begin!" />
-	</voices>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity paralyze="1"/>
+		<immunity lifedrain="1"/>
+	</immunities>
 	<loot>
-		<item id="2148" countmax="47" chance="82000" /><!-- gold coin -->
-		<item id="7618" chance="210" /><!-- health potion -->
-		<item id="2666" chance="30070" /><!-- meat -->
-		<item id="2510" chance="2500" /><!-- plate shield -->
-		<item id="2406" chance="8000" /><!-- short sword -->
-		<item id="2513" chance="1400" /><!-- battle shield -->
-		<item id="2129" chance="190" /><!-- wolf tooth chain -->
-		<item id="2381" chance="1003" /><!-- halberd -->
-		<item id="2490" chance="220" /><!-- dark helmet -->
-		<item id="2209" chance="90" /><!-- club ring -->
-		<item id="7398" chance="80" /><!-- cyclops trophy -->
-		<item id="10574" chance="4930" /><!-- cyclops toe -->
+		<item name="gold coin" countmin="1" countmax="199" chance="100000"/>
+		<item name="platinum coin" countmin="1" countmax="3" chance="52910"/>
+		<item name="metal toe" chance="20900"/>
+		<item name="small topaz" chance="10210"/>
+		<item name="great health potion" chance="8470"/>
+		<item name="great spirit potion" chance="7670"/>
+		<item name="small amethyst" chance="4390"/>
+		<item name="small emerald" chance="4290"/>
+		<item name="metal spats" chance="3760"/>
+		<item name="gearwheel chain" chance="2280"/>
+		<item name="crystal mace" chance="740"/>
+		<item name="steel boots" chance="530"/>
 	</loot>
 </monster>

@@ -804,7 +804,7 @@
 	<instant name="devourer wave" words="###52" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_wave.lua"/>
 	<instant name="devourer paralyze" words="###53" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_paralyze.lua"/>
 	<instant name="devourer summon" words="###54" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_summon.lua"/>
-	<instant name="glooth anemone summon" words="##55" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/glooth_anemone_summon.lua"/>
+	<instant name="glooth anemone summon" words="###55" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/glooth_anemone_summon.lua"/>
 	<instant name="metal gargoyle curse" words="###56" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/metal_gargoyle_curse.lua"/>
 	<instant name="minotaur amazon paralyze" words="###57" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/minotaur_amazon_paralyze.lua"/>
 	<instant name="mooh'tah master skill reducer" words="###58" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/mooh'tah_master_skill_reducer.lua"/>

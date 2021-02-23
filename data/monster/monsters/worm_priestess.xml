@@ -55,28 +55,28 @@
 		<voice sentence="From the earthy depths he comes and brings freedom!"/>
 	</voices>
 	<loot>
+		<item id="2050" chance="4970"/> <!-- torch -->
+		<item id="7401" chance="140"/> <!-- minotaur trophy -->
+		<item name="blue piece of cloth" chance="1570"/>
 		<item name="gold coin" countmax="100" chance="100000"/>
 		<item name="gold coin" countmax="50" chance="100000"/>
+		<item name="green piece of cloth" chance="1460"/>
+		<item name="minotaur horn" countmax="2" chance="2900"/>
+		<item name="minotaur leather" chance="4940"/>
 		<item name="platinum coin" countmax="3" chance="39900"/>
 		<item name="purple robe" chance="15990"/>
-		<item name="strong mana potion" chance="12270"/>
-		<item name="snakebite rod" chance="11910"/>
-		<item name="taurus mace" chance="5090"/>
-		<item id="2050" chance="4970"/>
-		<item name="minotaur leather" chance="4940"/>
-		<item name="minotaur horn" countmax="2" chance="2900"/>
-		<item name="small amethyst" countmax="2" chance="2600"/>
-		<item name="small topaz" countmax="2" chance="2490"/>
-		<item name="small emerald" countmax="2" chance="2460"/>
-		<item name="small diamond" countmax="2" chance="2410"/>
-		<item name="small sapphire" countmax="2" chance="2410"/>
-		<item name="small ruby" countmax="2" chance="2410"/>
-		<item name="blue piece of cloth" chance="1570"/>
-		<item name="underworld rod" chance="1530"/>
-		<item name="red piece of cloth" chance="1490"/>
-		<item name="green piece of cloth" chance="1460"/>
-		<item name="yellow gem" chance="520"/>
 		<item name="red gem" chance="480"/>
-		<item id="7401" chance="140"/>
+		<item name="red piece of cloth" chance="1490"/>
+		<item name="small amethyst" countmax="2" chance="2600"/>
+		<item name="small diamond" countmax="2" chance="2410"/>
+		<item name="small emerald" countmax="2" chance="2460"/>
+		<item name="small ruby" countmax="2" chance="2410"/>
+		<item name="small sapphire" countmax="2" chance="2410"/>
+		<item name="small topaz" countmax="2" chance="2490"/>
+		<item name="snakebite rod" chance="11910"/>
+		<item name="strong mana potion" chance="12270"/>
+		<item name="taurus mace" chance="5090"/>
+		<item name="underworld rod" chance="1530"/>
+		<item name="yellow gem" chance="520"/>
 	</loot>
 </monster>

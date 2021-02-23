@@ -48,24 +48,24 @@
 		<voice sentence="Your sentence is death!"/>
 	</voices>
 	<loot>
+		<item id="7401" chance="370"/> <!-- minotaur trophy -->
+		<item name="butcher's axe" chance="540"/>
+		<item name="crown armor" chance="620"/>
+		<item name="execowtioner axe" chance="1160"/>
+		<item name="execowtioner mask" chance="16370"/>
 		<item name="gold coin" countmax="100" chance="100000"/>
 		<item name="gold coin" countmax="98" chance="100000"/>
-		<item name="platinum coin" countmax="3" chance="65600"/>
-		<item name="execowtioner mask" chance="16370"/>
-		<item name="minotaur leather" chance="15710"/>
+		<item name="gold ingot" chance="430"/>
 		<item name="great health potion" chance="10500"/>
 		<item name="great mana potion" chance="10020"/>
-		<item name="meat" chance="8130"/>
-		<item name="small ruby" countmax="2" chance="5300"/>
-		<item name="minotaur horn" countmax="2" chance="5110"/>
-		<item name="small topaz" countmax="2" chance="4680"/>
-		<item name="red piece of cloth" chance="2980"/>
-		<item name="execowtioner axe" chance="1160"/>
 		<item name="knight axe" chance="850"/>
-		<item name="crown armor" chance="620"/>
+		<item name="meat" chance="8130"/>
+		<item name="minotaur horn" countmax="2" chance="5110"/>
+		<item name="minotaur leather" chance="15710"/>
+		<item name="platinum coin" countmax="3" chance="65600"/>
+		<item name="red piece of cloth" chance="2980"/>
+		<item name="small ruby" countmax="2" chance="5300"/>
+		<item name="small topaz" countmax="2" chance="4680"/>
 		<item name="titan axe" chance="620"/>
-		<item name="butcher's axe" chance="540"/>
-		<item name="gold ingot" chance="430"/>
-		<item id="7401" chance="370"/>
 	</loot>
 </monster>

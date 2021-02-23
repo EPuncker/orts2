@@ -53,24 +53,24 @@
 		<voice sentence="*shglib*"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmin="2" countmax="100" chance="100000"/>
-		<item name="gold coin" countmin="2" countmax="75" chance="100000"/>
-		<item name="platinum coin" countmin="1" countmax="3" chance="60160"/>
-		<item name="slimy leaf tentacle" chance="17940"/>
 		<item name="bowl of glooth soup" chance="10130"/>
-		<item name="small topaz" countmax="3" chance="8210"/>
-		<item name="small emerald" countmax="3" chance="8140"/>
-		<item name="small ruby" countmax="3" chance="8080"/>
-		<item name="strong mana potion" countmax="2" chance="7950"/>
-		<item name="strong health potion" countmax="2" chance="7460"/>
-		<item name="glooth whip" chance="4070"/>
-		<item name="green mushroom" chance="2930"/>
-		<item name="ultimate health potion" chance="1900"/>
-		<item name="glooth axe" chance="1030"/>
 		<item name="glooth amulet" chance="1020"/>
-		<item name="glooth club" chance="1010"/>
-		<item name="glooth spear" chance="1010"/>
+		<item name="glooth axe" chance="1030"/>
 		<item name="glooth blade" chance="950"/>
 		<item name="glooth cape" chance="850"/>
+		<item name="glooth club" chance="1010"/>
+		<item name="glooth spear" chance="1010"/>
+		<item name="glooth whip" chance="4070"/>
+		<item name="gold coin" countmin="2" countmax="100" chance="100000"/>
+		<item name="gold coin" countmin="2" countmax="75" chance="100000"/>
+		<item name="green mushroom" chance="2930"/>
+		<item name="platinum coin" countmin="1" countmax="3" chance="60160"/>
+		<item name="slimy leaf tentacle" chance="17940"/>
+		<item name="small emerald" countmax="3" chance="8140"/>
+		<item name="small ruby" countmax="3" chance="8080"/>
+		<item name="small topaz" countmax="3" chance="8210"/>
+		<item name="strong health potion" countmax="2" chance="7460"/>
+		<item name="strong mana potion" countmax="2" chance="7950"/>
+		<item name="ultimate health potion" chance="1900"/>
 	</loot>
 </monster>

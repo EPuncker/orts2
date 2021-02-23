@@ -59,27 +59,27 @@
 		<voice sentence="You'll make a fine trophy!"/>
 	</voices>
 	<loot>
+		<item id="7401" chance="160"/> <!-- minotaur trophy -->
+		<item name="blank rune" countmax="2" chance="14970"/>
+		<item name="blue piece of cloth" chance="1510"/>
 		<item name="gold coin" countmin="5" countmax="100" chance="100000"/>
 		<item name="gold coin" countmin="5" countmax="99" chance="100000"/>
-		<item name="platinum coin" countmax="3" chance="35000"/>
+		<item name="green piece of cloth" chance="1540"/>
 		<item name="hunting spear" countmax="5" chance="15000"/>
-		<item name="blank rune" countmax="2" chance="14970"/>
-		<item name="royal spear" countmax="5" chance="11760"/>
-		<item name="strong mana potion" countmax="2" chance="10160"/>
-		<item name="strong health potion" countmax="2" chance="9880"/>
-		<item name="soul orb" chance="7030"/>
+		<item name="mino shield" chance="750"/>
 		<item name="minotaur horn" countmax="2" chance="5030"/>
 		<item name="minotaur leather" chance="4850"/>
-		<item name="small ruby" countmax="3" chance="2540"/>
-		<item name="small amethyst" countmax="3" chance="2440"/>
-		<item name="stealth ring" chance="2400"/>
-		<item name="green piece of cloth" chance="1540"/>
-		<item name="blue piece of cloth" chance="1510"/>
-		<item name="red piece of cloth" chance="1480"/>
-		<item name="mino shield" chance="750"/>
-		<item name="yellow gem" chance="560"/>
-		<item name="red gem" chance="530"/>
-		<item id="7401" chance="160"/>
 		<item name="mooh'tah plate" chance="100"/>
+		<item name="platinum coin" countmax="3" chance="35000"/>
+		<item name="red gem" chance="530"/>
+		<item name="red piece of cloth" chance="1480"/>
+		<item name="royal spear" countmax="5" chance="11760"/>
+		<item name="small amethyst" countmax="3" chance="2440"/>
+		<item name="small ruby" countmax="3" chance="2540"/>
+		<item name="soul orb" chance="7030"/>
+		<item name="stealth ring" chance="2400"/>
+		<item name="strong health potion" countmax="2" chance="9880"/>
+		<item name="strong mana potion" countmax="2" chance="10160"/>
+		<item name="yellow gem" chance="560"/>
 	</loot>
 </monster>

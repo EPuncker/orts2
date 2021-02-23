@@ -45,13 +45,13 @@
 		<summon name="Glooth Blob" interval="2000" chance="6"/>
 	</summons>
 	<loot>
-		<item name="gold coin" countmax="70" chance="100000"/>
 		<item name="glob of glooth" chance="14740"/>
+		<item name="glooth amulet" chance="520"/>
+		<item name="glooth axe" chance="650"/>
+		<item name="glooth blade" chance="530"/>
+		<item name="glooth club" chance="580"/>
+		<item name="gold coin" countmax="70" chance="100000"/>
 		<item name="small sapphire" countmax="2" chance="3220"/>
 		<item name="small topaz" countmax="2" chance="2800"/>
-		<item name="glooth axe" chance="650"/>
-		<item name="glooth club" chance="580"/>
-		<item name="glooth blade" chance="530"/>
-		<item name="glooth amulet" chance="520"/>
 	</loot>
 </monster>

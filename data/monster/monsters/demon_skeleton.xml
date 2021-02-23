@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Demon Skeleton" nameDescription="a demon skeleton" race="undead" experience="240" speed="170" manacost="620">
+<monster name="Demon Skeleton" nameDescription="a demon skeleton" race="undead" experience="240" speed="180" manacost="620">
 	<health now="400" max="400" />
 	<look type="37" corpse="5963" />
 	<targetchange interval="4000" chance="10" />
@@ -15,15 +15,15 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-185" />
-		<attack name="death" interval="2000" chance="10" range="1" min="-30" max="-50">
-			<attribute key="shootEffect" value="death" />
+		<attack name="death" interval="2000" chance="10" radius="1" target="1" range="1" min="-30" max="-50">
 			<attribute key="areaEffect" value="smallclouds" />
 		</attack>
 	</attacks>
-	<defenses armor="30" defense="30" />
+	<defenses armor="25" defense="25" />
 	<elements>
 		<element holyPercent="-25" />
 	</elements>
@@ -34,21 +34,22 @@
 		<immunity earth="1" />
 		<immunity drown="1" />
 		<immunity lifedrain="1" />
+		<immunity drunk="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="75" chance="97000" />	<!-- gold coin -->
-		<item id="10564" chance="12600" />				<!-- demonic skeletal hand -->
-		<item id="2399" countmax="3" chance="10000" />	<!-- throwing star -->
-		<item id="7618" countmax="2" chance="10000" />	<!-- health potion -->
-		<item id="7620" chance="5300" />					<!-- mana potion -->
-		<item id="2513" chance="5000" />					<!-- battle shield -->
-		<item id="2050" chance="5000" />					<!-- torch -->
-		<item id="2417" chance="4000" />					<!-- battle hammer -->
-		<item id="2459" chance="3450" />					<!-- iron helmet -->
-		<item id="2144" chance="3000" />					<!-- black pearl -->
-		<item id="2147" chance="1400" />					<!-- small ruby -->
-		<item id="2194" chance="560" />					<!-- mysterious fetish -->
-		<item id="2178" chance="510" />					<!-- mind stone -->
-		<item id="2515" chance="80" />					<!-- guardian shield -->
+		<item name="gold coin" countmax="75" chance="97000" />
+		<item name="demonic skeletal hand" chance="12600" />
+		<item name="throwing star" countmax="3" chance="10000" />
+		<item name="health potion" countmax="2" chance="9700" />
+		<item name="mana potion" chance="5000" />
+		<item name="battle shield" chance="5000" />
+		<item id="2050" chance="4800" /><!-- torch -->
+		<item name="battle hammer" chance="4000" />
+		<item name="iron helmet" chance="3450" />
+		<item name="black pearl" chance="2900" />
+		<item name="small ruby" chance="1500" />
+		<item name="mysterious fetish" chance="530" />
+		<item name="mind stone" chance="470" />
+		<item name="guardian shield" chance="110" />
 	</loot>
 </monster>

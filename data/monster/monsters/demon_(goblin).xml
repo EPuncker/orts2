@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Demon" nameDescription="a demon" race="blood" experience="25" speed="150" manacost="0">
+<monster name="Demon" nameDescription="a demon" race="blood" experience="25" speed="120">
 	<health now="50" max="50" />
-	<look type="35" corpse="5995" />
+	<look type="35" corpse="6002" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
 		<flag summonable="0" />
@@ -10,37 +10,51 @@
 		<flag illusionable="0" />
 		<flag convinceable="0" />
 		<flag pushable="0" />
-		<flag canpushitems="1" />
-		<flag canpushcreatures="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
 		<flag targetdistance="1" />
-		<flag staticattack="40" />
-		<flag runonhealth="15" />
+		<flag staticattack="90" />
+		<flag runonhealth="35" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="10" attack="10" />
+		<attack name="melee" interval="2000" min="0" max="-10" />
 		<attack name="physical" interval="2000" chance="10" range="7" min="0" max="-25">
 			<attribute key="shootEffect" value="smallstone" />
 		</attack>
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="0" max="0" />
+		<attack name="fire" interval="2000" chance="20" range="7" radius="7" target="1" min="0" max="0">
+			<attribute key="shootEffect" value="fire" />
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="0" max="0">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="10" range="1" min="0" max="0">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
 	</attacks>
-	<defenses armor="10" defense="10" />
+	<defenses armor="6" defense="6" />
 	<elements>
 		<element energyPercent="20" />
-		<element holyPercent="1" />
-		<element earthPercent="-12" />
+		<element holyPercent="20" />
+		<element earthPercent="-10" />
 		<element deathPercent="-10" />
 	</elements>
 	<loot>
-		<item id="2148" countmax="9" chance="50320" /><!-- gold coin -->
-		<item id="2230" chance="1130" /><!-- bone -->
-		<item id="2449" chance="4900" /><!-- bone club -->
-		<item id="2379" chance="1800" /><!-- dagger -->
+		<item name="gold coin" countmax="9" chance="50320" />
+		<item name="small stone" chance="15290" />
 		<item id="2667" chance="12750" /><!-- fish -->
-		<item id="2467" chance="2510" /><!-- leather armor -->
-		<item id="2461" chance="1940" /><!-- leather helmet -->
-		<item id="2235" chance="1000" /><!-- moldy cheese -->
-		<item id="2406" chance="8870" /><!-- short sword -->
-		<item id="2559" chance="9700" /><!-- small axe -->
-		<item id="1294" countmax="3" chance="15290" /><!-- small stone -->
-		<item id="12495" chance="910" /><!-- goblin ear -->
+		<item name="small axe" chance="9700" />
+		<item name="short sword" chance="8870" />
+		<item name="bone club" chance="4900" />
+		<item name="leather armor" chance="2510" />
+		<item name="leather helmet" chance="1940" />
+		<item name="dagger" chance="1800" />
+		<item id="2230" chance="1130" /><!-- bone -->
+		<item name="mouldy cheese" chance="1000" />
+		<item name="goblin ear" chance="940" />
 	</loot>
 </monster>

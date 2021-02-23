@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="The Obliverator" nameDescription="The Obliverator" race="fire" experience="6000" speed="280" manacost="0">
-	<health now="9500" max="9500" />
+<monster name="The Obliverator" nameDescription="The Obliverator" race="fire" experience="6000" speed="280">
+	<health now="9020" max="9020" />
 	<look type="35" corpse="7349" />
 	<flags>
 		<flag summonable="0" />
@@ -11,9 +11,11 @@
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="90" attack="140" />
+		<attack name="melee" interval="2000" min="0" max="-700" />
 		<attack name="fire" interval="1000" chance="20" range="5" radius="7" target="1" min="-100" max="-250">
 			<attribute key="areaEffect" value="firearea" />
 			<attribute key="shootEffect" value="fire" />
@@ -34,6 +36,8 @@
 	</elements>
 	<immunities>
 		<immunity fire="1" />
+		<immunity outfit="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="3">

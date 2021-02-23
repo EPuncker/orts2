@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Robby The Reckless" nameDescription="Robby The Reckless" race="blood" experience="110" speed="220" manacost="0">
+<monster name="Robby the Reckless" nameDescription="Robby the Reckless" race="blood" experience="110" speed="220">
 	<health now="155" max="155" />
-	<look type="129" head="76" body="132" legs="118" feet="114" addons="1" corpse="20498" />
+	<look type="129" head="76" body="115" legs="99" feet="114" addons="1" corpse="20498" />
 	<targetchange interval="4000" chance="5" />
 	<flags>
 		<flag summonable="0" />
@@ -21,7 +21,7 @@
 	</attacks>
 	<defenses armor="25" defense="25" />
 	<loot>
-		<item id="2152" countmax="85" chance="100000" />	<!-- platinum coin -->
-		<item id="14903" chance="100000" />				<!-- bag with stolen gold -->
+		<item name="bag with stolen gold" chance="100000" />
+		<item name="platinum coin" countmax="93" chance="100000" />
 	</loot>
 </monster>

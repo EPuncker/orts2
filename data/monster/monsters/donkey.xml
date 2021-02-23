@@ -12,7 +12,7 @@
 		<flag pushable="1" />
 		<flag canpushitems="0" />
 		<flag canpushcreatures="0" />
-		<flag targetdistance="1" />
+		<flag targetdistance="4" />
 		<flag staticattack="90" />
 		<flag runonhealth="25" />
 	</flags>
@@ -20,10 +20,10 @@
 		<attack name="melee" interval="2000" min="0" max="-5" />
 	</attacks>
 	<defenses armor="2" defense="2" />
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Grunt!" />
 	</voices>
 	<loot>
-		<item id="2666" countmax="2" chance="20000" />
+		<item name="meat" countmax="2" chance="20000" />
 	</loot>
 </monster>

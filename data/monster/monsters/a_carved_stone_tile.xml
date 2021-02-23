@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="a carved stone tile" nameDescription="a carved stone tile" race="undead" experience="0" speed="0" manacost="0">
+<monster name="a carved stone tile" nameDescription="a carved stone tile" race="undead" experience="0" speed="0">
 	<health now="100" max="100" />
 	<look typeex="3169" />
 	<targetchange interval="5000" chance="16" />
@@ -17,10 +17,15 @@
 		<flag runonhealth="0" />
 		<flag hidehealth="1" />
 	</flags>
+	<attacks>
+		<attack name="lifedrain" interval="2000" chance="20" radius="3" target="0" min="0" max="0">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+	</attacks>
 	<immunities>
 		<immunity invisible="1" />
 	</immunities>
-	<summons maxSummons="5">
+	<summons maxSummons="4">
 		<summon name="Dreadbeast" interval="2000" chance="25" />
 	</summons>
 </monster>

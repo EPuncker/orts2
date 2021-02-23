@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Giant Spider" nameDescription="a giant spider" race="venom" experience="900" speed="230" manacost="0">
+<monster name="Giant Spider" nameDescription="a giant spider" race="venom" experience="900" speed="230">
 	<health now="1300" max="1300" />
 	<look type="38" corpse="5977" />
 	<targetchange interval="4000" chance="10" />
@@ -15,6 +15,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="70" />
 		<flag runonhealth="0" />
+		<flag canwalkonfire="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-300" poison="160" />
@@ -25,7 +26,7 @@
 			<attribute key="shootEffect" value="poison" />
 		</attack>
 	</attacks>
-	<defenses armor="25" defense="25">
+	<defenses armor="30" defense="30">
 		<defense name="speed" interval="2000" chance="15" speedchange="390" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
@@ -36,26 +37,28 @@
 		<element firePercent="-10" />
 	</elements>
 	<immunities>
+		<immunity outfit="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 		<immunity earth="1" />
 	</immunities>
 	<summons maxSummons="2">
-		<summon name="Poison Spider" interval="2000" chance="10" max="2" />
+		<summon name="Poison Spider" interval="2000" chance="10" />
 	</summons>
 	<loot>
-		<item id="2148" countmax="100" chance="50000" /><!-- gold coin -->
-		<item id="2148" countmax="95" chance="50000" /><!-- gold coin -->
-		<item id="2545" countmax="12" chance="12500" /><!-- poison arrow -->
-		<item id="2647" chance="8333" /><!-- plate legs -->
-		<item id="2463" chance="8333" /><!-- plate armor -->
-		<item id="2377" chance="5000" /><!-- two handed sword -->
-		<item id="2457" chance="4545" /><!-- steel helmet -->
-		<item id="7588" chance="3571" /><!-- strong health potion -->
-		<item id="5879" chance="2140" /><!-- spider silk -->
-		<item id="2477" chance="870" /><!-- knight legs -->
+		<item name="gold coin" countmax="100" chance="50000" />
+		<item name="gold coin" countmax="95" chance="50000" />
+		<item name="poison arrow" countmax="12" chance="12500" />
+		<item name="plate armor" chance="10000" />
+		<item name="plate legs" chance="8000" />
+		<item name="two handed sword" chance="5000" />
+		<item name="steel helmet" chance="5000" />
+		<item name="strong health potion" chance="3571" />
+		<item name="spider silk" chance="2000" />
+		<item name="knight legs" chance="870" />
 		<item id="2169" chance="710" /><!-- time ring -->
-		<item id="2171" chance="280" /><!-- platinum amulet -->
-		<item id="2476" chance="530" /><!-- knight armor -->
-		<item id="7901" chance="220" /><!-- lightning headband -->
+		<item name="knight armor" chance="500" />
+		<item name="platinum amulet" chance="280" />
+		<item name="lightning headband" chance="270" />
 	</loot>
 </monster>

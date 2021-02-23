@@ -15,6 +15,9 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="1200" min="0" max="-100" />
@@ -31,15 +34,16 @@
 		<immunity lifedrain="1" />
 		<immunity invisible="1" />
 		<immunity drown="1" />
+		<immunity drunk="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
-		<voice sentence="ISHH THAT THE BESHHT YOU HAVE TO OFFERRR, TIBIANSHH?" />
+	<voices interval="5000" chance="10">
+		<voice sentence="ISHH THAT THE BESHHT YOU HAVE TO OFFERRR?" />
 		<voice sentence="YOU ARRRRRE DOOMED!" />
 		<voice sentence="I SHHMELL FEEAARRR!" />
 		<voice sentence="MY SHHEED IS FEARRR AND MY HARRRVEST ISHH YOURRR SHHOUL!" />
 		<voice sentence="Your shhoooul will be mineee!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="99" chance="50000" /><!-- gold coins -->
+		<item name="gold coin" countmax="99" chance="50000" />
 	</loot>
 </monster>

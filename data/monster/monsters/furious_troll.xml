@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Furious Troll" nameDescription="a furious troll" race="blood" experience="185" speed="190" manacost="0">
+<monster name="Furious Troll" nameDescription="a furious troll" race="blood" experience="185" speed="190">
 	<health now="245" max="245" />
 	<look type="15" corpse="5960" />
 	<targetchange interval="2000" chance="5" />
@@ -26,15 +26,15 @@
 	<summons maxSummons="2">
 		<summon name="Mechanical Fighter" interval="2000" chance="90" />
 	</summons>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Slice! Slice!" />
 		<voice sentence="DIE!!!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="93000" />	<!-- gold coin -->
-		<item id="2148" countmax="46" chance="93000" />	<!-- gold coin -->
-		<item id="2152" chance="6000" />					<!-- platinum coin -->
-		<item id="10606" chance="4400" />				<!-- bunch of troll hair -->
-		<item id="2391" chance="750" />					<!-- war hammer -->
+		<item name="gold coin" countmax="100" chance="47000" />
+		<item name="gold coin" countmax="46" chance="47000" />
+		<item name="platinum coin" chance="6000" />
+		<item name="war hammer" chance="750" />
+		<item name="bunch of troll hair" chance="4400" />
 	</loot>
 </monster>

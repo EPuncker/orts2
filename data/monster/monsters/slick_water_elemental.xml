@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Slick Water Elemental" nameDescription="a slick water elemental" race="undead" experience="450" speed="280" manacost="0">
+<monster name="Slick Water Elemental" nameDescription="a slick water elemental" race="undead" experience="450" speed="280">
 	<health now="550" max="550" />
 	<look type="286" corpse="8965" />
 	<targetchange interval="20000" chance="15" />
@@ -11,14 +11,13 @@
 		<flag convinceable="0" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="85" />
-		<flag lightlevel="0" />
-		<flag lightcolor="0" />
+		<flag staticattack="90" />
 		<flag targetdistance="1" />
-		<flag runonhealth="1" />
+		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="40" attack="70" />
+		<attack name="melee" interval="2000" min="0" max="-175" />
 		<attack name="earth" interval="2000" chance="20" range="7" target="1" min="0" max="-130">
 			<attribute key="shootEffect" value="earth" />
 		</attack>
@@ -41,14 +40,14 @@
 		<immunity ice="1" />
 		<immunity drown="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Blubb" />
 		<voice sentence="Splipsh Splash" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="70" chance="22500" /><!-- gold coin -->
-		<item id="2148" countmax="60" chance="22500" /><!-- gold coin -->
-		<item id="7839" chance="2575" countmax="3" /><!-- shiver arrow -->
-		<item id="8302" chance="6000" /><!-- iced soil -->
+		<item name="gold coin" countmax="70" chance="22500" />
+		<item name="gold coin" countmax="60" chance="22500" />
+		<item name="shiver arrow" chance="2575" countmax="3" />
+		<item name="iced soil" chance="6000" />
 	</loot>
 </monster>

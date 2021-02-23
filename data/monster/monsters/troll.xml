@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Troll" nameDescription="a troll" race="blood" experience="20" speed="170" manacost="290">
+<monster name="Troll" nameDescription="a troll" race="blood" experience="20" speed="126" manacost="290">
 	<health now="50" max="50" />
 	<look type="15" corpse="5960" />
 	<targetchange interval="4000" chance="0" />
@@ -15,18 +15,21 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="15" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-15" />
 	</attacks>
-	<defenses armor="10" defense="10" />
+	<defenses armor="6" defense="6" />
 	<elements>
-		<element energyPercent="25" />
+		<element energyPercent="20" />
 		<element holyPercent="10" />
 		<element earthPercent="-10" />
 		<element deathPercent="-10" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Grrrr" />
 		<voice sentence="Groar" />
 		<voice sentence="Gruntz!" />
@@ -34,16 +37,17 @@
 		<voice sentence="Hmmm, dogs" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="12" chance="65300" />	<!-- gold coin -->
-		<item id="2380" chance="18000" />				<!-- hand axe -->
-		<item id="2666" chance="15000" />				<!-- meat -->
-		<item id="2389" chance="13000" />				<!-- spear -->
-		<item id="2461" chance="12000" />				<!-- leather helmet -->
-		<item id="2643" chance="10000" />				<!-- leather boots -->
-		<item id="2120" chance="7950" />					<!-- rope -->
-		<item id="2448" chance="5000" />					<!-- studded club -->
-		<item id="2512" chance="4730" />					<!-- wooden shield -->
-		<item id="10606" chance="1000" />				<!-- bunch of troll hair -->
-		<item id="2170" chance="80" />					<!-- silver amulet -->
+		<item name="gold coin" countmax="12" chance="65300" />
+		<item name="hand axe" chance="20000" />
+		<item name="meat" chance="15000" />
+		<item name="spear" chance="13000" />
+		<item name="leather helmet" chance="12000" />
+		<item name="leather boots" chance="10000" />
+		<item id="2120" chance="8200" /><!-- rope -->
+		<item id="2512" chance="6300" /><!-- wooden shield -->
+		<item name="studded club" chance="5000" />
+		<!-- Heavy Old Tome 1.66% -->
+		<item name="bunch of troll hair" chance="700" />
+		<item name="silver amulet" chance="80" />
 	</loot>
 </monster>

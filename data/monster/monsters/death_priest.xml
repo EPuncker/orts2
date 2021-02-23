@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Death Priest" nameDescription="a death priest" race="undead" experience="750" speed="220" manacost="0">
+<monster name="Death Priest" nameDescription="a death priest" race="undead" experience="750" speed="220">
 	<health now="800" max="800" />
 	<look type="99" head="95" body="116" legs="119" feet="115" corpse="13975" />
 	<targetchange interval="4000" chance="10" />
@@ -15,10 +15,11 @@
 		<flag targetdistance="1" />
 		<flag staticattack="70" />
 		<flag runonhealth="0" />
+		<flag canwalkonfire="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-80" />
-		<attack name="death" interval="2000" chance="20" range="7" min="-120" max="-250">
+		<attack name="death" interval="2000" chance="20" target="1" range="7" min="-120" max="-250">
 			<attribute key="shootEffect" value="death" />
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
@@ -37,15 +38,15 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="2148" countmax="100" chance="70000" />	<!-- gold coin -->
-		<item id="2148" countmax="44" chance="70000" />	<!-- gold coin -->
-		<item id="13739" chance="27000" />				<!-- hieroglyph banner -->
-		<item id="7618" chance="15000" />				<!-- health potion -->
-		<item id="7620" chance="15000" />				<!-- mana potion -->
-		<item id="2159" countmax="3" chance="10000" />	<!-- scarab coin -->
-		<item id="2175" chance="6800" />					<!-- spellbook -->
-		<item id="5022" countmax="4" chance="6000" />	<!-- orichalcum pearl -->
-		<item id="2143" chance="3000" />					<!-- white pearl -->
-		<item id="2214" chance="1000" />					<!-- ring of healing -->
+		<item name="white pearl" chance="3000" />
+		<item name="gold coin" countmax="100" chance="35000" />
+		<item name="gold coin" countmax="44" chance="35000" />
+		<item name="scarab coin" countmax="3" chance="10000" />
+		<item id="2175" chance="6800" /><!-- spellbook -->
+		<item name="ring of healing" chance="1000" />
+		<item name="orichalcum pearl" countmax="4" chance="6000" />
+		<item name="health potion" chance="15000" />
+		<item name="mana potion" chance="15000" />
+		<item id="13739" chance="27000" /><!-- hieroglyph banner -->
 	</loot>
 </monster>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Primitive" nameDescription="a primitive" race="blood" experience="45" speed="300" manacost="0">
+<monster name="Primitive" nameDescription="Primitive" race="blood" experience="45" speed="300">
 	<health now="200" max="200" />
 	<look type="143" head="1" body="1" legs="1" feet="1" corpse="6080" />
 	<targetchange interval="5000" chance="8" />
@@ -17,7 +17,7 @@
 		<flag runonhealth="5" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="16" />
+		<attack name="melee" interval="2000" min="0" max="-32" />
 		<attack name="drunk" interval="1000" chance="20" range="7">
 			<attribute key="shootEffect" value="energy" />
 		</attack>
@@ -33,9 +33,10 @@
 	<immunities>
 		<immunity energy="1" />
 		<immunity fire="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="We don't need a future!" />
 		<voice sentence="I'll rook you all!" />
 		<voice sentence="They thought they'd beaten us!" />
@@ -52,12 +53,12 @@
 		<voice sentence="We'll be back!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="10" chance="12500" /><!-- gold coin -->
-		<item id="2526" chance="1200" /><!-- studded shield -->
-		<item id="2482" chance="9500" /><!-- studded helmet -->
-		<item id="2484" chance="7000" /><!-- studded armor -->
-		<item id="2386" chance="12250" /><!-- axe -->
-		<item id="2385" chance="10250" /><!-- sabre -->
+		<item name="gold coin" countmax="10" chance="12500" />
+		<item name="sabre" chance="10250" />
+		<item name="axe" chance="12250" />
+		<item name="studded helmet" chance="9500" />
+		<item name="studded armor" chance="7000" />
+		<item name="studded shield" chance="1200" />
 		<item id="6570" chance="500" /><!-- blue surprise bag -->
 		<item id="6571" chance="500" /><!-- red surprise bag -->
 	</loot>

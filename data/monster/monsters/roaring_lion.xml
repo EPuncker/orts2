@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Roaring Lion" nameDescription="a roaring lion" race="blood" experience="800" speed="210" manacost="0">
+<monster name="Roaring Lion" nameDescription="a roaring lion" race="blood" experience="800" speed="210">
 	<health now="1000" max="1000" />
 	<look type="570" corpse="21420" />
 	<targetchange interval="4000" chance="10" />
@@ -15,41 +15,38 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-200" />
+		<attack name="melee" interval="2000" min="0" max="-130" />
 	</attacks>
-	<defenses armor="20" defense="20">
-		<defense name="speed" interval="2000" chance="15" speedchange="230" duration="5000">
-			<attribute key="areaEffect" value="redshimmer" />
-		</defense>
-	</defenses>
+	<defenses armor="28" defense="28" />
 	<elements>
 		<element firePercent="20" />
-		<element icePercent="25" />
-		<element earthPercent="25" />
+		<element icePercent="-10" />
+		<element earthPercent="20" />
 		<element holyPercent="50" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Groarrrr! Rwarrrr!" />
 		<voice sentence="Growl!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
-		<item id="2148" countmax="15" chance="100000" />	<!-- gold coin -->
-		<item id="2666" countmax="4" chance="26000" />		<!-- meat -->
-		<item id="2671" countmax="2" chance="25000" />		<!-- ham -->
-		<item id="10608" chance="20000" />					<!-- lion's mane -->
-		<item id="2152" chance="9700" />						<!-- platinum coin -->
-		<item id="2147" chance="7400" />						<!-- small ruby -->
-		<item id="9970" chance="7170" />						<!-- small topaz -->
-		<item id="2146" chance="6690" />						<!-- small sapphire -->
-		<item id="2150" chance="5860" />						<!-- small amethyst -->
-		<item id="2193" chance="2280" />						<!-- ankh -->
-		<item id="2164" chance="710" />						<!-- might ring -->
-		<item id="2491" chance="400" />						<!-- crown helmet -->
+		<item name="gold coin" countmax="100" chance="50000" />
+		<item name="gold coin" countmax="15" chance="50000" />
+		<item name="meat" countmax="4" chance="25000" />
+		<item name="ham" countmax="2" chance="25000" />
+		<item name="lion's mane" chance="20000" />
+		<item name="platinum coin" chance="10000" />
+		<item name="small ruby" chance="7000" />
+		<item name="small topaz" chance="7000" />
+		<item name="small sapphire" chance="7000" />
+		<item name="small amethyst" chance="7000" />
+		<item name="ankh" chance="2280" />
+		<item name="might ring" chance="730" />
+		<item name="crown helmet" chance="550" />
 	</loot>
 </monster>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Energized Raging Mage" nameDescription="an energized raging mage" race="blood" experience="0" speed="230" manacost="0">
+<monster name="energized raging mage" nameDescription="an energized raging mage" race="blood" experience="0" speed="230">
 	<health now="3500" max="3500" />
 	<look type="423" corpse="0" />
 	<targetchange interval="4000" chance="10" />
@@ -15,6 +15,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="70" />
 		<flag runonhealth="300" />
+		<flag isboss="1" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-78" />
@@ -41,16 +42,18 @@
 	</elements>
 	<immunities>
 		<immunity energy="1" />
+		<immunity outfit="1" />
 		<immunity fire="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<summons maxSummons="1">
+		<summon name="golden servant" interval="2000" chance="50" />
+	</summons>
+	<voices interval="5000" chance="10">
 		<voice sentence="Behold the all permeating powers I draw from this gate!!" />
 		<voice sentence="ENERGY!!" />
 		<voice sentence="I FEEL, I FEEEEL... OMNIPOTENCE!!" />
 		<voice sentence="MWAAAHAHAAA!! NO ONE!! NO ONE CAN DEFEAT MEEE!!!" />
 	</voices>
-	<summons maxSummons="1">
-		<summon name="Golden Servant" interval="2000" chance="50" />
-	</summons>
 </monster>

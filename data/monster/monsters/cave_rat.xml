@@ -15,22 +15,25 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="3" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="10" attack="10" />
+		<attack name="melee" interval="2000" min="0" max="-10" />
 	</attacks>
-	<defenses armor="5" defense="5" />
+	<defenses armor="1" defense="1" />
 	<elements>
 		<element firePercent="-10" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Meeeeep!" />
 		<voice sentence="Meep!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="2" chance="85000" /><!-- gold coin -->
-		<item id="3976" countmax="2" chance="9700" /><!-- worm -->
+		<item name="gold coin" countmax="2" chance="85000" />
 		<item id="2696" chance="30000" /><!-- cheese -->
-		<item id="2687" chance="750" /><!-- cookie -->
+		<item name="worm" countmax="2" chance="10000" />
+		<item name="cookie" chance="940" />
 	</loot>
 </monster>

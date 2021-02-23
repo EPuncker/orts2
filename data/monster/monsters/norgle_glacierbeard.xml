@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Norgle Glacierbeard" nameDescription="Norgle Glacierbeard" race="blood" experience="2100" speed="195" manacost="0">
-	<health now="4300" max="4300" />
+<monster name="Norgle Glacierbeard" nameDescription="Norgle Glacierbeard" race="blood" experience="2100" speed="195">
+	<health now="4280" max="4280" />
 	<look type="257" corpse="7349" />
 	<flags>
 		<flag summonable="0" />
@@ -11,9 +11,11 @@
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="80" attack="50" />
+		<attack name="melee" interval="2000" min="0" max="-225" />
 	</attacks>
 	<defenses armor="25" defense="27" />
 	<elements>
@@ -22,6 +24,8 @@
 	</elements>
 	<immunities>
 		<immunity ice="1" />
+		<immunity outfit="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<voices interval="2000" chance="5">

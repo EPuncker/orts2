@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Thief" nameDescription="a thief" race="blood" experience="5" speed="170" manacost="0">
+<monster name="Thief" nameDescription="a thief" race="blood" experience="5" speed="170">
 	<health now="60" max="60" />
 	<look type="134" head="114" body="97" legs="21" feet="41" corpse="20518" />
 	<targetchange interval="4000" chance="10" />
@@ -20,7 +20,7 @@
 		<attack name="melee" interval="2000" min="0" max="-35" />
 	</attacks>
 	<defenses armor="15" defense="15" />
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Alarm!" />
 		<voice sentence="Don't let him escape!" />
 		<voice sentence="Intruder! Get him!" />

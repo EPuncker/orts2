@@ -13,9 +13,12 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="0" />
 		<flag staticattack="90" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="1500" skill="50" attack="40" poison="300" />
+		<attack name="melee" interval="2000" min="0" max="-120" poison="300" />
 		<attack name="physical" interval="2000" chance="20" radius="1" range="7" target="1" min="0" max="-50">
 			<attribute key="shootEffect" value="largerock" />
 			<attribute key="areaEffect" value="explosion" />
@@ -33,16 +36,16 @@
 		<element firePercent="-5" />
 		<element icePercent="-1" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="*crackle*" />
 		<voice sentence="*swwwwishhhh*" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="45" chance="97230" /><!-- gold coin -->
-		<item id="21427" chance="10690" /><!-- dowser -->
-		<item id="21428" chance="15630" /><!-- fir cone -->
-		<item id="2787" countmax="3" chance="4860" /><!-- white mushrooms -->
-		<item id="20104" chance="4200" /><!-- swampling club -->
-		<item id="2149" chance="830" /><!-- small emerald -->
+		<item name="gold coin" countmax="45" chance="97230" />
+		<item name="small emerald" chance="830" />
+		<item name="white mushroom" countmax="3" chance="4860" />
+		<item name="swampling club" chance="4200" />
+		<item name="dowser" chance="10690" />
+		<item name="fir cone" chance="15630" />
 	</loot>
 </monster>

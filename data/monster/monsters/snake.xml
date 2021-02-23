@@ -15,18 +15,20 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-8" poison="1" />
+		<attack name="melee" interval="2000" min="0" max="-8" poison="15" />
 	</attacks>
-	<defenses armor="5" defense="5" />
+	<defenses armor="0" defense="0" />
 	<elements>
-		<element earthPercent="5" />
+		<element earthPercent="40" />
 		<element energyPercent="20" />
 		<element firePercent="-10" />
 		<element icePercent="-10" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="Zzzzzzt" />
 	</voices>
 </monster>

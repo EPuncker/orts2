@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Hive Pore" nameDescription="a hive pore" race="venom" experience="0" speed="0" manacost="0">
-	<health now="100" max="100" />
+<monster name="Hive Pore" nameDescription="Hive Pore" race="venom" experience="0" speed="0">
+	<health now="1" max="1" />
 	<look typeex="15467" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
@@ -15,9 +15,12 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<defenses>
-		<defense name="physical" interval="30000" chance="100" target="0" radius="3">
+		<defense name="effect" interval="30000" chance="100" target="0" radius="3">
 			<attribute key="areaEffect" value="greenspark" />
 		</defense>
 	</defenses>
@@ -30,13 +33,16 @@
 		<immunity physical="1" />
 		<immunity energy="1" />
 		<immunity fire="1" />
-		<immunity poison="1" />
+		<immunity earth="1" />
+		<immunity drown="1" />
 		<immunity ice="1" />
 		<immunity holy="1" />
 		<immunity death="1" />
 		<immunity lifedrain="1" />
+		<immunity manadrain="1" />
 		<immunity paralyze="1" />
-		<immunity drown="1" />
+		<immunity drunk="1" />
+		<immunity outfit="1" />
 		<immunity invisible="1" />
 	</immunities>
 </monster>

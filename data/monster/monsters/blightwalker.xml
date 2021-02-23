@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Blightwalker" nameDescription="a blightwalker" race="undead" experience="5850" speed="250" manacost="0">
+<monster name="Blightwalker" nameDescription="a blightwalker" race="undead" experience="5850" speed="250">
 	<health now="8900" max="8900" />
 	<look type="246" corpse="6354" />
 	<targetchange interval="4000" chance="10" />
@@ -15,10 +15,11 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="800" />
+		<flag canwalkonenergy="0" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-490" />
-		<attack name="earth" interval="2000" chance="20" range="7" target="1" min="-220" max="-405">
+		<attack name="earth" interval="2000" chance="20" range="7" target="1" radius="1" min="-220" max="-405">
 			<attribute key="shootEffect" value="poison" />
 		</attack>
 		<attack name="lifedrain" interval="2000" chance="15" target="0" radius="4" min="-65" max="-135">
@@ -28,7 +29,7 @@
 			<attribute key="areaEffect" value="greenspark" />
 		</attack>
 		<attack name="blightwalker curse" interval="2000" chance="15" />
-		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-300" duration="30000">
+		<attack name="speed" interval="2000" chance="15" target="1" range="7" speedchange="-300" duration="30000">
 			<attribute key="shootEffect" value="poison" />
 		</attack>
 	</attacks>
@@ -46,36 +47,36 @@
 		<immunity earth="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="I can see you decaying!" />
 		<voice sentence="Let me taste your mortality!" />
 		<voice sentence="Your lifeforce is waning!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
-		<item id="2148" countmax="97" chance="100000" />	<!-- gold coin -->
-		<item id="2152" countmax="5" chance="100000" />		<!-- platinum coin -->
-		<item id="2694" chance="50000" />					<!-- bunch of wheat -->
-		<item id="7590" countmax="3" chance="31360" />		<!-- great mana potion -->
-		<item id="6500" chance="28000" />					<!-- demonic essence -->
-		<item id="2260" countmax="2" chance="26250" />		<!-- blank rune -->
-		<item id="5944" chance="23720" />					<!-- soul orb -->
-		<item id="10605" chance="15000" />					<!-- bundle of cursed straw -->
-		<item id="8473" countmax="2" chance="14720" />		<!-- ultimate health potion -->
-		<item id="2183" chance="10000" />					<!-- hailstorm rod -->
-		<item id="7368" countmax="10" chance="5900" />		<!-- assassin star -->
-		<item id="9971" chance="5270" />						<!-- gold ingot -->
-		<item id="7632" chance="4450" />						<!-- giant shimmering pearl -->
-		<item id="7633" chance="4450" />						<!-- giant shimmering pearl -->
-		<item id="7732" chance="4300" />						<!-- seeds -->
-		<item id="2550" chance="3000" />						<!-- scythe -->
-		<item id="7885" chance="2500" />						<!-- terra legs -->
-		<item id="2199" chance="2050" />						<!-- garlic necklace -->
-		<item id="2179" chance="1870" />						<!-- gold ring -->
-		<item id="2436" chance="1520" />						<!-- skull staff -->
-		<item id="6300" chance="1410" />						<!-- death ring -->
-		<item id="7884" chance="1050" />						<!-- terra mantle -->
-		<item id="2418" chance="350" />						<!-- golden sickle -->
-		<item id="2173" chance="120" />						<!-- amulet of loss -->
+		<item name="gold coin" countmax="100" chance="50000" />
+		<item name="gold coin" countmax="97" chance="50000" />
+		<item name="platinum coin" countmax="5" chance="100000" />
+		<item name="amulet of loss" chance="120" />
+		<item name="gold ring" chance="1870" />
+		<item name="hailstorm rod" chance="10000" />
+		<item name="garlic necklace" chance="2050" />
+		<item name="blank rune" countmax="2" chance="26250" />
+		<item name="golden sickle" chance="350" />
+		<item name="skull staff" chance="1520" />
+		<item name="scythe" chance="3000" />
+		<item name="bunch of wheat" chance="50000" />
+		<item name="soul orb" chance="23720" />
+		<item id="6300" chance="1410" /><!-- death ring -->
+		<item name="demonic essence" chance="28000" />
+		<item name="assassin star" countmax="10" chance="5900" />
+		<item name="great mana potion" countmax="3" chance="31360" />
+		<item id="7632" chance="4450" /><!-- giant shimmering pearl -->
+		<item id="7633" chance="4450" /><!-- giant shimmering pearl -->
+		<item name="seeds" chance="4300" />
+		<item name="terra mantle" chance="1050" />
+		<item name="terra legs" chance="2500" />
+		<item name="ultimate health potion" countmax="2" chance="14720" />
+		<item name="gold ingot" chance="5270" />
+		<item name="bundle of cursed straw" chance="15000" />
 	</loot>
 </monster>

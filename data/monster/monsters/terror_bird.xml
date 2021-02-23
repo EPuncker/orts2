@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Terror Bird" nameDescription="a terror bird" race="blood" experience="150" speed="220" manacost="490">
+<monster name="Terror Bird" nameDescription="a terror bird" race="blood" experience="150" speed="212" manacost="490">
 	<health now="300" max="300" />
 	<look type="218" corpse="6057" />
 	<targetchange interval="4000" chance="10" />
@@ -15,11 +15,14 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="35" attack="40" />
+		<attack name="melee" interval="2000" min="0" max="-90" />
 	</attacks>
-	<defenses armor="15" defense="15" />
+	<defenses armor="13" defense="13" />
 	<elements>
 		<element energyPercent="20" />
 		<element icePercent="20" />
@@ -27,19 +30,19 @@
 		<element earthPercent="-10" />
 		<element deathPercent="-5" />
 	</elements>
-	<voices interval="2000" chance="7">
+	<voices interval="5000" chance="10">
 		<voice sentence="CRAAAHHH!" />
 		<voice sentence="Gruuuh Gruuuh." />
 		<voice sentence="Carrah Carrah!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="30" chance="81500" /><!-- gold coin -->
-		<item id="3976" countmax="3" chance="10000" /><!-- worm -->
-		<item id="2148" countmax="3" chance="48000" /><!-- meat -->
-		<item id="11190" chance="11000" /><!-- terrorbird beak -->
-		<item id="12470" chance="3000" /><!-- colourful feather -->
-		<item id="3970" chance="630" /><!-- health potion -->
-		<item id="3970" chance="150" /><!-- feather headdress -->
-		<item id="3970" chance="260" /><!-- seeds -->
+		<item name="gold coin" countmax="30" chance="82500" />
+		<item name="meat" countmax="3" chance="48000" />
+		<item name="terrorbird beak" chance="10000" />
+		<item name="worm" chance="9500" />
+		<item name="colourful feather" chance="3000" />
+		<item name="health potion" chance="690" />
+		<item name="seeds" chance="230" />
+		<item name="feather headdress" chance="100" />
 	</loot>
 </monster>

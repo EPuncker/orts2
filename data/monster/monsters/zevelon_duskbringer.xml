@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Zevelon Duskbringer" nameDescription="Zevelon Duskbringer" race="undead" experience="1800" speed="310" manacost="0">
-	<health now="1600" max="1600" />
+<monster name="Zevelon Duskbringer" nameDescription="Zevelon Duskbringer" race="undead" experience="1800" speed="310">
+	<health now="1400" max="1400" />
 	<look type="287" corpse="8937" />
 	<targetchange interval="5000" chance="10" />
 	<flags>
@@ -15,9 +15,10 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="0" />
+		<flag isboss="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="65" attack="75" />
+		<attack name="melee" interval="2000" min="0" max="-282" />
 		<attack name="death" interval="1000" chance="12" target="1" min="0" max="-200">
 			<attribute key="areaEffect" value="mortarea" />
 			<attribute key="shootEffect" value="suddendeath" />
@@ -30,8 +31,8 @@
 		</defense>
 		<defense name="invisible" interval="3000" chance="25" duration="6000">
 			<attribute key="areaEffect" value="blueshimmer" />
-		<defense name="outfit" interval="4500" chance="30" monster="bat" duration="4000" />
 		</defense>
+		<defense name="outfit" interval="4500" chance="30" monster="bat" duration="4000" />
 	</defenses>
 	<elements>
 		<element physicalPercent="20" />
@@ -43,21 +44,21 @@
 		<immunity death="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="2000" chance="7">
+	<summons maxSummons="3">
+		<summon name="Vampire" interval="3000" chance="40" />
+	</summons>
+	<voices interval="5000" chance="10">
 		<voice sentence="Human blood is not suitable for drinking" />
 		<voice sentence="Your short live is coming to an end" />
 		<voice sentence="Ashari Mortals. Come and stay forever!" />
 	</voices>
-	<summons maxSummons="3">
-		<summon name="Vampire" interval="3000" chance="40" />
-	</summons>
 	<loot>
-		<item id="7588" chance="4000" />
-		<item id="2144" chance="8000" />
-		<item id="9020" chance="100000" />
-		<item id="2152" chance="50000" countmax="5" />
-		<item id="2148" chance="100000" countmax="75" />
-		<item id="2216" chance="11111" />
-		<item id="2534" chance="4500" />
+		<item name="black pearl" chance="8000" />
+		<item name="gold coin" chance="100000" countmax="75" />
+		<item name="platinum coin" chance="50000" countmax="5" />
+		<item name="ring of healing (faster regeneration)" chance="11111" />
+		<item name="vampire shield" chance="4500" />
+		<item name="strong health potion" chance="4000" />
+		<item name="vampire lord token" chance="100000" />
 	</loot>
 </monster>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="The Hag" nameDescription="The Hag" race="blood" experience="510" speed="205" manacost="0">
+<monster name="The Hag" nameDescription="The Hag" race="blood" experience="510" speed="205">
 	<health now="935" max="935" />
-	<look type="264" head="78" body="97" legs="95" feet="95" corpse="7349" />
+	<look type="264" head="19" body="1" legs="40" feet="2" corpse="7349" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -11,16 +11,19 @@
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag targetdistance="5" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="40" attack="40" />
+		<attack name="melee" interval="2000" min="0" max="-100" />
 		<attack name="drunk" interval="3000" chance="35" range="5" radius="1" target="1" duration="15000" />
-		<attack name="speed" interval="4000" chance="55" radius="1" target="1" range="5" duration="12000" speed="-400">
+		<attack name="speed" interval="4000" chance="55" radius="1" target="1" range="5" duration="12000" speedchange="-400">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 	</attacks>
 	<defenses armor="24" defense="25">
-		<defense name="healing" interval="2000" chance="35" min="95" max="155">
+		<defense name="healing" interval="2000" chance="35" min="15" max="75">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 		<defense name="invisible" interval="3000" chance="50" duration="8000">
@@ -33,6 +36,8 @@
 		<element energyPercent="10" />
 	</elements>
 	<immunities>
+		<immunity outfit="1" />
+		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="2">

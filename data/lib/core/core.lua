@@ -1,5 +1,6 @@
 -- Priority reading:
-dofile('data/lib/features/storages.lua')
+dofile('data/lib/core/storages.lua')
+dofile('data/lib/core/functions.lua')
 
 -- Normal reading:
 dofile('data/lib/core/actionids.lua')
@@ -16,5 +17,6 @@ dofile('data/lib/core/position.lua')
 dofile('data/lib/core/string.lua')
 dofile('data/lib/core/tables.lua')
 dofile('data/lib/core/teleport.lua')
+dofile('data/lib/core/teleport_item_destinations.lua')
 dofile('data/lib/core/tile.lua')
 dofile('data/lib/core/vocation.lua')

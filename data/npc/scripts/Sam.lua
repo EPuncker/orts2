@@ -29,7 +29,7 @@ local function creatureSayCallback(cid, type, msg)
 			if player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmetTimer) < os.time() then
 				player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 0)
 				player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 7)
-				player:setStorageValue(Storage.OutfitQuest.Ref, math.min(0, player:getStorageValue(Storage.OutfitQuest.Ref) - 1))
+				player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
 				player:addOutfitAddon(131, 2)
 				player:addOutfitAddon(139, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 			if player:getStorageValue(Storage.OutfitQuest.Citizen.AddonBackpackTimer) < os.time() then
 				npcHandler:say('Just in time! Your backpack is finished. Here you go, I hope you like it.', cid)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.Ref, math.min(0, player:getStorageValue(Storage.OutfitQuest.Ref) - 1))
+				player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
 				player:setStorageValue(Storage.OutfitQuest.Citizen.MissionBackpack, 0)
 				player:setStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack, 3)
 
@@ -53,7 +53,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif npcHandler.topic[cid] == 2 then
 		if msgcontains(msg, 'yes') then
-			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
+			player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.AddonBackpack, 1)
 			player:setStorageValue(Storage.OutfitQuest.Citizen.MissionBackpack, 1)
 			npcHandler:say('Alright then, if you bring me 100 pieces of fine minotaur leather I will see what I can do for you. You probably have to kill really many minotaurs though... so good luck!', cid)

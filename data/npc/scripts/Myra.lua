@@ -22,7 +22,7 @@ local tiaraKeyword = keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHan
 		}}
 	)
 
-	yesKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Fine! Let\'s start with the 70 bat wings. I really feel uncomfortable out there in the jungle.', reset = true}, nil, function(player) player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1) end)
+	yesKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Fine! Let\'s start with the 70 bat wings. I really feel uncomfortable out there in the jungle.', reset = true}, nil, function(player) player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1) end)
 	yesKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'Would you like me to repeat the task requirements then?', moveup = 2})
 
 tiaraKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'That\'s a pity.', reset = true})

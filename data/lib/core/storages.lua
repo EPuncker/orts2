@@ -243,7 +243,6 @@ Storage = {
 
 	OutfitQuest = {
 		DefaultStart = 12010, -- until all outfit quests are completed
-		Ref = 12010,
 
 		Afflicted = {
 			Outfit = 12005,
@@ -278,26 +277,21 @@ Storage = {
 		BeggarOutfit = 12018,
 		BeggarOutfitTimer = 12019,
 
-		-- Hunter-outfit Quest
-		HunterMusicSheet01 = 12050,
-		HunterMusicSheet02 = 12051,
-		HunterMusicSheet03 = 12052,
-		HunterMusicSheet04 = 12053,
-		HunterBodyAddon = 12054,
-		HunterHatAddon = 12055,
-
 		Hunter = {
+			MusicSheet01 = 12050,
+			MusicSheet02 = 12051,
+			MusicSheet03 = 12052,
+			MusicSheet04 = 12053,
 			AddonGlove = 12054,
 			AddonHat = 12055
 		},
 
 		Knight = {
 			AddonSword = 12153,
-
 			MissionHelmet = 12154,
 			AddonHelmet = 12155,
 			AddonHelmetTimer = 12156,
-			RamsaysHelmetDoor = 12160
+			RamsaysHelmetDoor = 12157
 		},
 
 		MageSummoner = {

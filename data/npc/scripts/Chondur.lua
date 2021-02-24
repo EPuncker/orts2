@@ -63,7 +63,7 @@ local function addTaskKeyword(text, value, missionStorage)
 				function(player)
 					player:setStorageValue(Storage.OutfitQuest.Shaman.AddonStaffMask, math.max(0, player:getStorageValue(Storage.OutfitQuest.Shaman.AddonStaffMask)) + 1)
 					player:setStorageValue(missionStorage, 1)
-					player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1) end
+					player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1) end
 				)
 			yesKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'Would you like me to repeat the task requirements then?', moveup = 2})
 
@@ -109,7 +109,7 @@ local function addItemKeyword(keyword, aliasKeyword, text, value, item, addonId,
 				player:addOutfitAddon(158, addonId)
 				player:addOutfitAddon(154, addonId)
 				player:setStorageValue(Storage.OutfitQuest.Shaman.AddonStaffMask, player:getStorageValue(Storage.OutfitQuest.Shaman.AddonStaffMask) + 1)
-				player:setStorageValue(Storage.OutfitQuest.Ref, math.min(0, player:getStorageValue(Storage.OutfitQuest.Ref) - 1))
+				player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
 				player:setStorageValue(missionStorage, 0)
 				if achievement then
 					player:addAchievement('Way of the Shaman')

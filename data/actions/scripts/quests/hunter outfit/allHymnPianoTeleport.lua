@@ -5,7 +5,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.OutfitQuest.HunterMusicSheet01) == 1 and player:getStorageValue(Storage.OutfitQuest.HunterMusicSheet02) == 1 and player:getStorageValue(Storage.OutfitQuest.HunterMusicSheet03) == 1 and player:getStorageValue(Storage.OutfitQuest.HunterMusicSheet04) == 1 then
+	if player:getStorageValue(Storage.OutfitQuest.Hunter.MusicSheet01) == 1 and player:getStorageValue(Storage.OutfitQuest.Hunter.MusicSheet02) == 1 and player:getStorageValue(Storage.OutfitQuest.Hunter.MusicSheet03) == 1 and player:getStorageValue(Storage.OutfitQuest.Hunter.MusicSheet04) == 1 then
 		player:teleportTo(portpos, false)
 		portpos:sendMagicEffect(CONST_ME_TELEPORT)
 		toPosition:sendMagicEffect(CONST_ME_SOUND_YELLOW)

@@ -9,7 +9,6 @@
 		<flag hostile="1"/>
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
-		<flag isblockable="0"/>
 		<flag pushable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
@@ -47,19 +46,20 @@
 		<voice sentence="clonk"/>
 	</voices>
 	<loot>
-		<item id="2148" countmax="200" chance="100000"/> <!-- gold coin -->
-		<item id="24124" chance="1490"/> <!-- bronze gear wheel -->
-		<item id="23564" chance="17160"/> <!-- metal jaw -->
-		<item id="2152" countmax="2" chance="43280"/> <!-- platinum coin -->
-		<item id="7588" countmax="2" chance="9700"/> <!-- strong health potion -->
-		<item id="7589" countmax="2" chance="9700"/> <!-- strong mana potion -->
-		<item id="23542" chance="1490"/> <!-- metal bat -->
-		<item id="8910" chance="1490"/> <!-- underworld rod -->
-		<item id="2167" chance="2240"/> <!-- energy ring -->
-		<item id="2168" chance="750"/> <!-- life ring -->
-		<item id="11227" chance="2240"/> <!-- shiny stone -->
-		<item id="23540" chance="1490"/> <!-- metal spats -->
-		<item id="23539" chance="1490"/> <!-- alloy legs -->
-		<item id="9810" chance="2990"/> <!-- rusty armor(rare) -->
+		<item id="9810" chance="2990"/> <!-- rusty armor (rare) -->
+		<item name="alloy legs" chance="1490"/>
+		<item name="bronze gear wheel" chance="1490"/>
+		<item name="energy ring" chance="2240"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="life ring" chance="750"/>
+		<item name="metal bat" chance="1490"/>
+		<item name="metal jaw" chance="17160"/>
+		<item name="metal spats" chance="1490"/>
+		<item name="platinum coin" countmax="2" chance="43280"/>
+		<item name="shiny stone" chance="2240"/>
+		<item name="strong health potion" countmax="2" chance="9700"/>
+		<item name="strong mana potion" countmax="2" chance="9700"/>
+		<item name="underworld rod" chance="1490"/>
 	</loot>
 </monster>

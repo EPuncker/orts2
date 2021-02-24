@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="1"/>
@@ -55,24 +54,25 @@
 		<voice sentence="Ommm!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmax="120" chance="100000"/>
-		<item name="platinum coin" countmax="3" chance="39880"/>
-		<item name="mooh'tah shell" chance="15110"/>
-		<item name="strong mana potion" chance="7080"/>
-		<item name="strong health potion" chance="6960"/>
-		<item name="small emerald" chance="5180"/>
-		<item name="minotaur leather" chance="5140"/>
-		<item name="small amethyst" chance="5120"/>
-		<item name="small topaz" chance="5090"/>
-		<item name="minotaur horn" countmax="2" chance="5080"/>
-		<item name="small ruby" chance="5040"/>
+		<item id="7401" chance="130"/> <!-- minotaur trophy -->
 		<item name="cowtana" chance="1440"/>
-		<item name="sword ring" chance="1070"/>
-		<item name="mooh'tah plate" chance="1010"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="20" chance="100000"/>
 		<item name="guardian shield" chance="910"/>
-		<item name="red piece of cloth" chance="740"/>
-		<item name="knight legs" chance="690"/>
 		<item name="knight armor" chance="490"/>
-		<item id="7401" chance="130"/>
+		<item name="knight legs" chance="690"/>
+		<item name="minotaur horn" countmax="2" chance="5080"/>
+		<item name="minotaur leather" chance="5140"/>
+		<item name="mooh'tah plate" chance="1010"/>
+		<item name="mooh'tah shell" chance="15110"/>
+		<item name="platinum coin" countmax="3" chance="39880"/>
+		<item name="red piece of cloth" chance="740"/>
+		<item name="small amethyst" chance="5120"/>
+		<item name="small emerald" chance="5180"/>
+		<item name="small ruby" chance="5040"/>
+		<item name="small topaz" chance="5090"/>
+		<item name="strong health potion" chance="6960"/>
+		<item name="strong mana potion" chance="7080"/>
+		<item name="sword ring" chance="1070"/>
 	</loot>
 </monster>

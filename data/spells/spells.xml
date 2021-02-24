@@ -801,4 +801,16 @@
 	<instant name="pirate corsair skill reducer" words="###49" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/pirate_corsair_skill_reducer.lua" />
 	<instant name="monster soulfire" words="###50" aggressive="1" blockwalls="1" range="7" needtarget="1" needlearn="1" script="monster/monster_soulfire.lua" />
 	<instant name="dipthrah skill reducer" words="###51" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/dipthrah_skill_reducer.lua" />
+	<instant name="devourer wave" words="###52" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_wave.lua"/>
+	<instant name="devourer paralyze" words="###53" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_paralyze.lua"/>
+	<instant name="devourer summon" words="###54" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_summon.lua"/>
+	<instant name="glooth anemone summon" words="###55" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/glooth_anemone_summon.lua"/>
+	<instant name="metal gargoyle curse" words="###56" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/metal_gargoyle_curse.lua"/>
+	<instant name="minotaur amazon paralyze" words="###57" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/minotaur_amazon_paralyze.lua"/>
+	<instant name="mooh'tah master skill reducer" words="###58" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/mooh'tah_master_skill_reducer.lua"/>
+	<instant name="rot elemental paralyze" words="###59" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rot_elemental_paralyze.lua"/>
+	<instant name="rustheap golem electrify" words="###60" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/rustheap_golem_electrify.lua"/>
+	<instant name="rustheap golem wave" words="###61" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rustheap_golem_wave.lua"/>
+	<instant name="frazzlemaw paralyze" words="###62" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/frazzlemaw_paralyze.lua"/>
+	<instant name="worm priestess paralyze" words="###63" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/worm_priestess_paralyze.lua"/>
 </spells>

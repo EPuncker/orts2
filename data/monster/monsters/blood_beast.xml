@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushcreatures="1"/>
 		<flag canpushitems="1"/>
 		<flag staticattack="90"/>
@@ -51,17 +50,18 @@
 		<voice sentence="Roarr!"/>
 	</voices>
 	<loot>
-		<item id="23549" chance="2010"/> <!-- poisoned fang -->
-		<item id="10557" chance="3080"/> <!-- poisonous slime -->
-		<item id="23517" chance="2720"/> <!-- glooth steak -->
-		<item id="2148" countmax="139" chance="100000"/> <!-- gold coin -->
-		<item id="23565" chance="1040"/> <!-- slime heart -->
-		<item id="7588" chance="7710"/> <!-- strong health potion -->
-		<item id="7366" countmax="5" chance="1290"/> <!-- viper star -->
-		<item id="23554" chance="250"/> <!-- glooth amulet -->
-		<item id="23550" chance="210"/> <!-- glooth blade -->
-		<item id="23549" chance="210"/> <!-- glooth club -->
-		<item id="23551" chance="250"/> <!-- glooth axe -->
-		<item id="23529" chance="280"/> <!-- glooth spear -->
+		<item name="glooth amulet" chance="250"/>
+		<item name="glooth axe" chance="250"/>
+		<item name="glooth blade" chance="210"/>
+		<item name="glooth club" chance="210"/>
+		<item name="glooth spear" chance="280"/>
+		<item name="glooth steak" chance="2720"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="39" chance="100000"/>
+		<item name="poisoned fang" chance="2010"/>
+		<item name="poisonous slime" chance="3080"/>
+		<item name="slime heart" chance="1040"/>
+		<item name="strong health potion" chance="7710"/>
+		<item name="viper star" countmax="5" chance="1290"/>
 	</loot>
 </monster>

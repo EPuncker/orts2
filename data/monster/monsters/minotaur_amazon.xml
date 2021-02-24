@@ -10,7 +10,6 @@
 		<flag illusionable="0"/>
 		<flag convinceable="0"/>
 		<flag pushable="0"/>
-		<flag isblockable="0"/>
 		<flag canpushitems="1"/>
 		<flag canpushcreatures="1"/>
 		<flag targetdistance="4"/>
@@ -53,30 +52,31 @@
 		<voice sentence="You won't hurt us!"/>
 	</voices>
 	<loot>
-		<item name="gold coin" countmin="5" countmax="199" chance="100000"/>
-		<item name="platinum coin" countmax="3" chance="64980"/>
-		<item name="ham" chance="59470"/>
+		<item id="7401" chance="230"/> <!-- minotaur trophy -->
+		<item name="assassin star" countmin="1" countmax="5" chance="2980"/>
+		<item name="bullseye potion" chance="850"/>
 		<item name="cowbell" chance="19660"/>
-		<item name="minotaur leather" chance="16570"/>
-		<item name="great mana potion" chance="7050"/>
+		<item name="gold coin" countmin="5" countmax="100" chance="100000"/>
+		<item name="gold coin" countmin="5" countmax="99" chance="100000"/>
+		<item name="gold ingot" chance="580"/>
 		<item name="great health potion" chance="6590"/>
+		<item name="great mana potion" chance="7050"/>
+		<item name="ham" chance="59470"/>
 		<item name="meat" chance="6570"/>
+		<item name="mino lance" chance="1740"/>
+		<item name="mino shield" chance="3750"/>
 		<item name="minotaur horn" countmax="2" chance="5300"/>
-		<item name="small ruby" countmin="1" countmax="2" chance="5170"/>
-		<item name="small topaz" countmin="1" countmax="2" chance="5020"/>
+		<item name="minotaur leather" chance="16570"/>
+		<item name="platinum coin" countmax="3" chance="64980"/>
+		<item name="red gem" chance="460"/>
+		<item name="red piece of cloth" chance="620"/>
+		<item name="ring of healing" chance="2400"/>
 		<item name="small amethyst" countmin="1" countmax="2" chance="4880"/>
 		<item name="small emerald" countmin="1" countmax="2" chance="4460"/>
-		<item name="mino shield" chance="3750"/>
-		<item name="assassin star" countmin="1" countmax="5" chance="2980"/>
-		<item name="ring of healing" chance="2400"/>
-		<item name="mino lance" chance="1740"/>
+		<item name="small ruby" countmin="1" countmax="2" chance="5170"/>
+		<item name="small topaz" countmin="1" countmax="2" chance="5020"/>
 		<item name="stone skin amulet" subtype="5" chance="860"/>
-		<item name="bullseye potion" chance="850"/>
 		<item name="warrior helmet" chance="750"/>
-		<item name="red piece of cloth" chance="620"/>
 		<item name="yellow gem" chance="580"/>
-		<item name="gold ingot" chance="580"/>
-		<item name="red gem" chance="460"/>
-		<item id="7401" chance="230"/>
 	</loot>
 </monster>

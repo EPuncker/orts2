@@ -35,7 +35,7 @@ keywordHandler:addKeyword({'myra'}, StdModule.say, {npcHandler = npcHandler,
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, 11)
 		player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, 0)
-		player:setStorageValue(Storage.OutfitQuest.Ref, math.min(0, player:getStorageValue(Storage.OutfitQuest.Ref) - 1))
+		player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
 	end
 )
 

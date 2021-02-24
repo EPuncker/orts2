@@ -89,7 +89,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif npcHandler.topic[cid] == 2 then
 		if msgcontains(msg, 'yes') then
-			player:setStorageValue(Storage.OutfitQuest.Ref, math.max(0, player:getStorageValue(Storage.OutfitQuest.Ref)) + 1)
+			player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1)
 			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 1)
 			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 1)
 			npcHandler:say('Alright then. Come back to me once you have collected 100 perfect behemoth fangs.', cid)

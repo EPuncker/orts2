@@ -1,9 +1,39 @@
-### Used Storages:
+### Achievements:
+```
+-- Functions:
+* getAchievementInfoById(achievement_id)
+* getAchievementInfoByName(achievement_name)
+* getSecretAchievements()
+* getPublicAchievements()
+* getAchievements()
+* Player:addAchievement(achievement_id/name[, hideMsg])
+* Player:removeAchievement(achievement_id/name)
+* Player:hasAchievement(achievement_id/name)
+* Player:addAllAchievements([hideMsg])
+* Player:removeAllAchievements()
+* Player:getSecretAchievements()
+* Player:getPublicAchievements()
+* Player:getAchievements()
+* isAchievementSecret(achievement_id/name)
+* Player:getAchievementPoints()
+* Player:addAchievementProgress()
+```
+
+```
+-- Storages:
+* Storage.achievementsBase -- base storage
+* Storage.achievementsCounter -- this storage will be used to save the process to obtain the certain achievement
+* (Ex: this storage + the id of achievement 'Allowance Collector' to save how many piggy banks has been broken
+```
+
+### Storages:
+```
 * Last Used Storage = 50214
 * Last Used Aid = 50244
 * Last Used Uid = 50147
+```
 
-### Storages:
+```
 * Default Start Outfits Quest: 12010
 * Citizen Outfits (Feather Hat): 12011
 * Citizen Outfits (Backpack): 12012
@@ -330,3 +360,4 @@
 * Inq reward room tile text
 * (Aid): 4003
 * (Storage) = 12178
+```

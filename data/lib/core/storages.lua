@@ -1052,3 +1052,26 @@ GlobalStorage = {
 	NaginataStone = 50058,
 	SwordOfFury = 5635
 }
+
+-- Checking for duplicate storages:
+local function extractValues(tab, ret)
+	if type(tab) == "number" then
+		table.insert(ret, tab)
+	else
+		for _, v in pairs(tab) do
+			extractValues(v, ret)
+		end
+	end
+end
+
+local extraction = {}
+extractValues(Storage, extraction)
+table.sort(extraction)
+
+if #extraction > 1 then
+	for i = 1, #extraction - 1 do
+		if extraction[i] == extraction[i+1] then
+			print(">> [Warning]: Duplicate storage value found in storages.lua, storageID: ".. extraction[i])
+		end
+	end
+end

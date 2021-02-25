@@ -13,7 +13,7 @@ ORTS - A Real Map Datapack
 ## Pull request
 When [creating a pull request](https://github.com/EPuncker/orts2/pulls) please mind the following points:
 * We do not accept pull requests for map changes. Create a issue to discuss and provide the map you want to be added.
-* Do not create a pull request for each file individually if the change are related.
+* Do not create a pull request for each file individually if the changes are related.
 * Scripts must use tabs as indentation.
 
 ### Issues

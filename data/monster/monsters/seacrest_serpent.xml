@@ -61,7 +61,7 @@
 		<item name="black pearl" countmax="3" chance="2340"/>
 		<item name="crest of the deep seas" chance="400"/>
 		<item name="dragon ham" chance="13040"/>
-		<item name="giant shimmering pearl" chance="1000"/>
+		<item id="7632" chance="1000"/> <!-- giant shimmering pearl -->
 		<item name="glacier amulet" chance="670"/>
 		<item name="glacier kilt" chance="3680"/>
 		<item name="glacier mask" chance="2680"/>

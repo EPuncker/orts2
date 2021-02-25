@@ -52,7 +52,8 @@
 		<item name="battle stone" chance="6200"/>
 		<item name="bonebreaker" chance="500"/>
 		<item name="cookie" countmax="7" chance="6200"/>
-		<item name="gold coin" countmax="130" chance="92000"/>
+		<item name="gold coin" countmax="100" chance="92000"/>
+		<item name="gold coin" countmax="30" chance="92000"/>
 		<item name="meat" chance="6200"/>
 		<item name="ogre ear stud" chance="5200"/>
 		<item name="ogre klubba" chance="800"/>
@@ -60,12 +61,12 @@
 		<item name="onyx chip" countmax="2" chance="3200"/>
 		<item name="opal" countmax="3" chance="3200"/>
 		<item name="pot" chance="500"/>
-		<item name="power ring" chance="2200"/><
-		<item name="rusty helmet" chance="200"/>
+		<item name="power ring" chance="2200"/>
+		<item id="9820" chance="200"/> <!-- rusty helmet -->
 		<item name="shamanic mask" chance="300"/>
-		<item name="skull fetish" chance="1200"/><
+		<item name="skull fetish" chance="1200"/>
 		<item name="small ruby" chance="4200"/>
-		<item name="stone" countmax="3" chance="6200"/>
+		<item id="2143" countmax="3" chance="6200"/> <!-- stone -->
 		<item name="strong health potion" countmax="3" chance="6200"/>
 	</loot>
 </monster>

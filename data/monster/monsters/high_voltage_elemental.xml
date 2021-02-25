@@ -40,11 +40,12 @@
 		<immunity ice="1"/>
 	</immunities>
 	<loot>
-		<item name="crystal ring" chance="7142"/>
+		<item id="2124" chance="7142"/> <!-- crystal ring -->
 		<item name="crystal sword" chance="4761"/>
 		<item name="energy ring" chance="7142"/>
 		<item name="flash arrow" countmax="20" chance="100000"/>
-		<item name="gold coin" countmax="189" chance="100000"/>
+		<item name="gold coin" countmax="100" chance="100000"/>
+		<item name="gold coin" countmax="89" chance="100000"/>
 		<item name="lightning headband" chance="400"/>
 		<item name="lightning legs" chance="400"/>
 		<item name="lightning pendant" chance="800"/>

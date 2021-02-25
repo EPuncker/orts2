@@ -43,9 +43,10 @@
 	</voices>
 	<loot>
 		<item name="berserk potion" chance="1200"/>
-		<item name="cookies" countmax="7" chance="2200"/>
-		<item name="gold coin" countmax="130" chance="92000"/>
-		<item name="jappenno" countmax="2" chance="1200"/>
+		<item id="2687" countmax="7" chance="2200"/> <!-- cookies -->
+		<item name="gold coin" countmax="100" chance="92000"/>
+		<item name="gold coin" countmax="30" chance="92000"/>
+		<item name="jalapeno pepper" countmax="2" chance="1200"/>
 		<item name="mysterious fetish" chance="2200"/>
 		<item name="ogre ear stud" chance="1200"/>
 		<item name="ogre nose ring" chance="1200"/>

@@ -34,7 +34,7 @@
 		<element earthPercent="1"/>
 	</elements>
 	<loot>
-		<item name="crystal pedestal" chance="1500"/>
+		<item id="9977" chance="1500"/> <!-- crystal pedestal -->
 		<item name="great health potion" chance="10000"/>
 		<item name="metal spats" chance="1000"/>
 		<item name="platinum coin" countmax="5" chance="33000"/>

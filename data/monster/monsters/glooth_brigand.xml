@@ -40,9 +40,9 @@
 		<immunity earth="1"/>
 	</immunities>
 	<loot>
-		<item name="brutcher axe" chance="1000"/>
-		<item name="dreader cleverd" chance="502"/>
-		<item name="giant shimmering pearl" chance="1000"/>
+		<item id="7412" chance="1000"/> <!-- brutcher axe -->
+		<item id="7419" chance="502"/> <!-- dreader cleverd -->
+		<item id="7632" chance="1000"/> <!-- giant shimmering pearl -->
 		<item name="glooth amulet" chance="1515"/>
 		<item name="glooth bag" chance="9090"/>
 		<item name="glooth capsule" chance="3030"/>

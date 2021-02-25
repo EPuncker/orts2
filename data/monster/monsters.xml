@@ -291,6 +291,7 @@
 	<monster name="Glooth Bandit" file="monsters/glooth_bandit.xml"/>
 	<monster name="Glooth Battery" file="monsters/glooth_battery.xml"/>
 	<monster name="Glooth Blob" file="monsters/glooth_blob.xml" />
+	<monster name="Glooth Bomb" file="monsters/glooth_bomb.xml" />
 	<monster name="Glooth Brigand" file="monsters/glooth_brigand.xml"/>
 	<monster name="Glooth Fairy" file="monsters/glooth_fairy.xml" />
 	<monster name="Glooth Golem" file="monsters/glooth_golem.xml" />

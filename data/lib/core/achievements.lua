@@ -1,35 +1,3 @@
---[[
-
-Achievements Lib Created By Eduardo Montilva (Darkhaos) for TFS 1.0
-
-LAST UPDATE: 16 July 2014 (Tibia Update 10.50)
-
-Functions:
-	getAchievementInfoById(achievement_id)
-	getAchievementInfoByName(achievement_name)
-	getSecretAchievements()
-	getPublicAchievements()
-	getAchievements()
-	Player:addAchievement(achievement_id/name[, showMsg])
-	Player:removeAchievement(achievement_id/name)
-	Player:hasAchievement(achievement_id/name)
-	Player:addAllAchievements([showMsg])
-	Player:removeAllAchievements()
-	Player:getSecretAchievements()
-	Player:getPublicAchievements()
-	Player:getAchievements()
-	isAchievementSecret(achievement_id/name)
-	Player:getAchievementPoints()
-
-Note: 	This lib was created following the data found in tibia.wikia.com.
-		Achievements with no points (or points equal to 0) are achievements with no available info about points in tibia.wikia.com. These achievements should be updated
-]]
-
-ACHIEVEMENTS_BASE = 300000 -- base storage
-ACHIEVEMENTS_ACTION_BASE = 20000 	--this storage will be used to save the process to obtain the certain achievement
-									--(Ex: this storage + the id of achievement 'Allowance Collector' to save...
-									-- ...how many piggy banks has been broken
-
 achievements =
 {
 	-- 8.6
@@ -475,13 +443,13 @@ ACHIEVEMENT_LAST = #achievements
 function getAchievementInfoById(id)
 	for k, v in pairs(achievements) do
 		if k == id then
-			local t = {}
-			t.id = k
-			t.actionStorage = ACHIEVEMENTS_ACTION_BASE + k
+			local targetAchievement = {}
+			targetAchievement.id = k
+			targetAchievement.actionStorage = Storage.achievementsCounter + k
 			for inf, it in pairs(v) do
-				t[inf] = it
+				targetAchievement[inf] = it
 			end
-			return t
+			return targetAchievement
 		end
 	end
 	return false
@@ -490,36 +458,36 @@ end
 function getAchievementInfoByName(name)
 	for k, v in pairs(achievements) do
 		if v.name:lower() == name:lower() then
-			local t = {}
-			t.id = k
-			t.actionStorage = ACHIEVEMENTS_ACTION_BASE + k
+			local targetAchievement = {}
+			targetAchievement.id = k
+			targetAchievement.actionStorage = Storage.achievementsCounter + k
 			for inf, it in pairs(v) do
-				t[inf] = it
+				targetAchievement[inf] = it
 			end
-			return t
+			return targetAchievement
 		end
 	end
 	return false
 end
 
 function getSecretAchievements()
-	local t = {}
+	local targetAchievement = {}
 	for k, v in pairs(achievements) do
 		if v.secret then
-			t[#t + 1] = k
+			targetAchievement[#targetAchievement + 1] = k
 		end
 	end
-	return t
+	return targetAchievement
 end
 
 function getPublicAchievements()
-	local t = {}
-	for k, v in pairs(achivements) do
+	local targetAchievement = {}
+	for k, v in pairs(achievements) do
 		if not v.secret then
-			t[#t + 1] = k
+			targetAchievement[#targetAchievement + 1] = k
 		end
 	end
-	return t
+	return targetAchievement
 end
 
 function getAchievements()
@@ -528,50 +496,60 @@ end
 
 function isAchievementSecret(ach)
 	local achievement
-	if isNumber(ach) then
+	if tonumber(ach) ~= nil then
 		achievement = getAchievementInfoById(ach)
 	else
 		achievement = getAchievementInfoByName(ach)
 	end
-	if not achievement then return print("[!] -> Invalid achievement \"" .. ach .. "\".") and false end
 
+	if not achievement then
+		print("[!] -> Invalid achievement \"" .. ach .. "\".")
+		return false
+	end
 	return achievement.secret
 end
 
 function Player.hasAchievement(self, ach)
 	local achievement
-	if isNumber(ach) then
+	if tonumber(ach) ~= nil then
 		achievement = getAchievementInfoById(ach)
 	else
 		achievement = getAchievementInfoByName(ach)
 	end
-	if not achievement then return print("[!] -> Invalid achievement \"" .. ach .. "\".") and false end
 
-	return self:getStorageValue(ACHIEVEMENTS_BASE + achievement.id) > 0
+	if not achievement then
+		print("[!] -> Invalid achievement \"" .. ach .. "\".")
+		return false
+	end
+	return self:getStorageValue(Storage.achievementsBase + achievement.id) > 0
 end
 
 function Player.getAchievements(self)
-	local t = {}
+	local targetAchievement = {}
 	for k = 1, #achievements do
 		if self:hasAchievement(k) then
-			t[#t + 1] = k
+			targetAchievement[#targetAchievement + 1] = k
 		end
 	end
-	return t
+	return targetAchievement
 end
 
-function Player.addAchievement(self, ach, denyMsg)
+function Player.addAchievement(self, ach, hideMsg)
 	local achievement
-	if isNumber(ach) then
+	if tonumber(ach) ~= nil then
 		achievement = getAchievementInfoById(ach)
 	else
 		achievement = getAchievementInfoByName(ach)
 	end
-	if not achievement then return print("[!] -> Invalid achievement \"" .. ach .. "\".") and false end
+
+	if not achievement then
+		print("[!] -> Invalid achievement \"" .. ach .. "\".")
+		return false
+	end
 
 	if not self:hasAchievement(achievement.id) then
-		self:setStorageValue(ACHIEVEMENTS_BASE + achievement.id, 1)
-		if not denyMsg then
+		self:setStorageValue(Storage.achievementsBase + achievement.id, 1)
+		if not hideMsg then
 			self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Congratulations! You earned the achievement \"" .. achievement.name .. "\".")
 		end
 	end
@@ -580,22 +558,26 @@ end
 
 function Player.removeAchievement(self, ach)
 	local achievement
-	if isNumber(ach) then
+	if tonumber(ach) ~= nil then
 		achievement = getAchievementInfoById(ach)
 	else
 		achievement = getAchievementInfoByName(ach)
 	end
-	if not achievement then return print("[!] -> Invalid achievement \"" .. ach .. "\".") and false end
+
+	if not achievement then
+		print("[!] -> Invalid achievement \"" .. ach .. "\".")
+		return false
+	end
 
 	if self:hasAchievement(achievement.id) then
-		self:setStorageValue(ACHIEVEMENTS_BASE + achievement.id, -1)
+		self:setStorageValue(Storage.achievementsBase + achievement.id, -1)
 	end
 	return true
 end
 
-function Player.addAllAchievements(self, denyMsg)
+function Player.addAllAchievements(self, hideMsg)
 	for i = ACHIEVEMENT_FIRST, ACHIEVEMENT_LAST do
-		self:addAchievement(i, denyMsg)
+		self:addAchievement(i, hideMsg)
 	end
 	return true
 end
@@ -610,33 +592,33 @@ function Player.removeAllAchievements(self)
 end
 
 function Player.getSecretAchievements(self)
-	local t = {}
+	local targetAchievement = {}
 	for k, v in pairs(achievements) do
 		if self:hasAchievement(k) and v.secret then
-			t[#t + 1] = k
+			targetAchievement[#targetAchievement + 1] = k
 		end
 	end
-	return t
+	return targetAchievement
 end
 
 function Player.getPublicAchievements(self)
-	local t = {}
+	local targetAchievement = {}
 	for k, v in pairs(achievements) do
 		if self:hasAchievement(k) and not v.secret then
-			t[#t + 1] = k
+			targetAchievement[#targetAchievement + 1] = k
 		end
 	end
-	return t
+	return targetAchievement
 end
 
 function Player.getAchievementPoints(self)
 	local points = 0
 	local list = self:getAchievements()
-	if #list > 0 then --has achievements
+	if #list > 0 then
 		for i = 1, #list do
-			local a = getAchievementInfoById(list[i])
-			if a.points > 0 then --avoid achievements with unknow points
-				points = points + a.points
+			local targetAchievement = getAchievementInfoById(list[i])
+			if targetAchievement.points > 0 then
+				points = points + targetAchievement.points
 			end
 		end
 	end
@@ -644,13 +626,13 @@ function Player.getAchievementPoints(self)
 end
 
 function Player.addAchievementProgress(self, ach, value)
-	local achievement = isNumber(ach) and getAchievementInfoById(ach) or getAchievementInfoByName(ach)
+	local achievement = tonumber(ach) ~= nil and getAchievementInfoById(ach) or getAchievementInfoByName(ach)
 	if not achievement then
 		print('[!] -> Invalid achievement "' .. ach .. '".')
 		return true
 	end
 
-	local storage = ACHIEVEMENTS_ACTION_BASE + achievement.id
+	local storage = Storage.achievementsCounter + achievement.id
 	local progress = self:getStorageValue(storage)
 	if progress < value then
 		self:setStorageValue(storage, math.max(1, progress) + 1)

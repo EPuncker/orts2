@@ -3,6 +3,7 @@ dofile('data/lib/core/storages.lua')
 dofile('data/lib/core/functions.lua')
 
 -- Normal reading:
+dofile('data/lib/core/achievements.lua')
 dofile('data/lib/core/actionids.lua')
 dofile('data/lib/core/combat.lua')
 dofile('data/lib/core/constants.lua')

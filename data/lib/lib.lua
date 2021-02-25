@@ -2,7 +2,6 @@
 dofile('data/lib/core/core.lua')
 
 -- Customs library:
-dofile('data/lib/features/features.lua')
 dofile('data/lib/quests/quests.lua')
 
 -- Compatibility library for our old Lua API

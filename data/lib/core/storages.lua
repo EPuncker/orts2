@@ -983,6 +983,8 @@ Storage = {
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
+	achievementsBase = 300000,
+	achievementsCounter = 20000,
 }
 
 GlobalStorage = {

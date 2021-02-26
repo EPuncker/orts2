@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Wereboar" nameDescription="a wereboar" race="blood" experience="2000" speed="300">
+	<health now="2200" max="2200"/>
+	<look type="721" corpse="24722"/>
+	<targetchange interval="4000" chance="10"/>
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="1"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag staticattack="80"/>
+		<flag runonhealth="275"/>
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="60" poison="140"/>
+		<attack name="melee" interval="2000" min="0" max="-385"/>
+		<attack name="speed" interval="4000" chance="20" radius="7" target="1" speedchange="-100">
+			<attribute key="areaEffect" value="poff"/>
+		</attack>
+	</attacks>
+	<defenses armor="32" defense="32">
+		<defense name="healing" interval="2000" chance="25" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+		<defense name="invisible" interval="2000" chance="20" duration="2000">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-5"/>
+		<element earthPercent="50"/>
+		<element icePercent="5"/>
+		<element holyPercent="-5"/>
+		<element deathPercent="50"/>
+		<element energyPercent="25"/>
+	</elements>
+	<immunities>
+		<immunity paralyze="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="GRUNT"/>
+	</voices>
+	<loot>
+		<item name="gold coin" countmax="100" chance="97000"/>
+		<item name="gold coin" countmax="100" chance="97000"/>
+		<item name="gold coin" countmax="42" chance="97000"/>
+		<item name="berserk potion" chance="700"/>
+		<item name="brown mushroom" chance="2000"/>
+		<item name="dreaded cleaver" chance="320"/>
+		<item name="fur armor" chance="200"/>
+		<item name="furry club" chance="360"/>
+		<item name="platinum coin" countmax="5" chance="18200"/>
+		<item name="stone skin amulet" subtype="5" chance="430"/>
+		<item name="strong health potion" chance="1200"/>
+		<item name="ultimate health potion" chance="2210"/>
+		<item name="wereboar hooves" chance="1900"/>
+		<item name="wereboar loincloth" chance="950"/>
+		<item id="24758" chance="200"/> <!-- wereboar trophy -->
+		<item name="wereboar tusks" chance="780"/>
+		<item name="werewolf amulet" chance="100"/>
+	</loot>
+</monster>

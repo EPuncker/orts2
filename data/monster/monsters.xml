@@ -94,11 +94,13 @@
 	<monster name="Choking Fear" file="monsters/choking_fear.xml" />
 	<monster name="Clay Guardian" file="monsters/clay_guardian.xml" />
 	<monster name="Cliff Strider" file="monsters/cliff_strider.xml" />
+	<monster name="Clomp" file="monsters/clomp.xml"/>
 	<monster name="Clubarc The Plunderer" file="monsters/clubarc_the_plunderer.xml" />
 	<monster name="Cobra" file="monsters/cobra.xml" />
 	<monster name="Cockroach" file="monsters/cockroach.xml" />
 	<monster name="Coldheart" file="monsters/coldheart.xml" />
 	<monster name="Colerian The Barbarian" file="monsters/colerian_the_barbarian.xml" />
+	<monster name="Control Tower" file="monsters/control_tower.xml"/>
 	<monster name="Coral Frog" file="monsters/coral_frog.xml" />
 	<monster name="Corym Charlatan" file="monsters/corym_charlatan.xml" />
 	<monster name="Corym Skirmisher" file="monsters/corym_skirmisher.xml" />
@@ -286,7 +288,11 @@
 	<monster name="Gladiator" file="monsters/gladiator.xml" />
 	<monster name="Glitterscale" file="monsters/glitterscale.xml" />
 	<monster name="Glooth Anemone" file="monsters/glooth_anemone.xml" />
+	<monster name="Glooth Bandit" file="monsters/glooth_bandit.xml"/>
+	<monster name="Glooth Battery" file="monsters/glooth_battery.xml"/>
 	<monster name="Glooth Blob" file="monsters/glooth_blob.xml" />
+	<monster name="Glooth Bomb" file="monsters/glooth_bomb.xml" />
+	<monster name="Glooth Brigand" file="monsters/glooth_brigand.xml"/>
 	<monster name="Glooth Fairy" file="monsters/glooth_fairy.xml" />
 	<monster name="Glooth Golem" file="monsters/glooth_golem.xml" />
 	<monster name="Glooth Powered Minotaur" file="monsters/glooth_powered_minotaur.xml" />
@@ -334,6 +340,7 @@
 	<monster name="Hero" file="monsters/hero.xml" />
 	<monster name="Hide" file="monsters/hide.xml" />
 	<monster name="Hideous Fungus" file="monsters/hideous_fungus.xml" />
+	<monster name="High Voltage Elemental" file="monsters/high_voltage_elemental.xml"/>
 	<monster name="Hive Overseer" file="monsters/hive_overseer.xml" />
 	<monster name="Hive Pore" file="monsters/hive_pore.xml" />
 	<monster name="Honour Guard" file="monsters/honour_guard.xml" />
@@ -494,6 +501,9 @@
 	<monster name="Northern Pike" file="monsters/northern_pike.xml" />
 	<monster name="Novice Of The Cult" file="monsters/novice_of_the_cult.xml" />
 	<monster name="Obujos" file="monsters/obujos.xml" />
+	<monster name="Ogre Brute" file="monsters/ogre_brute.xml"/>
+	<monster name="Ogre Savage" file="monsters/ogre_savage.xml"/>
+	<monster name="Ogre Shaman" file="monsters/ogre_shaman.xml"/>
 	<monster name="Omruc" file="monsters/omruc.xml" />
 	<monster name="Orc Berserker" file="monsters/orc_berserker.xml" />
 	<monster name="Orc Leader" file="monsters/orc_leader.xml" />
@@ -589,6 +599,7 @@
 	<monster name="Scorn Of The Emperor" file="monsters/scorn_of_the_emperor.xml" />
 	<monster name="Scorpion" file="monsters/scorpion.xml" />
 	<monster name="Sea Serpent" file="monsters/sea_serpent.xml" />
+	<monster name="Seacrest Serpent" file="monsters/seacrest_serpent.xml"/>
 	<monster name="Seagull" file="monsters/seagull.xml" />
 	<monster name="Serpent Spawn" file="monsters/serpent_spawn.xml" />
 	<monster name="Servant Golem" file="monsters/servant_golem.xml" />
@@ -751,6 +762,8 @@
 	<monster name="Weakened Demon" file="monsters/weakened_demon.xml" />
 	<monster name="Webster" file="monsters/webster.xml" />
 	<monster name="Weeper" file="monsters/weeper.xml" />
+	<monster name="Werebear" file="monsters/werebear.xml"/>
+	<monster name="Wereboar" file="monsters/wereboar.xml"/>
 	<monster name="Werewolf" file="monsters/werewolf.xml" />
 	<monster name="White Deer" file="monsters/white_deer.xml" />
 	<monster name="White Shade" file="monsters/white_shade.xml" />

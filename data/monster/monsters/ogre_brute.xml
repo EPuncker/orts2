@@ -62,7 +62,7 @@
 		<item name="opal" countmax="3" chance="3200"/>
 		<item name="pot" chance="500"/>
 		<item name="power ring" chance="2200"/>
-		<item id="9820" chance="200"/> <!-- rusty helmet -->
+		<item id="9820" chance="200"/> <!-- rusty helmet (heavily) -->
 		<item name="shamanic mask" chance="300"/>
 		<item name="skull fetish" chance="1200"/>
 		<item name="small ruby" chance="4200"/>

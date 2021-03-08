@@ -53,7 +53,6 @@
 	<monster name="Blightwalker" file="monsters/blightwalker.xml" />
 	<monster name="Blistering Fire Elemental" file="monsters/blistering_fire_elemental.xml" />
 	<monster name="Blood Beast" file="monsters/blood_beast.xml" />
-	<monster name="Blood Crab Underwater" file="monsters/blood_crab_underwater.xml" />
 	<monster name="Blood Crab" file="monsters/blood_crab.xml" />
 	<monster name="Blood Hand" file="monsters/blood_hand.xml" />
 	<monster name="Blood Priest" file="monsters/blood_priest.xml" />

@@ -360,4 +360,7 @@
 * Inq reward room tile text
 * (Aid): 4003
 * (Storage) = 12178
+
+* Active World Changes:
+* Yasir (Global Storage) = 10100
 ```

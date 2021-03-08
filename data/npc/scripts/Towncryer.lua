@@ -18,7 +18,7 @@ local worldChanges = {
 }
 
 for i = 1, #worldChanges do
-	if Game.getStorageValue(worldChanges[i].storage) > 0 then
+	if getGlobalStorageValue(worldChanges[i].storage) > 0 then
 		table.insert(voices, {text = worldChanges[i].text})
 	end
 end

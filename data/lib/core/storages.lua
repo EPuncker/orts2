@@ -1045,6 +1045,10 @@ GlobalStorage = {
 		AshmunrahSwitchesGlobalStorage = 202
 	},
 
+	WorldBoard = {
+		Yasir = 10100,
+	},
+
 	NaginataStone = 50058,
 	SwordOfFury = 5635
 }

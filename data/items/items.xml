@@ -663,7 +663,6 @@
 	</item>
 	<item id="1492" article="a" name="fire field">
 		<attribute key="type" value="magicfield" />
-		<attribute key="replaceable" value="0" />
 		<attribute key="field" value="fire">
 			<attribute key="initdamage" value="20" />
 			<attribute key="ticks" value="10000" />
@@ -673,7 +672,6 @@
 	</item>
 	<item id="1493" article="a" name="fire field">
 		<attribute key="type" value="magicfield" />
-		<attribute key="replaceable" value="0" />
 		<attribute key="field" value="fire">
 			<attribute key="ticks" value="10000" />
 			<attribute key="count" value="7" />
@@ -682,12 +680,10 @@
 	</item>
 	<item id="1494" article="a" name="fire field">
 		<attribute key="type" value="magicfield" />
-		<attribute key="replaceable" value="0" />
 		<attribute key="field" value="fire" />
 	</item>
 	<item id="1495" article="an" name="energy field">
 		<attribute key="type" value="magicfield" />
-		<attribute key="replaceable" value="0" />
 		<attribute key="field" value="energy">
 			<attribute key="initdamage" value="30" />
 			<attribute key="ticks" value="10000" />
@@ -696,7 +692,6 @@
 	</item>
 	<item id="1496" article="a" name="poison field">
 		<attribute key="type" value="magicfield" />
-		<attribute key="replaceable" value="0" />
 		<attribute key="field" value="poison">
 			<attribute key="ticks" value="5000" />
 			<attribute key="start" value="5" />
@@ -796,17 +791,14 @@
 		<attribute key="type" value="trashholder" />
 		<attribute key="effect" value="fire" />
 	</item>
-	<item id="1510" name="slits">
-		<attribute key="decayTo" value="1511" />
-		<attribute key="duration" value="10" />
-	</item>
+	<item id="1510" name="strange slits" />
 	<item id="1511" name="blades">
 		<attribute key="decayTo" value="1510" />
-		<attribute key="duration" value="10" />
+		<attribute key="duration" value="3" />
 	</item>
 	<item id="1512" name="strange holes">
 		<attribute key="decayTo" value="1513" />
-		<attribute key="duration" value="4" />
+		<attribute key="duration" value="1" />
 	</item>
 	<item id="1513" name="spikes">
 		<attribute key="decayTo" value="1512" />
@@ -7489,7 +7481,7 @@
 	<item id="4208" article="a" name="jungle maw" />
 	<item id="4209" article="a" name="jungle maw">
 		<attribute key="decayTo" value="4208" />
-		<attribute key="duration" value="5" />
+		<attribute key="duration" value="150" />
 	</item>
 	<item fromid="4210" toid="4215" article="a" name="fallen tree" />
 	<item fromid="4216" toid="4222" article="a" name="giant tree" />

@@ -437,6 +437,7 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 
 		toPosition.z = toPosition.z + 1
 		tile:relocateTo(toPosition)
+		return true
 	end
 
 	-- Ice fishing hole
@@ -444,14 +445,16 @@ function onUsePick(player, item, fromPosition, target, toPosition, isHotkey)
 		ground:transform(7236)
 		ground:decay()
 		toPosition:sendMagicEffect(CONST_ME_HITAREA)
+		return true
 	end
 
 	if ground.itemid == 22671 then
 		ground:transform(392)
 		ground:decay()
+		return true
 	end
 
-	return true
+	return false
 end
 
 function onUseMachete(player, item, fromPosition, target, toPosition, isHotkey)

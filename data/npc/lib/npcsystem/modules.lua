@@ -915,6 +915,9 @@ if Modules == nil then
 			if shopItem == nil then
 				self.npcHandler.shopItems[#self.npcHandler.shopItems + 1] = {id = itemid, buy = cost, sell = -1, subType = itemSubType, name = realName or ItemType(itemid):getName()}
 			else
+				if cost < shopItem.sell then
+					print("[Warning : " .. Npc():getName() .. "] NpcSystem: Buy price lower than sell price: (".. shopItem.name ..")")
+				end
 				shopItem.buy = cost
 			end
 		end
@@ -1010,6 +1013,9 @@ if Modules == nil then
 			if shopItem == nil then
 				table.insert(self.npcHandler.shopItems, {id = itemid, buy = -1, sell = cost, subType = itemSubType, name = realName or ItemType(itemid):getName()})
 			else
+				if cost > shopItem.buy then
+					print("[Warning : " .. Npc():getName() .. "] NpcSystem: Sell price higher than buy price: (".. shopItem.name ..")")
+				end
 				shopItem.sell = cost
 			end
 		end

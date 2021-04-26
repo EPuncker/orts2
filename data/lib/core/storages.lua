@@ -1053,6 +1053,18 @@ GlobalStorage = {
 	SwordOfFury = 5635
 }
 
+PlayerStorageKeys = {
+	delayLargeSeaShell = 30019,
+	firstRod = 30020,
+	delayWallMirror = 30021,
+	madSheepSummon = 30023,
+	crateUsable = 30024,
+	nailCaseUseCount = 30031,
+	insectoidCell = 30033,
+	vortexTamer = 30034,
+	mutatedPumpkin = 30035,
+}
+
 -- Checking for duplicate storages:
 local function extractValues(tab, ret)
 	if type(tab) == "number" then

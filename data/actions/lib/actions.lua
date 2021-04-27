@@ -160,6 +160,7 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.itemid == 7932 then -- large hole
 		target:transform(7933)
 		target:decay()
+		return true
 	end
 
 	local tile = Tile(toPosition)

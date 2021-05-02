@@ -157,12 +157,6 @@ function onUseRope(player, item, fromPosition, target, toPosition, isHotkey)
 end
 
 function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
-	if target.itemid == 7932 then -- large hole
-		target:transform(7933)
-		target:decay()
-		return true
-	end
-
 	local tile = Tile(toPosition)
 	if not tile then
 		return false
@@ -181,8 +175,12 @@ function onUseShovel(player, item, fromPosition, target, toPosition, isHotkey)
 		toPosition.z = toPosition.z + 1
 		tile:relocateTo(toPosition)
 		player:addAchievementProgress("The Undertaker", 500)
+	elseif target.itemid == 7932 then -- large hole
+		target:transform(7933)
+		target:decay()
+		player:addAchievementProgress("The Undertaker", 500)
 	elseif target.itemid == 20230 then -- swamp digging
-		if (player:getStorageValue(Storage.SwampDiggingTimeout)) <= os.time() then
+		if player:getStorageValue(Storage.SwampDiggingTimeout) <= os.time() then
 			local chance = math.random(100)
 			if chance >= 1 and chance <= 42 then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You dug up a dead snake.")

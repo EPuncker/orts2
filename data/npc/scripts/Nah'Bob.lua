@@ -15,8 +15,8 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31
-				and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Djinn) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31
+				and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Djinn) ~= 1 then
 			npcHandler:say('You brought cookies! How nice of you! Can I have one?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -28,7 +28,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Djinn, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Djinn, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end
@@ -48,7 +48,7 @@ local function creatureSayCallback(cid, type, msg)
 end
 
 local function onTradeRequest(cid)
-	if Player(cid):getStorageValue(Storage.DjinnWar.MaridFaction.Mission03) ~= 3 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission03) ~= 3 then
 		npcHandler:say('I\'m sorry, pal. But you need Gabel\'s permission to trade with me.', cid)
 		return false
 	end

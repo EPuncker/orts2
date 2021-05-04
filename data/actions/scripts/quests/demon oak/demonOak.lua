@@ -86,8 +86,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if isDefeated then
 		player:teleportTo(DEMON_OAK_KICK_POSITION)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Tell Oldrak about your great victory against the demon oak.')
-		player:setStorageValue(Storage.DemonOak.Done, 1)
-		player:setStorageValue(Storage.DemonOak.Progress, 3)
+		player:setStorageValue(PlayerStorageKeys.DemonOak.Done, 1)
+		player:setStorageValue(PlayerStorageKeys.DemonOak.Progress, 3)
 		return true
 	end
 

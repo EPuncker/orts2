@@ -25,50 +25,50 @@ function onStepIn(creature, item, position, fromPosition)
 	local targetTableAid = config[item.actionid]
 	if not targetTableAid then
 		if item.actionid == 50069 then
-			if player:getStorageValue(Storage.RookgaardTutorialIsland.cockroachLegsMsgStorage) < 1 then
+			if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.cockroachLegsMsgStorage) < 1 then
 				return
 			end
 		elseif item.actionid == 50076 then
-			if player:getStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage) == 15 then
-				player:setStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage, 16)
+			if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) == 15 then
+				player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage, 16)
 				Position(32062, 32271, 7):sendMagicEffect(CONST_ME_TUTORIALARROW)
 				Position(32062, 32271, 7):sendMagicEffect(CONST_ME_TUTORIALARROW)
 				player:sendTutorial(24)
 			end
 		elseif item.actionid == 50077 then
-			if player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 and player:getStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage) < 17  then
+			if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 and player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) < 17  then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'This is Zirella\'s door. Right-click on the lower part of the door and select \'Use\' to open it.')
-				player:setStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage, 17)
+				player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage, 17)
 			end
-			if player:getStorageValue(Storage.QuestChests.TutorialShovel) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.QuestChests.TutorialShovel) == 1 then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Good, now continue to the east to find a place to try out your shovel.')
-				player:setStorageValue(Storage.QuestChests.TutorialShovel, 2)
+				player:setStorageValue(PlayerStorageKeys.QuestChests.TutorialShovel, 2)
 			end
 		elseif item.actionid == 50081 then
-			if player:getStorageValue(Storage.QuestChests.TutorialRope) == 1 and player:getStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage) < 21 then
+			if player:getStorageValue(PlayerStorageKeys.QuestChests.TutorialRope) == 1 and player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) < 21 then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'To climb out of this cave right-click your rope, select \'Use with\' then left-click on the dark spot on the floor, the ropespot.')
 				Position(32070, 32266, 8):sendMagicEffect(CONST_ME_TUTORIALARROW)
 				Position(32070, 32266, 8):sendMagicEffect(CONST_ME_TUTORIALSQUARE)
-				player:setStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage, 21)
+				player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage, 21)
 			end
 		end
 		return
 	end
 
 	if item.actionid == 50078 then
-		if player:getStorageValue(Storage.QuestChests.TutorialShovel) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.QuestChests.TutorialShovel) < 1 then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have not claimed your reward from Zirella house.')
 			player:teleportTo(fromPosition, true)
 			return
 		end
 	elseif item.actionid == 50069 then
-		if player:getStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage) < 6 then
+		if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.SantiagoNpcGreetStorage) < 6 then
 			return true
 		end
 	end
 
-	if player:getStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage) < targetTableAid.storageValue then
-		player:setStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage, targetTableAid.storageValue)
+	if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) < targetTableAid.storageValue then
+		player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage, targetTableAid.storageValue)
 
 		if targetTableAid.tutorialId then
 			player:sendTutorial(targetTableAid.tutorialId)

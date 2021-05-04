@@ -4,10 +4,10 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	local townId = player:getStorageValue(Storage.AdventurersGuild.Stone)
+	local townId = player:getStorageValue(PlayerStorageKeys.AdventurersGuild.Stone)
 	local destination = townId ~= -1 and Town(townId):getTemplePosition() or player:getTown():getTemplePosition()
 
-	player:setStorageValue(Storage.AdventurersGuild.Stone, -1)
+	player:setStorageValue(PlayerStorageKeys.AdventurersGuild.Stone, -1)
 	player:teleportTo(destination)
 	position:sendMagicEffect(CONST_ME_TELEPORT)
 	destination:sendMagicEffect(CONST_ME_TELEPORT)

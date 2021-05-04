@@ -14,7 +14,7 @@ local function createStones()
 		Game.createItem(1304, 1, stonePositions[i])
 	end
 
-	Game.setStorageValue(GlobalStorage.PitsOfInfernoLevers, 0)
+	Game.setStorageValue(GlobalStorageKeys.PitsOfInfernoLevers, 0)
 end
 
 local function revertLever(position)
@@ -29,14 +29,14 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	local leverCount = math.max(0, Game.getStorageValue(GlobalStorage.PitsOfInfernoLevers))
+	local leverCount = math.max(0, Game.getStorageValue(GlobalStorageKeys.PitsOfInfernoLevers))
 	if item.uid > 2049 and item.uid < 2065 then
 		local number = item.uid - 2049
 		if leverCount + 1 ~= number then
 			return false
 		end
 
-		Game.setStorageValue(GlobalStorage.PitsOfInfernoLevers, number)
+		Game.setStorageValue(GlobalStorageKeys.PitsOfInfernoLevers, number)
 		player:say('You flipped the ' .. text[number] .. ' lever. Hurry up and find the next one!', TALKTYPE_MONSTER_SAY, false, player, toPosition)
 	elseif item.uid == 2065 then
 		if leverCount ~= 15 then

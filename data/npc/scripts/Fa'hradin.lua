@@ -13,9 +13,9 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local missionProgress = player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission02)
+	local missionProgress = player:getStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission02)
 	if msgcontains(msg, 'spy report') or msgcontains(msg, 'mission') then
-		if player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission01) ~= 2 then
+		if player:getStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission01) ~= 2 then
 			npcHandler:say('Looking for work, are you? Well, it\'s very tempting, you know, but I\'m afraid we do not really employ beginners. Perhaps our cook could need a helping hand in the kitchen.', cid)
 
 		elseif missionProgress < 1 then
@@ -29,7 +29,7 @@ local function creatureSayCallback(cid, type, msg)
 				'I need you to infiltrate Mal\'ouqhah, contact our man there and get his latest spyreport. The password is {PIEDPIPER}. Remember it well! ...',
 				'I do not have to add that this is a dangerous mission, do I? If you are discovered expect to be attacked! So goodluck, human!'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission02, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission02, 1)
 
 		elseif missionProgress == 1 then
 			npcHandler:say('Did you already retrieve the spyreport?', cid)
@@ -40,7 +40,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif npcHandler.topic[cid] == 1 then
 		if msgcontains(msg, 'yes') then
-			if player:getStorageValue(Storage.DjinnWar.MaridFaction.RataMari) ~= 2 or not player:removeItem(2345, 1) then
+			if player:getStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.RataMari) ~= 2 or not player:removeItem(2345, 1) then
 				npcHandler:say({
 					'Don\'t waste any more time. We need the spyreport of our man in Mal\'ouquah as soon as possible! ...',
 					'Also don\'t forget the password to contact our man: PIEDPIPER!'
@@ -51,7 +51,7 @@ local function creatureSayCallback(cid, type, msg)
 					'Well, let\'s see. ...',
 					'I think I need to talk to Gabel about this. I am sure he will know what to do. Perhaps you should have a word with him, too.'
 				}, cid)
-				player:setStorageValue(Storage.DjinnWar.MaridFaction.Mission02, 2)
+				player:setStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission02, 2)
 			end
 
 		elseif msgcontains(msg, 'no') then

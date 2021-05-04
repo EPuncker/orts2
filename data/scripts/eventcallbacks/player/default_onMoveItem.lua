@@ -21,10 +21,10 @@ ec.onMoveItem = function(self, item, count, fromPosition, toPosition, fromCylind
 		return false
 	end
 
-	if fromPosition.x == CONTAINER_POSITION and toPosition.x == CONTAINER_POSITION and item.itemid == 8710 and self:getItemCount(8710) == 2 and self:getStorageValue(Storage.RookgaardTutorialIsland.cockroachLegsMsgStorage) ~= 1 then
+	if fromPosition.x == CONTAINER_POSITION and toPosition.x == CONTAINER_POSITION and item.itemid == 8710 and self:getItemCount(8710) == 2 and self:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.cockroachLegsMsgStorage) ~= 1 then
 		self:sendTextMessage(MESSAGE_INFO_DESCR, 'Well done, you have enough cockroach legs! You should head back to Santiago with them. Climb the ladder to the north to exit.')
-		self:setStorageValue(Storage.RookgaardTutorialIsland.cockroachLegsMsgStorage, 1)
-		self:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 6)
+		self:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.cockroachLegsMsgStorage, 1)
+		self:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 6)
 	end
 
 	if item:getAttribute("wrapid") ~= 0 then

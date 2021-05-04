@@ -16,7 +16,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "package for rashid") then
-		if player:getStorageValue(Storage.TravellingTrader.Mission02) >= 1 and player:getStorageValue(Storage.TravellingTrader.Mission02) < 3 then
+		if player:getStorageValue(PlayerStorageKeys.TravellingTrader.Mission02) >= 1 and player:getStorageValue(PlayerStorageKeys.TravellingTrader.Mission02) < 3 then
 			npcHandler:say({
 				"Oooh, damn, I completely forgot about that. I was supposed to pick it up from the Outlaw Camp. ...",
 				"I can't leave my shop here right now, please go and talk to Snake Eye about that package... I promise he won't make any trouble. ...",
@@ -27,7 +27,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("Thank you, I appreciate it. Don't forget to mention the package to Snake.", cid)
-			player:setStorageValue(Storage.TravellingTrader.Mission02, player:getStorageValue(Storage.TravellingTrader.Mission02) + 1)
+			player:setStorageValue(PlayerStorageKeys.TravellingTrader.Mission02, player:getStorageValue(PlayerStorageKeys.TravellingTrader.Mission02) + 1)
 			npcHandler.topic[cid] = 0
 		end
 	end

@@ -7,8 +7,8 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if item.actionid == 4534 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission55) == 1 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission56) < 1 then
-		player:setStorageValue(Storage.GravediggerOfDrefia.Mission56,1)
+	if item.actionid == 4534 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission55) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission56) < 1 then
+		player:setStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission56,1)
 		player:teleportTo(dormitori2)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You should hurry, try not to dwell here any longer than a few minutes.')
 	else

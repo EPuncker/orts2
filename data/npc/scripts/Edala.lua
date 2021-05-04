@@ -19,15 +19,15 @@ local config = {
 
 local function greetCallback(cid)
 	local player = Player(cid)
-	local lyreProgress = player:getStorageValue(Storage.Diapason.Lyre)
+	local lyreProgress = player:getStorageValue(PlayerStorageKeys.Diapason.Lyre)
 	local greetMessage = config[lyreProgress]
 	if greetMessage
-			and player:getStorageValue(Storage.Diapason.Edala) == 1
-			and player:getStorageValue(Storage.Diapason.EdalaTimer) < os.time() then
-		player:setStorageValue(Storage.Diapason.Edala, 0)
-		player:setStorageValue(Storage.Diapason.EdalaTimer, os.time() + 86400)
+			and player:getStorageValue(PlayerStorageKeys.Diapason.Edala) == 1
+			and player:getStorageValue(PlayerStorageKeys.Diapason.EdalaTimer) < os.time() then
+		player:setStorageValue(PlayerStorageKeys.Diapason.Edala, 0)
+		player:setStorageValue(PlayerStorageKeys.Diapason.EdalaTimer, os.time() + 86400)
 		if lyreProgress == 7 then
-			player:setStorageValue(Storage.Diapason.Lyre, 8)
+			player:setStorageValue(PlayerStorageKeys.Diapason.Lyre, 8)
 			player:addItem(13536, 1)
 		end
 		npcHandler:setMessage(MESSAGE_GREET, greetMessage)

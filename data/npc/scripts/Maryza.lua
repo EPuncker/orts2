@@ -15,7 +15,7 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'cookbook') then
-		if player:getStorageValue(Storage.MaryzaCookbook) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.MaryzaCookbook) ~= 1 then
 			npcHandler:say('The cookbook of the famous dwarven kitchen. You\'re lucky. I have a few copies on sale. Do you like one for 150 gold?', cid)
 			npcHandler.topic[cid] = 1
 		else
@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			npcHandler:say('Here you are. Happy cooking!', cid)
-			player:setStorageValue(Storage.MaryzaCookbook, 1)
+			player:setStorageValue(PlayerStorageKeys.MaryzaCookbook, 1)
 			player:addItem(2347, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('I have but a few copies, anyway.', cid)

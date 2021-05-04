@@ -17,7 +17,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('My scimitar? Well, mylady, I do not want to sound rude, but I don\'t think a scimitar would fit to your beautiful outfit. If you are looking for an accessory, why don\'t you talk to Ishina?', cid)
 			return true
 		end
-		if player:getStorageValue(Storage.OutfitQuest.firstOrientalAddon) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon) < 1 then
 			npcHandler:say('My scimitar? Yes, that is a true masterpiece. Of course I could make one for you, but I have a small request. Would you fulfil a task for me?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -26,7 +26,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Comb? This is a weapon shop.', cid)
 			return true
 		end
-		if player:getStorageValue(Storage.OutfitQuest.firstOrientalAddon) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon) == 1 then
 			npcHandler:say('Have you brought a mermaid\'s comb for Ishina?', cid)
 			npcHandler.topic[cid] = 3
 		end
@@ -38,8 +38,8 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
-			player:setStorageValue(Storage.OutfitQuest.firstOrientalAddon, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon, 1)
 			npcHandler:say('Brilliant! I will wait for you to return with a mermaid\'s comb then.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
@@ -48,7 +48,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler.topic[cid] = 0
 				return true
 			end
-			player:setStorageValue(Storage.OutfitQuest.firstOrientalAddon, 2)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon, 2)
 			player:addOutfitAddon(150, 1)
 			player:addOutfitAddon(146, 1)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

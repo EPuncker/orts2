@@ -21,9 +21,9 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	if msgcontains(msg, "measurements") then
 		local player = Player(cid)
-		if player:getStorageValue(Storage.postman.Mission07) >= 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission07) >= 1 then
 			npcHandler:say("Oh they don't change that much since in the old days as... <tells a boring and confusing story about a cake, a parcel, himself and two squirrels, at least he tells you his measurements in the end> ", cid)
-			player:setStorageValue(Storage.postman.Mission07, player:getStorageValue(Storage.postman.Mission07) + 1)
+			player:setStorageValue(PlayerStorageKeys.postman.Mission07, player:getStorageValue(PlayerStorageKeys.postman.Mission07) + 1)
 			npcHandler.topic[cid] = 0
 		end
 	end

@@ -13,8 +13,8 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 10 then
-			if player:getPosition().z == 12 and player:getStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest01) < 1 and npcHandler.topic[cid] ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 10 then
+			if player:getPosition().z == 12 and player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest01) < 1 and npcHandler.topic[cid] ~= 1 then
 				npcHandler:say({
 					"Although we are willing to hand this item to you, there is something you have to understand: There is no such thing as 'the' sceptre. ...",
 					"Those sceptres are created for special purposes each time anew. Therefore you will have to create one on your own. It will be your {mission} to find us three keepers and to get the three parts of the holy sceptre. ...",
@@ -27,13 +27,13 @@ local function creatureSayCallback(cid, type, msg)
 					"The equivalent of 5000 gold will do. Are you willing to make such a donation?"
 				}, cid)
 				npcHandler.topic[cid] = 2
-			elseif player:getPosition().z == 13 and player:getStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest02) < 1 then
+			elseif player:getPosition().z == 13 and player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest02) < 1 then
 				npcHandler:say({
 					"Even though we are spirits, we can't create anything out of thin air. You will have to donate some precious metal which we can drain for energy and substance. ...",
 					"The equivalent of 5000 gold will do. Are you willing to make such a donation?"
 				}, cid)
 				npcHandler.topic[cid] = 3
-			elseif player:getPosition().z == 14 and player:getStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest03) < 1 then
+			elseif player:getPosition().z == 14 and player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest03) < 1 then
 				npcHandler:say({
 					"Even though we are spirits, we can't create anything out of thin air. You will have to donate some precious metal which we can drain for energy and substance. ...",
 					"The equivalent of 5000 gold will do. Are you willing to make such a donation?"
@@ -44,7 +44,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 2 then
 			if player:getMoney() >= 5000 then
-				player:setStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest01, 1)
+				player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest01, 1)
 				player:removeMoney(5000)
 				player:addItem(12324, 1)
 				npcHandler:say("So be it! Here is my part of the sceptre. Combine it with the other parts on the altar of the Great Snake in the depths of this temple.", cid)
@@ -52,7 +52,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		elseif npcHandler.topic[cid] == 3 then
 			if player:getMoney() >= 5000 then
-				player:setStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest02, 1)
+				player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest02, 1)
 				player:removeMoney(5000)
 				player:addItem(12325, 1)
 				npcHandler:say("So be it! Here is my part of the sceptre. Combine it with the other parts on the altar of the Great Snake in the depths of this temple.", cid)
@@ -60,7 +60,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		elseif npcHandler.topic[cid] == 4 then
 			if player:getMoney() >= 5000 then
-				player:setStorageValue(Storage.WrathoftheEmperor.GhostOfAPriest03, 1)
+				player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.GhostOfAPriest03, 1)
 				player:removeMoney(5000)
 				player:addItem(12326, 1)
 				npcHandler:say("So be it! Here is my part of the sceptre. Combine it with the other parts on the altar of the Great Snake in the depths of this temple.", cid)

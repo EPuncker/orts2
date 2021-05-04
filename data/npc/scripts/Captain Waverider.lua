@@ -14,7 +14,7 @@ local function addTravelKeyword(keyword, text, cost, destination, condition)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
 end
 
-addTravelKeyword('peg leg', 'Ohhhh. So... <lowers his voice> \'you know who\' sent you so I sail you to \'you know where\'. <wink> <wink> It will cost |TRAVELCOST| to cover my expenses. Is it that what you wish?', 50, Position(32348, 32625, 7), function(player) return player:getStorageValue(Storage.TheShatteredIsles.AccessToMeriana) == 1 end)
+addTravelKeyword('peg leg', 'Ohhhh. So... <lowers his voice> \'you know who\' sent you so I sail you to \'you know where\'. <wink> <wink> It will cost |TRAVELCOST| to cover my expenses. Is it that what you wish?', 50, Position(32348, 32625, 7), function(player) return player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.AccessToMeriana) == 1 end)
 addTravelKeyword('treasure island', 'Do you seek a passage to Treasure Island for |TRAVELCOST|?', 150, Position(32132, 32913, 7))
 
 keywordHandler:addKeyword({'passage'}, StdModule.say, {npcHandler = npcHandler, text = 'Where do you want to go? To {Treasure Island}?'})

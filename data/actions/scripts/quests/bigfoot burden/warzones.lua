@@ -39,11 +39,11 @@ local function clearArea(fromPosition, toPosition, bossName, exitPosition)
 end
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if Game.getStorageValue(GlobalStorage.Warzones) == 1 then
+	if Game.getStorageValue(GlobalStorageKeys.Warzones) == 1 then
 		return false
 	end
 
-	Game.setStorageValue(GlobalStorage.Warzones, 1)
+	Game.setStorageValue(GlobalStorageKeys.Warzones, 1)
 	addEvent(Game.setStorageValue, 32 * 60 * 1000, GlobalStorage.Warzones, 0)
 	local pos
 	for i = 1, 6 do

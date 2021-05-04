@@ -4,12 +4,12 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.WrathoftheEmperor.Questline) < 31 then
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) < 31 then
 		player:teleportTo(fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.WrathoftheEmperor.Questline) > 32 then
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) > 32 then
 		local destination = Position(33078, 31219, 8)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		player:teleportTo(destination)

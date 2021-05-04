@@ -19,10 +19,10 @@ function onKill(creature, target)
 	if player:getStorageValue(bossStorage) < 1 then
 		player:setStorageValue(bossStorage, 1)
 		player:say('You slayed ' .. targetMonster:getName() .. '.', TALKTYPE_MONSTER_SAY)
-		player:setStorageValue(Storage.InServiceofYalahar.QuaraState, 2)
-		player:setStorageValue(Storage.InServiceofYalahar.Questline, 41)
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.QuaraState, 2)
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline, 41)
 		-- StorageValue for Questlog 'Mission 07: A Fishy Mission'
-		player:setStorageValue(Storage.InServiceofYalahar.Mission07, 4)
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission07, 4)
 	end
 	return true
 end

@@ -578,7 +578,7 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'join') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) ~= -1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) ~= -1 then
 			npcHandler:say('Wow, your stupidity would be pride and joy for every fool. You\'ve already applied as a member. Let\'s rather talk about your current mission.', cid)
 			return true
 		end
@@ -586,7 +586,7 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler:say('Do you wish to become a jester and join the fools guild?', cid)
 		npcHandler.topic[cid] = 1
 	elseif msgcontains(msg, 'mission') then
-		local targetValue = config[player:getStorageValue(Storage.WhatAFoolishQuest.Questline)]
+		local targetValue = config[player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline)]
 		if not targetValue then
 			return true
 		end
@@ -595,7 +595,7 @@ local function creatureSayCallback(cid, type, msg)
 			if targetValue.updateStorages then
 				for i = 1, #targetValue.updateStorages do
 					local storage = targetValue.updateStorages[i]
-					player:setStorageValue(storage.key, storage.value)
+					player:setStorageValue(PlayerStorageKeys.key, storage.value)
 				end
 			end
 
@@ -610,8 +610,8 @@ local function creatureSayCallback(cid, type, msg)
 			value[cid] = targetValue
 		end
 	elseif msgcontains(msg, 'jester outfit') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 12 then
-			local targetValue = jesterOutfit[player:getStorageValue(Storage.WhatAFoolishQuest.JesterOutfit)]
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 12 then
+			local targetValue = jesterOutfit[player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.JesterOutfit)]
 			if not targetValue then
 				return true
 			end
@@ -631,9 +631,9 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			player:setStorageValue(Storage.WhatAFoolishQuest.Questline, 1)
-			player:setStorageValue(Storage.WhatAFoolishQuest.Questlog, 1)
-			player:setStorageValue(Storage.WhatAFoolishQuest.Mission1, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questlog, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Mission1, 1)
 			npcHandler:say({
 				'What a foolish decision! You are indeed a worthy candidate! But let\'s talk about business ...',
 				'Being a jester is not just about telling jokes. A good jester heavily relies on requisites ...',
@@ -677,8 +677,8 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			if targetValue.pie then
-				if player:getStorageValue(Storage.WhatAFoolishQuest.PieBoxTimer) > 0
-						and player:getStorageValue(Storage.WhatAFoolishQuest.PieBoxTimer) < os.time() then
+				if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer) > 0
+						and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer) < os.time() then
 					npcHandler:say('Eeeek! What have you done?? These pies are crawling with bugs! Those must be the infamous parcel bugs! Get some new pies at once you wannabe fool, and this time without any bugs!', cid)
 					npcHandler.topic[cid] = 0
 					return true
@@ -688,7 +688,7 @@ local function creatureSayCallback(cid, type, msg)
 			if targetValue.updateStorages then
 				for i = 1, #targetValue.updateStorages do
 					local storage = targetValue.updateStorages[i]
-					player:setStorageValue(storage.key, storage.value)
+					player:setStorageValue(PlayerStorageKeys.key, storage.value)
 				end
 			end
 
@@ -721,11 +721,11 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.JesterOutfit, targetValue.newValue)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.JesterOutfit, targetValue.newValue)
 			if targetValue.addOutfit then
 				player:addOutfit(270)
 				player:addOutfit(273)
-				player:setStorageValue(Storage.WhatAFoolishQuest.Questline, 13)
+				player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline, 13)
 			end
 			npcHandler:say(targetValue.text[2], cid)
 			if not targetValue.last then
@@ -738,20 +738,20 @@ local function creatureSayCallback(cid, type, msg)
 		if table.contains({1, 2}, npcHandler.topic[cid]) then
 			npcHandler:say('Too bad, I\'m convinced you have it in you.', cid)
 		elseif table.contains({3, 4}, npcHandler.topic[cid]) then
-			if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 11
-					and player:getStorageValue(Storage.WhatAFoolishQuest.EmperorBeardShave) == 1 then
-				player:setStorageValue(Storage.WhatAFoolishQuest.Questline, 12)
-				player:setStorageValue(Storage.WhatAFoolishQuest.Mission5, 3)
+			if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 11
+					and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.EmperorBeardShave) == 1 then
+				player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline, 12)
+				player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Mission5, 3)
 				npcHandler:say({
 					'You shaved the emperor, but lost the beard? What kind of fool are you? Well, at least he will have a nice surprise when he wakes up ...',
 					'Still, as a small recognition of your accomplishments I\'m willing to tell you how to get your own jester outfit. If you are interested in more fun and adventures, ask me for more missions.'
 				}, cid)
-			elseif player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 30 then
+			elseif player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 30 then
 				npcHandler:say('You won\'t be successful in the fool\'s world with such an attitude.', cid)
-			elseif player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 35
-					and player:getStorageValue(Storage.WhatAFoolishQuest.LostDisguise) ~= 1 then
+			elseif player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 35
+					and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.LostDisguise) ~= 1 then
 				player:addItem(7502, 1)
-				player:setStorageValue(Storage.WhatAFoolishQuest.LostDisguise, 1)
+				player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.LostDisguise, 1)
 				npcHandler:say('You wasted the disguise?? Why do only fools apply for the fools guild? Here... try again, but be wittier this time.', cid)
 			else
 				npcHandler:say('Oh boy, why do only fools apply for the fools guild?', cid)

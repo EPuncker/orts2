@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "measurements") then
-		if player:getStorageValue(Storage.postman.Mission07) >= 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission07) >= 1 then
 			npcHandler:say("My measurements? Listen, lets make that a bit more exciting ... No, no, not what you think! I mean let's gamble. I will roll a dice. If I roll a 6 you win and I'll tell you what you need to know, else I win and get 5 gold. Deal? ", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -25,7 +25,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler:say("Ok, here we go ... " .. number .. "! You lose! Try again.", cid)
 			else
 				npcHandler:say("Ok, here we go ... " .. number .. "! You have won! How lucky you are! So listen ...<tells you what you need to know> ", cid)
-				player:setStorageValue(Storage.postman.Mission07, player:getStorageValue(Storage.postman.Mission07) + 1)
+				player:setStorageValue(PlayerStorageKeys.postman.Mission07, player:getStorageValue(PlayerStorageKeys.postman.Mission07) + 1)
 				npcHandler.topic[cid] = 0
 			end
 		end

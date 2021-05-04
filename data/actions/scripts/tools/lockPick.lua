@@ -4,9 +4,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	if math.random(100) <= 15 then
-		if player:getStorageValue(Storage.thievesGuild.Mission02) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.thievesGuild.Mission02) == 1 then
 			player:addItem(8760, 1)
-			player:setStorageValue(Storage.thievesGuild.Mission02, 2)
+			player:setStorageValue(PlayerStorageKeys.thievesGuild.Mission02, 2)
 		end
 	else
 		item:remove(1)

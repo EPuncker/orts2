@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	local arenaId = item.uid - 23200
-	if arenaId >= creature:getStorageValue(Storage.SvargrondArena.Arena) then
+	if arenaId >= creature:getStorageValue(PlayerStorageKeys.SvargrondArena.Arena) then
 		return true
 	end
 

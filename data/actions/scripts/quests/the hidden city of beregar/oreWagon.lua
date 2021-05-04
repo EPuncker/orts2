@@ -19,7 +19,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	if player:getStorageValue(Storage.hiddenCityOfBeregar.OreWagon) == 1 then
+	if player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.OreWagon) == 1 then
 		player:teleportTo(targetPosition)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		return true

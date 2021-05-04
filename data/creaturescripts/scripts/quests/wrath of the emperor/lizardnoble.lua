@@ -9,9 +9,9 @@ function onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	local storage = player:getStorageValue(Storage.WrathoftheEmperor.Mission07)
+	local storage = player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission07)
 	if storage >= 0 and storage < 6 then
-		player:setStorageValue(Storage.WrathoftheEmperor.Mission07, math.max(1, storage) + 1)
+		player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission07, math.max(1, storage) + 1)
 	end
 
 	return true

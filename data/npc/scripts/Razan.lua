@@ -67,12 +67,12 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 
-		if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) < 1 then
 			npcHandler:say('You mean, you would like to prove that you deserve to wear such a turban?', cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif config[msg] and npcHandler.topic[cid] == 0 then
-		if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) == config[msg].storageValue then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) == config[msg].storageValue then
 			npcHandler:say(config[msg].text[1], cid)
 			npcHandler.topic[cid] = 3
 			message[cid] = msg
@@ -91,10 +91,10 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			if player:getStorageValue(Storage.OutfitQuest.DefaultStart) ~= 1 then
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) ~= 1 then
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
 			end
-			player:setStorageValue(Storage.OutfitQuest.secondOrientalAddon, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon, 1)
 			npcHandler:say('Excellent! Come back to me once you have collected 100 pieces of ape fur.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
@@ -105,8 +105,8 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.secondOrientalAddon, player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) + 1)
-			if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) == 5 then
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon, player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) + 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) == 5 then
 				player:addOutfitAddon(146, 2)
 				player:addOutfitAddon(150, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

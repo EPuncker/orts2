@@ -9,7 +9,7 @@ function onThink(interval)
 	local player, outfit
 	for i = 1, #players do
 		player = players[i]
-		if player:getStorageValue(Storage.RentedHorseTimer) < 1 or player:getStorageValue(Storage.RentedHorseTimer) >= os.time() then
+		if player:getStorageValue(PlayerStorageKeys.RentedHorseTimer) < 1 or player:getStorageValue(PlayerStorageKeys.RentedHorseTimer) >= os.time() then
 			break
 		end
 
@@ -23,7 +23,7 @@ function onThink(interval)
 			player:removeMount(mountIds[m])
 		end
 
-		player:setStorageValue(Storage.RentedHorseTimer, -1)
+		player:setStorageValue(PlayerStorageKeys.RentedHorseTimer, -1)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Your contract with your horse expired and it returned back to the horse station.')
 	end
 	return true

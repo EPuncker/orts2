@@ -311,7 +311,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	-- WAGON TICKET
 	if msgcontains(msg, 'ticket') then
-		if player:getStorageValue(Storage.wagonTicket) < os.time() then
+		if player:getStorageValue(PlayerStorageKeys.wagonTicket) < os.time() then
 			npcHandler:say("Do you want to purchase a weekly ticket for the ore wagons? With it you can travel freely and swiftly through Kazordoon for one week. 250 gold only. Deal?", cid)
 			npcHandler.topic[cid] = 23
 		else
@@ -321,7 +321,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 23 then
 			if player:removeMoney(250) then
-				player:setStorageValue(Storage.wagonTicket, os.time() + 7 * 24 * 60 * 60)
+				player:setStorageValue(PlayerStorageKeys.wagonTicket, os.time() + 7 * 24 * 60 * 60)
 				npcHandler:say("Here is your stamp. It can't be transferred to another person and will last one week from now. You'll get notified upon using an ore wagon when it isn't valid anymore.", cid)
 			else
 				npcHandler:say("You don't have enough money.", cid)
@@ -335,7 +335,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	-- WAGON TICKET
 	elseif msgcontains(msg, 'measurements') then
-		if player:getStorageValue(Storage.postman.Mission07) >= 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission07) >= 1 then
 			npcHandler:say("Come on, I have no clue what they are. Better ask my armorer Kroox for such nonsense.Go and ask him for good ol' Lokurs measurements, he'll know.", cid)
 		end
 	end

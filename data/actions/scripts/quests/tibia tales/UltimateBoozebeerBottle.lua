@@ -3,8 +3,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.TibiaTales.ultimateBoozeQuest) == 1 then
-		player:setStorageValue(Storage.TibiaTales.ultimateBoozeQuest, 2)
+	if player:getStorageValue(PlayerStorageKeys.TibiaTales.ultimateBoozeQuest) == 1 then
+		player:setStorageValue(PlayerStorageKeys.TibiaTales.ultimateBoozeQuest, 2)
 	end
 	player:removeItem(7496, 1)
 	player:addItem(7495, 1)

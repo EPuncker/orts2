@@ -105,7 +105,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 2 then
 		if msgcontains(msg, 'yes') then
 			player:setStorageValue(storage, 1)
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1) --this for default start of Outfit and Addon Quests
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1) --this for default start of Outfit and Addon Quests
 			npcHandler:say('Excellent! Don\'t forget: Your first task is to bring me 100 hardened bones. Good luck!', cid)
 			npcHandler.topic[cid] = 0
 		elseif msgcontains(msg, 'no') then

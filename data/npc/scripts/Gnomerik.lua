@@ -15,14 +15,14 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, "recruitment") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 1 then
 			npcHandler:say("We are hiring people to fight in our so called Bigfoot company against the foes of gnomekind. Are you interested in joining?", cid)
 			npcHandler.topic[cid] = 1
 		end
 
 	-- TEST
 	elseif msgcontains(msg, "test") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 2 then
 			if npcHandler.topic[cid] < 1 then
 				npcHandler:say({
 					"Imagine, during your travels you come upon a rare and unknown mushroom. Would you {A}) note down its specifics and location and look for a gnome to take care of it. ...",
@@ -104,23 +104,23 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "A") then
 		if npcHandler.topic[cid] == 2 then
 			npcHandler:say("Indeed an excellent and smart decision for an ungnomish lifeform. But let us continue with the {test}.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 18 then
 			npcHandler:say("A well thought out answer I have to admit. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 20 then
 			npcHandler:say("Ah, we have a true warrior here I guess. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 28 then
 			npcHandler:say("Fear not. We don't expect too much of you anyway. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 30 then
 			npcHandler:say("Ha! A Krazzelzak would for sure fit someone like you! But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		else
 			npcHandler:say("Wrong answer!", cid)
@@ -129,11 +129,11 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "B") then
 		if npcHandler.topic[cid] == 6 then
 			npcHandler:say("Although chances are the gnome will end up rescuing you instead, it is the attempt that counts. But let us continue with the {test}.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 14 then
 			npcHandler:say("I knew this question was too easy. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		else
 			npcHandler:say("Wrong answer!", cid)
@@ -142,15 +142,15 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "C") then
 		if npcHandler.topic[cid] == 4 then
 			npcHandler:say("That's the spirit! Initiative is always a good thing. Well most of the time. But let us continue with the {test}.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 22 then
 			npcHandler:say("You have no idea how many answer this question wrong. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 24 then
 			npcHandler:say("That's the spirit! But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		else
 			npcHandler:say("Wrong answer!", cid)
@@ -159,27 +159,27 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, "D") then
 		if npcHandler.topic[cid] == 8 then
 			npcHandler:say("Of COURSE you wouldn't! NO ONE would! But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 10 then
 			npcHandler:say("I can only hope that is your honest opinion. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 12 then
 			npcHandler:say("Oh, you silver tongued devil almost made me blush. But of course you're right. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 16 then
 			npcHandler:say("How true. How true. *sigh* But fear not! We gnomes are here to help! But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 26 then
 			npcHandler:say("That's just what I'd do - if I weren't a gnome already, that is. But let us continue with the test.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		elseif npcHandler.topic[cid] == 32 then
 			npcHandler:say("Excellent! Well this concludes the test. Now let us see your result.", cid)
-			player:setStorageValue(Storage.BigfootBurden.Test, player:getStorageValue(Storage.BigfootBurden.Test) + 7)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.Test, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) + 7)
 			npcHandler.topic[cid] = npcHandler.topic[cid] + 1
 		else
 			npcHandler:say("Wrong answer!", cid)
@@ -188,20 +188,20 @@ local function creatureSayCallback(cid, type, msg)
 	-- TEST
 	elseif msgcontains(msg, "result") then
 		if npcHandler.topic[cid] == 33 then
-			if player:getStorageValue(Storage.BigfootBurden.Test) < 100 then
+			if player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) < 100 then
 				npcHandler:say({
-					"You have failed the test with " .. player:getStorageValue(Storage.BigfootBurden.Test) .. " of 112 possible points. You probably were just too nervous. ...",
+					"You have failed the test with " .. player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) .. " of 112 possible points. You probably were just too nervous. ...",
 					"I suggest you relax a bit with a fresh mushroom beer and we'll start over after that. Gnominus sells some beer. You should find him somewhere in the central chamber."
 				}, cid)
 			else
-				npcHandler:say("You have passed the test with " .. player:getStorageValue(Storage.BigfootBurden.Test) .. " of 112 possible points. Congratulations. You are ready to proceed with the more physical parts of your examination! Go and talk to Gnomespector about it.", cid)
-				player:setStorageValue(Storage.BigfootBurden.QuestLine, 3)
+				npcHandler:say("You have passed the test with " .. player:getStorageValue(PlayerStorageKeys.BigfootBurden.Test) .. " of 112 possible points. Congratulations. You are ready to proceed with the more physical parts of your examination! Go and talk to Gnomespector about it.", cid)
+				player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 3)
 			end
 		end
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("Excellent! Now let us begin with the gnomish aptitude test. Just tell me when you feel ready for the {test}!", cid)
-			player:setStorageValue(Storage.BigfootBurden.QuestLine, 2)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 2)
 			npcHandler.topic[cid] = 0
 		end
 	end

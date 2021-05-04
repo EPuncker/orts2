@@ -38,7 +38,7 @@ local function onMovementRemoveProtection(cid, oldPosition, time)
 
 	local playerPosition = player:getPosition()
 	if (playerPosition.x ~= oldPosition.x or playerPosition.y ~= oldPosition.y or playerPosition.z ~= oldPosition.z) or player:getTarget() or time <= 0 then
-		player:setStorageValue(Storage.combatProtectionStorage, 0)
+		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, 0)
 		return true
 	end
 
@@ -68,9 +68,9 @@ function onLogin(player)
 	local vocation = player:getVocation()
 	local promotion = vocation:getPromotion()
 	if player:isPremium() then
-		local value = player:getStorageValue(Storage.Promotion)
+		local value = player:getStorageValue(PlayerStorageKeys.Promotion)
 		if not promotion and value ~= 1 then
-			player:setStorageValue(Storage.Promotion, 1)
+			player:setStorageValue(PlayerStorageKeys.Promotion, 1)
 		elseif value == 1 then
 			player:setVocation(promotion)
 		end
@@ -83,8 +83,8 @@ function onLogin(player)
 		player:registerEvent(events[i])
 	end
 
-	if player:getStorageValue(Storage.combatProtectionStorage) <= os.time() then
-		player:setStorageValue(Storage.combatProtectionStorage, os.time() + 10)
+	if player:getStorageValue(PlayerStorageKeys.combatProtectionStorage) <= os.time() then
+		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, os.time() + 10)
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
 	return true

@@ -20,7 +20,7 @@ local function greetCallback(cid, message)
 		return false
 	end
 
-	if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) < 1 then
+	if player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, 'You know the code human! Very well then... What do you want, |PLAYERNAME|?')
 	else
 		npcHandler:setMessage(MESSAGE_GREET, 'You are still alive, |PLAYERNAME|? Well, what do you want?')
@@ -34,7 +34,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01)
+	local missionProgress = player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01)
 	if msgcontains(msg, 'mission') then
 		if missionProgress < 1 then
 			npcHandler:say({
@@ -61,8 +61,8 @@ local function creatureSayCallback(cid, type, msg)
 				'His identity is still unknown but we have been told that the thief fled to the human settlement called Carlin. I want you to find him and report back to me. Nobody messes with the Efreet and lives to tell the tale! ...',
 				'Now go! Travel to the northern city Carlin! Keep your eyes open and look around for something that might give you a clue!'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Start, 1)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission01, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Start, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01, 1)
 
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('After all, you\'re just a human.', cid)
@@ -90,7 +90,7 @@ local function creatureSayCallback(cid, type, msg)
 					'If you are interested go to Alesar and ask him about it.'
 				}, cid)
 				player:addMoney(600)
-				player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission01, 3)
+				player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01, 3)
 			end
 
 		else

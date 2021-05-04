@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "addon") or msgcontains(msg, "outfit") then
-		if player:getStorageValue(Storage.OutfitQuest.Hunter.AddonHat) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat) < 1 then
 			npcHandler:say("Oh, my winged tiara? Those are traditionally awarded after having completed a difficult {task} for our guild, only to female aspirants though. Male warriors will receive a hooded cloak.", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -23,22 +23,22 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 2
 		end
 	elseif msgcontains(msg, "crossbow") then
-		if player:getStorageValue(Storage.OutfitQuest.Hunter.AddonHat) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat) == 1 then
 			npcHandler:say("I'm so excited! Have you really found my crossbow?", cid)
 			npcHandler.topic[cid] = 4
 		end
 	elseif msgcontains(msg, "leather") then
-		if player:getStorageValue(Storage.OutfitQuest.Hunter.AddonHat) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat) == 2 then
 			npcHandler:say("Did you bring me 100 pieces of lizard leather and 100 pieces of red dragon leather?", cid)
 			npcHandler.topic[cid] = 5
 		end
 	elseif msgcontains(msg, "chicken wing") then
-		if player:getStorageValue(Storage.OutfitQuest.Hunter.AddonHat) == 3 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat) == 3 then
 			npcHandler:say("Were you able to get hold of 5 enchanted chicken wings?", cid)
 			npcHandler.topic[cid] = 6
 		end
 	elseif msgcontains(msg, "steel") then
-		if player:getStorageValue(Storage.OutfitQuest.Hunter.AddonHat) == 4 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat) == 4 then
 			npcHandler:say("Ah, have you brought one piece of royal steel, draconian steel and hell steel each?", cid)
 			npcHandler.topic[cid] = 7
 		end
@@ -56,13 +56,13 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 3
 		elseif npcHandler.topic[cid] == 3 then
 			npcHandler:say("That's the spirit! I hope you will find my crossbow, |PLAYERNAME|!", cid)
-			player:setStorageValue(Storage.OutfitQuest.Hunter.AddonHat, 1)
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1) --this for default start of Outfit and Addon Quests
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1) --this for default start of Outfit and Addon Quests
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 4 then
 			if player:removeItem(5947, 1) then
 				npcHandler:say("Yeah! I could kiss you right here and there! Besides, you're a handsome one. <giggles> Please bring me 100 pieces of lizard leather and 100 pieces of red dragon leather now!", cid)
-				player:setStorageValue(Storage.OutfitQuest.Hunter.AddonHat, 2)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat, 2)
 				npcHandler.topic[cid] = 0
 			else
 				npcHandler:say("You don't have it...", cid)
@@ -72,7 +72,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler:say("Good work, |PLAYERNAME|! That is enough leather for a lot of sturdy quivers. Now, please bring me 5 enchanted chicken wings.", cid)
 				player:removeItem(5876, 100)
 				player:removeItem(5948, 100)
-				player:setStorageValue(Storage.OutfitQuest.Hunter.AddonHat, 3)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat, 3)
 				npcHandler.topic[cid] = 0
 			else
 				npcHandler:say("You don't have it...", cid)
@@ -80,7 +80,7 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 6 then
 			if player:removeItem(5891, 5) then
 				npcHandler:say("Great! Now we can create a few more Tiaras. If only they weren't that expensive... Well anyway, please obtain one piece of royal steel, draconian steel and hell steel each.", cid)
-				player:setStorageValue(Storage.OutfitQuest.Hunter.AddonHat, 4)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat, 4)
 				npcHandler.topic[cid] = 0
 			else
 				npcHandler:say("You don't have it...", cid)
@@ -91,7 +91,7 @@ local function creatureSayCallback(cid, type, msg)
 				player:removeItem(5887, 1)
 				player:removeItem(5888, 1)
 				player:removeItem(5889, 1)
-				player:setStorageValue(Storage.OutfitQuest.Hunter.AddonHat, 5)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonHat, 5)
 				player:addOutfitAddon(129, 1)
 				player:addOutfitAddon(137, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
@@ -132,7 +132,7 @@ addGloveKeyword({
 		'Did you find sniper gloves AGAIN?! Incredible! I cannot grant you other accessories, but would you like to sell them to me for 2000 gold pieces?',
 		'Maybe another time.',
 		'Alright! Here is your money, thank you very much.'
-	}, function(player) return player:getStorageValue(Storage.OutfitQuest.Hunter.AddonGlove) == 1 end, function(player) player:removeItem(5875, 1) player:addMoney(2000) end
+	}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove) == 1 end, function(player) player:removeItem(5875, 1) player:addMoney(2000) end
 )
 
 -- If you don't have the addon
@@ -140,7 +140,7 @@ addGloveKeyword({
 		'You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?',
 		'No problem, maybe another time.',
 		'Great! I hereby grant you the right to wear the sniper gloves as an accessory. Congratulations!'
-	}, function(player) return player:getStorageValue(Storage.OutfitQuest.Hunter.AddonGlove) == -1 end, function(player) player:removeItem(5875, 1) player:setStorageValue(Storage.OutfitQuest.Hunter.AddonGlove, 1) player:addOutfitAddon(129, 2) player:addOutfitAddon(137, 1) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
+	}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove) == -1 end, function(player) player:removeItem(5875, 1) player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove, 1) player:addOutfitAddon(129, 2) player:addOutfitAddon(137, 1) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
 )
 
 -- Basic

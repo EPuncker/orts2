@@ -28,18 +28,18 @@ keywordHandler:addKeyword({'myra'}, StdModule.say, {npcHandler = npcHandler,
 		'Usually it takes a little more than that for an award though. However, I honour Myra\'s word. ...',
 		'I hereby grant you the right to wear a special sign of honour, acknowledged by the academy of Edron. Since you are a man, I guess you don\'t want girlish stuff. There you go.'
 	}},
-	function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) == 10 end,
+	function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) == 10 end,
 	function(player)
 		player:addOutfitAddon(138, 2)
 		player:addOutfitAddon(133, 2)
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-		player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, 11)
-		player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, 0)
-		player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak, 11)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.MissionHatCloak, 0)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) - 1))
 	end
 )
 
-keywordHandler:addKeyword({'myra'}, StdModule.say, {npcHandler = npcHandler, text = 'Stop bothering me. I am a far too busy man to be constantly giving out awards.'}, function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) == 11 end)
+keywordHandler:addKeyword({'myra'}, StdModule.say, {npcHandler = npcHandler, text = 'Stop bothering me. I am a far too busy man to be constantly giving out awards.'}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) == 11 end)
 keywordHandler:addKeyword({'myra'}, StdModule.say, {npcHandler = npcHandler, text = 'What the hell are you talking about?'})
 
 npcHandler:setMessage(MESSAGE_GREET, 'Welcome |PLAYERNAME|, student of the arcane arts.')

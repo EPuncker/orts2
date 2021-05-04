@@ -16,7 +16,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local addonProgress = player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmet)
+	local addonProgress = player:getStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet)
 	if msgcontains(msg, 'task') then
 		if not player:isPremium() then
 			npcHandler:say('Sorry, but our tasks are only for premium warriors.', cid)
@@ -89,9 +89,9 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif npcHandler.topic[cid] == 2 then
 		if msgcontains(msg, 'yes') then
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1)
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 1)
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart)) + 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 1)
 			npcHandler:say('Alright then. Come back to me once you have collected 100 perfect behemoth fangs.', cid)
 			npcHandler.topic[cid] = 0
 		elseif msgcontains(msg, 'no') then
@@ -106,9 +106,9 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 2)
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 2)
-			player:setStorageValue(Storage.OutfitQuest.Knight.RamsaysHelmetDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 2)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 2)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.RamsaysHelmetDoor, 1)
 			npcHandler:say('I\'m deeply impressed, brave Knight |PLAYERNAME|. I expected nothing less from you. Now, please retrieve Ramsay\'s helmet.', cid)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('There is no need to rush anyway.', cid)
@@ -122,8 +122,8 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 3)
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 3)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 3)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 3)
 			npcHandler:say('Good work, brave Knight |PLAYERNAME|! Even though it is damaged, it has a lot of sentimental value. Now, please bring me warrior\'s sweat.', cid)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('There is no need to rush anyway.', cid)
@@ -137,8 +137,8 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 4)
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 4)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 4)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 4)
 			npcHandler:say('Now that is a pleasant surprise, brave Knight |PLAYERNAME|! There is only one task left now: Obtain royal steel to have your helmet refined.', cid)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('There is no need to rush anyway.', cid)
@@ -152,8 +152,8 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 5)
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 5)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 5)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 5)
 			npcHandler:say('You truly deserve to wear an adorned helmet, brave Knight |PLAYERNAME|. Please talk to Sam and tell him I sent you. I\'m sure he will be glad to refine your helmet.', cid)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('There is no need to rush anyway.', cid)

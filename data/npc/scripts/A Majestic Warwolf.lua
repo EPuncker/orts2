@@ -8,7 +8,7 @@ function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)
 function onThink()				npcHandler:onThink()					end
 
 local function greetCallback(cid)
-	if Player(cid):getStorageValue(Storage.OutfitQuest.DruidHatAddon) < 9 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.OutfitQuest.DruidHatAddon) < 9 then
 		npcHandler:say('GRRRRRRRRRRRRR', cid)
 		return false
 	end
@@ -21,12 +21,12 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if table.contains({'addon', 'outfit'}, msg) then
-		if player:getStorageValue(Storage.OutfitQuest.DruidHatAddon) == 9 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.DruidHatAddon) == 9 then
 			npcHandler:say('I can see in your eyes that you are a honest and friendly person, |PLAYERNAME|. You were patient enough to learn our language and I will grant you a special gift. Will you accept it?', cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif msgcontains(msg, 'yes') and npcHandler.topic[cid] == 1 then
-		player:setStorageValue(Storage.OutfitQuest.DruidHatAddon, 10)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.DruidHatAddon, 10)
 		player:addOutfitAddon(148, 2)
 		player:addOutfitAddon(144, 2)
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

@@ -44,13 +44,13 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:remove(1)
 		toPosition:sendMagicEffect(CONST_ME_FIREAREA)
 		-- The Inquisition Questlog- 'Mission 2: Eclipse'
-		player:setStorageValue(Storage.TheInquisition.Mission02, 2)
-		player:setStorageValue(Storage.TheInquisition.Questline, 5)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission02, 2)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Questline, 5)
 		return true
 
 	-- Haunted Ruin
 	elseif target.actionid == 2003 then
-		if player:getStorageValue(Storage.TheInquisition.Questline) ~= 12 then
+		if player:getStorageValue(PlayerStorageKeys.TheInquisition.Questline) ~= 12 then
 			return true
 		end
 
@@ -58,8 +58,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:remove(1)
 
 		-- The Inquisition Questlog- 'Mission 4: The Haunted Ruin'
-		player:setStorageValue(Storage.TheInquisition.Questline, 13)
-		player:setStorageValue(Storage.TheInquisition.Mission04, 2)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Questline, 13)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission04, 2)
 
 		local doorItem = Tile(doorPosition):getItemById(8697)
 		if doorItem then
@@ -77,10 +77,10 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		shadowNexusPosition:sendMagicEffect(CONST_ME_HOLYAREA)
 
 	elseif target.itemid == 8759 then
-		if player:getStorageValue(Storage.TheInquisition.Questline) < 22 then
+		if player:getStorageValue(PlayerStorageKeys.TheInquisition.Questline) < 22 then
 			-- The Inquisition Questlog- 'Mission 7: The Shadow Nexus'
-			player:setStorageValue(Storage.TheInquisition.Mission07, 2)
-			player:setStorageValue(Storage.TheInquisition.Questline, 22)
+			player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission07, 2)
+			player:setStorageValue(PlayerStorageKeys.TheInquisition.Questline, 22)
 		end
 
 		for i = 1, #effectPositions do
@@ -92,18 +92,18 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	elseif target.actionid > 4007 and target.actionid < 4024 then
 		local graveStorage = storages[target.actionid]
 		if player:getStorageValue(graveStorage) == 1
-				or player:getStorageValue(Storage.TibiaTales.RestInHallowedGround.Questline) ~= 3 then
+				or player:getStorageValue(PlayerStorageKeys.TibiaTales.RestInHallowedGround.Questline) ~= 3 then
 			return false
 		end
 
 		player:setStorageValue(graveStorage, 1)
 
-		local cStorage = player:getStorageValue(Storage.TibiaTales.RestInHallowedGround.HolyWater)
+		local cStorage = player:getStorageValue(PlayerStorageKeys.TibiaTales.RestInHallowedGround.HolyWater)
 		if cStorage < 14 then
-			player:setStorageValue(Storage.TibiaTales.RestInHallowedGround.HolyWater, math.max(0, cStorage) + 1)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.RestInHallowedGround.HolyWater, math.max(0, cStorage) + 1)
 		elseif cStorage == 14 then
-			player:setStorageValue(Storage.TibiaTales.RestInHallowedGround.HolyWater, -1)
-			player:setStorageValue(Storage.TibiaTales.RestInHallowedGround.Questline, 4)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.RestInHallowedGround.HolyWater, -1)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.RestInHallowedGround.Questline, 4)
 			item:transform(2006, 0)
 		end
 

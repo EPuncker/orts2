@@ -33,9 +33,9 @@ function fireBug.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			toPosition:sendMagicEffect(CONST_ME_HITBYFIRE)
 			target:transform(1484)
 		elseif target.actionid == 12550 or target.actionid == 12551 then -- Secret Service Quest
-			if player:getStorageValue(Storage.secretService.TBIMission01) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.secretService.TBIMission01) == 1 then
 				Game.createItem(1487, 1, Position(32893, 32012, 6))
-				player:setStorageValue(Storage.secretService.TBIMission01, 2)
+				player:setStorageValue(PlayerStorageKeys.secretService.TBIMission01, 2)
 			end
 		end
 	elseif chance == 2 then -- It removes the firebug 1% chance

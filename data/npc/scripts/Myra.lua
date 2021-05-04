@@ -8,7 +8,7 @@ function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)
 function onThink()				npcHandler:onThink()					end
 
 -- Start
-local tiaraKeyword = keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHandler = npcHandler, text = 'Well... maybe, if you help me a little, I could convince the academy of Edron that you are a valuable help here and deserve an award too. How about it?'}, function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) == -1 end)
+local tiaraKeyword = keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHandler = npcHandler, text = 'Well... maybe, if you help me a little, I could convince the academy of Edron that you are a valuable help here and deserve an award too. How about it?'}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) == -1 end)
 	local yesKeyword = tiaraKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler,
 		text = {
 			'Okay, great! You see, I need a few magical ingredients which I\'ve run out of. First of all, please bring me 70 bat wings. ...',
@@ -22,19 +22,19 @@ local tiaraKeyword = keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHan
 		}}
 	)
 
-	yesKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Fine! Let\'s start with the 70 bat wings. I really feel uncomfortable out there in the jungle.', reset = true}, nil, function(player) player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, 1) player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1) end)
+	yesKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Fine! Let\'s start with the 70 bat wings. I really feel uncomfortable out there in the jungle.', reset = true}, nil, function(player) player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak, 1) player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.MissionHatCloak, 1) player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart)) + 1) end)
 	yesKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'Would you like me to repeat the task requirements then?', moveup = 2})
 
 tiaraKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'That\'s a pity.', reset = true})
 keywordHandler:addAliasKeyword({'award'})
 
 -- When asking for your award before completing your tasks
-keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHandler = npcHandler, text = 'Before I can nominate you for an award, please complete your task'}, function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) > 0 and player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) < 10 end)
+keywordHandler:addKeyword({'tiara'}, StdModule.say, {npcHandler = npcHandler, text = 'Before I can nominate you for an award, please complete your task'}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) > 0 and player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) < 10 end)
 keywordHandler:addAliasKeyword({'award'})
 
 -- What happens when you say task
 local function addTaskKeyword(value, text)
-	keywordHandler:addKeyword({'task'}, StdModule.say, {npcHandler = npcHandler, text = text}, function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) == value end)
+	keywordHandler:addKeyword({'task'}, StdModule.say, {npcHandler = npcHandler, text = text}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) == value end)
 	if value == 10 then
 		keywordHandler:addAliasKeyword({'tiara'})
 		keywordHandler:addAliasKeyword({'award'})
@@ -55,13 +55,13 @@ addTaskKeyword(11, 'I don\'t have any tasks for you right now, |PLAYERNAME|. You
 
 -- Hand over items
 local function addItemKeyword(keyword, text, value, itemId, count, last)
-	local itemKeyword = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = text[1]}, function(player) return player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) == value end)
+	local itemKeyword = keywordHandler:addKeyword({keyword}, StdModule.say, {npcHandler = npcHandler, text = text[1]}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) == value end)
 		itemKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'No, no. That\'s not enough, I fear.', reset = true}, function(player) return player:getItemCount(itemId) < count end)
 		local rewardKeyword = itemKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = text[2]}, nil,
 			function(player)
 				player:removeItem(itemId, count)
-				player:setStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak, player:getStorageValue(Storage.OutfitQuest.MageSummoner.AddonHatCloak) + 1)
-				player:setStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak, player:getStorageValue(Storage.OutfitQuest.MageSummoner.MissionHatCloak) + 1)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak, player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.AddonHatCloak) + 1)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.MissionHatCloak, player:getStorageValue(PlayerStorageKeys.OutfitQuest.MageSummoner.MissionHatCloak) + 1)
 				if not last then
 					npcHandler:resetNpc(player.uid)
 				end

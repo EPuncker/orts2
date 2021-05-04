@@ -107,9 +107,9 @@ local function creatureSayCallback(cid, type, msg)
 		t[cid] = msg
 	elseif msgcontains(msg, 'relations') then
 		local player = Player(cid)
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= 14 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) >= 14 then
 			npcHandler:say('Our relations improve with every mission you undertake on our behalf. Another way to improve your relations with us gnomes is to trade in minor crystal tokens. ...', cid)
-			npcHandler:say('Your renown amongst us gnomes is currently {' .. math.max(0, player:getStorageValue(Storage.BigfootBurden.Rank)) .. '}. Do you want to improve your standing by sacrificing tokens? One token will raise your renown by 5 points. ', cid)
+			npcHandler:say('Your renown amongst us gnomes is currently {' .. math.max(0, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Rank)) .. '}. Do you want to improve your standing by sacrificing tokens? One token will raise your renown by 5 points. ', cid)
 			npcHandler.topic[cid] = 2
 		else
 			npcHandler:say('You are not even a recruit of the Bigfoots. Sorry I can\'t help you.', cid)
@@ -156,8 +156,8 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 4 then
 			local player = Player(cid)
 			if player:removeItem(18422, renown[cid]) then
-				player:setStorageValue(Storage.BigfootBurden.Rank, math.max(0, player:getStorageValue(Storage.BigfootBurden.Rank)) + renown[cid] * 5)
-				npcHandler:say('As you wish! Your new renown is {' .. player:getStorageValue(Storage.BigfootBurden.Rank) .. '}.', cid)
+				player:setStorageValue(PlayerStorageKeys.BigfootBurden.Rank, math.max(0, player:getStorageValue(PlayerStorageKeys.BigfootBurden.Rank)) + renown[cid] * 5)
+				npcHandler:say('As you wish! Your new renown is {' .. player:getStorageValue(PlayerStorageKeys.BigfootBurden.Rank) .. '}.', cid)
 			else
 				npcHandler:say('You don\'t have these many tokens.', cid)
 			end

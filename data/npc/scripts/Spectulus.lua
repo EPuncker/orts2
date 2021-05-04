@@ -32,7 +32,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, 'mission') then
-		local cStorage = player:getStorageValue(Storage.SeaOfLightQuest.Questline)
+		local cStorage = player:getStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline)
 		if cStorage == -1 then
 			npcHandler:say('Alright, you look bright enough to fulfil my requests - at least you do not fall asleep while standing there. Ahem... I heard about a certain inventor who created a {magic device} to actually sail the {sea of light}. Will you help me find him?', cid)
 			npcHandler.topic[cid] = 1
@@ -45,13 +45,13 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			player:addExperience(400, true)
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 3)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission1, 3)
-			player:setStorageValue(Storage.SeaOfLightQuest.StudyTimer, os.time() + 1800)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 3)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission1, 3)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.StudyTimer, os.time() + 1800)
 			npcHandler:say('So have you talked to the beggar? What did he tell you? Where are the plans...? Wh...? He did? He is? You\'ve already got the plans? Beautiful!! Amazing! Alright it will take some time to recapitulate these plans.', cid)
 			addEvent(releasePlayer, 1000, cid)
 		elseif cStorage == 3 then
-			local timeStorage = player:getStorageValue(Storage.SeaOfLightQuest.StudyTimer)
+			local timeStorage = player:getStorageValue(PlayerStorageKeys.SeaOfLightQuest.StudyTimer)
 			if timeStorage > os.time() then
 				npcHandler:say('It will take some time to work out the initial problem of the device. Come back when I\'ve found the component needed to finish it. Alright, B connects to D and another two nails marked with S go... hmmm.', cid)
 			elseif timeStorage > 0 and timeStorage < os.time() then
@@ -67,8 +67,8 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			player:addExperience(500, true)
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 6)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission2, 3)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 6)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission2, 3)
 			npcHandler:say({
 				'Did you find a rare crystal? Show me... Amazing, absolutely amazing. This crystal alone is worth a small fortune. Ahem, of course I\'m glad you brought it to me for further research instead of bringing it to a merchant. ...',
 				'Please return here if you want to continue helping me with another mission.'
@@ -93,8 +93,8 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 1 then
 			player:addExperience(100, true)
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 1)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission1, 1)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 1)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission1, 1)
 			npcHandler:say({
 				'That\'s the spirit! As time is of the essence, we should start right now. ...',
 				'A beggar here in Edron brags about how smart he is and that he knows about a man who lost his sanity because of an experiment, but he won\'t tell anyone any details. Maybe he knows more.'
@@ -107,9 +107,9 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('One remaining mirror crystal is in the hands of a creature called the collector which collects all kinds of crystals. The only way to get access to its lair is to donate a very rare crystal to a secret well. I need you to get one, will you help me?', cid)
 			npcHandler.topic[cid] = 4
 		elseif npcHandler.topic[cid] == 4 then
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 4)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission1, 4)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission2, 1)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 4)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission1, 4)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission2, 1)
 			player:addMapMark(Position(33103, 31811, 7), MAPMARK_CROSS, 'Lost Mines')
 			npcHandler:say({
 				'Alright, now listen. West of Edron, near the ocean, you\'ll find the Lost Mines. Go down there to recover one of its rare crystals. But beware, people say the mine workers who died there years ago in an horrible accident are still digging. ...',
@@ -120,8 +120,8 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Good, because if you wouldn\'t do it... listen, this well is on one of the isles near Carlin. There you offer the crystal. Once you get access to its lair, find the collector and... convince it to give you the mirror crystal. Understood?', cid)
 			npcHandler.topic[cid] = 6
 		elseif npcHandler.topic[cid] == 6 then
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 7)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission3, 1)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 7)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission3, 1)
 			player:addItem(10615, 1)
 			npcHandler:say('To collect the unbelievably rare, practically unique mirror crystal, you will need to use this special carrying device I developed. If you find the crystal, use it to store it and transport it safely to me. There is no second one.', cid)
 			npcHandler.topic[cid] = 0
@@ -135,8 +135,8 @@ local function creatureSayCallback(cid, type, msg)
 			player:addItem(2145, 10)
 			player:addItem(2154, 1)
 			player:addExperience(1000, true)
-			player:setStorageValue(Storage.SeaOfLightQuest.Mission3, 4)
-			player:setStorageValue(Storage.SeaOfLightQuest.Questline, 10)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Mission3, 4)
+			player:setStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline, 10)
 			npcHandler:say({
 				'Ah yes, slowly, carefully, careful ...',
 				'...and how shiny it is, almost there ...',

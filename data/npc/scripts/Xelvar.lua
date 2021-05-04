@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	if msgcontains(msg, "adventures") then
-		if Player(cid):getStorageValue(Storage.BigfootBurden.QuestLine) < 1 then
+		if Player(cid):getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) < 1 then
 			npcHandler:say("Right now I am sort of {recruiting} people.", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -54,7 +54,7 @@ local function creatureSayCallback(cid, type, msg)
 				"Good luck to you and don't embarrass your race down there! Keep in mind that you are a representative of the big people."
 			}, cid)
 			local player = Player(cid)
-			player:setStorageValue(Storage.BigfootBurden.QuestLine, 1)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 1)
 			player:addItem(18457, 4)
 			npcHandler.topic[cid] = 0
 		end

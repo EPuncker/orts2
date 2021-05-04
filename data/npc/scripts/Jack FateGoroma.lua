@@ -14,11 +14,11 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if table.contains({"sail", "passage", "wreck", "liberty bay", "ship"}, msg) then
-		if player:getStorageValue(Storage.TheShatteredIsles.AccessToGoroma) ~= 1 then
-			if player:getStorageValue(Storage.TheShatteredIsles.Shipwrecked) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.AccessToGoroma) ~= 1 then
+			if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.Shipwrecked) < 1 then
 				npcHandler:say('I\'d love to bring you back to Liberty Bay, but as you can see, my ship is ruined. I also hurt my leg and can barely move. Can you help me?', cid)
 				npcHandler.topic[cid] = 1
-			elseif player:getStorageValue(Storage.TheShatteredIsles.Shipwrecked) == 1 then
+			elseif player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.Shipwrecked) == 1 then
 				npcHandler:say('Have you brought 30 pieces of wood so that I can repair the ship?', cid)
 				npcHandler.topic[cid] = 3
 			end
@@ -36,14 +36,14 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
 			npcHandler:say('Good! Please return once you have gathered 30 pieces of wood.', cid)
-			player:setStorageValue(Storage.TheShatteredIsles.DefaultStart, 1)
-			player:setStorageValue(Storage.TheShatteredIsles.Shipwrecked, 1)
+			player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.DefaultStart, 1)
+			player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.Shipwrecked, 1)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
 			if player:removeItem(5901, 30) then
 				npcHandler:say("Excellent! Now we can leave this godforsaken place. Thank you for your help. Should you ever want to return to this island, ask me for a passage to Goroma.", cid)
-				player:setStorageValue(Storage.TheShatteredIsles.Shipwrecked, 2)
-				player:setStorageValue(Storage.TheShatteredIsles.AccessToGoroma, 1)
+				player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.Shipwrecked, 2)
+				player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.AccessToGoroma, 1)
 				npcHandler.topic[cid] = 0
 			else
 				npcHandler:say("You don't have enough...", cid)

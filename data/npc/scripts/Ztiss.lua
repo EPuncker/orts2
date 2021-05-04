@@ -15,7 +15,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "offer") then
-		if player:getStorageValue(Storage.TheNewFrontier.Questline) == 23 then
+		if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 23 then
 		npcHandler:say("You are ztill a captive and your life is forfeit. Zere might be a way for you to ezcape if you agree to {work} for my mazter.", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -40,9 +40,9 @@ local function creatureSayCallback(cid, type, msg)
 				"Excellent! Now you may leave ziz area zrough ze teleporter to ze norz. It will bring you to a hidden boat. Ziz boat will take you to ze tournament izle. ...",
 				"Zere you'll learn anyzing you need to know about ze great tournament."
 			}, cid)
-			player:setStorageValue(Storage.TheNewFrontier.Questline, 24)
-			player:setStorageValue(Storage.TheNewFrontier.Mission07, 3) --Questlog, The New Frontier Quest "Mission 07: Messengers Of Peace"
-			player:setStorageValue(Storage.TheNewFrontier.Mission08, 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
+			player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 24)
+			player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission07, 3) --Questlog, The New Frontier Quest "Mission 07: Messengers Of Peace"
+			player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission08, 1) --Questlog, The New Frontier Quest "Mission 08: An Offer You Can't Refuse"
 			npcHandler.topic[cid] = 0
 		end
 	end

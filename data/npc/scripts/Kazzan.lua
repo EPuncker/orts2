@@ -9,10 +9,10 @@ function onThink()				npcHandler:onThink()					end
 
 local function greetCallback(cid)
 	local player = Player(cid)
-	if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 35
-			and player:getStorageValue(Storage.WhatAFoolishQuest.ScaredKazzan) ~= 1
+	if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 35
+			and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.ScaredKazzan) ~= 1
 			and player:getOutfit().lookType == 65 then
-		player:setStorageValue(Storage.WhatAFoolishQuest.ScaredKazzan, 1)
+		player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.ScaredKazzan, 1)
 		npcHandler:say('WAAAAAHHH!!!', cid)
 		return false
 	end

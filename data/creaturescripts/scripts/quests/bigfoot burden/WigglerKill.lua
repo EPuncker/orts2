@@ -9,9 +9,9 @@ function onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	local value = player:getStorageValue(Storage.BigfootBurden.ExterminatedCount)
-	if value < 10 and player:getStorageValue(Storage.BigfootBurden.MissionExterminators) == 1 then
-		player:setStorageValue(Storage.BigfootBurden.ExterminatedCount, value + 1)
+	local value = player:getStorageValue(PlayerStorageKeys.BigfootBurden.ExterminatedCount)
+	if value < 10 and player:getStorageValue(PlayerStorageKeys.BigfootBurden.MissionExterminators) == 1 then
+		player:setStorageValue(PlayerStorageKeys.BigfootBurden.ExterminatedCount, value + 1)
 	end
 	return true
 end

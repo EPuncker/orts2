@@ -5,17 +5,17 @@ function afflictedOutfit.onUse(player, item, fromPosition, target, toPosition, i
 		player:sendCancelMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT)
 		return true
 	end
-	local hasOutfit = player:getStorageValue(Storage.OutfitQuest.Afflicted.Outfit) == 1
+	local hasOutfit = player:getStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.Outfit) == 1
 	if item.itemid == 13925 then -- plague mask
 		if not hasOutfit then
 			return false
 		end
-		if player:getStorageValue(Storage.OutfitQuest.Afflicted.AddonPlagueMask) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueMask) == 1 then
 			return false
 		end
 		player:addOutfitAddon(430, 2)
 		player:addOutfitAddon(431, 2)
-		player:setStorageValue(Storage.OutfitQuest.Afflicted.AddonPlagueMask, 1)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueMask, 1)
 		player:say("You gained a plague mask for your outfit.", TALKTYPE_MONSTER_SAY, false, player)
 		if player:hasOutfit(looktype, 3) then
 			player:addAchievement("Beak Doctor")
@@ -25,12 +25,12 @@ function afflictedOutfit.onUse(player, item, fromPosition, target, toPosition, i
 		if not hasOutfit then
 			return false
 		end
-		if player:getStorageValue(Storage.OutfitQuest.Afflicted.AddonPlagueBell) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueBell) == 1 then
 			return false
 		end
 		player:addOutfitAddon(430, 1)
 		player:addOutfitAddon(431, 1)
-		player:setStorageValue(Storage.OutfitQuest.Afflicted.AddonPlagueBell, 1)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueBell, 1)
 		player:say("You gained a plague bell for your outfit.", TALKTYPE_MONSTER_SAY, false, player)
 		if player:hasOutfit(looktype, 3) then
 			player:addAchievement("Beak Doctor")
@@ -51,7 +51,7 @@ function afflictedOutfit.onUse(player, item, fromPosition, target, toPosition, i
 		player:addOutfit(430)
 		player:addOutfit(431)
 		player:getPosition():sendMagicEffect(CONST_ME_GREEN_RINGS)
-		player:setStorageValue(Storage.OutfitQuest.Afflicted.Outfit, 1)
+		player:setStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.Outfit, 1)
 		player:say("You have restored an outfit.", TALKTYPE_MONSTER_SAY, false, player)
 	end
 	return true

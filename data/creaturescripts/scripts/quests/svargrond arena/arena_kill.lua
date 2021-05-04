@@ -5,12 +5,12 @@ function onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	local pit = player:getStorageValue(Storage.SvargrondArena.Pit)
+	local pit = player:getStorageValue(PlayerStorageKeys.SvargrondArena.Pit)
 	if pit < 1 or pit > 10 then
 		return
 	end
 
-	local arena = player:getStorageValue(Storage.SvargrondArena.Arena)
+	local arena = player:getStorageValue(PlayerStorageKeys.SvargrondArena.Arena)
 	if arena < 1 then
 		return
 	end
@@ -35,7 +35,7 @@ function onKill(creature, target)
 		end
 	end
 
-	player:setStorageValue(Storage.SvargrondArena.Pit, pit + 1)
+	player:setStorageValue(PlayerStorageKeys.SvargrondArena.Pit, pit + 1)
 	player:say('Victory! Head through the new teleporter into the next room.', TALKTYPE_MONSTER_SAY)
 	return true
 end

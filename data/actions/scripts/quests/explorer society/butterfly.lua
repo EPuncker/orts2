@@ -9,14 +9,14 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	local storage = config[player:getStorageValue(Storage.ExplorerSociety.QuestLine)]
+	local storage = config[player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine)]
 	if not storage then
 		return true
 	end
 
-	player:setStorageValue(Storage.ExplorerSociety.QuestLine, storage.newValue)
+	player:setStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine, storage.newValue)
 	toPosition:sendMagicEffect(CONST_ME_MAGIC_BLUE)
-	item:transform(storage.transformId)
+	item:transform(PlayerStorageKeys.transformId)
 	target:remove()
 	return true
 end

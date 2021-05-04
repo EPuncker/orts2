@@ -3,8 +3,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.GravediggerOfDrefia.Mission17) == 1 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission19) < 1 then
-		player:setStorageValue(Storage.GravediggerOfDrefia.Mission19, 1)
+	if player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission17) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission19) < 1 then
+		player:setStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission19, 1)
 		player:addItem(21406, 1)
 		item:remove()
 	end

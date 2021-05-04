@@ -18,7 +18,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "exit") then
-		if player:getStorageValue(Storage.WrathoftheEmperor.ZumtahStatus) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.ZumtahStatus) ~= 1 then
 			if npcHandler.topic[cid] < 1 then
 				npcHandler:say("Oh of course, may I show you around a bit before? You want to go straight to the exit? Would you please follow me. Oh right, I am terribly sorry but THERE IS NONE. Will you finally give it up please?", cid)
 				npcHandler.topic[cid] = 1
@@ -44,13 +44,13 @@ local function creatureSayCallback(cid, type, msg)
 					"Oh and I recovered the strange crate you where hiding in, it will wait for you at the exit since you can't carry it as... a beetle, muhaha. Yes, you shall now crawl through the passage as a beetle. There you go."
 				}, cid)
 				npcHandler.topic[cid] = 0
-				player:setStorageValue(Storage.WrathoftheEmperor.ZumtahStatus, 1)
-				player:setStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus, 1)
+				player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.ZumtahStatus, 1)
+				player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus, 1)
 				player:addCondition(condition)
 			end
 		else
 			npcHandler:say("It's you, why did they throw you in here again? Anyway, I will just transform you once more. I also recovered your crate which will wait for you at the exit. There, feel free to go.", cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus, 1)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus, 1)
 			player:addCondition(condition)
 		end
 	elseif msgcontains(msg, "no") then

@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	if(msgcontains(msg, "trouble") and player:getStorageValue(Storage.TheInquisition.WalterGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1) then
+	if(msgcontains(msg, "trouble") and player:getStorageValue(PlayerStorageKeys.TheInquisition.WalterGuard) < 1 and player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) ~= -1) then
 		npcHandler:say("I think there is a pickpocket in town.", cid)
 		npcHandler.topic[cid] = 1
 	elseif(msgcontains(msg, "authorities")) then
@@ -30,9 +30,9 @@ local function creatureSayCallback(cid, type, msg)
 		if(npcHandler.topic[cid] == 3) then
 			npcHandler:say("If the gods had created the world a paradise, no one had to steal at all.", cid)
 			npcHandler.topic[cid] = 0
-			if(player:getStorageValue(Storage.TheInquisition.WalterGuard) < 1) then
-				player:setStorageValue(Storage.TheInquisition.WalterGuard, 1)
-				player:setStorageValue(Storage.TheInquisition.Mission01, player:getStorageValue(Storage.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
+			if(player:getStorageValue(PlayerStorageKeys.TheInquisition.WalterGuard) < 1) then
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.WalterGuard, 1)
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission01, player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
 				player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 			end
 		end

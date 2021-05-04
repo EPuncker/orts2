@@ -14,8 +14,8 @@ local promoteKeyword = keywordHandler:addKeyword({'promot'}, StdModule.say, {npc
 
 -- Postman
 keywordHandler:addKeyword({'uniforms'}, StdModule.say, {npcHandler = npcHandler, text = 'I remember about those uniforms, they had a camouflage inlay so they could be worn the inside out too. I will send some color samples via mail to Mr. Postner.'},
-	function(player) return player:getStorageValue(Storage.postman.Mission06) == 5 end,
-	function(player) player:setStorageValue(Storage.postman.Mission06, 6) end
+	function(player) return player:getStorageValue(PlayerStorageKeys.postman.Mission06) == 5 end,
+	function(player) player:setStorageValue(PlayerStorageKeys.postman.Mission06, 6) end
 )
 
 keywordHandler:addKeyword({'uniforms'}, StdModule.say, {npcHandler = npcHandler, text = 'The uniforms of our guards and soldiers are of unparraleled quality of course.'})

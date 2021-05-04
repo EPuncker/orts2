@@ -34,7 +34,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	player:setStorageValue(Storage.AdventurersGuild.Stone, townId)
+	player:setStorageValue(PlayerStorageKeys.AdventurersGuild.Stone, townId)
 	playerPos:sendMagicEffect(CONST_ME_TELEPORT)
 
 	local destination = Position(32210, 32300, 6)

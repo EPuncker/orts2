@@ -24,8 +24,8 @@ local blessKeyword = keywordHandler:addKeyword({'twist of fate'}, StdModule.say,
 -- Adventurer Stone
 keywordHandler:addKeyword({'adventurer\'s stone'}, StdModule.say, {npcHandler = npcHandler, text = 'Keep your adventurer\'s stone well.'}, function(player) return player:getItemById(18559, true) end)
 
-local stoneKeyword = keywordHandler:addKeyword({'adventurer\'s stone'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, you want to replace your adventurer\'s stone for free?'}, function(player) return player:getStorageValue(Storage.AdventurersGuild.FreeStone.Rahkem) ~= 1 end)
-	stoneKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Here you are. Take care.', reset = true}, nil, function(player) player:addItem(18559, 1) player:setStorageValue(Storage.AdventurersGuild.FreeStone.Rahkem, 1) end)
+local stoneKeyword = keywordHandler:addKeyword({'adventurer\'s stone'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, you want to replace your adventurer\'s stone for free?'}, function(player) return player:getStorageValue(PlayerStorageKeys.AdventurersGuild.FreeStone.Rahkem) ~= 1 end)
+	stoneKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Here you are. Take care.', reset = true}, nil, function(player) player:addItem(18559, 1) player:setStorageValue(PlayerStorageKeys.AdventurersGuild.FreeStone.Rahkem, 1) end)
 	stoneKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'No problem.', reset = true})
 
 local stoneKeyword = keywordHandler:addKeyword({'adventurer\'s stone'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, you want to replace your adventurer\'s stone for 30 gold?'})
@@ -62,16 +62,16 @@ keywordHandler:addKeyword({'heal'}, StdModule.say, {npcHandler = npcHandler, tex
 keywordHandler:addKeyword({'heal'}, StdModule.say, {npcHandler = npcHandler, text = 'You aren\'t looking that bad. Sorry, I can\'t help you. But if you are looking for additional protection you should go on the {pilgrimage} of ashes or get the protection of the {twist of fate} here.'})
 
 -- Wooden Stake
-keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'I think you have forgotten to bring your stake, pilgrim.'}, function(player) return player:getStorageValue(Storage.FriendsandTraders.TheBlessedStake) == 8 and player:getItemCount(5941) == 0 end)
+keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'I think you have forgotten to bring your stake, pilgrim.'}, function(player) return player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheBlessedStake) == 8 and player:getItemCount(5941) == 0 end)
 
-local stakeKeyword = keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'Yes, I was informed what to do. Are you prepared to receive my line of the prayer?'}, function(player) return player:getStorageValue(Storage.FriendsandTraders.TheBlessedStake) == 8 end)
+local stakeKeyword = keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'Yes, I was informed what to do. Are you prepared to receive my line of the prayer?'}, function(player) return player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheBlessedStake) == 8 end)
 	stakeKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'So receive my prayer: \'Let there be power and compassion\'. Now, bring your stake to Brewster in Port Hope for the next line of the prayer. I will inform him what to do.', reset = true}, nil,
-		function(player) player:setStorageValue(Storage.FriendsandTraders.TheBlessedStake, 9) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
+		function(player) player:setStorageValue(PlayerStorageKeys.FriendsandTraders.TheBlessedStake, 9) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
 	)
 	stakeKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'I will wait for you.', reset = true})
 
-keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'You should visit Brewster in Port Hope now.'}, function(player) return player:getStorageValue(Storage.FriendsandTraders.TheBlessedStake) == 9 end)
-keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'You already received my line of the prayer.'}, function(player) return player:getStorageValue(Storage.FriendsandTraders.TheBlessedStake) > 9 end)
+keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'You should visit Brewster in Port Hope now.'}, function(player) return player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheBlessedStake) == 9 end)
+keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'You already received my line of the prayer.'}, function(player) return player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheBlessedStake) > 9 end)
 keywordHandler:addKeyword({'stake'}, StdModule.say, {npcHandler = npcHandler, text = 'A blessed stake? That is a strange request. Maybe Quentin knows more, he is one of the oldest monks after all.'})
 
 -- Basic

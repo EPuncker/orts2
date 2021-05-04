@@ -108,13 +108,13 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if tutorialIds[storage] then
 		player:sendTutorial(tutorialIds[storage])
 		if item.uid == 50080 then
-			player:setStorageValue(Storage.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 3)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.SantiagoNpcGreetStorage, 3)
 		end
 	end
 
 	if table.contains(hotaQuest, item.uid) then
-		if player:getStorageValue(Storage.TheAncientTombs.DefaultStart) ~= 1 then
-			player:setStorageValue(Storage.TheAncientTombs.DefaultStart, 1)
+		if player:getStorageValue(PlayerStorageKeys.TheAncientTombs.DefaultStart) ~= 1 then
+			player:setStorageValue(PlayerStorageKeys.TheAncientTombs.DefaultStart, 1)
 		end
 	end
 

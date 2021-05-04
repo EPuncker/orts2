@@ -14,12 +14,12 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, 'supplies') then
-		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01) == 1 then
 			npcHandler:say({
 				'What!? I bet, Baa\'leal sent you! ...',
 				'I won\'t tell you anything! Shove off!'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission01, 2)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01, 2)
 		else
 			npcHandler:say('I won\'t talk about that.', cid)
 		end

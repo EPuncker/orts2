@@ -88,7 +88,7 @@ local function getTable(player)
 		{id = 14336, buy = 4000}		-- Wrinkled Parchment
 	}
 
-	if player:getStorageValue(Storage.thievesGuild.Quest) >= 9 then
+	if player:getStorageValue(PlayerStorageKeys.thievesGuild.Quest) >= 9 then
 		for i = 1, #buyList do
 			itemsList[#itemsList] = buyList[i]
 		end

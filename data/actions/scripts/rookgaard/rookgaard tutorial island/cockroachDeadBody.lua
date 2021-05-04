@@ -4,8 +4,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return
 	end
 
-	if player:getStorageValue(Storage.RookgaardTutorialIsland.cockroachBodyMsgStorage) ~= 1 then
+	if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.cockroachBodyMsgStorage) ~= 1 then
 		player:sendTutorial(9)
-		player:setStorageValue(Storage.RookgaardTutorialIsland.cockroachBodyMsgStorage, 1)
+		player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.cockroachBodyMsgStorage, 1)
 	end
 end

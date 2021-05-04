@@ -33,7 +33,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if town:getId() == 12 and player:getStorageValue(Storage.BarbarianTest.Questline) < 8 then
+	if town:getId() == 12 and player:getStorageValue(PlayerStorageKeys.BarbarianTest.Questline) < 8 then
 		player:sendTextMessage(MESSAGE_STATUS_WARNING, 'You first need to absolve the Barbarian Test Quest to become citizen!')
 		player:teleportTo(town:getTemplePosition())
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)

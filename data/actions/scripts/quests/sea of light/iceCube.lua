@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue(Storage.SeaOfLightQuest.Questline) < 8 then
+	if player:getStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline) < 8 then
 		return false
 	end
 

@@ -260,10 +260,10 @@ function SvargrondArena.kickPlayer(cid, hideMessage)
 		return
 	end
 
-	if player:getStorageValue(Storage.SvargrondArena.Pit) > 0 then
+	if player:getStorageValue(PlayerStorageKeys.SvargrondArena.Pit) > 0 then
 		player:teleportTo(SvargrondArena.kickPosition)
 		SvargrondArena.kickPosition:sendMagicEffect(CONST_ME_TELEPORT)
-		player:setStorageValue(Storage.SvargrondArena.Pit, 0)
+		player:setStorageValue(PlayerStorageKeys.SvargrondArena.Pit, 0)
 		if not hideMessage then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Your time ran out!')
 		end

@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	if msgcontains(msg, 'mission') then
-		if Player(cid):getStorageValue(Storage.WrathoftheEmperor.Questline) == 33 then
+		if Player(cid):getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 33 then
 			npcHandler:say('Oh yez, let me zee ze documentz. Here we go: zree cheztz filled wiz platinum, one houze, a zet of elite armor, and an unending mana cazket. Iz ziz correct?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 			'You will find your rewardz in one of ze old zupply zellarz. Beware of ze ratz zough. ...',
 			'Ze rednezz of your faze and ze zound you make wiz your teez iz obviouzly a zign of gratitude of your zpeziez! I am flattered, but pleaze leave now az I have to attend to zome important buzinezz.'
 		}, cid)
-		Player(cid):setStorageValue(Storage.WrathoftheEmperor.Questline, 34)
+		Player(cid):setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 34)
 		npcHandler.topic[cid] = 0
 	end
 	return true

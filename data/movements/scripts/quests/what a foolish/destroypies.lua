@@ -4,8 +4,8 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.WhatAFoolishQuest.PieBoxTimer) > os.time() then
-		player:getStorageValue(Storage.WhatAFoolishQuest.PieBoxTimer, 1)
+	if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer) > os.time() then
+		player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer, 1)
 	end
 
 	local pieBox = player:getItemById(7484, true)

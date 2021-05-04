@@ -34,14 +34,14 @@ local function removeCombatProtection(cid)
 		time = 30
 	end
 
-	player:setStorageValue(Storage.combatProtectionStorage, 2)
+	player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, 2)
 	addEvent(function(cid)
 		local player = Player(cid)
 		if not player then
 			return
 		end
 
-		player:setStorageValue(Storage.combatProtectionStorage, 0)
+		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, 0)
 		player:remove()
 	end, time * 1000, cid)
 end
@@ -56,12 +56,12 @@ function Creature:onTargetCombat(target)
 
 		if target:isPlayer() then
 			if self:isMonster() then
-				local protectionStorage = target:getStorageValue(Storage.combatProtectionStorage)
+				local protectionStorage = target:getStorageValue(PlayerStorageKeys.combatProtectionStorage)
 
 				if target:getIp() == 0 then -- If player is disconnected, monster shall ignore to attack the player
 					if protectionStorage <= 0 then
 						addEvent(removeCombatProtection, 30 * 1000, target.uid)
-						target:setStorageValue(Storage.combatProtectionStorage, 1)
+						target:setStorageValue(PlayerStorageKeys.combatProtectionStorage, 1)
 					elseif protectionStorage == 1 then
 						self:searchTarget()
 						return RETURNVALUE_YOUMAYNOTATTACKTHISPLAYER

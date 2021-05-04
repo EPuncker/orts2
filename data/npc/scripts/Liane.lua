@@ -22,7 +22,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "measurements") then
-		if player:getStorageValue(Storage.postman.Mission07) >= 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission07) >= 1 then
 			npcHandler:say("I have more urgent problem to attend then that. Those hawks are hunting my carrier pigeons. Bring me 12 arrows and I'll see if I have the time for this nonsense. Do you have 12 arrows with you? ", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 1 then
 			if player:removeItem(2544, 12) then
 				npcHandler:say("Great! Now I'll teach them a lesson ... For those measurements ... <tells you her measurements> ", cid)
-				player:setStorageValue(Storage.postman.Mission07, player:getStorageValue(Storage.postman.Mission07) + 1)
+				player:setStorageValue(PlayerStorageKeys.postman.Mission07, player:getStorageValue(PlayerStorageKeys.postman.Mission07) + 1)
 				npcHandler.topic[cid] = 0
 			end
 		end

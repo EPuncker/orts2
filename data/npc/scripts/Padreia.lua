@@ -18,20 +18,20 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler:say("Do you want to buy a bottle of cough syrup for 50 gold?", cid)
 		npcHandler.topic[cid] = 1
 	elseif msgcontains(msg, 'mission') then
-		if player:getStorageValue(Storage.TibiaTales.TheExterminator) == -1 then
+		if player:getStorageValue(PlayerStorageKeys.TibiaTales.TheExterminator) == -1 then
 			npcHandler:say({
 				'Oh |PLAYERNAME|, thank god you came to me. Last night, I had a vision about an upcoming plague here in Carlin. ...',
 				'It will originate from slimes that will swarm out of the sewers and infect every citizen with a deadly disease. Are you willing to help me save Carlin?'
 			}, cid)
 			npcHandler.topic[cid] = 2
-		elseif player:getStorageValue(Storage.TibiaTales.TheExterminator) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.TibiaTales.TheExterminator) == 1 then
 			npcHandler:say('You MUST find that slime pool immediately or life here in Carlin will not be the same anymore.', cid)
-		elseif player:getStorageValue(Storage.TibiaTales.TheExterminator) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.TibiaTales.TheExterminator) == 2 then
 			local itemId = {2150, 2149, 2147, 2146}
 			for i = 1, #itemId do
 				player:addItem(itemId[i], 1)
 			end
-			player:setStorageValue(Storage.TibiaTales.TheExterminator, 3)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.TheExterminator, 3)
 			npcHandler:say('You did it! Even if only few of the Carliners will ever know about that, you saved all of their lives. Here, take this as a reward. Farewell!', cid)
 		else
 			npcHandler:say('Maybe the guards have something to do for you or know someone who could need some help.', cid)
@@ -47,7 +47,7 @@ local function creatureSayCallback(cid, type, msg)
 			player:addItem(4839, 1)
 		elseif npcHandler.topic[cid] == 2 then
 			player:addItem(8205, 1)
-			player:setStorageValue(Storage.TibiaTales.TheExterminator, 1)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.TheExterminator, 1)
 			npcHandler:say({
 				'I knew I could count on you. Take this highly intensified vermin poison. In my vision, I saw some kind of \'pool\' where these slimes came from. ...',
 				'Pour the poison in the water to stop the demise of Carlin. Tell me about your mission after you fulfilled your task.'

@@ -34,14 +34,14 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	if msgcontains(msg, "amulet") then
-		if player:getStorageValue(Storage.SweetyCyclops.AmuletStatus) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus) < 1 then
 			npcHandler:say("Me can do unbroken but Big Ben want gold 5000 and Big Ben need a lil' time to make it unbroken. Yes or no??", cid)
 			npcHandler.topic[cid] = 9
-		elseif player:getStorageValue(Storage.SweetyCyclops.AmuletStatus) == 1 then
-			if player:getStorageValue(Storage.SweetyCyclops.AmuletTimer) + 24 * 60 * 60 < os.time() then
+		elseif player:getStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletTimer) + 24 * 60 * 60 < os.time() then
 				npcHandler:say("Ahh, lil' one wants amulet. Here! Have it! Mighty, mighty amulet lil' one has. Don't know what but mighty, mighty it is!!!", cid)
 				player:addItem(8266, 1)
-				player:setStorageValue(Storage.SweetyCyclops.AmuletStatus, 2)
+				player:setStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus, 2)
 			else
 				npcHandler:say("Me need more time!!!", cid)
 			end
@@ -54,13 +54,13 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 2 then
 			npcHandler:say("Me need gift for woman. We dance, so me want to give her bast skirt. But she big is. So I need many to make big one. Bring three okay? Me wait.", cid)
 			npcHandler.topic[cid] = 0
-			player:setStorageValue(Storage.FriendsandTraders.DefaultStart, 1)
-			player:setStorageValue(Storage.FriendsandTraders.TheSweatyCyclops, 1)
+			player:setStorageValue(PlayerStorageKeys.FriendsandTraders.DefaultStart, 1)
+			player:setStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops, 1)
 		elseif npcHandler.topic[cid] == 3 then
 			if player:removeItem(3983, 3) then
 				npcHandler:say("Good good! Woman happy will be. Now me happy too and help you.", cid)
 				npcHandler.topic[cid] = 0
-				player:setStorageValue(Storage.FriendsandTraders.TheSweatyCyclops, 2)
+				player:setStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops, 2)
 			end
 		-- Crown Armor
 		elseif npcHandler.topic[cid] == 4 then
@@ -113,14 +113,14 @@ local function creatureSayCallback(cid, type, msg)
 				player:removeItem(8264, 1)
 				player:removeItem(8265, 1)
 				player:removeMoney(5000)
-				player:setStorageValue(Storage.SweetyCyclops.AmuletTimer, os.time())
-				player:setStorageValue(Storage.SweetyCyclops.AmuletStatus, 1)
+				player:setStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletTimer, os.time())
+				player:setStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus, 1)
 				npcHandler:say("Well, well, I do that! Big Ben makes lil' amulet unbroken with big hammer in big hands! No worry! Come back after sun hits the horizon 24 times and ask me for amulet.", cid)
 				npcHandler.topic[cid] = 0
 			end
 		elseif npcHandler.topic[cid] == 11 then
 			if player:removeItem(5880, 1) then
-				player:setStorageValue(Storage.hiddenCityOfBeregar.GearWheel, player:getStorageValue(Storage.hiddenCityOfBeregar.GearWheel) + 1)
+				player:setStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.GearWheel, player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.GearWheel) + 1)
 				player:addItem(9690, 1)
 			else
 				npcHandler:say("Lil' one does not have any iron ores.", cid)
@@ -130,66 +130,66 @@ local function creatureSayCallback(cid, type, msg)
 
 	-- Crown Armor
 	elseif msgcontains(msg, "uth'kean") then
-		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Very noble. Shiny. Me like. But breaks so fast. Me can make from shiny armour. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 1 then
 			npcHandler:say("Lil' one bring three bast skirts?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 2 then
 			npcHandler:say("Very noble. Shiny. Me like. But breaks so fast. Me can make from shiny armour. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 4
 		end
 	-- Dragon Shield
 	elseif msgcontains(msg, "uth'lokr") then
-		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Firy steel it is. Need green ones' breath to melt. Or red even better. Me can make from shield. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 1 then
 			npcHandler:say("Lil' one bring three bast skirts?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 2 then
 			npcHandler:say("Firy steel it is. Need green ones' breath to melt. Or red even better. Me can make from shield. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 5
 		end
 	-- Devil Helmet
 	elseif msgcontains(msg, "za'ralator") then
-		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Hellsteel is. Cursed and evil. Dangerous to work with. Me can make from evil helmet. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 1 then
 			npcHandler:say("Lil' one bring three bast skirts?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 2 then
 			npcHandler:say("Hellsteel is. Cursed and evil. Dangerous to work with. Me can make from evil helmet. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 6
 		end
 	-- Giant Sword
 	elseif msgcontains(msg, "uth'prta") then
-		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Good iron is. Me friends use it much for fight. Me can make from weapon. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 1 then
 			npcHandler:say("Lil' one bring three bast skirts?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 2 then
 			npcHandler:say("Good iron is. Me friends use it much for fight. Me can make from weapon. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 7
 		end
 	-- Soul Orb
 	elseif msgcontains(msg, "soul orb") then
-		if player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) < 1 then
 			npcHandler:say("Uh. Me can make some nasty lil' bolt from soul orbs. Lil' one want to trade all?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 1 then
 			npcHandler:say("Lil' one bring three bast skirts?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.FriendsandTraders.TheSweatyCyclops) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.FriendsandTraders.TheSweatyCyclops) == 2 then
 			npcHandler:say("Uh. Me can make some nasty lil' bolt from soul orbs. Lil' one want to trade all?", cid)
 			npcHandler.topic[cid] = 8
 		end
 	elseif msgcontains(msg, "gear wheel") then
-		if player:getStorageValue(Storage.hiddenCityOfBeregar.GoingDown) > 0 and player:getStorageValue(Storage.hiddenCityOfBeregar.GearWheel) > 3 then
+		if player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.GoingDown) > 0 and player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.GearWheel) > 3 then
 			npcHandler:say("Uh. Me can make some gear wheel from iron ores. Lil' one want to trade?", cid)
 			npcHandler.topic[cid] = 11
 		end

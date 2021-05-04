@@ -30,7 +30,7 @@ function onStepIn(creature, item, position, fromPosition)
 
 		position:sendMagicEffect(CONST_ME_TELEPORT)
 
-		if Game.getStorageValue(GlobalStorage.FuryGates) ~= gate.value then
+		if Game.getStorageValue(GlobalStorageKeys.FuryGates) ~= gate.value then
 			player:teleportTo(gate.position)
 			gate.position:sendMagicEffect(CONST_ME_TELEPORT)
 			return true
@@ -47,7 +47,7 @@ function onStepIn(creature, item, position, fromPosition)
 		player:teleportTo(destination)
 		destination:sendMagicEffect(CONST_ME_FIREAREA)
 	else
-		local destination = exitPositions[Game.getStorageValue(GlobalStorage.FuryGates)]
+		local destination = exitPositions[Game.getStorageValue(GlobalStorageKeys.FuryGates)]
 		if not destination then
 			return true
 		end

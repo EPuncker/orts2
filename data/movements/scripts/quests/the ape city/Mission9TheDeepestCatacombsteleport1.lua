@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheApeCity.Questline) >= 17 then
+	if player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline) >= 17 then
 		player:teleportTo(Position(32749, 32536, 10))
 	else
 		player:teleportTo(fromPosition)

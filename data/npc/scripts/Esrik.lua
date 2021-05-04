@@ -119,14 +119,14 @@ local function getTable(player)
 		}
 	}
 
-	if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 3 then
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.TomeofKnowledge) >= 3 then
 		-- 3 tomes
 		for i = 1, #tomes[1] do
 			itemsList[#itemsList] = tomes[1][i]
 		end
 	end
 
-	if player:getStorageValue(Storage.TheNewFrontier.TomeofKnowledge) >= 9 then
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.TomeofKnowledge) >= 9 then
 		-- 9 tomes
 		for i = 1, #tomes[2] do
 			itemsList[#itemsList] = tomes[2][i]

@@ -5,7 +5,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.WrathoftheEmperor.Mission10) < 2 or not player:hasBlessing(1) then
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission10) < 2 or not player:hasBlessing(1) then
 		player:teleportTo(fromPosition)
 		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
 		return true

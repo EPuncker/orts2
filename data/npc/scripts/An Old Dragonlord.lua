@@ -17,7 +17,7 @@ npcHandler:addModule(VoiceModule:new(voices))
 
 local function greetCallback(cid)
 	local player = Player(cid)
-	if player:getStorageValue(Storage.Dragonfetish) == 1 then
+	if player:getStorageValue(PlayerStorageKeys.Dragonfetish) == 1 then
 		npcHandler:say('LEAVE THE DRAGONS\' CEMETERY AT ONCE!', cid)
 		return false
 	end
@@ -27,7 +27,7 @@ local function greetCallback(cid)
 		return false
 	end
 
-	player:setStorageValue(Storage.Dragonfetish, 1)
+	player:setStorageValue(PlayerStorageKeys.Dragonfetish, 1)
 	player:addItem(2319, 1)
 	npcHandler:say('AHHH MUSHRRROOOMSSS! NOW MY PAIN WILL BE EASSSED FOR A WHILE! TAKE THISS AND LEAVE THE DRAGONSSS\' CEMETERY AT ONCE!', cid)
 	return false

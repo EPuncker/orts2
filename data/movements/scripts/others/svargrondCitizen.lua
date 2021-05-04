@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.BarbarianTest.Mission03) == 3 then
+	if player:getStorageValue(PlayerStorageKeys.BarbarianTest.Mission03) == 3 then
 		player:teleportTo(Position(32212, 31131, 5))
 	else
 		player:teleportTo(Position(32210, 31134, 7))

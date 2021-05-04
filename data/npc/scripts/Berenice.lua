@@ -15,7 +15,7 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.ExplorerSociety.QuestLine) > 34 then
+		if player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 34 then
 			npcHandler:say("The most important mission we currently have is an expedition to Calassa.", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -25,10 +25,10 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 4 then
 			npcHandler:say("Captain Max will bring you to Calassa whenever you are ready. Please try to retrieve the missing logbook which must be in one of the sunken shipwrecks.", cid)
-			player:setStorageValue(Storage.ExplorerSociety.QuestLine, 63)
-			player:setStorageValue(Storage.ExplorerSociety.calassaDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine, 63)
+			player:setStorageValue(PlayerStorageKeys.ExplorerSociety.calassaDoor, 1)
 			npcHandler.topic[cid] = 0
-		elseif player:getStorageValue(Storage.ExplorerSociety.QuestLine) == 64 then
+		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) == 64 then
 			npcHandler:say("OH! So you have safely returned from Calassa! Congratulations, were you able to retrieve the logbook?", cid)
 			npcHandler.topic[cid] = 5
 		end
@@ -50,7 +50,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 4
 		elseif npcHandler.topic[cid] == 5 then
 			if player:removeItem(6124, 1) then
-				player:setStorageValue(Storage.ExplorerSociety.QuestLine, 65)
+				player:setStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine, 65)
 				npcHandler:say("Yes! That's the logbook! However... it seems that the water has already destroyed many of the pages. This is not your fault though, you did your best. Thank you!", cid)
 				npcHandler.topic[cid] = 0
 			end

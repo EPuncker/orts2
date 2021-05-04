@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheShatteredIsles.TheCounterspell) ~= 4 then
+	if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.TheCounterspell) ~= 4 then
 		position:sendMagicEffect(CONST_ME_ENERGYHIT)
 
 		position.x = position.x + 2

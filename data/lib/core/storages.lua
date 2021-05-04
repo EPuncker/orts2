@@ -1,9 +1,4 @@
--- Reserved storages:
--- 300000 to 301000+ reserved for achievements
--- 20000 to 21000+ reserved for achievement progress
--- 10000000 to 20000000 reserved for outfits and mounts on source
-
-Storage = {
+PlayerStorageKeys = {
 	SweetyCyclops = {
 		AmuletTimer = 48,
 		AmuletStatus = 49
@@ -980,6 +975,15 @@ Storage = {
 	},
 
 	EruaranGreeting = 3250,
+	delayLargeSeaShell = 30019,
+	firstRod = 30020,
+	delayWallMirror = 30021,
+	madSheepSummon = 30023,
+	crateUsable = 30024,
+	nailCaseUseCount = 30031,
+	insectoidCell = 30033,
+	vortexTamer = 30034,
+	mutatedPumpkin = 30035,
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
@@ -987,7 +991,7 @@ Storage = {
 	achievementsCounter = 20000,
 }
 
-GlobalStorage = {
+GlobalStorageKeys = {
 	FuryGates = 100,
 
 	TheirMastersVoice = {
@@ -1051,18 +1055,6 @@ GlobalStorage = {
 
 	NaginataStone = 50058,
 	SwordOfFury = 5635
-}
-
-PlayerStorageKeys = {
-	delayLargeSeaShell = 30019,
-	firstRod = 30020,
-	delayWallMirror = 30021,
-	madSheepSummon = 30023,
-	crateUsable = 30024,
-	nailCaseUseCount = 30031,
-	insectoidCell = 30033,
-	vortexTamer = 30034,
-	mutatedPumpkin = 30035,
 }
 
 -- Checking for duplicate storages:

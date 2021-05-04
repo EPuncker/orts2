@@ -3,7 +3,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheInquisition.Questline) == 18 then
+	if player:getStorageValue(PlayerStorageKeys.TheInquisition.Questline) == 18 then
 		player:teleportTo(toPosition, true)
 		item:transform(5115)
 	end

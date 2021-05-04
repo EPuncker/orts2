@@ -14,10 +14,10 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if(msgcontains(msg, "report")) then
-		if(player:getStorageValue(Storage.InServiceofYalahar.Questline) == 8 or player:getStorageValue(Storage.InServiceofYalahar.Questline) == 12) then
+		if(player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) == 8 or player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) == 12) then
 			npcHandler:say("Nobody knows the trouble I've seen .. <tells a quite detailed report>. ", cid)
-			player:setStorageValue(Storage.InServiceofYalahar.Questline, player:getStorageValue(Storage.InServiceofYalahar.Questline) + 1)
-			player:setStorageValue(Storage.InServiceofYalahar.Mission02, player:getStorageValue(Storage.InServiceofYalahar.Mission02) + 1) -- StorageValue for Questlog "Mission 02: Watching the Watchmen"
+			player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline, player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) + 1)
+			player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission02, player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission02) + 1) -- StorageValue for Questlog "Mission 02: Watching the Watchmen"
 			npcHandler.topic[cid] = 0
 		end
 	elseif(msgcontains(msg, "pass")) then

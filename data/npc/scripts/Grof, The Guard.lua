@@ -12,16 +12,16 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	local player = Player(cid)
-	if msgcontains(msg, "trouble") and player:getStorageValue(Storage.TheInquisition.GrofGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
+	if msgcontains(msg, "trouble") and player:getStorageValue(PlayerStorageKeys.TheInquisition.GrofGuard) < 1 and player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) ~= -1 then
 		npcHandler:say("I think it'll rain soon and I left some laundry out for drying.", cid)
 		npcHandler.topic[cid] = 1
 	elseif msgcontains(msg, "authorities") then
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("Yes I'm pretty sure they have failed to send the laundry police to take care of it, you fool.", cid)
 			npcHandler.topic[cid] = 0
-			if player:getStorageValue(Storage.TheInquisition.GrofGuard) < 1 then
-				player:setStorageValue(Storage.TheInquisition.GrofGuard, 1)
-				player:setStorageValue(Storage.TheInquisition.Mission01, player:getStorageValue(Storage.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
+			if player:getStorageValue(PlayerStorageKeys.TheInquisition.GrofGuard) < 1 then
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.GrofGuard, 1)
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission01, player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
 				player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 			end
 		end

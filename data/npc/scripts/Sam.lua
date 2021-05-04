@@ -19,17 +19,17 @@ local function creatureSayCallback(cid, type, msg)
 	if msgcontains(msg, 'adorn')
 			or msgcontains(msg, 'outfit')
 			or msgcontains(msg, 'addon') then
-		local addonProgress = player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmet)
+		local addonProgress = player:getStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet)
 		if addonProgress == 5 then
-			player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 6)
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 6)
-			player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmetTimer, os.time() + 7200)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 6)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 6)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmetTimer, os.time() + 7200)
 			npcHandler:say('Oh, Gregor sent you? I see. It will be my pleasure to adorn your helmet. Please give me some time to finish it.', cid)
 		elseif addonProgress == 6 then
-			if player:getStorageValue(Storage.OutfitQuest.Knight.AddonHelmetTimer) < os.time() then
-				player:setStorageValue(Storage.OutfitQuest.Knight.MissionHelmet, 0)
-				player:setStorageValue(Storage.OutfitQuest.Knight.AddonHelmet, 7)
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmetTimer) < os.time() then
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.MissionHelmet, 0)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Knight.AddonHelmet, 7)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) - 1))
 				player:addOutfitAddon(131, 2)
 				player:addOutfitAddon(139, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
@@ -44,14 +44,14 @@ local function creatureSayCallback(cid, type, msg)
 		end
 
 	elseif msgcontains(msg, "old backpack") then
-		if player:getStorageValue(Storage.SamsOldBackpack) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.SamsOldBackpack) < 1 then
 			npcHandler:say("What? Are you telling me you found my old adventurer's backpack that I lost years ago??", cid)
 			npcHandler.topic[cid] = 1
 		end
 
 	elseif msgcontains(msg, '2000 steel shields') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) ~= 29
-				or player:getStorageValue(Storage.WhatAFoolishQuest.Contract) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) ~= 29
+				or player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Contract) == 2 then
 			npcHandler:say('My offers are weapons, armors, helmets, legs, and shields. If you\'d like to see my offers, ask me for a {trade}.', cid)
 			return true
 		end
@@ -60,7 +60,7 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler.topic[cid] = 2
 
 	elseif msgcontains(msg, 'contract') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Contract) == 0 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Contract) == 0 then
 			npcHandler:say('Have you signed the contract?', cid)
 			npcHandler.topic[cid] = 4
 		end
@@ -72,7 +72,7 @@ local function creatureSayCallback(cid, type, msg)
 					"Thank you very much! This brings back good old memories! Please, as a reward, travel to Kazordoon and ask my old friend Kroox to provide you a special dwarven armor. ...",
 					"I will mail him about you immediately. Just tell him, his old buddy Sam is sending you."
 				}, cid)
-				player:setStorageValue(Storage.SamsOldBackpack, 1)
+				player:setStorageValue(PlayerStorageKeys.SamsOldBackpack, 1)
 				player:addAchievement('Backpack Tourist')
 			else
 				npcHandler:say("You don't have it...", cid)
@@ -83,7 +83,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 3
 		elseif npcHandler.topic[cid] == 3 then
 			player:addItem(7492, 1)
-			player:setStorageValue(Storage.WhatAFoolishQuest.Contract, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Contract, 1)
 			npcHandler:say('Fine! Here is the contract. Please sign it. Talk to me about it again when you\'re done.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 4 then
@@ -93,7 +93,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.Contract, 2)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Contract, 2)
 			npcHandler:say('Excellent! I will start working right away! Now that I am going to be rich, I will take the opportunity to tell some people what I REALLY think about them!', cid)
 			npcHandler.topic[cid] = 0
 		end

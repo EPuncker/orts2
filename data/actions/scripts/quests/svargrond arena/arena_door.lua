@@ -10,7 +10,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.SvargrondArena.Arena) < 1 then
+	if player:getStorageValue(PlayerStorageKeys.SvargrondArena.Arena) < 1 then
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'This door seems to be sealed against unwanted intruders.')
 		return true
 	end
@@ -28,7 +28,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
 	-- Arena entrance doors
 	else
-		if player:getStorageValue(Storage.SvargrondArena.Pit) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.SvargrondArena.Pit) ~= 1 then
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'This door seems to be sealed against unwanted intruders.')
 			return true
 		end

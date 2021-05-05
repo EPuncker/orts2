@@ -3,8 +3,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.GravediggerOfDrefia.Mission31) == 1 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission32) < 1 then
-		player:setStorageValue(Storage.GravediggerOfDrefia.Mission32, 1)
+	if player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission31) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission32) < 1 then
+		player:setStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission32, 1)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Reading the parchment, you identify three human tallow candles and pocket them.')
 		player:addItem(21248, 3)
 		item:remove(1)

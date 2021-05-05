@@ -14,7 +14,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.TibiaTales.AnInterestInBotany) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.TibiaTales.AnInterestInBotany) < 1 then
 			npcHandler.topic[cid] = 1
 				npcHandler:say({
 					"Why yes, there is indeed some minor issue I could need your help with. I was always a friend of nature and it was not recently I discovered the joys of plants, growths, of all the flora around us. ...",
@@ -27,15 +27,15 @@ local function creatureSayCallback(cid, type, msg)
 					"Once you find what I need, best use a knife to carefully cut and gather a leaf or a scrap of their integument and press it directly under their appropriate entry into my botanical almanach. ...",
 					"Simply return to me after you have done that and we will discuss your reward. What do you say, are you in?"
 				}, cid)
-		elseif player:getStorageValue(Storage.TibiaTales.AnInterestInBotany) == 3 then
+		elseif player:getStorageValue(PlayerStorageKeys.TibiaTales.AnInterestInBotany) == 3 then
 			npcHandler.topic[cid] = 2
 			npcHandler:say("Well fantastic work, you gathered both samples! Now I can continue my work on the almanach, thank you very much for your help indeed. Can I take a look at my book please?", cid)
 		end
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
-			player:setStorageValue(Storage.TibiaTales.DefaultStart, 1)
-			player:setStorageValue(Storage.TibiaTales.AnInterestInBotany, 1)
-			player:setStorageValue(Storage.TibiaTales.AnInterestInBotanyChest, 0)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.DefaultStart, 1)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.AnInterestInBotany, 1)
+			player:setStorageValue(PlayerStorageKeys.TibiaTales.AnInterestInBotanyChest, 0)
 			npcHandler:say("Yes? Yes! That's the enthusiasm I need! Remember to bring a sharp knife to gather the samples, plants - even mutated deformed plants - are very sensitive you know. Off you go and be careful out there, Zao is no place for the feint hearted mind you.", cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 2 then
@@ -43,7 +43,7 @@ local function creatureSayCallback(cid, type, msg)
 				player:addItem(12656, 1)
 				player:addItem(2152, 10)
 				player:addExperience(3000, true)
-				player:setStorageValue(Storage.TibiaTales.AnInterestInBotany, 4)
+				player:setStorageValue(PlayerStorageKeys.TibiaTales.AnInterestInBotany, 4)
 				npcHandler:say({
 					"Ah, thank you. Now look at that texture and fine colour, simply marvellous. ...",
 					"I hope the sun in the steppe did not exhaust you too much? Shellshock. A dangerous foe in the world of field science and exploration. ...",

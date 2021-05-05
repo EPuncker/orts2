@@ -11,20 +11,20 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	local sporeCount = player:getStorageValue(Storage.BigfootBurden.SporeCount)
-	if sporeCount == 4 or player:getStorageValue(Storage.BigfootBurden.MissionSporeGathering) ~= 1 then
+	local sporeCount = player:getStorageValue(PlayerStorageKeys.BigfootBurden.SporeCount)
+	if sporeCount == 4 or player:getStorageValue(PlayerStorageKeys.BigfootBurden.MissionSporeGathering) ~= 1 then
 		return false
 	end
 
 	if target.itemid ~= spores then
-		player:setStorageValue(Storage.BigfootBurden.SporeCount, 0)
+		player:setStorageValue(PlayerStorageKeys.BigfootBurden.SporeCount, 0)
 		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have gathered the wrong spores. You ruined your collection.')
 		item:transform(18328)
 		toPosition:sendMagicEffect(CONST_ME_POFF)
 		return true
 	end
 
-	player:setStorageValue(Storage.BigfootBurden.SporeCount, sporeCount + 1)
+	player:setStorageValue(PlayerStorageKeys.BigfootBurden.SporeCount, sporeCount + 1)
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have gathered the correct spores.')
 	item:transform(item.itemid + 1)
 	toPosition:sendMagicEffect(CONST_ME_GREEN_RINGS)

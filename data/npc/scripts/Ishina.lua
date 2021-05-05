@@ -20,7 +20,7 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 
-		if player:getStorageValue(Storage.OutfitQuest.firstOrientalAddon) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon) < 1 then
 			npcHandler:say('My jewelled belt? Of course I could make one for you, but I have a small request. Would you fulfil a task for me?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 
-		if player:getStorageValue(Storage.OutfitQuest.firstOrientalAddon) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon) == 1 then
 			npcHandler:say('Have you brought me a mermaid\'s comb?', cid)
 			npcHandler.topic[cid] = 3
 		end
@@ -42,8 +42,8 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
-			player:setStorageValue(Storage.OutfitQuest.firstOrientalAddon, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon, 1)
 			npcHandler:say('Yay! I will wait for you to return with a mermaid\'s comb then.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
@@ -53,7 +53,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.firstOrientalAddon, 2)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.firstOrientalAddon, 2)
 			player:addOutfitAddon(150, 1)
 			player:addOutfitAddon(146, 1)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

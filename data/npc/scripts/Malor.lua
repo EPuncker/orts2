@@ -22,9 +22,9 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03)
+	local missionProgress = player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03)
 	if msgcontains(msg, 'mission') then
-		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission02) == 3 then
+		if player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission02) == 3 then
 			if missionProgress < 1 then
 				npcHandler:say({
 					'I guess this is the first time I entrust a human with a mission. And such an important mission, too. But well, we live in hard times, and I am a bit short of adequate staff. ...',
@@ -59,7 +59,7 @@ local function creatureSayCallback(cid, type, msg)
 				'Once you have found the lamp you must enter Ashta\'daramai again. Sneak into Gabel\'s personal chambers and exchange his sleeping lamp with Fa\'hradin\'s lamp! ...',
 				'If you succeed, the war could be over one night later!'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission03, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03, 1)
 
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Your choice.', cid)
@@ -76,8 +76,8 @@ local function creatureSayCallback(cid, type, msg)
 				'But that\'s in the future. For now, I will confine myself to give you the permission to trade with my people whenever you want to. ...',
 				'Farewell, human!'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission03, 3)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.DoorToMaridTerritory, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03, 3)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.DoorToMaridTerritory, 1)
 			player:addAchievement('Efreet Ally')
 			addEvent(releasePlayer, 1000, cid)
 

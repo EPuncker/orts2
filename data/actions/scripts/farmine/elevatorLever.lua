@@ -24,9 +24,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	if item.actionid == 9120 then
-		if creature:getStorageValue(Storage.TheNewFrontier.Mission05) == 7 then
+		if creature:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission05) == 7 then
 			targetPosition.z = 10
-		elseif creature:getStorageValue(Storage.TheNewFrontier.Mission03) == 3 then
+		elseif creature:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission03) == 3 then
 			targetPosition.z = 12
 		end
 	end

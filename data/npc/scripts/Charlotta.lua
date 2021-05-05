@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "errand") then
-		if player:getStorageValue(Storage.TheShatteredIsles.TheErrand) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.TheErrand) == 1 then
 			npcHandler:say("Oh, so you brought some gold from Eleonore to me?", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -21,7 +21,7 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 1 then
 			if player:removeMoney(200) then
 				npcHandler:say("Hmm, it seems that Eleonore does trust you. Perhaps she is even right. However. Since we need some help right now I guess we can't be too picky. Return to Eleonore and tell her the secret password: 'peg leg'. She will tell you more about her problem.", cid)
-				player:setStorageValue(Storage.TheShatteredIsles.TheErrand, 2)
+				player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.TheErrand, 2)
 				npcHandler.topic[cid] = 2
 			else
 				npcHandler:say("You don't have enough...", cid)

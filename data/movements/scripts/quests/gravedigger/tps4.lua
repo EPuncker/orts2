@@ -7,7 +7,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if item.actionid == 4541 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission72) == 1 then
+	if item.actionid == 4541 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission72) == 1 then
 		player:teleportTo(sacrifice2)
 	else
 		player:teleportTo(sacrifice)

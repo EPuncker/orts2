@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue(Storage.AnnihilatorDone) ~= 1 then
+	if player:getStorageValue(PlayerStorageKeys.AnnihilatorDone) ~= 1 then
 		if item.itemid == 5114 then
 			player:teleportTo(toPosition, true)
 			item:transform(item.itemid + 1)

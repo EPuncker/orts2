@@ -8,7 +8,7 @@ function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)
 function onThink()				npcHandler:onThink()					end
 
 local function greetCallback(cid)
-	if Player(cid):getStorageValue(Storage.TheApeCity.Questline) < 12 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.TheApeCity.Questline) < 12 then
 		npcHandler:setMessage(MESSAGE_GREET, 'Oh! Hello! Hello! Did not notice! So {busy}.')
 	else
 		npcHandler:setMessage(MESSAGE_GREET, 'Be greeted, friend of the ape people. If you want to {trade}, just ask for my offers. If you are injured, ask for healing.')
@@ -31,14 +31,14 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local questProgress = player:getStorageValue(Storage.TheApeCity.Questline)
+	local questProgress = player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline)
 	if msgcontains(msg, 'mission') then
 		if questProgress < 1 then
 			npcHandler:say('These are dire times for our people. Problems plenty are in this times. But me people not grant trust easy. Are you willing to prove you friend of ape people?', cid)
 			npcHandler.topic[cid] = 1
 
 		elseif questProgress == 1 then
-			if player:getStorageValue(Storage.QuestChests.WhisperMoss) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.QuestChests.WhisperMoss) == 1 then
 				npcHandler:say('Oh, you brought me whisper moss? Good hairless ape you are! Can me take it?', cid)
 				npcHandler.topic[cid] = 3
 			else
@@ -50,7 +50,7 @@ local function creatureSayCallback(cid, type, msg)
 				'Whisper moss strong is, but me need liquid that humans have to make it work ...',
 				'Our raiders brought it from human settlement, it\'s called cough syrup. Go ask healer there for it.'
 			}, cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 3)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 3)
 
 		elseif questProgress == 3 then
 			npcHandler:say('You brought me that cough syrup from human healer me asked for?', cid)
@@ -75,7 +75,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 8
 
 		elseif questProgress == 7 then
-			if player:getStorageValue(Storage.TheApeCity.ParchmentDecyphering) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.TheApeCity.ParchmentDecyphering) == 1 then
 				npcHandler:say('Ah yes, you read the signs in tomb? Good! May me look into your mind to see what you saw?', cid)
 				npcHandler.topic[cid] = 9
 			else
@@ -114,9 +114,9 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 14
 
 		elseif questProgress == 13 then
-			if player:getStorageValue(Storage.TheApeCity.Casks) == 3 then
+			if player:getStorageValue(PlayerStorageKeys.TheApeCity.Casks) == 3 then
 				npcHandler:say('You do please Hairycles again, friend. Me hope madness will not spread further now. Perhaps you are ready for other mission.', cid)
-				player:setStorageValue(Storage.TheApeCity.Questline, 14)
+				player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 14)
 			else
 				npcHandler:say('Please destroy three casks in the complex beneath Banuta, so my people will come to senses again.', cid)
 			end
@@ -134,7 +134,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 15
 
 		elseif questProgress == 15 then
-			if player:getStorageValue(Storage.TheApeCity.HolyApeHair) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.TheApeCity.HolyApeHair) == 1 then
 				npcHandler:say('You brought hair of holy ape?', cid)
 				npcHandler.topic[cid] = 16
 			else
@@ -151,13 +151,13 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 17
 
 		elseif questProgress == 17 then
-			if player:getStorageValue(Storage.TheApeCity.SnakeDestroyer) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.TheApeCity.SnakeDestroyer) == 1 then
 				npcHandler:say({
 					'Finally my people are safe! You have done incredible good for ape people and one day even me brethren will recognise that. ...',
 					'I wish I could speak for all when me call you true friend but my people need time to get accustomed to change. ...',
 					'Let us hope one day whole Banuta will greet you as a friend. Perhaps you want to check me offers for special friends... or shamanic powers.'
 				}, cid)
-				player:setStorageValue(Storage.TheApeCity.Questline, 18)
+				player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 18)
 				player:addAchievement('Friend of the Apes')
 			else
 				npcHandler:say('Me know its much me asked for but go into the deepest catacombs under Banuta and destroy the monument of the serpent god.', cid)
@@ -169,7 +169,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif msgcontains(msg, 'background') then
 		if questProgress == 1
-				and player:getStorageValue(Storage.QuestChests.WhisperMoss) ~= 1 then
+				and player:getStorageValue(PlayerStorageKeys.QuestChests.WhisperMoss) ~= 1 then
 			npcHandler:say({
 				'So listen, little ape was struck by plague. Hairycles not does know what plague it is. That is strange. Hairycles should know. But Hairycles learnt lots and lots ...',
 				'Me sure to make cure so strong to drive away all plague. But to create great cure me need powerful components ...',
@@ -181,7 +181,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	elseif msgcontains(msg, 'outfit') or msgcontains(msg, 'shamanic') then
 		if questProgress == 18 then
-			if player:getStorageValue(Storage.TheApeCity.ShamanOutfit) ~= 1 then
+			if player:getStorageValue(PlayerStorageKeys.TheApeCity.ShamanOutfit) ~= 1 then
 				npcHandler:say('Me truly proud of you, friend. You learn many about plants, charms and ape people. Me want grant you shamanic power now. You ready?', cid)
 				npcHandler.topic[cid] = 18
 			else
@@ -210,7 +210,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 
 	elseif msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31 and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Hairycles) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31 and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Hairycles) ~= 1 then
 			npcHandler:say('You bring me a stinking cookie???', cid)
 			npcHandler.topic[cid] = 19
 		end
@@ -233,9 +233,9 @@ local function creatureSayCallback(cid, type, msg)
 				'Me know they hoard some in their underground lair. My people raided dworcs often before humans came. So we know the moss is hidden in east of upper level of dworc lair ...',
 				'You go there and take good moss from evil dworcs. Talk with me about mission when having moss.'
 			}, cid)
-			player:setStorageValue(Storage.TheApeCity.Started, 1)
-			player:setStorageValue(Storage.TheApeCity.Questline, 1)
-			player:setStorageValue(Storage.TheApeCity.DworcDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Started, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.DworcDoor, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Hairycles thought better of you.', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -246,12 +246,12 @@ local function creatureSayCallback(cid, type, msg)
 		if msgcontains(msg, 'yes') then
 			if not player:removeItem(4838, 1) then
 				npcHandler:say('Stupid, you no have the moss me need. Go get it. It\'s somewhere in dworc lair. If you lost it, they might restocked it meanwhile. If you need to hear background of all again, ask Hairycles for {background}.', cid)
-				player:setStorageValue(Storage.QuestChests.WhisperMoss, -1)
+				player:setStorageValue(PlayerStorageKeys.QuestChests.WhisperMoss, -1)
 				return true
 			end
 
 			npcHandler:say('Ah yes! That\'s it. Thank you for bringing mighty whisper moss to Hairycles. It will help but still much is to be done. Just ask for other mission if you ready.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 2)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 2)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Strange being you are! Our people need help!', cid)
 		end
@@ -265,7 +265,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			npcHandler:say('You so good! Brought syrup to me! Thank you, will prepare cure now. Just ask for {mission} if you want help again.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 4)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 4)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Please hurry, urgent it is!', cid)
 		end
@@ -288,8 +288,8 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 6 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Good thing that is! Report about your mission when have scroll.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 5)
-			player:setStorageValue(Storage.TheApeCity.ChorDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 5)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.ChorDoor, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -299,7 +299,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 7 then
 		if msgcontains(msg, 'yes') then
 			if not player:removeItem(5956, 1) then
-				if player:getStorageValue(Storage.QuestChests.OldParchment) == 1 then
+				if player:getStorageValue(PlayerStorageKeys.QuestChests.OldParchment) == 1 then
 					npcHandler:say('That\'s bad news. If you lost it, only way to get other is to kill holy serpents. But you can\'t go there so you must ask adventurers who can.', cid)
 				else
 					npcHandler:say('No! That not scroll me looking for. Silly hairless ape you are. Go to village of lizards and get it there on your own!', cid)
@@ -308,7 +308,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			npcHandler:say('You brought scroll with lizard text? Good! I will see what text tells me! Come back when ready for other mission.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 6)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 6)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('That\'s bad news. If you lost it, only way to get other is to kill holy serpents. But you can\'t go there so you must ask adventurers who can.', cid)
 		end
@@ -317,7 +317,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 8 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Good thing that is! Report about mission when you have read those signs.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 7)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 7)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -327,7 +327,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 9 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Oh, so clear is all now! Easy it will be to read the signs now! Soon we will know what to do! Thank you again! Ask for mission if you feel ready.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 8)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 8)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me need to see it in your mind, other there is no way to proceed.', cid)
@@ -337,7 +337,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 10 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('You brave hairless ape! Get me hydra egg. If you lose egg, you probably have to fight many, many hydras to get another.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 9)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 9)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -352,7 +352,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			npcHandler:say('Ah, the egg! Mighty warrior you be! Thank you. Hairycles will put it at safe place immediately.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 10)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 10)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Please hurry. Hairycles not knows when evil lizards strike again.', cid)
 		end
@@ -361,8 +361,8 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 12 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Long journey it will take, good luck to you.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 11)
-			player:setStorageValue(Storage.TheApeCity.FibulaDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 11)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.FibulaDoor, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Me expected better from you!', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -377,8 +377,8 @@ local function creatureSayCallback(cid, type, msg)
 			end
 
 			npcHandler:say('Incredible, you brought a witches\' cap! Now me can prepare mighty charm of life. Yet still other {missions} will await you, friend.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 12)
-			player:setStorageValue(Storage.TheApeCity.FibulaDoor, -1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 12)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.FibulaDoor, -1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Please try to find me a witches\' cap on Fibula.', cid)
 			addEvent(releasePlayer, 1000, cid)
@@ -388,8 +388,8 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 14 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Hairycles sure you will make it. Good luck, friend.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 13)
-			player:setStorageValue(Storage.TheApeCity.CasksDoor, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 13)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.CasksDoor, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Please reconsider.', cid)
 		end
@@ -398,7 +398,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 15 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Hairycles proud of you. Go and find holy hair. Good luck, friend.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 15)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 15)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Please reconsider.', cid)
 		end
@@ -408,12 +408,12 @@ local function creatureSayCallback(cid, type, msg)
 		if msgcontains(msg, 'yes') then
 			if not player:removeItem(4843, 1) then
 				npcHandler:say('You no have hair. You lost it? Go and look again.', cid)
-				player:setStorageValue(Storage.TheApeCity.HolyApeHair, -1)
+				player:setStorageValue(PlayerStorageKeys.TheApeCity.HolyApeHair, -1)
 				return true
 			end
 
 			npcHandler:say('Incredible! You got a hair of holy Bong! This will raise the spirit of my people. You are truly a friend. But one last mission awaits you.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 16)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 16)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('You no have hair. You lost it? Go and look again.', cid)
 		end
@@ -422,7 +422,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 17 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('Hairycles sure you will make it. Just use hammer on all that looks like snake or lizard. Tell Hairycles if you succeed with mission.', cid)
-			player:setStorageValue(Storage.TheApeCity.Questline, 17)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.Questline, 17)
 			player:addItem(4846, 1)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Me sad. Please reconsider.', cid)
@@ -434,7 +434,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Friend of the ape people! Take my gift and become me apprentice! Here is shaman clothing for you!', cid)
 			player:addOutfit(154)
 			player:addOutfit(158)
-			player:setStorageValue(Storage.TheApeCity.ShamanOutfit, 1)
+			player:setStorageValue(PlayerStorageKeys.TheApeCity.ShamanOutfit, 1)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Come back if change mind.', cid)
@@ -448,7 +448,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Hairycles, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Hairycles, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end

@@ -12,7 +12,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	local player = Player(cid)
-	if player:getStorageValue(Storage.postman.Mission03) ~= 1 then
+	if player:getStorageValue(PlayerStorageKeys.postman.Mission03) ~= 1 then
 		return true
 	end
 	if msgcontains(msg, "bill") then
@@ -24,7 +24,7 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 7 then
 			npcHandler:say("Ok, ok, I'll take it. I guess I have no other choice anyways. And now leave me alone in my misery please.", cid)
 			npcHandler.topic[cid] = 0
-			player:setStorageValue(Storage.postman.Mission03, 2)
+			player:setStorageValue(PlayerStorageKeys.postman.Mission03, 2)
 		end
 	elseif msgcontains(msg, "hat") then
 		if npcHandler.topic[cid] < 1 then

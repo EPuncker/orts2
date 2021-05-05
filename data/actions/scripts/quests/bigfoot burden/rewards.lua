@@ -43,8 +43,8 @@ local rewards = {
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.uid == 3147 then
-		if player:getStorageValue(Storage.BigfootBurden.WarzoneStatus) == 4 then
-			player:setStorageValue(Storage.BigfootBurden.WarzoneStatus, 5)
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.WarzoneStatus) == 4 then
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.WarzoneStatus, 5)
 			player:addItem(2137, 1)
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found some golden fruits.')
 		else

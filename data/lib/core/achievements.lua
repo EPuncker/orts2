@@ -521,7 +521,7 @@ function Player.hasAchievement(self, ach)
 		print("[!] -> Invalid achievement \"" .. ach .. "\".")
 		return false
 	end
-	return self:getStorageValue(Storage.achievementsBase + achievement.id) > 0
+	return self:getStorageValue(PlayerStorageKeys.achievementsBase + achievement.id) > 0
 end
 
 function Player.getAchievements(self)
@@ -548,7 +548,7 @@ function Player.addAchievement(self, ach, hideMsg)
 	end
 
 	if not self:hasAchievement(achievement.id) then
-		self:setStorageValue(Storage.achievementsBase + achievement.id, 1)
+		self:setStorageValue(PlayerStorageKeys.achievementsBase + achievement.id, 1)
 		if not hideMsg then
 			self:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Congratulations! You earned the achievement \"" .. achievement.name .. "\".")
 		end
@@ -570,7 +570,7 @@ function Player.removeAchievement(self, ach)
 	end
 
 	if self:hasAchievement(achievement.id) then
-		self:setStorageValue(Storage.achievementsBase + achievement.id, -1)
+		self:setStorageValue(PlayerStorageKeys.achievementsBase + achievement.id, -1)
 	end
 	return true
 end

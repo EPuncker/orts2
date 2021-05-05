@@ -29,14 +29,14 @@ function onKill(creature, target)
 		spectator:teleportTo(exitPosition[1])
 		exitPosition[1]:sendMagicEffect(CONST_ME_TELEPORT)
 		spectator:say('You have won! As new champion take the ancient armor as reward before you leave.', TALKTYPE_MONSTER_SAY)
-		if spectator:getStorageValue(Storage.TheNewFrontier.Questline) == 25 then
+		if spectator:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 25 then
 			-- Questlog: The New Frontier Quest 'Mission 09: Mortal Combat'
-			spectator:setStorageValue(Storage.TheNewFrontier.Mission09, 2)
-			spectator:setStorageValue(Storage.TheNewFrontier.Questline, 26)
+			spectator:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission09, 2)
+			spectator:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 26)
 		end
 	end
 
-	Game.setStorageValue(Storage.TheNewFrontier.Mission09, -1)
+	Game.setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission09, -1)
 	clearArena()
 	return true
 end

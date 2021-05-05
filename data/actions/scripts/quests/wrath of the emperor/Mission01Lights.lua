@@ -7,8 +7,8 @@ end
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if(item.uid == 3171) then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light01) ~= 1 then
-			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light01, 1)
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light01) ~= 1 then
+			Game.setStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light01, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light01, 0)
 			local pos = {
 				Position(33369, 31075, 8),
@@ -20,24 +20,24 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			end
 		end
 	elseif(item.uid == 3172) then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light02) ~= 1 then
-			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light02, 1)
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light02) ~= 1 then
+			Game.setStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light02, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light02, 0)
 			local pos = Position(33360, 31079, 8)
 			transformLamp(pos, 11449, 11463)
 			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
 		end
 	elseif(item.uid == 3173) then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light03) ~= 1 then
-			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light03, 1)
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light03) ~= 1 then
+			Game.setStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light03, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light03, 0)
 			local pos = Position(33346, 31074, 8)
 			transformLamp(pos, 11449, 11463)
 			addEvent(transformLamp, 20 * 1000, pos, 11463, 11449)
 		end
 	elseif(item.uid == 3174) then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light04) ~= 1 then
-			Game.setStorageValue(GlobalStorage.WrathOfTheEmperor.Light04, 1)
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light04) ~= 1 then
+			Game.setStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light04, 1)
 			addEvent(Game.setStorageValue, 20 * 1000, GlobalStorage.WrathOfTheEmperor.Light04, 0)
 			local wallItem, pos
 			for i = 1, 4 do

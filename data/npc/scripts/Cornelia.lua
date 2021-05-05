@@ -19,18 +19,18 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if table.contains({"addon", "armor"}, msg) then
-		if player:getStorageValue(Storage.OutfitQuest.WarriorShoulderAddon) == 5 then
-			player:setStorageValue(Storage.OutfitQuest.WarriorShoulderAddon, 6)
-			player:setStorageValue(Storage.OutfitQuest.WarriorShoulderTimer, os.time() + (player:getSex() == PLAYERSEX_FEMALE and 3600 or 7200))
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderAddon) == 5 then
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderAddon, 6)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderTimer, os.time() + (player:getSex() == PLAYERSEX_FEMALE and 3600 or 7200))
 			npcHandler:say('Ah, you must be the hero Trisha talked about. I\'ll prepare the shoulder spikes for you. Please give me some time to finish.', cid)
-		elseif player:getStorageValue(Storage.OutfitQuest.WarriorShoulderAddon) == 6 then
-			if player:getStorageValue(Storage.OutfitQuest.WarriorShoulderTimer) > os.time() then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderAddon) == 6 then
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderTimer) > os.time() then
 				npcHandler:say('I\'m not done yet. Please be as patient as you are courageous.', cid)
-			elseif player:getStorageValue(Storage.OutfitQuest.WarriorShoulderTimer) > 0 and player:getStorageValue(Storage.OutfitQuest.WarriorShoulderTimer) < os.time() then
+			elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderTimer) > 0 and player:getStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderTimer) < os.time() then
 				player:addOutfitAddon(142, 1)
 				player:addOutfitAddon(134, 1)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.WarriorShoulderAddon, 7)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.WarriorShoulderAddon, 7)
 				player:addAchievementProgress('Wild Warrior', 2)
 				npcHandler:say('Finished! Since you are a man, I thought you probably wanted two. Men always want that little extra status symbol. <giggles>', cid)
 			else

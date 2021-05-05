@@ -13,10 +13,10 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		target:transform(7175)
 		toPosition:sendMagicEffect(CONST_ME_STUN)
 	elseif item.itemid == 7175 then
-		if player:getStorageValue(Storage.BarbarianTest.Questline) == 4 then
+		if player:getStorageValue(PlayerStorageKeys.BarbarianTest.Questline) == 4 then
 			player:say('You hug the unconcious bear.', TALKTYPE_MONSTER_SAY)
-			player:setStorageValue(Storage.BarbarianTest.Questline, 5)
-			player:setStorageValue(Storage.BarbarianTest.Mission02, 2) -- Questlog Barbarian Test Quest Barbarian Test 2: The Bear Hugging
+			player:setStorageValue(PlayerStorageKeys.BarbarianTest.Questline, 5)
+			player:setStorageValue(PlayerStorageKeys.BarbarianTest.Mission02, 2) -- Questlog Barbarian Test Quest Barbarian Test 2: The Bear Hugging
 			player:addAchievement('Bearhugger')
 			item:transform(7174)
 			toPosition:sendMagicEffect(CONST_ME_SLEEP)
@@ -28,11 +28,11 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		player:say('The bear is not amused by the disturbance.', TALKTYPE_MONSTER_SAY)
 		doAreaCombatHealth(player, COMBAT_PHYSICALDAMAGE, player:getPosition(), 0, -10, -30, CONST_ME_POFF)
 	elseif item.itemid == 7176 then
-		if player:getStorageValue(Storage.BarbarianTest.Questline) == 6 then
+		if player:getStorageValue(PlayerStorageKeys.BarbarianTest.Questline) == 6 then
 			if player:getCondition(CONDITION_DRUNK) then
 				player:say('You hustle the mammoth. What a fun. *hicks*.', TALKTYPE_MONSTER_SAY)
-				player:setStorageValue(Storage.BarbarianTest.Questline, 7)
-				player:setStorageValue(Storage.BarbarianTest.Mission03, 2) -- Questlog Barbarian Test Quest Barbarian Test 3: The Mammoth Pushing
+				player:setStorageValue(PlayerStorageKeys.BarbarianTest.Questline, 7)
+				player:setStorageValue(PlayerStorageKeys.BarbarianTest.Mission03, 2) -- Questlog Barbarian Test Quest Barbarian Test 3: The Mammoth Pushing
 				item:transform(7177)
 				item:decay()
 				addEvent(sendSleepEffect, 60 * 1000, toPosition)

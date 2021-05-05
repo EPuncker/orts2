@@ -1,3 +1,3 @@
 function onStartup(interval)
-	Game.setStorageValue(GlobalStorage.FuryGates, math.random(6))
+	Game.setStorageValue(GlobalStorageKeys.FuryGates, math.random(6))
 end

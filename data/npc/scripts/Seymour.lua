@@ -133,7 +133,7 @@ keywordHandler:addKeyword({'trade'}, StdModule.say, {npcHandler = npcHandler, te
 keywordHandler:addKeyword({'help'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, I could give you valuable {lessons} or some general {hints} about the game, or a small {quest} if you\'re interested.'})
 keywordHandler:addAliasKeyword({'information'})
 
-local destinyKeyword = keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Shall I try and take a guess at your destiny?'}, function(player) return player:getStorageValue(Storage.RookgaardDestiny) == -1 end)
+local destinyKeyword = keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Shall I try and take a guess at your destiny?'}, function(player) return player:getStorageValue(PlayerStorageKeys.RookgaardDestiny) == -1 end)
 destinyKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, reset = true}, nil,
 	function(player)
 		local destiny = math.random(1, 4)
@@ -146,14 +146,14 @@ destinyKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler,
 		elseif destiny == 4 then
 			npcHandler:say('Hmmm, let me look at you. Strong and sturdy, with a determined look in your eyes - no doubt the knight profession would be suited for you!', player.uid)
 		end
-		player:setStorageValue(Storage.RookgaardDestiny, destiny)
+		player:setStorageValue(PlayerStorageKeys.RookgaardDestiny, destiny)
 	end
 )
 
-keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a sorcerer in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(Storage.RookgaardDestiny) == 1 end)
-keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a druid in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(Storage.RookgaardDestiny) == 2 end)
-keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a paladin in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(Storage.RookgaardDestiny) == 3 end)
-keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a knight in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(Storage.RookgaardDestiny) == 4 end)
+keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a sorcerer in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(PlayerStorageKeys.RookgaardDestiny) == 1 end)
+keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a druid in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(PlayerStorageKeys.RookgaardDestiny) == 2 end)
+keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a paladin in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(PlayerStorageKeys.RookgaardDestiny) == 3 end)
+keywordHandler:addKeyword({'destiny'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, like I told you before, I really think you got that spirit of a knight in you. But of course it\'s completely up to you!'}, function(player) return player:getStorageValue(PlayerStorageKeys.RookgaardDestiny) == 4 end)
 
 -- Names
 keywordHandler:addKeyword({'obi'}, StdModule.say, {npcHandler = npcHandler, text = 'Obi sells and buys {weapons}. You can find his shop south of the academy.'})

@@ -34,21 +34,21 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'addon') then
-		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and 156 or 152, 1) and player:getStorageValue(Storage.OutfitQuest.AssassinSecondAddon) < 1 then
+		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and 156 or 152, 1) and player:getStorageValue(PlayerStorageKeys.OutfitQuest.AssassinSecondAddon) < 1 then
 			npcHandler:say('You managed to deceive Erayo? Impressive. Well, I guess, since you have come that far, I might as well give you a task too, eh?', cid)
 			npcHandler.topic[cid] = 1
 		else
 			npcHandler:say('I don\'t know what you are talking about.', cid)
 		end
 	elseif msgcontains(msg, 'nose ring') then
-		if player:getStorageValue(Storage.OutfitQuest.AssassinSecondAddon) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.AssassinSecondAddon) == 1 then
 			if player:getItemCount(5804) > 0 and player:getItemCount(5930) > 0 then
 				player:removeItem(5804, 1)
 				player:removeItem(5930, 1)
 				player:addOutfitAddon(156, 2)
 				player:addOutfitAddon(152, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.AssassinSecondAddon, 2)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.AssassinSecondAddon, 2)
 				player:addAchievement('Swift Death')
 				npcHandler:say('I see you brought my stuff. Good. I\'ll keep my promise: Here\'s katana in return.', cid)
 			else
@@ -60,10 +60,10 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Okay, listen up. I don\'t have a list of stupid objects, I just want two things. A {behemoth claw} and a {nose ring}. Got that?', cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			if player:getStorageValue(Storage.OutfitQuest.DefaultStart) ~= 1 then
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) ~= 1 then
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
 			end
-			player:setStorageValue(Storage.OutfitQuest.AssassinSecondAddon, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.AssassinSecondAddon, 1)
 			npcHandler:say('Good. Come back when you have BOTH. Should be clear where to get a behemoth claw from. There\'s a horned fox who wears a nose ring. Good luck.', cid)
 			npcHandler.topic[cid] = 0
 		end

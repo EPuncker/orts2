@@ -33,7 +33,7 @@ addGloveKeyword({
 		'Did you find sniper gloves AGAIN?! Incredible! I cannot grant you other accessories, but would you like to sell them to me for 2000 gold pieces?',
 		'Maybe another time.',
 		'Alright! Here is your money, thank you very much.'
-	}, function(player) return player:getStorageValue(Storage.OutfitQuest.Hunter.AddonGlove) == 1 end, function(player) player:removeItem(5875, 1) player:addMoney(2000) end
+	}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove) == 1 end, function(player) player:removeItem(5875, 1) player:addMoney(2000) end
 )
 
 -- If you don't have the addon
@@ -41,7 +41,7 @@ addGloveKeyword({
 		'You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?',
 		'No problem, maybe another time.',
 		'Great! I hereby grant you the right to wear the sniper gloves as an accessory. Congratulations!'
-	}, function(player) return player:getStorageValue(Storage.OutfitQuest.Hunter.AddonGlove) == -1 end, function(player) player:removeItem(5875, 1) player:setStorageValue(Storage.OutfitQuest.Hunter.AddonGlove, 1) player:addOutfitAddon(129, 2) player:addOutfitAddon(137, 1) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
+	}, function(player) return player:getStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove) == -1 end, function(player) player:removeItem(5875, 1) player:setStorageValue(PlayerStorageKeys.OutfitQuest.Hunter.AddonGlove, 1) player:addOutfitAddon(129, 2) player:addOutfitAddon(137, 1) player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE) end
 )
 
 npcHandler:addModule(FocusModule:new())

@@ -30,8 +30,8 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler:say('I trade Enchanted Chicken Wing for Boots of Haste, Warrior Sweat for 4 Warrior Helmets, Fighting Spirit for 2 Royal Helmet Magic Sulphur for 3 Fire Swords', cid)
 		npcHandler.topic[cid] = 0
 	elseif msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31
-				and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Djinn) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31
+				and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Djinn) ~= 1 then
 			npcHandler:say('You brought cookies! How nice of you! Can I have one?', cid)
 			npcHandler.topic[cid] = 5
 		end
@@ -58,7 +58,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Djinn, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Djinn, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end
@@ -81,7 +81,7 @@ local function creatureSayCallback(cid, type, msg)
 end
 
 local function onTradeRequest(cid)
-	if Player(cid):getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03) ~= 3 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03) ~= 3 then
 		npcHandler:say('I\'m sorry, but you don\'t have Malor\'s permission to trade with me.', cid)
 		return false
 	end

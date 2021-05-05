@@ -13,13 +13,13 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 2 then
 			npcHandler:say("Mhm, what are you doing here. Who zent you? ", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 3 then
+		elseif player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 3 then
 			npcHandler:say("Zo are you ready to get zomezing done?", cid)
 			npcHandler.topic[cid] = 2
-		elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 5 then
+		elseif player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 5 then
 			npcHandler:say("Zo? Did you find a way to reztore ze teleporter? ", cid)
 			npcHandler.topic[cid] = 3
 		end
@@ -33,8 +33,8 @@ local function creatureSayCallback(cid, type, msg)
 				"I zee. Interezting. ... ",
 				"You being here meanz we have eztablished connectionz to ze zouz. Finally. And you are going to help uz. Well, zere iz zertainly a lot for you to do. Zo better get ztarted. "
 			}, cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 3)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission01, 3) --Questlog, Wrath of the Emperor "Mission 01: Catering the Lions Den"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 3)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission01, 3) --Questlog, Wrath of the Emperor "Mission 01: Catering the Lions Den"
 			npcHandler.topic[cid] = 0
 		end
 	elseif msgcontains(msg, "yes") then
@@ -46,16 +46,16 @@ local function creatureSayCallback(cid, type, msg)
 				"Zere were meanz to activate teleporterz zomewhere in ze complex. But zinze you cannot reach all ze roomz, I guezz you will have to improvize. ... ",
 				"Here iz ze key to ze entranze to ze complex. Figure zomezing out, reztore ze teleporter zo we can get back to ze plainz in ze zouz. "
 			}, cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 4)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission02, 1) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 4)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission02, 1) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
 			npcHandler:say({
 				"You did it! Zere waz zome kind of zparkle and I zink it iz working again - oh pleaze feel free to try it, I uhm, I will wait here and be ready juzt in caze zomezing uhm happenz to you. ... ",
 				"And if you head to Zalamon, be zure to inform him about our zituation. Food rationz are running low and we are ztill not well equipped. We need to eztablish a working zupply line. "
 			}, cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 6)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission02, 3) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 6)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission02, 3) --Questlog, Wrath of the Emperor "Mission 02: First Contact"
 			npcHandler.topic[cid] = 0
 		end
 	end

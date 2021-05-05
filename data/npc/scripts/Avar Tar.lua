@@ -25,8 +25,8 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 1
 		elseif msgcontains(msg, 'cookie') then
-			if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31
-					and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.AvarTar) ~= 1 then
+			if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31
+					and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.AvarTar) ~= 1 then
 				npcHandler:say('Do you really think you could bribe a hero like me with a meagre cookie?', cid)
 				npcHandler.topic[cid] = 3
 			end
@@ -42,7 +42,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.AvarTar, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.AvarTar, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end
@@ -59,27 +59,27 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif npcHandler.topic[cid] == 2 then
 		if msgcontains(msg, 'base') then
-			if player:getStorageValue(Storage.AnnihilatorDone) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.AnnihilatorDone) == 1 then
 				player:addOutfit(541)
 				player:addOutfit(542)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.AnnihilatorDone, 2)
+				player:setStorageValue(PlayerStorageKeys.AnnihilatorDone, 2)
 				npcHandler:say('Receive the base outfit, |PLAYERNAME|.', cid)
 			end
 		elseif msgcontains(msg, 'shield') then
-			if player:getStorageValue(Storage.AnnihilatorDone) == 2 and player:getStorageValue(Storage.QuestChests.DemonHelmetQuestDemonHelmet) == 1 then
+			if player:getStorageValue(PlayerStorageKeys.AnnihilatorDone) == 2 and player:getStorageValue(PlayerStorageKeys.QuestChests.DemonHelmetQuestDemonHelmet) == 1 then
 				player:addOutfitAddon(541, 1)
 				player:addOutfitAddon(542, 1)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.QuestChests.DemonHelmetQuestDemonHelmet, 2)
+				player:setStorageValue(PlayerStorageKeys.QuestChests.DemonHelmetQuestDemonHelmet, 2)
 				npcHandler:say('Receive the shield, |PLAYERNAME|.', cid)
 			end
 		elseif msgcontains(msg, 'helmet') then
-			if player:getStorageValue(Storage.AnnihilatorDone) == 2 and player:getStorageValue(Storage.DemonOak.Done) == 3 then
+			if player:getStorageValue(PlayerStorageKeys.AnnihilatorDone) == 2 and player:getStorageValue(PlayerStorageKeys.DemonOak.Done) == 3 then
 				player:addOutfitAddon(541, 2)
 				player:addOutfitAddon(542, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.DemonOak.Done, 4)
+				player:setStorageValue(PlayerStorageKeys.DemonOak.Done, 4)
 				npcHandler:say('Receive the helmet, |PLAYERNAME|.', cid)
 			end
 		end

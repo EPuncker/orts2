@@ -14,7 +14,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	if item.actionid == 50126 then
-		if player:getStorageValue(Storage.QuestChests.FirewalkerBoots) == 1 or roomIsOccupied() then
+		if player:getStorageValue(PlayerStorageKeys.QuestChests.FirewalkerBoots) == 1 or roomIsOccupied() then
 			player:teleportTo(fromPosition)
 			fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
 			return true

@@ -56,7 +56,7 @@ local function creatureSayCallback(cid, type, msg)
 		}, cid)
 		npcHandler.topic[cid] = 0
 	elseif msgcontains(msg, "mission") or msgcontains(msg, "quest") then
-		local value = player:getStorageValue(Storage.ElementalSphere.QuestLine)
+		local value = player:getStorageValue(PlayerStorageKeys.ElementalSphere.QuestLine)
 		if value < 1 then
 			if player:getLevel() >= 80 then
 				if player:isSorcerer() then
@@ -96,7 +96,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 1
 		elseif value == 1 then
 			if player:getItemCount(player:isSorcerer() and 8304 or player:isDruid() and 8305 or player:isPaladin() and 8300 or player:isKnight() and 8306) > 0 then
-				player:setStorageValue(Storage.ElementalSphere.QuestLine, 2)
+				player:setStorageValue(PlayerStorageKeys.ElementalSphere.QuestLine, 2)
 				npcHandler:say({
 					"Impressive!! Let me take a look.......Ahh, " .. (player:isSorcerer() and "an ETERNAL FLAME! Now you need to find a knight, a druid, and a paladin who also completed this first task. ..." or player:isDruid() and "MOTHER SOIL! Now you need to find a knight, a paladin, and a sorcerer who also completed this first task. ..." or player:isPaladin() and "a FLAWLESS ICE CRYSTAL! Now you need to find a knight, a druid, and a sorcerer who also completed this first task. ..." or player:isKnight() and "PURE ENERGY! Now you need to find a druid, a paladin, and a sorcerer who also completed this first task. ..."),
 					"Go down in the cellar again. I prepared a room under the academy where it should be safe. Your task is to charge the machines with the elemental substances and summon the LORD OF THE ELEMENTS. ...",
@@ -110,11 +110,11 @@ local function creatureSayCallback(cid, type, msg)
 			if player:removeItem(8310, 1) then
 				npcHandler:say("AMAZING!! I'm going to start immediately with the research. If it turns out the way I expect it, Alverus will be revived soon!! Here, take this as a reward and try to collect more of this substance. I'll make you a good offer, I promise. ", cid)
 				player:addItem(player:isSorcerer() and 8867 or player:isDruid() and 8869 or player:isPaladin() and 8853 or player:isKnight() and 8883, 1)
-				player:setStorageValue(Storage.ElementalSphere.QuestLine, 3)
+				player:setStorageValue(PlayerStorageKeys.ElementalSphere.QuestLine, 3)
 			end
 		end
 	elseif npcHandler.topic[cid] == 1 and msgcontains(msg, "yes") then
-		player:setStorageValue(Storage.ElementalSphere.QuestLine, 1)
+		player:setStorageValue(PlayerStorageKeys.ElementalSphere.QuestLine, 1)
 		npcHandler:say("Good, don't waste time! Come back here when you have the elemental object!", cid)
 		npcHandler.topic[cid] = 0
 	end

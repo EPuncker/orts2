@@ -36,7 +36,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.ScaredCarina, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.ScaredCarina, 1)
 			npcHandler:say('IIIEEEEEK!', cid)
 			npcHandler.topic[cid] = 0
 		end

@@ -7,7 +7,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if item.actionid == 4532 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission08) == 1 and player:getStorageValue(Storage.GravediggerOfDrefia.Mission09) < 1 then
+	if item.actionid == 4532 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission08) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission09) < 1 then
 		player:teleportTo(brain2)
 	else
 		player:teleportTo(brain)

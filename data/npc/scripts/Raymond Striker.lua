@@ -13,12 +13,12 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "eleonore") then
-		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.APoemForTheMermaid) < 1 then
 			npcHandler:say("Eleonore ... Yes, I remember her... vaguely. She is a pretty girl ... but still only a girl and now I am in love with a beautiful and passionate woman. A true {mermaid} even.", cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif msgcontains(msg, "mission") then
-		if player:getStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.TheShatteredIsles.APoemForTheMermaid) < 1 then
 			npcHandler:say("Don't ask about silly missions. All I can think about is this lovely {mermaid}.", cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -26,7 +26,7 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her.", cid)
 			npcHandler.topic[cid] = 0
-			player:setStorageValue(Storage.TheShatteredIsles.APoemForTheMermaid, 1)
+			player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.APoemForTheMermaid, 1)
 		end
 	end
 	return true

@@ -22,7 +22,7 @@ local config = {
 }
 
 function doClearMissionArea()
-	Game.setStorageValue(Storage.ChildrenoftheRevolution.Mission05, -1)
+	Game.setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission05, -1)
 
 	local spectators, spectator = Game.getSpectators(config.areaCenter, false, true, 26, 26, 20, 20)
 	for i = 1, #spectators do
@@ -30,8 +30,8 @@ function doClearMissionArea()
 		if spectator:isPlayer() then
 			spectator:teleportTo(config.zalamonPosition)
 			spectator:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
-			if spectator:getStorageValue(Storage.ChildrenoftheRevolution.Questline) == 19 then
-				spectator:setStorageValue(Storage.ChildrenoftheRevolution.Questline, 20)
+			if spectator:getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline) == 19 then
+				spectator:setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline, 20)
 			end
 		else
 		    spectator:remove()
@@ -63,8 +63,8 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.ChildrenoftheRevolution.Questline) ~= 19
-			or Game.getStorageValue(Storage.ChildrenoftheRevolution.Mission05) == 1 then
+	if player:getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline) ~= 19
+			or Game.getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission05) == 1 then
 		return true
 	end
 
@@ -88,7 +88,7 @@ function onStepIn(creature, item, position, fromPosition)
 	if stair then
 		stair:transform(3687)
 	end
-	Game.setStorageValue(Storage.ChildrenoftheRevolution.Mission05, 1)
+	Game.setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission05, 1)
 
 	for wave = 1, #config.waves do
 		addEvent(summonWave, wave * 30 * 1000, wave)

@@ -3,12 +3,12 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.TheApeCity.Questline) ~= 17
-			or player:getStorageValue(Storage.TheApeCity.SnakeDestroyer) == 1 then
+	if player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline) ~= 17
+			or player:getStorageValue(PlayerStorageKeys.TheApeCity.SnakeDestroyer) == 1 then
 		return false
 	end
 
-	player:setStorageValue(Storage.TheApeCity.SnakeDestroyer, 1)
+	player:setStorageValue(PlayerStorageKeys.TheApeCity.SnakeDestroyer, 1)
 	item:remove()
 	target:transform(4862)
 	target:decay()

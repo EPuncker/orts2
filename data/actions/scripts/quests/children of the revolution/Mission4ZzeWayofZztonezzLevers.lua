@@ -26,7 +26,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.ChildrenoftheRevolution.Questline) ~= 14 then
+	if player:getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline) ~= 14 then
 		player:say("The lever does not budge.", TALKTYPE_MONSTER_SAY)
 		return true
 	end
@@ -59,8 +59,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	player:setStorageValue(Storage.ChildrenoftheRevolution.Questline, 17)
-	player:setStorageValue(Storage.ChildrenoftheRevolution.Mission04, 5) --Questlog, Children of the Revolution "Mission 4: Zze Way of Zztonezz"
+	player:setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline, 17)
+	player:setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission04, 5) --Questlog, Children of the Revolution "Mission 4: Zze Way of Zztonezz"
 	player:say("After a cracking noise a deep humming suddenly starts from somewhere below.", TALKTYPE_MONSTER_SAY)
 
 	target:transform(target.itemid == 10044 and 10045 or 10044)

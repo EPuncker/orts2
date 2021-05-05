@@ -4,7 +4,7 @@ local targetDestination = {
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) ~= 11 then
+	if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) ~= 11 then
 		return false
 	end
 

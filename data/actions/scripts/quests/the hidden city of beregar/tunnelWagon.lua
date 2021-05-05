@@ -6,7 +6,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	player:setStorageValue(Storage.hiddenCityOfBeregar.RoyalRescue, 3)
+	player:setStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.RoyalRescue, 3)
 	player:teleportTo(Position(32625, 31514, 9))
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	player:say("You safely passed the tunnel.", TALKTYPE_MONSTER_SAY, false, 0, player:getPosition())

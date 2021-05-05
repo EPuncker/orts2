@@ -28,12 +28,12 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	local storage = Game.getStorageValue(GlobalStorage.SwordOfFury)
+	local storage = Game.getStorageValue(GlobalStorageKeys.SwordOfFury)
 	if storage ~= setting then
 		return true
 	end
 
-	Game.setStorageValue(GlobalStorage.SwordOfFury, storage + 1)
+	Game.setStorageValue(GlobalStorageKeys.SwordOfFury, storage + 1)
 	if storage == 0 then
 		local tmpItem
 		for i = 1, #config.firePositions do

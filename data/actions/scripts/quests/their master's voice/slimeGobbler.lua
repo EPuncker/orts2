@@ -50,9 +50,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.TheirMastersVoice.SlimeGobblerTimeout) < os.time() then
+	if player:getStorageValue(PlayerStorageKeys.TheirMastersVoice.SlimeGobblerTimeout) < os.time() then
 		target:transform(13590)
-		player:setStorageValue(Storage.TheirMastersVoice.SlimeGobblerTimeout, os.time() + 5)
+		player:setStorageValue(PlayerStorageKeys.TheirMastersVoice.SlimeGobblerTimeout, os.time() + 5)
 		toPosition:sendMagicEffect(CONST_ME_POFF)
 		if not getFungusInArea(Position(33306, 31847, 9), Position(33369, 31919, 9)) then
 			for i = 1, #position do
@@ -60,8 +60,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			end
 			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_RED)
 			player:say('COME! My servants! RISE!', TALKTYPE_MONSTER_SAY)
-			Game.setStorageValue(GlobalStorage.TheirMastersVoice.ServantsKilled, 0)
-			Game.setStorageValue(GlobalStorage.TheirMastersVoice.CurrentServantWave, 0)
+			Game.setStorageValue(GlobalStorageKeys.TheirMastersVoice.ServantsKilled, 0)
+			Game.setStorageValue(GlobalStorageKeys.TheirMastersVoice.CurrentServantWave, 0)
 		else
 			player:say('The slime gobbler gobbles large chunks of the slime fungus with great satisfaction.', TALKTYPE_MONSTER_SAY)
 			player:addExperience(20, true, true)

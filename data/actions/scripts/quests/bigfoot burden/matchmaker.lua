@@ -10,7 +10,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if player:getStorageValue(Storage.BigfootBurden.MatchmakerStatus) == 1 or player:getStorageValue(Storage.BigfootBurden.MissionMatchmaker) ~= 1 then
+	if player:getStorageValue(PlayerStorageKeys.BigfootBurden.MatchmakerStatus) == 1 or player:getStorageValue(PlayerStorageKeys.BigfootBurden.MissionMatchmaker) ~= 1 then
 		return false
 	end
 
@@ -22,7 +22,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return true
 	end
 
-	player:setStorageValue(Storage.BigfootBurden.MatchmakerStatus, 1)
+	player:setStorageValue(PlayerStorageKeys.BigfootBurden.MatchmakerStatus, 1)
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Congratulations! The crystals seem to have fallen in love and your mission is done!')
 	return true
 end

@@ -12,7 +12,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	local player = Player(cid)
-	if msgcontains(msg, "trouble") and player:getStorageValue(Storage.TheInquisition.TimGuard) < 1 and player:getStorageValue(Storage.TheInquisition.Mission01) ~= -1 then
+	if msgcontains(msg, "trouble") and player:getStorageValue(PlayerStorageKeys.TheInquisition.TimGuard) < 1 and player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) ~= -1 then
 		npcHandler:say("Ah, well. Just this morning my new toothbrush fell into the toilet.", cid)
 		npcHandler.topic[cid] = 1
 	elseif msgcontains(msg, "authorities") then
@@ -29,9 +29,9 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 3 then
 			npcHandler:say("It's not a drama!! I think there is just no god who's responsible for toothbrush safety, that's all ... ", cid)
 			npcHandler.topic[cid] = 0
-			if player:getStorageValue(Storage.TheInquisition.TimGuard) < 1 then
-				player:setStorageValue(Storage.TheInquisition.TimGuard, 1)
-				player:setStorageValue(Storage.TheInquisition.Mission01, player:getStorageValue(Storage.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
+			if player:getStorageValue(PlayerStorageKeys.TheInquisition.TimGuard) < 1 then
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.TimGuard, 1)
+				player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission01, player:getStorageValue(PlayerStorageKeys.TheInquisition.Mission01) + 1) -- The Inquisition Questlog- "Mission 1: Interrogation"
 				player:getPosition():sendMagicEffect(CONST_ME_HOLYAREA)
 			end
 		end

@@ -14,12 +14,12 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if(msgcontains(msg, "mission")) then
-		if player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 25 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 25 then
 			npcHandler:say("You made it! Az zoon az you are prepared, I will brief you for your nexzt mizzion. ", cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission08, 2) --Questlog, Wrath of the Emperor "Mission 08: Uninvited Guests"
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 26)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission08, 2) --Questlog, Wrath of the Emperor "Mission 08: Uninvited Guests"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 26)
 			npcHandler.topic[cid] = 0
-		elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 26 then
+		elseif player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 26 then
 			npcHandler:say({
 				"Ze dragon emperor controlz ze whole empire wiz hiz willpower. But even he iz not powerful enough to uze ziz control continuouzly wizout zome form of aid. ... ",
 				"Wiz ze ancient zeptre zat you acquired for uz earlier, I can charge ozer zeptrez wiz azpectz of power of ze Great Znake. If you manage to touch one of ze tranzmitter cryztalz wiz ze zeptre, itz godly power will realign ze cryztal. ...",
@@ -30,7 +30,7 @@ local function creatureSayCallback(cid, type, msg)
 				"A zignificant part of ze emperor'z power iz uzed to reztrain ze dragon. Ze only way to free him will be to enter hiz dreamz. Are you prepared for ziz?"
 			}, cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.WrathoftheEmperor.Questline) == 29 then
+		elseif player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) == 29 then
 			npcHandler:say({
 				"You freed ze dragon! And you pozzezz ze key to enter ze inner realmz of ze emperor, well done. ...",
 				"Now you are ready to reach ze inner zanctum of ze emperor. Zalamon'z revelationz showed him zat zere are four cryztalz channelling ze will of ze emperor into ze land. ...",
@@ -41,9 +41,9 @@ local function creatureSayCallback(cid, type, msg)
 				"I recommend not to go alone becauze it will be very dangerouz - but ALL of you will have to uze zeir zeptre replicaz on ze emperor'z remainz to prozeed! ...",
 				"Good luck. You will need it."
 			}, cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 30)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission10, 2) --Questlog, Wrath of the Emperor "Mission 10: A Message of Freedom"
-			player:setStorageValue(Storage.WrathoftheEmperor.BossStatus, 1)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 30)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission10, 2) --Questlog, Wrath of the Emperor "Mission 10: A Message of Freedom"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.BossStatus, 1)
 			player:addItem(12318, 1)
 			npcHandler.topic[cid] = 0
 		end
@@ -54,8 +54,8 @@ local function creatureSayCallback(cid, type, msg)
 				"Drink it and when you are cloze to ze dragon zpeak: Z...z.. well, juzt take ze sheet wiz ze word and read it yourzelf. A lot of rebelz have died to retrieve ziz information, uze it wizely. ...",
 				"Now go and try to find a way to reach ze emperor and to free ze land from it'z opprezzor. Onze you have found a way, return to me and I will explain what to do wiz ze cryztalz. May ze Great Znake guide you!"
 			}, cid)
-			player:setStorageValue(Storage.WrathoftheEmperor.Mission09, 1) --Questlog, Wrath of the Emperor "Mission 08: Uninvited Guests"
-			player:setStorageValue(Storage.WrathoftheEmperor.Questline, 27)
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission09, 1) --Questlog, Wrath of the Emperor "Mission 08: Uninvited Guests"
+			player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline, 27)
 			player:addItem(12328, 1)
 			player:addItem(12382, 1)
 		end

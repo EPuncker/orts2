@@ -14,10 +14,10 @@ local function creatureSayCallback(cid, type, msg)
 
 	if msgcontains(msg, 'report') then
 		local player = Player(cid)
-		if table.contains({9, 11}, player:getStorageValue(Storage.InServiceofYalahar.Questline)) then
+		if table.contains({9, 11}, player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline)) then
 			npcHandler:say('Well, .. <gives a short and precise report>.', cid)
-			player:setStorageValue(Storage.InServiceofYalahar.Questline, player:getStorageValue(Storage.InServiceofYalahar.Questline) + 1)
-			player:setStorageValue(Storage.InServiceofYalahar.Mission02, player:getStorageValue(Storage.InServiceofYalahar.Mission02) + 1) -- StorageValue for Questlog 'Mission 02: Watching the Watchmen'
+			player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline, player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) + 1)
+			player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission02, player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission02) + 1) -- StorageValue for Questlog 'Mission 02: Watching the Watchmen'
 		end
 	elseif msgcontains(msg, 'pass') then
 		npcHandler:say('You can {pass} either to the {Alchemist Quarter} or {Cemetery Quarter}. Which one will it be?', cid)

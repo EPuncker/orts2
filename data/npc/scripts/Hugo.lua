@@ -69,17 +69,17 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "uniforms") then
-		if player:getStorageValue(Storage.postman.Mission06) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission06) == 1 then
 			npcHandler:say("A new uniform for the post officers? I am sorry but my dog ate the last dress pattern we used. You need to supply us with a new dress pattern.", cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif msgcontains(msg, "dress pattern") then
 		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("It was ... wonderous beyond wildest imaginations! I have no clue where Kevin Postner got it from. Better ask him.", cid)
-			player:setStorageValue(Storage.postman.Mission06, 2)
-		elseif player:getStorageValue(Storage.postman.Mission06) == 11 then
+			player:setStorageValue(PlayerStorageKeys.postman.Mission06, 2)
+		elseif player:getStorageValue(PlayerStorageKeys.postman.Mission06) == 11 then
 			npcHandler:say("By the gods of fashion! Didn't it do that I fed the last dress pattern to my poor dog? Will this mocking of all which is taste and fashion never stop?? Ok, ok, you will get those ugly, stinking uniforms and now get lost, fashion terrorist.", cid)
-			player:setStorageValue(Storage.postman.Mission06, 12)
+			player:setStorageValue(PlayerStorageKeys.postman.Mission06, 12)
 		end
 		npcHandler.topic[cid] = 0
 	elseif msgcontains(msg, 'outfit') then
@@ -88,28 +88,28 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 
-		if player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) < 1 then
 			npcHandler:say({
 				'I think I\'m having an innovative vision! I feel that people are getting tired of attempting to look wealthy and of displaying their treasures. ...',
 				'A really new and innovative look would be - the \'poor man\'s look\'! I can already see it in front of me... yes... a little ragged... but not too shabby! ...',
 				'I need material right now! Argh - the vision starts to fade... please hurry, can you bring me some stuff?'
 			}, cid)
 			npcHandler.topic[cid] = 2
-		elseif player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) > 0 and player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) < 5 then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) > 0 and player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) < 5 then
 			npcHandler:say('I am so excited! This poor man\'s look will be an outfit like the world has never seen before.', cid)
-		elseif player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) == 5 then
-			if player:getStorageValue(Storage.OutfitQuest.BeggarOutfitTimer) > os.time() then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) == 5 then
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfitTimer) > os.time() then
 				npcHandler:say('Sorry, but I am not done with the outfit yet. Venore wasn\'t built in a day.', cid)
-			elseif player:getStorageValue(Storage.OutfitQuest.BeggarOutfitTimer) > 0 and player:getStorageValue(Storage.OutfitQuest.BeggarOutfitTimer) < os.time() then
+			elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfitTimer) > 0 and player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfitTimer) < os.time() then
 				npcHandler:say('Eureka! Alas, the poor man\'s outfit is finished, but... to be honest... it turned out much less appealing than I expected. However, you can have it if you want, okay?', cid)
 				npcHandler.topic[cid] = 5
 			end
-		elseif player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) == 6 then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) == 6 then
 			npcHandler:say('I guess my vision wasn\'t that grand after all. I hope there are still people who enjoy it.', cid)
 		end
 	elseif config[msg:lower()] then
 		local targetMessage = config[msg:lower()]
-		if player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) ~= targetMessage.value then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) ~= targetMessage.value then
 			npcHandler:say(targetMessage.messages.done, cid)
 			return true
 		end
@@ -126,10 +126,10 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 3
 		elseif npcHandler.topic[cid] == 3 then
-			if player:getStorageValue(Storage.OutfitQuest.DefaultStart) ~= 1 then
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) ~= 1 then
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
 			end
-			player:setStorageValue(Storage.OutfitQuest.BeggarOutfit, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit, 1)
 			npcHandler:say('Terrific! What are you waiting for?! Start right away gathering 20 pieces of brown cloth and come back once you have them!', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 4 then
@@ -139,16 +139,16 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.OutfitQuest.BeggarOutfit, player:getStorageValue(Storage.OutfitQuest.BeggarOutfit) + 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit, player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit) + 1)
 			if targetMessage.lastItem then
-				player:setStorageValue(Storage.OutfitQuest.BeggarOutfitTimer, os.time() + 86400)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfitTimer, os.time() + 86400)
 			end
 			npcHandler:say(targetMessage.messages.success, cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 5 then
 			player:addOutfit(153)
 			player:addOutfit(157)
-			player:setStorageValue(Storage.OutfitQuest.BeggarOutfit, 6)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarOutfit, 6)
 			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			npcHandler:say('Here you go. Maybe you enjoy if after all.', cid)
 			npcHandler.topic[cid] = 0

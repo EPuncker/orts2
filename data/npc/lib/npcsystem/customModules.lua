@@ -154,12 +154,12 @@ function StdModule.rookgaardHints(cid, message, keywords, parameters, node)
 	end
 
 	local player = Player(cid)
-	local hintId = player:getStorageValue(Storage.RookgaardHints)
+	local hintId = player:getStorageValue(PlayerStorageKeys.RookgaardHints)
 	npcHandler:say(hints[hintId], cid)
 	if hintId >= #hints then
-		player:setStorageValue(Storage.RookgaardHints, -1)
+		player:setStorageValue(PlayerStorageKeys.RookgaardHints, -1)
 	else
-		player:setStorageValue(Storage.RookgaardHints, hintId + 1)
+		player:setStorageValue(PlayerStorageKeys.RookgaardHints, hintId + 1)
 	end
 	return true
 end

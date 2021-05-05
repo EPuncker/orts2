@@ -14,17 +14,17 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "shooting") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 7 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 7 then
 			npcHandler:say({
 				"To the left you see our shooting range. Grab a cannon and shoot at the targets. You need five hits to succeed. ...",
 				"Shoot at the villain targets that will pop up. DON'T shoot innocent civilians since this will reset your score and you have to start all over. Report to me afterwards."
 			}, cid)
-			player:setStorageValue(Storage.BigfootBurden.QuestLine, 8)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 8)
 		end
 	elseif msgcontains(msg, "report") then
-		if player:getStorageValue(Storage.BigfootBurden.QuestLine) == 9 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 9 then
 			npcHandler:say("You are showing some promise! Now continue with the recruitment and talk to Gnomewart to the south for your endurance test!", cid)
-			player:setStorageValue(Storage.BigfootBurden.QuestLine, 10)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 10)
 		end
 	end
 	return true

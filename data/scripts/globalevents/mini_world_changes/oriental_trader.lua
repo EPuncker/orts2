@@ -85,9 +85,9 @@ function yasir.onStartup()
 
 		Game.loadMap('data/world/mini_world_changes/oriental_trader/' .. randTown.mapName .. '.otbm')
 		addEvent(spawnYasir, 5000, randTown.yasirPosition)
-		Game.setStorageValue(GlobalStorage.WorldBoard.Yasir, 1)
+		Game.setStorageValue(GlobalStorageKeys.WorldBoard.Yasir, 1)
 	else
-		Game.setStorageValue(GlobalStorage.WorldBoard.Yasir, 0)
+		Game.setStorageValue(GlobalStorageKeys.WorldBoard.Yasir, 0)
 	end
 end
 

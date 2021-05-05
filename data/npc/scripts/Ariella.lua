@@ -18,8 +18,8 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31
-				and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Ariella) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31
+				and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Ariella) ~= 1 then
 			npcHandler:say('So you brought a cookie to a pirate?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -34,7 +34,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.Ariella, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Ariella, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end
@@ -44,12 +44,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:releaseFocus(cid)
 			npcHandler:resetNpc(cid)
 		elseif npcHandler.topic[cid] == 2 then
-			if player:getStorageValue(Storage.OutfitQuest.PirateHatAddon) == -1 then
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.PirateHatAddon) == -1 then
 				if player:getItemCount(6101) > 0 and player:getItemCount(6102) > 0 and player:getItemCount(6100) > 0 and player:getItemCount(6099) > 0 then
 					if player:removeItem(6101, 1) and player:removeItem(6102, 1) and player:removeItem(6100, 1) and player:removeItem(6099, 1) then
 						npcHandler:say("Ah, right! The pirate hat! Here you go.", cid)
 						player:getPosition():sendMagicEffect(CONST_ME_MAGIC_RED)
-						player:setStorageValue(Storage.OutfitQuest.PirateHatAddon, 1)
+						player:setStorageValue(PlayerStorageKeys.OutfitQuest.PirateHatAddon, 1)
 						player:addOutfitAddon(155, 2)
 						player:addOutfitAddon(151, 2)
 					end

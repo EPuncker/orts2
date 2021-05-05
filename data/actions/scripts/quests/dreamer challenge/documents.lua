@@ -22,14 +22,14 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	local choice = useItem[1]
-	if player:getStorageValue(Storage.OutfitQuest.BrotherhoodOutfit) > player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) then
+	if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BrotherhoodOutfit) > player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) then
 		choice = useItem[2]
 	end
 
 	if choice.addon then
 		if player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and choice.female or choice.male) then
 			if not player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and choice.female or choice.male, choice.addon) then
-				if player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) >= useItem.storageValue or player:getStorageValue(Storage.OutfitQuest.BrotherhoodOutfit) >= useItem.storageValue then
+				if player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) >= useItem.storageValue or player:getStorageValue(PlayerStorageKeys.OutfitQuest.BrotherhoodOutfit) >= useItem.storageValue then
 					player:addOutfitAddon(choice.female, choice.addon)
 					player:addOutfitAddon(choice.male, choice.addon)
 					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have received the ' .. choice.msg .. ' addon!')
@@ -46,7 +46,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 	else
 		if not player:hasOutfit(player:getSex() == PLAYERSEX_FEMALE and choice.female or choice.male) then
-			if player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) >= 1 or player:getStorageValue(Storage.OutfitQuest.BrotherhoodOutfit) >= 1 then
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) >= 1 or player:getStorageValue(PlayerStorageKeys.OutfitQuest.BrotherhoodOutfit) >= 1 then
 				player:addOutfit(choice.female)
 				player:addOutfit(choice.male)
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have received the ' .. choice.msg .. ' outfit!')

@@ -9,10 +9,10 @@ function onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	if player:getStorageValue(Storage.TheInquisition.Questline) == 18 then
+	if player:getStorageValue(PlayerStorageKeys.TheInquisition.Questline) == 18 then
 		-- The Inquisition Questlog- 'Mission 6: The Demon Ungreez'
-		player:setStorageValue(Storage.TheInquisition.Mission06, 2)
-		player:setStorageValue(Storage.TheInquisition.Questline, 19)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission06, 2)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Questline, 19)
 	end
 	return true
 end

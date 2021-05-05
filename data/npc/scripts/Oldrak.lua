@@ -42,30 +42,30 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, 'mission') or msgcontains(msg, 'demon oak') then
-		if player:getStorageValue(Storage.DemonOak.Done) < 1 and player:getStorageValue(Storage.DemonOak.Progress) < 2 then
+		if player:getStorageValue(PlayerStorageKeys.DemonOak.Done) < 1 and player:getStorageValue(PlayerStorageKeys.DemonOak.Progress) < 2 then
 			npcHandler:say("How do you know? Did you go into the infested area?", cid)
 			npcHandler.topic[cid] = 1
-		elseif player:getStorageValue(Storage.DemonOak.Progress) == 2 and player:getStorageValue(Storage.DemonOak.Done) < 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.DemonOak.Progress) == 2 and player:getStorageValue(PlayerStorageKeys.DemonOak.Done) < 1 then
 			npcHandler:say("You better don't return here until you've defeated the Demon Oak.", cid)
-		elseif player:getStorageValue(Storage.DemonOak.Done) == 1 then
+		elseif player:getStorageValue(PlayerStorageKeys.DemonOak.Done) == 1 then
 			npcHandler:say({
 				"You chopped down the demon oak?!? Unbelievable!! Let's hope it doesn't come back. As long as evil is still existent in the soil of the plains, it won't be over. Still, the demons suffered a setback, that's for sure. ...",
 				"For your brave action, I tell you a secret which has been kept for many many years. There is an old house south of the location where you found the demon oak. There should be a grave with the name 'Yesim Adeit' somewhere close by. ...",
 				"It belongs to a Daramian nobleman named 'Teme Saiyid'. I knew him well and he told me -almost augured- that someone will come who is worthy to obtain his treasure. I'm sure this 'someone' is you. Good luck in finding it!"
 			}, cid)
-			player:setStorageValue(Storage.DemonOak.Done, 2)
+			player:setStorageValue(PlayerStorageKeys.DemonOak.Done, 2)
 		end
 	elseif msgcontains(msg, 'yes') and npcHandler.topic[cid] == 1 then
-		if player:getStorageValue(Storage.DemonOak.Progress) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.DemonOak.Progress) == 1 then
 			npcHandler:say("A demon oak?!? <mumbles some blessings> May the gods be on our side. You'll need a {hallowed axe} to harm that tree. Bring me a simple {axe} and I'll prepare it for you.",cid)
-			player:setStorageValue(Storage.DemonOak.Progress, 2)
+			player:setStorageValue(PlayerStorageKeys.DemonOak.Progress, 2)
 			npcHandler.topic[cid] = 0
 		else
 			npcHandler:say("I don't believe a word of it! How rude to lie to a monk!",cid)
 			npcHandler.topic[cid] = 0
 		end
 	elseif msgcontains(msg, 'axe') then
-		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.DemonOak.Progress) == 2 then
 			npcHandler:say("Ahh, you've got an axe. Very good. I can make a hallowed axe out of it. It will cost you... er... a donation of 1,000 gold. Alright?",cid)
 			npcHandler.topic[cid] = 2
 		else
@@ -73,7 +73,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		end
 	elseif msgcontains(msg, 'yes') and npcHandler.topic[cid] == 2 then
-		if player:getStorageValue(Storage.DemonOak.Progress) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.DemonOak.Progress) == 2 then
 			if player:getMoney() >= 1000 then
 				if player:removeItem(2386, 1) and player:removeMoney(1000) then
 					npcHandler:say("Let's see....<mumbles a prayer>....here we go. The blessing on this axe will be absorbed by all the demonic energy around here. I presume it will not last very long, so better hurry. Actually, I can refresh the blessing as often as you like.",cid)

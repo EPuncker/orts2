@@ -13,8 +13,8 @@ npcHandler:addModule(VoiceModule:new(voices))
 local function greetCallback(cid)
 	local player = Player(cid)
 
-	if player:getStorageValue(Storage.secretService.AVINMission01) == 1 and player:getItemCount(14326) > 0 then
-		player:setStorageValue(Storage.secretService.AVINMission01, 2)
+	if player:getStorageValue(PlayerStorageKeys.secretService.AVINMission01) == 1 and player:getItemCount(14326) > 0 then
+		player:setStorageValue(PlayerStorageKeys.secretService.AVINMission01, 2)
 		npcHandler:say("I don't like the way you look. Help me boys!", cid)
 		for i = 1, 2 do
 			Game.createMonster("Bandit", Npc():getPosition())
@@ -34,14 +34,14 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, "letter") then
-		if player:getStorageValue(Storage.secretService.AVINMission01) == 2 then
+		if player:getStorageValue(PlayerStorageKeys.secretService.AVINMission01) == 2 then
 			npcHandler:say("You have a letter for me?", cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
 			if player:removeItem(14326, 1) then
-				player:setStorageValue(Storage.secretService.AVINMission01, 3)
+				player:setStorageValue(PlayerStorageKeys.secretService.AVINMission01, 3)
 				npcHandler:say("Oh well. I guess I am still on the hook. Tell your 'uncle' I will proceed as he suggested.", cid)
 			else
 				npcHandler:say("You don't have any letter!", cid)

@@ -11,7 +11,7 @@ local function creatureSayCallback(cid, type, msg)
 	if not npcHandler:isFocused(cid) then
 		return false
 	elseif table.contains({"trip", "passage", "back"}, msg) then
-		if Player(cid):getStorageValue(Storage.TheNewFrontier.Questline) >= 24 then
+		if Player(cid):getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) >= 24 then
 			npcHandler:say("You want to go back?", cid)
 			npcHandler.topic[cid] = 1
 		end

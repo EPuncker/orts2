@@ -12,7 +12,7 @@ local function creatureSayCallback(cid, type, msg)
 	if not npcHandler:isFocused(cid) then
 		return false
 	elseif msgcontains(msg, "trip") then
-		if Player(cid):getStorageValue(Storage.TheNewFrontier.Questline) >= 24 then
+		if Player(cid):getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) >= 24 then
 			npcHandler:say("You want trip to Izzle of Zztrife?", cid)
 			npcHandler.topic[cid] = 1
 		end

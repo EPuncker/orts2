@@ -22,12 +22,12 @@ function BeggarFirst(cid, message, keywords, parameters, node)
 
 	local player = Player(cid)
 	if player:isPremium() then
-		if player:getStorageValue(Storage.OutfitQuest.BeggarFirstAddon) == -1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarFirstAddon) == -1 then
 			if player:getItemCount(5883) >= 100 and player:getMoney() >= 20000 then
 				if player:removeItem(5883, 100) and player:removeMoney(20000) then
 					npcHandler:say("Ah, right! The beggar beard or beggar dress! Here you go.", cid)
 					player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-					player:setStorageValue(Storage.OutfitQuest.BeggarFirstAddon, 1)
+					player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarFirstAddon, 1)
 					player:addOutfitAddon(153, 1)
 					player:addOutfitAddon(157, 1)
 				end
@@ -47,12 +47,12 @@ function BeggarSecond(cid, message, keywords, parameters, node)
 
 	local player = Player(cid)
 	if player:isPremium() then
-		if player:getStorageValue(Storage.OutfitQuest.BeggarSecondAddon) == -1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarSecondAddon) == -1 then
 			if player:getItemCount(6107) >= 1 then
 				if player:removeItem(6107, 1) then
 					npcHandler:say("Ah, right! The beggar staff! Here you go.", cid)
 					player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-					player:setStorageValue(Storage.OutfitQuest.BeggarSecondAddon, 1)
+					player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarSecondAddon, 1)
 					player:addOutfitAddon(153, 2)
 					player:addOutfitAddon(157, 2)
 				end
@@ -73,8 +73,8 @@ local function creatureSayCallback(cid, type, msg)
 	local player = Player(cid)
 
 	if msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31
-				and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.SimonTheBeggar) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31
+				and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.SimonTheBeggar) ~= 1 then
 			npcHandler:say('Have you brought a cookie for the poor?', cid)
 			npcHandler.topic[cid] = 1
 		end
@@ -89,7 +89,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.SimonTheBeggar, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.SimonTheBeggar, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end

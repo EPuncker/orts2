@@ -13,9 +13,9 @@ local function creatureSayCallback(cid, type, msg)
 	end
 	local player = Player(cid)
 	if msgcontains(msg, "measurements") then
-		if player:getStorageValue(Storage.postman.Mission07) >= 1 then
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission07) >= 1 then
 			npcHandler:say("If its necessary ... <tells you her measurements>", cid)
-			player:setStorageValue(Storage.postman.Mission07, player:getStorageValue(Storage.postman.Mission07) + 1)
+			player:setStorageValue(PlayerStorageKeys.postman.Mission07, player:getStorageValue(PlayerStorageKeys.postman.Mission07) + 1)
 			npcHandler.topic[cid] = 0
 		end
 	end

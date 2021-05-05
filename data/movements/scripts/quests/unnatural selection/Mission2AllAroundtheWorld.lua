@@ -18,14 +18,14 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	local targetValue = config[player:getStorageValue(Storage.UnnaturalSelection.Mission02)]
+	local targetValue = config[player:getStorageValue(PlayerStorageKeys.UnnaturalSelection.Mission02)]
 	if not targetValue then
 		return true
 	end
 
 	if player:getPosition() == targetValue.position and player:getItemCount(11076) >= 1 then
 		--Questlog, Unnatural Selection Quest 'Mission 2: All Around the World'
-		player:setStorageValue(Storage.UnnaturalSelection.Mission02, player:getStorageValue(Storage.UnnaturalSelection.Mission02) + 1)
+		player:setStorageValue(PlayerStorageKeys.UnnaturalSelection.Mission02, player:getStorageValue(PlayerStorageKeys.UnnaturalSelection.Mission02) + 1)
 		player:say(targetValue.text, TALKTYPE_MONSTER_SAY)
 	end
 	return true

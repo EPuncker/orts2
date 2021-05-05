@@ -9,7 +9,7 @@ local function completeTest(cid)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheNewFrontier.Questline) == 19 then
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 19 then
 		player:teleportTo(config.successPosition)
 		player:say('You have passed the test. Report to Curos.', TALKTYPE_MONSTER_SAY)
 	end
@@ -21,7 +21,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheNewFrontier.Questline) ~= 18 then
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) ~= 18 then
 		player:teleportTo(fromPosition)
 		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have access to this area.')
@@ -29,7 +29,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	addEvent(completeTest, 2 * 60 * 1000, player.uid)
-	player:setStorageValue(Storage.TheNewFrontier.Questline, 19)
+	player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 19)
 	player:teleportTo(config.arenaPosition)
 	config.arenaPosition:sendMagicEffect(CONST_ME_TELEPORT)
 	return true

@@ -16,8 +16,8 @@ function onStepIn(creature, item, position, fromPosition)
 
 	sacrificeItem:remove()
 
-	if player:getStorageValue(Storage.Dragonfetish) == 1 then
-		player:setStorageValue(Storage.Dragonfetish, 0)
+	if player:getStorageValue(PlayerStorageKeys.Dragonfetish) == 1 then
+		player:setStorageValue(PlayerStorageKeys.Dragonfetish, 0)
 	end
 
 	destination = Position(32701, 31639, 6)

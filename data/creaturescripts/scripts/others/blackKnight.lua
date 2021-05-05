@@ -9,8 +9,8 @@ function onKill(creature, target)
 	end
 
 	local player = creature:getPlayer()
-	if player:getStorageValue(Storage.secretService.AVINMission04) == 1 then
-		player:setStorageValue(Storage.secretService.AVINMission04, 2)
+	if player:getStorageValue(PlayerStorageKeys.secretService.AVINMission04) == 1 then
+		player:setStorageValue(PlayerStorageKeys.secretService.AVINMission04, 2)
 	end
 
 	return true

@@ -16,12 +16,12 @@ local config = {
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 
-	if Game.getStorageValue(Storage.WrathoftheEmperor.Mission11) == 1 then
+	if Game.getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission11) == 1 then
 		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'The arena is already in use.')
 		return true
 	end
 
-	Game.setStorageValue(Storage.WrathoftheEmperor.Mission11, 1)
+	Game.setStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission11, 1)
 
 	local monsters = Game.getSpectators(config.arenaPosition, false, false, 10, 10, 10, 10)
 	local spectator

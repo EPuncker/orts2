@@ -1,7 +1,7 @@
 function catchPlayer(cid)
 	local player = Player(cid)
-	player:setStorageValue(Storage.WrathoftheEmperor.GuardcaughtYou, 1)
-	player:setStorageValue(Storage.WrathoftheEmperor.CrateStatus, 0)
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.GuardcaughtYou, 1)
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus, 0)
 	player:teleportTo(Position(33361, 31206, 8), false)
 	player:say("The guards have spotted you. You were forcibly dragged into a small cell. It looks like you need to build another disguise.", TALKTYPE_MONSTER_SAY)
 	return true
@@ -23,25 +23,25 @@ function onStepIn(creature, item, position, fromPosition)
 	elseif item.actionid == 8017 or item.actionid == 32362 or item.itemid == 11436 then
 		catchPlayer(playerId)
 	elseif item.actionid == 8018 then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light01) ~= 1 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light01) ~= 1 then
 			catchPlayer(playerId)
 		end
 	elseif item.actionid == 8019 then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light02) ~= 1 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light02) ~= 1 then
 			catchPlayer(playerId)
 		end
 	elseif item.actionid == 8020 then
-		if Game.getStorageValue(GlobalStorage.WrathOfTheEmperor.Light03) ~= 1 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light03) ~= 1 then
 			catchPlayer(playerId)
 		end
 	elseif item.actionid == 8021 then
 		player:say("Guards heavily patrol this area. Try to stay hidden and do not draw any attention to yourself by trying to attack.", TALKTYPE_MONSTER_SAY)
 	elseif item.actionid == 8022 then
-		if player:getStorageValue(Storage.WrathoftheEmperor.CrateStatus) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus) ~= 1 then
 			catchPlayer(playerId)
 		end
 	elseif item.actionid == 8023 then
-		-- player:setStorageValue(Storage.WrathoftheEmperor.CrateStatus, 0)
+		-- player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus, 0)
 		-- doSetCreatureOutfit(cid, {lookTypeEx = 12496}, 1)
 	end
 	return true

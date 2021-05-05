@@ -17,7 +17,7 @@ local function addTravelKeyword(keyword, cost, destination, action)
 		travelKeyword:addChildKeyword({'no'}, StdModule.say, {npcHandler = npcHandler, text = 'We would like to serve you some time.', reset = true})
 end
 
-addTravelKeyword('carlin', 110, Position(32387, 31820, 6), function(player) if player:getStorageValue(Storage.postman.Mission01) == 1 then player:setStorageValue(Storage.postman.Mission01, 2) end end)
+addTravelKeyword('carlin', 110, Position(32387, 31820, 6), function(player) if player:getStorageValue(PlayerStorageKeys.postman.Mission01) == 1 then player:setStorageValue(PlayerStorageKeys.postman.Mission01, 2) end end)
 addTravelKeyword('ab\'dendriel', 130, Position(32734, 31668, 6))
 addTravelKeyword('edron', 160, Position(33175, 31764, 6))
 addTravelKeyword('venore', 170, Position(32954, 32022, 6))

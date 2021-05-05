@@ -36,7 +36,7 @@ function onKill(creature, target)
 		return true
 	end
 
-	if targetMonster:getName():lower() ~= 'parasite' or Game.getStorageValue(GlobalStorage.Weeper) >= 1 then
+	if targetMonster:getName():lower() ~= 'parasite' or Game.getStorageValue(GlobalStorageKeys.Weeper) >= 1 then
 		return true
 	end
 
@@ -82,7 +82,7 @@ function onKill(creature, target)
 		return true
 	end
 
-	Game.setStorageValue(GlobalStorage.Weeper, 1)
+	Game.setStorageValue(GlobalStorageKeys.Weeper, 1)
 	addEvent(Game.setStorageValue, 30 * 60 * 1000, GlobalStorage.Weeper, 0)
 	Game.createMonster('gnomevil', Position(33114, 31953, 11))
 	addEvent(clearArena, 32 * 60 * 1000)

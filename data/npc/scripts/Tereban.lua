@@ -115,20 +115,20 @@ function creatureSayCallback(cid, type, msg)
 
 	if npcHandler.topic[cid] == 0 then
 		if msgcontains(msg, 'mission') then
-			if player:getStorageValue(Storage.FathersBurdenQuest.Status) == 1 then
-				if player:getStorageValue(Storage.FathersBurdenQuest.Progress) ~= 8 then
+			if player:getStorageValue(PlayerStorageKeys.FathersBurdenQuest.Status) == 1 then
+				if player:getStorageValue(PlayerStorageKeys.FathersBurdenQuest.Progress) ~= 8 then
 					npcHandler:say('Well, I need the parts of a sorcerer\'s robe, a paladin\'s bow, a knight\'s shield, and a druid\'s rod. If you cannot find one of them, ask me about it and I might provide you with some minor hints.', cid)
 					return true
 				end
 
-				player:setStorageValue(Storage.FathersBurdenQuest.Status, 2)
+				player:setStorageValue(PlayerStorageKeys.FathersBurdenQuest.Status, 2)
 				player:addItem(12657, 1)
 				player:addExperience(8000, true)
 				npcHandler:say({
 					'I\'m so glad I finally have all the parts for the presents. Your reward is my eternal gratitude. Well, that and some gold of course. ...',
 					'Take this sachet over there, I wrapped the coins into this old cape I had still lying around here from a barter with a stranger, it is of no use for me anyway. Farewell and thank you once again.'
 				}, cid)
-			elseif player:getStorageValue(Storage.FathersBurdenQuest.Status) == 2 then
+			elseif player:getStorageValue(PlayerStorageKeys.FathersBurdenQuest.Status) == 2 then
 				npcHandler:say('Thank you for your help!', cid)
 				return true
 			else
@@ -157,9 +157,9 @@ function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 1 then
 		if msgcontains(msg, 'yes') then
 			npcHandler:say('I am relieved someone as capable as you will handle the task. Well, I need the parts of a sorcerer\'s robe, a paladin\'s bow, a knight\'s shield, and a druid\'s wand.', cid)
-			player:setStorageValue(Storage.FathersBurdenQuest.QuestLog, 1)
-			player:setStorageValue(Storage.FathersBurdenQuest.Progress, 0)
-			player:setStorageValue(Storage.FathersBurdenQuest.Status, 1)
+			player:setStorageValue(PlayerStorageKeys.FathersBurdenQuest.QuestLog, 1)
+			player:setStorageValue(PlayerStorageKeys.FathersBurdenQuest.Progress, 0)
+			player:setStorageValue(PlayerStorageKeys.FathersBurdenQuest.Status, 1)
 			for i = 1, #storages do
 				player:setStorageValue(storages[i], 1)
 			end
@@ -176,7 +176,7 @@ function creatureSayCallback(cid, type, msg)
 			end
 
 			player:setStorageValue(targetMessage.storage, 2)
-			player:setStorageValue(Storage.FathersBurdenQuest.Progress, player:getStorageValue(Storage.FathersBurdenQuest.Progress) + 1)
+			player:setStorageValue(PlayerStorageKeys.FathersBurdenQuest.Progress, player:getStorageValue(PlayerStorageKeys.FathersBurdenQuest.Progress) + 1)
 			player:addExperience(2500, true)
 			npcHandler:say(targetMessage.messages.success, cid)
 		elseif msgcontains(msg, 'no') then

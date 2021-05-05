@@ -18,8 +18,8 @@ function onKill(creature, target)
 	for pid, _ in pairs(targetMonster:getDamageMap()) do
 		local attackerPlayer = Player(pid)
 		if attackerPlayer then
-			if attackerPlayer:getStorageValue(Storage.BigfootBurden.WarzoneStatus) < bossConfig.status then
-				attackerPlayer:setStorageValue(Storage.BigfootBurden.WarzoneStatus, bossConfig.status)
+			if attackerPlayer:getStorageValue(PlayerStorageKeys.BigfootBurden.WarzoneStatus) < bossConfig.status then
+				attackerPlayer:setStorageValue(PlayerStorageKeys.BigfootBurden.WarzoneStatus, bossConfig.status)
 			end
 
 			attackerPlayer:setStorageValue(bossConfig.storage, 1)

@@ -1,6 +1,6 @@
 function onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
-	if not player or player:getStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus) ~= 1 then
+	if not player or player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus) ~= 1 then
 		return true
 	end
 
@@ -8,7 +8,7 @@ function onStepIn(creature, item, position, fromPosition)
 		player:removeCondition(CONDITION_OUTFIT)
 	end
 
-	player:setStorageValue(Storage.WrathoftheEmperor.PrisonReleaseStatus, 0)
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus, 0)
 
 	local destination = Position(33363, 31188, 8)
 	player:teleportTo(destination)

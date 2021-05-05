@@ -14,10 +14,10 @@ local promoteKeyword = keywordHandler:addKeyword({'promot'}, StdModule.say, {npc
 
 -- The New Frontier
 -- Incorrect
-local bribeKeyword = keywordHandler:addKeyword({'farmine'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, I vaguely remember that our little allies were eager to build some base. So speak up, what do you want?'}, function(player) return player:getStorageValue(Storage.TheNewFrontier.Questline) == 15 end)
+local bribeKeyword = keywordHandler:addKeyword({'farmine'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, I vaguely remember that our little allies were eager to build some base. So speak up, what do you want?'}, function(player) return player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 15 end)
 	bribeKeyword:addChildKeyword({'flatter'}, StdModule.say, {npcHandler = npcHandler, text = 'Indeed, indeed. Without the help of Thais, our allies stand no chance! Well, I\'ll send some money to support their cause.', reset = true},
-		function(player) return player:getStorageValue(Storage.TheNewFrontier.BribeKing) ~= 1 end,
-		function(player) player:setStorageValue(Storage.TheNewFrontier.BribeKing, 1) player:setStorageValue(Storage.TheNewFrontier.Mission05, player:getStorageValue(Storage.TheNewFrontier.Mission05) + 1) end
+		function(player) return player:getStorageValue(PlayerStorageKeys.TheNewFrontier.BribeKing) ~= 1 end,
+		function(player) player:setStorageValue(PlayerStorageKeys.TheNewFrontier.BribeKing, 1) player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission05, player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission05) + 1) end
 	)
 
 -- Basic

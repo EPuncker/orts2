@@ -16,29 +16,29 @@ function Player.addSkillTries(...)
 end
 
 function Player.checkGnomeRank(self)
-	local points = self:getStorageValue(STORAGE.BIGFOOTBURDEN.RANK)
-	local questProgress = self:getStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE)
+	local points = self:getStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.RANK)
+	local questProgress = self:getStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE)
 	if points >= 30 and points < 120 then
 		if questProgress == 14 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 15)
+			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 15)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Little Helper')
 	elseif points >= 120 and points < 480 then
 		if questProgress == 15 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 16)
+			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 16)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Friend')
 	elseif points >= 480 and points < 1440 then
 		if questProgress == 16 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 17)
+			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 17)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnomelike')
 	elseif points >= 1440 then
 		if questProgress == 17 then
-			self:setStorageValue(STORAGE.BIGFOOTBURDEN.QUESTLINE, 18)
+			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 18)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Honorary Gnome')

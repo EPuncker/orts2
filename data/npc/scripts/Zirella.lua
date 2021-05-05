@@ -17,31 +17,31 @@ npcHandler:addModule(VoiceModule:new(voices))
 local storeTalkCid = {}
 local function greetCallback(cid)
 	local player = Player(cid)
-	if player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) < 1 then
+	if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) < 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Oh, heaven must have sent you! Could you please help me with a {quest}?")
 		storeTalkCid[cid] = 0
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 1 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 1 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome back, darling... so about that firewood, could you please {help} me?")
 		storeTalkCid[cid] = 2
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 2 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 2 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome back, darling... so about the {dead trees}, let me explain that a little more, {yes}?")
 		storeTalkCid[cid] = 3
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 3 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 3 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome back, darling... so about the {branches}, let me explain that a little more, {yes}?")
 		storeTalkCid[cid] = 4
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 4 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 4 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome back, darling... so about the {pushing}, let me explain that a little more, {yes}?")
 		storeTalkCid[cid] = 5
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 5 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 5 then
 		npcHandler:setMessage(MESSAGE_GREET, "Welcome back, darling... so about the {cart}, let me explain that a little more, {yes}?")
 		storeTalkCid[cid] = 6
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 6 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 6 then
 		npcHandler:setMessage(MESSAGE_GREET, "Oh, sweetheart, is there a problem with the quest? Should I {explain} it again?")
 		storeTalkCid[cid] = 7
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 7 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 7 then
 		npcHandler:setMessage(MESSAGE_GREET, "Right, thank you sweetheart! This will be enough to heat my oven. Oh, and you are probably waiting for your reward, {yes}?")
 		storeTalkCid[cid] = 8
-	elseif player:getStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 then
+	elseif player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 then
 		npcHandler:setMessage(MESSAGE_GREET, "Oh, welcome back, dear Isleth Eagonst! Are you here for a little chat? Just use the highlighted {keywords} again to choose a {topic}.")
 	end
 	return true
@@ -59,28 +59,28 @@ local function creatureSayCallback(cid, type, msg)
 			storeTalkCid[cid] = 1
 		elseif storeTalkCid[cid] == 1 then
 			npcHandler:say("Thank you so much for your kindness. I'm an old woman and I desperately need firewood for my oven. Could you please help me?", cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 1)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 1)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 1)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 1)
 			storeTalkCid[cid] = 2
 		elseif storeTalkCid[cid] == 2 then
 			npcHandler:say("You're such a treasure. In the forest south of here, there are {dead trees} without any leaves. The first thing you have to do is search for one, {okay}?", cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 2)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 2)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 2)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 2)
 			storeTalkCid[cid] = 3
 		elseif storeTalkCid[cid] == 3 then
 			npcHandler:say("Splendid, once you've found one, 'Use' it to break a branch from it. Did you understand that so far?", cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 3)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 3)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 3)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 3)
 			storeTalkCid[cid] = 4
 		elseif storeTalkCid[cid] == 4 then
 			npcHandler:say("Good... so after you broke a branch, please push it here and select 'use with'. That will turn your mouse cursor into crosshairs. Then left-click on my cart. {Alright}?", cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 4)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 4)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 4)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 4)
 			storeTalkCid[cid] = 5
 		elseif storeTalkCid[cid] == 5 then
 			npcHandler:say("To push the branch, drag and drop it on the grass by holding the left mousebutton and moving the cursor to where you want to throw the branch. Just push it near my cart before you 'Use' it, {alright}?", cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 5)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 5)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 5)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 5)
 			storeTalkCid[cid] = 6
 		elseif storeTalkCid[cid] == 6 then
 			npcHandler:say({
@@ -89,8 +89,8 @@ local function creatureSayCallback(cid, type, msg)
 				"Don't put it in your inventory like before, but instead DRAG it over the map by LEFT-CLICKING the loose branch, HOLDING the LEFT MOUSE BUTTON and moving it over the map. ...",
 				"When you are close to my cart, USE the branch WITH the cart: RIGHT-CLICK the branch on the floor and select 'USE WITH', Then LEFT-CLICK on the cart. Don't worry, you will see what I mean on the way. Thanks and {bye} for now!"
 			}, cid)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 6)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 6)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 6)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 6)
 			Position(32064, 32273, 7):sendMagicEffect(CONST_ME_TUTORIALARROW)
 			npcHandler:releaseFocus(cid)
 			npcHandler:resetNpc(cid)
@@ -106,8 +106,8 @@ local function creatureSayCallback(cid, type, msg)
 			player:addExperience(50, true)
 			Position(32058, 32266, 6):sendMagicEffect(CONST_ME_TUTORIALARROW)
 			player:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaQuestLog, 8)
-			player:setStorageValue(Storage.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 8)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaQuestLog, 8)
+			player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage, 8)
 			npcHandler:releaseFocus(cid)
 			npcHandler:resetNpc(cid)
 		end

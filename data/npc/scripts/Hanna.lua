@@ -17,7 +17,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "addon") or msgcontains(msg, "outfit") or msgcontains(msg, "hat") then
-		local addonProgress = player:getStorageValue(Storage.OutfitQuest.Citizen.AddonHat)
+		local addonProgress = player:getStorageValue(PlayerStorageKeys.OutfitQuest.Citizen.AddonHat)
 		if addonProgress < 1 then
 			npcHandler:say("Pretty, isn't it? My friend Amber taught me how to make it, but I could help you with one if you like. What do you say?", cid)
 			npcHandler.topic[cid] = 1
@@ -32,9 +32,9 @@ local function creatureSayCallback(cid, type, msg)
 
 	if npcHandler.topic[cid] == 1 then
 		if msgcontains(msg, 'yes') then
-			player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart)) + 1)
-			player:setStorageValue(Storage.OutfitQuest.Citizen.AddonHat, 1)
-			player:setStorageValue(Storage.OutfitQuest.Citizen.MissionHat, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.max(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart)) + 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Citizen.AddonHat, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.Citizen.MissionHat, 1)
 			npcHandler:say('Okay, here we go, listen closely! I need a few things... a basic hat of course, maybe a legion helmet would do. Then about 100 chicken feathers... and 50 honeycombs as glue. That\'s it, come back to me once you gathered it!', cid)
 		else
 			npcHandler:say('Aw, I guess you don\'t like feather hats. No big deal.', cid)
@@ -60,9 +60,9 @@ local function creatureSayCallback(cid, type, msg)
 				player:addOutfitAddon(136, 2)
 				player:addOutfitAddon(128, 2)
 
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(Storage.OutfitQuest.DefaultStart) - 1))
-				player:setStorageValue(Storage.OutfitQuest.Citizen.MissionHat, 0)
-				player:setStorageValue(Storage.OutfitQuest.Citizen.AddonHat, 2)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, math.min(0, player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) - 1))
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Citizen.MissionHat, 0)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.Citizen.AddonHat, 2)
 			end
 		else
 			npcHandler:say('Maybe another time.', cid)

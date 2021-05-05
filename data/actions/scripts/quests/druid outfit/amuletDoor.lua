@@ -1,5 +1,5 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getStorageValue (Storage.OutfitQuest.DruidHatAddon) >= 7 then
+	if player:getStorageValue (PlayerStorageKeys.OutfitQuest.DruidHatAddon) >= 7 then
 		if item.itemid == 6261 then
 			player:teleportTo(toPosition, true)
 			item:transform(item.itemid + 1)

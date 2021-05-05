@@ -14,7 +14,7 @@ local function creatureSayCallback(cid, type, msg)
 
 	local player = Player(cid)
 	if msgcontains(msg, "join") then
-		if player:getStorageValue(Storage.OutfitQuest.BrotherhoodOutfit) < 1 and player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BrotherhoodOutfit) < 1 and player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) < 1 then
 			npcHandler:say({
 				"The Nightmare Knights are almost extinct now, and as far as I know I am the only teacher that is left. But you might beright and its time to accept new disciples ...",
 				"After all you have passed the Dream Challenge to reach this place, which used to be the process of initiation in the past...",
@@ -23,13 +23,13 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 1
 		end
 	elseif msgcontains(msg, "advancement") then
-		if player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) == 1 then
 			npcHandler:say("So you want to advance to a {Initiate} rank? Did you bring 500 demonic essences with you?", cid)
 			npcHandler.topic[cid] = 3
-		elseif player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) == 2 then
 			npcHandler:say("So you want to advance to a {Dreamer} rank? Did you bring 1000 demonic essences with you?", cid)
 			npcHandler.topic[cid] = 4
-		elseif player:getStorageValue(Storage.OutfitQuest.NightmareOutfit) == 3 then
+		elseif player:getStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit) == 3 then
 			npcHandler:say("So you want to advance to a {Lord Protector} rank? Did you bring 1500 demonic essences with you?", cid)
 			npcHandler.topic[cid] = 5
 		end
@@ -43,13 +43,13 @@ local function creatureSayCallback(cid, type, msg)
 				"So I welcome you as the latest member of the order of the Nightmare Knights. You entered this place as a stranger, butyou will leave this place as a friend ...",
 				"You can always ask me about your current rank and about the privileges the ranks grant to those who hold them."
 			}, cid)
-			player:setStorageValue(Storage.OutfitQuest.NightmareOutfit, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit, 1)
 			player:addAchievement('Nightmare Knight')
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
 			if player:removeItem(6500, 500) then
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.NightmareOutfit, 2)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit, 2)
 				npcHandler:say("You advanced to {Initiate} rank! You are now able to use teleports of second floor of Knightwatch Tower.", cid)
 			else
 				npcHandler:say("Come back when you gather all essences.", cid)
@@ -58,7 +58,7 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 4 then
 			if player:removeItem(6500, 1000) then
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.NightmareOutfit, 3)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit, 3)
 				player:addItem(6391, 1)
 				player:addAchievement('Nightmare Walker')
 				npcHandler:say("You advanced to {Dreamer} rank!", cid)
@@ -69,9 +69,9 @@ local function creatureSayCallback(cid, type, msg)
 		elseif npcHandler.topic[cid] == 5 then
 			if player:removeItem(6500, 1500) then
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
-				player:setStorageValue(Storage.OutfitQuest.NightmareOutfit, 4)
-				player:setStorageValue(Storage.OutfitQuest.NightmareDoor, 1)
-				player:setStorageValue(Storage.KnightwatchTowerDoor, 1)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.NightmareOutfit, 4)
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.NightmareDoor, 1)
+				player:setStorageValue(PlayerStorageKeys.KnightwatchTowerDoor, 1)
 				player:addAchievement('Lord Protector')
 				npcHandler:say("You advanced to {Lord Protector} rank! You are now able to use teleports of fourth floor of Knightwatch Tower and to create addon scrolls.", cid)
 			else

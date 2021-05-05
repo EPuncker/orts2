@@ -23,7 +23,7 @@ keywordHandler:addKeyword({'excalibug'}, StdModule.say, {npcHandler = npcHandler
 keywordHandler:addKeyword({'port hope'}, StdModule.say, {npcHandler = npcHandler, text = 'Hairless apes strange people are. '})
 
 local function greetCallback(cid)
-	if Player(cid):getStorageValue(Storage.TheApeCity.Questline) > 14 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.TheApeCity.Questline) > 14 then
 		npcHandler:setMessage(MESSAGE_GREET, "Be greeted, friend of the apes.")
 	else
 		npcHandler:say("You not should be {here}! You go! You go!", cid)

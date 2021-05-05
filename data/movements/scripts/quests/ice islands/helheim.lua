@@ -4,13 +4,13 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.TheIceIslands.Questline) ~= 30 then
+	if player:getStorageValue(PlayerStorageKeys.TheIceIslands.Questline) ~= 30 then
 		return true
 	end
 
 	-- Questlog The Ice Islands Quest, The Secret of Helheim
-	player:setStorageValue(Storage.TheIceIslands.Mission07, 3)
-	player:setStorageValue(Storage.TheIceIslands.Questline, 31)
+	player:setStorageValue(PlayerStorageKeys.TheIceIslands.Mission07, 3)
+	player:setStorageValue(PlayerStorageKeys.TheIceIslands.Questline, 31)
 	player:say('You discovered the necromantic altar and should report about it.', TALKTYPE_MONSTER_SAY)
 	position:sendMagicEffect(CONST_ME_MAGIC_RED)
 

@@ -64,12 +64,12 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Uh... I don\'t think that I have work for you right now. If you need a job, go talk to Razan.', cid)
 			return true
 		end
-		if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) < 1 then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) < 1 then
 			npcHandler:say('You mean, you would like to prove that you deserve to wear such a veil?', cid)
 			npcHandler.topic[cid] = 1
 		end
 	elseif config[msg] and npcHandler.topic[cid] == 0 then
-		if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) == config[msg].storageValue then
+		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) == config[msg].storageValue then
 			npcHandler:say(config[msg].text[1], cid)
 			npcHandler.topic[cid] = 3
 			message[cid] = msg
@@ -77,9 +77,9 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say(config[msg].text[2], cid)
 		end
 	elseif msgcontains(msg, 'scarab cheese') then
-		if player:getStorageValue(Storage.TravellingTrader.Mission03) == 1 then
+		if player:getStorageValue(PlayerStorageKeys.TravellingTrader.Mission03) == 1 then
 			npcHandler:say('Let me cover my nose before I get this for you... Would you REALLY like to buy scarab cheese for 100 gold?', cid)
-		elseif player:getStorageValue(Storage.TravellingTrader.Mission03) == 2 then
+		elseif player:getStorageValue(PlayerStorageKeys.TravellingTrader.Mission03) == 2 then
 			npcHandler:say('Oh the last cheese molded? Would you like to buy another one for 100 gold?', cid)
 		end
 		npcHandler.topic[cid] = 4
@@ -95,10 +95,10 @@ local function creatureSayCallback(cid, type, msg)
 			}, cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 2 then
-			if player:getStorageValue(Storage.OutfitQuest.DefaultStart) ~= 1 then
-				player:setStorageValue(Storage.OutfitQuest.DefaultStart, 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart) ~= 1 then
+				player:setStorageValue(PlayerStorageKeys.OutfitQuest.DefaultStart, 1)
 			end
-			player:setStorageValue(Storage.OutfitQuest.secondOrientalAddon, 1)
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon, 1)
 			npcHandler:say('Excellent! Come back to me once you have collected 100 pieces of ape fur.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 3 then
@@ -108,8 +108,8 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler.topic[cid] = 0
 				return true
 			end
-			player:setStorageValue(Storage.OutfitQuest.secondOrientalAddon, player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) + 1)
-			if player:getStorageValue(Storage.OutfitQuest.secondOrientalAddon) == 5 then
+			player:setStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon, player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) + 1)
+			if player:getStorageValue(PlayerStorageKeys.OutfitQuest.secondOrientalAddon) == 5 then
 				player:addOutfitAddon(146, 2)
 				player:addOutfitAddon(150, 2)
 				player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
@@ -118,7 +118,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 4 then
 			if player:getMoney() >= 100 then
-				player:setStorageValue(Storage.TravellingTrader.Mission03, 2)
+				player:setStorageValue(PlayerStorageKeys.TravellingTrader.Mission03, 2)
 				player:addItem(8112, 1)
 				player:removeMoney(100)
 				npcHandler:say('Here it is.', cid)

@@ -17,7 +17,7 @@ function onStepIn(creature, item, position, fromPosition)
 
 	if player:getStorageValue(targetTile.storageKey) < 1 then
 		--Questlog, Children of the Revolution 'Mission 2: Imperial Zzecret Weaponzz'
-		player:setStorageValue(Storage.ChildrenoftheRevolution.Mission02, player:getStorageValue(Storage.ChildrenoftheRevolution.Mission02) + 1)
+		player:setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission02, player:getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission02) + 1)
 		player:setStorageValue(targetTile.storageKey, 1)
 		player:say(targetTile.text, TALKTYPE_MONSTER_SAY)
 	end

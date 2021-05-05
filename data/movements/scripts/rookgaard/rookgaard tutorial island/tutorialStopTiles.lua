@@ -27,7 +27,7 @@ function onStepIn(creature, item, position, fromPosition)
 
 	local playerId = player.uid
 	if item.actionid == 50070 then
-		if player:getStorageValue(Storage.RookgaardTutorialIsland.tutorialHintsStorage) == 5 then
+		if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) == 5 then
 			return true
 		end
 	elseif item.actionid == 50071 then
@@ -65,7 +65,7 @@ function onStepIn(creature, item, position, fromPosition)
 
 	if item.actionid == 50089 then
 		player:setTown(Town(6)) -- set rookgaard citizen
-		player:setStorageValue(Storage.RookgaardTutorialIsland.CarlosQuestLog, 8)
+		player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.CarlosQuestLog, 8)
 		player:sendTutorial(14)
 		local playerPos = player:getPosition()
 		player:teleportTo(Position(playerPos.x, playerPos.y - 1, playerPos.z), true)

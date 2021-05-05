@@ -30,7 +30,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return
 	end
 
-	if player:getStorageValue(Storage.BigfootBurden.QuestLine) >= teleportCrystal.storageValue then
+	if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) >= teleportCrystal.storageValue then
 		if not teleportCrystal.needCrystal or player:removeItem(18457, 1) then
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			player:teleportTo(teleportCrystal.position)

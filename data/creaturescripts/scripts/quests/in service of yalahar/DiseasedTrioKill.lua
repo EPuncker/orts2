@@ -21,11 +21,11 @@ function onKill(creature, target)
 		player:say('You slayed ' .. targetMonster:getName() .. '.', TALKTYPE_MONSTER_SAY)
 	end
 
-	if (player:getStorageValue(Storage.InServiceofYalahar.DiseasedDan) == 1
-			and player:getStorageValue(Storage.InServiceofYalahar.DiseasedBill) == 1
-			and player:getStorageValue(Storage.InServiceofYalahar.DiseasedFred) == 1
-			and player:getStorageValue(Storage.InServiceofYalahar.AlchemistFormula) ~= 1) then
-		player:setStorageValue(Storage.InServiceofYalahar.AlchemistFormula, 0)
+	if (player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.DiseasedDan) == 1
+			and player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.DiseasedBill) == 1
+			and player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.DiseasedFred) == 1
+			and player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.AlchemistFormula) ~= 1) then
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.AlchemistFormula, 0)
 	end
 	return true
 end

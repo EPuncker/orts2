@@ -9,7 +9,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getStorageValue(Storage.WrathoftheEmperor.TeleportAccess) >= teleports[item.uid].value then
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.TeleportAccess) >= teleports[item.uid].value then
 		player:teleportTo(teleports[item.uid].position)
 		player:getPosition():sendMagicEffect(teleports[item.uid].position, CONST_ME_TELEPORT)
 	else

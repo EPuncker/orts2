@@ -17,7 +17,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	if msgcontains(msg, 'ticket') then
-		if Player(cid):getStorageValue(Storage.wagonTicket) >= os.time() then
+		if Player(cid):getStorageValue(PlayerStorageKeys.wagonTicket) >= os.time() then
 			npcHandler:say('Your weekly ticket is still valid. Would be a waste of money to purchase a second one', cid)
 			return true
 		end
@@ -33,7 +33,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.wagonTicket, os.time() + 7 * 24 * 60 * 60)
+			player:setStorageValue(PlayerStorageKeys.wagonTicket, os.time() + 7 * 24 * 60 * 60)
 			npcHandler:say('Here is your stamp. It can\'t be transferred to another person and will last one week from now. You\'ll get notified upon using an ore wagon when it isn\'t valid anymore.', cid)
 		end
 		npcHandler.topic[cid] = 0
@@ -53,9 +53,9 @@ end
 addTravelKeyword('farmine', 210, {'postman', 'new frontier'},
 	function(player)
 		local destination = Position(33025, 31553, 14)
-		if player:getStorageValue(Storage.TheNewFrontier.Mission05) == 7 then --if The New Frontier Quest 'Mission 05: Getting Things Busy' complete then Stage 3
+		if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission05) == 7 then --if The New Frontier Quest 'Mission 05: Getting Things Busy' complete then Stage 3
 			destination.z = 10
-		elseif player:getStorageValue(Storage.TheNewFrontier.Mission03) == 3 then --if The New Frontier Quest 'Mission 03: Strangers in the Night' complete then Stage 2
+		elseif player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission03) == 3 then --if The New Frontier Quest 'Mission 03: Strangers in the Night' complete then Stage 2
 			destination.z = 12
 		end
 
@@ -64,8 +64,8 @@ addTravelKeyword('farmine', 210, {'postman', 'new frontier'},
 )
 addTravelKeyword('cormaya', 160, 'postman', Position(33311, 31989, 15),
 	function(player)
-		if player:getStorageValue(Storage.postman.Mission01) == 4 then
-			player:setStorageValue(Storage.postman.Mission01, 5)
+		if player:getStorageValue(PlayerStorageKeys.postman.Mission01) == 4 then
+			player:setStorageValue(PlayerStorageKeys.postman.Mission01, 5)
 		end
 	end
 )

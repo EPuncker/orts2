@@ -4,7 +4,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if Game.getStorageValue(GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage) < 11 then
+	if Game.getStorageValue(GlobalStorageKeys.TheAncientTombs.DiprathSwitchesGlobalStorage) < 11 then
 		player:teleportTo(fromPosition, true)
 		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
 		return true

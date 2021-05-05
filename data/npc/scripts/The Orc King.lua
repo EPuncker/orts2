@@ -10,8 +10,8 @@ function onThink()				npcHandler:onThink()					end
 local creatures = { 'Slime', 'Slime', 'Slime', 'Orc Warlord', 'Orc Warlord', 'Orc Leader', 'Orc Leader', 'Orc Leader' }
 local function greetCallback(cid)
 	local player = Player(cid)
-	if player:getStorageValue(Storage.OrcKingGreeting) ~= 1 then
-		player:setStorageValue(Storage.OrcKingGreeting, 1)
+	if player:getStorageValue(PlayerStorageKeys.OrcKingGreeting) ~= 1 then
+		player:setStorageValue(PlayerStorageKeys.OrcKingGreeting, 1)
 		for i = 1, #creatures do
 			Game.createMonster(creatures[i], Npc():getPosition())
 		end
@@ -29,11 +29,11 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local efreet, marid = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03), player:getStorageValue(Storage.DjinnWar.MaridFaction.Mission03)
+	local efreet, marid = player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03), player:getStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.Mission03)
 	-- Mission 3 - Orc Fortress
 	if msgcontains(msg, 'lamp') then
 		if efreet == 1 or marid == 1 then
-			if player:getStorageValue(Storage.DjinnWar.ReceivedLamp) ~= 1 then
+			if player:getStorageValue(PlayerStorageKeys.DjinnWar.ReceivedLamp) ~= 1 then
 				npcHandler:say({
 					'I can sense your evil intentions to imprison a djinn! You are longing for the lamp, which I still possess. ...',
 					'Who do you want to trap in this cursed lamp?'
@@ -45,7 +45,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 
 	elseif msgcontains(msg, 'cookie') then
-		if player:getStorageValue(Storage.WhatAFoolishQuest.Questline) == 31 and player:getStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.OrcKing) ~= 1 then
+		if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.Questline) == 31 and player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.OrcKing) ~= 1 then
 			npcHandler:say('You bring me a stinking cookie???', cid)
 			npcHandler.topic[cid] = 2
 		end
@@ -54,13 +54,13 @@ local function creatureSayCallback(cid, type, msg)
 	elseif npcHandler.topic[cid] == 1 then
 		if msgcontains(msg, 'malor') then
 			if efreet == 1 then
-				player:setStorageValue(Storage.DjinnWar.EfreetFaction.DoorToLamp, 1)
+				player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.DoorToLamp, 1)
 
 			elseif marid == 1 then
-				player:setStorageValue(Storage.DjinnWar.MaridFaction.DoorToLamp, 1)
+				player:setStorageValue(PlayerStorageKeys.DjinnWar.MaridFaction.DoorToLamp, 1)
 			end
 
-			player:setStorageValue(Storage.DjinnWar.ReceivedLamp, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.ReceivedLamp, 1)
 			player:addItem(2344, 1)
 			npcHandler:say('I was waiting for this day! Take the lamp and let Malor feel my wrath!', cid)
 		else
@@ -76,7 +76,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			player:setStorageValue(Storage.WhatAFoolishQuest.CookieDelivery.OrcKing, 1)
+			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.OrcKing, 1)
 			if player:getCookiesDelivered() == 10 then
 				player:addAchievement('Allow Cookies?')
 			end
@@ -111,7 +111,7 @@ keywordHandler:addKeyword({'third'}, StdModule.say, {npcHandler = npcHandler, te
 keywordHandler:addKeyword({'deathwish'}, StdModule.say, {npcHandler = npcHandler, text = 'His ancient fortress on Darama was deserted as the evil Djinn fled this world after his imprisonment. Now the time has come for the evil Djinns to return to their master although this will certainly awaken the {good Djinn} too.'})
 keywordHandler:addKeyword({'good djinn'}, StdModule.say, {npcHandler = npcHandler, text = 'I will not share anything more about that topic with you {paleskins}.'})
 keywordHandler:addKeyword({'paleskins'}, StdModule.say, {npcHandler = npcHandler, text = 'You are as ugly as maggots, although not quite as as tasty.'})
-keywordHandler:addKeyword({'malor'}, StdModule.say, {npcHandler = npcHandler, text = 'This cursed djinn king! I set him free from an enchanted lamp, and he cheated me!'}, function(player) return player:getStorageValue(Storage.DjinnWar.ReceivedLamp) == 1 end)
+keywordHandler:addKeyword({'malor'}, StdModule.say, {npcHandler = npcHandler, text = 'This cursed djinn king! I set him free from an enchanted lamp, and he cheated me!'}, function(player) return player:getStorageValue(PlayerStorageKeys.DjinnWar.ReceivedLamp) == 1 end)
 
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)

@@ -13,9 +13,9 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local missionProgress = player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission02)
+	local missionProgress = player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission02)
 	if msgcontains(msg, 'mission') then
-		if player:getStorageValue(Storage.DjinnWar.EfreetFaction.Mission01) == 3 then
+		if player:getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission01) == 3 then
 			if missionProgress < 1 then
 				npcHandler:say({
 					'So Baa\'leal thinks you are up to do a mission for us? ...',
@@ -45,7 +45,7 @@ local function creatureSayCallback(cid, type, msg)
 				'Well... to cut a long story short, your mission is to sneak into Ashta\'daramai and to steal it. ...',
 				'Needless to say, the Marid won\'t be too eager to part with it. Try not to get killed until you have delivered the stone to me.'
 			}, cid)
-			player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission02, 1)
+			player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission02, 1)
 
 		elseif msgcontains(msg, 'no') then
 			npcHandler:say('Then not.', cid)
@@ -66,7 +66,7 @@ local function creatureSayCallback(cid, type, msg)
 					'Looks like you have managed to extended your life expectancy - for just a bit longer.'
 				}, cid)
 				player:removeItem(2346, 1)
-				player:setStorageValue(Storage.DjinnWar.EfreetFaction.Mission02, 3)
+				player:setStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission02, 3)
 				npcHandler.topic[cid] = 0
 			end
 
@@ -79,7 +79,7 @@ local function creatureSayCallback(cid, type, msg)
 end
 
 local function onTradeRequest(cid)
-	if Player(cid):getStorageValue(Storage.DjinnWar.EfreetFaction.Mission03) ~= 3 then
+	if Player(cid):getStorageValue(PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03) ~= 3 then
 		npcHandler:say('No chance, human. Malor doesn\'t want me to trade with strangers.', cid)
 		return false
 	end

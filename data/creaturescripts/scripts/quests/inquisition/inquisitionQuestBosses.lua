@@ -22,6 +22,9 @@ function onKill(player, target)
 
 	local newValue = 2
 	if targetName == 'latrivan' or targetName == 'golgordan' then
+		if Game.getStorageValue(bossStorage) == nil then
+			Game.setStorageValue(bossStorage, 0)
+		end
 		newValue = math.max(0, Game.getStorageValue(bossStorage)) + 1
 	end
 	Game.setStorageValue(bossStorage, newValue)

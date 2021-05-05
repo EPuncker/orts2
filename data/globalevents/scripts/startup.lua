@@ -1,4 +1,9 @@
-local startupGlobalStorages = {GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage, GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage, GlobalStorage.TheAncientTombs.ThalasSwitchesGlobalStorage}
+local startupGlobalStorages = {
+	GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage,
+	GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage,
+	GlobalStorage.TheAncientTombs.ThalasSwitchesGlobalStorage,
+	GlobalStorage.PitsOfInfernoLevers
+}
 
 function onStartup()
 	print(string.format('>> Loaded %d npcs and spawned %d monsters.\n>> Loaded %d towns with %d houses in total.', Game.getNpcCount(), Game.getMonsterCount(), #Game.getTowns(), #Game.getHouses()))

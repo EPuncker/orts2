@@ -1,7 +1,19 @@
 local text = {
-	[1] = 'first', [2] = 'second', [3] = 'third', [4] = 'fourth', [5] = 'fifth',
-	[6] = 'sixth', [7] = 'seventh', [8] = 'eighth', [9] = 'ninth', [10] = 'tenth',
-	[11] = 'eleventh', [12] = 'twelfth', [13] = 'thirteenth', [14] = 'fourteenth', [15] = 'fifteenth'
+	[1] = "first",
+	[2] = "second",
+	[3] = "third",
+	[4] = "fourth",
+	[5] = "fifth",
+	[6] = "sixth",
+	[7] = "seventh",
+	[8] = "eighth",
+	[9] = "ninth",
+	[10] = "tenth",
+	[11] = "eleventh",
+	[12] = "twelfth",
+	[13] = "thirteenth",
+	[14] = "fourteenth",
+	[15] = "fifteenth"
 }
 
 local stonePositions = {
@@ -11,7 +23,10 @@ local stonePositions = {
 
 local function createStones()
 	for i = 1, #stonePositions do
-		Game.createItem(1304, 1, stonePositions[i])
+		local stone = Tile(stonePositions[i]):getItemById(1304)
+		if not stone then
+			Game.createItem(1304, 1, stonePositions[i])
+		end
 	end
 
 	Game.setStorageValue(GlobalStorage.PitsOfInfernoLevers, 0)

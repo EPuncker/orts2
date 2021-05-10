@@ -83,7 +83,7 @@ function onKill(creature, target)
 	end
 
 	Game.setStorageValue(GlobalStorageKeys.Weeper, 1)
-	addEvent(Game.setStorageValue, 30 * 60 * 1000, GlobalStorage.Weeper, 0)
+	addEvent(Game.setStorageValue, 30 * 60 * 1000, GlobalStorageKeys.Weeper, 0)
 	Game.createMonster('gnomevil', Position(33114, 31953, 11))
 	addEvent(clearArena, 32 * 60 * 1000)
 	return true

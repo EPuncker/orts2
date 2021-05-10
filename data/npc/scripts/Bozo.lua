@@ -25,8 +25,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7476},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission1, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 2}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission1, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 2}
 		}
 	},
 	[2] = {
@@ -40,8 +40,8 @@ local config = {
 		},
 		addItem = {itemId = 7478},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission2, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 3}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission2, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 3}
 		}
 	},
 	[3] = {
@@ -53,8 +53,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7477},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission2, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 4}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission2, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 4}
 		}
 	},
 	[4] = {
@@ -67,8 +67,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission3, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 5}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission3, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 5}
 		}
 	},
 	[5] = {
@@ -85,8 +85,8 @@ local config = {
 		removeItem = {itemId = 7484},
 		pie = true,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission3, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 6}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission3, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 6}
 		}
 	},
 	[6] = {
@@ -97,8 +97,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission4, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 7}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission4, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 7}
 		}
 	},
 	[7] = {
@@ -114,8 +114,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 2006, count = 18, subType = 15},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission4, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 8}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission4, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 8}
 		},
 		addItem = {itemId = 7482}
 	},
@@ -128,8 +128,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7483},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission4, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 9}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission4, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 9}
 		}
 	},
 	[9] = {
@@ -141,9 +141,9 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission5, value = 1},
-			{key = Storage.WhatAFoolishQuest.TriangleTowerDoor, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 10}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission5, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.TriangleTowerDoor, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 10}
 		}
 	},
 	[10] = {
@@ -161,8 +161,8 @@ local config = {
 		yes = true,
 		checkItemCount = 8187,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission5, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 11}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission5, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 11}
 		}
 	},
 	[11] = {
@@ -175,11 +175,11 @@ local config = {
 			}
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.EmperorBeardShave,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.EmperorBeardShave,
 		removeItem = {itemId = 7479},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission5, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 12}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission5, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 12}
 		}
 	},
 	[12] = {
@@ -192,8 +192,8 @@ local config = {
 			[1] = 'You know, nothing has brought more fun and joy to humanity than the whoopee cushion. Its creation is a delicate matter though. Bring me 4 pieces of minotaur leather first and then lets talk about this mission.'
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission6, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 14}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission6, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 14}
 		}
 	},
 	[14] = {
@@ -205,8 +205,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 5878, count = 4},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission6, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 15}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission6, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 15}
 		}
 	},
 	[15] = {
@@ -218,8 +218,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 5879},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission6, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 16}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission6, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 16}
 		},
 		effect = CONST_ME_POFF
 	},
@@ -232,8 +232,8 @@ local config = {
 		},
 		addItem = {itemId = 7485},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission6, value = 4},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 17}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission6, value = 4},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 17}
 		}
 	},
 	[17] = {
@@ -244,10 +244,10 @@ local config = {
 
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.WhoopeeCushion,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.WhoopeeCushion,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission6, value = 5},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 18}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission6, value = 5},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 18}
 		}
 	},
 	[18] = {
@@ -258,9 +258,9 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission7, value = 1},
-			{key = Storage.WhatAFoolishQuest.QueenEloiseCatDoor, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 19}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission7, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.QueenEloiseCatDoor, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 19}
 		}
 	},
 	[19] = {
@@ -271,10 +271,10 @@ local config = {
 
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.ScaredCarina,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.ScaredCarina,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission7, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 20}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission7, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 20}
 		}
 	},
 	[20] = {
@@ -285,8 +285,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission8, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 21}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission8, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 21}
 		}
 	},
 	[21] = {
@@ -298,8 +298,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 8204},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission8, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 22}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission8, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 22}
 		}
 	},
 	[22] = {
@@ -311,8 +311,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 8109},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission8, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 23}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission8, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 23}
 		}
 	},
 	[23] = {
@@ -324,8 +324,8 @@ local config = {
 		},
 		addItem = {itemId = 7499},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission8, value = 4},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 24}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission8, value = 4},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 24}
 		}
 	},
 	[24] = {
@@ -335,10 +335,10 @@ local config = {
 			[3] = 'You\'re hell of a guy, I bet you enjoyed it. As you represent everything a fool stands for, I give you this fool\'s sceptre to spiceup your jester outfit. If you are interested, there are even more missions for a fool like yourself. Just ask about them.'
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.Cigar,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.Cigar,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission8, value = 5},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 25}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission8, value = 5},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 25}
 		},
 		addItem = {itemId = 7958},
 		addon = 1
@@ -351,8 +351,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission9, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 26}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission9, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 26}
 		},
 		addItem = {itemId = 7478}
 	},
@@ -368,8 +368,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7488},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission9, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 27}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission9, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 27}
 		},
 		addItem = {itemId = 7478}
 	},
@@ -382,8 +382,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7489},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission9, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 28}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission9, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 28}
 		}
 	},
 	[28] = {
@@ -396,8 +396,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission9, value = 4},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 29}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission9, value = 4},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 29}
 		},
 		addItem = {itemId = 7490}
 	},
@@ -408,10 +408,10 @@ local config = {
 			[3] = 'What a splendid prank! If you are ready for more, ask me about the next mission.'
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.Contract,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.Contract,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission9, value = 5},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 30}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission9, value = 5},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 30}
 		}
 	},
 	[30] = {
@@ -430,8 +430,8 @@ local config = {
 		},
 		yes = true,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission10, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 31}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission10, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 31}
 		},
 		addItem = {itemId = 8111, count = 10}
 	},
@@ -443,8 +443,8 @@ local config = {
 		yes = true,
 		cookiesDelivery = true,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission10, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 32}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission10, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 32}
 		}
 	},
 	[32] = {
@@ -455,8 +455,8 @@ local config = {
 			}
 		},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission11, value = 1},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 33}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission11, value = 1},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 33}
 		}
 	},
 	[33] = {
@@ -472,8 +472,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 5909, count = 5},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission11, value = 2},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 34}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission11, value = 2},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 34}
 		},
 		addItem = {itemId = 7500}
 	},
@@ -490,8 +490,8 @@ local config = {
 		yes = true,
 		removeItem = {itemId = 7501},
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission11, value = 3},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 35}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission11, value = 3},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 35}
 		},
 		addItem = {itemId = 7502}
 	},
@@ -502,10 +502,10 @@ local config = {
 			[3] = 'By Kurik, I knew you have it in you. You are a fool after my fancy. Take this jester hat, you deserve it. It will go nicely with your jester costume.'
 		},
 		yes = true,
-		checkStorage = Storage.WhatAFoolishQuest.ScaredKazzan,
+		checkStorage = PlayerStorageKeys.WhatAFoolishQuest.ScaredKazzan,
 		updateStorages = {
-			{key = Storage.WhatAFoolishQuest.Mission11, value = 4},
-			{key = Storage.WhatAFoolishQuest.Questline, value = 36}
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Mission11, value = 4},
+			{key = PlayerStorageKeys.WhatAFoolishQuest.Questline, value = 36}
 		},
 		addItem = {itemId = 7957},
 		addon = 2,
@@ -595,7 +595,7 @@ local function creatureSayCallback(cid, type, msg)
 			if targetValue.updateStorages then
 				for i = 1, #targetValue.updateStorages do
 					local storage = targetValue.updateStorages[i]
-					player:setStorageValue(PlayerStorageKeys.key, storage.value)
+					player:setStorageValue(PlayerStorageKeys.key, PlayerStorageKeys.value)
 				end
 			end
 
@@ -688,7 +688,7 @@ local function creatureSayCallback(cid, type, msg)
 			if targetValue.updateStorages then
 				for i = 1, #targetValue.updateStorages do
 					local storage = targetValue.updateStorages[i]
-					player:setStorageValue(PlayerStorageKeys.key, storage.value)
+					player:setStorageValue(PlayerStorageKeys.key, PlayerStorageKeys.value)
 				end
 			end
 

@@ -1,11 +1,11 @@
 local throneStorages = {
-	Storage.PitsOfInferno.ThroneInfernatil,
-	Storage.PitsOfInferno.ThroneTafariel,
-	Storage.PitsOfInferno.ThroneVerminor,
-	Storage.PitsOfInferno.ThroneApocalypse,
-	Storage.PitsOfInferno.ThroneBazir,
-	Storage.PitsOfInferno.ThroneAshfalor,
-	Storage.PitsOfInferno.ThronePumin
+	PlayerStorageKeys.PitsOfInferno.ThroneInfernatil,
+	PlayerStorageKeys.PitsOfInferno.ThroneTafariel,
+	PlayerStorageKeys.PitsOfInferno.ThroneVerminor,
+	PlayerStorageKeys.PitsOfInferno.ThroneApocalypse,
+	PlayerStorageKeys.PitsOfInferno.ThroneBazir,
+	PlayerStorageKeys.PitsOfInferno.ThroneAshfalor,
+	PlayerStorageKeys.PitsOfInferno.ThronePumin
 }
 
 local function hasTouchedOneThrone(player)

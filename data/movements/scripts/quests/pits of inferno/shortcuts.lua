@@ -1,6 +1,6 @@
 local storages = {
-	[8816] = Storage.PitsOfInferno.ShortcutHub,
-	[8817] = Storage.PitsOfInferno.ShortcutLevers
+	[8816] = PlayerStorageKeys.PitsOfInferno.ShortcutHub,
+	[8817] = PlayerStorageKeys.PitsOfInferno.ShortcutLevers
 }
 
 function onStepIn(creature, item, position, fromPosition)

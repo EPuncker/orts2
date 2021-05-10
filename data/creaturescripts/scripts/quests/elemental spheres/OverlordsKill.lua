@@ -1,8 +1,8 @@
 local overlords = {
-	['energy overlord'] = {cStorage = Storage.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorage.ElementalSphere.KnightBoss},
-	['fire overlord'] = {cStorage = Storage.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorage.ElementalSphere.SorcererBoss},
-	['ice overlord'] = {cStorage = Storage.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorage.ElementalSphere.PaladinBoss},
-	['earth overlord'] = {cStorage = Storage.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorage.ElementalSphere.DruidBoss},
+	['energy overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.KnightBoss},
+	['fire overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.SorcererBoss},
+	['ice overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.PaladinBoss},
+	['earth overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.DruidBoss},
 	['lord of the elements'] = {}
 }
 

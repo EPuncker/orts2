@@ -1,6 +1,6 @@
 local rewards = {
 	[3148] = {
-		storage = Storage.BigfootBurden.Warzone1Reward,
+		storage = PlayerStorageKeys.BigfootBurden.Warzone1Reward,
 		bossName = 'Deathstrike',
 		items = {
 			{rand = true, itemId = {18396, 18501, 18502, 18503}},
@@ -13,7 +13,7 @@ local rewards = {
 		achievement = {'Final Strike', 'Death on Strike'}
 	},
 	[3149] = {
-		storage = Storage.BigfootBurden.Warzone2Reward,
+		storage = PlayerStorageKeys.BigfootBurden.Warzone2Reward,
 		bossName = 'Gnomevil',
 		items = {
 			{rand = true, itemId = {18505, 18506, 18507}},
@@ -27,7 +27,7 @@ local rewards = {
 		achievement = {'Gnomebane\'s Bane', 'Fall of the Fallen'}
 	},
 	[3150] = {
-		storage = Storage.BigfootBurden.Warzone3Reward,
+		storage = PlayerStorageKeys.BigfootBurden.Warzone3Reward,
 		bossName = 'Abyssador',
 		items = {
 			{rand = true, itemId = {18497, 18498, 18499}},

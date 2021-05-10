@@ -1,7 +1,7 @@
 local diseasedTrio = {
-	['diseased bill'] = Storage.InServiceofYalahar.DiseasedBill,
-	['diseased dan']  = Storage.InServiceofYalahar.DiseasedDan,
-	['diseased fred'] = Storage.InServiceofYalahar.DiseasedFred
+	['diseased bill'] = PlayerStorageKeys.InServiceofYalahar.DiseasedBill,
+	['diseased dan']  = PlayerStorageKeys.InServiceofYalahar.DiseasedDan,
+	['diseased fred'] = PlayerStorageKeys.InServiceofYalahar.DiseasedFred
 }
 
 function onKill(creature, target)

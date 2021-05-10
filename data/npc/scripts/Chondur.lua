@@ -81,7 +81,7 @@ addTaskKeyword({
 			'If you manage to fulfil this task, I will grant you your own staff. Have you understood everything and are ready for this test?'
 		},
 		'Good! Come back once you\'ve found a mandrake and collected 5 dworcish voodoo dolls.'
-	}, -1, Storage.OutfitQuest.Shaman.MissionStaff
+	}, -1, PlayerStorageKeys.OutfitQuest.Shaman.MissionStaff
 )
 
 -- Mask
@@ -93,7 +93,7 @@ addTaskKeyword({
 			'If you manage to fulfil this task, I\'ll grant you your own mask. Have you understood everything and are you ready for this test?'
 		},
 		'Good! Come back once you have collected 5 tribal masks and 5 banana staffs.'
-	}, 2, Storage.OutfitQuest.Shaman.MissionMask
+	}, 2, PlayerStorageKeys.OutfitQuest.Shaman.MissionMask
 )
 
 -- Hand in task items
@@ -131,7 +131,7 @@ addItemKeyword('mandrake', 'voodoo doll',
 			'Together with the spirits of the ancestors, I seek for wisdom. Together we can change the flow of magic to do things that are beyond the limits of ordinary magic. ...',
 			'In conversations with the spirits, I gain insight into secrets that would have been lost otherwise.'
 		}
-	}, 1, {{itemId = 5015, count = 1}, {itemId = 3955, count = 5}}, 2, Storage.OutfitQuest.Shaman.MissionStaff
+	}, 1, {{itemId = 5015, count = 1}, {itemId = 3955, count = 5}}, 2, PlayerStorageKeys.OutfitQuest.Shaman.MissionStaff
 )
 addItemKeyword('tribal mask', 'banana staff',
 	{
@@ -139,7 +139,7 @@ addItemKeyword('tribal mask', 'banana staff',
 		'Well done, my child! I hereby grant you the right to wear a shamanic mask. Do it proudly.',
 		'Sometimes dworcs are seen with these masks.',
 		'A banana staff is the sign of a high ape magician.'
-	}, 3, {{itemId = 3966, count = 5}, {itemId = 3967, count = 5}}, 1, Storage.OutfitQuest.Shaman.MissionMask, true
+	}, 3, {{itemId = 3966, count = 5}, {itemId = 3967, count = 5}}, 1, PlayerStorageKeys.OutfitQuest.Shaman.MissionMask, true
 )
 
 -- Task status

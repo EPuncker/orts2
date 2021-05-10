@@ -1,6 +1,6 @@
 local config = {
-	[12545] = {itemId = 12506, storage = Storage.FathersBurdenQuest.Corpse.Scale, text = 'Glitterscale\'s scale.'},
-	[12546] = {itemId = 12504, storage = Storage.FathersBurdenQuest.Corpse.Sinew, text = 'Heoni\'s sinew'}
+	[12545] = {itemId = 12506, storage = PlayerStorageKeys.FathersBurdenQuest.Corpse.Scale, text = 'Glitterscale\'s scale.'},
+	[12546] = {itemId = 12504, storage = PlayerStorageKeys.FathersBurdenQuest.Corpse.Sinew, text = 'Heoni\'s sinew'}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

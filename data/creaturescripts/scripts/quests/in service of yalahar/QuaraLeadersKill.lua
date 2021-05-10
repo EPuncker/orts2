@@ -1,7 +1,7 @@
 local quaraLeaders = {
-	['inky'] = Storage.InServiceofYalahar.QuaraInky,
-	['sharptooth'] = Storage.InServiceofYalahar.QuaraSharptooth,
-	['splasher'] = Storage.InServiceofYalahar.QuaraSplasher
+	['inky'] = PlayerStorageKeys.InServiceofYalahar.QuaraInky,
+	['sharptooth'] = PlayerStorageKeys.InServiceofYalahar.QuaraSharptooth,
+	['splasher'] = PlayerStorageKeys.InServiceofYalahar.QuaraSplasher
 }
 
 function onKill(creature, target)

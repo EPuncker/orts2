@@ -1,6 +1,6 @@
 local config = {
-	[4644] = {storageKey = {Storage.GravediggerOfDrefia.Mission36, Storage.GravediggerOfDrefia.Mission36a}, message = 'The blood in the vial is of a deep, ruby red.', itemId = 21418},
-	[4645] = {storageKey = {Storage.GravediggerOfDrefia.Mission36a, Storage.GravediggerOfDrefia.Mission37}, message = 'The blood in the vial is of a strange colour, as if tainted.', itemId = 21419}
+	[4644] = {storageKey = {PlayerStorageKeys.GravediggerOfDrefia.Mission36, PlayerStorageKeys.GravediggerOfDrefia.Mission36a}, message = 'The blood in the vial is of a deep, ruby red.', itemId = 21418},
+	[4645] = {storageKey = {PlayerStorageKeys.GravediggerOfDrefia.Mission36a, PlayerStorageKeys.GravediggerOfDrefia.Mission37}, message = 'The blood in the vial is of a strange colour, as if tainted.', itemId = 21419}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

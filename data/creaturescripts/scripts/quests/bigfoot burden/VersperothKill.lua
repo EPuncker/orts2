@@ -35,7 +35,7 @@ function onKill(creature, target)
 	end
 
 	Game.setStorageValue(GlobalStorageKeys.Versperoth.Battle, 2)
-	addEvent(Game.setStorageValue, 30 * 60 * 1000, GlobalStorage.Versperoth.Battle, 0)
+	addEvent(Game.setStorageValue, 30 * 60 * 1000, GlobalStorageKeys.Versperoth.Battle, 0)
 
 	local holeItem = Tile(teleportPosition):getItemById(18462)
 	if holeItem then

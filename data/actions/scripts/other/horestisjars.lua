@@ -13,11 +13,11 @@ local config = {
 	bossName = 'Horestis',
 	bossPosition = Position(32941, 32793, 12),
 	storages = {
-		[50006] = Storage.HorestisTomb.JarFloor1,
-		[50007] = Storage.HorestisTomb.JarFloor2,
-		[50008] = Storage.HorestisTomb.JarFloor3,
-		[50009] = Storage.HorestisTomb.JarFloor4,
-		[50010] = Storage.HorestisTomb.JarFloor5
+		[50006] = PlayerStorageKeys.HorestisTomb.JarFloor1,
+		[50007] = PlayerStorageKeys.HorestisTomb.JarFloor2,
+		[50008] = PlayerStorageKeys.HorestisTomb.JarFloor3,
+		[50009] = PlayerStorageKeys.HorestisTomb.JarFloor4,
+		[50010] = PlayerStorageKeys.HorestisTomb.JarFloor5
 	}
 }
 

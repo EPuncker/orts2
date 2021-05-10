@@ -1,6 +1,6 @@
 local config = {
-	[3167] = {storageKey = Storage.ChildrenoftheRevolution.Questline, toPosition = {Position(33257, 31116, 8), Position(33356, 31126, 7)}},
-	[3168] = {storageKey = Storage.ChildrenoftheRevolution.Questline, toPosition = {Position(33356, 31125, 7), Position(33261, 31079, 8)}}
+	[3167] = {storageKey = PlayerStorageKeys.ChildrenoftheRevolution.Questline, toPosition = {Position(33257, 31116, 8), Position(33356, 31126, 7)}},
+	[3168] = {storageKey = PlayerStorageKeys.ChildrenoftheRevolution.Questline, toPosition = {Position(33356, 31125, 7), Position(33261, 31079, 8)}}
 }
 
 function onStepIn(creature, item, position, fromPosition)

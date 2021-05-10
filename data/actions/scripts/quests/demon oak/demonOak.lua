@@ -47,10 +47,10 @@ local config = {
 		}
 	},
 	storages = {
-		[8288] = Storage.DemonOak.AxeBlowsBird,
-		[8289] = Storage.DemonOak.AxeBlowsLeft,
-		[8290] = Storage.DemonOak.AxeBlowsRight,
-		[8291] = Storage.DemonOak.AxeBlowsFace
+		[8288] = PlayerStorageKeys.DemonOak.AxeBlowsBird,
+		[8289] = PlayerStorageKeys.DemonOak.AxeBlowsLeft,
+		[8290] = PlayerStorageKeys.DemonOak.AxeBlowsRight,
+		[8291] = PlayerStorageKeys.DemonOak.AxeBlowsFace
 	}
 }
 

@@ -1,12 +1,12 @@
 local specialQuests = {
-	[2215] = Storage.AnnihilatorDone,
-	[2016] = Storage.DreamersChallenge.Reward,
-	[10544] = Storage.PitsOfInferno.WeaponReward,
-	[12513] = Storage.thievesGuild.Reward,
-	[12374] = Storage.WrathoftheEmperor.mainReward,
-	[26300] = Storage.SvargrondArena.RewardGreenhorn,
-	[27300] = Storage.SvargrondArena.RewardScrapper,
-	[28300] = Storage.SvargrondArena.RewardWarlord
+	[2215] = PlayerStorageKeys.AnnihilatorDone,
+	[2016] = PlayerStorageKeys.DreamersChallenge.Reward,
+	[10544] = PlayerStorageKeys.PitsOfInferno.WeaponReward,
+	[12513] = PlayerStorageKeys.thievesGuild.Reward,
+	[12374] = PlayerStorageKeys.WrathoftheEmperor.mainReward,
+	[26300] = PlayerStorageKeys.SvargrondArena.RewardGreenhorn,
+	[27300] = PlayerStorageKeys.SvargrondArena.RewardScrapper,
+	[28300] = PlayerStorageKeys.SvargrondArena.RewardWarlord
 }
 
 local questsExperience = {
@@ -14,7 +14,7 @@ local questsExperience = {
 }
 
 local questLog = {
-	[9130] = Storage.hiddenCityOfBeregar.DefaultStart
+	[9130] = PlayerStorageKeys.hiddenCityOfBeregar.DefaultStart
 }
 
 local tutorialIds = {

@@ -16,29 +16,29 @@ function Player.addSkillTries(...)
 end
 
 function Player.checkGnomeRank(self)
-	local points = self:getStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.RANK)
-	local questProgress = self:getStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE)
+	local points = self:getStorageValue(PlayerStorageKeys.BigfootBurden.Rank)
+	local questProgress = self:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine)
 	if points >= 30 and points < 120 then
 		if questProgress == 14 then
-			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 15)
+			self:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 15)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Little Helper')
 	elseif points >= 120 and points < 480 then
 		if questProgress == 15 then
-			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 16)
+			self:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 16)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnome Friend')
 	elseif points >= 480 and points < 1440 then
 		if questProgress == 16 then
-			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 17)
+			self:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 17)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Gnomelike')
 	elseif points >= 1440 then
 		if questProgress == 17 then
-			self:setStorageValue(PlayerStorageKeys.BIGFOOTBURDEN.QUESTLINE, 18)
+			self:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 18)
 			self:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		self:addAchievement('Honorary Gnome')
@@ -97,10 +97,10 @@ end
 
 function Player.getCookiesDelivered(self)
 	local storage, amount = {
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.SIMONTHEBEGGAR, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.MARKWIN, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.ARIELLA,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.HAIRYCLES, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.DJINN, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.AVARTAR,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.ORCKING, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.LORBAS, STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.WYDA,
-		STORAGE.WHATAFOOLISHQUEST.COOKIEDELIVERY.HJAERN
+		PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Simonthebeggar, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Markwin, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Ariella,
+		PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Hairycles, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Djinn, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Avartar,
+		PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Orcking, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Lorbas, PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Wyda,
+		PlayerStorageKeys.WhatAFoolishQuest.CookieDelivery.Hjaern
 	}, 0
 	for i = 1, #storage do
 		if self:getStorageValue(storage[i]) == 1 then

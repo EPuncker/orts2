@@ -1,8 +1,8 @@
 local config = {
-	[6087] = {storage = Storage.OutfitQuest.Hunter.MusicSheet01, text = 'first'},
-	[6088] = {storage = Storage.OutfitQuest.Hunter.MusicSheet02, text = 'second'},
-	[6089] = {storage = Storage.OutfitQuest.Hunter.MusicSheet03, text = 'third'},
-	[6090] = {storage = Storage.OutfitQuest.Hunter.MusicSheet04, text = 'fourth'}
+	[6087] = {storage = PlayerStorageKeys.OutfitQuest.Hunter.MusicSheet01, text = 'first'},
+	[6088] = {storage = PlayerStorageKeys.OutfitQuest.Hunter.MusicSheet02, text = 'second'},
+	[6089] = {storage = PlayerStorageKeys.OutfitQuest.Hunter.MusicSheet03, text = 'third'},
+	[6090] = {storage = PlayerStorageKeys.OutfitQuest.Hunter.MusicSheet04, text = 'fourth'}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

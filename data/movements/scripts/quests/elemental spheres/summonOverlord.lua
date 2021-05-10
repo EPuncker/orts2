@@ -1,6 +1,6 @@
 local config = {
 	[8568] = {
-		storage = GlobalStorage.ElementalSphere.KnightBoss,
+		storage = GlobalStorageKeys.ElementalSphere.KnightBoss,
 		corpse = 8967,
 		charged = 1495,
 		inactive = 0,
@@ -19,7 +19,7 @@ local config = {
 		}
 	},
 	[8569] = {
-		storage = GlobalStorage.ElementalSphere.SorcererBoss,
+		storage = GlobalStorageKeys.ElementalSphere.SorcererBoss,
 		corpse = 8969,
 		charged = 8575,
 		inactive = 8573,
@@ -38,7 +38,7 @@ local config = {
 		}
 	},
 	[8570] = {
-		storage = GlobalStorage.ElementalSphere.PaladinBoss,
+		storage = GlobalStorageKeys.ElementalSphere.PaladinBoss,
 		corpse = 8968,
 		charged = 8574,
 		inactive = 8571,
@@ -58,7 +58,7 @@ local config = {
 		}
 	},
 	[8578] = {
-		storage = GlobalStorage.ElementalSphere.DruidBoss,
+		storage = GlobalStorageKeys.ElementalSphere.DruidBoss,
 		corpse = 8934,
 		charged = 8576,
 		inactive = 8572,

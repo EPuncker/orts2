@@ -1,7 +1,7 @@
 local storages = {
-	[26100] = Storage.SvargrondArena.Greenhorn,
-	[27100] = Storage.SvargrondArena.Scrapper,
-	[28100] = Storage.SvargrondArena.Warlord
+	[26100] = PlayerStorageKeys.SvargrondArena.Greenhorn,
+	[27100] = PlayerStorageKeys.SvargrondArena.Scrapper,
+	[28100] = PlayerStorageKeys.SvargrondArena.Warlord
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

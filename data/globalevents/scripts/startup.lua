@@ -1,8 +1,8 @@
 local startupGlobalStorages = {
-	GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage,
-	GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage,
-	GlobalStorage.TheAncientTombs.ThalasSwitchesGlobalStorage,
-	GlobalStorage.PitsOfInfernoLevers
+	GlobalStorageKeys.TheAncientTombs.AshmunrahSwitchesGlobalStorage,
+	GlobalStorageKeys.TheAncientTombs.DiprathSwitchesGlobalStorage,
+	GlobalStorageKeys.TheAncientTombs.ThalasSwitchesGlobalStorage,
+	GlobalStorageKeys.PitsOfInfernoLevers
 }
 
 function onStartup()

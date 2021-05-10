@@ -44,7 +44,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	Game.setStorageValue(GlobalStorageKeys.Warzones, 1)
-	addEvent(Game.setStorageValue, 32 * 60 * 1000, GlobalStorage.Warzones, 0)
+	addEvent(Game.setStorageValue, 32 * 60 * 1000, GlobalStorageKeys.Warzones, 0)
 	local pos
 	for i = 1, 6 do
 		for k = 1, 10 do

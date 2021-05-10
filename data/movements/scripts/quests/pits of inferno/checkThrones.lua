@@ -1,11 +1,11 @@
 local cStorages = {
-	[2090] = Storage.PitsOfInferno.ThroneInfernatil,
-	[2091] = Storage.PitsOfInferno.ThroneTafariel,
-	[2092] = Storage.PitsOfInferno.ThroneVerminor,
-	[2093] = Storage.PitsOfInferno.ThroneApocalypse,
-	[2094] = Storage.PitsOfInferno.ThroneBazir,
-	[2095] = Storage.PitsOfInferno.ThroneAshfalor,
-	[2096] = Storage.PitsOfInferno.ThronePumin
+	[2090] = PlayerStorageKeys.PitsOfInferno.ThroneInfernatil,
+	[2091] = PlayerStorageKeys.PitsOfInferno.ThroneTafariel,
+	[2092] = PlayerStorageKeys.PitsOfInferno.ThroneVerminor,
+	[2093] = PlayerStorageKeys.PitsOfInferno.ThroneApocalypse,
+	[2094] = PlayerStorageKeys.PitsOfInferno.ThroneBazir,
+	[2095] = PlayerStorageKeys.PitsOfInferno.ThroneAshfalor,
+	[2096] = PlayerStorageKeys.PitsOfInferno.ThronePumin
 }
 
 function onStepIn(creature, item, position, fromPosition)

@@ -21,8 +21,8 @@
 
 ```
 -- Storages:
-* Storage.achievementsBase -- base storage
-* Storage.achievementsCounter -- this storage will be used to save the process to obtain the certain achievement
+* PlayerStorageKeys.achievementsBase -- base storage
+* PlayerStorageKeys.achievementsCounter -- this storage will be used to save the process to obtain the certain achievement
 * (Ex: this storage + the id of achievement 'Allowance Collector' to save how many piggy banks has been broken
 ```
 

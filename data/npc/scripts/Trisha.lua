@@ -61,7 +61,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 
-	local player, storage = Player(cid), Storage.OutfitQuest.WarriorShoulderAddon
+	local player, storage = Player(cid), PlayerStorageKeys.OutfitQuest.WarriorShoulderAddon
 
 	if npcHandler.topic[cid] == 0 then
 		if table.contains({'outfit', 'addon'}, msg) then

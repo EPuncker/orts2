@@ -1,6 +1,6 @@
 local config = {
-	[12382] = {storageKey = Storage.WrathoftheEmperor.Questline, toPosition = {Position(33078, 31219, 8), Position(33216, 31069, 9)}},
-	[12383] = {storageKey = Storage.WrathoftheEmperor.Questline, toPosition = {Position(33216, 31069, 9), Position(33078, 31219, 8)}}
+	[12382] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33078, 31219, 8), Position(33216, 31069, 9)}},
+	[12383] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33216, 31069, 9), Position(33078, 31219, 8)}}
 }
 
 function onStepIn(creature, item, position, fromPosition)

@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 	end
 
 	local player = Player(cid)
-	local storage = Storage.OutfitQuest.PirateSabreAddon
+	local storage = PlayerStorageKeys.OutfitQuest.PirateSabreAddon
 
 	if table.contains({"outfit", "addon"}, msg) then
 		npcHandler:say("You're talking about my sabre? Well, even though you earned our trust, you'd have to fulfill a task first before you are granted to wear such a sabre.", cid)

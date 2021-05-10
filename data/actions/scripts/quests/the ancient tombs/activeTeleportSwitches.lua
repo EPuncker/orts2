@@ -1,7 +1,7 @@
 local config = {
-	[50242] = GlobalStorage.TheAncientTombs.ThalasSwitchesGlobalStorage,
-	[50243] = GlobalStorage.TheAncientTombs.DiprathSwitchesGlobalStorage,
-	[50244] = GlobalStorage.TheAncientTombs.AshmunrahSwitchesGlobalStorage
+	[50242] = GlobalStorageKeys.TheAncientTombs.ThalasSwitchesGlobalStorage,
+	[50243] = GlobalStorageKeys.TheAncientTombs.DiprathSwitchesGlobalStorage,
+	[50244] = GlobalStorageKeys.TheAncientTombs.AshmunrahSwitchesGlobalStorage
 }
 
 local function resetScript(position, storage)

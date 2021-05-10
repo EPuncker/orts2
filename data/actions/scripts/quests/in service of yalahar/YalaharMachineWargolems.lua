@@ -1,6 +1,6 @@
 local config = {
 	[23700] = {
-		storage = GlobalStorage.InServiceOfYalahar.WarGolemsMachine1,
+		storage = GlobalStorageKeys.InServiceOfYalahar.WarGolemsMachine1,
 		machines = {
 			Position(32882, 31323, 10),
 			Position(32882, 31320, 10),
@@ -9,7 +9,7 @@ local config = {
 		}
 	},
 	[23701] = {
-		storage = GlobalStorage.InServiceOfYalahar.WarGolemsMachine2,
+		storage = GlobalStorageKeys.InServiceOfYalahar.WarGolemsMachine2,
 		machines = {
 			Position(32869, 31322, 10),
 			Position(32869, 31320, 10),

@@ -20,22 +20,22 @@ local function nexusMessage(player, message)
 end
 
 local storages = {
-	[4008] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave1,
-	[4009] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave2,
-	[4010] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave3,
-	[4011] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave4,
-	[4012] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave5,
-	[4013] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave6,
-	[4014] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave7,
-	[4015] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave8,
-	[4016] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave9,
-	[4017] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave10,
-	[4018] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave11,
-	[4019] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave12,
-	[4020] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave13,
-	[4021] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave14,
-	[4022] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave15,
-	[4023] = Storage.TibiaTales.RestInHallowedGround.Graves.Grave16
+	[4008] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave1,
+	[4009] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave2,
+	[4010] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave3,
+	[4011] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave4,
+	[4012] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave5,
+	[4013] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave6,
+	[4014] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave7,
+	[4015] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave8,
+	[4016] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave9,
+	[4017] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave10,
+	[4018] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave11,
+	[4019] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave12,
+	[4020] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave13,
+	[4021] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave14,
+	[4022] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave15,
+	[4023] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave16
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

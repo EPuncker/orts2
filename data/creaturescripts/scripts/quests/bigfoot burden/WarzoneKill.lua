@@ -1,7 +1,7 @@
 local bosses = {
-	['deathstrike'] = {status = 2, storage = Storage.BigfootBurden.Warzone1Reward},
-	['gnomevil'] = {status = 3, storage = Storage.BigfootBurden.Warzone2Reward},
-	['abyssador'] = {status = 4, storage = Storage.BigfootBurden.Warzone3Reward},
+	['deathstrike'] = {status = 2, storage = PlayerStorageKeys.BigfootBurden.Warzone1Reward},
+	['gnomevil'] = {status = 3, storage = PlayerStorageKeys.BigfootBurden.Warzone2Reward},
+	['abyssador'] = {status = 4, storage = PlayerStorageKeys.BigfootBurden.Warzone3Reward},
 }
 
 function onKill(creature, target)

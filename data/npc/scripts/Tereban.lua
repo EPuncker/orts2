@@ -9,7 +9,7 @@ function onThink()				npcHandler:onThink()					end
 
 local config = {
 	['strong sinew'] = {
-		storage = Storage.FathersBurdenQuest.Sinew,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Sinew,
 		messages = {
 			deliever = 'Do you have the required sinew?',
 			success = 'Ah, not only did you bring some sinew to me, you also made the world a safer place by killing Heoni.',
@@ -20,7 +20,7 @@ local config = {
 		itemId = 12504
 	},
 	['exquisite wood'] = {
-		storage = Storage.FathersBurdenQuest.Wood,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Wood,
 		messages = {
 			deliever = 'Could you find the wood we were talking about?',
 			success = 'Thank you. I feel somewhat embarrassed to put you into such a danger for some birthday present but I am sure you can handle it.',
@@ -31,7 +31,7 @@ local config = {
 		itemId = 12503
 	},
 	['spectral cloth'] = {
-		storage = Storage.FathersBurdenQuest.Cloth,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Cloth,
 		messages = {
 			deliever = 'Could you find the cloth I am looking for?',
 			success = 'It looks a bit scary but I guess sorcerers might even find that appealing. Thank you very much.',
@@ -42,7 +42,7 @@ local config = {
 		itemId = 12502
 	},
 	['exquisite silk'] = {
-		storage = Storage.FathersBurdenQuest.Silk,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Silk,
 		messages = {
 			deliever = 'So you\'ve found the silk that I need?',
 			success = 'Great. I better don\'t think about how big a spider has to be to produce such strands of silk.',
@@ -53,7 +53,7 @@ local config = {
 		itemId = 12501
 	},
 	['magic crystal'] = {
-		storage = Storage.FathersBurdenQuest.Crystal,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Crystal,
 		messages = {
 			deliever = 'Did you find the required crystal?',
 			success = 'Oh look at the colours and sparkles. This crystal is truly remarkable, thank you.',
@@ -64,7 +64,7 @@ local config = {
 		itemId = 12508
 	},
 	['mystic root'] = {
-		storage = Storage.FathersBurdenQuest.Root,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Root,
 		messages = {
 			deliever = 'Could you find the root which we are looking for?',
 			success = 'You are admirably determined in fulfilling your task. I will make sure that my sons appreciate what you did for their presents.',
@@ -75,7 +75,7 @@ local config = {
 		itemId = 12507
 	},
 	['old iron'] = {
-		storage = Storage.FathersBurdenQuest.Iron,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Iron,
 		messages = {
 			deliever = 'Have you found the iron that we need for the present?',
 			success = 'I wish there\'d an easier way to get that iron but those dwarfs are so stubborn. However, now we got what we need.',
@@ -86,7 +86,7 @@ local config = {
 		itemId = 12505
 	},
 	['flexible dragon scale'] = {
-		storage = Storage.FathersBurdenQuest.Scale,
+		storage = PlayerStorageKeys.FathersBurdenQuest.Scale,
 		messages = {
 			deliever = 'Could you get Glitterscale\'s scales yet?',
 			success = 'These scales must have belonged to a fearsome beast. I envy you for your bravery.',
@@ -100,10 +100,10 @@ local config = {
 
 local message = {}
 local storages = {
-	Storage.FathersBurdenQuest.Sinew, Storage.FathersBurdenQuest.Wood,
-	Storage.FathersBurdenQuest.Cloth, Storage.FathersBurdenQuest.Silk,
-	Storage.FathersBurdenQuest.Crystal, Storage.FathersBurdenQuest.Root,
-	Storage.FathersBurdenQuest.Iron, Storage.FathersBurdenQuest.Scale
+	PlayerStorageKeys.FathersBurdenQuest.Sinew, PlayerStorageKeys.FathersBurdenQuest.Wood,
+	PlayerStorageKeys.FathersBurdenQuest.Cloth, PlayerStorageKeys.FathersBurdenQuest.Silk,
+	PlayerStorageKeys.FathersBurdenQuest.Crystal, PlayerStorageKeys.FathersBurdenQuest.Root,
+	PlayerStorageKeys.FathersBurdenQuest.Iron, PlayerStorageKeys.FathersBurdenQuest.Scale
 }
 
 function creatureSayCallback(cid, type, msg)

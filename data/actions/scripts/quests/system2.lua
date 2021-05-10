@@ -3,7 +3,7 @@ local config = {
 		items = {
 			{itemId = 2356}
 		},
-		storage = Storage.DjinnWar.EfreetFaction.Mission03,
+		storage = PlayerStorageKeys.DjinnWar.EfreetFaction.Mission03,
 		formerValue = 1,
 		newValue = 2,
 		needItem = {itemId = 2344},
@@ -13,19 +13,19 @@ local config = {
 		items = {
 			{itemId = 2318}
 		},
-		storage = Storage.QuestChests.FamilyBrooch
+		storage = PlayerStorageKeys.QuestChests.FamilyBrooch
 	},
 	[3002] = {
 		items = {
 			{itemId = 2147, count = 6}
 		},
-		storage = Storage.QuestChests.SixRubiesQuest
+		storage = PlayerStorageKeys.QuestChests.SixRubiesQuest
 	},
 	[3003] = {
 		items = {
 			{itemId = 4858}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 27,
 		newValue = 28
 	},
@@ -33,13 +33,13 @@ local config = {
 		items = {
 			{itemId = 2229}, {itemId = 2151, count = 2}, {itemId = 2165}, {itemId = 2230}, {itemId = 2091, actionId = 6010}
 		},
-		storage = Storage.QuestChests.ParchmentRoomQuest
+		storage = PlayerStorageKeys.QuestChests.ParchmentRoomQuest
 	},
 	[3005] = {
 		items = {
 			{itemId = 4857}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 30,
 		newValue = 31
 	},
@@ -47,7 +47,7 @@ local config = {
 		items = {
 			{itemId = 15389}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 33,
 		newValue = 34
 	},
@@ -55,7 +55,7 @@ local config = {
 		items = {
 			{itemId = 4855}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 36,
 		newValue = 37
 	},
@@ -63,7 +63,7 @@ local config = {
 		items = {
 			{itemId = 4853}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 42,
 		newValue = 43
 	},
@@ -71,7 +71,7 @@ local config = {
 		items = {
 			{itemId = 4852}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 39,
 		newValue = 40
 	},
@@ -79,7 +79,7 @@ local config = {
 		items = {
 			{itemId = 4847}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 49,
 		newValue = 50
 	},
@@ -87,7 +87,7 @@ local config = {
 		items = {
 			{itemId = 2332}
 		},
-		storage = Storage.postman.Mission08,
+		storage = PlayerStorageKeys.postman.Mission08,
 		formerValue = 1,
 		newValue = 2
 	},
@@ -95,7 +95,7 @@ local config = {
 		items = {
 			{itemId = 7503}
 		},
-		storage = Storage.TravellingTrader.Mission02,
+		storage = PlayerStorageKeys.TravellingTrader.Mission02,
 		formerValue = 3,
 		newValue = 4
 	},
@@ -103,7 +103,7 @@ local config = {
 		items = {
 			{itemId = 2356}
 		},
-		storage = Storage.DjinnWar.MaridFaction.Mission03,
+		storage = PlayerStorageKeys.DjinnWar.MaridFaction.Mission03,
 		formerValue = 1,
 		newValue = 2,
 		needItem = {itemId = 2344},
@@ -113,46 +113,46 @@ local config = {
 		items = {
 			{itemId = 2487}
 		},
-		storage = Storage.QuestChests.BlackKnightTreeCrownArmor
+		storage = PlayerStorageKeys.QuestChests.BlackKnightTreeCrownArmor
 	},
 	[3062] = {
 		items = {
 			{itemId = 8262}
 		},
-		storage = Storage.QuestChests.KosheiAmulet1
+		storage = PlayerStorageKeys.QuestChests.KosheiAmulet1
 	},
 	[3064] = {
 		items = {
 			{itemId = 8264}
 		},
-		storage = Storage.QuestChests.KosheiAmulet2
+		storage = PlayerStorageKeys.QuestChests.KosheiAmulet2
 	},
 	[3084] = {
 		items = {
 			{itemId = 9744}
 		},
-		storage = Storage.InServiceofYalahar.MatrixReward
+		storage = PlayerStorageKeys.InServiceofYalahar.MatrixReward
 	},
 	[3085] = {
 		items = {
 			{itemId = 9743}
 		},
-		storage = Storage.InServiceofYalahar.MatrixReward
+		storage = PlayerStorageKeys.InServiceofYalahar.MatrixReward
 	},
 	[3112] = {
 		items = {
 			{itemId = 1954, text = '<the paper is old and tattered, you can only make out a signature:> Tylaf, apprentice of Hjaern'}
 		},
-		storage = Storage.TheIceIslands.Questline,
+		storage = PlayerStorageKeys.TheIceIslands.Questline,
 		formerValue = 35,
 		newValue = 36,
-		missionStorage = { key = Storage.TheIceIslands.Mission09, value = 2 }
+		missionStorage = { key = PlayerStorageKeys.TheIceIslands.Mission09, value = 2 }
 	},
 	[3114] = {
 		items = {
 			{itemId = 6124}
 		},
-		storage = Storage.ExplorerSociety.QuestLine,
+		storage = PlayerStorageKeys.ExplorerSociety.QuestLine,
 		formerValue = 63,
 		newValue = 64
 	},
@@ -160,7 +160,7 @@ local config = {
 		items = {
 			{itemId = 2330}
 		},
-		storage = Storage.postman.Mission09,
+		storage = PlayerStorageKeys.postman.Mission09,
 		formerValue = 1,
 		newValue = 2
 	},
@@ -168,7 +168,7 @@ local config = {
 		items = {
 			{itemId = 2331}
 		},
-		storage = Storage.postman.Mission05,
+		storage = PlayerStorageKeys.postman.Mission05,
 		formerValue = 1,
 		newValue = 2
 	},
@@ -176,7 +176,7 @@ local config = {
 		items = {
 			{itemId = 11101}
 		},
-		storage = Storage.ChildrenoftheRevolution.Questline,
+		storage = PlayerStorageKeys.ChildrenoftheRevolution.Questline,
 		formerValue = 1,
 		newValue = 2,
 		say = 'A batch of documents has been stashed in the shelf. These might be of interest to Zalamon.',
@@ -186,61 +186,61 @@ local config = {
 		items = {
 			{itemId = 2089, actionId = 3301}
 		},
-		storage = Storage.QuestChests.OutlawCampKey1
+		storage = PlayerStorageKeys.QuestChests.OutlawCampKey1
 	},
 	[3312] = {
 		items = {
 			{itemId = 2088, actionId = 3302}
 		},
-		storage = Storage.QuestChests.OutlawCampKey2
+		storage = PlayerStorageKeys.QuestChests.OutlawCampKey2
 	},
 	[3313] = {
 		items = {
 			{itemId = 2089, actionId = 3303}
 		},
-		storage = Storage.QuestChests.OutlawCampKey3
+		storage = PlayerStorageKeys.QuestChests.OutlawCampKey3
 	},
 	[4010] = {
 		items = {
 			{itemId = 4843}
 		},
-		storage = Storage.TheApeCity.HolyApeHair
+		storage = PlayerStorageKeys.TheApeCity.HolyApeHair
 	},
 	[5556] = {
 		items = {
 			{itemId = 2463}
 		},
-		storage = Storage.GhostShipQuest
+		storage = PlayerStorageKeys.GhostShipQuest
 	},
 	[9055] = {
 		items = {
 			{itemId = 2519}
 		},
-		storage = Storage.QuestChests.BlackKnightTreeCrownShield
+		storage = PlayerStorageKeys.QuestChests.BlackKnightTreeCrownShield
 	},
 	[9136] = {
 		items = {
 			{itemId = 2091, actionId = 3980}
 		},
-		storage = Storage.QuestChests.DeeperFibulaKey
+		storage = PlayerStorageKeys.QuestChests.DeeperFibulaKey
 	},
 	[9185] = {
 		items = {
 			{itemId = 2134}, {itemId = 2147, count = 2}, {itemId = 2145, count = 3}
 		},
-		storage = Storage.QuestChests.SilverBrooch
+		storage = PlayerStorageKeys.QuestChests.SilverBrooch
 	},
 	[9196] = {
 		items = {
 			{itemId = 2088, actionId = 5010}
 		},
-		storage = Storage.QuestChests.BlackKnightTreeKey
+		storage = PlayerStorageKeys.QuestChests.BlackKnightTreeKey
 	},
 	[9226] = {
 		items = {
 			{itemId = 2503}
 		},
-		storage = Storage.SamsOldBackpack,
+		storage = PlayerStorageKeys.SamsOldBackpack,
 		formerValue = 2,
 		newValue = 3
 	},
@@ -248,20 +248,20 @@ local config = {
 		items = {
 			{itemId = 4850}
 		},
-		storage = Storage.HydraEggQuest
+		storage = PlayerStorageKeys.HydraEggQuest
 	},
 	[12126] = {
 		items = {
 			{itemId = 4840, decay = true}
 		},
-		storage = Storage.TheApeCity.WitchesCapSpot,
+		storage = PlayerStorageKeys.TheApeCity.WitchesCapSpot,
 		time = true
 	},
 	[12331] = {
 		items = {
 			{itemId = 11076}
 		},
-		storage = Storage.UnnaturalSelection.Mission01,
+		storage = PlayerStorageKeys.UnnaturalSelection.Mission01,
 		formerValue = 1,
 		newValue = 2,
 		say = 'You dig out a skull from the pile of bones. That must be the skull Lazaran talked about.'
@@ -270,7 +270,7 @@ local config = {
 		items = {
 			{itemId = 8766}
 		},
-		storage = Storage.thievesGuild.Mission06,
+		storage = PlayerStorageKeys.thievesGuild.Mission06,
 		formerValue = 2,
 		newValue = 3,
 		say = 'To buy some time you replace the fish with a piece of carrot.'
@@ -279,25 +279,25 @@ local config = {
 		items = {
 			{itemId = 7736}
 		},
-		storage = Storage.secretService.RottenTree
+		storage = PlayerStorageKeys.secretService.RottenTree
 	},
 	[50032] = {
 		items = {
 			{itemId = 2798}
 		},
-		storage = Storage.BloodHerbQuest
+		storage = PlayerStorageKeys.BloodHerbQuest
 	},
 	[50112] = {
 		items = {
 			{itemId = 2789, count = 10}
 		},
-		storage = Storage.hiddenCityOfBeregar.BrownMushrooms
+		storage = PlayerStorageKeys.hiddenCityOfBeregar.BrownMushrooms
 	},
 	[50125] = {
 		items = {
 			{itemId = 14348}
 		},
-		storage = Storage.hiddenCityOfBeregar.JusticeForAll,
+		storage = PlayerStorageKeys.hiddenCityOfBeregar.JusticeForAll,
 		formerValue = 3,
 		newValue = 4
 	}

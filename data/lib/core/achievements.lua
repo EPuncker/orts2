@@ -445,7 +445,7 @@ function getAchievementInfoById(id)
 		if k == id then
 			local targetAchievement = {}
 			targetAchievement.id = k
-			targetAchievement.actionStorage = Storage.achievementsCounter + k
+			targetAchievement.actionStorage = PlayerStorageKeys.achievementsCounter + k
 			for inf, it in pairs(v) do
 				targetAchievement[inf] = it
 			end
@@ -460,7 +460,7 @@ function getAchievementInfoByName(name)
 		if v.name:lower() == name:lower() then
 			local targetAchievement = {}
 			targetAchievement.id = k
-			targetAchievement.actionStorage = Storage.achievementsCounter + k
+			targetAchievement.actionStorage = PlayerStorageKeys.achievementsCounter + k
 			for inf, it in pairs(v) do
 				targetAchievement[inf] = it
 			end
@@ -632,7 +632,7 @@ function Player.addAchievementProgress(self, ach, value)
 		return true
 	end
 
-	local storage = Storage.achievementsCounter + achievement.id
+	local storage = PlayerStorageKeys.achievementsCounter + achievement.id
 	local progress = self:getStorageValue(storage)
 	if progress < value then
 		self:setStorageValue(storage, math.max(1, progress) + 1)

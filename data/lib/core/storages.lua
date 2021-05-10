@@ -1057,6 +1057,8 @@ GlobalStorageKeys = {
 	SwordOfFury = 5635
 }
 
+-- disabled for now
+--[[
 -- Checking for duplicate storages:
 local function extractValues(tab, ret)
 	if type(tab) == "number" then
@@ -1079,3 +1081,4 @@ if #extraction > 1 then
 		end
 	end
 end
+]]

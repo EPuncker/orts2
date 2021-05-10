@@ -2,7 +2,7 @@ local worldBoard = Action()
 
 local communicates = {
 	[1] = {
-		globalStorage = GlobalStorage.WorldBoard.Yasir,
+		globalStorage = GlobalStorageKeys.WorldBoard.Yasir,
 		communicate = "Oriental ships sighted! A trader for exotic creature products may currently be visiting Carlin, Ankrahmun or Liberty Bay."
 	},
 }

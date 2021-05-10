@@ -1,7 +1,7 @@
 local config = {
-	[8009] = {storageKey = Storage.ChildrenoftheRevolution.SpyBuilding01, text = 'An impressive ammount of fish is stored here.'},
-	[8010] = {storageKey = Storage.ChildrenoftheRevolution.SpyBuilding02, text = 'A seemingly endless array of weapon stretches before you into the darkness.'},
-	[8011] = {storageKey = Storage.ChildrenoftheRevolution.SpyBuilding03, text = 'These barracks seem to be home for quite a lot of soldiers.'}
+	[8009] = {storageKey = PlayerStorageKeys.ChildrenoftheRevolution.SpyBuilding01, text = 'An impressive ammount of fish is stored here.'},
+	[8010] = {storageKey = PlayerStorageKeys.ChildrenoftheRevolution.SpyBuilding02, text = 'A seemingly endless array of weapon stretches before you into the darkness.'},
+	[8011] = {storageKey = PlayerStorageKeys.ChildrenoftheRevolution.SpyBuilding03, text = 'These barracks seem to be home for quite a lot of soldiers.'}
 }
 
 function onStepIn(creature, item, position, fromPosition)

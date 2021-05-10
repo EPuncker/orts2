@@ -7,7 +7,7 @@ local config = {
 	[1241] = 5
 }
 
-local storage = Storage.TheAncientTombs.VashresamunInstruments
+local storage = PlayerStorageKeys.TheAncientTombs.VashresamunInstruments
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local targetTable = config[item.itemid]
 	if not targetTable then

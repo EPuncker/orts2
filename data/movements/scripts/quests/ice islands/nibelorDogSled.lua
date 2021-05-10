@@ -1,9 +1,9 @@
 local config = {
 	-- Nibelor 5: Cure the Dogs needed or Barbarian Test Quest needed
-	[12025] = {destination = Position(32407, 31067, 7), storage = Storage.TheIceIslands.Mission06, value = 8},
-	[12026] = {destination = Position(32365, 31059, 7), storage = Storage.TheIceIslands.Mission06, value = 8},
-	[12027] = {destination = Position(32329, 31045, 7), storage = Storage.TheIceIslands.Mission03, value = 3},
-	[12028] = {destination = Position(32301, 31080, 7), storage = Storage.TheIceIslands.Mission03, value = 3}
+	[12025] = {destination = Position(32407, 31067, 7), storage = PlayerStorageKeys.TheIceIslands.Mission06, value = 8},
+	[12026] = {destination = Position(32365, 31059, 7), storage = PlayerStorageKeys.TheIceIslands.Mission06, value = 8},
+	[12027] = {destination = Position(32329, 31045, 7), storage = PlayerStorageKeys.TheIceIslands.Mission03, value = 3},
+	[12028] = {destination = Position(32301, 31080, 7), storage = PlayerStorageKeys.TheIceIslands.Mission03, value = 3}
 }
 
 function onStepIn(creature, item, position, fromPosition)

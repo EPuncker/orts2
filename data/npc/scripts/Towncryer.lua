@@ -14,7 +14,7 @@ local voices = {
 }
 
 local worldChanges = {
-	{ storage = GlobalStorage.WorldBoard.Yasir,  text = "Hear ye! Hear ye! What a lucky and beautiful day! Visit Carlin, Ankrahmun, or Liberty Bay. Yasir, the oriental trader might be there. Gather your creature products, for this chance is rare." },
+	{ storage = GlobalStorageKeys.WorldBoard.Yasir,  text = "Hear ye! Hear ye! What a lucky and beautiful day! Visit Carlin, Ankrahmun, or Liberty Bay. Yasir, the oriental trader might be there. Gather your creature products, for this chance is rare." },
 }
 
 for i = 1, #worldChanges do

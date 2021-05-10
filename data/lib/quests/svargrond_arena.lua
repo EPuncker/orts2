@@ -119,7 +119,7 @@ ARENA = {
 	[1] = {
 		name = 'Greenhorn',
 		price = 1000,
-		questLog = Storage.SvargrondArena.QuestLogGreenhorn,
+		questLog = PlayerStorageKeys.SvargrondArena.QuestLogGreenhorn,
 		achievement = 'Greenhorn',
 		creatures = {
 			[1] = 'frostfur',
@@ -135,14 +135,14 @@ ARENA = {
 		},
 		reward = {
 			trophy = 5807,
-			trophyStorage = Storage.SvargrondArena.TrophyGreenhorn,
+			trophyStorage = PlayerStorageKeys.SvargrondArena.TrophyGreenhorn,
 			desc = 'It is given to the courageous victor of the barbarian arena in greenhorn difficulty. Awarded to %s',
 		}
 	},
 	[2] = {
 		name = 'Scrapper',
 		price = 5000,
-		questLog = Storage.SvargrondArena.QuestLogScrapper,
+		questLog = PlayerStorageKeys.SvargrondArena.QuestLogScrapper,
 		achievement = 'Scrapper',
 		creatures = {
 			[1] = 'avalanche',
@@ -158,14 +158,14 @@ ARENA = {
 		},
 		reward = {
 			trophy = 5806,
-			trophyStorage = Storage.SvargrondArena.TrophyScrapper,
+			trophyStorage = PlayerStorageKeys.SvargrondArena.TrophyScrapper,
 			desc = 'It is given to the courageous victor of the barbarian arena in scrapper difficulty. Awarded to %s.',
 		}
 	},
 	[3] = {
 		name = 'Warlord',
 		price = 10000,
-		questLog = Storage.SvargrondArena.QuestLogWarlord,
+		questLog = PlayerStorageKeys.SvargrondArena.QuestLogWarlord,
 		achievement = 'Warlord of Svargrond',
 		creatures = {
 			[1] = 'webster',
@@ -181,7 +181,7 @@ ARENA = {
 		},
 		reward = {
 			trophy = 5805,
-			trophyStorage = Storage.SvargrondArena.TrophyWarlord,
+			trophyStorage = PlayerStorageKeys.SvargrondArena.TrophyWarlord,
 			desc = 'It is given to the courageous victor of the barbarian arena in warlord difficulty. Awarded to %s.',
 		}
 	}

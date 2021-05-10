@@ -1,11 +1,11 @@
 local config = {
-	[50139] = Storage.TheAncientTombs.MorguthisBlueFlameStorage1,
-	[50140] = Storage.TheAncientTombs.MorguthisBlueFlameStorage2,
-	[50141]	= Storage.TheAncientTombs.MorguthisBlueFlameStorage3,
-	[50142]	= Storage.TheAncientTombs.MorguthisBlueFlameStorage4,
-	[50143] = Storage.TheAncientTombs.MorguthisBlueFlameStorage5,
-	[50144] = Storage.TheAncientTombs.MorguthisBlueFlameStorage6,
-	[50145] = Storage.TheAncientTombs.MorguthisBlueFlameStorage7
+	[50139] = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage1,
+	[50140] = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage2,
+	[50141]	= PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage3,
+	[50142]	= PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage4,
+	[50143] = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage5,
+	[50144] = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage6,
+	[50145] = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage7
 }
 
 function onStepIn(creature, item, position, fromPosition)
@@ -23,7 +23,7 @@ function onStepIn(creature, item, position, fromPosition)
 		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 	else
 		local missingStorage = false
-		for i = Storage.TheAncientTombs.MorguthisBlueFlameStorage1, Storage.TheAncientTombs.MorguthisBlueFlameStorage7 do
+		for i = PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage1, PlayerStorageKeys.TheAncientTombs.MorguthisBlueFlameStorage7 do
 			if player:getStorageValue(i) ~= 1 then
 				missingStorage = true
 				break

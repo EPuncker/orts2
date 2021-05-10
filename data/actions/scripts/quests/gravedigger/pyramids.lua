@@ -1,8 +1,8 @@
 local config = {
-	[4646] = {Storage.GravediggerOfDrefia.Mission38, Storage.GravediggerOfDrefia.Mission38a},
-	[4647] = {Storage.GravediggerOfDrefia.Mission38a, Storage.GravediggerOfDrefia.Mission38b},
-	[4648] = {Storage.GravediggerOfDrefia.Mission38b, Storage.GravediggerOfDrefia.Mission38c},
-	[4649] = {Storage.GravediggerOfDrefia.Mission38c, Storage.GravediggerOfDrefia.Mission39}
+	[4646] = {PlayerStorageKeys.GravediggerOfDrefia.Mission38, PlayerStorageKeys.GravediggerOfDrefia.Mission38a},
+	[4647] = {PlayerStorageKeys.GravediggerOfDrefia.Mission38a, PlayerStorageKeys.GravediggerOfDrefia.Mission38b},
+	[4648] = {PlayerStorageKeys.GravediggerOfDrefia.Mission38b, PlayerStorageKeys.GravediggerOfDrefia.Mission38c},
+	[4649] = {PlayerStorageKeys.GravediggerOfDrefia.Mission38c, PlayerStorageKeys.GravediggerOfDrefia.Mission39}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

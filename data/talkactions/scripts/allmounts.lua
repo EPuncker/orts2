@@ -24,7 +24,7 @@ function onSay(player, words, param)
 		return false
 	end
 
-	for i = 1, 47 do
+	for i = 1, 102 do
 		target:addMount(i)
 	end
 

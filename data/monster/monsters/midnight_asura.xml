@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Midnight Asura" nameDescription="a midnight asura" experience="4100" speed="240">
+	<health now="3100" max="3100" />
+	<look looktype="150" head="0" body="114" legs="90" feet="90" addons="1" corpse="24644" />
+	<targetchange interval="5000" chance="16" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="0" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="100" min="0" max="-387" />
+	</attacks>
+	<defenses armor="55" defense="55">
+		<defense name="healing" interval="2000" chance="20" min="120" max="170" />
+	</defenses>
+		<immunities>
+		<immunity paralyze="1" />
+		<immunity death="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="-10" />
+		<element earthPercent="-10" />
+		<element firePercent="10" />
+		<element icePercent="10" />
+		<element holyPercent="30" />
+	</elements>
+	<voices interval="5000" chance="10">
+		<voice sentence="Death and Darkness!" />
+		<voice sentence="Embrace the night!" />
+		<voice sentence="May night fall upon you!" />
+	</voices>
+	<loot>
+		<item id="platinum coin" chance="80569" countmax="6" />
+		<item id="gold coin" chance="70296" countmax="100" />
+		<item id="flask of demonic blood" chance="14775" />
+		<item id="soul orb" chance="13698" />
+		<item id="golden lotus brooch" chance="12774" />
+		<item id="demonic essence" chance="10543" />
+		<item id="peacock feather fan" chance="10196" />
+		<item id="great health potion" chance="8119" countmax="2" />
+		<item id="small diamond" chance="6541" countmax="3" />
+		<item id="white pearl" chance="5925" countmax="2" />
+		<item id="assassin star" chance="5848" countmax="5" />
+		<item id="small sapphire" chance="4886" countmax="3" />
+		<item id="silver brooch" chance="3848" />
+		<item id="black pearl" chance="3809" countmax="2" />
+		<item id="small ruby" chance="3540" countmax="2" />
+		<item id="small emerald" chance="2963" countmax="2" />
+		<item id="small topaz" chance="2770" countmax="2" />
+		<item id="necrotic rod" chance="2578" />
+		<item id="tribal mask" chance="2078" />
+		<item id="yellow gem" chance="1039" />
+		<item id="silver amulet" chance="1000" />
+		<item id="underworld rod" chance="539" />
+		<item id="crystal ring" chance="500" />
+		<item id="blue robe" chance="385" />
+		<item id="oriental shoes" chance="385" />
+		<item id="blue gem" chance="346" />
+		<item id="assassin dagger" chance="192" />
+		<item id="gold ingot" chance="192" />
+		<item id="skullcracker armor" chance="192" />
+		<item id="spellbook of mind control" chance="154" />
+	</loot>
+</monster>

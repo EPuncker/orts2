@@ -42,8 +42,8 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			item:transform(item.itemid, 0)
 			return true
 		elseif target.type ~= 0 and item.type == 0 then
-			target:transform(target.itemid, 0)
 			item:transform(item.itemid, target.type)
+			target:transform(target.itemid, 0)
 			return true
 		end
 	end

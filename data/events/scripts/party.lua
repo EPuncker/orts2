@@ -41,7 +41,7 @@ function Party:onShareExperience(exp)
 
 	local size = #vocationsIds
 	if size > 1 then
-		sharedExperienceMultiplier = 1.0 + ((size * (5 * (size - 1) + 10)) / 100)
+		exp = math.ceil((exp * sharedExperienceMultiplier) / (#self:getMembers() + 1))
 	end
 
 	exp = (exp * sharedExperienceMultiplier) / (#self:getMembers() + 1)

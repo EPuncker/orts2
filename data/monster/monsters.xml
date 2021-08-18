@@ -127,6 +127,7 @@
 	<monster name="Dark Magician" file="monsters/dark_magician.xml" />
 	<monster name="Dark Monk" file="monsters/dark_monk.xml" />
 	<monster name="Dark Torturer" file="monsters/dark_torturer.xml" />
+	<monster name="Dawnfire Asura" file="monsters/dawnfire_asura.xml" />
 	<monster name="Deadeye Devious" file="monsters/deadeye_devious.xml" />
 	<monster name="Death Blob" file="monsters/death_blob.xml" />
 	<monster name="Death Priest Shargon" file="monsters/death_priest_shargon.xml" />
@@ -446,6 +447,7 @@
 	<monster name="Mercury Blob" file="monsters/mercury_blob.xml" />
 	<monster name="Merlkin" file="monsters/merlkin.xml" />
 	<monster name="Metal Gargoyle" file="monsters/metal_gargoyle.xml" />
+	<monster name="Midnight Asura" file="monsters/midnight_asura.xml" />
 	<monster name="Midnight Panther" file="monsters/midnight_panther.xml" />
 	<monster name="Midnight Spawn" file="monsters/midnight_spawn.xml" />
 	<monster name="Mimic" file="monsters/mimic.xml" />
@@ -503,6 +505,7 @@
 	<monster name="Ogre Brute" file="monsters/ogre_brute.xml"/>
 	<monster name="Ogre Savage" file="monsters/ogre_savage.xml"/>
 	<monster name="Ogre Shaman" file="monsters/ogre_shaman.xml"/>
+	<monster name="Omnivora" file="monsters/omnivora.xml" />
 	<monster name="Omruc" file="monsters/omruc.xml" />
 	<monster name="Orc Berserker" file="monsters/orc_berserker.xml" />
 	<monster name="Orc Leader" file="monsters/orc_leader.xml" />

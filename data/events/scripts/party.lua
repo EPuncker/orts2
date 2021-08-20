@@ -41,9 +41,9 @@ function Party:onShareExperience(exp)
 
 	local size = #vocationsIds
 	if size > 1 then
-		exp = math.ceil((exp * sharedExperienceMultiplier) / (#self:getMembers() + 1))
+		sharedExperienceMultiplier = 1.0 + ((size * (5 * (size - 1) + 10)) / 100)
 	end
 
-	exp = (exp * sharedExperienceMultiplier) / (#self:getMembers() + 1)
+	exp = math.ceil((exp * sharedExperienceMultiplier) / (#self:getMembers() + 1))
 	return hasEventCallback(EVENT_CALLBACK_ONSHAREEXPERIENCE) and EventCallback(EVENT_CALLBACK_ONSHAREEXPERIENCE, self, exp, rawExp) or exp
 end

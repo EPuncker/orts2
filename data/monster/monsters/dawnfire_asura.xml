@@ -43,30 +43,30 @@
 		<voice sentence="Fire and destruction!" />
 	</voices>
 	<loot>
-		<item id="platinum coin" chance="84052" countmax="9" />
-		<item id="gold coin" chance="69891" countmax="100" />
-		<item id="flask of demonic blood" chance="20960" />
-		<item id="soul orb" chance="14616" />
-		<item id="golden lotus brooch" chance="11777" />
-		<item id="peacock feather fan" chance="11111" />
-		<item id="demonic essence" chance="10235" />
-		<item id="great mana potion" chance="9078" countmax="2" />
-		<item id="small ruby" chance="6064" countmax="3" />
-		<item id="small amethyst" chance="3435" countmax="2" />
-		<item id="small emerald" chance="3295" countmax="2" />
-		<item id="small topaz" chance="2944" countmax="2" />
-		<item id="small diamond" chance="2874" countmax="2" />
-		<item id="red piece of cloth" chance="2454" />
-		<item id="mystic turban" chance="2173" />
-		<item id="wand of inferno" chance="1332" />
-		<item id="mysterious fetish" chance="1052" />
-		<item id="red gem" chance="911" />
-		<item id="ruby necklace" chance="771" />
-		<item id="focus cape" chance="736" />
-		<item id="magma coat" chance="421" />
-		<item id="blue gem" chance="315" />
-		<item id="death ring" chance="245" />
-		<item id="oriental shoes" chance="140" />
-		<item id="spellbook of mind control" chance="35" />
+		<item name="platinum coin" chance="84052" countmax="9" />
+		<item name="gold coin" chance="69891" countmax="100" />
+		<item name="flask of demonic blood" chance="20960" />
+		<item name="soul orb" chance="14616" />
+		<item name="golden lotus brooch" chance="11777" />
+		<item name="peacock feather fan" chance="11111" />
+		<item name="demonic essence" chance="10235" />
+		<item name="great mana potion" chance="9078" countmax="2" />
+		<item name="small ruby" chance="6064" countmax="3" />
+		<item name="small amethyst" chance="3435" countmax="2" />
+		<item name="small emerald" chance="3295" countmax="2" />
+		<item name="small topaz" chance="2944" countmax="2" />
+		<item name="small diamond" chance="2874" countmax="2" />
+		<item name="red piece of cloth" chance="2454" />
+		<item name="mystic turban" chance="2173" />
+		<item name="wand of inferno" chance="1332" />
+		<item name="mysterious fetish" chance="1052" />
+		<item name="red gem" chance="911" />
+		<item name="ruby necklace" chance="771" />
+		<item name="focus cape" chance="736" />
+		<item name="magma coat" chance="421" />
+		<item name="blue gem" chance="315" />
+		<item name="death ring" chance="245" />
+		<item name="oriental shoes" chance="140" />
+		<item name="spellbook of mind control" chance="35" />
 	</loot>
 </monster>

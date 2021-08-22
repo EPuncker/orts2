@@ -43,35 +43,35 @@
 		<voice sentence="May night fall upon you!" />
 	</voices>
 	<loot>
-		<item id="platinum coin" chance="80569" countmax="6" />
-		<item id="gold coin" chance="70296" countmax="100" />
-		<item id="flask of demonic blood" chance="14775" />
-		<item id="soul orb" chance="13698" />
-		<item id="golden lotus brooch" chance="12774" />
-		<item id="demonic essence" chance="10543" />
-		<item id="peacock feather fan" chance="10196" />
-		<item id="great health potion" chance="8119" countmax="2" />
-		<item id="small diamond" chance="6541" countmax="3" />
-		<item id="white pearl" chance="5925" countmax="2" />
-		<item id="assassin star" chance="5848" countmax="5" />
-		<item id="small sapphire" chance="4886" countmax="3" />
-		<item id="silver brooch" chance="3848" />
-		<item id="black pearl" chance="3809" countmax="2" />
-		<item id="small ruby" chance="3540" countmax="2" />
-		<item id="small emerald" chance="2963" countmax="2" />
-		<item id="small topaz" chance="2770" countmax="2" />
-		<item id="necrotic rod" chance="2578" />
-		<item id="tribal mask" chance="2078" />
-		<item id="yellow gem" chance="1039" />
-		<item id="silver amulet" chance="1000" />
-		<item id="underworld rod" chance="539" />
-		<item id="crystal ring" chance="500" />
-		<item id="blue robe" chance="385" />
-		<item id="oriental shoes" chance="385" />
-		<item id="blue gem" chance="346" />
-		<item id="assassin dagger" chance="192" />
-		<item id="gold ingot" chance="192" />
-		<item id="skullcracker armor" chance="192" />
-		<item id="spellbook of mind control" chance="154" />
+		<item name="platinum coin" chance="80569" countmax="6" />
+		<item name="gold coin" chance="70296" countmax="100" />
+		<item name="flask of demonic blood" chance="14775" />
+		<item name="soul orb" chance="13698" />
+		<item name="golden lotus brooch" chance="12774" />
+		<item name="demonic essence" chance="10543" />
+		<item name="peacock feather fan" chance="10196" />
+		<item name="great health potion" chance="8119" countmax="2" />
+		<item name="small diamond" chance="6541" countmax="3" />
+		<item name="white pearl" chance="5925" countmax="2" />
+		<item name="assassin star" chance="5848" countmax="5" />
+		<item name="small sapphire" chance="4886" countmax="3" />
+		<item name="silver brooch" chance="3848" />
+		<item name="black pearl" chance="3809" countmax="2" />
+		<item name="small ruby" chance="3540" countmax="2" />
+		<item name="small emerald" chance="2963" countmax="2" />
+		<item name="small topaz" chance="2770" countmax="2" />
+		<item name="necrotic rod" chance="2578" />
+		<item name="tribal mask" chance="2078" />
+		<item name="yellow gem" chance="1039" />
+		<item name="silver amulet" chance="1000" />
+		<item name="underworld rod" chance="539" />
+		<item name="crystal ring" chance="500" />
+		<item name="blue robe" chance="385" />
+		<item name="oriental shoes" chance="385" />
+		<item name="blue gem" chance="346" />
+		<item name="assassin dagger" chance="192" />
+		<item name="gold ingot" chance="192" />
+		<item name="skullcracker armor" chance="192" />
+		<item name="spellbook of mind control" chance="154" />
 	</loot>
 </monster>

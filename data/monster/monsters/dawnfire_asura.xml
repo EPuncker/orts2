@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dawnfire Asura" nameDescription="a dawnfire asura" experience="4100" speed="280">
 	<health now="2900" max="2900" />
-	<looktype="150" head="114" body="94" legs="78" feet="79" addons="1" corpse="24643" />
+	<look type="150" head="114" body="94" legs="78" feet="79" addons="1" corpse="24643"/>
 	<targetchange interval="5000" chance="16" />
 	<flags>
 		<flag summonable="0" />
@@ -25,14 +25,13 @@
 	<defenses armor="55" defense="55">
 		<defense name="healing" interval="2000" chance="20" min="120" max="170" />
 	</defenses>
-		<immunities>
-		<immunity paralyze="1" />
+	<immunities>
 		<immunity fire="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<elements>
 		<element physicalPercent="-10" />
-		<element EnergyPercent="-5" />
+		<element energyPercent="-5" />
 		<element icePercent="-10" />
 		<element holyPercent="-10" />
 		<element deathPercent="20" />
@@ -45,7 +44,7 @@
 	<loot>
 		<item name="platinum coin" chance="84052" countmax="9" />
 		<item name="gold coin" chance="69891" countmax="100" />
-		<item name="flask of demonic blood" chance="20960" />
+		<item name="concentrated demonic blood" chance="20960" />
 		<item name="soul orb" chance="14616" />
 		<item name="golden lotus brooch" chance="11777" />
 		<item name="peacock feather fan" chance="11111" />
@@ -65,7 +64,7 @@
 		<item name="focus cape" chance="736" />
 		<item name="magma coat" chance="421" />
 		<item name="blue gem" chance="315" />
-		<item name="death ring" chance="245" />
+		<item id="6300" chance="245" /><!-- death ring -->
 		<item name="oriental shoes" chance="140" />
 		<item name="spellbook of mind control" chance="35" />
 	</loot>

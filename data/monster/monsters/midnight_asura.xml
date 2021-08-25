@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Midnight Asura" nameDescription="a midnight asura" experience="4100" speed="240">
 	<health now="3100" max="3100" />
-	<look looktype="150" head="0" body="114" legs="90" feet="90" addons="1" corpse="24644" />
+	<look type="150" head="0" body="114" legs="90" feet="90" addons="1" corpse="24644"/>
 	<targetchange interval="5000" chance="16" />
 	<flags>
 		<flag summonable="0" />
@@ -45,7 +45,7 @@
 	<loot>
 		<item name="platinum coin" chance="80569" countmax="6" />
 		<item name="gold coin" chance="70296" countmax="100" />
-		<item name="flask of demonic blood" chance="14775" />
+		<item name="concentrated demonic blood" chance="14775" />
 		<item name="soul orb" chance="13698" />
 		<item name="golden lotus brooch" chance="12774" />
 		<item name="demonic essence" chance="10543" />
@@ -65,7 +65,7 @@
 		<item name="yellow gem" chance="1039" />
 		<item name="silver amulet" chance="1000" />
 		<item name="underworld rod" chance="539" />
-		<item name="crystal ring" chance="500" />
+		<item id="2124" chance="500" /><!-- crystal ring -->
 		<item name="blue robe" chance="385" />
 		<item name="oriental shoes" chance="385" />
 		<item name="blue gem" chance="346" />

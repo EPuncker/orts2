@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Running Elite Orc Guard" nameDescription="a running elite orc guard" race="blood" experience="0" speed="195" manacost="0">
+<monster name="Running Elite Orc Guard" nameDescription="a running elite orc guard" race="blood" experience="0" speed="195">
 	<health now="15" max="15" />
 	<look type="2" />
 	<targetchange interval="5000" chance="20" />

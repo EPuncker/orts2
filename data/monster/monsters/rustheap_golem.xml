@@ -1,67 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Rustheap Golem" nameDescription="a rustheap golem" race="energy" experience="2300" speed="250">
-	<health now="2800" max="2800"/>
-	<look type="603" corpse="23355"/>
-	<targetchange interval="2000" chance="5"/>
+	<health now="2800" max="2800" />
+	<look type="603" corpse="23355" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="90"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="118" attack="50"/>
-		<attack name="rustheap golem electrify" interval="2000" chance="11" range="7"/>
-		<attack name="frazzlemaw paralyze" interval="2000" chance="10"/>
-		<attack name="rustheap golem wave" interval="2000" chance="9" min="-100" max="-210"/>
+		<attack name="melee" interval="2000" skill="118" attack="50" />
+		<attack name="rustheap golem electrify" interval="2000" chance="11" range="7" />
+		<attack name="frazzlemaw paralyze" interval="2000" chance="10" />
+		<attack name="rustheap golem wave" interval="2000" chance="9" min="-100" max="-210" />
 	</attacks>
 	<defenses armor="35" defense="35">
 		<defense name="speed" interval="2000" chance="11" speedchange="428" duration="6000">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element firePercent="70"/>
-		<element energyPercent="-5"/>
-		<element physicalPercent="-5"/>
-		<element deathPercent="10"/>
+		<element firePercent="70" />
+		<element energyPercent="-5" />
+		<element physicalPercent="-5" />
+		<element deathPercent="10" />
 	</elements>
 	<immunities>
-		<immunity invisible="1"/>
-		<immunity paralyze="1"/>
-		<immunity lifedrain="1"/>
+		<immunity invisible="1" />
+		<immunity paralyze="1" />
+		<immunity lifedrain="1" />
 	</immunities>
 	<voices interval="2000" chance="5">
-		<voice sentence="*clatter*"/>
-		<voice sentence="*krrk*"/>
-		<voice sentence="*frzzp*"/>
+		<voice sentence="*clatter*" />
+		<voice sentence="*krrk*" />
+		<voice sentence="*frzzp*" />
 	</voices>
 	<loot>
-		<item id="9810" chance="5860"/> <!-- rusty armor (rare) -->
-		<item id="9813" chance="4230"/> <!-- rusty legs (rare) -->
-		<item name="black pearl" chance="1630"/>
-		<item name="bronze gear wheel" chance="1950"/>
-		<item name="flask of rust remover" chance="5860"/>
-		<item name="gearwheel chain" chance="2930"/>
-		<item name="gold coin" countmax="100" chance="100000"/>
-		<item name="gold coin" countmax="100" chance="100000"/>
-		<item name="gold coin" countmax="90" chance="100000"/>
-		<item name="iron ore" chance="330"/>
-		<item name="metal bat" chance="330"/>
-		<item name="nail" chance="1950"/>
-		<item name="necromantic rust" chance="14980"/>
-		<item name="platinum coin" countmax="3" chance="58310"/>
-		<item name="spiked squelcher" chance="330"/>
-		<item name="strong health potion" countmax="2" chance="10100"/>
-		<item name="strong mana potion" countmax="2" chance="7170"/>
-		<item name="war hammer" chance="3580"/>
-		<item name="white pearl" chance="1300"/>
+		<item id="9810" chance="5860" /> <!-- rusty armor (rare) -->
+		<item id="9813" chance="4230" /> <!-- rusty legs (rare) -->
+		<item name="black pearl" chance="1630" />
+		<item name="bronze gear wheel" chance="1950" />
+		<item name="flask of rust remover" chance="5860" />
+		<item name="gearwheel chain" chance="2930" />
+		<item name="gold coin" countmax="100" chance="100000" />
+		<item name="gold coin" countmax="100" chance="100000" />
+		<item name="gold coin" countmax="90" chance="100000" />
+		<item name="iron ore" chance="330" />
+		<item name="metal bat" chance="330" />
+		<item name="nail" chance="1950" />
+		<item name="necromantic rust" chance="14980" />
+		<item name="platinum coin" countmax="3" chance="58310" />
+		<item name="spiked squelcher" chance="330" />
+		<item name="strong health potion" countmax="2" chance="10100" />
+		<item name="strong mana potion" countmax="2" chance="7170" />
+		<item name="war hammer" chance="3580" />
+		<item name="white pearl" chance="1300" />
 	</loot>
 </monster>

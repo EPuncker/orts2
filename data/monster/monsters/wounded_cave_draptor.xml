@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Wounded Cave Draptor" nameDescription="a wounded cave draptor" race="blood" experience="150" speed="150" manacost="0">
+<monster name="Wounded Cave Draptor" nameDescription="a wounded cave draptor" race="blood" experience="150" speed="150">
 	<health now="10" max="10" />
 	<look type="596" corpse="22686" />
 	<targetchange interval="5000" chance="8" />

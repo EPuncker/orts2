@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Travelling Merchant" nameDescription="a travelling merchant" race="blood" experience="65" speed="170" manacost="0">
+<monster name="Travelling Merchant" nameDescription="a travelling merchant" race="blood" experience="65" speed="170">
 	<health now="100" max="100" />
 	<look type="132" head="110" body="90" legs="128" feet="95" addons="1" corpse="13176" />
 	<targetchange interval="4000" chance="10" />

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<monster name="Weakened Demon" nameDescription="a weakened demon" race="fire" experience="0" speed="200" manacost="0">
+<monster name="Weakened Demon" nameDescription="a weakened demon" race="fire" experience="0" speed="200">
 	<health now="5" max="5" />
 	<look type="12" head="94" body="19" legs="116" feet="81" corpse="0" />
 	<targetchange interval="10000" chance="20" />

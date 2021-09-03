@@ -1,71 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Glooth Bandit" nameDescription="a glooth bandit" race="blood" experience="2000" speed="300" manacost="450">
-	<health now="2600" max="2600"/>
-	<look type="129" head="115" body="80" legs="114" feet="114" corpse="24251"/>
-	<targetchange interval="5000" chance="5"/>
+	<health now="2600" max="2600" />
+	<look type="129" head="115" body="80" legs="114" feet="114" corpse="24251" />
+	<targetchange interval="5000" chance="5" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag staticattack="90"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="80" attack="68"/>
+		<attack name="melee" interval="2000" skill="80" attack="68" />
 		<attack name="physical" interval="2000" chance="50" range="8" min="-60" max="-200">
-			<attribute key="shootEffect" value="arrow"/>
+			<attribute key="shootEffect" value="arrow" />
 		</attack>
 	</attacks>
 	<defenses armor="46" defense="46">
 		<defense name="healing" interval="3000" chance="35" min="200" max="250">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element energyPercent="20"/>
-		<element deathPercent="20"/>
-		<element physicalPercent="15"/>
-		<element icePercent="10"/>
-		<element firePercent="-5"/>
+		<element energyPercent="20" />
+		<element deathPercent="20" />
+		<element physicalPercent="15" />
+		<element icePercent="10" />
+		<element firePercent="-5" />
 	</elements>
 	<immunities>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
-		<immunity earth="1"/>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity earth="1" />
 	</immunities>
 	<loot>
-		<item name="beastslayer axe" chance="1000"/>
-		<item name="glooth amulet" chance="500"/>
-		<item name="glooth axe" chance="1000"/>
-		<item name="glooth bag" chance="5555"/>
-		<item name="glooth blade" chance="2500"/>
-		<item name="glooth cape" chance="1000"/>
-		<item name="glooth capsule" chance="3030"/>
-		<item name="glooth club" chance="2500"/>
-		<item name="glooth sandwich" chance="4000"/>
-		<item name="glooth spear" chance="1492"/>
-		<item name="glooth steak" chance="1000"/>
-		<item name="gold coin" countmax="100" chance="100000"/>
-		<item name="great health potion" chance="4545"/>
-		<item name="great mana potion" chance="7142"/>
-		<item name="great spirit potion" chance="5000"/>
-		<item name="green gem" chance="1000"/>
-		<item name="platinum coin" countmax="3" chance="100000"/>
-		<item name="rubber cap" chance="2000"/>
-		<item name="skull staff" chance="1000"/>
-		<item name="small emerald" countmax="2" chance="1492"/>
-		<item name="small topaz" countmax="2" chance="5555"/>
-		<item name="tainted glooth capsule" chance="9090"/>
-		<item name="terra boots" chance="500"/>
-		<item name="terra legs" chance="500"/>
-		<item name="terra mantle" chance="1000"/>
-		<item name="ultimate health potion" chance="1492"/>
-		<item name="war axe" chance="1000"/>
+		<item name="beastslayer axe" chance="1000" />
+		<item name="glooth amulet" chance="500" />
+		<item name="glooth axe" chance="1000" />
+		<item name="glooth bag" chance="5555" />
+		<item name="glooth blade" chance="2500" />
+		<item name="glooth cape" chance="1000" />
+		<item name="glooth capsule" chance="3030" />
+		<item name="glooth club" chance="2500" />
+		<item name="glooth sandwich" chance="4000" />
+		<item name="glooth spear" chance="1492" />
+		<item name="glooth steak" chance="1000" />
+		<item name="gold coin" countmax="100" chance="100000" />
+		<item name="great health potion" chance="4545" />
+		<item name="great mana potion" chance="7142" />
+		<item name="great spirit potion" chance="5000" />
+		<item name="green gem" chance="1000" />
+		<item name="platinum coin" countmax="3" chance="100000" />
+		<item name="rubber cap" chance="2000" />
+		<item name="skull staff" chance="1000" />
+		<item name="small emerald" countmax="2" chance="1492" />
+		<item name="small topaz" countmax="2" chance="5555" />
+		<item name="tainted glooth capsule" chance="9090" />
+		<item name="terra boots" chance="500" />
+		<item name="terra legs" chance="500" />
+		<item name="terra mantle" chance="1000" />
+		<item name="ultimate health potion" chance="1492" />
+		<item name="war axe" chance="1000" />
 	</loot>
 </monster>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Abyssal Calamary" nameDescription="an abyssal calamary" race="undead" experience="200" speed="280">
+	<health now="300" max="300" />
+	<look type="451" corpse="15280" />
+	<targetchange interval="4000" chance="8" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="89" />
+		<flag canwalkonenergy="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-10" />
+	</attacks>
+	<defenses armor="12" defense="12" />
+	<elements>
+		<element energyPercent="-5" />
+		<element physicalPercent="-5" />
+	</elements>
+	<immunities>
+		<immunity earth="1" />
+		<immunity paralyze="1" />
+		<immunity drown="1" />
+		<immunity fire="1" />
+	</immunities>
+	<loot>
+		<item name="fish" chance="10600" />
+		<item name="black pearl" chance="1535" />
+		<item name="small amethyst" countmax="3" chance="698" />
+		<item name="white pearl" chance="698" />
+		<item name="small ruby" countmax="3" chance="628" />
+		<item name="small sapphire" countmax="3" chance="210" />
+	</loot>
+</monster>

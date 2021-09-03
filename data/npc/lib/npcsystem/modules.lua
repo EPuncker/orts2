@@ -704,10 +704,14 @@ if Modules == nil then
 				-- invalid item
 				print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Item id missing (or invalid) for parameter item:", item)
 			else
-				if alreadyParsedIds[itemid] and not it:getFluidSource() then
-					print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Found duplicated item:", item)
+				if alreadyParsedIds[itemid] then
+					if table.contains(alreadyParsedIds[itemid], subType or -1) then
+						print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Found duplicated item:", item)
+					else
+						table.insert(alreadyParsedIds[itemid], subType or -1)
+					end
 				else
-					alreadyParsedIds[itemid] = true
+					alreadyParsedIds[itemid] = {subType or -1}
 				end
 			end
 
@@ -775,10 +779,14 @@ if Modules == nil then
 				-- invalid item
 				print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Item id missing (or invalid) for parameter item:", item)
 			else
-				if alreadyParsedIds[itemid] and not it:getFluidSource() then
-					print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Found duplicated item:", item)
+				if alreadyParsedIds[itemid] then
+					if table.contains(alreadyParsedIds[itemid], subType or -1) then
+						print("[Warning : " .. Npc():getName() .. "] NpcSystem:", "Found duplicated item:", item)
+					else
+						table.insert(alreadyParsedIds[itemid], subType or -1)
+					end
 				else
-					alreadyParsedIds[itemid] = true
+					alreadyParsedIds[itemid] = {subType or -1}
 				end
 			end
 
@@ -1013,7 +1021,7 @@ if Modules == nil then
 			if shopItem == nil then
 				table.insert(self.npcHandler.shopItems, {id = itemid, buy = -1, sell = cost, subType = itemSubType, name = realName or ItemType(itemid):getName()})
 			else
-				if cost > shopItem.buy then
+				if shopItem.buy > -1 and cost > shopItem.buy then
 					print("[Warning : " .. Npc():getName() .. "] NpcSystem: Sell price higher than buy price: (".. shopItem.name ..")")
 				end
 				shopItem.sell = cost

@@ -182,9 +182,6 @@
 	<action fromid="7140" toid="7141" script="quests/barbarian test/horn.lua" />
 	<action uniqueid="3110" script="quests/barbarian test/mead.lua" />
 
-	<!-- Behemoth Quest -->
-	<action uniqueid="2007" script="quests/behemoth/lever.lua" />
-
 	<!-- Bigfoot Burden Quest -->
 	<action fromuid="3124" touid="3127" script="quests/bigfoot burden/music.lua" />
 	<action uniqueid="3143" script="quests/bigfoot burden/warzones.lua" />

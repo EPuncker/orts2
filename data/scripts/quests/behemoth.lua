@@ -6,7 +6,9 @@ local wall = {
 	Position(33299, 31677, 15)
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local lever = Action()
+
+function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 1946 then
 		return false
 	end
@@ -22,3 +24,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(1946)
 	return true
 end
+
+lever:uid(2007)
+lever:register()

@@ -296,9 +296,6 @@
 	<action itemid="7698" script="quests/secret service/rustBugs.lua" />
 	<action actionid="12574" script="quests/secret service/lever.lua" />
 
-	<!-- Sams Old Backpack Quest -->
-	<action actionid="42535" script="quests/sam old backpack/door.lua" />
-
 	<!-- Tibia Tales Quest -->
 	<action itemid="7496" script="quests/tibia tales/UltimateBoozebeerBottle.lua" />
 	<action itemid="8205" script="quests/tibia tales/exterminatorFlask.lua" />

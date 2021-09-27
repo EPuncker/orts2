@@ -192,9 +192,6 @@
 	<action itemid="18339" script="quests/bigfoot burden/pig.lua" />
 	<action itemid="18343" script="quests/bigfoot burden/repair.lua" />
 
-	<!-- Demon Helmet Quest -->
-	<action uniqueid="2005" script="quests/demon helmet/lever.lua" />
-
 	<!-- Dreamer Challenge Quest -->
 	<action fromuid="3041" touid="3043" script="quests/dreamer challenge/documentsLever.lua" />
 	<action fromuid="3045" touid="3047" script="quests/dreamer challenge/documentsLever.lua" />

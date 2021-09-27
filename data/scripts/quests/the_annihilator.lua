@@ -1,3 +1,20 @@
+local door = Action()
+
+function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if player:getStorageValue(PlayerStorageKeys.AnnihilatorDone) ~= 1 then
+		if item.itemid == 5114 then
+			player:teleportTo(toPosition, true)
+			item:transform(item.itemid + 1)
+		end
+	else
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The door seems to be sealed against unwanted intruders.")
+	end
+	return true
+end
+
+door:aid(2214)
+door:register()
+
 local config = {
 	requiredLevel = 100,
 	daily = false,
@@ -8,12 +25,14 @@ local config = {
 		Position(33223, 31671, 13),
 		Position(33222, 31671, 13)
 	},
+
 	newPositions = {
 		Position(33222, 31659, 13),
 		Position(33221, 31659, 13),
 		Position(33220, 31659, 13),
 		Position(33219, 31659, 13)
 	},
+
 	demonPositions = {
 		Position(33219, 31657, 13),
 		Position(33221, 31657, 13),
@@ -24,8 +43,9 @@ local config = {
 	}
 }
 
+local lever = Action()
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function lever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid == 1946 then
 		local storePlayers, playerTile = {}
 
@@ -77,3 +97,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(item.itemid == 1946 and 1945 or 1946)
 	return true
 end
+
+lever:uid(2208)
+lever:register()

@@ -765,6 +765,7 @@
 	<monster name="Weakened Demon" file="monsters/weakened_demon.xml" />
 	<monster name="Webster" file="monsters/webster.xml" />
 	<monster name="Weeper" file="monsters/weeper.xml" />
+	<monster name="Werebadger" file="monsters/werebadger.xml" />
 	<monster name="Werebear" file="monsters/werebear.xml" />
 	<monster name="Wereboar" file="monsters/wereboar.xml" />
 	<monster name="Werewolf" file="monsters/werewolf.xml" />

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werebadger" nameDescription="a werebadger" experience="1600" speed="260">
+	<health now="1700" max="1700" />
+	<look type="729" corpse="24723" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag summonable="0" />
+		<flag convinceable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="100" min="0" max="-170" />
+	</attacks>
+	<defenses armor="31" defense="31" />
+	<elements>
+		<element physicalPercent="5" />
+		<element energyPercent="10" />
+		<element earthPercent="50" />
+		<element firePercent="-5" />
+		<element icePercent="-5" />
+		<element holyPercent="-5" />
+		<element deathPercent="40" />
+	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="SNUFFLE" />
+	</voices>
+	<loot>
+		<item name="platinum coin" chance="100000" countmax="3" />
+		<item name="gold coin" chance="80571" countmax="75" />
+		<item name="beetroot" chance="25413" />
+		<item name="werebadger claws" chance="14899" />
+		<item name="werebadger skull" chance="14120" />
+		<item name="brown mushroom" chance="7542" />
+		<item name="mana potion" chance="5204" />
+		<item name="troll green" chance="5125" />
+		<item name="strong mana potion" chance="3870" />
+		<item name="great mana potion" chance="2047" />
+		<item name="moonlight crystals" chance="2047" />
+		<item name="small enchanted amethyst" chance="1625" countmax="2" />
+		<item name="ring of healing" chance="977" />
+		<item name="badger boots" chance="872" />
+		<item name="werewolf amulet" chance="660" />
+		<item name="platinum amulet" chance="528" />
+		<item name="wand of voodoo" chance="396" />
+		<item name="underworld rod" chance="357" />
+		<item name="werebadger trophy" chance="304" />
+	</loot>
+</monster>

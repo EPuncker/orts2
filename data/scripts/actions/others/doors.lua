@@ -57,7 +57,7 @@ local door = Action()
 
 function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local itemId = item:getId()
-	if table.contains(questDoors, itemId) then
+	if table.contains(closedQuestDoors, itemId) then
 		if player:getStorageValue(item.actionid) ~= -1 then
 			item:transform(itemId + 1)
 			player:teleportTo(toPosition, true)
@@ -65,7 +65,7 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "The door seems to be sealed against unwanted intruders.")
 		end
 		return true
-	elseif table.contains(levelDoors, itemId) then
+	elseif table.contains(closedLevelDoors, itemId) then
 		if item.actionid > 0 and player:getLevel() >= item.actionid - actionIds.levelDoor then
 			item:transform(itemId + 1)
 			player:teleportTo(toPosition, true)
@@ -85,7 +85,7 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		return false
 	end
 
-	if table.contains(horizontalOpenDoors, itemId) or table.contains(verticalOpenDoors, itemId) then
+	if table.contains(openDoors, itemId) then
 		local creaturePositionTable = {}
 		local doorCreatures = Tile(toPosition):getCreatures()
 		if doorCreatures and #doorCreatures > 0 then
@@ -102,9 +102,10 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			end
 		end
 
-		if not(table.contains(openQuestDoors, itemId)) and not(table.contains(openLevelDoors, itemId)) then
-			item:transform(itemId - 1)
-		end
+		-- Both openQuestDoors and openLevelDoors are commented-out in global.lua
+		--if not(table.contains(openQuestDoors, itemId)) and not(table.contains(openLevelDoors, itemId)) then
+		--	item:transform(itemId - 1)
+		--end
 		return true
 	end
 
@@ -119,21 +120,11 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	return false
 end
 
-local doorsSet = {} -- unique value set for door ids
-for _, d in ipairs(keys) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(openDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(closedDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(lockedDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(openExtraDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(closedExtraDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(openHouseDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for d, _ in pairs(closedHouseDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
--- for d, _ in pairs(openQuestDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end -- disabled in globa.lua
-for d, _ in pairs(closedQuestDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
--- for d, _ in pairs(openLevelDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end -- disabled in globa.lua
-for d, _ in pairs(closedLevelDoors) do if doorsSet[d] == nil then doorsSet[d] = true end end
-for i, _ in pairs(doorsSet) do
-	door:id(i)
+local doorTables = {keys, openDoors, closedDoors, lockedDoors, openExtraDoors, closedExtraDoors, openHouseDoors, closedHouseDoors, closedQuestDoors, closedLevelDoors, doors}
+for _, doors in pairs(doorTables) do
+	for _, doorId in pairs(doors) do
+		door:id(doorId)
+	end
 end
-doorsSet = nil
+
 door:register()

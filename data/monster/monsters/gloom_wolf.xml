@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<monster name="Gloom Wolf" nameDescription="a gloom wolf" experience="70" speed="250">
+	<health now="200" max="200" />
+	<look type="716" corpse="24639" />
+	<targetchange interval="2000" chance="10" />
+	<flags>
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag summonable="0" />
+		<flag convinceable="0" />
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="100" min="0" max="-92" />
+	</attacks>
+	<defenses armor="10" defense="10">
+		<defense name="speed" interval="2000" chance="15" minspeedchange="300" maxspeedchange="300" duration="7000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element earthPercent="20" />
+		<element firePercent="-5" />
+		<element icePercent="-5" />
+		<element holyPercent="-5" />
+		<element deathPercent="10" />
+	</elements>
+	<loot>
+		<item id="2148" name="gold coin" chance="66646" countmax="15" />
+		<item id="2666" name="meat" chance="40787" />
+		<item id="2671" name="ham" chance="39788" />
+		<item id="24663" name="gloom wolf fur" chance="8307" />
+		<item id="2129" name="wolf tooth chain" chance="7183" />
+		<item id="5897" name="wolf paw" chance="2998" />
+	</loot>
+</monster>

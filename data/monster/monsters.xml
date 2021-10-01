@@ -117,6 +117,9 @@
 	<monster name="Crystal Spider" file="monsters/crystal_spider.xml" />
 	<monster name="Crystal Wolf" file="monsters/crystal_wolf.xml" />
 	<monster name="Crystalcrusher" file="monsters/crystalcrusher.xml" />
+	<monster name="Cult Believer" file="monsters/cult_believer.xml" />
+	<monster name="Cult Enforcer" file="monsters/cult_enforcer.xml" />
+	<monster name="Cult Scholar" file="monsters/cult_scholar.xml" />
 	<monster name="Cursed Gladiator" file="monsters/cursed_gladiator.xml" />
 	<monster name="Cyclops Drone" file="monsters/cyclops_drone.xml" />
 	<monster name="Cyclops Smith" file="monsters/cyclops_smith.xml" />
@@ -282,12 +285,14 @@
 	<monster name="Ghastly Dragon" file="monsters/ghastly_dragon.xml" />
 	<monster name="Ghazbaran" file="monsters/ghazbaran.xml" />
 	<monster name="Ghost" file="monsters/ghost.xml" />
+	<monster name="Ghost Wolf" file="monsters/ghost_wolf.xml" />
 	<monster name="Ghoul" file="monsters/ghoul.xml" />
 	<monster name="Ghoulish Hyaena" file="monsters/ghoulish_hyaena.xml" />
 	<monster name="Giant Spider Wyda" file="monsters/giant_spider_wyda.xml" />
 	<monster name="Giant Spider" file="monsters/giant_spider.xml" />
 	<monster name="Gladiator" file="monsters/gladiator.xml" />
 	<monster name="Glitterscale" file="monsters/glitterscale.xml" />
+	<monster name="Gloom Wolf" file="monsters/gloom_wolf.xml" />
 	<monster name="Glooth Anemone" file="monsters/glooth_anemone.xml" />
 	<monster name="Glooth Bandit" file="monsters/glooth_bandit.xml" />
 	<monster name="Glooth Battery" file="monsters/glooth_battery.xml" />
@@ -572,6 +577,7 @@
 	<monster name="Rahemos" file="monsters/rahemos.xml" />
 	<monster name="Rat" file="monsters/rat.xml" />
 	<monster name="Red Butterfly" file="monsters/red_butterfly.xml" />
+	<monster name="Renegade Knight" file="monsters/renegade_knight.xml" />
 	<monster name="Renegade Orc" file="monsters/renegade_orc.xml" />
 	<monster name="Retching Horror" file="monsters/retching_horror.xml" />
 	<monster name="Ribstride" file="monsters/ribstride.xml" />
@@ -751,6 +757,8 @@
 	<monster name="Versperoth" file="monsters/versperoth.xml" />
 	<monster name="Vicious Manbat" file="monsters/vicious_manbat.xml" />
 	<monster name="Vulcongra" file="monsters/vulcongra.xml" />
+	<monster name="Vicious Squire" file="monsters/vicious_squire.xml" />
+	<monster name="Vile Grandmaster" file="monsters/vile_grandmaster.xml" />
 	<monster name="Wailing Widow" file="monsters/wailing_widow.xml" />
 	<monster name="Walker" file="monsters/walker.xml" />
 	<monster name="War Golem" file="monsters/war_golem.xml" />

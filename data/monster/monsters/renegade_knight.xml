@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<monster name="Renegade Knight" nameDescription="a renegade knight" experience="1200" speed="270">
+	<health now="1450" max="1450" />
+	<look type="268" head="97" body="113" legs="76" feet="98" addons="2" mount="0" corpse="24671" />
+	<targetchange interval="2000" chance="10" />
+	<flags>
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag summonable="0" />
+		<flag convinceable="0" />
+		<flag illusionable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" chance="100" min="0" max="-245" />
+	</attacks>
+	<defenses armor="38" defense="38">
+		<defense name="healing" interval="2000" chance="20" min="200" max="250" />
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="15" />
+		<element energyPercent="35" />
+		<element earthPercent="20" />
+		<element firePercent="20" />
+		<element holyPercent="50" />
+		<element deathPercent="-10" />
+	</elements>
+	<voices interval="1000" chance="2">
+		<voice sentence="I'll teach you a lesson!" />
+		<voice sentence="Feel my steel!" />
+		<voice sentence="Take this!" />
+		<voice sentence="Let's see how good you are!" />
+		<voice sentence="A challenge at last!" />
+	</voices>
+	<loot>
+		<item id="2148" name="gold coin" chance="99985" countmax="100" />
+		<item id="2152" name="platinum coin" chance="25652" countmax="2" />
+		<item id="2666" name="meat" chance="9369" />
+		<item id="7591" name="great health potion" chance="7212" />
+		<item id="12466" name="scroll of heroic deeds" chance="5934" />
+		<item id="2377" name="two handed sword" chance="5207" />
+		<item id="2147" name="small ruby" chance="3660" />
+		<item id="5911" name="red piece of cloth" chance="1823" />
+		<item id="12406" name="small notebook" chance="1583" />
+		<item id="2391" name="war hammer" chance="966" />
+		<item id="2488" name="crown legs" chance="646" />
+		<item id="2487" name="crown armor" chance="625" />
+		<item id="2491" name="crown helmet" chance="610" />
+		<item id="2392" name="fire sword" chance="545" />
+		<item id="2519" name="crown shield" chance="203" />
+		<item id="2114" name="piggy bank" chance="109" />
+	</loot>
+</monster>

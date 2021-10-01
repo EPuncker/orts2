@@ -73,6 +73,7 @@ closedLevelDoors = {
 	6265, 6896, 6905, 7038, 7047, 8555, 8557, 9179, 9181, 9281, 9283, 10282, 10284, 10473, 10482, 10780,
 	10789, 12095, 12102, 12195, 12204, 19845, 19854, 19985, 19994, 20278, 20287, 22819, 22828, 25286, 25293
 }
+
 function doCreatureSayWithRadius(cid, text, type, radiusx, radiusy, position)
 	if not position then
 		position = Creature(cid):getPosition()

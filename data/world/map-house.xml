@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <houses>
 	<house name="Market Street 4 (Shop)" houseid="2" entryx="32960" entryy="32052" entryz="6" rent="5105" townid="1" size="93" />
-	<house name="Market Street 3" houseid="4" entryx="32950" entryy="32051" entryz="6" rent="3475" townid="1" size="68" />
+	<house name="Market Street 3" houseid="4" entryx="32950" entryy="32052" entryz="6" rent="3475" townid="1" size="68" />
 	<house name="Market Street 2" houseid="5" entryx="32944" entryy="32053" entryz="6" rent="4925" townid="1" size="94" />
 	<house name="Market Street 1" houseid="6" entryx="32932" entryy="32051" entryz="6" rent="6680" townid="1" size="133" />
 	<house name="Old Lighthouse" houseid="7" entryx="32926" entryy="32037" entryz="6" rent="3610" townid="1" size="73" />
@@ -971,8 +971,8 @@
 	<house name="Outlaw Camp 12 (Shop)" houseid="2404" entryx="32661" entryy="32200" entryz="8" rent="280" townid="3" size="6" />
 	<house name="Outlaw Camp 13 (Shop)" houseid="2405" entryx="32666" entryy="32200" entryz="8" rent="280" townid="3" size="6" />
 	<house name="Outlaw Camp 14 (Shop)" houseid="2406" entryx="32665" entryy="32199" entryz="8" rent="640" townid="3" size="15" />
-	<house name="Open-Air Theatre" houseid="2407" entryx="32262" entryy="32237" entryz="7" rent="2700" townid="2" size="55" />
-	<house name="The Lair" houseid="2408" entryx="32993" entryy="32153" entryz="7" rent="7625" townid="1" size="154" />
+	<house name="Open-Air Theatre" houseid="2407" entryx="32262" entryy="32238" entryz="7" rent="2700" townid="2" size="55" />
+	<house name="The Lair" houseid="2408" entryx="32993" entryy="32152" entryz="7" rent="7625" townid="1" size="154" />
 	<house name="Upper Barracks 2" houseid="2409" entryx="32605" entryy="31920" entryz="5" rent="210" townid="3" size="4" />
 	<house name="Upper Barracks 3" houseid="2410" entryx="32605" entryy="31917" entryz="5" rent="210" townid="3" size="4" />
 	<house name="Upper Barracks 4" houseid="2411" entryx="32605" entryy="31914" entryz="5" rent="210" townid="3" size="4" />

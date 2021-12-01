@@ -259,6 +259,46 @@ function Player.transferMoneyTo(self, target, amount)
 	return true
 end
 
+function Player.canCarryMoney(self, amount)
+	-- Anyone can carry as much imaginary money as they desire
+	if amount == 0 then
+		return true
+	end
+
+	-- The 3 below loops will populate these local variables
+	local totalWeight = 0
+	local inventorySlots = 0
+
+	local currencyItems = Game.getCurrencyItems()
+	for index = #currencyItems, 1, -1 do
+		local currency = currencyItems[index]
+		-- Add currency coins to totalWeight and inventorySlots
+		local worth = currency:getWorth()
+		local currencyCoins = math.floor(amount / worth)
+		if currencyCoins > 0 then
+			amount = amount - (currencyCoins * worth)
+			while currencyCoins > 0 do
+				local count = math.min(100, currencyCoins)
+				totalWeight = totalWeight + currency:getWeight(count)
+				currencyCoins = currencyCoins - count
+				inventorySlots = inventorySlots + 1
+			end
+		end
+	end
+
+	-- If player don't have enough capacity to carry this money
+	if self:getFreeCapacity() < totalWeight then
+		return false
+	end
+
+	-- If player don't have enough available inventory slots to carry this money
+	local backpack = self:getSlotItem(CONST_SLOT_BACKPACK)
+	if not backpack or backpack:getEmptySlots(true) < inventorySlots then
+		return false
+	end
+	return true
+end
+
 function Player.withdrawMoney(self, amount)
 	local balance = self:getBankBalance()
 	if amount > balance or not self:addMoney(amount) then

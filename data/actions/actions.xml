@@ -421,7 +421,20 @@
 	<action itemid="18397" script="other/food.lua" />
 	<action itemid="19737" script="other/food.lua" />
 	<action fromid="20100" toid="20101" script="other/food.lua" />
-	<action itemid="9999" script="other/blessedsteak.lua" />
+	<action itemid="24841" script="other/food.lua" />
+	<action itemid="24843" script="other/food.lua" />
+	<action itemid="26191" script="other/food.lua" />
+	<action itemid="26201" script="other/food.lua" />
+	<action itemid="27038" script="other/food.lua" />
+	<action itemid="27039" script="other/food.lua" />
+	<action itemid="27052" script="other/food.lua" />
+	<action itemid="27095" script="other/food.lua" />
+	<action itemid="27604" script="other/food.lua" />
+	<action itemid="28348" script="other/food.lua" />
+	<action itemid="32854" script="other/food.lua" />
+	<action itemid="32858" script="other/food.lua" />
+	<action itemid="34216" script="other/food.lua" />
+	<action itemid="34725" script="other/food.lua" />
 
 	<!-- Construction Kits / Beds -->
 	<action fromid="3901" toid="3938" script="other/constructionkits.lua" />

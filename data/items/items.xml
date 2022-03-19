@@ -2227,6 +2227,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentEnergy" value="10" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2162" article="a" name="magic light wand">
 		<attribute key="slotType" value="ammo" />
@@ -2249,6 +2250,7 @@
 		<attribute key="absorbPercentPhysical" value="20" />
 		<attribute key="absorbPercentMagic" value="20" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2165" article="a" name="stealth ring">
 		<attribute key="weight" value="100" />
@@ -2256,6 +2258,7 @@
 		<attribute key="transformEquipTo" value="2202" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2166" article="a" name="power ring">
 		<attribute key="weight" value="80" />
@@ -2263,6 +2266,7 @@
 		<attribute key="transformEquipTo" value="2203" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2167" article="an" name="energy ring">
 		<attribute key="weight" value="80" />
@@ -2270,6 +2274,7 @@
 		<attribute key="transformEquipTo" value="2204" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2168" article="a" name="life ring">
 		<attribute key="weight" value="80" />
@@ -2277,6 +2282,7 @@
 		<attribute key="transformEquipTo" value="2205" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2169" article="a" name="time ring">
 		<attribute key="weight" value="90" />
@@ -2284,6 +2290,7 @@
 		<attribute key="transformEquipTo" value="2206" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2170" article="a" name="silver amulet">
 		<attribute key="weight" value="500" />
@@ -2292,6 +2299,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentEarth" value="10" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2171" article="a" name="platinum amulet">
 		<attribute key="description" value="It is an amulet of protection." />
@@ -2306,11 +2314,13 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentManaDrain" value="20" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2173" article="an" name="amulet of loss">
 		<attribute key="weight" value="420" />
 		<attribute key="slotType" value="necklace" />
 		<attribute key="charges" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2174" article="a" name="strange symbol">
 		<attribute key="slotType" value="ammo" />
@@ -2436,6 +2446,7 @@
 		<attribute key="absorbPercentPhysical" value="80" />
 		<attribute key="absorbPercentDeath" value="80" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2198" article="an" name="elven amulet">
 		<attribute key="weight" value="270" />
@@ -2445,6 +2456,7 @@
 		<attribute key="absorbPercentPhysical" value="5" />
 		<attribute key="absorbPercentMagic" value="5" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2199" article="a" name="garlic necklace">
 		<attribute key="weight" value="380" />
@@ -2453,6 +2465,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentLifeDrain" value="20" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2200" article="a" name="protection amulet">
 		<attribute key="weight" value="550" />
@@ -2461,6 +2474,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentPhysical" value="6" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2201" article="a" name="dragon necklace">
 		<attribute key="weight" value="630" />
@@ -2469,6 +2483,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentFire" value="8" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2202" article="a" name="stealth ring">
 		<attribute key="weight" value="100" />
@@ -2521,6 +2536,7 @@
 		<attribute key="showduration" value="1" />
 		<attribute key="speed" value="60" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2207" article="a" name="sword ring">
 		<attribute key="weight" value="90" />
@@ -2528,6 +2544,7 @@
 		<attribute key="transformEquipTo" value="2210" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2208" article="an" name="axe ring">
 		<attribute key="weight" value="90" />
@@ -2535,6 +2552,7 @@
 		<attribute key="transformEquipTo" value="2211" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2209" article="a" name="club ring">
 		<attribute key="weight" value="90" />
@@ -2542,6 +2560,7 @@
 		<attribute key="transformEquipTo" value="2212" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2210" article="a" name="sword ring">
 		<attribute key="weight" value="90" />
@@ -2576,6 +2595,7 @@
 		<attribute key="transformEquipTo" value="2215" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2214" article="a" name="ring of healing">
 		<attribute key="weight" value="80" />
@@ -2583,6 +2603,7 @@
 		<attribute key="transformEquipTo" value="2216" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2215" article="a" name="dwarven ring">
 		<attribute key="weight" value="110" />
@@ -2706,6 +2727,7 @@
 	</item>
 	<item id="2260" article="a" name="blank rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="weight" value="210" />
 	</item>
 	<item id="2261" article="a" name="destroy field rune">
@@ -3338,6 +3360,7 @@
 		<attribute key="weaponType" value="sword" />
 		<attribute key="elementIce" value="18" />
 		<attribute key="charges" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2397" article="a" name="longsword">
 		<attribute key="weight" value="4200" />
@@ -4215,6 +4238,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="bolt" />
 		<attribute key="maxHitChance" value="87" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2544" article="an" name="arrow">
 		<attribute key="weight" value="70" />
@@ -4224,6 +4248,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="arrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2545" article="a" name="poison arrow">
 		<attribute key="weight" value="80" />
@@ -4233,6 +4258,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="poisonarrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2546" article="a" name="burst arrow">
 		<attribute key="weight" value="90" />
@@ -4242,6 +4268,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="burstarrow" />
 		<attribute key="maxHitChance" value="100" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2547" article="a" name="power bolt">
 		<attribute key="weight" value="80" />
@@ -4251,6 +4278,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="powerbolt" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="2548" article="a" name="pitchfork">
 		<attribute key="weight" value="2500" />
@@ -9289,6 +9317,7 @@
 		<attribute key="weight" value="2200" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item fromid="5814" toid="5827" name="small lava cracks">
 		<attribute key="description" value="The ground is steaming hot." />
@@ -10802,6 +10831,7 @@
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
 		<attribute key="absorbPercentDeath" value="5" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="6301" article="a" name="death ring">
 		<attribute key="weight" value="80" />
@@ -11439,6 +11469,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="infernalbolt" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="6530" article="a" name="worn leather boots" editorsuffix=" (Old worn soft boots)">
 		<attribute key="weight" value="900" />
@@ -12442,6 +12473,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="piercingbolt" />
 		<attribute key="maxHitChance" value="87" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7364" article="a" name="sniper arrow">
 		<attribute key="weight" value="70" />
@@ -12451,6 +12483,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="sniperarrow" />
 		<attribute key="maxHitChance" value="100" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7365" article="an" name="onyx arrow">
 		<attribute key="weight" value="70" />
@@ -12460,6 +12493,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="onyxarrow" />
 		<attribute key="maxHitChance" value="94" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7366" article="a" name="viper star">
 		<attribute key="weight" value="200" />
@@ -12927,10 +12961,12 @@
 	<item id="7439" article="a" name="berserk potion">
 		<attribute key="description" value="Drinking this potion increases temporarily your fighting skill while decreasing your defense." />
 		<attribute key="weight" value="200" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7440" article="a" name="mastermind potion">
 		<attribute key="description" value="Drinking this potion temporarily increases your magic skill." />
 		<attribute key="weight" value="290" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7441" article="an" name="ice cube">
 		<attribute key="weight" value="2000" />
@@ -12942,6 +12978,7 @@
 	<item id="7443" article="a" name="bullseye potion">
 		<attribute key="description" value="Drinking this potion increases temporarily your distance skill while decreasing your defense." />
 		<attribute key="weight" value="200" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7444" article="an" name="ice cube">
 		<attribute key="description" value="There is a rough shape of a head with tusks." />
@@ -13267,18 +13304,22 @@
 	<item id="7588" article="a" name="strong health potion">
 		<attribute key="weight" value="290" />
 		<attribute key="description" value="This potion can only be consumed by paladins and knights of level 50 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7589" article="a" name="strong mana potion">
 		<attribute key="weight" value="290" />
 		<attribute key="description" value="This potion can only be consumed by players of level 50 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7590" article="a" name="great mana potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by sorcerers, druids and paladins of level 80 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7591" article="a" name="great health potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by knights of level 80 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item fromid="7592" toid="7599" name="linen" />
 	<item id="7600" name="wood" />
@@ -13287,10 +13328,12 @@
 	<item id="7617" name="linen" />
 	<item id="7618" article="a" name="health potion">
 		<attribute key="weight" value="270" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7619" name="linen" />
 	<item id="7620" article="a" name="mana potion">
 		<attribute key="weight" value="270" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7621" article="a" name="dead dragon hatchling">
 		<attribute key="containerSize" value="30" />
@@ -14274,6 +14317,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="flasharrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7839" article="a" name="shiver arrow">
 		<attribute key="weight" value="70" />
@@ -14284,6 +14328,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="shiverarrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7840" article="a" name="flaming arrow">
 		<attribute key="weight" value="70" />
@@ -14294,6 +14339,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="flammingarrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7841" article="a" name="straw mat">
 		<attribute key="type" value="bed" />
@@ -14343,6 +14389,7 @@
 		<attribute key="shootType" value="eartharrow" />
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item fromid="7851" toid="7853" article="a" name="buttress" />
 	<item id="7854" article="an" name="earth spike sword">
@@ -14704,6 +14751,7 @@
 		<attribute key="charges" value="200" />
 		<attribute key="showcharges" value="1" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7888" article="a" name="glacier amulet">
 		<attribute key="weight" value="500" />
@@ -14713,6 +14761,7 @@
 		<attribute key="absorbPercentEnergy" value="-10" />
 		<attribute key="showcharges" value="1" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7889" article="a" name="lightning pendant">
 		<attribute key="weight" value="500" />
@@ -14722,6 +14771,7 @@
 		<attribute key="absorbPercentEarth" value="-10" />
 		<attribute key="showcharges" value="1" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7890" article="a" name="magma amulet">
 		<attribute key="weight" value="500" />
@@ -14731,6 +14781,7 @@
 		<attribute key="absorbPercentIce" value="-10" />
 		<attribute key="showcharges" value="1" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="7891" name="magma boots">
 		<attribute key="weight" value="750" />
@@ -15363,13 +15414,16 @@
 	<item id="8472" article="a" name="great spirit potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by paladins of level 80 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="8473" article="an" name="ultimate health potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by knights of level 130 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="8474" article="an" name="antidote potion">
 		<attribute key="weight" value="265" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item fromid="8475" toid="8525" article="a" name="stone wall" />
 	<item fromid="8526" toid="8533" article="a" name="gem" />
@@ -17801,6 +17855,7 @@
 		<attribute key="decayTo" value="0" />
 		<attribute key="duration" value="86400" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="9957" article="a" name="lightbringer's basin" />
 	<item id="9958" article="a" name="royal tapestry">
@@ -18543,6 +18598,7 @@
 		<attribute key="absorbPercentPhysical" value="60" />
 		<attribute key="absorbPercentFire" value="40" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="10219" article="a" name="sacred tree amulet">
 		<attribute key="description" value="Its leaves stretch out to cover your whole body if you receive earth damage." />
@@ -18553,6 +18609,7 @@
 		<attribute key="absorbPercentPhysical" value="60" />
 		<attribute key="absorbPercentEarth" value="40" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="10220" name="leviathan's amulet">
 		<attribute key="description" value="It holds the last breath of Leviathan." />
@@ -18562,6 +18619,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentPhysical" value="60" />
 		<attribute key="absorbPercentIce" value="40" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="10221" article="a" name="shockwave amulet">
 		<attribute key="description" value="It tickles your neck in a rather pleasant way and absorbs loads of damage." />
@@ -18571,6 +18629,7 @@
 		<attribute key="showcharges" value="1" />
 		<attribute key="absorbPercentPhysical" value="60" />
 		<attribute key="absorbPercentEnergy" value="40" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="10222" name="tiled floor" />
 	<item id="10223" article="a" name="mechanical fishing rod">
@@ -24648,6 +24707,7 @@
 		<attribute key="slotType" value="necklace" />
 		<attribute key="absorbPercentLifeDrain" value="50" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="15404" article="a" name="deepling axe">
 		<attribute key="weight" value="9100" />
@@ -25150,6 +25210,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="tarsalarrow" />
 		<attribute key="maxHitChance" value="94" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="15649" article="a" name="vortex bolt">
 		<attribute key="weight" value="80" />
@@ -25159,6 +25220,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="vortexbolt" />
 		<attribute key="maxHitChance" value="89" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="15650" article="a" name="swarmer drum">
 		<attribute key="weight" value="3200" />
@@ -25982,6 +26044,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="crystallinearrow" />
 		<attribute key="maxHitChance" value="95" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18305" article="a" name="fresh mushroom beer">
 		<attribute key="weight" value="200" />
@@ -26248,6 +26311,7 @@
 		<attribute key="absorbPercentPhysical" value="15" />
 		<attribute key="absorbPercentEarth" value="10" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18403" article="a" name="prismatic helmet">
 		<attribute key="weight" value="5600" />
@@ -26286,6 +26350,7 @@
 		<attribute key="absorbPercentPhysical" value="10" />
 		<attribute key="absorbPercentEnergy" value="15" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18408" article="a" name="prismatic ring">
 		<attribute key="weight" value="105" />
@@ -26296,6 +26361,7 @@
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
 		<attribute key="showattributes" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18409" article="a" name="wand of everblazing">
 		<attribute key="description" value="It contains the everblazing fire." />
@@ -26403,6 +26469,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="prismaticbolt" />
 		<attribute key="maxHitChance" value="90" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18436" article="a" name="drill bolt">
 		<attribute key="weight" value="80" />
@@ -26412,6 +26479,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="shootType" value="drillbolt" />
 		<attribute key="maxHitChance" value="90" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18437" article="an" name="envenomed arrow">
 		<attribute key="weight" value="70" />
@@ -26422,6 +26490,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="envenomedarrow" />
 		<attribute key="maxHitChance" value="93" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="18438" article="a" name="dead dragonling">
 		<attribute key="containerSize" value="25" />
@@ -26929,12 +26998,14 @@
 	</item>
 	<item id="19392" article="a" name="sorc and druid attack rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="runeSpellName" value="adori dis min vis" />
 		<attribute key="weight" value="210" />
 		<attribute key="charges" value="10" />
 	</item>
 	<item id="19393" article="a" name="healing rune for druids">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="weight" value="210" />
 	</item>
 	<item fromid="19395" toid="19400" article="a" name="stone alcove" />
@@ -27312,10 +27383,12 @@
 	<item fromid="19773" toid="19790" name="plaster" />
 	<item id="19791" article="a" name="tiny healing rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="weight" value="210" />
 	</item>
 	<item id="19792" article="a" name="lightest magic missile rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="weight" value="21" />
 	</item>
 	<item id="19793" article="a" name="can of oil">
@@ -33305,6 +33378,7 @@
 		<attribute key="absorbPercentMagic" value="10" />
 		<attribute key="showattributes" value="1" />
 		<attribute key="weight" value="220" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="23555" article="a" name="cup of cowcoa">
 		<attribute key="description" value="This substance is extremely acrid, that vessel won't hold it for long." />
@@ -33512,12 +33586,14 @@
 	</item>
 	<item id="23722" article="a" name="light stone shower rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="runeSpellName" value="adori infir mas tera" />
 		<attribute key="weight" value="210" />
 		<attribute key="charges" value="4" />
 	</item>
 	<item id="23723" article="a" name="lightest missile rune">
 		<attribute key="type" value="rune" />
+		<attribute key="supply" value="true" />
 		<attribute key="runeSpellName" value="adori infir vis" />
 		<attribute key="weight" value="210" />
 		<attribute key="charges" value="4" />
@@ -33819,6 +33895,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="shootType" value="simplearrow" />
 		<attribute key="maxHitChance" value="91" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="23840" article="a" name="dead snake">
 		<attribute key="containerSize" value="1" />
@@ -36530,14 +36607,17 @@
 	<item id="26029" article="an" name="ultimate mana potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by sorcerers and druids of level 130 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26030" article="an" name="ultimate spirit potion">
 		<attribute key="weight" value="310" />
 		<attribute key="description" value="This potion can only be consumed by paladins of level 130 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26031" article="a" name="supreme health potion">
 		<attribute key="weight" value="350" />
 		<attribute key="description" value="This potion can only be consumed by knights of level 200 or higher." />
+		<attribute key="supply" value="true" />
 	</item>
 	<item fromid="26032" toid="26034" name="stones" />
 	<item fromid="26035" toid="26043" article="a" name="stone" />
@@ -36990,6 +37070,7 @@
 		<attribute key="magiclevelpoints" value="2" />
 		<attribute key="showduration" value="1" />
 		<attribute key="transformDeEquipTo" value="26198" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26183" article="a" name="collar of green plasma">
 		<attribute key="weight" value="500" />
@@ -37015,6 +37096,7 @@
 		<attribute key="absorbPercentPhysical" value="5" />
 		<attribute key="showduration" value="1" />
 		<attribute key="transformDeEquipTo" value="26200" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26185" article="a" name="ring of blue plasma">
 		<attribute key="weight" value="90" />
@@ -37022,6 +37104,7 @@
 		<attribute key="transformEquipTo" value="26186" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26186" article="a" name="ring of blue plasma">
 		<attribute key="weight" value="90" />
@@ -37039,6 +37122,7 @@
 		<attribute key="transformEquipTo" value="26188" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26188" name="ring of green plasma">
 		<attribute key="weight" value="90" />
@@ -37059,6 +37143,7 @@
 		<attribute key="transformEquipTo" value="26190" />
 		<attribute key="stopduration" value="1" />
 		<attribute key="showduration" value="1" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="26190" article="a" name="ring of red plasma">
 		<attribute key="weight" value="90" />
@@ -38093,6 +38178,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="attack" value="37" />
 		<attribute key="shootType" value="diamondarrow" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="28414" article="a" name="spectral bolt">
 		<attribute key="weight" value="90" />
@@ -38100,6 +38186,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="attack" value="78" />
 		<attribute key="shootType" value="spectralbolt" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="28415" article="a" name="royal star">
 		<attribute key="weight" value="220" />
@@ -38108,6 +38195,7 @@
 		<attribute key="range" value="4" />
 		<attribute key="elementFire" value="2" />
 		<attribute key="shootType" value="royalstar" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="28416" article="a" name="wand of darkness" />
 	<item id="28417" name="strange colours" />
@@ -41038,6 +41126,7 @@
 		<attribute key="ammoType" value="arrow" />
 		<attribute key="attack" value="37" />
 		<attribute key="shootType" value="diamondarrow" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="38558" article="a" name="spectral bolt">
 		<attribute key="weight" value="90" />
@@ -41045,6 +41134,7 @@
 		<attribute key="ammoType" value="bolt" />
 		<attribute key="attack" value="78" />
 		<attribute key="shootType" value="spectralbolt" />
+		<attribute key="supply" value="true" />
 	</item>
 	<item id="38564" article="a" name="rope-ladder" />
 	<item fromid="38565" toid="38566" name="chaos critical dice" />

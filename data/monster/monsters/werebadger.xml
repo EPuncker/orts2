@@ -57,6 +57,6 @@
 		<item name="platinum amulet" chance="528" />
 		<item name="wand of voodoo" chance="396" />
 		<item name="underworld rod" chance="357" />
-		<item name="werebadger trophy" chance="304" />
+		<item id= "24757" chance="304" /><!-- werebadger trophy -->
 	</loot>
 </monster>

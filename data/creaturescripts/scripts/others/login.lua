@@ -59,11 +59,6 @@ function onLogin(player)
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 
-	local playerId = player:getId()
-
-	-- Stamina
-	nextUseStaminaTime[playerId] = 0
-
 	-- Promotion
 	local vocation = player:getVocation()
 	local promotion = vocation:getPromotion()
@@ -85,6 +80,8 @@ function onLogin(player)
 
 	if player:getStorageValue(PlayerStorageKeys.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, os.time() + 10)
+
+		local playerId = player:getId()
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
 	return true

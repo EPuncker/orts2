@@ -111,7 +111,7 @@ if not Modules then
 			elseif not player:canLearnSpell(parameters.spellName) then
 				npcHandler:say("You cannot learn this spell.", cid)
 			elseif not player:removeTotalMoney(parameters.price) then
-				npcHandler:say("You do not have enough money, this spell costs " .. parameters.price .. " gold.", cid)
+				npcHandler:say("Return when you have enough gold.", cid)
 			else
 				npcHandler:say("You have learned " .. parameters.spellName .. ".", cid)
 				player:learnSpell(parameters.spellName)

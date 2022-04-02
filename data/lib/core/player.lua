@@ -318,14 +318,35 @@ function Player.depositMoney(self, amount)
 	return true
 end
 
+function Player.removeTotalMoney(self, amount)
+	local moneyCount = self:getMoney()
+	local bankCount = self:getBankBalance()
+	if amount <= moneyCount then
+		self:removeMoney(amount)
+		return true
+	elseif amount <= (moneyCount + bankCount) then
+		if moneyCount ~= 0 then
+			self:removeMoney(moneyCount)
+			local remains = amount - moneyCount
+			self:setBankBalance(bankCount - remains)
+			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+			return true
+		end
+
+		self:setBankBalance(bankCount - amount)
+		self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+		return true
+	end
+	return false
+end
+
 function Player.addLevel(self, amount, round)
 	round = round or false
 	local level, amount = self:getLevel(), amount or 1
 	if amount > 0 then
 		return self:addExperience(Game.getExperienceForLevel(level + amount) - (round and self:getExperience() or Game.getExperienceForLevel(level)))
-	else
-		return self:removeExperience(((round and self:getExperience() or Game.getExperienceForLevel(level)) - Game.getExperienceForLevel(level + amount)))
 	end
+	return self:removeExperience(((round and self:getExperience() or Game.getExperienceForLevel(level)) - Game.getExperienceForLevel(level + amount)))
 end
 
 function Player.addMagicLevel(self, value)
@@ -339,15 +360,15 @@ function Player.addMagicLevel(self, value)
 		end
 
 		return self:addManaSpent(sum - self:getManaSpent())
-	else
-		value = math.min(currentMagLevel, math.abs(value))
-		while value > 0 do
-			sum = sum + self:getVocation():getRequiredManaSpent(currentMagLevel - value + 1)
-			value = value - 1
-		end
-
-		return self:removeManaSpent(sum + self:getManaSpent())
 	end
+
+	value = math.min(currentMagLevel, math.abs(value))
+	while value > 0 do
+		sum = sum + self:getVocation():getRequiredManaSpent(currentMagLevel - value + 1)
+		value = value - 1
+	end
+
+	return self:removeManaSpent(sum + self:getManaSpent())
 end
 
 function Player.addSkillLevel(self, skillId, value)
@@ -361,15 +382,15 @@ function Player.addSkillLevel(self, skillId, value)
 		end
 
 		return self:addSkillTries(skillId, sum - self:getSkillTries(skillId))
-	else
-		value = math.min(currentSkillLevel, math.abs(value))
-		while value > 0 do
-			sum = sum + self:getVocation():getRequiredSkillTries(skillId, currentSkillLevel - value + 1)
-			value = value - 1
-		end
-
-		return self:removeSkillTries(skillId, sum + self:getSkillTries(skillId), true)
 	end
+
+	value = math.min(currentSkillLevel, math.abs(value))
+	while value > 0 do
+		sum = sum + self:getVocation():getRequiredSkillTries(skillId, currentSkillLevel - value + 1)
+		value = value - 1
+	end
+
+	return self:removeSkillTries(skillId, sum + self:getSkillTries(skillId), true)
 end
 
 function Player.addSkill(self, skillId, value, round)

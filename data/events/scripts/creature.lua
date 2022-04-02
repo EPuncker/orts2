@@ -6,17 +6,15 @@ function Creature:onChangeOutfit(outfit)
 	end
 	if EventCallback.onChangeOutfit then
 		return EventCallback.onChangeOutfit(self, outfit)
-	else
-		return true
 	end
+	return true
 end
 
 function Creature:onAreaCombat(tile, isAggressive)
 	if EventCallback.onAreaCombat then
 		return EventCallback.onAreaCombat(self, tile, isAggressive)
-	else
-		return RETURNVALUE_NOERROR
 	end
+	return RETURNVALUE_NOERROR
 end
 
 local function removeCombatProtection(cid)
@@ -76,6 +74,7 @@ function Creature:onTargetCombat(target)
 			end
 		end
 	end
+	return RETURNVALUE_NOERROR
 end
 
 function Creature:onHear(speaker, words, type)

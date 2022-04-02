@@ -83,7 +83,7 @@ if not Modules then
 			elseif not player:removeTotalMoney(parameters.cost) then
 				npcHandler:say("You do not have enough money!", cid)
 			else
-				npcHandler:say(parameters.text, cid)
+				npcHandler:say(parameters.text or "Congratulations! You are now promoted.", cid)
 				player:setVocation(promotion)
 				player:setStorageValue(PlayerStorageKeys.promotion, 1)
 			end

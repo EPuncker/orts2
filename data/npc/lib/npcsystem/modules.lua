@@ -107,7 +107,7 @@ if not Modules then
 		local player = Player(cid)
 		if player:isPremium() or not parameters.premium then
 			if player:hasLearnedSpell(parameters.spellName) then
-				npcHandler:say("You already know this spell.", cid)
+				npcHandler:say("You already know how to cast this spell.", cid)
 			elseif not player:canLearnSpell(parameters.spellName) then
 				npcHandler:say("You cannot learn this spell.", cid)
 			elseif not player:removeTotalMoney(parameters.price) then

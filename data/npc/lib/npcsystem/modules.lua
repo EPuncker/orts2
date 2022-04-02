@@ -113,7 +113,7 @@ if not Modules then
 			elseif not player:removeTotalMoney(parameters.price) then
 				npcHandler:say("Return when you have enough gold.", cid)
 			else
-				npcHandler:say("You have learned " .. parameters.spellName .. ".", cid)
+				npcHandler:say("Here you are. Look in your spellbook for the pronunciation of this spell.", cid)
 				player:learnSpell(parameters.spellName)
 			end
 		else

@@ -533,6 +533,7 @@
 	<monster name="Orewalker" file="monsters/orewalker.xml" />
 	<monster name="Orshabaal" file="monsters/orshabaal.xml" />
 	<monster name="Overcharged Energy Element" file="monsters/overcharged_energy_element.xml" />
+	<monster name="Paiz The Pauperizer" file="monsters/paiz_the_pauperizer.xml" />
 	<monster name="Paladin Familiar" file="monsters/paladin_familiar.xml" />
 	<monster name="Panda" file="monsters/panda.xml" />
 	<monster name="Parasite" file="monsters/parasite.xml" />
@@ -645,7 +646,7 @@
 	<monster name="Snake God Essence" file="monsters/snake_god_essence.xml" />
 	<monster name="Snake Thing" file="monsters/snake_thing.xml" />
 	<monster name="Snake" file="monsters/snake.xml" />
-	<monster name="Son of Verminor" file="monsters/son_of_verminor.xml" />
+	<monster name="Son Of Verminor" file="monsters/son_of_verminor.xml" />
 	<monster name="Sorcerer Familiar" file="monsters/sorcerer_familiar.xml" />
 	<monster name="Souleater" file="monsters/souleater.xml" />
 	<monster name="Sparkion" file="monsters/sparkion.xml" />

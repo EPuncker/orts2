@@ -48,9 +48,27 @@ if not Modules then
 			return false
 		end
 
-		local parseInfo = {[TAG_PLAYERNAME] = Player(cid):getName()}
-		npcHandler:say(npcHandler:parseMessage(parameters.text or parameters.message, parseInfo), cid, parameters.publicize and true)
-		if parameters.reset then
+		local player = Player(cid)
+		local cost, costMessage = parameters.cost, '%d gold coins'
+		if cost and cost > 0 then
+			if parameters.discount then
+				cost = cost - StdModule.travelDiscount(player, parameters.discount)
+			end
+
+			costMessage = cost > 0 and string.format(costMessage, cost) or 'free'
+		else
+			costMessage = 'free'
+		end
+
+		local parseInfo = {[TAG_PLAYERNAME] = player:getName(), [TAG_TIME] = getFormattedWorldTime(), [TAG_BLESSCOST] = getBlessingsCost(player:getLevel()), [TAG_PVPBLESSCOST] = getPvpBlessingCost(player:getLevel()), [TAG_TRAVELCOST] = costMessage}
+		if parameters.text then
+			npcHandler:say(npcHandler:parseMessage(parameters.text, parseInfo), cid, parameters.publicize and true)
+		end
+
+		if parameters.ungreet then
+			npcHandler:resetNpc(cid)
+			npcHandler:releaseFocus(cid)
+		elseif parameters.reset then
 			npcHandler:resetNpc(cid)
 		elseif parameters.moveup then
 			npcHandler.keywordHandler:moveUp(cid, parameters.moveup)
@@ -75,7 +93,6 @@ if not Modules then
 
 		local player = Player(cid)
 		if player:isPremium() or not parameters.premium then
-			local promotion = player:getVocation():getPromotion()
 			if player:getStorageValue(PlayerStorageKeys.promotion) == 1 then
 				npcHandler:say("You are already promoted!", cid)
 			elseif player:getLevel() < parameters.level then
@@ -84,7 +101,7 @@ if not Modules then
 				npcHandler:say("You do not have enough money!", cid)
 			else
 				npcHandler:say(parameters.text or "Congratulations! You are now promoted.", cid)
-				player:setVocation(promotion)
+				player:setVocation(player:getVocation():getPromotion())
 				player:setStorageValue(PlayerStorageKeys.promotion, 1)
 			end
 		else
@@ -110,6 +127,8 @@ if not Modules then
 				npcHandler:say("You already know how to cast this spell.", cid)
 			elseif not player:canLearnSpell(parameters.spellName) then
 				npcHandler:say("You cannot learn this spell.", cid)
+			elseif player:getLevel() < parameters.level then
+				npcHandler:say("You have to be level " .. parameters.level .. " to learn this spell.", cid)
 			elseif not player:removeTotalMoney(parameters.price) then
 				npcHandler:say("Return when you have enough gold.", cid)
 			else
@@ -134,17 +153,22 @@ if not Modules then
 		end
 
 		local player = Player(cid)
-		if player:isPremium() or not parameters.premium then
-			if player:hasBlessing(parameters.bless) then
-				npcHandler:say("Gods have already blessed you with this blessing!", cid)
-			elseif not player:removeTotalMoney(parameters.cost) then
-				npcHandler:say("You don't have enough money for blessing.", cid)
-			else
-				player:addBlessing(parameters.bless)
-				npcHandler:say("You have been blessed by one of the five gods!", cid)
-			end
+		local parseInfo = {[TAG_BLESSCOST] = getBlessingsCost(player:getLevel()), [TAG_PVPBLESSCOST] = getPvpBlessingCost(player:getLevel())}
+		if player:hasBlessing(parameters.bless) then
+			npcHandler:say("You already possess this blessing.", cid)
+		elseif parameters.bless == 4 and player:getStorageValue(PlayerStorageKeys.KawillBlessing) ~= 1 then
+			npcHandler:say("You need the blessing of the great geomancer first.", cid)
+		elseif parameters.bless == 6 and player:getBlessings() == 0 and not player:getItemById(2173, true) then
+			npcHandler:say("You don't have any of the other blessings nor an amulet of loss, so it wouldn't make sense to bestow this protection on you now. Remember that it can only protect you from the loss of those!", cid)
+		elseif not player:removeTotalMoney(type(parameters.cost) == "string" and npcHandler:parseMessage(parameters.cost, parseInfo) or parameters.cost) then
+			npcHandler:say("Oh. You do not have enough money.", cid)
 		else
-			npcHandler:say("You need a premium account in order to be blessed.", cid)
+			npcHandler:say(parameters.text or "You have been blessed by one of the five gods!", cid)
+			if parameters.bless == 4 then
+				player:setStorageValue(PlayerStorageKeys.KawillBlessing, 0)
+			end
+			player:addBlessing(parameters.bless)
+			player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 		end
 		npcHandler:resetNpc(cid)
 		return true
@@ -161,33 +185,57 @@ if not Modules then
 		end
 
 		local player = Player(cid)
-		if player:isPremium() or not parameters.premium then
-			if player:isPzLocked() then
-				npcHandler:say("First get rid of those blood stains! You are not going to ruin my vehicle!", cid)
-			elseif parameters.level and player:getLevel() < parameters.level then
-				npcHandler:say("You must reach level " .. parameters.level .. " before I can let you go there.", cid)
-			elseif not player:removeTotalMoney(parameters.cost) then
-				npcHandler:say("You don't have enough money.", cid)
-			else
-				npcHandler:say(parameters.msg or "Set the sails!", cid)
-				npcHandler:releaseFocus(cid)
+		local cost = parameters.cost
+		if cost and cost > 0 then
+			if parameters.discount then
+				cost = cost - StdModule.travelDiscount(player, parameters.discount)
 
-				local destination = Position(parameters.destination)
-				local position = player:getPosition()
-				player:teleportTo(destination)
-
-				position:sendMagicEffect(CONST_ME_TELEPORT)
-				destination:sendMagicEffect(CONST_ME_TELEPORT)
+				if cost < 0 then
+					cost = 0
+				end
 			end
 		else
+			cost = 0
+		end
+
+		if parameters.premium and not player:isPremium() then
 			npcHandler:say("I'm sorry, but you need a premium account in order to travel onboard our ships.", cid)
+		elseif parameters.level and player:getLevel() < parameters.level then
+			npcHandler:say("You must reach level " .. parameters.level .. " before I can let you go there.", cid)
+		elseif player:isPzLocked() then
+			npcHandler:say("First get rid of those blood stains! You are not going to ruin my vehicle!", cid)
+		elseif not player:removeTotalMoney(cost) then
+			npcHandler:say("You don't have enough money.", cid)
+		else
+			npcHandler:releaseFocus(cid)
+			npcHandler:say(parameters.text or "Set the sails!", cid)
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+
+			local destination = parameters.destination
+			if type(destination) == 'function' then
+				destination = destination(player)
+			end
+
+			player:teleportTo(destination)
+			destination:sendMagicEffect(CONST_ME_TELEPORT)
+
+			-- What a foolish Quest - Mission 3
+			if player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer) > os.time() then
+				if destination ~= Position(32660, 31957, 15) then -- kazordoon steamboat
+					player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer, 1)
+				end
+			end
 		end
 		npcHandler:resetNpc(cid)
 		return true
 	end
 
 	FocusModule = {
-		npcHandler = nil
+		npcHandler = nil,
+		greetWords = nil,
+		farewellWords = nil,
+		greetCallback = nil,
+		farewellCallback = nil
 	}
 
 	-- Creates a new instance of FocusModule without an associated NpcHandler.
@@ -201,17 +249,19 @@ if not Modules then
 	-- Inits the module and associates handler to it.
 	function FocusModule:init(handler)
 		self.npcHandler = handler
-		for i, word in pairs(FOCUS_GREETWORDS) do
+		local greetWords = self.greetWords or FOCUS_GREETWORDS
+		for _, word in pairs(greetWords) do
 			local obj = {}
 			obj[#obj + 1] = word
-			obj.callback = FOCUS_GREETWORDS.callback or FocusModule.messageMatcher
+			obj.callback = self.greetCallback or FocusModule.messageMatcherDefault
 			handler.keywordHandler:addKeyword(obj, FocusModule.onGreet, {module = self})
 		end
 
-		for i, word in pairs(FOCUS_FAREWELLWORDS) do
+		local farewellWords = self.farewellWords or FOCUS_FAREWELLWORDS
+		for _, word in pairs(farewellWords) do
 			local obj = {}
 			obj[#obj + 1] = word
-			obj.callback = FOCUS_FAREWELLWORDS.callback or FocusModule.messageMatcher
+			obj.callback = self.farewellCallback or FocusModule.messageMatcherDefault
 			handler.keywordHandler:addKeyword(obj, FocusModule.onFarewell, {module = self})
 		end
 
@@ -261,7 +311,7 @@ if not Modules then
 
 	-- Greeting callback function.
 	function FocusModule.onGreet(cid, message, keywords, parameters)
-		parameters.module.npcHandler:onGreet(cid)
+		parameters.module.npcHandler:onGreet(cid, message)
 		return true
 	end
 
@@ -275,10 +325,21 @@ if not Modules then
 	end
 
 	-- Custom message matching callback function for greeting messages.
-	function FocusModule.messageMatcher(keywords, message)
-		for i, word in pairs(keywords) do
+	function FocusModule.messageMatcherDefault(keywords, message)
+		for _, word in pairs(keywords) do
 			if type(word) == "string" then
 				if string.find(message, word) and not string.find(message, "[%w+]" .. word) and not string.find(message, word .. "[%w+]") then
+					return true
+				end
+			end
+		end
+		return false
+	end
+
+	function FocusModule.messageMatcherStart(keywords, message)
+		for _, word in pairs(keywords) do
+			if type(word) == "string" then
+				if string.starts(message, word) then
 					return true
 				end
 			end

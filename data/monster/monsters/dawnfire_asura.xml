@@ -44,7 +44,7 @@
 	<loot>
 		<item name="platinum coin" chance="84052" countmax="9" />
 		<item name="gold coin" chance="69891" countmax="100" />
-		<item name="concentrated demonic blood" chance="20960" />
+		<item name="flask of demonic blood" chance="20960" />
 		<item name="soul orb" chance="14616" />
 		<item name="golden lotus brooch" chance="11777" />
 		<item name="peacock feather fan" chance="11111" />

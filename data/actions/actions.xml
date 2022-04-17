@@ -421,7 +421,20 @@
 	<action itemid="18397" script="other/food.lua" />
 	<action itemid="19737" script="other/food.lua" />
 	<action fromid="20100" toid="20101" script="other/food.lua" />
-	<action itemid="9999" script="other/blessedsteak.lua" />
+	<action itemid="24841" script="other/food.lua" />
+	<action itemid="24843" script="other/food.lua" />
+	<action itemid="26191" script="other/food.lua" />
+	<action itemid="26201" script="other/food.lua" />
+	<action itemid="27038" script="other/food.lua" />
+	<action itemid="27039" script="other/food.lua" />
+	<action itemid="27052" script="other/food.lua" />
+	<action itemid="27095" script="other/food.lua" />
+	<action itemid="27604" script="other/food.lua" />
+	<action itemid="28348" script="other/food.lua" />
+	<action itemid="32854" script="other/food.lua" />
+	<action itemid="32858" script="other/food.lua" />
+	<action itemid="34216" script="other/food.lua" />
+	<action itemid="34725" script="other/food.lua" />
 
 	<!-- Construction Kits / Beds -->
 	<action fromid="3901" toid="3938" script="other/constructionkits.lua" />
@@ -447,11 +460,6 @@
 	<action fromid="7904" toid="7907" script="other/bed_modification_kits.lua" />
 	<action itemid="20252" script="other/bed_modification_kits.lua" />
 
-	<!-- Gold -->
-	<action itemid="2148" script="other/changegold.lua" />
-	<action itemid="2152" script="other/changegold.lua" />
-	<action itemid="2160" script="other/changegold.lua" />
-
 	<!-- Fluids -->
 	<action fromid="2005" toid="2009" script="other/fluids.lua" />
 	<action fromid="2011" toid="2015" script="other/fluids.lua" />
@@ -473,11 +481,10 @@
 	<action fromid="26029" toid="26031" script="other/potions.lua" />
 
 	<!-- Other -->
-	<action itemid="6578" script="other/partyhat.lua" />
-	<action itemid="2114" script="other/piggybank.lua" />
-	<action itemid="6576" script="other/fireworksrocket.lua" />
-	<action itemid="2036" script="other/watch.lua" />
+	<action itemid="430" script="other/teleport.lua" />
+	<action itemid="1369" script="other/draw_well.lua" />
 	<action fromid="1728" toid="1731" script="other/watch.lua" />
+	<action itemid="2036" script="other/watch.lua" />
 	<action itemid="6092" script="other/watch.lua" />
 	<action itemid="6572" script="other/partytrumpet.lua" />
 	<action itemid="2785" script="other/blueberrybush.lua" />
@@ -489,9 +496,7 @@
 	<action fromid="3951" toid="3953" script="other/music.lua" />
 	<action itemid="5786" script="other/music.lua" />
 	<action itemid="13759" script="other/music.lua" />
-	<action itemid="430" script="other/teleport.lua" />
 	<action itemid="8580" script="other/teleport.lua" />
-	<action itemid="1369" script="other/teleportdrawwell.lua" />
 	<action itemid="1386" script="other/teleport.lua" />
 	<action itemid="3678" script="other/teleport.lua" />
 	<action itemid="5543" script="other/teleport.lua" />

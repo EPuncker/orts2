@@ -1,6 +1,6 @@
 -- Advanced NPC System by Jiddo
 
-if NpcHandler == nil then
+if not NpcHandler then
 	-- Constant talkdelay behaviors.
 	TALKDELAY_NONE = 0 -- No talkdelay. Npc will reply immedeatly.
 	TALKDELAY_ONTHINK = 1 -- Talkdelay handled through the onThink callback function. (Default)
@@ -148,7 +148,7 @@ if NpcHandler == nil then
 		self.focuses[#self.focuses + 1] = newFocus
 		self.topic[newFocus] = 0
 		local callback = self:getCallback(CALLBACK_ONADDFOCUS)
-		if callback == nil or callback(newFocus) then
+		if not callback or callback(newFocus) then
 			self:processModuleCallback(CALLBACK_ONADDFOCUS, newFocus)
 		end
 		self:updateFocus()
@@ -214,7 +214,7 @@ if NpcHandler == nil then
 		self.topic[focus] = nil
 
 		local callback = self:getCallback(CALLBACK_ONRELEASEFOCUS)
-		if callback == nil or callback(focus) then
+		if not callback or callback(focus) then
 			self:processModuleCallback(CALLBACK_ONRELEASEFOCUS, focus)
 		end
 
@@ -332,7 +332,7 @@ if NpcHandler == nil then
 		end
 
 		local callback = self:getCallback(CALLBACK_FAREWELL)
-		if callback == nil or callback() then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_FAREWELL) then
 				local msg = self:getMessage(MESSAGE_FAREWELL)
 				local player = Player(cid)
@@ -350,7 +350,7 @@ if NpcHandler == nil then
 	function NpcHandler:greet(cid, message)
 		if cid ~= 0  then
 			local callback = self:getCallback(CALLBACK_GREET)
-			if callback == nil or callback(cid, message) then
+			if not callback or callback(cid) then
 				if self:processModuleCallback(CALLBACK_GREET, cid) then
 					local msg = self:getMessage(MESSAGE_GREET)
 					local player = Player(cid)
@@ -388,7 +388,7 @@ if NpcHandler == nil then
 		end
 
 		local callback = self:getCallback(CALLBACK_CREATURE_APPEAR)
-		if callback == nil or callback(cid) then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_CREATURE_APPEAR, cid) then
 				--
 			end
@@ -403,7 +403,7 @@ if NpcHandler == nil then
 		end
 
 		local callback = self:getCallback(CALLBACK_CREATURE_DISAPPEAR)
-		if callback == nil or callback(cid) then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_CREATURE_DISAPPEAR, cid) then
 				if self:isFocused(cid) then
 					self:unGreet(cid)
@@ -416,7 +416,7 @@ if NpcHandler == nil then
 	function NpcHandler:onCreatureSay(creature, msgtype, msg)
 		local cid = creature.uid
 		local callback = self:getCallback(CALLBACK_CREATURE_SAY)
-		if callback == nil or callback(cid, msgtype, msg) then
+		if not callback or callback(cid, msgtype, msg) then
 			if self:processModuleCallback(CALLBACK_CREATURE_SAY, cid, msgtype, msg) then
 				if not self:isInRange(cid) then
 					return
@@ -443,7 +443,7 @@ if NpcHandler == nil then
 	function NpcHandler:onPlayerEndTrade(creature)
 		local cid = creature.uid
 		local callback = self:getCallback(CALLBACK_PLAYER_ENDTRADE)
-		if callback == nil or callback(cid) then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_PLAYER_ENDTRADE, cid, msgtype, msg) then
 				if self:isFocused(cid) then
 					local player = Player(cid)
@@ -460,7 +460,7 @@ if NpcHandler == nil then
 	function NpcHandler:onPlayerCloseChannel(creature)
 		local cid = creature.uid
 		local callback = self:getCallback(CALLBACK_PLAYER_CLOSECHANNEL)
-		if callback == nil or callback(cid) then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_PLAYER_CLOSECHANNEL, cid, msgtype, msg) then
 				if self:isFocused(cid) then
 					self:unGreet(cid)
@@ -473,7 +473,7 @@ if NpcHandler == nil then
 	function NpcHandler:onBuy(creature, itemid, subType, amount, ignoreCap, inBackpacks)
 		local cid = creature.uid
 		local callback = self:getCallback(CALLBACK_ONBUY)
-		if callback == nil or callback(cid, itemid, subType, amount, ignoreCap, inBackpacks) then
+		if not callback or callback(cid, itemid, subType, amount, ignoreCap, inBackpacks) then
 			if self:processModuleCallback(CALLBACK_ONBUY, cid, itemid, subType, amount, ignoreCap, inBackpacks) then
 				--
 			end
@@ -484,7 +484,7 @@ if NpcHandler == nil then
 	function NpcHandler:onSell(creature, itemid, subType, amount, ignoreCap, inBackpacks)
 		local cid = creature.uid
 		local callback = self:getCallback(CALLBACK_ONSELL)
-		if callback == nil or callback(cid, itemid, subType, amount, ignoreCap, inBackpacks) then
+		if not callback or callback(cid, itemid, subType, amount, ignoreCap, inBackpacks) then
 			if self:processModuleCallback(CALLBACK_ONSELL, cid, itemid, subType, amount, ignoreCap, inBackpacks) then
 				--
 			end
@@ -494,7 +494,7 @@ if NpcHandler == nil then
 	-- Handles onTradeRequest events. If you wish to handle this yourself, use the CALLBACK_ONTRADEREQUEST callback.
 	function NpcHandler:onTradeRequest(cid)
 		local callback = self:getCallback(CALLBACK_ONTRADEREQUEST)
-		if callback == nil or callback(cid) then
+		if not callback or callback(cid) then
 			if self:processModuleCallback(CALLBACK_ONTRADEREQUEST, cid) then
 				return true
 			end
@@ -505,7 +505,7 @@ if NpcHandler == nil then
 	-- Handles onThink events. If you wish to handle this yourself, please use the CALLBACK_ONTHINK callback.
 	function NpcHandler:onThink()
 		local callback = self:getCallback(CALLBACK_ONTHINK)
-		if callback == nil or callback() then
+		if not callback or callback() then
 			if NPCHANDLER_TALKDELAY == TALKDELAY_ONTHINK then
 				for cid, talkDelay in pairs(self.talkDelay) do
 					if talkDelay.time ~= nil and talkDelay.message ~= nil and os.time() >= talkDelay.time then
@@ -550,7 +550,7 @@ if NpcHandler == nil then
 	function NpcHandler:onWalkAway(cid)
 		if self:isFocused(cid) then
 			local callback = self:getCallback(CALLBACK_CREATURE_DISAPPEAR)
-			if callback == nil or callback() then
+			if not callback or callback(cid) then
 				if self:processModuleCallback(CALLBACK_CREATURE_DISAPPEAR, cid) then
 					local msg = self:getMessage(MESSAGE_WALKAWAY)
 
@@ -634,7 +634,7 @@ if NpcHandler == nil then
 		end
 
 		local shallDelay = not shallDelay and true or shallDelay
-		if NPCHANDLER_TALKDELAY == TALKDELAY_NONE or shallDelay == false then
+		if NPCHANDLER_TALKDELAY == TALKDELAY_NONE or not shallDelay then
 			selfSay(message, focus, publicize and true or false)
 			return
 		end
@@ -642,7 +642,7 @@ if NpcHandler == nil then
 		stopEvent(self.eventSay[focus])
 		self.eventSay[focus] = addEvent(function(npcId, message, focusId)
 			local npc = Npc(npcId)
-			if npc == nil then
+			if not npc then
 				return
 			end
 

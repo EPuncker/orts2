@@ -259,6 +259,46 @@ function Player.transferMoneyTo(self, target, amount)
 	return true
 end
 
+function Player.canCarryMoney(self, amount)
+	-- Anyone can carry as much imaginary money as they desire
+	if amount == 0 then
+		return true
+	end
+
+	-- The 3 below loops will populate these local variables
+	local totalWeight = 0
+	local inventorySlots = 0
+
+	local currencyItems = Game.getCurrencyItems()
+	for index = #currencyItems, 1, -1 do
+		local currency = currencyItems[index]
+		-- Add currency coins to totalWeight and inventorySlots
+		local worth = currency:getWorth()
+		local currencyCoins = math.floor(amount / worth)
+		if currencyCoins > 0 then
+			amount = amount - (currencyCoins * worth)
+			while currencyCoins > 0 do
+				local count = math.min(100, currencyCoins)
+				totalWeight = totalWeight + currency:getWeight(count)
+				currencyCoins = currencyCoins - count
+				inventorySlots = inventorySlots + 1
+			end
+		end
+	end
+
+	-- If player don't have enough capacity to carry this money
+	if self:getFreeCapacity() < totalWeight then
+		return false
+	end
+
+	-- If player don't have enough available inventory slots to carry this money
+	local backpack = self:getSlotItem(CONST_SLOT_BACKPACK)
+	if not backpack or backpack:getEmptySlots(true) < inventorySlots then
+		return false
+	end
+	return true
+end
+
 function Player.withdrawMoney(self, amount)
 	local balance = self:getBankBalance()
 	if amount > balance or not self:addMoney(amount) then
@@ -278,14 +318,35 @@ function Player.depositMoney(self, amount)
 	return true
 end
 
+function Player.removeTotalMoney(self, amount)
+	local moneyCount = self:getMoney()
+	local bankCount = self:getBankBalance()
+	if amount <= moneyCount then
+		self:removeMoney(amount)
+		return true
+	elseif amount <= (moneyCount + bankCount) then
+		if moneyCount ~= 0 then
+			self:removeMoney(moneyCount)
+			local remains = amount - moneyCount
+			self:setBankBalance(bankCount - remains)
+			self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d from inventory and %d gold from bank account. Your account balance is now %d gold."):format(moneyCount, amount - moneyCount, self:getBankBalance()))
+			return true
+		end
+
+		self:setBankBalance(bankCount - amount)
+		self:sendTextMessage(MESSAGE_INFO_DESCR, ("Paid %d gold from bank account. Your account balance is now %d gold."):format(amount, self:getBankBalance()))
+		return true
+	end
+	return false
+end
+
 function Player.addLevel(self, amount, round)
 	round = round or false
 	local level, amount = self:getLevel(), amount or 1
 	if amount > 0 then
 		return self:addExperience(Game.getExperienceForLevel(level + amount) - (round and self:getExperience() or Game.getExperienceForLevel(level)))
-	else
-		return self:removeExperience(((round and self:getExperience() or Game.getExperienceForLevel(level)) - Game.getExperienceForLevel(level + amount)))
 	end
+	return self:removeExperience(((round and self:getExperience() or Game.getExperienceForLevel(level)) - Game.getExperienceForLevel(level + amount)))
 end
 
 function Player.addMagicLevel(self, value)
@@ -299,15 +360,15 @@ function Player.addMagicLevel(self, value)
 		end
 
 		return self:addManaSpent(sum - self:getManaSpent())
-	else
-		value = math.min(currentMagLevel, math.abs(value))
-		while value > 0 do
-			sum = sum + self:getVocation():getRequiredManaSpent(currentMagLevel - value + 1)
-			value = value - 1
-		end
-
-		return self:removeManaSpent(sum + self:getManaSpent())
 	end
+
+	value = math.min(currentMagLevel, math.abs(value))
+	while value > 0 do
+		sum = sum + self:getVocation():getRequiredManaSpent(currentMagLevel - value + 1)
+		value = value - 1
+	end
+
+	return self:removeManaSpent(sum + self:getManaSpent())
 end
 
 function Player.addSkillLevel(self, skillId, value)
@@ -321,15 +382,15 @@ function Player.addSkillLevel(self, skillId, value)
 		end
 
 		return self:addSkillTries(skillId, sum - self:getSkillTries(skillId))
-	else
-		value = math.min(currentSkillLevel, math.abs(value))
-		while value > 0 do
-			sum = sum + self:getVocation():getRequiredSkillTries(skillId, currentSkillLevel - value + 1)
-			value = value - 1
-		end
-
-		return self:removeSkillTries(skillId, sum + self:getSkillTries(skillId), true)
 	end
+
+	value = math.min(currentSkillLevel, math.abs(value))
+	while value > 0 do
+		sum = sum + self:getVocation():getRequiredSkillTries(skillId, currentSkillLevel - value + 1)
+		value = value - 1
+	end
+
+	return self:removeSkillTries(skillId, sum + self:getSkillTries(skillId), true)
 end
 
 function Player.addSkill(self, skillId, value, round)
@@ -349,3 +410,62 @@ function Player.getWeaponType(self)
 	return WEAPON_NONE
 end
 
+function Player.updateKillTracker(self, monster, corpse)
+	local monsterType = monster:getType()
+	if not monsterType then
+		return false
+	end
+
+	local msg = NetworkMessage()
+	msg:addByte(0xD1)
+	msg:addString(monster:getName())
+
+	local monsterOutfit = monsterType:getOutfit()
+	msg:addU16(monsterOutfit.lookType or 19)
+	msg:addByte(monsterOutfit.lookHead)
+	msg:addByte(monsterOutfit.lookBody)
+	msg:addByte(monsterOutfit.lookLegs)
+	msg:addByte(monsterOutfit.lookFeet)
+	msg:addByte(monsterOutfit.lookAddons)
+
+	local corpseSize = corpse:getSize()
+	msg:addByte(corpseSize)
+	for index = corpseSize - 1, 0, -1 do
+		msg:addItem(corpse:getItem(index))
+	end
+
+	local party = self:getParty()
+	if party then
+		local members = party:getMembers()
+		members[#members + 1] = party:getLeader()
+
+		for _, member in ipairs(members) do
+			msg:sendToPlayer(member)
+		end
+	else
+		msg:sendToPlayer(self)
+	end
+
+	msg:delete()
+	return true
+end
+
+function Player.getTotalMoney(self)
+	return self:getMoney() + self:getBankBalance()
+end
+
+function Player.addAddonToAllOutfits(self, addon)
+	for sex = 0, 1 do
+		local outfits = Game.getOutfits(sex)
+		for outfit = 1, #outfits do
+			self:addOutfitAddon(outfits[outfit].lookType, addon)
+		end
+	end
+end
+
+function Player.addAllMounts(self)
+	local mounts = Game.getMounts()
+	for mount = 1, #mounts do
+		self:addMount(mounts[mount].id)
+	end
+end

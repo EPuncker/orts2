@@ -487,7 +487,7 @@
 	<rune group="attack" spellid="116" name="Stone Shower Rune" id="2288" allowfaruse="1" charges="4" level="28" magiclevel="4" cooldown="2000" groupcooldown="2000" script="attack/stone_shower_rune.lua" />
 	<rune group="attack" spellid="21" name="Sudden Death Rune" id="2268" allowfaruse="1" charges="3" level="45" magiclevel="15" cooldown="2000" groupcooldown="2000" needtarget="1" blocktype="solid" script="attack/sudden_death_rune.lua" />
 	<rune group="attack" spellid="117" name="Thunderstorm Rune" id="2315" allowfaruse="1" charges="4" level="28" magiclevel="4" cooldown="2000" groupcooldown="2000" script="attack/thunderstorm_rune.lua" />
-	<rune group="attack" spellid="54" name="Paralyze Rune" id="2278" allowfaruse="1" charges="1" level="54" magiclevel="18" pzlock="1" cooldown="2000" groupcooldown="2000" mana="1400" needtarget="1" blocktype="solid" script="attack/paralyze_rune.lua">
+	<rune group="attack" spellid="54" name="Paralyze Rune" id="2278" allowfaruse="1" charges="1" level="54" magiclevel="18" pzlock="1" cooldown="6000" groupcooldown="6000" mana="1400" needtarget="1" blocktype="solid" script="attack/paralyze_rune.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" showInDescription="0" />
 	</rune>
@@ -801,16 +801,20 @@
 	<instant name="pirate corsair skill reducer" words="###49" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/pirate_corsair_skill_reducer.lua" />
 	<instant name="monster soulfire" words="###50" aggressive="1" blockwalls="1" range="7" needtarget="1" needlearn="1" script="monster/monster_soulfire.lua" />
 	<instant name="dipthrah skill reducer" words="###51" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/dipthrah_skill_reducer.lua" />
-	<instant name="devourer wave" words="###52" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_wave.lua"/>
-	<instant name="devourer paralyze" words="###53" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_paralyze.lua"/>
-	<instant name="devourer summon" words="###54" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_summon.lua"/>
-	<instant name="glooth anemone summon" words="###55" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/glooth_anemone_summon.lua"/>
-	<instant name="metal gargoyle curse" words="###56" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/metal_gargoyle_curse.lua"/>
-	<instant name="minotaur amazon paralyze" words="###57" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/minotaur_amazon_paralyze.lua"/>
-	<instant name="mooh'tah master skill reducer" words="###58" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/mooh'tah_master_skill_reducer.lua"/>
-	<instant name="rot elemental paralyze" words="###59" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rot_elemental_paralyze.lua"/>
-	<instant name="rustheap golem electrify" words="###60" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/rustheap_golem_electrify.lua"/>
-	<instant name="rustheap golem wave" words="###61" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rustheap_golem_wave.lua"/>
-	<instant name="frazzlemaw paralyze" words="###62" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/frazzlemaw_paralyze.lua"/>
-	<instant name="worm priestess paralyze" words="###63" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/worm_priestess_paralyze.lua"/>
+	<instant name="summon challenge" words="###52" blockwalls="1" needtarget="0" needlearn="1" script="monster/summon_challenge.lua" />
+	<instant name="root branchy" words="###53" blockwalls="1" needtarget="1" needlearn="1" script="monster/root_branchy.lua" />
+
+	<!-- orts -->	
+	<instant name="devourer wave" words="####1" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_wave.lua"/>
+	<instant name="devourer paralyze" words="####2" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_paralyze.lua"/>
+	<instant name="devourer summon" words="####3" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/devourer_summon.lua"/>
+	<instant name="glooth anemone summon" words="####4" aggressive="0" blockwalls="1" needtarget="0" needlearn="1" script="monster/glooth_anemone_summon.lua"/>
+	<instant name="metal gargoyle curse" words="####5" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/metal_gargoyle_curse.lua"/>
+	<instant name="minotaur amazon paralyze" words="####6" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/minotaur_amazon_paralyze.lua"/>
+	<instant name="mooh'tah master skill reducer" words="####7" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/mooh'tah_master_skill_reducer.lua"/>
+	<instant name="rot elemental paralyze" words="####8" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rot_elemental_paralyze.lua"/>
+	<instant name="rustheap golem electrify" words="####9" aggressive="1" blockwalls="1" needtarget="1" needlearn="1" script="monster/rustheap_golem_electrify.lua"/>
+	<instant name="rustheap golem wave" words="####10" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/rustheap_golem_wave.lua"/>
+	<instant name="frazzlemaw paralyze" words="####11" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/frazzlemaw_paralyze.lua"/>
+	<instant name="worm priestess paralyze" words="####12" direction="1" aggressive="1" blockwalls="1" needtarget="0" needlearn="1" script="monster/worm_priestess_paralyze.lua"/>
 </spells>

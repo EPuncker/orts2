@@ -46,32 +46,26 @@ local function onMovementRemoveProtection(cid, oldPosition, time)
 end
 
 function onLogin(player)
-	local loginStr = 'Welcome to ' .. configManager.getString(configKeys.SERVER_NAME) .. '!'
+	local serverName = configManager.getString(configKeys.SERVER_NAME)
+	local loginStr = "Welcome to " .. serverName .. "!"
 	if player:getLastLoginSaved() <= 0 then
-		loginStr = loginStr .. ' Please choose your outfit.'
-		player:sendTutorial(1)
+		loginStr = loginStr .. " Please choose your outfit."
+		player:sendOutfitWindow()
 	else
-		if loginStr ~= '' then
+		if loginStr ~= "" then
 			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 		end
 
-		loginStr = string.format('Your last visit was on %s.', os.date('%a %b %d %X %Y', player:getLastLoginSaved()))
+		loginStr = string.format("Your last visit in %s: %s.", serverName, os.date("%d %b %Y %X", player:getLastLoginSaved()))
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
-
-	local playerId = player:getId()
-
-	-- Stamina
-	nextUseStaminaTime[playerId] = 0
 
 	-- Promotion
 	local vocation = player:getVocation()
 	local promotion = vocation:getPromotion()
 	if player:isPremium() then
-		local value = player:getStorageValue(PlayerStorageKeys.Promotion)
-		if not promotion and value ~= 1 then
-			player:setStorageValue(PlayerStorageKeys.Promotion, 1)
-		elseif value == 1 then
+		local value = player:getStorageValue(PlayerStorageKeys.promotion)
+		if value == 1 then
 			player:setVocation(promotion)
 		end
 	elseif not promotion then
@@ -85,6 +79,8 @@ function onLogin(player)
 
 	if player:getStorageValue(PlayerStorageKeys.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, os.time() + 10)
+
+		local playerId = player:getId()
 		onMovementRemoveProtection(playerId, player:getPosition(), 10)
 	end
 	return true

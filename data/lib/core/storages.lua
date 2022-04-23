@@ -1054,7 +1054,8 @@ GlobalStorageKeys = {
 	},
 
 	NaginataStone = 50058,
-	SwordOfFury = 5635
+	SwordOfFury = 5635,
+	CobraBastionFlask = 50059,
 }
 
 -- disabled for now

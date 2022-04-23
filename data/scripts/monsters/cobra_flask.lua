@@ -3,14 +3,21 @@ local cobras = {"cobra scout", "cobra vizier", "cobra assassin"}
 local ev = EventCallback
 
 function ev.onSpawn(monster, position, startup, artificial)
-	if table.contains(cobras, monster:getName():lower()) and Game.getStorageValue(GlobalStorageKeys.CobraBastionFlask) >= os.time() then
-		monster:setHealth(self:getMaxHealth() * 0.75)
-		position:sendMagicEffect(CONST_ME_GREENSMOKE)
+	if table.contains(cobras, monster:getName():lower()) then
+		local storage = Game.getStorageValue(GlobalStorageKeys.CobraBastionFlask)
+		if storage then
+			if storage >= os.time() then
+				monster:setHealth(monster:getMaxHealth() * 0.75)
+				monster:getPosition():sendMagicEffect(CONST_ME_GREEN_RINGS)
+			else
+				Game.setStorageValue(GlobalStorageKeys.CobraBastionFlask, -1)
+			end
+		end
 	end
 	return true
 end
 
-ev:register(1)
+ev:register(-1)
 
 local cobraFlask = Action()
 

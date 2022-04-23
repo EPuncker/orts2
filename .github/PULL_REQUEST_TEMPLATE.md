@@ -20,5 +20,5 @@
 
 <!-- You can safely ignore the links below:  -->
 
-[cont]: https://github.com/otland/forgottenserver/wiki/Contributing
+[cont]: https://github.com/EPuncker/orts2/wiki/Contributing
 [code]: https://github.com/otland/forgottenserver/wiki/TFS-Coding-Style-Guide

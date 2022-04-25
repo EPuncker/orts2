@@ -923,9 +923,6 @@ PlayerStorageKeys = {
 		EdalaTimer = 503
 	},
 
-	-- Promotion Storage cannot be changed, it is set in source code
-	Promotion = 30018,
-
 	SwampDiggingTimeout = 50143,
 	HydraEggQuest = 320,
 	Dragonfetish = 504,
@@ -974,7 +971,8 @@ PlayerStorageKeys = {
 		Reward = 9050
 	},
 
-	EruaranGreeting = 3250,
+	goldenOutfit = 30016,
+	Promotion = 30018, -- Promotion Storage cannot be changed, it is set in source code
 	delayLargeSeaShell = 30019,
 	firstRod = 30020,
 	delayWallMirror = 30021,
@@ -984,6 +982,7 @@ PlayerStorageKeys = {
 	insectoidCell = 30033,
 	vortexTamer = 30034,
 	mutatedPumpkin = 30035,
+	EruaranGreeting = 3250,
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
@@ -1057,29 +1056,3 @@ GlobalStorageKeys = {
 	SwordOfFury = 5635,
 	CobraBastionFlask = 50059,
 }
-
--- disabled for now
---[[
--- Checking for duplicate storages:
-local function extractValues(tab, ret)
-	if type(tab) == "number" then
-		table.insert(ret, tab)
-	else
-		for _, v in pairs(tab) do
-			extractValues(v, ret)
-		end
-	end
-end
-
-local extraction = {}
-extractValues(Storage, extraction)
-table.sort(extraction)
-
-if #extraction > 1 then
-	for i = 1, #extraction - 1 do
-		if extraction[i] == extraction[i+1] then
-			print(">> [Warning]: Duplicate storage value found in storages.lua, storageID: ".. extraction[i])
-		end
-	end
-end
-]]

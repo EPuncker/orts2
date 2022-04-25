@@ -478,7 +478,11 @@ keywordHandler:addKeyword({"market"}, StdModule.say, {
 	text = "If you buy an item from the market, the required gold will be deducted from your bank account automatically. On the other hand, money you earn for selling items via the market will be added to your account. It's easy!"
 })
 
-npcHandler:setMessage(MESSAGE_GREET, "Welcome to the bank, |PLAYERNAME|! Need some help with your {bank account}?")
+npcHandler:setMessage(MESSAGE_GREET, 'How may I help you |PLAYERNAME|? Ask me for a {trade} if you want to buy something. I can also explain the {mail} system, sell {tickets} for the ore wagon service or give you access to your {bank} account.')
+npcHandler:setMessage(MESSAGE_FAREWELL, "Come back if you need my services, |PLAYERNAME|.")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Come back if you need my services, |PLAYERNAME|.")
+npcHandler:setMessage(MESSAGE_SENDTRADE, "Here. Don't forget that you need to buy a label too if you want to send a parcel. Always write the name of the {receiver} in the first line.")
+
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
 npcHandler:addModule(FocusModule:new())

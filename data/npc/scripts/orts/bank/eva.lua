@@ -132,7 +132,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 			return true
 		end
-		
+
 		npcHandler:say("Please tell me how much gold you would like to withdraw.", cid)
 		npcHandler.topic[cid] = topicList.WITHDRAW_CONSENT
 		return true
@@ -449,7 +449,9 @@ keywordHandler:addKeyword({"market"}, StdModule.say, {
 	text = "If you buy an item from the market, the required gold will be deducted from your bank account automatically. On the other hand, money you earn for selling items via the market will be added to your account. It's easy!"
 })
 
-npcHandler:setMessage(MESSAGE_GREET, "Welcome to the bank, |PLAYERNAME|! Need some help with your {bank account}?")
 npcHandler:setCallback(CALLBACK_GREET, greetCallback)
 npcHandler:setCallback(CALLBACK_MESSAGE_DEFAULT, creatureSayCallback)
+npcHandler:setMessage(MESSAGE_GREET, "Welcome |PLAYERNAME|! What business do you have in the Tibian bank today?")
+npcHandler:setMessage(MESSAGE_FAREWELL, "Good bye, |PLAYERNAME|.")
+npcHandler:setMessage(MESSAGE_WALKAWAY, "Good bye, |PLAYERNAME|.")
 npcHandler:addModule(FocusModule:new())

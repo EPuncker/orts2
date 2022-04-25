@@ -2,4 +2,8 @@
 <npc name="Eighty" script="bank.lua" walkinterval="0" floorchange="0">
 	<health now="100" max="100" />
 	<look typeex="13573" />
+	<voices>
+		<voice text="<beep>" interval2="100" margin="1" yell="no" />
+		<voice text="<beep> <crank> Use this device to manage your gold." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

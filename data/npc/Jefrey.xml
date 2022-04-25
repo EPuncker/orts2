@@ -2,4 +2,7 @@
 <npc name="Jefrey" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="132" head="95" body="63" legs="38" feet="82" addons="2" />
+	<voices>
+		<voice text="You'll sleep much better after a hunt once you have sold your loot and brought your money to our bank." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

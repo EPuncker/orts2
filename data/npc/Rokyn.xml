@@ -2,4 +2,7 @@
 <npc name="Rokyn" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="160" head="58" body="87" legs="57" feet="114" />
+	<voices>
+		<voice text="Don't run into the mines with too much money in your pockets. Better leave it here." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

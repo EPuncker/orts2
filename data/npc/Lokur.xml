@@ -2,6 +2,12 @@
 <npc name="Lokur" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="160" head="57" body="79" legs="79" feet="95" />
+	<voices>
+		<voice text="Hey, send a letter to your friend now and then. Keep in touch, you know." interval2="100" margin="1" yell="no" />
+		<voice text="Also selling weekly tickets for the ore wagon service!" interval2="100" margin="1" yell="no" />
+		<voice text="Welcome to the post and bank office!" interval2="100" margin="1" yell="no" />
+		<voice text="If you need help with letters or parcels, just ask me. I can explain everything." interval2="100" margin="1" yell="no" />
+	</voices>
 	<parameters>
 		<parameter key="module_shop" value="1" />
 		<parameter key="shop_buyable" value="parcel,2595,15;letter,2597,8;label,2599,1;" />

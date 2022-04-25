@@ -2,4 +2,7 @@
 <npc name="Suzy" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="136" head="78" body="10" legs="115" feet="95" addons="0" />
+	<voices>
+		<voice text="Yes indeed, it's a wise idea to store your money in your bank account." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

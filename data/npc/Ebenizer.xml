@@ -2,4 +2,7 @@
 <npc name="Ebenizer" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="128" head="59" body="95" legs="87" feet="76" addons="0" />
+	<voices>
+		<voice text="Don't forget to deposit your money here in the Tibian Bank before you head out for adventure." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

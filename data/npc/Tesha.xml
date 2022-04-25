@@ -2,6 +2,9 @@
 <npc name="Tesha" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="140" head="77" body="32" legs="81" feet="94" addons="0" />
+	<voices>
+		<voice text="May enlightenment be your path." interval2="100" margin="1" yell="no" />
+	</voices>
 	<parameters>
 		<parameter key="module_shop" value="1" />
 		<parameter key="shop_sellable" value="

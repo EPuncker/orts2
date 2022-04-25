@@ -2,4 +2,7 @@
 <npc name="Virgil" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="328" head="95" body="114" legs="98" feet="97" addons="0" />
+	<voices>
+		<voice text="Glooth papers rising! Capital!" interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

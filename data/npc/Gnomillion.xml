@@ -2,4 +2,7 @@
 <npc name="Gnomillion" script="bank.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="493" head="78" body="98" legs="98" feet="60" addons="0" />
+	<voices>
+		<voice text="Interest rates are rising." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

@@ -68,7 +68,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler:say("You don't have it...", cid)
 			end
 		elseif npcHandler.topic[cid] == 5 then
-			if player:getItemCount(5876) >= 100 and player:getItemCount(5948) >= 100  then
+			if player:getItemCount(5876) >= 100 and player:getItemCount(5948) >= 100 then
 				npcHandler:say("Good work, |PLAYERNAME|! That is enough leather for a lot of sturdy quivers. Now, please bring me 5 enchanted chicken wings.", cid)
 				player:removeItem(5876, 100)
 				player:removeItem(5948, 100)
@@ -86,7 +86,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler:say("You don't have it...", cid)
 			end
 		elseif npcHandler.topic[cid] == 7 then
-			if player:getItemCount(5887) >= 1 and player:getItemCount(5888) >= 1 and player:getItemCount(5889) >= 1  then
+			if player:getItemCount(5887) >= 1 and player:getItemCount(5888) >= 1 and player:getItemCount(5889) >= 1 then
 				npcHandler:say("Wow, I'm impressed, |PLAYERNAME|. Your really are a valuable member of our paladin guild. I shall grant you your reward now. Wear it proudly!", cid)
 				player:removeItem(5887, 1)
 				player:removeItem(5888, 1)

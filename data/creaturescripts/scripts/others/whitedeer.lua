@@ -1,6 +1,6 @@
 local config = {
 	-- ordered by chance, the last chance being 100
-	{chance = 30,  monster = 'Enraged White Deer',   message = 'The white deer summons all his strength and turns to fight!'},
+	{chance = 30, monster = 'Enraged White Deer', message = 'The white deer summons all his strength and turns to fight!'},
 	{chance = 100, monster = 'Desperate White Deer', message = 'The white deer desperately tries to escape!'}
 }
 

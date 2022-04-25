@@ -297,7 +297,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif npcHandler.topic[cid] == 22 then
 		if msgcontains(msg, 'yes') then
-			if player:removeItem(2160, count[cid])  then
+			if player:removeItem(2160, count[cid]) then
 				player:addItem(2152, count[cid] * 100)
 				npcHandler:say('Here you are.', cid)
 			else

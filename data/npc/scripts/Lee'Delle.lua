@@ -34,7 +34,7 @@ keywordHandler:addKeyword({'weapon'}, StdModule.say, {npcHandler = npcHandler, t
 keywordHandler:addKeyword({'food'}, StdModule.say, {npcHandler = npcHandler, text = 'Oh, I\'m sorry, that\'s one of the things I don\'t have for sale. But {Willie} or {Billy} surely have something to eat for you.'})
 keywordHandler:addKeyword({'king'}, StdModule.say, {npcHandler = npcHandler, text = 'The king supports our little village very much!'})
 keywordHandler:addKeyword({'academy'}, StdModule.say, {npcHandler = npcHandler, text = 'In the academy you can get a lot of information from books. You can also try out a few things by yourself.'})
-keywordHandler:addKeyword({'rookgaard'}, StdModule.say, {npcHandler = npcHandler, text = 'Isn\'t it lovely here? You\'ll be surprised once you reach the {mainland} -  so much to explore!'})
+keywordHandler:addKeyword({'rookgaard'}, StdModule.say, {npcHandler = npcHandler, text = 'Isn\'t it lovely here? You\'ll be surprised once you reach the {mainland} - so much to explore!'})
 keywordHandler:addKeyword({'mainland'}, StdModule.say, {npcHandler = npcHandler, text = 'Well, the mainland also consists of several continents. You can go there once you\'ve reached level 8 and talked to the {oracle}.'})
 keywordHandler:addKeyword({'monster'}, StdModule.say, {npcHandler = npcHandler, text = 'Good monsters to start with are rats. They live in the {sewers} under the village of {Rookgaard}.'})
 keywordHandler:addKeyword({'sell'}, StdModule.say, {npcHandler = npcHandler, text = 'Just ask me for a {trade} to see what I buy from you.'})

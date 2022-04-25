@@ -323,14 +323,14 @@ local function creatureSayCallback(cid, type, msg)
 		npcHandler.topic[cid] = 0
 	elseif table.contains({'points', 'rank'}, msg:lower()) then
 		if player:getPawAndFurPoints() < 1 then
-			npcHandler:say('At this time, you have ' .. player:getPawAndFurPoints() .. ' Paw & Fur points. You ' .. (player:getPawAndFurRank() == 6 and 'are an Elite Hunter' or player:getPawAndFurRank() == 5 and 'are a Trophy Hunter' or player:getPawAndFurRank() == 4 and 'are a Big Game Hunter' or player:getPawAndFurRank() == 3 and 'are a Ranger' or player:getPawAndFurRank() == 2 and 'are a Huntsman' or player:getPawAndFurRank() == 1 and 'are a Member'  or 'haven\'t been ranked yet') .. '.', cid)
+			npcHandler:say('At this time, you have ' .. player:getPawAndFurPoints() .. ' Paw & Fur points. You ' .. (player:getPawAndFurRank() == 6 and 'are an Elite Hunter' or player:getPawAndFurRank() == 5 and 'are a Trophy Hunter' or player:getPawAndFurRank() == 4 and 'are a Big Game Hunter' or player:getPawAndFurRank() == 3 and 'are a Ranger' or player:getPawAndFurRank() == 2 and 'are a Huntsman' or player:getPawAndFurRank() == 1 and 'are a Member' or 'haven\'t been ranked yet') .. '.', cid)
 		else
-			npcHandler:say('At this time, you have ' .. player:getPawAndFurPoints() .. ' Paw & Fur points. You ' .. (player:getPawAndFurRank() == 6 and 'are an Elite Hunter' or player:getPawAndFurRank() == 5 and 'are a Trophy Hunter' or player:getPawAndFurRank() == 4 and 'are a Big Game Hunter' or player:getPawAndFurRank() == 3 and 'are a Ranger' or player:getPawAndFurRank() == 2 and 'are a Huntsman' or player:getPawAndFurRank() == 1 and 'are a Member'  or 'haven\'t been ranked yet') .. '.', cid)
+			npcHandler:say('At this time, you have ' .. player:getPawAndFurPoints() .. ' Paw & Fur points. You ' .. (player:getPawAndFurRank() == 6 and 'are an Elite Hunter' or player:getPawAndFurRank() == 5 and 'are a Trophy Hunter' or player:getPawAndFurRank() == 4 and 'are a Big Game Hunter' or player:getPawAndFurRank() == 3 and 'are a Ranger' or player:getPawAndFurRank() == 2 and 'are a Huntsman' or player:getPawAndFurRank() == 1 and 'are a Member' or 'haven\'t been ranked yet') .. '.', cid)
 		end
 		npcHandler.topic[cid] = 0
 	elseif table.contains({'special task'}, msg:lower()) then
 		if player:getPawAndFurPoints() >= 90 then -- Tiquandas Revenge 90 points
-			if player:getStorageValue(PlayerStorageKeys.KillingInTheNameOf.MissionTiquandasRevenge) == 1 then  -- Check if he has already started the task.
+			if player:getStorageValue(PlayerStorageKeys.KillingInTheNameOf.MissionTiquandasRevenge) == 1 then -- Check if he has already started the task.
 				npcHandler:say('You have already started the task. Go find Tiquandas Revenge and take revenge yourself!', cid)
 			else
 				npcHandler:say({
@@ -342,7 +342,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		end
 		if player:getPawAndFurPoints() >= 100 then -- Demodras 100 points
-			if player:getStorageValue(PlayerStorageKeys.KillingInTheNameOf.MissionDemodras) == 1 then  -- Check if he has already started the task.
+			if player:getStorageValue(PlayerStorageKeys.KillingInTheNameOf.MissionDemodras) == 1 then -- Check if he has already started the task.
 				npcHandler:say('You have already started the special task. Find Demodras and kill it.', cid)
 			else
 				npcHandler:say('This task is a very dangerous one. I want you to look for Demodras\' hideout. It might be somewhere under the Plains of Havoc. Good luck, old chap.', cid)

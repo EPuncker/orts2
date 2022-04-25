@@ -23,7 +23,7 @@ local function greetCallback(cid, message)
 	end
 
 	if player:getStorageValue(PlayerStorageKeys.DjinnWar.Faction.Efreet) ~= 1 then
-		npcHandler:setMessage(MESSAGE_GREET, 'What? You know the word, |PLAYERNAME|? All right then - I won\'t kill you. At least, not now.  What brings you {here}?')
+		npcHandler:setMessage(MESSAGE_GREET, 'What? You know the word, |PLAYERNAME|? All right then - I won\'t kill you. At least, not now. What brings you {here}?')
 	else
 		npcHandler:setMessage(MESSAGE_GREET, 'Still alive, |PLAYERNAME|? What brings you {here}?')
 	end

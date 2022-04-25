@@ -281,7 +281,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		elseif action[cid] == ACTION.TRANSFORM then --transform
 			local oldItemId = (weapon[cid] == TYPES.SWORD and (weapon_sub[cid] == SUB_TYPES.BLADE and IDS.UMBRAL_BLADE or IDS.UMBRAL_SLAYER) or weapon[cid] == TYPES.AXE and (weapon_sub[cid] == SUB_TYPES.AXE and IDS.UMBRAL_AXE or IDS.UMBRAL_CHOPPER) or weapon[cid] == TYPES.CLUB and (weapon_sub[cid] == SUB_TYPES.MACE and IDS.UMBRAL_MACE or IDS.UMBRAL_HAMMER) or weapon[cid] == TYPES.BOW and IDS.UMBRAL_BOW or weapon[cid] == TYPES.CROSSBOW and IDS.UMBRAL_CROSSBOW or weapon[cid] == TYPES.SPELLBOOK and IDS.UMBRAL_SPELLBOOK or false)
-			local newItemId =  (oldItemId and oldItemId + 1 or false)
+			local newItemId = (oldItemId and oldItemId + 1 or false)
 			if player:getItemCount(IDS.CLUSTER_OF_SOLACE) >= Config.Transform.Clusters then
 				if newItemId and oldItemId then
 					if player:getItemCount(oldItemId) > 0 then

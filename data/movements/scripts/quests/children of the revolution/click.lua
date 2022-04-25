@@ -34,7 +34,7 @@ function doClearMissionArea()
 				spectator:setStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline, 20)
 			end
 		else
-		    spectator:remove()
+			spectator:remove()
 		end
 	end
 	return true
@@ -64,7 +64,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	if player:getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Questline) ~= 19
-			or Game.getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission05) == 1 then
+		or Game.getStorageValue(PlayerStorageKeys.ChildrenoftheRevolution.Mission05) == 1 then
 		return true
 	end
 

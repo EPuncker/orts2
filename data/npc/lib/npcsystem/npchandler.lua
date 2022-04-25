@@ -348,7 +348,7 @@ if not NpcHandler then
 
 	-- Greets a new player.
 	function NpcHandler:greet(cid, message)
-		if cid ~= 0  then
+		if cid ~= 0 then
 			local callback = self:getCallback(CALLBACK_GREET)
 			if not callback or callback(cid) then
 				if self:processModuleCallback(CALLBACK_GREET, cid) then

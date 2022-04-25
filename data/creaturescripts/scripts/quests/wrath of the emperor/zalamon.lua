@@ -24,7 +24,7 @@ function onKill(player, target)
 		return true
 	end
 
-	local bossConfig  = bossForms[targetMonster:getName():lower()]
+	local bossConfig = bossForms[targetMonster:getName():lower()]
 	if not bossConfig then
 		return true
 	end

@@ -44,7 +44,7 @@ local function creatureSayCallback(cid, type, msg)
 			end
 		end
 	elseif msgcontains(msg, "like") then
-		if npcHandler.topic[cid] == 1  then
+		if npcHandler.topic[cid] == 1 then
 			npcHandler:say("Woof!", cid)
 			player:setStorageValue(PlayerStorageKeys.postman.Mission06, 8)
 			npcHandler.topic[cid] = 0

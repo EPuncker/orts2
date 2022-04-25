@@ -36,7 +36,7 @@ function onStepIn(creature, item, position, fromPosition)
 				player:sendTutorial(24)
 			end
 		elseif item.actionid == 50077 then
-			if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 and player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) < 17  then
+			if player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.ZirellaNpcGreetStorage) == 8 and player:getStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage) < 17 then
 				player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'This is Zirella\'s door. Right-click on the lower part of the door and select \'Use\' to open it.')
 				player:setStorageValue(PlayerStorageKeys.RookgaardTutorialIsland.tutorialHintsStorage, 17)
 			end

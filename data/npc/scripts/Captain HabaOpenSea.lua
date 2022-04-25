@@ -13,7 +13,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	local player = Player(cid)
-	if msgcontains(msg, "go") or  msgcontains(msg, "svargrond") then
+	if msgcontains(msg, "go") or msgcontains(msg, "svargrond") then
 		npcHandler:say("A'right, wanna put out from sea?", cid)
 		npcHandler.topic[cid] = 1
 	end

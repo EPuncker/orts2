@@ -2,10 +2,10 @@ local keywordHandler = KeywordHandler:new()
 local npcHandler = NpcHandler:new(keywordHandler)
 NpcSystem.parseParameters(npcHandler)
 
-function onCreatureAppear(cid)			npcHandler:onCreatureAppear(cid)			end
-function onCreatureDisappear(cid)		npcHandler:onCreatureDisappear(cid)			end
-function onCreatureSay(cid, type, msg)	npcHandler:onCreatureSay(cid, type, msg)	end
-function onThink()						npcHandler:onThink()						end
+function onCreatureAppear(cid)				npcHandler:onCreatureAppear(cid)			end
+function onCreatureDisappear(cid)			npcHandler:onCreatureDisappear(cid)			end
+function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)	end
+function onThink()							npcHandler:onThink()						end
 
 -- Promotion
 local promoteKeyword = keywordHandler:addKeyword({'promot'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you want to be promoted in your vocation for 20000 gold?'})
@@ -21,6 +21,7 @@ keywordHandler:addKeyword({'nokmir'}, StdModule.say, {npcHandler = npcHandler,
 		"Interesting. The fact that you have the ring means that Nokmir can't have stolen it. Combined with the information Grombur gave you, the case appears in a completely different light. ...",
 		"Let there be justice for all. Nokmir is innocent and acquitted from all charges! And Rerun... I want him in prison for this malicious act!"
 	}},
+
 	function(player) return player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.JusticeForAll) == 4 and player:removeItem(14348, 1) end,
 	function(player) player:setStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.JusticeForAll, 5) end
 )

@@ -70,7 +70,7 @@ local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
 		return true
 	end
 
-	player:removeMoney(items[item].buyPrice * count)
+	player:removeTotalMoney(items[item].buyPrice * count)
 	player:sendTextMessage(MESSAGE_INFO_DESCR, string.format('Bought %dx %s for %d gold.', count, items[item].realName, items[item].buyPrice * count))
 	return true
 end

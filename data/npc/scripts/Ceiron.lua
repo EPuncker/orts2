@@ -141,7 +141,8 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("I can give you a new one, but I fear that I have to take a small fee for it. Would you like to buy a waterskin for 1000 gold?", cid)
 			npcHandler.topic[cid] = 13
 		elseif npcHandler.topic[cid] == 13 then
-			if player:removeMoney(1000) then
+			if player:getTotalMoney() >= 1000 then
+				player:removeTotalMoney(1000)
 				player:addItem(5938, 1)
 				npcHandler.topic[cid] = 0
 			end

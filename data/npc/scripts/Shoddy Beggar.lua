@@ -37,7 +37,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 1 then
-			if not player:removeMoney(1) then
+			if player:getTotalMoney() < 1 then
 				npcHandler:say(player:getStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline) ~= 1 and 'Is that all you have? That would be less than I have... *mumbles*' or 'Mh, it seems you don\'t have any coins.', cid)
 				npcHandler.topic[cid] = 0
 				return true
@@ -46,7 +46,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say(player:getStorageValue(PlayerStorageKeys.SeaOfLightQuest.Questline) ~= 1 and 'Very kind indeed. Maybe you are not such a bad guy after all. Maybe I can even give it back to you one day... you know I was not always like that *mumbles*.' or 'Thank you very much... plans you say? I don\'t know what you are talking about. Plans for a magic... device? And the people call ME crazy.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 2 then
-			if not player:removeMoney(1) then
+			if player:getTotalMoney() < 1 then
 				npcHandler:say('Well, if that is all you can spare... better keep it.', cid)
 				npcHandler.topic[cid] = 0
 				return true

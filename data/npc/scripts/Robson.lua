@@ -28,7 +28,7 @@ local function creatureSayCallback(cid, type, msg)
 	elseif msgcontains(msg, 'yes') then
 		local player = Player(cid)
 		if npcHandler.topic[cid] == 1 then
-			if not player:removeMoney(15) then
+			if player:getTotalMoney() < 15 then
 				npcHandler:say('Sorry, that\'s only dust in your purse.', cid)
 				npcHandler.topic[cid] = 0
 				return true
@@ -38,7 +38,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Fine.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 2 then
-			if not player:removeMoney(1) then
+			if player:getTotalMoney() < 1 then
 				npcHandler:say('Sorry, that\'s only dust in your purse.', cid)
 				npcHandler.topic[cid] = 0
 				return true

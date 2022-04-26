@@ -22,7 +22,7 @@ local function creatureSayCallback(cid, type, msg)
 			return true
 		end
 
-		if not player:removeMoney(10000) then
+		if player:getTotalMoney() < 10000 then
 			npcHandler:say("Sorry, you don't have enough gold.", cid)
 			return true
 		end

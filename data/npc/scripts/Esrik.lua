@@ -157,7 +157,7 @@ local function creatureSayCallback(cid, type, msg)
 				return player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have enough cap.')
 			end
 
-			if items[item].buyPrice <= player:getMoney() then
+			if items[item].buyPrice <= player:getTotalMoney() then
 				if inBackpacks then
 					local container = Game.createItem(1988, 1)
 					local bp = player:addItemEx(container)
@@ -171,12 +171,12 @@ local function creatureSayCallback(cid, type, msg)
 				else
 					return
 						player:addItem(items[item].itemId, amount, false, items[item]) and
-						player:removeMoney(amount * items[item].buyPrice) and
+						player:removeTotalMoney(amount * items[item].buyPrice) and
 						player:sendTextMessage(MESSAGE_INFO_DESCR, 'You bought '..amount..'x '..items[item].realName..' for '..items[item].buyPrice * amount..' gold coins.')
 				end
 
 				player:sendTextMessage(MESSAGE_INFO_DESCR, 'You bought '..amount..'x '..items[item].realName..' for '..items[item].buyPrice * amount..' gold coins.')
-				player:removeMoney(amount * items[item].buyPrice)
+				player:removeTotalMoney(amount * items[item].buyPrice)
 			else
 				player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You do not have enough money.')
 			end

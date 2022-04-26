@@ -25,7 +25,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif msgcontains(msg, 'yes') then
 		if npcHandler.topic[cid] == 1 then
-			if player:getTotalMoney() >= 100 then
+			if player:getTotalMoney() >= 1000 then
 				player:removeTotalMoney(1000)
 				player:addItem(8694, 1)
 				player:setStorageValue(PlayerStorageKeys.thievesGuild.Mission04, 5)

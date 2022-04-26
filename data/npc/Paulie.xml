@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Paulie" script="Paulie.lua" walkinterval="2000" floorchange="0">
+<npc name="Paulie" script="orts/bank/Paulie.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="128" head="78" body="86" legs="114" feet="116" addons="0" />
+	<voices>
+		<voice text="Deposit your money here in the safety of the Tibian Bank!" interval2="100" margin="1" yell="no" />
+		<voice text="Any questions about the functions of your bank account? Feel free to ask me for help!" interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Kepar" script="Kepar.lua" walkinterval="0" floorchange="0">
+<npc name="Kepar" script="orts/bank/Kepar.lua" walkinterval="0" floorchange="0">
 	<health now="100" max="100" />
 	<look type="151" head="114" body="77" legs="110" feet="131" addons="0" />
+	<voices>
+		<voice text="Always on guard." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

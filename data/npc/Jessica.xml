@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Jessica" script="Jessica.lua" walkinterval="2000" floorchange="0">
+<npc name="Jessica" script="orts/bank/Jessica.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="140" head="114" body="16" legs="18" feet="33" addons="1" />
+	<voices>
+		<voice text="Leave your money with me where it\'s safe!" interval2="100" margin="1" yell="no" />
+		<voice text="Gems, jewels... all a woman could dream of is right here." interval2="100" margin="1" yell="no" />
+	</voices>
 	<parameters>
 		<parameter key="module_shop" value="1" />
 		<parameter key="shop_sellable" value="

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Siestaar" script="Siestaar.lua" walkinterval="2000" floorchange="0">
+<npc name="Siestaar" script="orts/bank/Siestaar.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="288" head="129" body="128" legs="72" feet="94" addons="3" />
+	<voices>
+		<voice text="Yes indeed, it's a wise idea to store your money in your bank account.'" interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Ferks" script="Ferks.lua" walkinterval="2000" floorchange="0">
+<npc name="Ferks" script="orts/bank/Ferks.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="128" head="59" body="71" legs="119" feet="116" addons="0" />
+	<voices>
+		<voice text="Entrust us with your money and we will keep it safe in the bank." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Naji" script="Naji.lua" walkinterval="2000" floorchange="0">
+<npc name="Naji" script="orts/bank/Naji.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="129" head="57" body="113" legs="95" feet="113" addons="0" />
+	<voices>
+		<voice text="It's a wise idea to store your money in your bank account." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

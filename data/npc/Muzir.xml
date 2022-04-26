@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Muzir" script="Muzir.lua" walkinterval="2000" floorchange="0">
+<npc name="Muzir" script="orts/bank/Muzir.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="146" head="95" body="3" legs="11" feet="95" addons="0" />
+	<voices>
+		<voice text="Leave your money in the bank during your hunt - trust me, it\'s safer that way." interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

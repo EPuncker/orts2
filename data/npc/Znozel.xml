@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Znozel" script="Znozel.lua" walkinterval="2000">
+<npc name="Znozel" script="orts/bank/Znozel.lua" walkinterval="2000">
 	<health now="100" max="100" />
 	<look type="297" />
+	<voices>
+		<voice text="You gold safe at here! snickers!" interval2="100" margin="1" yell="no" />
+		<voice text="Me take all gold! Good care! Give! Give!" interval2="100" margin="1" yell="no" />
+	</voices>
 </npc>

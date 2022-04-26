@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<npc name="Queen Eloise" script="orts/promotion/queen_eloise.lua" walkinterval="2000" floorchange="0">
+<npc name="Queen Eloise" script="orts/promotion/Queen Eloise.lua" walkinterval="2000" floorchange="0">
 	<health now="100" max="100" />
 	<look type="331" />
 </npc>

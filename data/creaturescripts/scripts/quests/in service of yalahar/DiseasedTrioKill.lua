@@ -1,6 +1,6 @@
 local diseasedTrio = {
 	['diseased bill'] = PlayerStorageKeys.InServiceofYalahar.DiseasedBill,
-	['diseased dan']  = PlayerStorageKeys.InServiceofYalahar.DiseasedDan,
+	['diseased dan'] = PlayerStorageKeys.InServiceofYalahar.DiseasedDan,
 	['diseased fred'] = PlayerStorageKeys.InServiceofYalahar.DiseasedFred
 }
 

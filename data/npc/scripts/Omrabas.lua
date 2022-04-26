@@ -381,7 +381,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("You don't have my heart.", cid)
 			npcHandler.topic[cid] = 0
 		end
-	elseif msgcontains(msg, 'undertake') and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission13) == 1 and npcHandler.topic[cid] == 7  then
+	elseif msgcontains(msg, 'undertake') and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission13) == 1 and npcHandler.topic[cid] == 7 then
 		npcHandler:say({
 			"Good! Let's not waste time. The first altar you must hallow is the Dragonsoul Altar, at the eastern side of the room. ...",
 			"To hallow it, dig out three dragon tears and place them on the altar to appease the dark powers. ...",

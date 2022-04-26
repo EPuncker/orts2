@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Cobra Vizier" nameDescription="a cobra vizier" race="blood" experience="7650" speed="320">
 	<health now="8500" max="8500" />
-	<look type="1217" head="19" body="19" legs="86" feet="19" corpse="34295" />
+	<look type="1217" head="19" body="19" legs="67" feet="78" corpse="34295" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
 		<flag summonable="0" />
@@ -28,8 +28,8 @@
 		</attack>
 	</attacks>
 	<defenses armor="82" defense="82">
-	    <defense name="speed" interval="2000" chance="8" speedchange="340" duration="5000">
-		    <attribute key="areaEffect" value="greenshimmer" />
+		<defense name="speed" interval="2000" chance="8" speedchange="340" duration="5000">
+			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
 	</defenses>
 	<elements>

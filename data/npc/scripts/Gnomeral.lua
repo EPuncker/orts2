@@ -21,7 +21,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("For your rank there are four missions available: {matchmaker}, {golem repair}, {spore gathering} and {grindstone hunt}. You can undertake each mission, but you can turn in a specific mission only once every 20 hours.", cid)
 			npcHandler.topic[cid] = 0
 		end
-	--  Matchmaker
+	-- Matchmaker
 	elseif(msgcontains(msg, "matchmaker")) then
 		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.MissionMatchmaker) < 1 and player:getStorageValue(PlayerStorageKeys.BigfootBurden.MatchmakerTimeout) < os.time() and player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) >= 16 then
 			npcHandler:say({

@@ -51,10 +51,10 @@ local function creatureSayCallback(cid, type, msg)
 		if player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 3 and player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) < 27 then
 			npcHandler:say("The missions available for your rank are the butterfly hunt, plant collection and ice delivery.", cid)
 			npcHandler.topic[cid] = 0
-		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 26 and player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) <  35 then
+		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 26 and player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) < 35 then
 			npcHandler:say("The missions available for your rank are lizard urn, bonelord secrets and orc powder.", cid)
 			npcHandler.topic[cid] = 0
-		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 34 and player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) <  44 then
+		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) > 34 and player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) < 44 then
 			npcHandler:say("The missions available for your rank are elven poetry, memory stone and rune writings.", cid)
 			npcHandler.topic[cid] = 0
 		elseif player:getStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine) == 44 then

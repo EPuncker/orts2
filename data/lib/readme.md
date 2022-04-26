@@ -153,12 +153,12 @@
 * 6 Small Rubies Quest: (Aid) = 50057
 * Naginata Quest (Stone): (Aid) = 50058
 
-* Hellgate exit bridge lever AID  = 50027
+* Hellgate exit bridge lever AID = 50027
 
 * Vampire Shield Quest (Storage)/(Uid) = 50030
-* Bone Key (3520) (Storage)/(Uid)  = 50031
+* Bone Key (3520) (Storage)/(Uid) = 50031
 * Blood Herb quest tree (Storage)/(Uid) = 50032
-* Whisper Moss quest (Storage)/(Uid)  = 50033
+* Whisper Moss quest (Storage)/(Uid) = 50033
 * old parchment quest tree (Storage)/(Uid) = 50034
 * orc fortress quest UIDs = 50035-50037
 * Frost Dragon Quest UID = 50038
@@ -171,7 +171,7 @@
 * Dead Archer Quest UID = 50045
 * Power Ring Quest UIDs = 50046-50047
 * Orc Shaman Quest UID = 50048
-* Elvenbane Quest UIDs  = 50049-50052
+* Elvenbane Quest UIDs = 50049-50052
 * Mastermind Potion Quest UIDs = 50053-50054
 * Lion Trophy Quest UID = 50055
 * Skeleton Decoration Quest UID = 50056

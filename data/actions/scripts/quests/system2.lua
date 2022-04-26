@@ -331,7 +331,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if reward then
 		local ret = ItemType(reward.itemid)
 		if ret:isRune() then
-			result = ret:getArticle() .. ' ' ..  ret:getName() .. ' (' .. reward.type .. ' charges)'
+			result = ret:getArticle() .. ' ' .. ret:getName() .. ' (' .. reward.type .. ' charges)'
 		elseif reward:getCount() > 1 then
 			result = reward:getCount() .. ' ' .. ret:getPluralName()
 		elseif ret:getArticle() ~= '' then

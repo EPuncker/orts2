@@ -326,11 +326,11 @@ function SvargrondArena.sendPillarEffect(pitId)
 	if not positions then
 		local position = PITS[pitId].pillar
 		local effectPositions = {
-				Position(position.x - 1, position.y,     position.z),
-				Position(position.x + 1, position.y,     position.z),
-				Position(position.x + 1, position.y - 1, position.z),
-				Position(position.x + 1, position.y + 1, position.z),
-				Position(position.x,     position.y,     position.z)
+			Position(position.x - 1, position.y,	 position.z),
+			Position(position.x + 1, position.y,	 position.z),
+			Position(position.x + 1, position.y - 1, position.z),
+			Position(position.x + 1, position.y + 1, position.z),
+			Position(position.x,	 position.y,	 position.z)
 		}
 		SvargrondArena.effectPositionCache[pitId] = effectPositions
 		positions = effectPositions

@@ -28,9 +28,10 @@ local function creatureSayCallback(cid, type, msg)
 
 			if player:getTotalMoney() < 125 then
 				npcHandler:say('You don\'t have enough money.', cid)
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(125)
 			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 			local destination = Position(32449, 32226, 7)
 			player:teleportTo(destination)
@@ -44,8 +45,10 @@ local function creatureSayCallback(cid, type, msg)
 
 			if player:getTotalMoney() < 500 then
 				npcHandler:say('You do not have enough money to rent a horse!', cid)
-				return true
+				return false
 			end
+
+			player:removeTotalMoney(500)
 
 			local mountId = {22, 25, 26}
 			player:addMount(mountId[math.random(#mountId)])

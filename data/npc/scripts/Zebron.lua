@@ -27,6 +27,8 @@ local function creatureSayCallback(cid, type, msg)
 				return false
 			end
 
+			player:removeTotalMoney(100)
+
 			Npc():getPosition():sendMagicEffect(CONST_ME_CRAPS)
 			local realRoll = math.random(30)
 			local roll = math.random(5)

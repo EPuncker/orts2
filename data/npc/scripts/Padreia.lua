@@ -40,9 +40,10 @@ local function creatureSayCallback(cid, type, msg)
 		if npcHandler.topic[cid] == 1 then
 			if player:getTotalMoney() < 50 then
 				npcHandler:say("You don't have enough money.", cid)
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(50)
 			npcHandler:say("Thank you. Here it is.", cid)
 			player:addItem(4839, 1)
 		elseif npcHandler.topic[cid] == 2 then

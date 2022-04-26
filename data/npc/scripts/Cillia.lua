@@ -16,10 +16,11 @@ local function creatureSayCallback(cid, type, msg)
 		local player = Player(cid)
 		if player:getTotalMoney() < 50 then
 			npcHandler:say('The exhibition is not for free. You have to pay 50 Gold to get in. Next please!', cid)
-			return true
+			return false
 		end
 
 		npcHandler:say('And here we go!', cid)
+		player:removeTotalMoney(50)
 		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 		local exhibitionPosition = Position(32390, 32195, 8)
 		player:teleportTo(exhibitionPosition)

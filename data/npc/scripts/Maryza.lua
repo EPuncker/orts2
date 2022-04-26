@@ -26,9 +26,10 @@ local function creatureSayCallback(cid, type, msg)
 		if msgcontains(msg, 'yes') then
 			if player:getTotalMoney() < 150 then
 				npcHandler:say('No gold, no sale, that\'s it.', cid)
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(150)
 			npcHandler:say('Here you are. Happy cooking!', cid)
 			player:setStorageValue(PlayerStorageKeys.MaryzaCookbook, 1)
 			player:addItem(2347, 1)

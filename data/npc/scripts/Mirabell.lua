@@ -43,9 +43,10 @@ local function creatureSayCallback(cid, type, msg)
 			if player:getTotalMoney() < 240 then
 				npcHandler:say('You don\'t have enough money, don\'t try to fool me.', cid)
 				npcHandler.topic[cid] = 0
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(240)
 			player:addItem(7484, 1)
 			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBuying, player:getStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBuying) - 1)
 			player:setStorageValue(PlayerStorageKeys.WhatAFoolishQuest.PieBoxTimer, os.time() + 1200) -- 20 minutes to deliver

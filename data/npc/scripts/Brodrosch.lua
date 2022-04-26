@@ -30,9 +30,10 @@ local function creatureSayCallback(cid, type, msg)
 			if player:getTotalMoney() < 250 then
 				npcHandler:say('You don\'t have enough money.', cid)
 				npcHandler.topic[cid] = 0
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(250)
 			player:setStorageValue(PlayerStorageKeys.wagonTicket, os.time() + 7 * 24 * 60 * 60)
 			npcHandler:say('Here is your stamp. It can\'t be transferred to another person and will last one week from now. You\'ll get notified upon using an ore wagon when it isn\'t valid anymore.', cid)
 		end

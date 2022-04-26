@@ -102,26 +102,30 @@ local function creatureSayCallback(cid, type, msg)
 			if player:getTotalMoney() < 100 then
 				npcHandler:say('You haven\'t got enough money for me.', cid)
 				npcHandler.topic[cid] = 0
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(100)
 			npcHandler:say('Thank you very much. Can you spare 500 more gold pieces for me? I will give you a nice hint.', cid)
 			npcHandler.topic[cid] = 3
 		elseif npcHandler.topic[cid] == 3 then
 			if player:getTotalMoney() < 500 then
 				npcHandler:say('Sorry, that\'s not enough.', cid)
 				npcHandler.topic[cid] = 0
-				return true
+				return false
 			end
 
+			player:removeTotalMoney(500)
 			npcHandler:say('That\'s great! I have stolen something from Dermot. You can buy it for 200 gold. Do you want to buy it?', cid)
 			npcHandler.topic[cid] = 4
 		elseif npcHandler.topic[cid] == 4 then
 			if player:getTotalMoney() < 200 then
 				npcHandler:say('Pah! I said 200 gold. You don\'t have that much.', cid)
 				npcHandler.topic[cid] = 0
-				return true
+				return false
 			end
+
+			player:removeTotalMoney(200)
 
 			local key = player:addItem(2087, 1)
 			if key then

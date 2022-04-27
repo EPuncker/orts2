@@ -25,8 +25,6 @@
 	<talkaction words="/addtutor" separator=" " script="add_tutor.lua" />
 	<talkaction words="/removetutor" separator=" " script="remove_tutor.lua" />
 	<talkaction words="/looktype" separator=" " script="looktype.lua" />
-	<talkaction words="/mounts" separator=" " script="allmounts.lua" />
-	<talkaction words="/addons" separator=" " script="alladdons.lua" />
 	<talkaction words="/summon" separator=" " script="place_summon.lua" />
 	<talkaction words="/chameleon" separator=" " script="chameleon.lua" />
 	<talkaction words="/addskill" separator=" " script="add_skill.lua" />
@@ -36,6 +34,8 @@
 	<talkaction words="/hide" script="hide.lua" />
 	<talkaction words="/reload" separator=" " script="reload.lua" />
 	<talkaction words="/raid" separator=" " script="force_raid.lua" />
+	<talkaction words="/mounts" separator=" " script="all_mounts.lua" />
+	<talkaction words="/addons" separator=" " script="all_addons.lua" />
 
 	<!-- achievements commands -->
 	<talkaction words="/addach" separator=" " script="achievements.lua" />
@@ -52,7 +52,6 @@
 	<talkaction words="!kills" script="kills.lua" />
 	<talkaction words="!online;/online" script="online.lua" />
 	<talkaction words="!serverinfo" script="serverinfo.lua" />
-	<talkaction words="!addon" script="addon.lua" />
 
 	<!-- test talkactions -->
 	<talkaction words="!z" separator=" " script="magiceffect.lua" />

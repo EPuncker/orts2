@@ -2,17 +2,15 @@ ORTS - A Real Map Datapack
 ===============
 
 ### Getting Started
-* [AppVeyor builds for Windows](https://ci.appveyor.com/project/otland/forgottenserver)
 * [The Forgotten Server](https://github.com/otland/forgottenserver)
-* [OTClient](https://github.com/edubart/otclient)
-* [Remere's Map Editor](https://github.com/hjnilsson/rme/releases)
+* [OTClient](https://github.com/mehah/otclient)
+* [Remere's Map Editor](https://github.com/Zbizu/rme/releases)
 * [Compiling](https://github.com/otland/forgottenserver/wiki/Compiling)
-* [Scripting Reference](https://github.com/otland/forgottenserver/wiki/Script-Interface)
-* [Contributing](https://github.com/otland/forgottenserver/wiki/Contributing)
+* [Contributing](https://github.com/EPuncker/orts2/wiki/Contributing)
 
 ## Pull request
 When [creating a pull request](https://github.com/EPuncker/orts2/pulls) please mind the following points:
-* We do not accept pull requests for map changes. Create a issue to discuss and provide the map you want to be added.
+* We do not accept pull requests for map changes. Create an issue to discuss and provide the map you want to be added.
 * Do not create a pull request for each file individually if the changes are related.
 * Scripts must use tabs as indentation.
 

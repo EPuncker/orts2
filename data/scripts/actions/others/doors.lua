@@ -1,16 +1,16 @@
-local openoddDoors = {
+local openOddDoors = {
 	[12695] = { locked = 12692, closed = 12692 },
 	[12703] = { locked = 12701, closed = 12701 },
 	[33432] = { locked = 33429, closed = 33428 },
 	[33433] = { locked = 33431, closed = 33430 }
 }
-local closedoddDoors = {	
+local closedOddDoors = {	
 	[12692] = { locked = 12692, open = 12695 },
 	[12701] = { locked = 12701, open = 12703 },
 	[33428] = { locked = 33429, open = 33432 },
 	[33430] = { locked = 33431, open = 33433 }
 }
-local lockedoddDoors = {
+local lockedOddDoors = {
 	[33429] = { closed = 33428, open = 33432 },
 	[33431] = { closed = 33430, open = 33433 }
 }
@@ -111,19 +111,19 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			return true
 		end
 		if lockedoddDoors[target.itemid] then
-			transformTo = lockedoddDoors[target.itemid].open
+			transformTo = lockedOddDoors[target.itemid].open
 		else
 			transformTo = target.itemid + 2
 		end
 		if table.contains(openDoors, target.itemid) then
-			if openoddDoors[target.itemid] then
-				transformTo = openoddDoors[target.itemid].locked
+			if openOddDoors[target.itemid] then
+				transformTo = openOddDoors[target.itemid].locked
 			else
 				transformTo = target.itemid - 2
 			end
 		elseif table.contains(closedDoors, target.itemid) then
-			if closedoddDoors[target.itemid] then
-				transformTo = closedoddDoors[target.itemid].locked
+			if closedOddDoors[target.itemid] then
+				transformTo = closedOddDoors[target.itemid].locked
 			else
 				transformTo = target.itemid - 1
 			end
@@ -149,16 +149,16 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				tableCreature.creature:teleportTo(tableCreature.position, true)
 			end
 		end
-		if openoddDoors[itemId] then
-			transformTo = openoddDoors[itemId].closed
+		if openOddDoors[itemId] then
+			transformTo = openOddDoors[itemId].closed
 		else
 			transformTo = itemId - 1
 		end
 		item:transform(transformTo)
 		return true
 	elseif table.contains(closedDoors, itemId) or table.contains(closedExtraDoors, itemId) or table.contains(closedHouseDoors, itemId) then
-		if closedoddDoors[itemId] then
-			transformTo = closedoddDoors[itemId].open
+		if closedOddDoors[itemId] then
+			transformTo = closedOddDoors[itemId].open
 		else
 			transformTo = itemId + 1
 		end

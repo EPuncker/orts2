@@ -110,7 +110,7 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_STATUS_SMALL, "The key does not match.")
 			return true
 		end
-		if lockedoddDoors[target.itemid] then
+		if lockedOddDoors[target.itemid] then
 			transformTo = lockedOddDoors[target.itemid].open
 		else
 			transformTo = target.itemid + 2

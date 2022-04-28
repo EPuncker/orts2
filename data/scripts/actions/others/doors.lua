@@ -110,19 +110,19 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:sendTextMessage(MESSAGE_STATUS_SMALL, "The key does not match.")
 			return true
 		end
-		if lockedoddDoors[target.itemid] ~= nil then
+		if lockedoddDoors[target.itemid] then
 			transformTo = lockedoddDoors[target.itemid].open
 		else
 			transformTo = target.itemid + 2
 		end
 		if table.contains(openDoors, target.itemid) then
-			if openoddDoors[target.itemid] ~= nil then
+			if openoddDoors[target.itemid] then
 				transformTo = openoddDoors[target.itemid].locked
 			else
 				transformTo = target.itemid - 2
 			end
 		elseif table.contains(closedDoors, target.itemid) then
-			if closedoddDoors[target.itemid] ~= nil then
+			if closedoddDoors[target.itemid] then
 				transformTo = closedoddDoors[target.itemid].locked
 			else
 				transformTo = target.itemid - 1
@@ -149,7 +149,7 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				tableCreature.creature:teleportTo(tableCreature.position, true)
 			end
 		end
-		if openoddDoors[itemId] ~= nil then
+		if openoddDoors[itemId] then
 			transformTo = openoddDoors[itemId].closed
 		else
 			transformTo = itemId - 1
@@ -157,7 +157,7 @@ function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		item:transform(transformTo)
 		return true
 	elseif table.contains(closedDoors, itemId) or table.contains(closedExtraDoors, itemId) or table.contains(closedHouseDoors, itemId) then
-		if closedoddDoors[itemId] ~= nil then
+		if closedoddDoors[itemId] then
 			transformTo = closedoddDoors[itemId].open
 		else
 			transformTo = itemId + 1

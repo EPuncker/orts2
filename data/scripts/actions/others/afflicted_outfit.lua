@@ -17,7 +17,7 @@ function afflictedOutfit.onUse(player, item, fromPosition, target, toPosition, i
 		player:addOutfitAddon(431, 2)
 		player:setStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueMask, 1)
 		player:say("You gained a plague mask for your outfit.", TALKTYPE_MONSTER_SAY, false, player)
-		if player:hasOutfit(looktype, 3) then
+		if player:hasOutfit(430, 3) then
 			player:addAchievement("Beak Doctor")
 		end
 		item:remove(1)
@@ -32,7 +32,7 @@ function afflictedOutfit.onUse(player, item, fromPosition, target, toPosition, i
 		player:addOutfitAddon(431, 1)
 		player:setStorageValue(PlayerStorageKeys.OutfitQuest.Afflicted.AddonPlagueBell, 1)
 		player:say("You gained a plague bell for your outfit.", TALKTYPE_MONSTER_SAY, false, player)
-		if player:hasOutfit(looktype, 3) then
+		if player:hasOutfit(430, 3) then
 			player:addAchievement("Beak Doctor")
 		end
 		item:remove(1)

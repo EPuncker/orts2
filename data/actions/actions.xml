@@ -503,10 +503,6 @@
 	<action itemid="22845" script="other/teleport.lua" />
 	<action itemid="22846" script="other/teleport.lua" />
 	<action itemid="22944" script="other/teleport.lua" />
-	<action fromid="2376" toid="2404" script="other/destroy.lua" />
-	<action fromid="2406" toid="2415" script="other/destroy.lua" />
-	<action fromid="2417" toid="2419" script="other/destroy.lua" />
-	<action fromid="2421" toid="2453" script="other/destroy.lua" />
 	<action fromid="5792" toid="5797" script="other/die.lua" />
 	<action itemid="6277" script="other/baking.lua" />
 	<action itemid="8846" script="other/baking.lua" />

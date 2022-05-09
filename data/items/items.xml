@@ -39425,21 +39425,25 @@
 	<item id="32704" article="an" name="open door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 	</item>
-	<item id="32705" article="a" name="closed door">
+	<item id="32705" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
+		<attribute key="description" value="It is locked." />
 	</item>
-	<item id="32706" article="a" name="closed door">
+	<item id="32706" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
+		<attribute key="description" value="It is locked." />
 	</item>
-	<item id="32707" article="a" name="closed door">
+	<item id="32707" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
+		<attribute key="description" value="It is locked." />
 	</item>
-	<item id="32708" article="a" name="closed door">
+	<item id="32708" article="a" name="closed door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
+		<attribute key="description" value="It is locked." />
 	</item>
 	<item id="32709" article="a" name="dragon figurine" />
 	<item id="32710" article="a" name="unicorn figurine" />

@@ -16868,7 +16868,6 @@
 	<item id="9171" article="a" name="closed door">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
-		<attribute key="description" value="It is locked." />
 	</item>
 	<item id="9172" article="an" name="open door">
 		<attribute key="type" value="door" />
@@ -16876,7 +16875,6 @@
 	<item id="9173" article="a" name="closed door">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
-		<attribute key="description" value="It is locked." />
 	</item>
 	<item id="9174" article="an" name="open door">
 		<attribute key="type" value="door" />

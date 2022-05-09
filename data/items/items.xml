@@ -11751,7 +11751,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="6802" article="an" name="entrance">
+	<item id="6802" article="an" name="open door">
 		<attribute key="type" value="door" />
 	</item>
 	<item id="6803" article="an" name="archway" />

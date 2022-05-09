@@ -39397,32 +39397,32 @@
 	<item id="32696" article="an" name="open door">
 		<attribute key="type" value="door" />
 	</item>
-	<item id="32697" article="a" name="closed door">
+	<item id="32697" article="a" name="closed door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="32698" article="an" name="open door">
+	<item id="32698" article="an" name="open door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 	</item>
-	<item id="32699" article="a" name="closed door">
-		<attribute key="type" value="door" />
-		<attribute key="blockprojectile" value="1" />
-	</item>
-	<item id="32700" article="an" name="open door">
-		<attribute key="type" value="door" />
-	</item>
-	<item id="32701" article="a" name="closed door">
+	<item id="32699" article="a" name="closed door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="32702" article="an" name="open door">
+	<item id="32700" article="an" name="open door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 	</item>
-	<item id="32703" article="a" name="closed door">
+	<item id="32701" article="a" name="closed door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="32704" article="an" name="open door">
+	<item id="32702" article="an" name="open door" editorsuffix=" (Quest)">
+		<attribute key="type" value="door" />
+	</item>
+	<item id="32703" article="a" name="closed door" editorsuffix=" (Quest)">
+		<attribute key="type" value="door" />
+		<attribute key="blockprojectile" value="1" />
+	</item>
+	<item id="32704" article="an" name="open door" editorsuffix=" (Quest)">
 		<attribute key="type" value="door" />
 	</item>
 	<item id="32705" article="a" name="closed door">

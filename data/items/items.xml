@@ -37536,7 +37536,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="26530" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="26530" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -37545,7 +37545,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="26532" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="26532" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -38924,7 +38924,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="31021" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="31021" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -38933,7 +38933,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="31023" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="31023" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -39000,7 +39000,7 @@
 	<item id="31172" article="a" name="dragon statue" />
 	<item id="31173" article="a" name="skeleton" />
 	<item id="31174" article="an" name="old letter" />
-	<item id="31175" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="31175" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -39705,7 +39705,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="33429" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="33429" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />
@@ -39714,7 +39714,7 @@
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 	</item>
-	<item id="33431" article="a" name="closed door" editorsuffix=" (Locked)">
+	<item id="33431" article="a" name="locked door" editorsuffix=" (Locked)">
 		<attribute key="type" value="door" />
 		<attribute key="blockprojectile" value="1" />
 		<attribute key="description" value="It is locked." />

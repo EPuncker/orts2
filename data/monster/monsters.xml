@@ -96,10 +96,10 @@
 	<monster name="Cliff Strider" file="monsters/cliff_strider.xml" />
 	<monster name="Clomp" file="monsters/clomp.xml" />
 	<monster name="Clubarc The Plunderer" file="monsters/clubarc_the_plunderer.xml" />
-	<monster name="Cobra" file="monsters/cobra.xml" />
 	<monster name="Cobra Assassin" file="monsters/cobra_assassin.xml" />
 	<monster name="Cobra Scout" file="monsters/cobra_scout.xml" />
 	<monster name="Cobra Vizier" file="monsters/cobra_vizier.xml" />
+	<monster name="Cobra" file="monsters/cobra.xml" />
 	<monster name="Cockroach" file="monsters/cockroach.xml" />
 	<monster name="Coldheart" file="monsters/coldheart.xml" />
 	<monster name="Colerian The Barbarian" file="monsters/colerian_the_barbarian.xml" />
@@ -288,8 +288,8 @@
 	<monster name="General Murius" file="monsters/general_murius.xml" />
 	<monster name="Ghastly Dragon" file="monsters/ghastly_dragon.xml" />
 	<monster name="Ghazbaran" file="monsters/ghazbaran.xml" />
-	<monster name="Ghost" file="monsters/ghost.xml" />
 	<monster name="Ghost Wolf" file="monsters/ghost_wolf.xml" />
+	<monster name="Ghost" file="monsters/ghost.xml" />
 	<monster name="Ghoul" file="monsters/ghoul.xml" />
 	<monster name="Ghoulish Hyaena" file="monsters/ghoulish_hyaena.xml" />
 	<monster name="Giant Spider Wyda" file="monsters/giant_spider_wyda.xml" />
@@ -762,9 +762,9 @@
 	<monster name="Verminor" file="monsters/verminor.xml" />
 	<monster name="Versperoth" file="monsters/versperoth.xml" />
 	<monster name="Vicious Manbat" file="monsters/vicious_manbat.xml" />
-	<monster name="Vulcongra" file="monsters/vulcongra.xml" />
 	<monster name="Vicious Squire" file="monsters/vicious_squire.xml" />
 	<monster name="Vile Grandmaster" file="monsters/vile_grandmaster.xml" />
+	<monster name="Vulcongra" file="monsters/vulcongra.xml" />
 	<monster name="Wailing Widow" file="monsters/wailing_widow.xml" />
 	<monster name="Walker" file="monsters/walker.xml" />
 	<monster name="War Golem" file="monsters/war_golem.xml" />

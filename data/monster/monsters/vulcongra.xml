@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Vulcongra" nameDescription="Vulcongra" race="fire" experience="1100" speed="230">
+<monster name="Vulcongra" nameDescription="a vulcongra" race="fire" experience="1100" speed="230">
 	<health now="1600" max="1600" />
 	<look type="509" corpse="18476" />
 	<targetchange interval="4000" chance="10" />
@@ -7,6 +7,7 @@
 		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
 		<flag illusionable="0" />
 		<flag convinceable="0" />
 		<flag pushable="0" />

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Control Tower" nameDescription="a control tower" race="energy" experience="3000" speed="0">
+	<health now="7500" max="7500" />
+	<look typeex="23265" corpse="24309" />
+	<targetchange interval="2000" chance="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag staticattack="90" />
+		<flag runonhealth="0" />
+		<flag hidehealth="1" />
+	</flags>
+	<defenses armor="10" defense="10" />
+	<elements>
+		<element firePercent="55" />
+		<element holyPercent="55" />
+		<element energyPercent="55" />
+	</elements>
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item name="great health potion" chance="14285" />
+		<item name="great mana potion" chance="14285" />
+		<item name="platinum coin" countmax="5" chance="100000" />
+	</loot>
+</monster>

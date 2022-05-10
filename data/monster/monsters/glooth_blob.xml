@@ -2,11 +2,12 @@
 <monster name="Glooth Blob" nameDescription="a glooth blob" race="venom" experience="700" speed="160">
 	<health now="750" max="750" />
 	<look type="614" corpse="23479" />
-	<targetchange interval="2000" chance="3" />
+	<targetchange interval="5000" chance="0" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
 		<flag illusionable="0" />
 		<flag convinceable="0" />
 		<flag pushable="0" />
@@ -30,7 +31,7 @@
 			<attribute key="shootEffect" value="poison" />
 		</attack>
 	</attacks>
-	<defenses armor="11" defense="13" />
+	<defenses armor="30" defense="30" />
 	<elements>
 		<element firePercent="-10" />
 		<element icePercent="20" />
@@ -45,13 +46,13 @@
 		<summon name="Glooth Blob" interval="2000" chance="6" />
 	</summons>
 	<loot>
-		<item id="2148" countmax="70" chance="100000" /><!-- gold coin -->
-		<item id="23553" chance="15410" /><!-- glob of glooth -->
-		<item id="2146" countmax="2" chance="3310" /><!-- small sapphire -->
-		<item id="9970" countmax="2" chance="3420" /><!-- small topaz -->
-		<item id="23554" chance="400" /><!-- glooth amulet -->
-		<item id="23550" chance="510" /><!-- glooth blade -->
-		<item id="23549" chance="580" /><!-- glooth club -->
-		<item id="23551" chance="560" /><!-- glooth axe -->
+		<item name="glob of glooth" chance="14740" />
+		<item name="glooth amulet" chance="520" />
+		<item name="glooth axe" chance="650" />
+		<item name="glooth blade" chance="530" />
+		<item name="glooth club" chance="580" />
+		<item name="gold coin" countmax="70" chance="100000" />
+		<item name="small sapphire" countmax="2" chance="3220" />
+		<item name="small topaz" countmax="2" chance="2800" />
 	</loot>
 </monster>

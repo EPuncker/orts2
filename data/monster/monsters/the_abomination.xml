@@ -44,7 +44,7 @@
 		<immunity drunk="1" />
 		<immunity invisible="1" />
 	</immunities>
-	<voices interval="1000" chance="2">
+	<voices interval="5000" chance="10">
 		<voice sentence="DEATH IS INEVITABLE!" />
 		<voice sentence="I AM THE ESSENCE OF DEATH!" />
 	</voices>

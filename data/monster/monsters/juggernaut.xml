@@ -7,6 +7,7 @@
 		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
+		<flag ignorespawnblock="1" />
 		<flag illusionable="1" />
 		<flag convinceable="0" />
 		<flag pushable="0" />
@@ -72,7 +73,7 @@
 		<item name="ham" countmax="8" chance="60000" />
 		<item name="soul orb" chance="33333" />
 		<item name="demonic essence" chance="45333" />
-		<item name="concentrated demonic blood" countmax="4" chance="25000" />
+		<item name="flask of demonic blood" countmax="4" chance="25000" />
 		<item name="onyx arrow" countmax="15" chance="11111" />
 		<item name="assassin star" countmax="10" chance="25000" />
 		<item name="titan axe" chance="4430" />

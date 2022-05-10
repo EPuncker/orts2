@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Smuggler Baron Silvertoe" nameDescription="Smuggler Baron Silvertoe" race="blood" experience="170" speed="400">
+<monster name="Smuggler Baron Silvertoe" nameDescription="Smuggler Baron Silvertoe" race="blood" experience="170" speed="200">
 	<health now="280" max="280" />
 	<look type="134" head="38" body="0" legs="94" feet="95" addons="0" corpse="20506" />
 	<targetchange interval="4000" chance="10" />
@@ -15,7 +15,6 @@
 		<flag targetdistance="1" />
 		<flag staticattack="90" />
 		<flag runonhealth="15" />
-		<flag isboss="1" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-50" />
@@ -35,7 +34,7 @@
 	<summons maxSummons="3">
 		<summon name="Wild Warrior" interval="2000" chance="20" />
 	</summons>
-	<voices interval="1000" chance="2">
+	<voices interval="2000" chance="7">
 		<voice sentence="I will make your death look like an accident!" />
 		<voice sentence="You should not have interferred with my bussiness!" />
 		<voice sentence="Bribes are expensive, murder is cheap!" />

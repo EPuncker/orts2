@@ -1,44 +1,48 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<monster name="Gloom Wolf" nameDescription="a gloom wolf" experience="70" speed="250">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Gloom Wolf" nameDescription="a gloom wolf" race="blood" experience="70" speed="125">
 	<health now="200" max="200" />
 	<look type="716" corpse="24639" />
-	<targetchange interval="2000" chance="10" />
+	<targetchange interval="4000" chance="0" />
 	<flags>
+		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
-		<flag summonable="0" />
-		<flag convinceable="0" />
 		<flag illusionable="1" />
+		<flag convinceable="0" />
 		<flag pushable="0" />
-		<flag canpushitems="0" />
+		<flag canpushitems="1" />
 		<flag canpushcreatures="0" />
-		<flag staticattack="90" />
 		<flag targetdistance="1" />
-		<flag canwalkonenergy="0" />
-		<flag canwalkonfire="0" />
-		<flag canwalkonpoison="0" />
+		<flag staticattack="80" />
+		<flag runonhealth="0" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" chance="100" min="0" max="-92" />
+		<attack name="melee" interval="2000" min="0" max="-92" />
+		<attack name="bleedcondition" interval="2000" chance="15" target="0" radius="2" min="-12" max="-26">
+			<attribute key="areaEffect" value="blackspark" />
+		</attack>
 	</attacks>
-	<defenses armor="10" defense="10">
-		<defense name="speed" interval="2000" chance="15" minspeedchange="300" maxspeedchange="300" duration="7000">
+	<defenses armor="10" defense="8">
+		<defense name="speed" interval="2000" chance="15" speedchange="250" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element earthPercent="20" />
+		<element holyPercent="-5" />
 		<element firePercent="-5" />
 		<element icePercent="-5" />
-		<element holyPercent="-5" />
 		<element deathPercent="10" />
+		<element earthPercent="20" />
 	</elements>
 	<loot>
-		<item id="2148" name="gold coin" chance="66646" countmax="15" />
-		<item id="2666" name="meat" chance="40787" />
-		<item id="2671" name="ham" chance="39788" />
-		<item id="24663" name="gloom wolf fur" chance="8307" />
-		<item id="2129" name="wolf tooth chain" chance="7183" />
-		<item id="5897" name="wolf paw" chance="2998" />
+		<item name="gold coin" countmax="15" chance="66710" />
+		<item name="meat" countmax="2" chance="40860" />
+		<item name="ham" countmax="2" chance="39530" />
+		<item name="gloom wolf fur" chance="8260" />
+		<item name="wolf tooth chain" chance="7250" />
+		<item name="wolf paw" chance="3030" />
 	</loot>
 </monster>

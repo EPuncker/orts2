@@ -55,7 +55,7 @@
 		<summon name="Blistering Fire Elemental" interval="4000" chance="50" />
 		<summon name="Jagged Earth Elemental" interval="4000" chance="50" />
 		<summon name="Roaring Water Elemental" interval="4000" chance="50" />
-		<summon name="Overcharged Energy Element" interval="4000" chance="50" />
+		<summon name="Overcharged Energy Elemental" interval="4000" chance="50" />
 	</summons>
 	<voices interval="5000" chance="30">
 		<voice sentence="WHO DARES CALLING ME?" yell="1" />

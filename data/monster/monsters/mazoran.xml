@@ -77,7 +77,6 @@
 		<item id="25522" chance="500" /><!-- rift bow -->
 		<item id="25523" chance="500" /><!-- rift crossbow -->
 		<item id="6500" chance="11000" /><!-- demonic essence -->
-		<item id="18409" chance="500" /><!-- wand of everblazing -->
 		<item id="7382" chance="1000" /><!-- demonrange sword -->
 		<item id="7590" countmax="5" chance="23000" /><!-- great mana potion -->
 		<item id="7632" countmax="5" chance="14000" /><!-- giant shimmering pearl -->

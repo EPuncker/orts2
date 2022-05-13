@@ -7,7 +7,6 @@
 		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
-		<flag ignorespawnblock="1" />
 		<flag illusionable="0" />
 		<flag convinceable="0" />
 		<flag pushable="0" />
@@ -29,23 +28,23 @@
 		<attack name="lifedrain" interval="2000" chance="15" radius="3" target="0" min="-50" max="-150">
 			<attribute key="areaEffect" value="blackspark" />
 		</attack>
-		<attack name="mooh'tah master skill reducer" interval="2000" chance="19" range="7" />
+		<attack name="silencer skill reducer" range="3" interval="2000" chance="10" />
 	</attacks>
-	<defenses armor="37" defense="37">
+	<defenses armor="30" defense="30">
 		<defense name="healing" interval="2000" chance="22" min="110" max="160">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="haste" interval="2000" chance="8" speedchange="220" duration="1000">
+		<defense name="speed" interval="2000" chance="8" speedchange="220" duration="1000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element physicalPercent="5" />
-		<element firePercent="15" />
-		<element energyPercent="5" />
+		<element physicalPercent="1" />
+		<element firePercent="1" />
+		<element energyPercent="3" />
 		<element icePercent="10" />
-		<element earthPercent="10" />
-		<element deathPercent="15" />
+		<element earthPercent="1" />
+		<element deathPercent="1" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />
@@ -53,27 +52,30 @@
 	<voices interval="2000" chance="5">
 		<voice sentence="Feel the power of the Mooh'Tah!" />
 		<voice sentence="Ommm!" />
+		<voice sentence="I am at peace and you are dead!" />
+		<voice sentence="There is no rage, there is only control!" />
+		<voice sentence="You will not disrupt my inner balance!" />
 	</voices>
 	<loot>
-		<item id="7401" chance="130" /> <!-- minotaur trophy -->
-		<item name="cowtana" chance="1440" />
-		<item name="gold coin" countmax="100" chance="100000" />
-		<item name="gold coin" countmax="20" chance="100000" />
-		<item name="guardian shield" chance="910" />
-		<item name="knight armor" chance="490" />
-		<item name="knight legs" chance="690" />
-		<item name="minotaur horn" countmax="2" chance="5080" />
-		<item name="minotaur leather" chance="5140" />
-		<item name="mooh'tah plate" chance="1010" />
-		<item name="mooh'tah shell" chance="15110" />
-		<item name="platinum coin" countmax="3" chance="39880" />
-		<item name="red piece of cloth" chance="740" />
-		<item name="small amethyst" chance="5120" />
-		<item name="small emerald" chance="5180" />
-		<item name="small ruby" chance="5040" />
-		<item name="small topaz" chance="5090" />
-		<item name="strong health potion" chance="6960" />
-		<item name="strong mana potion" chance="7080" />
-		<item name="sword ring" chance="1070" />
+		<item id="2148" countmax="100" chance="100000" /><!-- gold coin -->
+		<item id="2148" countmax="20" chance="60000" /><!-- gold coin -->
+		<item id="2152" countmax="3" chance="39860" /><!-- platinum coin -->
+		<item id="23573" chance="15030" /><!-- mooh'tah shell -->
+		<item id="7589" chance="7110" /><!-- strong mana potion -->
+		<item id="7588" chance="6390" /><!-- strong health potion -->
+		<item id="5878" chance="5530" /><!-- minotaur leather -->
+		<item id="2147" chance="5470" /><!-- small ruby -->
+		<item id="2149" chance="5280" /><!-- small emerald -->
+		<item id="2150" chance="5200" /><!-- small amethyst -->
+		<item id="9970" chance="4760" /><!-- small topaz -->
+		<item id="12428" countmax="2" chance="4710" /><!-- minotaur horn -->
+		<item id="23548" chance="1380" /><!-- cowtana -->
+		<item id="2207" chance="1110" /><!-- sword ring -->
+		<item id="23537" chance="1090" /><!-- mooh'tah plate -->
+		<item id="2515" chance="1020" /><!-- guardian shield -->
+		<item id="2477" chance="710" /><!-- knight legs -->
+		<item id="5911" chance="650" /><!-- red piece of cloth -->
+		<item id="2476" chance="490" /><!-- knight armor -->
+		<item id="7401" chance="150" /><!-- minotaur trophy -->
 	</loot>
 </monster>

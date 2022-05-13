@@ -33,16 +33,13 @@
 		<element earthPercent="-10" />
 		<element deathPercent="-10" />
 	</elements>
-	<immunities>
-		<immunity invisible="0" />
-	</immunities>
 	<voices interval="5000" chance="10">
 		<voice sentence="KRAK ORRRRRRK!" yell="1" />
 	</voices>
 	<loot>
 		<item name="gold coin" countmax="12" chance="54000" />
 		<item name="orcish gear" chance="10500" />
-		<item id="2671" chance="9720" /><!-- ham -->
+		<item name="ham" chance="9720" />
 		<item id="2381" chance="7000" /><!-- halberd -->
 		<item name="battle axe" chance="5770" />
 		<item name="hunting spear" chance="5000" />

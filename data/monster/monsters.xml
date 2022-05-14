@@ -144,6 +144,7 @@
 	<monster name="Cyclops" file="monsters/cyclops.xml" />
 	<monster name="Damaged Crystal Golem" file="monsters/damaged_crystal_golem.xml" />
 	<monster name="Damaged Worker Golem" file="monsters/damaged_worker_golem.xml" />
+	<monster name="Damned Soul" file="monsters/damned_soul.xml" />
 	<monster name="Darakan The Executioner" file="monsters/darakan_the_executioner.xml" />
 	<monster name="Dark Apprentice" file="monsters/dark_apprentice.xml" />
 	<monster name="Dark Druid" file="monsters/dark_druid.xml" />
@@ -156,7 +157,7 @@
 	<monster name="Dawnfire Asura" file="monsters/dawnfire_asura.xml" />
 	<monster name="Deadeye Devious" file="monsters/deadeye_devious.xml" />
 	<monster name="Death Blob" file="monsters/death_blob.xml" />
-	<monster name="Death Dragon" file="monsters/death_ragon.xml" />
+	<monster name="Death Dragon" file="monsters/death_dragon.xml" />
 	<monster name="Death Priest" file="monsters/death_priest.xml" />
 	<monster name="Deathbine" file="monsters/deathbine.xml" />
 	<monster name="Deathbringer" file="monsters/deathbringer.xml" />
@@ -182,7 +183,7 @@
 	<monster name="Demon Skeleton" file="monsters/demon_skeleton.xml" />
 	<monster name="Demon" file="monsters/demon.xml" />
 	<monster name="Despair" file="monsters/despair.xml" />
-	<monster name="Desperate Soul" file="monsters/desperates_soul.xml" />
+	<monster name="Desperate Soul" file="monsters/desperate_soul.xml" />
 	<monster name="Desperate White Deer" file="monsters/desperate_white_deer.xml" />
 	<monster name="Destabilized Ferumbras" file="monsters/destabilized_ferumbras.xml" />
 	<monster name="Destroyer" file="monsters/destroyer.xml" />
@@ -350,7 +351,7 @@
 	<monster name="Green Djinn" file="monsters/green_djinn.xml" />
 	<monster name="Green Frog" file="monsters/green_frog.xml" />
 	<monster name="Grim Reaper" file="monsters/grim_reaper.xml" />
-	<monster name="Grimeleech" file="monsters/guilt.xml" />
+	<monster name="Grimeleech" file="monsters/grimeleech.xml" />
 	<monster name="Grimgor Guteater" file="monsters/grimgor_guteater.xml" />
 	<monster name="Groam" file="monsters/groam.xml" />
 	<monster name="Grodrik" file="monsters/grodrik.xml" />

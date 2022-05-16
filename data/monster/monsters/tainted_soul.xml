@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<monster name="Tainted Soul" nameDescription="a tainted soul" experience="0" speed="170">
+	<health now="250" max="250" />
+	<look type="712" corpse="0" />
+	<targetchange interval="2000" chance="0" />
+	<flags>
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag summonable="0" />
+		<flag convinceable="0" />
+		<flag illusionable="1" />
+		<flag isboss="0" />
+		<flag ignorespawnblock="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag healthhidden="0" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="50" />
+		<element energyPercent="20" />
+		<element holyPercent="-10" />
+		<element deathPercent="100" />
+	</elements>
+	<defenses armor="10" defense="10" />
+	<voices interval="5000" chance="10">
+		<voice sentence="*Crinkle*" />
+		<voice sentence="*Sizzle*" />
+	</voices>
+	<loot>
+		<item id="2147" name="small ruby" chance="1256" />
+	</loot>
+</monster>

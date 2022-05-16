@@ -84,11 +84,11 @@
 		<item name="flask of cough syrup" chance="500" />
 		<item name="explorer brooch" chance="4000" />
 		<item name="orichalcum pearl" countmax="2" chance="500" />
-		<item id="5792" chance="1000" /><!-- die -->
+		<item id="5792" chance="1000" /><!-- dice -->
 		<item name="chicken feather" countmax="5" chance="4000" />
 		<item name="bat wing" countmax="3" chance="4000" />
 		<item name="honeycomb" chance="4000" />
-		<item id="2036" chance="1500" /><!-- watch -->
+		<item id="6091" chance="1500" /><!-- watch -->
 		<item name="lump of cake dough" countmax="3" chance="7000" />
 		<item name="valentine's cake" chance="1500" />
 		<item name="christmas present bag" chance="7000" />

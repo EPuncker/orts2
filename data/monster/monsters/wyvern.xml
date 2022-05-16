@@ -7,7 +7,6 @@
 		<flag summonable="0" />
 		<flag attackable="1" />
 		<flag hostile="1" />
-		<flag ignorespawnblock="1" />
 		<flag illusionable="1" />
 		<flag convinceable="0" />
 		<flag pushable="0" />
@@ -53,7 +52,7 @@
 		<item name="small sapphire" chance="5000" />
 		<item name="gold coin" countmax="90" chance="100000" />
 		<item name="wand of inferno" chance="810" />
-		<item id="2547" countmax="2" chance="3400" /><!-- power bolt -->
+		<item name="power bolt" countmax="2" chance="3400" />
 		<item name="dragon ham" countmax="3" chance="60500" />
 		<item name="wyvern fang" chance="410" />
 		<item name="strong health potion" chance="2500" />

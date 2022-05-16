@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Gravelord Oshuran" nameDescription="Gravelord Oshuran" race="undead" experience="2400" speed="220">
+<monster name="Gravelord Oshuran" nameDescription="Gravelord Oshuran" race="undead" experience="2400" speed="440">
 	<health now="3100" max="3100" />
-	<look type="99" head="95" body="116" legs="119" feet="115" corpse="6028" />
+	<look type="99" corpse="6028" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
 		<flag summonable="0" />
@@ -15,6 +15,7 @@
 		<flag targetdistance="1" />
 		<flag staticattack="80" />
 		<flag runonhealth="0" />
+		<flag isboss="1" />
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-250" />
@@ -52,12 +53,12 @@
 	<summons maxSummons="4">
 		<summon name="Bonebeast" interval="2000" chance="10" />
 	</summons>
-	<voices interval="2000" chance="7">
+	<voices interval="1000" chance="2">
 		<voice sentence="Your mortality is disgusting!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="100000" />	<!-- gold coin -->
-		<item id="2148" countmax="15" chance="100000" />	<!-- gold coin -->
+		<item id="2148" countmax="100" chance="50000" />	<!-- gold coin -->
+		<item id="2148" countmax="15" chance="50000" />	<!-- gold coin -->
 		<item id="7589" chance="17500" />					<!-- strong mana potion -->
 		<item id="2144" chance="15960" />					<!-- black pearl -->
 		<item id="2143" chance="15000" />					<!-- white pearl -->
@@ -65,6 +66,6 @@
 		<item id="2656" chance="500" />						<!-- blue robe -->
 		<item id="7893" chance="900" />						<!-- lightning boots -->
 		<item id="8904" chance="300" />						<!-- spellscroll of prophecies -->
-		<item id="2175" chance="4650" />						<!-- spellbook -->
+		<item id="2175" chance="4650" />					<!-- spellbook -->
 	</loot>
 </monster>

@@ -276,7 +276,7 @@
 	<monster name="Fatality" file="monsters/fatality.xml" />
 	<monster name="Feral Sphinx" file="monsters/feral_sphinx.xml" />
 	<monster name="Fernfang" file="monsters/fernfang.xml" />
-	<monster name="Feroxa Gloom Wolf" file="monsters/feroxa_gloom_wolf.xml.xml" />
+	<monster name="Feroxa Gloom Wolf" file="monsters/feroxa_gloom_wolf.xml" />
 	<monster name="Feroxa Killable Werewolf" file="monsters/feroxa_killable_werewolf.xml" />
 	<monster name="Feroxa Werewolf" file="monsters/feroxa_werewolf.xml" />
 	<monster name="Feroxa" file="monsters/feroxa.xml" />

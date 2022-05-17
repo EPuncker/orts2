@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Feroxa" nameDescription="Feroxa" race="blood" experience="0" speed="400">
 	<health now="130000" max="130000" />
-	<look type="716" head="57" body="76" legs="77" feet="57" corpse="0" />
+	<look type="716" head="57" body="76" legs="77" feet="57" corpse="24745" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />

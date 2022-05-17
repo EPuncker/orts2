@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Devourer" nameDescription="a devourer" experience="1755" speed="200">
+	<health now="1900" max="1900" />
+	<look type="617" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="-5" />
+		<element earthPercent="100" />
+		<element icePercent="15" />
+		<element deathPercent="10" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-260" />
+	</attacks>
+	<defenses armor="45" defense="45">
+		<defense name="healing" interval="2000" chance="20" min="0" max="136" />
+	</defenses>
+	<voices interval="1000" chance="5">
+		<voice sentence="*gulp*" />
+		<voice sentence="*Bruaarrr!*" />
+		<voice sentence="*omnnommm nomm*" />
+	</voices>
+	<loot>
+		<item id="2148" name="gold coin" chance="99437" countmax="165" />
+		<item id="2152" name="platinum coin" chance="55673" countmax="2" />
+		<item id="23553" name="glob of glooth" chance="12882" />
+		<item id="2147" name="small ruby" chance="5801" countmax="3" />
+		<item id="2149" name="small emerald" chance="5750" countmax="3" />
+		<item id="9970" name="small topaz" chance="5511" countmax="3" />
+		<item id="2150" name="small amethyst" chance="5409" countmax="3" />
+		<item id="2146" name="small sapphire" chance="5255" countmax="3" />
+		<item id="2145" name="small diamond" chance="5136" countmax="3" />
+		<item id="23551" name="glooth axe" chance="2986" />
+		<item id="23549" name="glooth club" chance="2952" />
+		<item id="23550" name="glooth blade" chance="2696" />
+		<item id="2151" name="talon" chance="2491" />
+		<item id="2154" name="yellow gem" chance="1740" />
+		<item id="23529" name="glooth spear" chance="1621" />
+		<item id="8912" name="springsprout rod" chance="1041" />
+		<item id="23554" name="glooth amulet" chance="682" />
+		<item id="2181" name="terra rod" chance="648" />
+		<item id="23535" name="glooth cape" chance="188" />
+		<item id="2155" name="green gem" chance="51" />
+	</loot>
+</monster>

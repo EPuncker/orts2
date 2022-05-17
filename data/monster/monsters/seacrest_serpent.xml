@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Seacrest Serpent" nameDescription="a seacrest serpent" experience="2600" speed="500">
+	<health now="3000" max="3000" />
+	<look type="675" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="10" />
+		<element energyPercent="10" />
+		<element earthPercent="10" />
+		<element firePercent="20" />
+		<element drownPercent="100" />
+		<element icePercent="100" />
+		<element deathPercent="10" />
+	</elements>
+	<defenses armor="51" defense="51" />
+	<voices interval="1000" chance="5">
+		<voice sentence="LEAVE THESE GROUNDS..." />
+		<voice sentence="THE DARK TIDE WILL SWALLOW YOU..." />
+	</voices>
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="5" />
+		<item id="24169" name="seacrest scale" chance="16853" />
+		<item id="2672" name="dragon ham" chance="14030" />
+		<item id="24170" name="seacrest hair" chance="11330" />
+		<item id="7839" name="shiver arrow" chance="8305" countmax="19" />
+		<item id="7589" name="strong mana potion" chance="7919" countmax="2" />
+		<item id="7588" name="strong health potion" chance="7452" countmax="2" />
+		<item id="24116" name="seacrest pearl" chance="6843" />
+		<item id="2145" name="small diamond" chance="4284" countmax="3" />
+		<item id="5944" name="soul orb" chance="3533" />
+		<item id="7896" name="glacier kilt" chance="2335" />
+		<item id="2143" name="white pearl" chance="2132" countmax="2" />
+		<item id="7902" name="glacier mask" chance="2112" />
+		<item id="2144" name="black pearl" chance="1929" countmax="3" />
+		<item id="7892" name="glacier shoes" chance="1848" />
+		<item id="7632" name="giant shimmering pearl (green)" chance="1624" />
+		<item id="24261" name="crest of the deep seas" chance="1076" />
+		<item id="7888" name="glacier amulet" chance="1015" />
+		<item id="8921" name="wand of draconia" chance="893" />
+		<item id="18390" name="wand of defiance" chance="223" />
+	</loot>
+</monster>

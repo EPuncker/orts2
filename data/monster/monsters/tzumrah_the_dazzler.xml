@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Tzumrah The Dazzler" nameDescription="Tzumrah The Dazzler" experience="1700" speed="0">
 	<health now="1700" max="1700" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" mount="0" corpse="0" />
+	<look type="193" corpse="20391" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,6 +20,28 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-100" poison="4" />
+		<attack name="lifedrain" interval="2000" chance="25" range="1" radius="1" target="1" min="-70" max="-185">
+			<attribute key="shootEffect" value="holy" />
+			<attribute key="areaEffect" value="holyarea" />
+		</attack>
+		<attack name="drunk" interval="2000" chance="10" range="7" target="1" duration="5000">
+			<attribute key="shootEffect" value="holy" />
+			<attribute key="areaEffect" value="holydamage" />
+		</attack>
+		<attack name="speed" interval="2000" chance="10" range="7" target="1" speedchange="-360" duration="6000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="25">
+		<defense name="healing" interval="2000" chance="25" min="60" max="90">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="15" duration="4000">
+			<attribute key="areaEffect" value="yellowbubble" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -29,7 +51,6 @@
 		<element energyPercent="-5" />
 		<element firePercent="20" />
 	</elements>
-	<defenses armor="10" defense="5" />
 	<voices interval="5000" chance="10">
 		<voice sentence="Your beating heart will burst into flames!" />
 		<voice sentence="Your reeking carcass will feed the sharks!" />

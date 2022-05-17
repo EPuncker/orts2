@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="Ekatrix" nameDescription="Ekatrix" experience="200" speed="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Ekatrix" nameDescription="Ekatrix" race="blood" experience="200" speed="204">
 	<health now="500" max="500" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" mount="0" corpse="0" />
+	<look type="54" corpse="20535" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,6 +20,18 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-20" />
+		<attack name="fire" interval="2000" chance="20" range="7" min="-30" max="-75">
+			<attribute key="shootEffect" value="fire" />
+			<attribute key="areaEffect" value="fire" />
+		</attack>
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+		<attack name="outfit" interval="2000" chance="1" target="1" range="5" monster="green frog" duration="2000" />
+	</attacks>
+	<defenses armor="10" defense="10" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

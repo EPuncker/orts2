@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <monster name="The Flaming Orchid" nameDescription="The Flaming Orchid" experience="8500" speed="0">
 	<health now="4000" max="4000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" mount="0" corpse="0" />
+	<look type="150" head="114" body="94" legs="78" feet="79" addons="1" corpse="0" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,12 +20,33 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-269" />
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="0" max="-70" />
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="1" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-50" max="-200">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="energy strike" interval="2000" chance="10" range="1" min="-10" max="-100" />
+		<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-100" duration="30000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="55" defense="55">
+		<defense name="healing" interval="2000" chance="15" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="320" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="10" defense="5" />
 	<voices interval="5000" chance="10">
 		<voice sentence="I will end your torment. Do not run, little mortal." />
 		<voice sentence="*SNIFF* *SNIFF* BLOOD! I CAN SMELL YOU, MORTAL!" />

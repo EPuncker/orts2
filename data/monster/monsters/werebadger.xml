@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="Werebadger" nameDescription="a werebadger" experience="1600" speed="260">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werebadger" nameDescription="a werebadger" race="blood" experience="1600" speed="260">
 	<health now="1700" max="1700" />
-	<look type="729" corpse="0" />
+	<look type="729" corpse="24723" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,6 +20,27 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="60" poison="140" />
+		<attack name="lifedrain" interval="2000" chance="20" countmax="5" range="7" target="1" min="-21" max="-150">
+			<attribute key="shootEffect" value="earth" />
+			<attribute key="areaEffect" value="carniphila" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" length="8" spread="3" min="-10" max="-100">
+			<attribute key="areaEffect" value="carniphila" />
+		</attack>
+		<attack name="speed" interval="4000" chance="20" radius="7" target="1" speedchange="-100">
+			<attribute key="areaEffect" value="poff" />
+		</attack>
+	</attacks>
+	<defenses armor="31" defense="31">
+		<defense name="healing" interval="2000" chance="25" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="20" duration="2000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -34,7 +55,6 @@
 		<element holyPercent="-5" />
 		<element deathPercent="40" />
 	</elements>
-	<defenses armor="31" defense="31" />
 	<voices interval="5000" chance="10">
 		<voice sentence="SNUFFLE" />
 		<voice sentence="Sniff Sniff" />

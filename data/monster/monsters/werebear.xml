@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="Werebear" nameDescription="a werebear" experience="2100" speed="220">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werebear" nameDescription="a werebear" race="blood" experience="2100" speed="220">
 	<health now="2400" max="2400" />
-	<look type="720" corpse="0" />
+	<look type="720" corpse="24666" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,6 +20,20 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="50" max="-485" />
+		<attack name="speed" interval="4000" chance="20" radius="7" target="1" speedchange="-100">
+			<attribute key="areaEffect" value="poff" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="15" target="0" radius="4" min="-65" max="-335">
+			<attribute key="areaEffect" value="greenshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="25" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -34,7 +48,6 @@
 		<element holyPercent="-5" />
 		<element deathPercent="45" />
 	</elements>
-	<defenses armor="38" defense="38" />
 	<voices interval="5000" chance="10">
 		<voice sentence="GROOOWL" />
 		<voice sentence="GRRR" />

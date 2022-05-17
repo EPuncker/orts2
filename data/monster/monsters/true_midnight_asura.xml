@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="True Midnight Asura" nameDescription="a true midnight asura" experience="7313" speed="340">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="True Midnight Asura" nameDescription="a true midnight asura" race="blood" experience="7313" speed="340">
 	<health now="9000" max="9000" />
-	<look type="1068" head="0" body="76" legs="53" feet="0" addons="1" corpse="0" />
+	<look type="1068" head="0" body="76" legs="53" feet="0" addons="1" corpse="24648" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -35,8 +35,31 @@
 	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" chance="100" min="0" max="-450" />
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="0" max="-70" />
+		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="100" max="400">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="death" interval="2000" chance="10" length="8" spread="0" min="100" max="400">
+			<attribute key="areaEffect" value="blacksmoke" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" radius="1" target="1" speedchange="-100" duration="30000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="drunk" interval="2000" chance="10" range="3" target="1" radius="4" duration="4000">
+			<attribute key="areaEffect" value="stun" />
+		</attack>
 	</attacks>
-	<defenses armor="75" defense="75" />
+	<defenses armor="75" defense="55">
+		<defense name="healing" interval="2000" chance="15" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="320" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="20" duration="10000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<loot>
 		<item id="2152" name="platinum coin" chance="100000" countmax="8" />
 		<item id="24630" name="golden lotus brooch" chance="21887" />

@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="Owin" nameDescription="Owin" experience="5000" speed="0">
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Owin" nameDescription="Owin" race="blood" experience="5000" speed="300">
 	<health now="9600" max="9600" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" mount="0" corpse="0" />
+	<look type="721" corpse="24722" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,12 +20,26 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="60" poison="140" />
+		<attack name="melee" interval="2000" min="0" max="-385" />
+		<attack name="speed" interval="4000" chance="20" radius="7" target="1" speedchange="-100">
+			<attribute key="areaEffect" value="poff" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="25" min="50" max="100">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="20" duration="2000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="10" defense="5" />
 	<loot>
 		<item id="2148" name="gold coin" chance="100000" countmax="117" />
 		<item id="24739" name="moonlight crystals" chance="100000" />

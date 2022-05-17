@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?>
-<monster name="Feroxa" nameDescription="Feroxa" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" mount="0" corpse="0" />
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Feroxa" nameDescription="Feroxa" race="blood" experience="0" speed="350">
+	<health now="100000" max="100000" />
+	<look type="158" head="57" body="76" legs="77" feet="57" corpse="0" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />
@@ -20,6 +20,25 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-1400" max="-1800" />
+		<attack name="death" interval="2000" chance="20" radius="6" target="0" min="-700" max="-1250">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="20" length="9" spread="1" min="-700" max="-1250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</attack>
+		<attack name="physical" interval="2000" chance="20" range="6" target="1" min="-700" max="-1250">
+			<attribute key="shootEffect" value="arrow" />
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="55">
+		<defense name="speed" interval="2000" chance="12" speedchange="1250" duration="10000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="feroxa summon" interval="2000" chance="20" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -29,7 +48,6 @@
 		<element energyPercent="-5" />
 		<element holyPercent="-10" />
 	</elements>
-	<defenses armor="10" defense="5" />
 	<loot>
 		<item id="2158" name="blue gem" chance="100000" />
 		<item id="7591" name="great health potion" chance="100000" countmax="5" />

@@ -69,7 +69,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	Game.setStorageValue(GlobalStorageKeys.InServiceOfYalahar.LastFight, 1)
-	addEvent(Game.createMonster, 18 * 1000, "Azerus2", Position(32783, 31167, 10))
+	addEvent(Game.createMonster, 18 * 1000, "Immune Azerus", Position(32783, 31167, 10))
 
 	local azeruswavemonster
 	for i = 1, #creatureNames do

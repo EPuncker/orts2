@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Renegade Quara Pincher" nameDescription="a renegade quara pincher" experience="2200" speed="396">
+<monster name="Renegade Quara Pincher" nameDescription="a renegade quara pincher" race="blood" experience="2200" speed="396">
 	<health now="2800" max="2800" />
-	<look type="77" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="77" corpse="6063" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,13 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="90" attack="60" />
+		<attack name="speed" interval="2000" chance="20" range="1" speedchange="-300" duration="3000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="85" defense="85" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -29,7 +36,6 @@
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-302" />
 	</attacks>
-	<defenses armor="85" defense="85" />
 	<loot>
 		<item id="2152" name="platinum coin" chance="80480" countmax="5" />
 		<item id="12446" name="quara pincers" chance="18549" />

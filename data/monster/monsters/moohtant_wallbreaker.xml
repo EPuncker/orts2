@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Moohtant Wallbreaker" nameDescription="a moohtant wallbreaker" experience="0" speed="80">
 	<health now="250000" max="250000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="607" corpse="23367" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -23,7 +23,6 @@
 		<element physicalPercent="85" />
 		<element icePercent="85" />
 		<element holyPercent="85" />
-		<element deathPercent="0" />
 	</elements>
 	<defenses armor="30" defense="30" />
 	<loot>

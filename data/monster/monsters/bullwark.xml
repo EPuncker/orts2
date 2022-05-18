@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Bullwark" nameDescription="" experience="22000" speed="0">
+<monster name="Bullwark" nameDescription="Bullwark" race="blood" experience="22000" speed="300">
 	<health now="72000" max="72000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="607" corpse="23367" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -14,6 +14,33 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="180" attack="200" />
+		<attack name="lifedrain" interval="2000" chance="19" radius="6" target="0" min="-200" max="-400">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="bleedcondition" interval="2000" chance="9" radius="8" target="0" min="-400" max="-600">
+			<attribute key="areaEffect" value="iceattack" />
+		</attack>
+		<attack name="physical" interval="2000" chance="8" range="7" target="1" radius="6" min="-250" max="-400">
+			<attribute key="shootEffect" value="largerock" />
+			<attribute key="areaEffect" value="stones" />
+		</attack>
+		<attack name="physical" interval="2000" chance="13" range="7" target="1" radius="4" min="-200" max="-400">
+			<attribute key="shootEffect" value="whirlwindclub" />
+			<attribute key="areaEffect" value="explosion" />
+		</attack>
+		<attack name="bullwark paralyze" interval="2000" chance="6" />
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="1" min="4000" max="6000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="11" speedchange="660" duration="7000">
+			<attribute key="areaEffect" value="blackspark" />
+		</defense>
+		<defense name="bullwark summon" interval="2000" chance="9" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -26,7 +53,6 @@
 		<element icePercent="15" />
 		<element deathPercent="10" />
 	</elements>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="23570" name="giant pacifier" chance="100000" />
 		<item id="2148" name="gold coin" chance="100000" countmax="200" />

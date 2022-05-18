@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Unstable Tunnel" nameDescription="an unstable tunnel" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<health now="1000" max="1000" />
+	<look typeex="31311" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -12,6 +12,7 @@
 		<flag canwalkonenergy="0" />
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
+		<flag healthhidden="1" />
 	</flags>
 	<immunities>
 		<immunity paralyze="1" />
@@ -19,7 +20,6 @@
 	</immunities>
 	<elements>
 		<element holyPercent="65" />
-		<element deathPercent="0" />
 	</elements>
 	<defenses armor="30" defense="30" />
 	<summons maxSummons="4">

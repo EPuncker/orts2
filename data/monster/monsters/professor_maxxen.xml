@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Professor Maxxen" nameDescription="" experience="15500" speed="0">
+<monster name="Professor Maxxen" nameDescription="Professor Maxxen" race="energy" experience="15500" speed="340">
 	<health now="90000" max="90000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="679" corpse="24279" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -14,12 +14,38 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="180" attack="200" />
+		<attack name="energy" interval="2000" chance="11" radius="8" min="-250" max="-500">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="20" length="8" spread="0" min="-450" max="-1500">
+			<attribute key="areaEffect" value="teleport" />
+		</attack>
+		<attack name="fire" interval="2000" chance="20" length="8" spread="0" min="-450" max="-500">
+			<attribute key="areaEffect" value="fireattack" />
+		</attack>
+		<attack name="war golem skill reducer" interval="2000" chance="22" />
+		<attack name="war golem electrify" interval="2000" range="2" chance="16" />
+		<attack name="glooth fairy skill reducer" interval="2000" chance="20" />
+		<attack name="glooth fairy paralyze" interval="2000" chance="9" />
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="speed" interval="2000" chance="13" speedchange="460" duration="4000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" interval="2000" chance="20" min="200" max="250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="generator" interval="30000" chance="50" />
+		<defense name="maxxenTeleport" interval="2000" chance="5" />
+		<defense name="glooth fairy healing" interval="1000" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="23574" name="glooth bag" chance="100000" countmax="2" />
 	</loot>

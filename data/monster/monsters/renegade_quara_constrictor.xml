@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Renegade Quara Constrictor" nameDescription="a renegade quara constrictor" experience="1250" speed="380">
+<monster name="Renegade Quara Constrictor" nameDescription="a renegade quara constrictor" race="blood" experience="1250" speed="380">
 	<health now="1500" max="1500" />
-	<look type="46" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="46" corpse="6065" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag illusionable="1" />
@@ -15,6 +15,16 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="60" attack="40" />
+		<attack name="quara constrictor freeze" interval="2000" chance="10" />
+		<attack name="quara constrictor electrify" range="1" interval="2000" chance="10" />
+	</attacks>
+	<defenses armor="35" defense="35">
+		<defense name="healing" interval="3000" chance="35" min="150" max="300">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity drunk="1" />
@@ -26,7 +36,6 @@
 		<element drownPercent="100" />
 		<element icePercent="100" />
 	</elements>
-	<defenses armor="35" defense="35" />
 	<loot>
 		<item id="2152" name="platinum coin" chance="80782" countmax="3" />
 		<item id="12443" name="quara tentacle" chance="14621" />

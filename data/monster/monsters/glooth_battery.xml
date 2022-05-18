@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Glooth Battery" nameDescription="a glooth battery" experience="3000" speed="0">
+<monster name="Glooth Battery" nameDescription="a glooth battery" race="blood" experience="3000" speed="0">
 	<health now="8000" max="8000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look typeex="23081" corpse="24309" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,16 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="poison" interval="2000" chance="10" radius="6" target="0" min="-206" max="-252">
+			<attribute key="areaeffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="4000" chance="15" min="133" max="454">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,7 +35,6 @@
 		<element firePercent="25" />
 		<element icePercent="25" />
 		<element holyPercent="25" />
-		<element deathPercent="0" />
 	</elements>
 	<defenses armor="30" defense="30" />
 	<loot>

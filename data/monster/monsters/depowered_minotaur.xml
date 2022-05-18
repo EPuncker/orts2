@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Depowered Minotaur" nameDescription="a depowered minotaur" experience="1100" speed="212">
+<monster name="Depowered Minotaur" nameDescription="a depowered minotaur" race="blood" experience="1100" speed="212">
 	<health now="1500" max="1500" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="25" corpse="5969" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -21,7 +21,6 @@
 	<elements>
 		<element firePercent="20" />
 		<element holyPercent="10" />
-		<element deathPercent="0" />
 	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-200" />

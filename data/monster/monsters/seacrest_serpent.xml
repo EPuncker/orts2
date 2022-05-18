@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Seacrest Serpent" nameDescription="a seacrest serpent" experience="2600" speed="500">
+<monster name="Seacrest Serpent" nameDescription="a seacrest serpent" race="venom" experience="2600" speed="500">
 	<health now="3000" max="3000" />
-	<look type="675" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="675" corpse="24262" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,30 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="120" attack="82" />
+		<attack name="death" interval="2000" chance="7" range="7" target="1" min="-200" max="-260">
+			<attribute key="shootEffect" value="earth" />
+			<attribute key="areaEffect" value="rednote" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="11" target="0" radius="3" min="-200" max="-285">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="ice" interval="2000" chance="30" length="8" spread="3" min="0" max="-284">
+			<attribute key="areaEffect" value="watersplash" />
+		</attack>
+		<attack name="physical" interval="2000" chance="10" length="4" spread="0" min="-200" max="-300">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="31">
+		<defense name="healing" interval="2000" chance="15" min="145" max="200">
+			<attribute key="areaEffect" value="bluenote" />
+		</defense>
+		<defense name="melee" interval="2000" chance="10">
+			<attribute key="areaEffect" value="smallplants" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -28,7 +52,6 @@
 		<element icePercent="100" />
 		<element deathPercent="10" />
 	</elements>
-	<defenses armor="51" defense="51" />
 	<voices interval="1000" chance="5">
 		<voice sentence="LEAVE THESE GROUNDS..." />
 		<voice sentence="THE DARK TIDE WILL SWALLOW YOU..." />

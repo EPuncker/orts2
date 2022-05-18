@@ -44,7 +44,6 @@
 	<elements>
 		<element earthPercent="-1" />
 		<element holyPercent="-1" />
-		<element deathPercent="0" />
 	</elements>
 	<loot>
 		<item id="18418" name="blue crystal splinter" chance="100000" countmax="10" />

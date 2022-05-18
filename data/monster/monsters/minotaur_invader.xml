@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Minotaur Invader" nameDescription="a minotaur invader" experience="1600" speed="240">
+<monster name="Minotaur Invader" nameDescription="a minotaur invader" race="blood" experience="1600" speed="240">
 	<health now="1850" max="1850" />
-	<look type="29" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="29" corpse="5983" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />

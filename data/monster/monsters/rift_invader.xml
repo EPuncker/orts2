@@ -21,7 +21,6 @@
 	<elements>
 		<element icePercent="10" />
 		<element holyPercent="-15" />
-		<element deathPercent="0" />
 	</elements>
 	<defenses armor="35" defense="35" />
 </monster>

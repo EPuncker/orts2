@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Renegade Quara Mantassin" nameDescription="a renegade quara mantassin" experience="1000" speed="590">
+<monster name="Renegade Quara Mantassin" nameDescription="a renegade quara mantassin" race="blood" experience="1000" speed="590">
 	<health now="1200" max="1200" />
-	<look type="72" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="72" corpse="6064" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,14 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="40" attack="55" />
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="invisible" interval="2000" chance="20" duration="2000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity drunk="1" />
@@ -25,7 +33,6 @@
 		<element drownPercent="100" />
 		<element icePercent="100" />
 	</elements>
-	<defenses armor="16" defense="16" />
 	<loot>
 		<item id="12445" name="mantassin tail" chance="13123" />
 		<item id="2178" name="mind stone" chance="9302" />

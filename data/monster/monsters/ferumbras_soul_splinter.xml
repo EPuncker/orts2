@@ -51,7 +51,6 @@
 		<element energyPercent="25" />
 		<element icePercent="25" />
 		<element holyPercent="25" />
-		<element deathPercent="0" />
 	</elements>
 	<summons maxSummons="2">
 		<summon name="Demon2" interval="2000" chance="11" />

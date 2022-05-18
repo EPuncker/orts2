@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Glooth-Generator" nameDescription="a glooth-generator" experience="0" speed="0">
+<monster name="Glooth-Generator" nameDescription="a glooth-generator" race="venom" experience="0" speed="0">
 	<health now="12000" max="12000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look typeex="23081" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,14 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="energy" interval="2000" chance="18" radius="2" target="0" min="-200" max="-600">
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50">
+		<defense name="glooth-generator summon" interval="1000" chance="100" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

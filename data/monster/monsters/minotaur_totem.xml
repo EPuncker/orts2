@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Minotaur Totem" nameDescription="a minotaur totem" experience="500" speed="78">
+<monster name="Minotaur Totem" nameDescription="a minotaur totem" race="undead" experience="500" speed="78">
 	<health now="6000" max="6000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look typeex="3802" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

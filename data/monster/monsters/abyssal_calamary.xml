@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Abyssal Calamary" nameDescription="an abyssal calamary" experience="200" speed="280">
+<monster name="Abyssal Calamary" nameDescription="an abyssal calamary" race="blood" experience="200" speed="280">
 	<health now="300" max="300" />
-	<look type="451" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="451" corpse="15280" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag illusionable="1" />
@@ -14,6 +14,10 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="drunk" interval="2000" chance="10" range="2" duration="5000" />
+	</attacks>
+	<defenses armor="12" defense="12" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Devourer" nameDescription="a devourer" experience="1755" speed="200">
+<monster name="Devourer" nameDescription="a devourer" race="venom" experience="1755" speed="200">
 	<health now="1900" max="1900" />
-	<look type="617" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="617" corpse="23484" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,30 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-260" />
+		<attack name="lifedrain" interval="2000" chance="10" range="7" min="-40" max="-125" target="1">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="earth" interval="2000" chance="8" range="7" target="1" min="-50" max="-160">
+			<attribute key="shootEffect" value="poison" />
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+		<attack name="devourer wave" interval="2000" chance="5" min="-50" max="-150" />
+		<attack name="devourer paralyze" interval="2000" chance="9" />
+		<attack name="earth" interval="2000" chance="11" length="1" spread="0" min="-50" max="-150">
+			<attribute key="areaEffect" value="smoke" />
+		</attack>
+		<attack name="earth" interval="2000" chance="7" radius="4" target="0" min="-120" max="-135">
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="25">
+		<defense name="healing" interval="2000" chance="20" min="0" max="136">
+			<attribute key="areaEffect" value="greenshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,12 +49,6 @@
 		<element icePercent="15" />
 		<element deathPercent="10" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-260" />
-	</attacks>
-	<defenses armor="45" defense="45">
-		<defense name="healing" interval="2000" chance="20" min="0" max="136" />
-	</defenses>
 	<voices interval="1000" chance="5">
 		<voice sentence="*gulp*" />
 		<voice sentence="*Bruaarrr!*" />

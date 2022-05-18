@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="High Voltage Elemental" nameDescription="a high voltage elemental" experience="1500" speed="278">
+<monster name="High Voltage Elemental" nameDescription="a high voltage elemental" race="blood" experience="1500" speed="278">
 	<health now="1500" max="1500" />
-	<look type="293" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="293" corpse="8966" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,17 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="66" attack="70" />
+		<attack name="energy" interval="2000" chance="10" range="7" radius="2" target="1" min="-205" max="-497">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" range="7" target="1" min="-201" max="-277">
+			<attribute key="shootEffect" value="energyball" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+	</attacks>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

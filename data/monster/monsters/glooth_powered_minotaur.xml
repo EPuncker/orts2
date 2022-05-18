@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Glooth Powered Minotaur" nameDescription="a glooth powered minotaur" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+<monster name="Glooth Powered Minotaur" nameDescription="a glooth powered minotaur" race="blood" experience="2600" speed="200">
+	<health now="3200" max="3200" />
+	<look type="607" corpse="23367" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,20 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-290" />
+		<attack name="physical" interval="2000" chance="15" radius="3" min="0" max="-200">
+			<attribute key="areaEffect" value="blackspark" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="15" range="7" radius="4" target="1" min="-100" max="-225">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="45">
+		<defense name="healing" interval="4000" chance="15" min="50" max="145">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

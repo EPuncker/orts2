@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Renegade Quara Predator" nameDescription="a renegade quara predator" experience="2700" speed="450">
+<monster name="Renegade Quara Predator" nameDescription="a renegade quara predator" race="blood" experience="2700" speed="450">
 	<health now="3250" max="3250" />
-	<look type="20" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="20" corpse="6067" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag illusionable="1" />
@@ -15,6 +15,15 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-465" />
+	</attacks>
+	<defenses armor="40" defense="40">
+		<defense name="speed" interval="2000" chance="15" minspeedchange="300" maxspeedchange="300" duration="7000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" interval="2000" chance="20" min="50" max="100" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -27,15 +36,6 @@
 		<element drownPercent="100" />
 		<element icePercent="100" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-465" />
-	</attacks>
-	<defenses armor="40" defense="40">
-		<defense name="speed" interval="2000" chance="15" minspeedchange="300" maxspeedchange="300" duration="7000">
-			<attribute key="areaEffect" value="redshimmer" />
-		</defense>
-		<defense name="healing" interval="2000" chance="20" min="50" max="100" />
-	</defenses>
 	<loot>
 		<item id="2152" name="platinum coin" chance="80027" countmax="4" />
 		<item id="12447" name="quara bone" chance="9920" />

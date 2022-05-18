@@ -12,7 +12,6 @@
 		<flag canwalkonenergy="0" />
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
-		<flag healthhidden="1" />
 	</flags>
 	<immunities>
 		<immunity paralyze="1" />

@@ -37,7 +37,6 @@
 		<defense name="speed" interval="2000" chance="12" speedchange="1250" duration="10000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
-		<defense name="feroxa summon" interval="2000" chance="20" />
 	</defenses>
 	<immunities>
 		<immunity paralyze="1" />

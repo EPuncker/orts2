@@ -36,7 +36,6 @@
 		<defense name="healing" interval="3000" chance="35" min="400" max="6000">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="shulgrax summon" interval="5000" chance="5" />
 		<defense name="speed" interval="4000" chance="80" speedchange="440" duration="6000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>

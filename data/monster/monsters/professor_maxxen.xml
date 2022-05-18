@@ -37,9 +37,6 @@
 		<defense name="healing" interval="2000" chance="20" min="200" max="250">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="generator" interval="30000" chance="50" />
-		<defense name="maxxenTeleport" interval="2000" chance="5" />
-		<defense name="glooth fairy healing" interval="1000" />
 	</defenses>
 	<immunities>
 		<immunity paralyze="1" />

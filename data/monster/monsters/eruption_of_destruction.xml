@@ -9,7 +9,6 @@
 		<flag canpushcreatures="0" />
 		<flag staticattack="90" />
 		<flag targetdistance="1" />
-		<flag healthhidden="1" />
 		<flag canwalkonenergy="0" />
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
@@ -18,7 +17,6 @@
 		<attack name="speed" interval="2000" chance="25" radius="7" speedchange="-600" duration="15000">
 			<attribute key="areaEffect" value="bluebubble" />
 		</attack>
-		<attack name="eruption of destruction explosion" interval="2000" chance="250" min="-4000" max="-6000" />
 	</attacks>
 	<immunities>
 		<immunity paralyze="1" />

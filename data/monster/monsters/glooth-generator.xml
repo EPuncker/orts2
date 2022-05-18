@@ -18,9 +18,7 @@
 			<attribute key="areaEffect" value="energyarea" />
 		</attack>
 	</attacks>
-	<defenses armor="50" defense="50">
-		<defense name="glooth-generator summon" interval="1000" chance="100" />
-	</defenses>
+	<defenses armor="50" defense="50" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

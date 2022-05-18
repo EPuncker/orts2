@@ -32,13 +32,9 @@
 			<attribute key="areaEffect" value="poison" />
 		</attack>
 		<attack name="lisa paralyze" interval="2000" chance="12" />
-		<attack name="lisa skill reducer" interval="2000" chance="15" />
 		<attack name="lisa wave" interval="2000" chance="11" min="-400" max="-900" />
 	</attacks>
-	<defenses armor="15" defense="25">
-		<defense name="lisa summon" interval="2000" chance="5" />
-		<defense name="lisa heal" interval="1000" chance="100" />
-	</defenses>
+	<defenses armor="15" defense="25" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

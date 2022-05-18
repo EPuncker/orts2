@@ -33,8 +33,6 @@
 		<defense name="healing" interval="2000" chance="25" min="220" max="535">
 			<attribute key="areaEffect" value="yellowbubble" />
 		</defense>
-		<defense name="zamulosh invisible" interval="2000" chance="25" />
-		<defense name="zamulosh tp" interval="2000" chance="15" />
 	</defenses>
 	<immunities>
 		<immunity paralyze="1" />

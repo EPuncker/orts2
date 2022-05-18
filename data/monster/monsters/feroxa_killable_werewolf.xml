@@ -39,7 +39,6 @@
 		<defense name="outfit" interval="2000" chance="20" monster="were wolf" duration="5000">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="feroxa summon" interval="2000" chance="20" />
 	</defenses>
 	<immunities>
 		<immunity paralyze="1" />

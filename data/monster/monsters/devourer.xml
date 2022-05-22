@@ -39,7 +39,7 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element energyPercent="-5" />,
+		<element energyPercent="-5" />
 		<element icePercent="15" />
 		<element deathPercent="10" />
 	</elements>

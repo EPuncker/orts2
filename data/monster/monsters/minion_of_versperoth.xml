@@ -35,7 +35,7 @@
 	<defenses armor="30" defense="30" />
 	<elements>
 		<element physicalPercent="30" />
-		<element energyPercent="30" />,
+		<element energyPercent="30" />
 		<element icePercent="-5" />
 		<element deathPercent="35" />
 	</elements>

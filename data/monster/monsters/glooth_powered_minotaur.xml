@@ -35,7 +35,7 @@
 		<element icePercent="95" />
 		<element holyPercent="95" />
 		<element deathPercent="95" />
-	</elements>,
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

@@ -52,7 +52,7 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element energyPercent="5" />,
+		<element energyPercent="5" />
 		<element firePercent="-5" />
 		<element holyPercent="15" />
 		<element deathPercent="30" />

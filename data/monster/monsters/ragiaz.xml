@@ -41,14 +41,14 @@
 			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
 	</defenses>
+	<elements>
+		<element deathPercent="10" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element deathPercent="1" />
-	</elements>
 	<loot>
 		<item id="18419" name="cyan crystal fragment" chance="100000" countmax="6" />
 		<item id="2148" name="gold coin" chance="100000" countmax="275" />

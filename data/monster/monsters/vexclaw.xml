@@ -14,7 +14,7 @@
 		<flag canwalkonpoison="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="75" attack="150" />
+		<attack name="melee" interval="2000" min="0" max="-550" />
 		<attack name="manadrain" interval="2000" chance="10" range="7" min="0" max="-120" />
 		<attack name="fire" interval="2000" chance="20" range="7" radius="7" target="1" min="-150" max="-250">
 			<attribute key="shootEffect" value="fire" />
@@ -47,26 +47,22 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="5" />
 		<element energyPercent="10" />
 		<element earthPercent="40" />
 		<element firePercent="75" />
-		<element lifedrainPercent="100" />
-		<element drownPercent="100" />
 		<element icePercent="-5" />
 		<element holyPercent="-10" />
 		<element deathPercent="20" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-550" />
-	</attacks>
-	<defenses armor="55" defense="55" />
+	<immunities>
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="Power is miiiiine!" />
 		<voice sentence="Weakness must be culled!" />

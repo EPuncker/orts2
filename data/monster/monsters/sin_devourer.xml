@@ -36,17 +36,9 @@
 		</defense>
 	</defenses>
 	<immunities>
+		<immunity energy="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element physicalPercent="100" />
-		<element energyPercent="100" />
-		<element earthPercent="100" />
-		<element firePercent="100" />
-		<element icePercent="100" />
-		<element holyPercent="100" />
-		<element deathPercent="100" />
-	</elements>
 </monster>

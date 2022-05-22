@@ -33,17 +33,17 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="10" />
 		<element earthPercent="1" />
 		<element icePercent="50" />
-		<element deathPercent="100" />
 	</elements>
+	<immunities>
+		<immunity death="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="2144" name="black pearl" chance="100000" countmax="5" />
 		<item id="2152" name="platinum coin" chance="100000" countmax="15" />

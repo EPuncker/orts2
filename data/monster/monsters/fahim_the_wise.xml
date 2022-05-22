@@ -41,17 +41,17 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element firePercent="1" />
 		<element icePercent="-15" />
 		<element holyPercent="1" />
 		<element deathPercent="-10" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="You should know better than to be an enemy of the Marid" />
 	</voices>

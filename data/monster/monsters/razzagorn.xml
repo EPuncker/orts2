@@ -46,15 +46,15 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
+	<elements>
+		<element firePercent="40" />
+		<element holyPercent="10" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element firePercent="40" />
-		<element holyPercent="10" />
-	</elements>
 	<loot>
 		<item id="7443" name="bullseye potion" chance="100000" />
 		<item id="6500" name="demonic essence" chance="100000" />

@@ -40,16 +40,16 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="30" />
-		<element earthPercent="100" />
 		<element firePercent="20" />
 		<element icePercent="20" />
 		<element holyPercent="-8" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+		<immunity earth="1" />
+	</immunities>
 </monster>

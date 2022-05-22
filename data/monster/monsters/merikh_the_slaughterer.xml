@@ -42,17 +42,17 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element firePercent="1" />
 		<element icePercent="-1" />
 		<element holyPercent="-1" />
 		<element deathPercent="1" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="Your death will be slow and painful." />
 	</voices>

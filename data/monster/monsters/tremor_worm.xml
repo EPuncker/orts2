@@ -18,11 +18,6 @@
 		<attack name="melee" interval="2000" min="0" max="-400" />
 	</attacks>
 	<defenses armor="30" defense="30" />
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="75" />
 		<element energyPercent="75" />
@@ -32,6 +27,11 @@
 		<element holyPercent="75" />
 		<element deathPercent="75" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="18419" name="cyan crystal fragment" chance="100000" />
 		<item id="7591" name="great health potion" chance="100000" countmax="17" />

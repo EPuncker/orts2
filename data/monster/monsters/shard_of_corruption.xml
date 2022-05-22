@@ -22,18 +22,18 @@
 		</attack>
 	</attacks>
 	<defenses armor="30" defense="30" />
+	<elements>
+		<element physicalPercent="60" />
+		<element energyPercent="25" />
+		<element firePercent="30" />
+		<element icePercent="15" />
+	</elements>
 	<immunities>
+		<immunity death="1" />
+		<immunity drown="1" />
+		<immunity earth="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element physicalPercent="60" />
-		<element energyPercent="25" />
-		<element earthPercent="100" />
-		<element firePercent="30" />
-		<element drownPercent="100" />
-		<element icePercent="15" />
-		<element deathPercent="100" />
-	</elements>
 </monster>

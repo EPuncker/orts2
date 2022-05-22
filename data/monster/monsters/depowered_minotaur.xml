@@ -13,19 +13,19 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-200" />
+	</attacks>
+	<defenses armor="30" defense="30" />
+	<elements>
+		<element firePercent="20" />
+		<element holyPercent="10" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element firePercent="20" />
-		<element holyPercent="10" />
-	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-200" />
-	</attacks>
-	<defenses armor="30" defense="30" />
 	<voices interval="1000" chance="5">
 		<voice sentence="I want my power back!" />
 	</voices>

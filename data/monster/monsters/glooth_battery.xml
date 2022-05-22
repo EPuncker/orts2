@@ -24,11 +24,6 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="25" />
 		<element earthPercent="1" />
@@ -36,7 +31,11 @@
 		<element icePercent="25" />
 		<element holyPercent="25" />
 	</elements>
-	<defenses armor="30" defense="30" />
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="2152" name="platinum coin" chance="75000" countmax="5" />
 		<item id="7590" name="great mana potion" chance="13462" />

@@ -14,21 +14,21 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-350" />
+	</attacks>
+	<defenses armor="40" defense="40" />
 	<elements>
 		<element firePercent="20" />
 		<element icePercent="-10" />
 		<element holyPercent="10" />
 		<element deathPercent="-10" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-350" />
-	</attacks>
-	<defenses armor="40" defense="40" />
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="For the victory!" />
 		<voice sentence="We will crush the enemy!" />

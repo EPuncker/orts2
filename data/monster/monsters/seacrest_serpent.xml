@@ -38,20 +38,20 @@
 			<attribute key="areaEffect" value="smallplants" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="10" />
 		<element energyPercent="10" />
 		<element earthPercent="10" />
 		<element firePercent="20" />
-		<element drownPercent="100" />
-		<element icePercent="100" />
 		<element deathPercent="10" />
 	</elements>
+	<immunities>
+		<immunity drown="1" />
+		<immunity ice="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="LEAVE THESE GROUNDS..." />
 		<voice sentence="THE DARK TIDE WILL SWALLOW YOU..." />

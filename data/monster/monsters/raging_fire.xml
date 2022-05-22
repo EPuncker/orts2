@@ -10,7 +10,7 @@
 		<flag staticattack="90" />
 		<flag targetdistance="1" />
 		<flag canwalkonenergy="0" />
-		<flag canwalkonfire="0" />
+		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
@@ -25,15 +25,15 @@
 			<attribute key="areaEffect" value="fire" />
 		</attack>
 	</attacks>
+	<defenses armor="50" defense="50" />
+	<elements>
+		<element icePercent="-10" />
+		<element deathPercent="20" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
+		<immunity fire="1" />
 	</immunities>
-	<elements>
-		<element firePercent="100" />
-		<element icePercent="-10" />
-		<element deathPercent="20" />
-	</elements>
-	<defenses armor="50" defense="50" />
 </monster>

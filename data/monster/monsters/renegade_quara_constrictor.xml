@@ -25,17 +25,17 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="-25" />
 		<element earthPercent="-10" />
-		<element firePercent="100" />
-		<element drownPercent="100" />
-		<element icePercent="100" />
 	</elements>
+	<immunities>
+		<immunity fire="1" />
+		<immunity drown="1" />
+		<immunity ice="1" />
+		<immunity paralyze="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="2152" name="platinum coin" chance="80782" countmax="3" />
 		<item id="12443" name="quara tentacle" chance="14621" />

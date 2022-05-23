@@ -1,6 +1,8 @@
 local mountIds = {22, 25, 26}
 
-function onThink(interval)
+local checkMounts = GlobalEvent("checkMounts")
+
+function checkMounts.onThink(interval)
 	local players = Game.getPlayers()
 	if #players == 0 then
 		return true
@@ -24,7 +26,10 @@ function onThink(interval)
 		end
 
 		player:setStorageValue(PlayerStorageKeys.RentedHorseTimer, -1)
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Your contract with your horse expired and it returned back to the horse station.')
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your contract with your horse expired and it returned back to the horse station.")
 	end
 	return true
 end
+
+checkMounts:interval(15000)
+checkMounts:register()

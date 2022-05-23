@@ -24,7 +24,11 @@ local function bloom()
 	addEvent(bloom, bloomHours * 60 * 60 * 1000)
 end
 
-function onStartup()
+local bloomingGriffinclaw = GlobalEvent("GriffinclawFlower")
+
+function bloomingGriffinclaw.onStartup()
 	bloom()
 	return true
 end
+
+bloomingGriffinclaw:register()

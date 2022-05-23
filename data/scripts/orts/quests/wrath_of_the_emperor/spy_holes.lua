@@ -8,7 +8,9 @@ local positions = {
 	Position(33380, 31093, 8)
 }
 
-function onThink(interval, lastExecution)
+local spyHoles = GlobalEvent("5000")
+
+function spyHoles.onThink(interval, lastExecution)
 	if math.random(100) < 50 then
 		return true
 	end
@@ -23,3 +25,6 @@ function onThink(interval, lastExecution)
 
 	return true
 end
+
+spyHoles:interval(15000)
+spyHoles:register()

@@ -26,11 +26,11 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
-			if player:getMoney() >= 1000 then
+			if player:getTotalMoney() >= 1000 then
 				npcHandler:say("Here it is.", cid)
 				player:setStorageValue(PlayerStorageKeys.TravellingTrader.Mission04, 2)
 				player:addItem(8760, 1)
-				player:removeMoney(1000)
+				player:removeTotalMoney(1000)
 			else
 				npcHandler:say("You don't have enought money.", cid)
 			end

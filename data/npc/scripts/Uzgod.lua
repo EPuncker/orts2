@@ -70,8 +70,8 @@ local function creatureSayCallback(cid, type, msg)
 			player:setStorageValue(PlayerStorageKeys.ExplorerSociety.QuestLine, 3)
 			npcHandler.topic[cid] = 0
 		elseif(npcHandler.topic[cid] == 9) then
-			if player:getMoney() >= 250 and player:getItemCount(5880) >= 3 then
-				player:removeMoney(250)
+			if player:getTotalMoney() >= 250 and player:getItemCount(5880) >= 3 then
+				player:removeTotalMoney(250)
 				player:removeItem(5880, 3)
 				npcHandler:say("Ah, that's how me like me customers. Ok, me do this... <pling pling> ... another fine swing of the hammer here and there... <ploing>... here you have it!", cid)
 				player:addItem(7385, 1)

@@ -111,15 +111,15 @@ local function creatureSayCallback(cid, type, msg)
 		local player = Player(cid)
 		local items = setNewTradeTable(getTable(player))
 		local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
-			if (ignoreCap == false and (player:getFreeCapacity() < ItemType(items[item].itemId):getWeight(amount) or inBackpacks and player:getFreeCapacity() < (ItemType(items[item].itemId):getWeight(amount) + ItemType(1988):getWeight()))) then
+			if (ignoreCap == false and (player:getFreeCapacity() < ItemType(items[item].itemId):getWeight(amount) or inBackpacks and player:getFreeCapacity() < (ItemType(items[item].itemId):getWeight(amount) + ItemType(ITEM_SHOPPING_BAG):getWeight()))) then
 				return player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have enough cap.')
 			end
-			if items[item].buybuy <= player:getMoney() then
+			if items[item].buybuy <= player:getTotalMoney() then
 				if inBackpacks then
-					local container = Game.createItem(1988, 1)
+					local container = Game.createItem(ITEM_SHOPPING_BAG, 1)
 					local bp = player:addItemEx(container)
-					if(bp ~= 1) then
-						return player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have enough container.')
+					if bp ~= 1 then
+						return player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have enough space in your container.')
 					end
 					for i = 1, amount do
 						container:addItem(items[item].itemId, items[item])
@@ -127,11 +127,11 @@ local function creatureSayCallback(cid, type, msg)
 				else
 					return
 					player:addItem(items[item].itemId, amount, false, items[item]) and
-					player:removeMoney(amount * items[item].buybuy) and
+					player:removeTotalMoney(amount * items[item].buybuy) and
 					player:sendTextMessage(MESSAGE_INFO_DESCR, 'You bought '..amount..'x '..items[item].realName..' for '..items[item].buybuy * amount..' gold coins.')
 				end
 				player:sendTextMessage(MESSAGE_INFO_DESCR, 'You bought '..amount..'x '..items[item].realName..' for '..items[item].buybuy * amount..' gold coins.')
-				player:removeMoney(amount * items[item].buybuy)
+				player:removeTotalMoney(amount * items[item].buybuy)
 			else
 				player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You do not have enough money.')
 			end

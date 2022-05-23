@@ -74,7 +74,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		elseif size > 8 then
 			reward = Game.createItem(1988, 1)
 		else
-			reward = Game.createItem(1987, 1)
+			reward = Game.createItem(ITEM_BAG, 1)
 		end
 
 		for i = 1, size do

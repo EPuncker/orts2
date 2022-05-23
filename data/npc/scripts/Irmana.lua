@@ -28,7 +28,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say("Especially for you, mylady, we are offering a pretty {hat} and a beautiful {dress} like the ones I wear. Which one are you interested in?", cid)
 			npcHandler.topic[cid] = 2
 		elseif npcHandler.topic[cid] == 3 then
-			if player:removeMoney(150000) and player:getStorageValue(PlayerStorageKeys.OutfitQuest.NoblemanFirstAddon) < 1 then
+			if player:removeTotalMoney(150000) and player:getStorageValue(PlayerStorageKeys.OutfitQuest.NoblemanFirstAddon) < 1 then
 				npcHandler:say("Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", cid)
 				player:addOutfitAddon(140, 2)
 				player:addOutfitAddon(132, 2)
@@ -37,7 +37,7 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler.topic[cid] = 0
 			end
 		elseif npcHandler.topic[cid] == 4 then
-			if player:removeMoney(150000) and player:getStorageValue(PlayerStorageKeys.OutfitQuest.NoblemanSecondAddon) < 1 then
+			if player:removeTotalMoney(150000) and player:getStorageValue(PlayerStorageKeys.OutfitQuest.NoblemanSecondAddon) < 1 then
 				npcHandler:say("Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", cid)
 				player:addOutfitAddon(140, 1)
 				player:addOutfitAddon(132, 1)

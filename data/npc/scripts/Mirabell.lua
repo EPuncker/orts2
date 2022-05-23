@@ -40,7 +40,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Excellent. Now I can start baking the pies. As you helped me, I will make you a good price for them.', cid)
 			npcHandler.topic[cid] = 0
 		elseif npcHandler.topic[cid] == 2 then
-			if not player:removeMoney(240) then
+			if not player:removeTotalMoney(240) then
 				npcHandler:say('You don\'t have enough money, don\'t try to fool me.', cid)
 				npcHandler.topic[cid] = 0
 				return true

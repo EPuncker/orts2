@@ -357,10 +357,10 @@ end
 local function onBuy(cid, item, subType, amount, ignoreCap, inBackpacks)
 	local player = Player(cid)
 	if not ignoreCap and player:getFreeCapacity() < ItemType(items[item].id):getWeight(amount) then
-		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'You don\'t have enough cap.')
+		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'You don\'t have enough capacity.')
 	end
 	if items[item].buy then
-		player:removeMoney(amount * items[item].buy)
+		player:removeTotalMoney(amount * items[item].buy)
 		player:addItem(items[item].id, amount)
 		return player:sendTextMessage(MESSAGE_INFO_DESCR, 'Bought '..amount..'x '..items[item].name..' for '..items[item].buy * amount..' gold coins.')
 	end

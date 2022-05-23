@@ -19,7 +19,7 @@ local function creatureSayCallback(cid, type, msg)
 		end
 	elseif msgcontains(msg, "yes") then
 		if npcHandler.topic[cid] == 1 then
-			if player:removeMoney(200) then
+			if player:removeTotalMoney(200) then
 				npcHandler:say("Hmm, it seems that Eleonore does trust you. Perhaps she is even right. However. Since we need some help right now I guess we can't be too picky. Return to Eleonore and tell her the secret password: 'peg leg'. She will tell you more about her problem.", cid)
 				player:setStorageValue(PlayerStorageKeys.TheShatteredIsles.TheErrand, 2)
 				npcHandler.topic[cid] = 2

@@ -13,14 +13,14 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<defenses armor="30" defense="30" />
+	<elements>
+		<element holyPercent="65" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element holyPercent="65" />
-	</elements>
-	<defenses armor="30" defense="30" />
 	<summons maxSummons="4">
 		<voice name="Drillworm" interval="2000" chance="15" max="1" />
 		<voice name="Glooth Anemone" interval="2000" chance="15" max="1" />

@@ -42,16 +42,16 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="25" />
 		<element icePercent="25" />
 		<element holyPercent="25" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<summons maxSummons="2">
 		<summon name="Demon2" interval="2000" chance="11" />
 	</summons>

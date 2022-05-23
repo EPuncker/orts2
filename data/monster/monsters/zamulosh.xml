@@ -34,15 +34,15 @@
 			<attribute key="areaEffect" value="yellowbubble" />
 		</defense>
 	</defenses>
+	<elements>
+		<element earthPercent="-1" />
+		<element holyPercent="-1" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element earthPercent="-1" />
-		<element holyPercent="-1" />
-	</elements>
 	<loot>
 		<item id="18418" name="blue crystal splinter" chance="100000" countmax="10" />
 		<item id="2148" name="gold coin" chance="100000" countmax="179" />

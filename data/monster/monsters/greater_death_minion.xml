@@ -14,13 +14,13 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-450" />
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-450" />
-	</attacks>
-	<defenses armor="30" defense="30" />
 </monster>

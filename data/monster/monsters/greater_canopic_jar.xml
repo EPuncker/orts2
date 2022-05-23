@@ -13,14 +13,14 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<defenses armor="10" defense="5">
+		<defense name="healing" interval="2000" chance="20" min="1000" max="1500" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="10" defense="5">
-		<defense name="healing" interval="2000" chance="20" min="1000" max="1500" />
-	</defenses>
 	<summons maxSummons="1">
 		<voice name="Elder Mummy" interval="2000" chance="15" max="1" />
 	</summons>

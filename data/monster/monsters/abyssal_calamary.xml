@@ -18,19 +18,18 @@
 		<attack name="drunk" interval="2000" chance="10" range="2" duration="5000" />
 	</attacks>
 	<defenses armor="12" defense="12" />
+	<elements>
+		<element physicalPercent="-5" />
+		<element energyPercent="-5" />
+	</elements>
 	<immunities>
+		<immunity earth="1" />
+		<immunity fire="1" />
+		<immunity drown="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element physicalPercent="-5" />
-		<element energyPercent="-5" />
-		<element earthPercent="100" />
-		<element firePercent="100" />
-		<element drownPercent="100" />
-	</elements>
-	<defenses armor="12" defense="12" />
 	<loot>
 		<item id="2667" name="fish" chance="10307" />
 		<item id="2670" name="shrimp" chance="9448" />

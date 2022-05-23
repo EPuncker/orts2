@@ -45,16 +45,4 @@
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element physicalPercent="100" />
-		<element energyPercent="100" />
-		<element earthPercent="100" />
-		<element firePercent="100" />
-		<element lifedrainPercent="100" />
-		<element drownPercent="100" />
-		<element icePercent="100" />
-		<element holyPercent="100" />
-		<element deathPercent="100" />
-	</elements>
-	<defenses armor="10" defense="5" />
 </monster>

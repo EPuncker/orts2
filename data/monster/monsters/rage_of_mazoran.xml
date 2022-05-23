@@ -26,15 +26,15 @@
 		</attack>
 		<attack name="hellfire fighter soulfire" interval="2000" chance="10" />
 	</attacks>
+	<defenses armor="30" defense="30" />
+	<elements>
+		<element energyPercent="20" />
+		<element icePercent="-25" />
+	</elements>
 	<immunities>
+		<immunity fire="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element energyPercent="20" />
-		<element firePercent="100" />
-		<element icePercent="-25" />
-	</elements>
-	<defenses armor="30" defense="30" />
 </monster>

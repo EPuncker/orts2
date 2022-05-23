@@ -13,11 +13,6 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<attacks>
 		<attack name="melee" interval="2000" skill="110" attack="100" />
 		<attack name="death" interval="2000" chance="9" length="8" spread="3" min="-300" max="-700" />
@@ -30,4 +25,9 @@
 			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
 	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 </monster>

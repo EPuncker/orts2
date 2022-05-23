@@ -13,14 +13,14 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<defenses armor="35" defense="35" />
+	<elements>
+		<element icePercent="10" />
+		<element holyPercent="-15" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element icePercent="10" />
-		<element holyPercent="-15" />
-	</elements>
-	<defenses armor="35" defense="35" />
 </monster>

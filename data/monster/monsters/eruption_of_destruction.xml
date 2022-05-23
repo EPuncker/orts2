@@ -18,10 +18,10 @@
 			<attribute key="areaEffect" value="bluebubble" />
 		</attack>
 	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 </monster>

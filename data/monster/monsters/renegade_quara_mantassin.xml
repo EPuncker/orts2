@@ -22,17 +22,17 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element energyPercent="-25" />
 		<element earthPercent="-10" />
-		<element firePercent="100" />
-		<element drownPercent="100" />
-		<element icePercent="100" />
 	</elements>
+	<immunities>
+		<immunity fire="1" />
+		<immunity drown="1" />
+		<immunity ice="1" />
+		<immunity paralyze="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="12445" name="mantassin tail" chance="13123" />
 		<item id="2178" name="mind stone" chance="9302" />

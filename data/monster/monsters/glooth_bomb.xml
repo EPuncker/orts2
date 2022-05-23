@@ -35,11 +35,6 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="85" />
 		<element energyPercent="85" />
@@ -51,6 +46,11 @@
 		<element holyPercent="85" />
 		<element deathPercent="85" />
 	</elements>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<loot>
 		<item id="7591" name="great health potion" chance="100000" countmax="20" />
 		<item id="7590" name="great mana potion" chance="100000" countmax="13" />

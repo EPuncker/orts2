@@ -41,12 +41,10 @@
         </defense>
     </defenses>
     <immunities>
+        <immunity earth="1" />
+        <immunity death="1" />
         <immunity paralyze="1" />
         <immunity invisible="1" />
         <immunity drunk="1" />
     </immunities>
-    <elements>
-        <element deathPercent="100" />
-    </elements>
-    <defenses armor="30" defense="30" />
 </monster>

@@ -24,18 +24,18 @@
 		</defense>
 		<defense name="healing" interval="2000" chance="20" min="50" max="100" />
 	</defenses>
+	<elements>
+		<element energyPercent="-25" />
+		<element earthPercent="-10" />
+	</elements>
 	<immunities>
+		<immunity fire="1" />
+		<immunity drown="1" />
+		<immunity ice="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element energyPercent="-25" />
-		<element earthPercent="-10" />
-		<element firePercent="100" />
-		<element drownPercent="100" />
-		<element icePercent="100" />
-	</elements>
 	<loot>
 		<item id="2152" name="platinum coin" chance="80027" countmax="4" />
 		<item id="12447" name="quara bone" chance="9920" />

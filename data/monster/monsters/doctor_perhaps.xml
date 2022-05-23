@@ -29,21 +29,20 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="-5" />
 		<element energyPercent="20" />
 		<element earthPercent="20" />
 		<element firePercent="10" />
-		<element drownPercent="100" />
 		<element icePercent="20" />
 		<element holyPercent="20" />
 	</elements>
-	<defenses armor="30" defense="30" />
+	<immunities>
+		<immunity drown="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="I might use some parts of you in my next creation!" />
 		<voice sentence="You're only a testsubject to me!" />

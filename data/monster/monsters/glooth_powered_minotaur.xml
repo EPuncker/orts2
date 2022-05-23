@@ -27,11 +27,6 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
 	<elements>
 		<element physicalPercent="95" />
 		<element energyPercent="95" />
@@ -41,7 +36,11 @@
 		<element holyPercent="95" />
 		<element deathPercent="95" />
 	</elements>
-	<defenses armor="30" defense="30" />
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="POOOWEEER!" />
 	</voices>

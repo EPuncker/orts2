@@ -13,19 +13,6 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
-	<elements>
-		<element energyPercent="-5" />
-		<element earthPercent="40" />
-		<element firePercent="20" />
-		<element lifedrainPercent="100" />
-		<element drownPercent="100" />
-		<element deathPercent="60" />
-	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-450" />
 		<attack name="physical" interval="2000" chance="14" range="7" target="1" min="100" max="-565">
@@ -56,6 +43,19 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
+	<elements>
+		<element energyPercent="-5" />
+		<element earthPercent="40" />
+		<element firePercent="20" />
+		<element deathPercent="60" />
+	</elements>
+	<immunities>
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="Death... Taste!" />
 	</voices>

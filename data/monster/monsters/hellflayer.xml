@@ -13,21 +13,6 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
-	<elements>
-		<element energyPercent="-5" />
-		<element earthPercent="20" />
-		<element firePercent="70" />
-		<element lifedrainPercent="100" />
-		<element drownPercent="100" />
-		<element icePercent="5" />
-		<element holyPercent="-5" />
-		<element deathPercent="25" />
-	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="0" />
 		<attack name="fire" interval="2000" chance="15" range="7" min="-170" max="-300">
@@ -57,6 +42,21 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
+	<elements>
+		<element energyPercent="-5" />
+		<element earthPercent="20" />
+		<element firePercent="70" />
+		<element icePercent="5" />
+		<element holyPercent="-5" />
+		<element deathPercent="25" />
+	</elements>
+	<immunities>
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
 	<voices interval="1000" chance="5">
 		<voice sentence="Your tainted soul belongs to us anyway!" />
 		<voice sentence="You should consider bargaining for your life!" />

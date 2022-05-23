@@ -13,15 +13,15 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-260" />
+	</attacks>
+	<defenses armor="45" defense="45" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-260" />
-	</attacks>
-	<defenses armor="45" defense="45" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Snort!" />
 		<voice sentence="Grunt!" />

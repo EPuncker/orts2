@@ -32,14 +32,14 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
+	<elements>
+		<element deathPercent="10" />
+	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<elements>
-		<element deathPercent="10" />
-	</elements>
 	<loot>
 		<item id="23574" name="glooth bag" chance="100000" countmax="2" />
 		<item id="9971" name="gold ingot" chance="100000" />

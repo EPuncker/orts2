@@ -21,28 +21,16 @@ monster.changeTarget = {
 }
 
 monster.flags = {
-	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
 	pushable = false,
-	rewardBoss = false,
-	illusionable = false,
 	canPushItems = true,
 	canPushCreatures = true,
 	staticAttackChance = 85,
 	targetDistance = 1,
-	runHealth = 0,
-	healthHidden = false,
-	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false
-}
-
-monster.light = {
-	level = 0,
-	color = 0
 }
 
 monster.summon = {
@@ -69,9 +57,6 @@ monster.voices = {
 	{text = "The great machinator will make his entrance soon!"},
 	{text = "You might scratch my shields but they will never break!"}
 }
-
-monster.loot = {
-	}
 
 monster.attacks = {
 	{name ="melee", interval = 2000, chance = 100, minDamage = 0, maxDamage = -900},

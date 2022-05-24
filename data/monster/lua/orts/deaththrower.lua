@@ -20,36 +20,23 @@ monster.changeTarget = {
 }
 
 monster.flags = {
-	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
 	pushable = false,
-	rewardBoss = false,
-	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = false,
 	staticAttackChance = 90,
 	targetDistance = 1,
-	runHealth = 0,
 	healthHidden = true,
-	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false
-}
-
-monster.light = {
-	level = 0,
-	color = 0
 }
 
 monster.voices = {
 	interval = 5000,
 	chance = 10
 }
-
-monster.loot = {}
 
 monster.attacks = {
 	{name = "dark torturer skill reducer",interval = 2000, chance = 15, range = 6, shootEffect = CONST_ANI_SUDDENDEATH, effect = CONST_ME_POFF, target = false}

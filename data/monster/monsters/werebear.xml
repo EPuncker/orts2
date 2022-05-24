@@ -2,7 +2,7 @@
 <monster name="Werebear" nameDescription="a werebear" race="blood" experience="2100" speed="220">
 	<health now="2400" max="2400" />
 	<look type="720" corpse="24666" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />
@@ -21,7 +21,7 @@
 		<flag canwalkonpoison="1" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="50" max="-485" />
+		<attack name="melee" interval="2000" min="0" max="-485" />
 		<attack name="speed" interval="4000" chance="20" radius="7" target="1" speedchange="-100">
 			<attribute key="areaEffect" value="poff" />
 		</attack>

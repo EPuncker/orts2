@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Death Priest Shargon" nameDescription="Death Priest Shargon" race="blood" experience="20000" speed="340">
 	<health now="65000" max="65000" />
-	<look type="278" corpse="23494" addons="3" />
+	<look type="278" addons="3" corpse="23494" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />

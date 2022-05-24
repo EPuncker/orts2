@@ -2,7 +2,7 @@
 <monster name="Mahatheb" nameDescription="Mahatheb" race="undead" experience="600" speed="150">
 	<health now="650" max="650" />
 	<look type="65" corpse="6004" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />

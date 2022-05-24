@@ -53,6 +53,6 @@
 		<immunity drunk="1" />
 	</immunities>
 	<summons maxSummons="2">
-		<summon name="Demon2" interval="2000" chance="11" />
+		<summon name="Demon" interval="2000" chance="11" />
 	</summons>
 </monster>

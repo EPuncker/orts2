@@ -44,7 +44,7 @@
 		<item id="23541" name="gearwheel chain" chance="7692" />
 		<item id="9690" name="gear wheel" chance="3846" />
 		<item id="2645" name="steel boots" chance="3846" />
-		<item name="crystal pedestal" chance="1923" />
+		<item id="9978" name="crystal pedestal" chance="1923" />
 		<item id="5880" name="iron ore" chance="1923" />
 		<item id="7440" name="mastermind potion" chance="1923" />
 		<item id="23540" name="metal spats" chance="1923" />

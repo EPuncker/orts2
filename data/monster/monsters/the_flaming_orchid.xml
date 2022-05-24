@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="The Flaming Orchid" nameDescription="The Flaming Orchid" experience="8500" speed="0">
+<monster name="The Flaming Orchid" nameDescription="The Flaming Orchid" experience="8500" speed="500">
 	<health now="4000" max="4000" />
-	<look type="150" head="114" body="94" legs="78" feet="79" addons="1" corpse="0" />
+	<look type="150" head="114" body="94" legs="78" feet="79" addons="1" corpse="24643" />
 	<targetchange interval="2000" chance="0" />
 	<flags>
 		<flag attackable="1" />

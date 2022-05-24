@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Grimeleech" nameDescription="a grimeleech" experience="7216" speed="340">
+<monster name="Grimeleech" nameDescription="a grimeleech" race="undead" experience="7216" speed="340">
 	<health now="9500" max="9500" />
-	<look type="855" addons="1" corpse="25436" />
+	<look type="855" corpse="25436" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

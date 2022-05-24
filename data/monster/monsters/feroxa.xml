@@ -2,7 +2,7 @@
 <monster name="Feroxa" nameDescription="Feroxa" race="blood" experience="0" speed="350">
 	<health now="100000" max="100000" />
 	<look type="158" head="57" body="76" legs="77" feet="57" corpse="24745" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />
@@ -21,7 +21,7 @@
 		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="-1400" max="-1800" />
+		<attack name="melee" interval="2000" min="0" max="-1800" />
 		<attack name="death" interval="2000" chance="20" radius="6" target="0" min="-700" max="-1250">
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
@@ -34,7 +34,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="50" defense="55">
-		<defense name="speed" interval="2000" chance="12" speedchange="1250" duration="10000">
+		<defense name="speed" interval="2000" chance="12" speedchange="450" duration="10000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>

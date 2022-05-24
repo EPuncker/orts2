@@ -24,28 +24,17 @@ monster.strategiesTarget = {
 }
 
 monster.flags = {
-	summonable = false,
 	attackable = true,
 	hostile = true,
-	convinceable = false,
 	pushable = false,
-	rewardBoss = false,
-	illusionable = false,
 	canPushItems = false,
 	canPushCreatures = true,
 	staticAttackChance = 100,
 	targetDistance = 1,
-	runHealth = 0,
 	healthHidden = true,
-	isBlockable = false,
 	canWalkOnEnergy = false,
 	canWalkOnFire = false,
 	canWalkOnPoison = false
-}
-
-monster.light = {
-	level = 0,
-	color = 0
 }
 
 monster.summon = {
@@ -59,10 +48,6 @@ monster.voices = {
 	interval = 5000,
 	chance = 10
 }
-
-monster.loot = {}
-
-monster.attacks = {}
 
 monster.defenses = {
 	defense = 0,

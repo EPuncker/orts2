@@ -2,7 +2,7 @@
 <monster name="Arthom The Hunter" nameDescription="Arthom The Hunter" race="blood" experience="550" speed="210">
 	<health now="500" max="500" />
 	<look type="129" head="95" body="116" legs="121" feet="115" corpse="20419" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="5000" chance="2" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />
@@ -15,7 +15,7 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag staticattack="90" />
-		<flag targetdistance="1" />
+		<flag targetdistance="4" />
 		<flag canwalkonenergy="0" />
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />

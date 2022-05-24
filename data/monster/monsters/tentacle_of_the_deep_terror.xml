@@ -39,7 +39,4 @@
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<loot>
-		<item id="2152" name="platinum coin" chance="100000" />
-	</loot>
 </monster>

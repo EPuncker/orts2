@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Energy Pulse" nameDescription="an energy pulse" race="undead" experience="0" speed="0">
-	<health now="0" max="0" />
+	<health now="1000" max="1000" />
 	<look type="294" />
 	<targetchange interval="2000" chance="5" />
 	<flags>

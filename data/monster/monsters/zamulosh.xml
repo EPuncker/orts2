@@ -15,7 +15,7 @@
 		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="3000" min="-1500" max="-2300" />
+		<attack name="melee" interval="3000" min="0" max="-2300" />
 		<attack name="death" interval="1000" chance="10" length="12" spread="3" min="-700" max="-800">
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
@@ -58,7 +58,7 @@
 		<item id="18416" name="green crystal splinter" chance="66667" countmax="11" />
 		<item id="2158" name="blue gem" chance="33333" />
 		<item id="25411" name="book of lies" chance="33333" />
-		<item name="giant shimmering pearl" chance="33333" />
+		<item id="7632" name="giant shimmering pearl" chance="33333" />
 		<item id="2150" name="small amethyst" chance="33333" countmax="9" />
 		<item id="2146" name="small sapphire" chance="33333" countmax="3" />
 	</loot>

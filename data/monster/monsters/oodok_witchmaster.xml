@@ -2,7 +2,7 @@
 <monster name="Oodok Witchmaster" nameDescription="Oodok Witchmaster" race="blood" experience="550" speed="150">
 	<health now="450" max="450" />
 	<look type="214" corpse="6055" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />

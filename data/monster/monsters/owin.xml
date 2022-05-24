@@ -2,7 +2,7 @@
 <monster name="Owin" nameDescription="Owin" race="blood" experience="5000" speed="300">
 	<health now="9600" max="9600" />
 	<look type="721" corpse="24722" />
-	<targetchange interval="2000" chance="0" />
+	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag attackable="1" />
 		<flag hostile="1" />

@@ -44,6 +44,11 @@
 		<immunity drunk="1" />
 	</immunities>
 	<loot>
-		<item id="23574" name="glooth bag" chance="100000" countmax="2" />
+		<item id="23574" name="glooth bag" countmax="3" chance="100000"/>
+		<item id="2148" name="gold coin" countmax="10" chance="50000" />
+		<item id="2152" name="platinum coin" countmax="4" chance="52000" />
+		<item id="9971" name="gold ingot" chance="4673" />
+		<item id="24270" name="glooth glider casing" chance="20000" />
+		<item id="9809" name="rusted armor" chance="2895" />
 	</loot>
 </monster>

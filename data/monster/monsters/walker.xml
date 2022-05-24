@@ -42,7 +42,7 @@
 	</voices>
 	<loot>
 		<item name="gold coin" countmax="100" chance="50000" />
-		<item name="gold coin" countmax="99" chance="50000" />
+		<item name="gold coin" countmax="57" chance="50000" />
 		<item name="platinum coin" countmax="3" chance="52000" />
 		<item name="metal toe" chance="20000" />
 		<item name="small topaz" countmax="6" chance="10000" />
@@ -50,6 +50,7 @@
 		<item name="great health potion" chance="8000" />
 		<item name="small amethyst" countmax="3" chance="4500" />
 		<item name="small emerald" countmax="3" chance="4500" />
+		<item name="small topaz" countmax="3" chance="4500" />
 		<item name="metal spats" chance="3500" />
 		<item name="gearwheel chain" chance="2200" />
 		<item name="crystal mace" chance="670" />

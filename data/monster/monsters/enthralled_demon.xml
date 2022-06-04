@@ -31,7 +31,10 @@
 		<attack name="firefield" interval="2000" chance="14" range="7" radius="1" target="1">
 			<attribute key="shootEffect" value="fire" />
 		</attack>
-		<attack name="demon paralyze" interval="2000" chance="10" range="7" />
+		<attack name="speed" interval="2000" chance="25" range="7" radius="4" target="1" minspeedchange="-300" maxspeedchange="-450" duration="25000">
+            <attribute key="shootEffect" value="suddendeath" />
+			<attribute key="areaEffect" value="smallclouds" />
+        </attack>
 		<attack name="lifedrain" interval="2000" chance="10" length="8" spread="0" min="-300" max="-480">
 			<attribute key="areaEffect" value="purpleenergy" />
 		</attack>

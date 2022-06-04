@@ -30,7 +30,9 @@
 			<attribute key="shootEffect" value="whirlwindclub" />
 			<attribute key="areaEffect" value="explosion" />
 		</attack>
-		<attack name="bullwark paralyze" interval="2000" chance="6" />
+		  <attack name="speed" interval="2000" chance="6" target="0" length="3" spread="2" minspeedchange="-550" maxspeedchange="-700" duration="50000">
+            <attribute key="areaEffect" value="blackspark" />
+        </attack>
 	</attacks>
 	<defenses armor="30" defense="30">
 		<defense name="healing" interval="2000" chance="1" min="4000" max="6000">

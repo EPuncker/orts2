@@ -31,7 +31,9 @@
 		<attack name="manadrain" interval="2000" chance="13" radius="8" target="0" min="-100" max="-200">
 			<attribute key="areaEffect" value="poison" />
 		</attack>
-		<attack name="lisa paralyze" interval="2000" chance="12" />
+		<attack name="speed" interval="2000" chance="12" range="7" radius="4" target="1" minspeedchange="-200" maxspeedchange="-450" duration="15000">
+            <attribute key="areaEffect" value="blackspark" />
+        </attack>
 		<attack name="lisa wave" interval="2000" chance="11" min="-400" max="-900" />
 	</attacks>
 	<defenses armor="15" defense="25" />

@@ -19,12 +19,8 @@ monster.changeTarget = {
 	chance = 10
 }
 
-monster.strategiesTarget = {
-	nearest = 100
-}
-
 monster.flags = {
-	attackable = true,
+	attackable = false,
 	hostile = true,
 	pushable = false,
 	canPushItems = false,
@@ -42,11 +38,6 @@ monster.summon = {
 	summons = {
 		{name = "Demon", chance = 100, interval = 1000, count = 1}
 	}
-}
-
-monster.voices = {
-	interval = 5000,
-	chance = 10
 }
 
 monster.defenses = {
@@ -69,9 +60,8 @@ monster.elements = {
 
 monster.immunities = {
 	{type = "paralyze", condition = true},
-	{type = "outfit", condition = false},
-	{type = "invisible", condition = true},
-	{type = "bleed", condition = false}
+	{type = "outfit", condition = true},
+	{type = "invisible", condition = true}
 }
 
 mType:register(monster)

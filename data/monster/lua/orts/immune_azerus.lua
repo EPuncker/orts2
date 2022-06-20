@@ -86,9 +86,7 @@ monster.elements = {
 
 monster.immunities = {
 	{type = "paralyze", condition = true},
-	{type = "outfit", condition = false},
-	{type = "invisible", condition = true},
-	{type = "bleed", condition = false}
+	{type = "invisible", condition = true}
 }
 
 mType:register(monster)

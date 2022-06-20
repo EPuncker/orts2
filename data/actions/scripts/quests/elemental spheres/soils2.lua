@@ -1,15 +1,15 @@
 local spheres = {
-	[8300] = {3, 7},
-	[8304] = {1, 5},
-	[8305] = {2, 6},
-	[8306] = {4, 8}
+	[8300] = {VOCATION_PALADIN, VOCATION_ROYAL_PALADIN},
+	[8304] = {VOCATION_SORCERER, VOCATION_MASTER_SORCERER},
+	[8305] = {VOCATION_DRUID, VOCATION_ELDER_DRUID},
+	[8306] = {VOCATION_KNIGHT, VOCATION_ELITE_KNIGHT}
 }
 
 local globalTable = {
-	[1] = 10005,
-	[2] = 10006,
-	[3] = 10007,
-	[4] = 10008
+	[VOCATION_SORCERER] = 10005,
+	[VOCATION_DRUID] = 10006,
+	[VOCATION_PALADIN] = 10007,
+	[VOCATION_KNIGHT] = 10008
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

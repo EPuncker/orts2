@@ -1,8 +1,8 @@
 local config = {
-	{position = Position(33270, 31835, 10), itemid = 8300, toPosition = Position(33270, 31835, 12), vocationId = 3},
-	{position = Position(33268, 31838, 10), itemid = 8305, toPosition = Position(33267, 31838, 12), vocationId = 2},
-	{position = Position(33266, 31835, 10), itemid = 8306, toPosition = Position(33265, 31835, 12), vocationId = 4},
-	{position = Position(33268, 31833, 10), itemid = 8304, toPosition = Position(33268, 31833, 12), vocationId = 1}
+	{position = Position(33270, 31835, 10), itemid = 8300, toPosition = Position(33270, 31835, 12), vocationId = VOCATION_PALADIN},
+	{position = Position(33268, 31838, 10), itemid = 8305, toPosition = Position(33267, 31838, 12), vocationId = VOCATION_DRUID},
+	{position = Position(33266, 31835, 10), itemid = 8306, toPosition = Position(33265, 31835, 12), vocationId = VOCATION_KNIGHT},
+	{position = Position(33268, 31833, 10), itemid = 8304, toPosition = Position(33268, 31833, 12), vocationId = VOCATION_SORCERER}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

@@ -6,7 +6,7 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	if player:getVocation():getBase():getId() == 1 then
+	if player:getVocation():getBase():getId() == VOCATION_SORCERER then
 		return true
 	end
 

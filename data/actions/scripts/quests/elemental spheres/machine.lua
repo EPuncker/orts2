@@ -1,8 +1,8 @@
 local config = {
-	[1] = Position(33183, 32197, 13),
-	[2] = Position(33331, 32076, 13),
-	[3] = Position(33265, 32202, 13),
-	[4] = Position(33087, 32096, 13)
+	[VOCATION_SORCERER] = Position(33183, 32197, 13),
+	[VOCATION_DRUID] = Position(33331, 32076, 13),
+	[VOCATION_PALADIN] = Position(33265, 32202, 13),
+	[VOCATION_KNIGHT] = Position(33087, 32096, 13)
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

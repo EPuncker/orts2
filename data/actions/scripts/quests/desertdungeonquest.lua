@@ -1,8 +1,8 @@
 local config = {
-	{fromPosition = Position(32677, 32089, 8), toPosition = Position(32671, 32071, 8), sacrificePosition = Position(32679, 32089, 8), sacrificeId = 2175, vocationId = 1},
-	{fromPosition = Position(32669, 32089, 8), toPosition = Position(32673, 32071, 8), sacrificePosition = Position(32667, 32089, 8), sacrificeId = 2674, vocationId = 2},
-	{fromPosition = Position(32673, 32085, 8), toPosition = Position(32670, 32071, 8), sacrificePosition = Position(32673, 32083, 8), sacrificeId = 2455, vocationId = 3},
-	{fromPosition = Position(32673, 32093, 8), toPosition = Position(32672, 32071, 8), sacrificePosition = Position(32673, 32094, 8), sacrificeId = 2376, vocationId = 4}
+	{fromPosition = Position(32677, 32089, 8), toPosition = Position(32671, 32071, 8), sacrificePosition = Position(32679, 32089, 8), sacrificeId = 2175, vocationId = VOCATION_SORCERER},
+	{fromPosition = Position(32669, 32089, 8), toPosition = Position(32673, 32071, 8), sacrificePosition = Position(32667, 32089, 8), sacrificeId = 2674, vocationId = VOCATION_DRUID},
+	{fromPosition = Position(32673, 32085, 8), toPosition = Position(32670, 32071, 8), sacrificePosition = Position(32673, 32083, 8), sacrificeId = 2455, vocationId = VOCATION_PALADIN},
+	{fromPosition = Position(32673, 32093, 8), toPosition = Position(32672, 32071, 8), sacrificePosition = Position(32673, 32094, 8), sacrificeId = 2376, vocationId = VOCATION_KNIGHT}
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)

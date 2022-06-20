@@ -1,24 +1,24 @@
 -- Without Rookgaard
 local config = {
-	[1] = {
+	[VOCATION_SORCERER] = {
 		--equipment spellbook, wand of vortex, magician's robe, mage hat, studded legs, leather boots, scarf
 		items = {{2175, 1}, {2190, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}},
 		--container rope, shovel, mana potion
 		container = {{2120, 1}, {2554, 1}, {7620, 1}}
 	},
-	[2] = {
+	[VOCATION_DRUID] = {
 		--equipment spellbook, snakebite rod, magician's robe, mage hat, studded legs, leather boots scarf
 		items = {{2175, 1}, {2182, 1}, {8819, 1}, {8820, 1}, {2468, 1}, {2643, 1}, {2661, 1}},
 		--container rope, shovel, mana potion
 		container = {{2120, 1}, {2554, 1}, {7620, 1}}
 	},
-	[3] = {
+	[VOCATION_PALADIN] = {
 		--equipment dwrven shield, 5 spear, ranger's cloak, ranger legs scarf, legion helmet
 		items = {{2525, 1}, {2389, 5}, {2660, 1}, {8923, 1}, {2643, 1}, {2661, 1}, {2480, 1}},
 		--container rope, shovel, health potion, bow, 50 arrow
 		container = {{2120, 1}, {2554, 1}, {7618, 1}, {2456, 1}, {2544, 50}}
 	},
-	[4] = {
+	[VOCATION_KNIGHT] = {
 		--equipment dwarven shield, steel axe, brass armor, brass helmet, brass legs scarf
 		items = {{2525, 1}, {8601, 1}, {2465, 1}, {2460, 1}, {2478, 1}, {2643, 1}, {2661, 1}},
 		--container jagged sword, daramian mace, rope, shovel, health potion

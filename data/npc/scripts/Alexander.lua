@@ -15,7 +15,7 @@ local function creatureSayCallback(cid, type, msg)
 		return false
 	end
 	local player = Player(cid)
-	local items = {[1] = 2190, [2] = 2182}
+	local items = {[VOCATION_SORCERER] = 2190, [VOCATION_DRUID] = 2182}
 	local itemId = items[player:getVocation():getBase():getId()]
 	if msgcontains(msg, 'first rod') or msgcontains(msg, 'first wand') then
 		if player:isMage() then

@@ -4,10 +4,10 @@ local config = {
 }
 
 local spheres = {
-	[7759] = {3, 7},
-	[7760] = {1, 5},
-	[7761] = {2, 6},
-	[7762] = {4, 8}
+	[7759] = {VOCATION_PALADIN, VOCATION_ROYAL_PALADIN},
+	[7760] = {VOCATION_SORCERER, VOCATION_MASTER_SORCERER},
+	[7761] = {VOCATION_DRUID, VOCATION_ELDER_DRUID},
+	[7762] = {VOCATION_KNIGHT, VOCATION_ELITE_KNIGHT}
 }
 
 local enchantableGems = {2147, 2146, 2149, 2150}

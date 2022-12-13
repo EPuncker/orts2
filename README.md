@@ -3,8 +3,9 @@ ORTS - A Real Map Datapack
 
 ### Getting Started
 * [The Forgotten Server](https://github.com/otland/forgottenserver)
+* [Tibia 10.98 Extended](https://github.com/EPuncker/1098extended)
 * [OTClient](https://github.com/mehah/otclient)
-* [Remere's Map Editor](https://github.com/Zbizu/rme/releases)
+* [Remere's Map Editor](https://github.com/otacademy/rme)
 * [Compiling](https://github.com/otland/forgottenserver/wiki/Compiling)
 * [Contributing](https://github.com/EPuncker/orts2/wiki/Contributing)
 

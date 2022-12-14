@@ -1,7 +1,7 @@
 local rookgaardAdvance = CreatureEvent("AdvanceRookgaard")
 
 function rookgaardAdvance.onAdvance(player, skill, oldLevel, newLevel)
-	if skill ~= SKILL_LEVEL or newLevel ~= 8 or player:getVocation():getId() ~= 0 then
+	if skill ~= SKILL_LEVEL or newLevel ~= 8 or player:getVocation():getId() ~= VOCATION_NONE then
 		return true
 	end
 

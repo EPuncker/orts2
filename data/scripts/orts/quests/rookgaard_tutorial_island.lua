@@ -1,4 +1,6 @@
-function onKill(creature, target)
+local tutorialCockroach = CreatureEvent("TutorialCockroach")
+
+function tutorialCockroach.onKill(creature, target)
 	local monsterTarget = Monster(target)
 	if not monsterTarget then
 		return true
@@ -21,3 +23,5 @@ function onKill(creature, target)
 	end
 	return true
 end
+
+tutorialCockroach:register()

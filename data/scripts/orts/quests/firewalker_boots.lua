@@ -1,4 +1,6 @@
-function onKill(player, target)
+local firewalkerBootsKill = CreatureEvent("PythiusTheRotten")
+
+function firewalkerBootsKill.onKill(player, target)
 	if not target:isMonster() or target:getName():lower() ~= "pythius the rotten" then
 		return true
 	end
@@ -9,3 +11,5 @@ function onKill(player, target)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+firewalkerBootsKill:register()

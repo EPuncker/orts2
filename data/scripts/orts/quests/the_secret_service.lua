@@ -1,4 +1,6 @@
-function onKill(creature, target)
+local blackKnightKill = CreatureEvent("SecretServiceBlackKnight")
+
+function blackKnightKill.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster then
 		return true
@@ -15,3 +17,5 @@ function onKill(creature, target)
 
 	return true
 end
+
+blackKnightKill:register()

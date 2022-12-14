@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Orc Cult Priest" nameDescription="an orc cult priest" experience="1000" speed="140">
+	<health now="1300" max="1300" />
+	<look type="6" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="50" />
+		<element earthPercent="-10" />
+		<element holyPercent="10" />
+		<element deathPercent="-5" />
+	</elements>
+	<defenses armor="27" defense="27" />
+	<voices interval="1000" chance="5">
+		<voice sentence="We will crush all oposition!" />
+	</voices>
+	<loot>
+		<item id="2148" name="gold coin" chance="100000" countmax="181" />
+		<item id="7588" name="strong health potion" chance="15909" />
+		<item id="12434" name="shamanic hood" chance="14075" />
+		<item id="2147" name="small ruby" chance="12480" countmax="6" />
+		<item id="5910" name="green piece of cloth" chance="10805" />
+		<item id="10556" name="cultish robe" chance="10486" />
+		<item id="2194" name="mysterious fetish" chance="9250" />
+		<item id="12408" name="broken shamanic staff" chance="8812" />
+		<item id="12435" name="orc leather" chance="8573" />
+		<item id="11113" name="orc tooth" chance="5423" />
+		<item id="2144" name="black pearl" chance="2711" countmax="2" />
+		<item id="26642" name="heavy old tome" chance="1675" />
+		<item id="2188" name="wand of decay" chance="917" />
+		<item id="7439" name="berserk potion" chance="877" />
+	</loot>
+</monster>

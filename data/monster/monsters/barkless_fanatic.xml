@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Barkless Fanatic" nameDescription="a barkless fanatic" experience="2500" speed="300">
+	<health now="3200" max="3200" />
+	<look type="990" head="0" body="0" legs="0" feet="0" addons="2" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="17" />
+		<element firePercent="10" />
+		<element icePercent="15" />
+		<element deathPercent="15" />
+	</elements>
+	<defenses armor="30" defense="30" />
+	<voices interval="1000" chance="5">
+		<voice sentence="PAIN PURIFIES! PAIN PURIFIES!" />
+	</voices>
+	<loot>
+		<item id="2148" name="gold coin" chance="50158" countmax="200" />
+		<item id="28398" name="fig leaf" chance="9842" />
+		<item id="27617" name="tiger eye" chance="4783" />
+		<item id="28399" name="bed of nails" chance="1840" />
+		<item id="28400" name="torn shirt" chance="1104" />
+	</loot>
+</monster>

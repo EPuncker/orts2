@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Chasm Spawn" nameDescription="a chasm spawn" experience="2700" speed="230">
+	<health now="4500" max="4500" />
+	<look type="1037" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element firePercent="-30" />
+	</elements>
+	<defenses armor="74" defense="74" />
+	<loot>
+		<item id="30260" name="chasm spawn tail" chance="64519" />
+		<item id="30258" name="chasm spawn head" chance="33638" />
+		<item id="2791" name="wood mushroom" chance="28022" countmax="4" />
+		<item id="30259" name="chasm spawn abdomen" chance="26237" />
+		<item id="2789" name="brown mushroom" chance="19242" countmax="5" />
+		<item id="2790" name="orange mushroom" chance="15179" countmax="3" />
+		<item id="7761" name="small enchanted emerald" chance="10898" />
+		<item id="18413" name="blue crystal shard" chance="8301" />
+		<item id="7762" name="small enchanted amethyst" chance="7952" countmax="3" />
+		<item id="18415" name="green crystal shard" chance="7256" />
+		<item id="18414" name="violet crystal shard" chance="4890" />
+		<item id="30309" name="suspicious device" chance="1451" />
+		<item id="18393" name="mushroom backpack" chance="464" />
+	</loot>
+</monster>

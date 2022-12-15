@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Minor Timedisplaced Anomaly" nameDescription="a minor timedisplaced anomaly" experience="0" speed="0">
+	<health now="48000" max="48000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<voices interval="1000" chance="5">
+		<voice sentence="You can't escape death forever." />
+	</voices>
+	<summons maxSummons="1">
+		<voice name="Orclops Doomhauler" interval="2000" chance="15" max="1" />
+	</summons>
+	<loot>
+		<item id="40858" name="50 Theons" chance="20000" countmax="3" />
+		<item id="2155" name="Green Gem" chance="20000" />
+		<item id="2152" name="Platinum Coin" chance="20000" countmax="43" />
+	</loot>
+</monster>

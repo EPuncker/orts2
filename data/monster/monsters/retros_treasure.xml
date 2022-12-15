@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Retros Treasure" nameDescription="" experience="0" speed="0">
+	<health now="37500" max="37500" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="116" />
+		<item id="7590" name="great mana potion" chance="40816" countmax="9" />
+		<item id="7591" name="great health potion" chance="36735" countmax="9" />
+		<item id="2155" name="green gem" chance="30612" countmax="5" />
+		<item id="2156" name="red gem" chance="24490" countmax="5" />
+		<item id="2153" name="violet gem" chance="24490" countmax="5" />
+		<item id="8472" name="great spirit potion" chance="22449" countmax="8" />
+		<item id="35280" name="amber with a bug" chance="8163" />
+		<item id="32715" name="giant ruby" chance="4082" />
+		<item id="35279" name="giant topaz" chance="4082" />
+		<item id="40753" name="brass button" chance="2041" />
+		<item id="35278" name="giant amethyst" chance="2041" />
+		<item id="32717" name="giant sapphire" chance="2041" />
+	</loot>
+</monster>

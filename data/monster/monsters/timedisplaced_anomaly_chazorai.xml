@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Timedisplaced Anomaly" nameDescription="a timedisplaced anomaly" experience="0" speed="0">
+	<health now="56000" max="56000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Intruder! You must not enter our halls!" />
+	</voices>
+	<summons maxSummons="2">
+		<voice name="Werelion" interval="2000" chance="15" max="1" />
+	</summons>
+	<loot>
+		<item id="40858" name="50 Theons" chance="20000" countmax="3" />
+	</loot>
+</monster>

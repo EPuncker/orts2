@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Memory Of An Amazon" nameDescription="a memory of an amazon" experience="1480" speed="0">
+	<health now="3600" max="3600" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2148" name="gold coin" chance="80469" countmax="90" />
+		<item id="2379" name="dagger" chance="59375" />
+		<item id="2229" name="skull (item)" chance="53516" countmax="2" />
+		<item id="2691" name="brown bread" chance="29297" />
+		<item id="2385" name="sabre" chance="21094" />
+		<item id="40681" name="candy floss (large)" chance="8594" />
+		<item id="2147" name="small ruby" chance="1953" />
+		<item id="40620" name="special fx box" chance="1953" />
+		<item name="torch" chance="781" />
+	</loot>
+</monster>

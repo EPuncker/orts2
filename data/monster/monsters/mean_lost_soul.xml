@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Mean Lost Soul" nameDescription="a mean lost soul" experience="5580" speed="500">
+	<health now="5000" max="5000" />
+	<look type="1268" head="0" body="14" legs="0" feet="83" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="55" />
+		<element energyPercent="30" />
+		<element earthPercent="20" />
+		<element holyPercent="-30" />
+		<element deathPercent="100" />
+	</elements>
+	<defenses armor="80" defense="80" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="65897" />
+		<item id="34883" name="lost soul (item)" chance="35840" />
+		<item id="2436" name="skull staff" chance="4809" />
+		<item id="35359" name="death toll" chance="4784" />
+		<item id="2420" name="machete" chance="4700" />
+		<item id="35354" name="ensouled essence" chance="3215" />
+		<item id="2432" name="fire axe" chance="1603" />
+		<item id="35429" name="ivory comb" chance="1595" />
+		<item id="7386" name="mercenary sword" chance="1351" />
+		<item id="7407" name="haunted blade" chance="1032" />
+		<item id="15451" name="warrior's axe" chance="965" />
+		<item id="12613" name="twiceslicer" chance="453" />
+	</loot>
+</monster>

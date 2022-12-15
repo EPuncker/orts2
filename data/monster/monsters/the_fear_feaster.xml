@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="The Fear Feaster" nameDescription="" experience="0" speed="0">
+	<health now="0" max="0" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-10" />
+		<element energyPercent="-10" />
+		<element earthPercent="20" />
+		<element firePercent="-10" />
+	</elements>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2160" name="crystal coin" chance="100000" countmax="3" />
+		<item id="35427" name="moonstone" chance="59259" countmax="2" />
+		<item id="35425" name="white gem" chance="44444" countmax="2" />
+		<item id="26029" name="ultimate mana potion" chance="37037" countmax="11" />
+		<item id="26031" name="supreme health potion" chance="33333" countmax="11" />
+		<item id="7439" name="berserk potion" chance="29630" countmax="18" />
+		<item id="26030" name="ultimate spirit potion" chance="29630" countmax="9" />
+		<item id="7443" name="bullseye potion" chance="22222" countmax="17" />
+		<item id="7440" name="mastermind potion" chance="22222" countmax="18" />
+		<item id="35428" name="silver hand mirror" chance="22222" />
+		<item id="35430" name="cursed bone" chance="14815" />
+		<item id="35426" name="diamond" chance="14815" />
+		<item id="35247" name="soulforged lantern" chance="14815" />
+		<item id="35249" name="grimace" chance="11111" />
+		<item id="35245" name="angel figurine" chance="7407" />
+		<item id="35250" name="bloody tears" chance="7407" />
+		<item id="35359" name="death toll" chance="7407" countmax="4" />
+		<item id="35282" name="amber (item)" chance="3704" />
+		<item id="35280" name="amber with a bug" chance="3704" />
+		<item id="35429" name="ivory comb" chance="3704" />
+		<item id="35286" name="spooky hood" chance="3704" />
+	</loot>
+</monster>

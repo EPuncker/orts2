@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Enusat The Onyx Wing" nameDescription="" experience="21500" speed="0">
+	<health now="25000" max="25000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2160" name="crystal coin" chance="66667" />
+		<item id="2379" name="dagger" chance="40000" />
+		<item id="7886" name="terra boots" chance="20000" />
+		<item id="2392" name="fire sword" chance="13333" />
+		<item id="8912" name="springsprout rod" chance="13333" />
+		<item id="2153" name="violet gem" chance="13333" />
+		<item id="9971" name="gold ingot" chance="6667" />
+		<item id="2427" name="guardian halberd" chance="6667" />
+		<item id="2476" name="knight armor" chance="6667" />
+		<item id="7901" name="lightning headband" chance="6667" />
+		<item id="34096" name="manticore ear" chance="6667" />
+		<item id="24849" name="onyx chip" chance="6667" />
+		<item id="10219" name="sacred tree amulet" chance="6667" />
+		<item id="2149" name="small emerald" chance="6667" />
+		<item id="2181" name="terra rod" chance="6667" />
+	</loot>
+</monster>

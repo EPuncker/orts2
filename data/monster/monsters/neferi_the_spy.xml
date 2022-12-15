@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Neferi The Spy" nameDescription="" experience="19650" speed="0">
+	<health now="28000" max="28000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element icePercent="-10" />
+		<element deathPercent="20" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-600" />
+	</attacks>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2160" name="crystal coin" chance="43233" />
+		<item id="2181" name="terra rod" chance="22932" />
+		<item id="2379" name="dagger" chance="18045" />
+		<item id="8473" name="ultimate health potion" chance="11278" countmax="4" />
+		<item id="9971" name="gold ingot" chance="10526" />
+		<item id="8472" name="great spirit potion" chance="7895" countmax="2" />
+		<item id="2392" name="fire sword" chance="7143" />
+		<item id="2183" name="hailstorm rod" chance="4887" />
+		<item id="7886" name="terra boots" chance="4887" />
+		<item id="7901" name="lightning headband" chance="4135" />
+		<item id="7903" name="terra hood" chance="3759" />
+		<item id="2430" name="knight axe" chance="3383" />
+		<item id="7895" name="lightning legs" chance="3383" />
+		<item name="ring of red plasma" chance="3008" />
+		<item id="8901" name="spellbook of warding" chance="2632" />
+		<item id="7892" name="glacier shoes" chance="2256" />
+		<item id="2476" name="knight armor" chance="2256" />
+		<item id="18414" name="violet crystal shard" chance="1880" />
+		<item id="7902" name="glacier mask" chance="1504" />
+		<item id="33979" name="sea horse figurine" chance="1504" />
+		<item id="2165" name="stealth ring" chance="1504" />
+		<item id="2153" name="violet gem" chance="1504" />
+		<item id="33980" name="golden mask" chance="752" />
+	</loot>
+</monster>

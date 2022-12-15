@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Cave Chimera" nameDescription="a cave chimera" experience="6800" speed="230">
+	<health now="8000" max="8000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="20" />
+		<element earthPercent="-10" />
+		<element icePercent="10" />
+		<element deathPercent="-10" />
+	</elements>
+	<defenses armor="60" defense="60" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="29" />
+		<item id="8472" name="great spirit potion" chance="31204" countmax="2" />
+		<item id="9971" name="gold ingot" chance="18919" />
+		<item id="8473" name="ultimate health potion" chance="17445" />
+		<item id="2153" name="violet gem" chance="7125" />
+		<item id="18414" name="violet crystal shard" chance="5160" />
+		<item id="39444" name="cave chimera leg" chance="4177" />
+		<item id="39443" name="cave chimera head" chance="3686" />
+		<item id="7888" name="glacier amulet" chance="3440" />
+		<item name="ring of blue plasma" chance="3440" />
+		<item id="2154" name="yellow gem" chance="3194" />
+		<item id="7896" name="glacier kilt" chance="2948" />
+		<item id="7632" name="giant shimmering pearl (green)" chance="1474" />
+		<item id="24741" name="fur armor" chance="1229" />
+		<item id="2179" name="gold ring" chance="1229" />
+		<item id="7438" name="elvish bow" chance="983" />
+		<item id="15644" name="ornate crossbow" chance="737" />
+		<item id="18453" name="crystal crossbow" chance="491" />
+		<item id="27048" name="gemmed figurine" chance="491" />
+	</loot>
+</monster>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Afflicted Strider" nameDescription="an afflicted strider" experience="5700" speed="270">
+	<health now="10000" max="10000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="5" />
+		<element earthPercent="10" />
+		<element firePercent="-10" />
+		<element deathPercent="15" />
+	</elements>
+	<attacks>
+		<attack name="death" interval="2000" chance="15" min="-650" max="-800" radius="5" target="0">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" min="-550" max="-650" range="2" radius="1" target="1">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="68" defense="68" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="15" />
+		<item id="39446" name="afflicted strider worms" chance="10051" />
+		<item id="2427" name="guardian halberd" chance="9034" />
+		<item id="7449" name="crystal sword" chance="8470" />
+		<item id="2153" name="violet gem" chance="6776" />
+		<item id="18415" name="green crystal shard" chance="6437" />
+		<item id="18414" name="violet crystal shard" chance="6098" />
+		<item id="2485" name="doublet" chance="5195" />
+		<item id="39445" name="afflicted strider head" chance="4687" />
+		<item id="8872" name="belted cape" chance="4235" />
+		<item id="2476" name="knight armor" chance="4235" />
+		<item id="2420" name="machete" chance="3614" />
+		<item id="8870" name="spirit cloak" chance="2993" />
+		<item id="8871" name="focus cape" chance="2484" />
+		<item id="2413" name="broadsword" chance="2202" />
+		<item id="2409" name="serpent sword" chance="2089" />
+		<item id="7899" name="magma coat" chance="2033" />
+		<item id="2396" name="ice rapier" chance="1976" />
+		<item id="7386" name="mercenary sword" chance="1468" />
+		<item id="7413" name="titan axe" chance="1355" />
+		<item id="2430" name="knight axe" chance="1242" />
+		<item id="7407" name="haunted blade" chance="1186" />
+	</loot>
+</monster>

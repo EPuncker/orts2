@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Eyeless Devourer" nameDescription="an eyeless devourer" experience="6000" speed="330">
+	<health now="10000" max="10000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-10" />
+		<element energyPercent="5" />
+		<element earthPercent="10" />
+	</elements>
+	<attacks>
+		<attack name="energy" interval="2000" chance="15" min="-700" max="-800" range="2" radius="1" target="1">
+			<attribute key="shootEffect" value="energyball" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" min="-500" max="-700" radius="3" target="0">
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" min="-500" max="-560" length="5" spread="0">
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="63" defense="63" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="21" />
+		<item id="8473" name="ultimate health potion" chance="30098" />
+		<item id="39431" name="eyeless devourer maw" chance="13784" />
+		<item id="39432" name="eyeless devourer legs" chance="8308" />
+		<item id="18413" name="blue crystal shard" chance="7591" />
+		<item id="18415" name="green crystal shard" chance="6722" />
+		<item id="18414" name="violet crystal shard" chance="6684" />
+		<item id="2155" name="green gem" chance="6307" />
+		<item id="39433" name="eyeless devourer tongue" chance="3474" />
+		<item id="10219" name="sacred tree amulet" chance="3134" />
+		<item id="7888" name="glacier amulet" chance="2530" />
+		<item id="2445" name="crystal mace" chance="2266" />
+		<item id="15451" name="warrior's axe" chance="1775" />
+		<item id="7456" name="noble axe" chance="1397" />
+		<item id="2454" name="war axe" chance="1322" />
+		<item id="7383" name="relic sword" chance="1284" />
+		<item id="7386" name="mercenary sword" chance="1246" />
+		<item id="2393" name="giant sword" chance="1020" />
+		<item id="7422" name="jade hammer" chance="1020" />
+		<item id="15644" name="ornate crossbow" chance="944" />
+		<item id="23547" name="execowtioner axe" chance="680" />
+		<item id="7451" name="shadow sceptre" chance="642" />
+		<item id="23542" name="metal bat" chance="491" />
+	</loot>
+</monster>

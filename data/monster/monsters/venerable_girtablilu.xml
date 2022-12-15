@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Venerable Girtablilu" nameDescription="a venerable girtablilu" experience="5300" speed="360">
+	<health now="8500" max="8500" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="-10" />
+		<element earthPercent="20" />
+		<element holyPercent="-20" />
+		<element deathPercent="0" />
+	</elements>
+	<defenses armor="80" defense="80" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="84186" countmax="19" />
+		<item id="9971" name="gold ingot" chance="16465" />
+		<item id="2145" name="small diamond" chance="5488" />
+		<item id="18419" name="cyan crystal fragment" chance="4930" />
+		<item id="2156" name="red gem" chance="4651" />
+		<item id="39628" name="old girtablilu carapace" chance="4372" />
+		<item id="39478" name="scorpion charm" chance="4093" />
+		<item id="2153" name="violet gem" chance="4093" />
+		<item id="8911" name="northwind rod" chance="3814" />
+		<item id="2189" name="wand of cosmic energy" chance="2791" />
+		<item id="2154" name="yellow gem" chance="2791" />
+		<item id="18413" name="blue crystal shard" chance="2605" />
+		<item id="18420" name="red crystal fragment" chance="2326" />
+		<item id="8910" name="underworld rod" chance="2047" />
+		<item id="18414" name="violet crystal shard" chance="1953" />
+		<item id="8922" name="wand of voodoo" chance="1953" />
+		<item id="2158" name="blue gem" chance="1767" />
+		<item name="ring of blue plasma" chance="1767" />
+		<item id="18421" name="green crystal fragment" chance="1674" />
+		<item id="18415" name="green crystal shard" chance="1581" />
+		<item id="2188" name="wand of decay" chance="1395" />
+		<item id="8912" name="springsprout rod" chance="1209" />
+		<item id="18390" name="wand of defiance" chance="1209" />
+		<item id="2185" name="necrotic rod" chance="1116" />
+		<item id="2664" name="wood cape" chance="1023" />
+	</loot>
+</monster>

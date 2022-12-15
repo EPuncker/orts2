@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tremendous Tyrant" nameDescription="a tremendous tyrant" experience="6100" speed="230">
+	<health now="11500" max="11500" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="20" />
+		<element earthPercent="-20" />
+		<element icePercent="15" />
+	</elements>
+	<defenses armor="71" defense="71" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="27" />
+		<item id="9971" name="gold ingot" chance="14337" />
+		<item id="2156" name="red gem" chance="11111" />
+		<item id="2154" name="yellow gem" chance="8602" />
+		<item id="18413" name="blue crystal shard" chance="7168" />
+		<item id="18415" name="green crystal shard" chance="6810" />
+		<item id="8901" name="spellbook of warding" chance="6452" />
+		<item id="18414" name="violet crystal shard" chance="5735" />
+		<item id="39439" name="tremendous tyrant head" chance="5018" />
+		<item id="2430" name="knight axe" chance="4659" />
+		<item id="39440" name="tremendous tyrant shell" chance="4659" />
+		<item id="2396" name="ice rapier" chance="3584" />
+		<item id="8871" name="focus cape" chance="3226" />
+		<item id="2189" name="wand of cosmic energy" chance="3226" />
+		<item id="2198" name="elven amulet" chance="2867" />
+		<item id="7897" name="glacier robe" chance="2867" />
+		<item id="7895" name="lightning legs" chance="2867" />
+		<item id="7430" name="dragonbone staff" chance="2509" />
+		<item id="2183" name="hailstorm rod" chance="2509" />
+		<item id="8920" name="wand of starstorm" chance="2509" />
+		<item id="15453" name="warrior's shield" chance="2509" />
+	</loot>
+</monster>

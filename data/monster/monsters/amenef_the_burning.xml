@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Amenef The Burning" nameDescription="" experience="21500" speed="0">
+	<health now="26000" max="26000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag isboss="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="10" />
+		<element firePercent="15" />
+		<element icePercent="-20" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-600" />
+	</attacks>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2160" name="crystal coin" chance="44937" />
+		<item id="9813" name="slightly rusted legs" chance="13924" />
+		<item id="9810" name="slightly rusted armor" chance="12025" />
+		<item id="2427" name="guardian halberd" chance="11392" />
+		<item id="2213" name="dwarven ring" chance="8861" />
+		<item id="7440" name="mastermind potion" chance="8228" />
+		<item id="2485" name="doublet" chance="6329" />
+		<item id="2476" name="knight armor" chance="5696" />
+		<item name="ring of blue plasma" chance="5063" />
+		<item id="2438" name="epee" chance="4430" />
+		<item id="8910" name="underworld rod" chance="4430" />
+		<item id="2430" name="knight axe" chance="3797" />
+		<item id="8912" name="springsprout rod" chance="3797" />
+		<item id="2189" name="wand of cosmic energy" chance="3165" />
+		<item id="2187" name="wand of inferno" chance="3165" />
+		<item name="giant shimmering pearl" chance="2532" />
+		<item id="8901" name="spellbook of warding" chance="2532" />
+		<item id="2153" name="violet gem" chance="2532" />
+		<item id="8920" name="wand of starstorm" chance="2532" />
+		<item id="7426" name="amber staff" chance="1899" />
+		<item id="7404" name="assassin dagger" chance="1899" />
+		<item id="2158" name="blue gem" chance="1899" />
+		<item id="15451" name="warrior's axe" chance="1899" />
+		<item id="8871" name="focus cape" chance="1266" />
+		<item id="7456" name="noble axe" chance="1266" />
+		<item id="10219" name="sacred tree amulet" chance="1266" />
+		<item id="33980" name="golden mask" chance="633" />
+		<item id="7386" name="mercenary sword" chance="633" />
+	</loot>
+</monster>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Lavafungus" nameDescription="a lavafungus" experience="6200" speed="230">
+	<health now="7200" max="7200" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element firePercent="10" />
+		<element icePercent="-20" />
+		<element deathPercent="20" />
+	</elements>
+	<defenses armor="70" defense="70" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="21" />
+		<item id="2181" name="terra rod" chance="27314" />
+		<item id="39442" name="lavafungus ring" chance="14857" />
+		<item id="2156" name="red gem" chance="8686" />
+		<item id="18413" name="blue crystal shard" chance="7086" />
+		<item id="2183" name="hailstorm rod" chance="6286" />
+		<item id="18414" name="violet crystal shard" chance="4457" />
+		<item id="2153" name="violet gem" chance="4457" />
+		<item id="18420" name="red crystal fragment" chance="4229" />
+		<item id="2155" name="green gem" chance="4114" />
+		<item id="39441" name="lavafungus head" chance="4114" />
+		<item id="2154" name="yellow gem" chance="4114" />
+		<item id="18419" name="cyan crystal fragment" chance="4000" />
+		<item id="2187" name="wand of inferno" chance="3771" />
+		<item id="24849" name="onyx chip" chance="3314" />
+		<item id="2445" name="crystal mace" chance="3200" />
+		<item id="18421" name="green crystal fragment" chance="2971" />
+		<item id="7890" name="magma amulet" chance="2857" />
+		<item id="28393" name="rainbow quartz" chance="2857" />
+		<item id="8871" name="focus cape" chance="2743" />
+		<item id="2213" name="dwarven ring" chance="2400" />
+		<item id="23540" name="metal spats" chance="2171" />
+		<item id="8901" name="spellbook of warding" chance="1943" />
+		<item id="8920" name="wand of starstorm" chance="1143" />
+	</loot>
+</monster>

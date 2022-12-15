@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Abominable Spawn" nameDescription="an abominable spawn" experience="0" speed="0">
+	<health now="0" max="0" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="10" />
+		<element earthPercent="100" />
+		<element firePercent="-10" />
+		<element icePercent="20" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-1000" />
+		<attack name="physical" interval="2000" chance="15" min="-600" max="-900" range="2" radius="1" target="1">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15" min="-1300" max="-1500" length="8" spread="3">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" min="-600" max="-800" radius="3" target="0">
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15" min="-600" max="-800" radius="3" target="0">
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="earth" interval="2000" chance="15" length="8" spread="3">
+			<attribute key="areaEffect" value="smallplants" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
+</monster>

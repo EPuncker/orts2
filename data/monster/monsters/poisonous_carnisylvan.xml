@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Poisonous Carnisylvan" nameDescription="a poisonous carnisylvan" experience="4400" speed="210">
+	<health now="8000" max="8000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="25" />
+		<element firePercent="-15" />
+		<element icePercent="-5" />
+		<element deathPercent="5" />
+	</elements>
+	<defenses armor="37" defense="37" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="93955" countmax="17" />
+		<item id="39462" name="carnisylvan bark" chance="12091" />
+		<item id="39461" name="carnisylvan finger" chance="8816" />
+		<item id="18397" name="mushroom pie" chance="8816" />
+		<item name="wooden trash" chance="7809" />
+		<item id="2181" name="terra rod" chance="7305" />
+		<item id="8472" name="great spirit potion" chance="6801" />
+		<item id="2430" name="knight axe" chance="6045" />
+		<item id="8910" name="underworld rod" chance="6045" />
+		<item id="2427" name="guardian halberd" chance="5290" />
+		<item name="collar of blue plasma" chance="5038" />
+		<item id="2127" name="emerald bangle" chance="5038" />
+		<item id="7387" name="diamond sceptre" chance="4534" />
+		<item id="8920" name="wand of starstorm" chance="4534" />
+		<item id="2795" name="fire mushroom" chance="3275" countmax="3" />
+		<item id="10219" name="sacred tree amulet" chance="2771" />
+		<item id="7632" name="giant shimmering pearl (green)" chance="2015" />
+		<item id="27048" name="gemmed figurine" chance="756" />
+		<item id="39463" name="human teeth" chance="504" />
+	</loot>
+</monster>

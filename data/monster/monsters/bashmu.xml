@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bashmu" nameDescription="a bashmu" experience="5000" speed="400">
+	<health now="8200" max="8200" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="5" />
+		<element energyPercent="5" />
+		<element earthPercent="20" />
+		<element icePercent="-5" />
+		<element holyPercent="-10" />
+		<element deathPercent="-10" />
+	</elements>
+	<defenses armor="72" defense="72" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="69393" countmax="19" />
+		<item id="2427" name="guardian halberd" chance="8930" />
+		<item id="39479" name="bashmu feather" chance="5317" />
+		<item id="39477" name="bashmu tongue" chance="4908" />
+		<item id="10219" name="sacred tree amulet" chance="4363" />
+		<item id="8472" name="great spirit potion" chance="3749" />
+		<item id="18415" name="green crystal shard" chance="3340" />
+		<item id="18413" name="blue crystal shard" chance="2931" />
+		<item id="2145" name="small diamond" chance="2931" />
+		<item id="2153" name="violet gem" chance="2727" />
+		<item id="39476" name="bashmu fang" chance="2113" />
+		<item id="28393" name="rainbow quartz" chance="1840" />
+		<item id="7887" name="terra amulet" chance="1636" />
+		<item id="7888" name="glacier amulet" chance="1022" />
+		<item id="7454" name="glorious axe" chance="818" />
+		<item id="26200" name="collar of red plasma" chance="613" />
+		<item id="7407" name="haunted blade" chance="613" />
+		<item id="7890" name="magma amulet" chance="545" />
+		<item name="collar of blue plasma" chance="477" />
+	</loot>
+</monster>

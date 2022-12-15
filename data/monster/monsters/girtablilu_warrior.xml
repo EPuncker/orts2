@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Girtablilu Warrior" nameDescription="a girtablilu warrior" experience="5800" speed="360">
+	<health now="8500" max="8500" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="-15" />
+		<element earthPercent="10" />
+		<element holyPercent="-10" />
+		<element deathPercent="15" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-400" />
+	</attacks>
+	<defenses armor="76" defense="76" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="76868" countmax="16" />
+		<item id="8473" name="ultimate health potion" chance="15925" countmax="4" />
+		<item id="9971" name="gold ingot" chance="14415" />
+		<item id="18415" name="green crystal shard" chance="6302" />
+		<item id="18420" name="red crystal fragment" chance="5358" />
+		<item id="18419" name="cyan crystal fragment" chance="4717" />
+		<item id="39627" name="girtablilu warrior carapace" chance="4566" />
+		<item id="39478" name="scorpion charm" chance="4113" />
+		<item id="2155" name="green gem" chance="3887" />
+		<item id="2153" name="violet gem" chance="3509" />
+		<item id="2416" name="crowbar" chance="3094" />
+		<item id="18413" name="blue crystal shard" chance="3019" />
+		<item id="18414" name="violet crystal shard" chance="2755" />
+		<item id="7387" name="diamond sceptre" chance="2453" />
+		<item id="2396" name="ice rapier" chance="2340" />
+		<item id="7430" name="dragonbone staff" chance="2302" />
+		<item id="2154" name="yellow gem" chance="2226" />
+		<item id="2430" name="knight axe" chance="2113" />
+		<item id="7899" name="magma coat" chance="2075" />
+		<item id="2438" name="epee" chance="2000" />
+		<item id="18421" name="green crystal fragment" chance="1698" />
+		<item id="2156" name="red gem" chance="1585" />
+		<item id="3962" name="beastslayer axe" chance="1434" />
+		<item id="2158" name="blue gem" chance="1396" />
+		<item id="2656" name="blue robe" chance="1208" />
+		<item id="24741" name="fur armor" chance="906" />
+		<item id="8871" name="focus cape" chance="868" />
+		<item id="7897" name="glacier robe" chance="830" />
+	</loot>
+</monster>

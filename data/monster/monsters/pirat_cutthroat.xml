@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pirat Cutthroat" nameDescription="a pirat cutthroat" experience="1800" speed="320">
+	<health now="2600" max="2600" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="10" />
+		<element energyPercent="20" />
+		<element earthPercent="-20" />
+	</elements>
+	<attacks>
+		<attack name="physical" interval="2000" chance="15" min="-100" max="-140">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" min="-120" max="-160" radius="3" target="0">
+			<attribute key="areaEffect" value="redspark" />
+		</attack>
+	</attacks>
+	<defenses armor="72" defense="72" />
+	<loot>
+		<item id="7591" name="great health potion" chance="20097" countmax="4" />
+		<item id="2396" name="ice rapier" chance="13111" />
+		<item id="7449" name="crystal sword" chance="8335" />
+		<item id="38228" name="pirate coin" chance="6885" countmax="10" />
+		<item id="2430" name="knight axe" chance="4887" />
+		<item id="2416" name="crowbar" chance="4816" />
+		<item id="38229" name="pirat's tail" chance="4756" />
+		<item id="38230" name="shark fins" chance="4076" />
+		<item id="2476" name="knight armor" chance="2930" />
+		<item id="8871" name="focus cape" chance="1998" />
+	</loot>
+</monster>

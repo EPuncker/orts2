@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pirat Mate" nameDescription="a pirat mate" experience="2400" speed="350">
+	<health now="3200" max="3200" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="30" />
+		<element earthPercent="-30" />
+	</elements>
+	<attacks>
+		<attack name="energy" interval="2000" chance="15" min="-150" max="-210" length="5" spread="0">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" min="-148" max="-180" radius="4" target="0">
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>
+	</attacks>
+	<defenses armor="75" defense="75" />
+	<loot>
+		<item id="18419" name="cyan crystal fragment" chance="16012" />
+		<item id="2145" name="small diamond" chance="11597" />
+		<item id="38228" name="pirate coin" chance="11418" countmax="10" />
+		<item id="18420" name="red crystal fragment" chance="10259" />
+		<item id="38252" name="mouldy powder" chance="9902" />
+		<item id="38229" name="pirat's tail" chance="8519" />
+		<item id="2392" name="fire sword" chance="6512" />
+		<item id="2156" name="red gem" chance="6289" />
+		<item id="2149" name="small emerald" chance="5219" />
+		<item id="24849" name="onyx chip" chance="4371" />
+		<item id="38230" name="shark fins" chance="4014" />
+		<item id="2154" name="yellow gem" chance="3925" />
+		<item id="2396" name="ice rapier" chance="3256" />
+		<item id="18415" name="green crystal shard" chance="2765" />
+		<item id="38227" name="small treasure chest" chance="2676" />
+	</loot>
+</monster>

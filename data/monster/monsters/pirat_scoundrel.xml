@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pirat Scoundrel" nameDescription="a pirat scoundrel" experience="1600" speed="380">
+	<health now="2200" max="2200" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="4" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="20" />
+		<element energyPercent="26" />
+		<element earthPercent="-30" />
+	</elements>
+	<attacks>
+		<attack name="energy" interval="2000" chance="15" min="-110" max="-160" range="3" radius="1" target="1">
+			<attribute key="shootEffect" value="energyball" />
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" min="-100" max="-130" radius="3" target="1">
+			<attribute key="shootEffect" value="etherealspear" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" min="-90" max="-110" radius="3" target="0">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" length="4" spread="0">
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="60" />
+	<loot>
+		<item id="7590" name="great mana potion" chance="10294" />
+		<item id="2187" name="wand of inferno" chance="7843" />
+		<item id="38244" name="grappling hook" chance="7509" />
+		<item id="38228" name="pirate coin" chance="6573" countmax="10" />
+		<item id="38229" name="pirat's tail" chance="5102" />
+		<item id="8920" name="wand of starstorm" chance="4612" />
+		<item id="8912" name="springsprout rod" chance="3587" />
+		<item id="8922" name="wand of voodoo" chance="2852" />
+	</loot>
+</monster>

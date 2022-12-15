@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Exotic Cave Spider" nameDescription="an exotic cave spider" experience="1400" speed="264">
+	<health now="1900" max="1900" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="20" />
+		<element earthPercent="100" />
+		<element firePercent="-10" />
+		<element icePercent="20" />
+	</elements>
+	<defenses armor="40" defense="40" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" />
+		<item id="2545" name="poison arrow" chance="14834" countmax="15" />
+		<item id="7591" name="great health potion" chance="9750" />
+		<item id="2170" name="silver amulet" chance="4529" />
+		<item id="7886" name="terra boots" chance="4298" />
+		<item id="5879" name="spider silk" chance="2773" />
+		<item id="7884" name="terra mantle" chance="832" />
+	</loot>
+</monster>

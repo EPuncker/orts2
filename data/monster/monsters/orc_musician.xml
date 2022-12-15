@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Orc Musician" nameDescription="an orc musician" experience="0" speed="0">
+	<health now="0" max="0" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<attacks>
+		<attack name="physical" interval="2000" chance="15">
+			<attribute key="areaEffect" value="rednote" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15">
+			<attribute key="areaEffect" value="purplenote" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15">
+			<attribute key="areaEffect" value="whitenote" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15">
+			<attribute key="areaEffect" value="yellownote" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
+	<voices interval="1000" chance="5">
+		<voice sentence="And now a classic song!" />
+		<voice sentence="ARE YOU READY TO ORC?" />
+		<voice sentence="GAH! GUH! GAHGAH!" />
+		<voice sentence="Give us your screams!" />
+		<voice sentence="Hey you! Meet me backstage later!" />
+		<voice sentence="HOLLAROOODUUDOOODELDUU!" />
+		<voice sentence="I CAN'T HEAR YOU!" />
+		<voice sentence="LaaaLaaaLAAAA!" />
+		<voice sentence="NAAA! NAAANAAA! NAAA! NAAAA!" />
+		<voice sentence="Pump up the beer!" />
+		<voice sentence="This is for you!" />
+	</voices>
+</monster>

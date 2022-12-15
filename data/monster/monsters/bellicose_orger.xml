@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bellicose Orger" nameDescription="a bellicose orger" experience="500" speed="252">
+	<health now="700" max="700" />
+	<look type="1255" head="79" body="6" legs="94" feet="2" addons="2" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="20" />
+		<element earthPercent="-10" />
+		<element holyPercent="10" />
+		<element deathPercent="-10" />
+	</elements>
+	<defenses armor="35" defense="35" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="50315" />
+		<item id="2461" name="leather helmet" chance="13800" />
+		<item id="2649" name="leather legs" chance="11483" />
+		<item id="2167" name="energy ring" chance="4142" />
+		<item id="2489" name="dark armor" chance="3461" />
+		<item id="2654" name="cape" chance="1363" />
+		<item id="7454" name="glorious axe" chance="1332" />
+		<item id="2521" name="dark shield" chance="1143" />
+		<item id="23540" name="metal spats" chance="1070" />
+		<item id="2378" name="battle axe" chance="482" />
+		<item id="34759" name="decorative blue sheet" chance="21" />
+		<item id="34760" name="decorative red sheet" chance="21" />
+		<item id="34761" name="decorative green sheet" chance="10" />
+	</loot>
+</monster>

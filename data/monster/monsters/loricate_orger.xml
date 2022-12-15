@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Loricate Orger" nameDescription="a loricate orger" experience="570" speed="230">
+	<health now="750" max="750" />
+	<look type="1255" head="79" body="6" legs="94" feet="2" addons="1" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element energyPercent="20" />
+		<element earthPercent="-10" />
+		<element holyPercent="10" />
+		<element deathPercent="-10" />
+	</elements>
+	<defenses armor="37" defense="37" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="3" />
+		<item id="2460" name="brass helmet" chance="9943" />
+		<item id="2463" name="plate armor" chance="8675" />
+		<item id="2530" name="copper shield" chance="7741" />
+		<item id="2481" name="soldier helmet" chance="6773" />
+		<item id="6300" name="death ring" chance="4104" />
+		<item id="2526" name="studded shield" chance="4071" />
+		<item id="2465" name="brass armor" chance="3937" />
+		<item id="2541" name="bone shield" chance="3303" />
+		<item id="2416" name="crowbar" chance="3003" />
+		<item id="2473" name="viking helmet" chance="2569" />
+		<item id="2484" name="studded armor" chance="2536" />
+	</loot>
+</monster>

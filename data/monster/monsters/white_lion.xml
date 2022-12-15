@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="White Lion" nameDescription="a white lion" experience="2300" speed="220">
+	<health now="2700" max="2700" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="30" />
+		<element firePercent="25" />
+		<element icePercent="-20" />
+		<element deathPercent="40" />
+	</elements>
+	<defenses armor="38" defense="38" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="5" />
+		<item id="8472" name="great spirit potion" chance="24260" countmax="2" />
+		<item id="10608" name="lion's mane" chance="18983" />
+		<item id="2386" name="axe" chance="15401" />
+		<item id="7886" name="terra boots" chance="14985" />
+		<item id="2643" name="leather boots" chance="14414" />
+		<item id="11309" name="twin hooks" chance="12701" />
+		<item id="18415" name="green crystal shard" chance="5797" />
+		<item id="18419" name="cyan crystal fragment" chance="4672" />
+		<item id="2391" name="war hammer" chance="3513" />
+		<item id="2154" name="yellow gem" chance="2648" />
+		<item id="18421" name="green crystal fragment" chance="2025" />
+		<item id="2404" name="combat knife" chance="1955" />
+	</loot>
+</monster>

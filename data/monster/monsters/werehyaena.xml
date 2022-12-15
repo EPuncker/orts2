@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werehyaena" nameDescription="a werehyaena" experience="2200" speed="240">
+	<health now="2700" max="2700" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="40" />
+		<element firePercent="50" />
+		<element icePercent="-20" />
+		<element holyPercent="-25" />
+		<element deathPercent="0" />
+	</elements>
+	<defenses armor="36" defense="36" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Snarl!" />
+	</voices>
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="3" />
+		<item id="7591" name="great health potion" chance="49804" countmax="3" />
+		<item id="2666" name="meat" chance="19133" />
+		<item id="2403" name="knife" chance="17227" />
+		<item id="2386" name="axe" chance="15981" />
+		<item id="36599" name="werehyaena nose" chance="12576" />
+		<item id="2381" name="halberd" chance="11484" />
+		<item id="18420" name="red crystal fragment" chance="9624" />
+		<item id="7762" name="small enchanted amethyst" chance="5819" countmax="5" />
+		<item id="2156" name="red gem" chance="5665" />
+		<item id="2154" name="yellow gem" chance="5611" />
+		<item id="20093" name="life preserver" chance="5389" />
+		<item id="2404" name="combat knife" chance="4858" />
+		<item id="18421" name="green crystal fragment" chance="4412" />
+		<item id="20092" name="ratana" chance="4289" />
+		<item id="24739" name="moonlight crystals" chance="1430" />
+		<item id="36600" name="werehyaena talisman" chance="661" />
+		<item id="36875" name="werehyaena trophy" chance="200" />
+	</loot>
+</monster>

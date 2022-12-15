@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Usurper Knight" nameDescription="a usurper knight" experience="6900" speed="260">
+	<health now="8200" max="8200" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="35" />
+		<element firePercent="10" />
+		<element icePercent="20" />
+		<element holyPercent="15" />
+		<element deathPercent="-15" />
+	</elements>
+	<defenses armor="83" defense="83" />
+	<voices interval="1000" chance="5">
+		<voice sentence="This town is ours now!" />
+		<voice sentence="Do you really think you can stand?" />
+		<voice sentence="You don't deserve Bounac!" />
+	</voices>
+	<loot>
+		<item id="2152" name="platinum coin" chance="91197" countmax="5" />
+		<item id="2649" name="leather legs" chance="27140" />
+		<item id="2666" name="meat" chance="16202" />
+		<item id="36818" name="lion cloak patch" chance="10998" />
+		<item id="36816" name="lion crest" chance="6424" />
+		<item id="2477" name="knight legs" chance="5936" />
+		<item id="2153" name="violet gem" chance="5489" />
+		<item id="9971" name="gold ingot" chance="5123" />
+		<item id="2158" name="blue gem" chance="4046" />
+		<item id="7590" name="great mana potion" chance="3680" />
+		<item id="2155" name="green gem" chance="2582" />
+		<item id="7894" name="magma legs" chance="996" />
+	</loot>
+</monster>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Courage Leech" nameDescription="a courage leech" experience="18900" speed="452">
+	<health now="27000" max="27000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="20" />
+		<element energyPercent="50" />
+		<element earthPercent="-20" />
+		<element holyPercent="30" />
+		<element deathPercent="-25" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Hiss." />
+		<voice sentence="Zap! Zap!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="60173" />
+		<item id="8473" name="ultimate health potion" chance="11469" countmax="7" />
+		<item id="7895" name="lightning legs" chance="4709" />
+		<item id="7889" name="lightning pendant" chance="2389" />
+		<item id="7901" name="lightning headband" chance="2202" />
+		<item id="2179" name="gold ring" chance="1118" />
+		<item id="7422" name="jade hammer" chance="847" />
+		<item id="2197" name="stone skin amulet" chance="695" />
+		<item id="7421" name="onyx flail" chance="627" />
+		<item id="12613" name="twiceslicer" chance="627" />
+		<item id="7418" name="nightmare blade" chance="576" />
+		<item id="7382" name="demonrage sword" chance="508" />
+		<item id="2444" name="hammer of wrath" chance="491" />
+		<item id="7412" name="butcher's axe" chance="356" />
+		<item id="7419" name="dreaded cleaver" chance="356" />
+	</loot>
+</monster>

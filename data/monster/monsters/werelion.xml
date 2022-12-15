@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werelion" nameDescription="a werelion" experience="2200" speed="220">
+	<health now="2800" max="2800" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="50" />
+		<element firePercent="25" />
+		<element icePercent="-25" />
+		<element deathPercent="45" />
+	</elements>
+	<defenses armor="38" defense="38" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="88689" countmax="5" />
+		<item id="8472" name="great spirit potion" chance="56445" countmax="2" />
+		<item id="2489" name="dark armor" chance="22365" />
+		<item id="10608" name="lion's mane" chance="13551" />
+		<item id="2666" name="meat" chance="10577" />
+		<item id="7449" name="crystal sword" chance="5398" />
+		<item id="2134" name="silver brooch" chance="5398" />
+		<item id="7760" name="small enchanted ruby" chance="4958" countmax="5" />
+		<item id="2145" name="small diamond" chance="4480" />
+		<item id="2391" name="war hammer" chance="3489" />
+		<item id="36601" name="ivory carving" chance="3122" />
+		<item id="2485" name="doublet" chance="2607" />
+		<item id="2521" name="dark shield" chance="2534" />
+		<item id="28393" name="rainbow quartz" chance="2277" countmax="3" />
+		<item id="7454" name="glorious axe" chance="2130" />
+		<item id="8870" name="spirit cloak" chance="1799" />
+		<item id="24849" name="onyx chip" chance="1763" />
+		<item id="7452" name="spiked squelcher" chance="1506" />
+		<item id="27047" name="coral brooch" chance="1359" />
+		<item id="7413" name="titan axe" chance="1285" />
+		<item id="24739" name="moonlight crystals" chance="1249" />
+		<item id="7456" name="noble axe" chance="992" />
+		<item id="36664" name="white silk flower" chance="477" />
+		<item id="36437" name="lion figurine" chance="441" />
+	</loot>
+</monster>

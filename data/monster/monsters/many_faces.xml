@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Many Faces" nameDescription="" experience="18870" speed="430">
+	<health now="30000" max="30000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element firePercent="-5" />
+		<element icePercent="30" />
+		<element holyPercent="50" />
+		<element deathPercent="-30" />
+	</elements>
+	<defenses armor="105" defense="105" />
+	<voices interval="1000" chance="5">
+		<voice sentence="I have a head start." />
+		<voice sentence="Look into my eyes! No, the other ones!" />
+		<voice sentence="The mirrors can't contain the night!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="75247" />
+		<item id="8473" name="ultimate health potion" chance="14792" countmax="7" />
+		<item id="36589" name="apron" chance="7836" />
+		<item id="2183" name="hailstorm rod" chance="6526" />
+		<item id="2155" name="green gem" chance="5754" />
+		<item id="10219" name="sacred tree amulet" chance="5432" />
+		<item id="2153" name="violet gem" chance="5303" />
+		<item id="8911" name="northwind rod" chance="4895" />
+		<item id="2158" name="blue gem" chance="4787" />
+		<item name="ring of red plasma" chance="4530" />
+		<item id="2197" name="stone skin amulet" chance="4208" />
+		<item id="36588" name="head (many faces)" chance="3864" />
+		<item id="7892" name="glacier shoes" chance="2598" />
+		<item id="7897" name="glacier robe" chance="1846" />
+		<item id="18412" name="glacial rod" chance="1073" />
+		<item id="36680" name="gruesome fan" chance="880" />
+	</loot>
+</monster>

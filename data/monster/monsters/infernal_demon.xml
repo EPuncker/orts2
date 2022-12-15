@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Infernal Demon" nameDescription="an infernal demon" experience="17430" speed="400">
+	<health now="32000" max="32000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="30" />
+		<element firePercent="40" />
+		<element icePercent="-20" />
+		<element holyPercent="-25" />
+		<element deathPercent="50" />
+	</elements>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-2000" />
+	</attacks>
+	<defenses armor="120" defense="120">
+		<defense name="healing" interval="2000" chance="20" min="500" max="800" />
+	</defenses>
+	<voices interval="1000" chance="5">
+		<voice sentence="The smell of fear follows you." />
+		<voice sentence="Your soul will burn." />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="52482" />
+		<item id="8473" name="ultimate health potion" chance="18227" countmax="5" />
+		<item id="9971" name="gold ingot" chance="15650" />
+		<item id="18413" name="blue crystal shard" chance="6821" />
+		<item id="18420" name="red crystal fragment" chance="6366" />
+		<item id="2145" name="small diamond" chance="6366" />
+		<item id="18419" name="cyan crystal fragment" chance="5457" />
+		<item id="24849" name="onyx chip" chance="3676" />
+		<item id="2158" name="blue gem" chance="2539" />
+		<item id="18421" name="green crystal fragment" chance="2311" />
+		<item id="7891" name="magma boots" chance="2198" />
+		<item id="7890" name="magma amulet" chance="1933" />
+		<item id="2393" name="giant sword" chance="1743" />
+		<item id="7386" name="mercenary sword" chance="1667" />
+		<item id="2454" name="war axe" chance="1326" />
+		<item id="2197" name="stone skin amulet" chance="644" />
+	</loot>
+</monster>

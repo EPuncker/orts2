@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Turbulent Elemental" nameDescription="a turbulent elemental" experience="19360" speed="360">
+	<health now="28000" max="28000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="10" />
+		<element energyPercent="-10" />
+		<element earthPercent="40" />
+		<element firePercent="-20" />
+		<element icePercent="30" />
+	</elements>
+	<defenses armor="105" defense="105" />
+	<loot>
+		<item id="2160" name="Crystal Coin" chance="35000" />
+		<item id="8473" name="Ultimate Health Potion" chance="15000" />
+		<item id="9971" name="Gold Ingot" chance="15000" />
+		<item id="7888" name="Glacier Amulet" chance="2500" />
+		<item id="7897" name="Glacier Robe" chance="2500" />
+		<item id="2153" name="Violet Gem" chance="2500" />
+		<item id="2158" name="Blue Gem" chance="2500" />
+		<item id="2664" name="Wood Cape" chance="2500" />
+		<item id="8911" name="Northwind Rod" chance="2500" />
+		<item id="8912" name="Springsprout Rod" chance="2500" />
+		<item id="10219" name="Sacred Tree Amulet" chance="2500" />
+		<item id="2197" name="Stone Skin Amulet" chance="7500" />
+		<item id="23536" name="Rubber Cap" chance="7500" />
+		<item id="24741" name="Fur Armor" chance="7500" />
+		<item id="8878" name="Crystalline Armor" chance="4000" />
+		<item id="36765" name="Bag You Desire" chance="4000" />
+	</loot>
+</monster>

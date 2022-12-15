@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Werelioness" nameDescription="a werelioness" experience="2300" speed="220">
+	<health now="3000" max="3000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="40" />
+		<element firePercent="35" />
+		<element icePercent="-25" />
+		<element holyPercent="-5" />
+		<element deathPercent="50" />
+	</elements>
+	<defenses armor="38" defense="38" />
+	<loot>
+		<item id="2148" name="gold coin" chance="87903" countmax="99" />
+		<item id="2152" name="platinum coin" chance="87338" countmax="8" />
+		<item id="2671" name="ham" chance="69558" />
+		<item id="5944" name="soul orb" chance="17016" />
+		<item id="2666" name="meat" chance="16949" />
+		<item id="10608" name="lion's mane" chance="13227" />
+		<item id="2384" name="rapier" chance="11698" />
+		<item id="7449" name="crystal sword" chance="10103" />
+		<item id="2461" name="leather helmet" chance="9904" />
+		<item id="7759" name="small enchanted sapphire" chance="9206" countmax="6" />
+		<item id="2193" name="ankh" chance="7876" />
+		<item id="2144" name="black pearl" chance="7112" />
+		<item id="2409" name="serpent sword" chance="4952" />
+		<item id="3351" name="steel helmet" chance="3124" />
+		<item id="36601" name="ivory carving" chance="3024" />
+		<item id="2143" name="white pearl" chance="2958" />
+		<item id="7901" name="lightning headband" chance="2326" />
+		<item id="24739" name="moonlight crystals" chance="1429" />
+		<item id="7894" name="magma legs" chance="964" />
+		<item id="2491" name="crown helmet" chance="864" />
+		<item id="36437" name="lion figurine" chance="299" />
+		<item id="36664" name="white silk flower" chance="266" />
+	</loot>
+</monster>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Druid's Apparition" nameDescription="a druid's apparition" experience="18870" speed="470">
+	<health now="25000" max="25000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-20" />
+		<element firePercent="-20" />
+		<element icePercent="30" />
+		<element holyPercent="40" />
+		<element deathPercent="-20" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Healing is what I do best." />
+		<voice sentence="I'll take your place when you are gone." />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="80476" />
+		<item id="2181" name="terra rod" chance="21252" />
+		<item id="7590" name="great mana potion" chance="14339" countmax="3" />
+		<item id="2155" name="green gem" chance="9528" />
+		<item id="2158" name="blue gem" chance="9248" />
+		<item id="2197" name="stone skin amulet" chance="4904" />
+		<item id="10219" name="sacred tree amulet" chance="4250" />
+		<item id="7888" name="glacier amulet" chance="4017" />
+		<item id="8910" name="underworld rod" chance="2616" />
+		<item id="8912" name="springsprout rod" chance="2522" />
+		<item id="26200" name="collar of red plasma" chance="1822" />
+		<item id="2171" name="platinum amulet" chance="1355" />
+		<item id="7897" name="glacier robe" chance="1028" />
+	</loot>
+</monster>

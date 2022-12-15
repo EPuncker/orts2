@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Paladin's Apparition" nameDescription="a paladin's apparition" experience="18870" speed="470">
+	<health now="25000" max="25000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="20" />
+		<element firePercent="-11" />
+		<element icePercent="30" />
+		<element holyPercent="40" />
+		<element deathPercent="-20" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="I could be your evil twin!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="78415" />
+		<item id="2475" name="warrior helmet" chance="7057" />
+		<item id="2155" name="green gem" chance="5811" />
+		<item id="8472" name="great spirit potion" chance="5774" />
+		<item id="2153" name="violet gem" chance="5208" />
+		<item id="2158" name="blue gem" chance="4792" />
+		<item id="7902" name="glacier mask" chance="4528" />
+		<item id="7888" name="glacier amulet" chance="2717" />
+		<item id="2664" name="wood cape" chance="2226" />
+		<item id="5741" name="skull helmet" chance="1811" />
+		<item name="collar of blue plasma" chance="1698" />
+		<item name="ring of blue plasma" chance="1434" />
+		<item id="2197" name="stone skin amulet" chance="830" />
+		<item id="8855" name="composite hornbow" chance="264" />
+	</loot>
+</monster>

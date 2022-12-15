@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Vibrant Phantom" nameDescription="a vibrant phantom" experience="19700" speed="460">
+	<health now="27000" max="27000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="4" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-10" />
+		<element energyPercent="20" />
+		<element earthPercent="-10" />
+		<element holyPercent="10" />
+		<element deathPercent="-10" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="All this beautiful lightning." />
+		<voice sentence="Feel the vibration!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="54390" />
+		<item id="8473" name="ultimate health potion" chance="26399" countmax="5" />
+		<item id="2181" name="terra rod" chance="9004" />
+		<item id="9971" name="gold ingot" chance="7901" />
+		<item id="2153" name="violet gem" chance="7166" />
+		<item id="7633" name="giant shimmering pearl (brown)" chance="5860" />
+		<item id="2183" name="hailstorm rod" chance="4675" />
+		<item id="36799" name="vibrant heart" chance="3736" />
+		<item id="2155" name="green gem" chance="3491" />
+		<item id="2158" name="blue gem" chance="2572" />
+		<item id="8910" name="underworld rod" chance="2266" />
+		<item id="36800" name="vibrant robe" chance="2123" />
+		<item id="18413" name="blue crystal shard" chance="1940" />
+		<item id="8912" name="springsprout rod" chance="1940" />
+		<item id="18414" name="violet crystal shard" chance="1715" />
+		<item name="ring of blue plasma" chance="1245" />
+	</loot>
+</monster>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Usurper Commander" nameDescription="a usurper commander" experience="7200" speed="0">
+	<health now="8500" max="8500" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2152" name="platinum coin" chance="100000" countmax="5" />
+		<item id="36820" name="fur shred" chance="16494" />
+		<item id="2386" name="axe" chance="15351" />
+		<item id="36818" name="lion cloak patch" chance="10148" />
+		<item id="36816" name="lion crest" chance="8930" />
+		<item id="9971" name="gold ingot" chance="8745" />
+		<item id="2456" name="bow" chance="8672" />
+		<item id="7633" name="giant shimmering pearl (brown)" chance="8155" />
+		<item id="8901" name="spellbook of warding" chance="5129" />
+		<item id="8912" name="springsprout rod" chance="4133" />
+		<item id="8922" name="wand of voodoo" chance="4022" />
+		<item id="2155" name="green gem" chance="2768" />
+		<item id="2153" name="violet gem" chance="2620" />
+		<item name="ring of blue plasma" chance="2251" />
+		<item name="ring of red plasma" chance="1845" />
+		<item id="18413" name="blue crystal shard" chance="1550" />
+		<item id="7443" name="bullseye potion" chance="406" />
+		<item name="giant shimmering pearl" chance="148" />
+	</loot>
+</monster>

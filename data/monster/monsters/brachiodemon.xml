@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Brachiodemon" nameDescription="a brachiodemon" experience="15770" speed="440">
+	<health now="25000" max="25000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag ignorespawnblock="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element firePercent="30" />
+		<element icePercent="-25" />
+		<element holyPercent="-35" />
+		<element deathPercent="50" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Feel the heat!" />
+		<voice sentence="Hand over your life." />
+		<voice sentence="I can give you a hand... or two." />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="51508" />
+		<item id="8473" name="ultimate health potion" chance="23893" countmax="4" />
+		<item id="36592" name="hand" chance="5758" />
+		<item id="2438" name="epee" chance="2664" />
+		<item id="36593" name="head (brachiodemon)" chance="2468" />
+		<item id="2445" name="crystal mace" chance="1606" />
+		<item id="2436" name="skull staff" chance="1410" />
+		<item id="8902" name="spellbook of mind control" chance="862" />
+		<item id="7456" name="noble axe" chance="823" />
+		<item id="7412" name="butcher's axe" chance="666" />
+		<item id="7404" name="assassin dagger" chance="627" />
+		<item name="ring of green plasma" chance="548" />
+		<item id="23539" name="alloy legs" chance="509" />
+		<item id="2432" name="fire axe" chance="509" />
+		<item id="23542" name="metal bat" chance="509" />
+		<item id="7422" name="jade hammer" chance="353" />
+		<item id="2498" name="royal helmet" chance="313" />
+		<item id="18450" name="crystalline sword" chance="235" />
+		<item id="36681" name="diabolic skull" chance="235" />
+		<item id="2514" name="mastermind shield" chance="235" />
+	</loot>
+</monster>

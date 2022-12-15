@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Knight's Apparition" nameDescription="a knight's apparition" experience="18870" speed="470">
+	<health now="25000" max="25000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="50" />
+		<element firePercent="-20" />
+		<element icePercent="10" />
+		<element deathPercent="-20" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="I am you. Just better!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="79890" />
+		<item id="8473" name="ultimate health potion" chance="9419" />
+		<item id="2438" name="epee" chance="7043" />
+		<item id="2155" name="green gem" chance="6364" />
+		<item id="2153" name="violet gem" chance="3734" />
+		<item id="2445" name="crystal mace" chance="3055" />
+		<item id="7888" name="glacier amulet" chance="2843" />
+		<item id="2393" name="giant sword" chance="2461" />
+		<item id="2519" name="crown shield" chance="1485" />
+		<item id="2197" name="stone skin amulet" chance="1273" />
+		<item id="7422" name="jade hammer" chance="1061" />
+	</loot>
+</monster>

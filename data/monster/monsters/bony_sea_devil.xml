@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Bony Sea Devil" nameDescription="a bony sea devil" experience="19470" speed="440">
+	<health now="24000" max="24000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element earthPercent="40" />
+		<element firePercent="-5" />
+		<element icePercent="60" />
+		<element holyPercent="-10" />
+		<element deathPercent="5" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Bling." />
+		<voice sentence="Clank." />
+	</voices>
+	<loot>
+		<item id="2160" name="Crystal Coin" chance="35000" />
+		<item id="8473" name="Ultimate Health Potion" chance="15000" />
+		<item id="7633" name="Giant Shimmering Pearl (Brown)" chance="15000" />
+		<item id="9971" name="Gold Ingot" chance="15000" />
+		<item id="7632" name="Giant Shimmering Pearl (Green)" chance="2500" />
+		<item id="7896" name="Glacier Kilt" chance="2500" />
+		<item id="2153" name="Violet Gem" chance="2500" />
+		<item id="2183" name="Hailstorm Rod" chance="2500" />
+		<item id="8910" name="Underworld Rod" chance="2500" />
+		<item id="8911" name="Northwind Rod" chance="2500" />
+		<item id="8922" name="Wand of Voodoo" chance="2500" />
+		<item id="18421" name="Green Crystal Fragment" chance="2500" />
+		<item id="24849" name="Onyx Chip" chance="2500" />
+		<item id="28393" name="Rainbow Quartz" chance="2500" />
+		<item id="36585" name="Rod (Creature Product)" chance="2500" />
+		<item id="36670" name="Jaws" chance="2500" />
+		<item id="18412" name="Glacial Rod" chance="7500" />
+		<item id="8889" name="Skullcracker Armor" chance="7500" />
+		<item id="36678" name="Goblet of Gloom" chance="7500" />
+		<item id="36765" name="Bag You Desire" chance="4000" />
+	</loot>
+</monster>

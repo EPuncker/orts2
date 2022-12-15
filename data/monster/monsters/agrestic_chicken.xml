@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Agrestic Chicken" nameDescription="an agrestic chicken" experience="0" speed="128">
+	<health now="15" max="15" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<defenses armor="1" defense="1" />
+	<loot>
+		<item id="5890" name="chicken feather" chance="15108" countmax="2" />
+		<item id="3976" name="worm" chance="8746" />
+		<item id="2666" name="meat" chance="2245" />
+		<item id="3606" name="egg" chance="748" countmax="2" />
+	</loot>
+</monster>

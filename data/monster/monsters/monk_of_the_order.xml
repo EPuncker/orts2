@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Monk Of The Order" nameDescription="a monk of the order" experience="200" speed="0">
+	<health now="240" max="240" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag illusionable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag staticattack="90" />
+		<flag targetdistance="1" />
+		<flag canwalkonenergy="0" />
+		<flag canwalkonfire="0" />
+		<flag canwalkonpoison="0" />
+	</flags>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-1" />
+		<element holyPercent="1" />
+		<element deathPercent="1" />
+	</elements>
+	<defenses armor="30" defense="30" />
+	<loot>
+		<item id="2689" name="bread" chance="22283" />
+		<item id="2148" name="gold coin" chance="13587" countmax="16" />
+		<item id="10563" name="book of prayers" chance="6522" />
+		<item id="12448" name="rope belt" chance="2174" />
+		<item id="12449" name="safety pin" chance="1630" />
+		<item id="2193" name="ankh" chance="1087" />
+		<item id="2015" name="brown flask" chance="1087" />
+		<item id="2177" name="life crystal" chance="1087" />
+		<item id="1949" name="scroll" chance="1087" />
+		<item id="2401" name="staff" chance="1087" />
+		<item name="lamp" chance="543" />
+		<item id="2642" name="sandals" chance="543" />
+	</loot>
+</monster>

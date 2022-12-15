@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Infernal Phantom" nameDescription="an infernal phantom" experience="15770" speed="400">
+	<health now="26000" max="26000" />
+	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<targetchange interval="2000" chance="5" />
+	<flags>
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag staticattack="90" />
+		<flag targetdistance="4" />
+		<flag canwalkonenergy="1" />
+		<flag canwalkonfire="1" />
+		<flag canwalkonpoison="1" />
+	</flags>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="-10" />
+		<element energyPercent="1" />
+		<element earthPercent="-10" />
+		<element firePercent="80" />
+		<element icePercent="-20" />
+		<element holyPercent="-20" />
+		<element deathPercent="100" />
+	</elements>
+	<defenses armor="100" defense="100" />
+	<voices interval="1000" chance="5">
+		<voice sentence="Ashes to ashes." />
+		<voice sentence="Burn, baby! Burn!" />
+	</voices>
+	<loot>
+		<item id="2160" name="crystal coin" chance="51419" />
+		<item id="2181" name="terra rod" chance="24487" />
+		<item id="8473" name="ultimate health potion" chance="18682" countmax="4" />
+		<item id="2183" name="hailstorm rod" chance="5718" />
+		<item id="36795" name="infernal heart" chance="4059" />
+		<item id="8912" name="springsprout rod" chance="3797" />
+		<item id="8910" name="underworld rod" chance="3536" />
+		<item id="2432" name="fire axe" chance="3317" />
+		<item id="8920" name="wand of starstorm" chance="3186" />
+		<item id="8922" name="wand of voodoo" chance="2008" />
+		<item id="15451" name="warrior's axe" chance="2008" />
+		<item id="36802" name="infernal robe" chance="1921" />
+		<item id="7413" name="titan axe" chance="1877" />
+		<item id="2445" name="crystal mace" chance="1702" />
+		<item id="7454" name="glorious axe" chance="1702" />
+		<item id="2454" name="war axe" chance="1179" />
+		<item id="7427" name="chaos mace" chance="1091" />
+	</loot>
+</monster>

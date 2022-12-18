@@ -438,7 +438,7 @@ keywordHandler:addAliasKeyword({'functions'})
 keywordHandler:addAliasKeyword({'basic'})
 keywordHandler:addKeyword({"job"}, StdModule.say, {
 	npcHandler = npcHandler,
-	text = "I work in this bank. I can {change} money for you and help you with your {bank account}."
+	text = "I have access to the full functionality of a human bank employee."
 })
 keywordHandler:addKeyword({"rent"}, StdModule.say, {
 	npcHandler = npcHandler,
@@ -447,6 +447,10 @@ keywordHandler:addKeyword({"rent"}, StdModule.say, {
 keywordHandler:addKeyword({"market"}, StdModule.say, {
 	npcHandler = npcHandler,
 	text = "If you buy an item from the market, the required gold will be deducted from your bank account automatically. On the other hand, money you earn for selling items via the market will be added to your account. It's easy!"
+})
+keywordHandler:addKeyword({"name"}, StdModule.say, {
+	npcHandler = npcHandler,
+	text = "My model number is 80-M."
 })
 
 npcHandler:setMessage(MESSAGE_GREET, "<beep> <beep> Welcome to the.... crank Tibian {Bank}.")

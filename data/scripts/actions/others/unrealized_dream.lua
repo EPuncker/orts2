@@ -26,7 +26,7 @@ local config = {
 local unrealizedDream = Action()
 
 function unrealizedDream.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	if player:getPosition():isInRange(Position(33621, 32365, 5), Position(33635, 32374, 5)) then
+	if player:getPosition():isInRange(Position(33621, 32365, 5), Position(33634, 32375, 5)) then
 		local chance = math.random(0, 2200)
 		for i = 1, #config do
 			local randomItem = config[i]

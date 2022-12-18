@@ -33,17 +33,12 @@ function unrealizedDream.onUse(player, item, fromPosition, target, toPosition, i
 			if chance >= randomItem.chanceFrom and chance <= randomItem.chanceTo then
 				if randomItem.itemId then
 					local gift = randomItem.itemId
-					local count = randomItem.count or 1
 					local msg = randomItem.message
-					if type(count) == "table" then
-						count = math.random(count[1], count[2])
-					end
 
-					player:addItem(gift, count)
-					player:say(msg, TALKTYPE_MONSTER_SAY)
+					player:addItem(gift, 1)
+					player:sendTextMessage(MESSAGE_EVENT_ADVANCE, msg)
 				end
 
-				item:getPosition():sendMagicEffect(CONST_ME_GIFT_WRAPS)
 				item:remove(1)
 				return true
 			end

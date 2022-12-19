@@ -758,7 +758,7 @@
 	<house name="Ivy Cottage" houseid="3448" entryx="32277" entryy="32775" entryz="7" rent="500000" guildhall="true" townid="14" size="464" />
 	<house name="Marble Lane 1" houseid="3449" entryx="32300" entryy="32772" entryz="7" rent="600000" townid="14" size="174" />
 	<house name="Freedom Street 2" houseid="3450" entryx="32325" entryy="32812" entryz="7" rent="400000" townid="14" size="103" />
-	<house name="Meriana Beach" houseid="3452" entryx="32383" entryy="32584" entryz="7" rent="150000" townid="14" size="142" />
+	<house name="Meriana Beach" houseid="3452" entryx="32383" entryy="32584" entryz="7" rent="150000" townid="14" size="140" />
 	<house name="The Tavern 1a" houseid="3453" entryx="32295" entryy="32837" entryz="6" rent="150000" townid="14" size="40" />
 	<house name="The Tavern 1b" houseid="3454" entryx="32297" entryy="32836" entryz="6" rent="100000" townid="14" size="31" />
 	<house name="The Tavern 1c" houseid="3455" entryx="32299" entryy="32839" entryz="6" rent="200000" townid="14" size="70" />

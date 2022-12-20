@@ -1,40 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
 	<!-- Rookgaard -->
-	<action uniqueid="50081" script="rookgaard/rookgaard tutorial island/snakeHead.lua" />
-	<action itemid="8599" script="rookgaard/rookgaard tutorial island/ladderReqCockroachLegs.lua" />
-	<action itemid="8593" script="rookgaard/rookgaard tutorial island/cockroachDeadBody.lua" />
-	<action itemid="8582" script="rookgaard/rookgaard tutorial island/branch.lua" />
-	<action itemid="8583" script="rookgaard/rookgaard tutorial island/deadTreeBranch.lua" />
-	<action uniqueid="50085" script="rookgaard/rookgaard tutorial island/zirellaDoor.lua" />
-	<action actionid="50239" script="rookgaard/SewerLever.lua" />
 	<action actionid="5637" script="rookgaard/katana_quest_lever.lua" />
 	<action actionid="1002" script="rookgaard/katana_quest_door.lua" />
-	<action actionid="5638" script="rookgaard/bearroom_quest_lever.lua" />
-	<action actionid="5639" script="rookgaard/doublet_quest.lua" />
-	<action actionid="5640" script="rookgaard/honeyflower_quest.lua" />
-	<action actionid="5641" script="rookgaard/banana_quest.lua" />
-
-	<!-- Adventurer's Guild -->
-	<action itemid="18559" script="adventurers guild/adventurers_stone.lua" />
-	<action fromid="19598" toid="19599" script="adventurers guild/magicdoor.lua" />
-
-	<!-- Thais Exhibition-->
-	<action fromaid="50030" toaid="50056" script="other/thais_exhibition.lua" />
-
-	<!-- Kazordoon -->
-	<action fromaid="50136" toaid="50159" script="kazordoon/oreWagons.lua" />
-	<action fromaid="50230" toaid="50233" script="kazordoon/oreWagons.lua" />
-	<action fromaid="50011" toaid="50012" script="kazordoon/elevatorLever.lua" />
-	<action actionid="50237" script="kazordoon/stone.lua" />
-	<action actionid="50238" script="kazordoon/trapdoor.lua" />
-
-	<!-- Ghost Ship (Plate armor quest) -->
-	<action actionid="5556" script="other/ghostship.lua" />
-
-	<!-- Farmine -->
-	<action fromaid="9118" toaid="9121" script="farmine/elevatorLever.lua" />
-	<action fromaid="12141" toaid="12142" script="farmine/templeofequilibrium_vines.lua" />
 
 	<!-- Weapons enchanting (Gems) -->
 	<action fromid="2146" toid="2147" script="other/enchanting.lua" />
@@ -176,18 +144,6 @@
 	<action actionid="26100" script="quests/svargrond arena/arena_door.lua" />
 	<action actionid="27100" script="quests/svargrond arena/arena_door.lua" />
 	<action actionid="28100" script="quests/svargrond arena/arena_door.lua" />
-
-	<!-- Annihilator Quest -->
-	<action actionid="2214" script="quests/annihilator/door.lua" />
-	<action uniqueid="2208" script="quests/annihilator/lever.lua" />
-
-	<!-- Barbarian Test Quest -->
-	<action fromid="7174" toid="7176" script="quests/barbarian test/horn.lua" />
-	<action fromid="7140" toid="7141" script="quests/barbarian test/horn.lua" />
-	<action uniqueid="3110" script="quests/barbarian test/mead.lua" />
-
-	<!-- Behemoth Quest -->
-	<action uniqueid="2007" script="quests/behemoth/lever.lua" />
 
 	<!-- Bigfoot Burden Quest -->
 	<action fromuid="3124" touid="3127" script="quests/bigfoot burden/music.lua" />
@@ -339,7 +295,6 @@
 	<action actionid="26300" script="quests/system.lua" />
 	<action actionid="27300" script="quests/system.lua" />
 	<action actionid="28300" script="quests/system.lua" />
-	<action itemid="10523" script="other/deeperBanutaShortcut.lua" />
 	<action actionid="50161" script="quests/calassaCombDoor.lua" />
 	<action actionid="2001" script="quests/system2.lua" />
 	<action itemid="4863" script="quests/ectoplasmContainer.lua" />
@@ -507,9 +462,6 @@
 	<action itemid="6277" script="other/baking.lua" />
 	<action itemid="8846" script="other/baking.lua" />
 	<action fromid="2692" toid="2694" script="other/baking.lua" />
-	<action itemid="20220" script="other/rafzanElevator.lua" />
-	<action itemid="20224" script="other/rafzanElevator.lua" />
-	<action fromaid="50006" toaid="50010" script="other/horestisjars.lua" />
 
 	<!-- Market -->
 	<action itemid="14405" function="market" />

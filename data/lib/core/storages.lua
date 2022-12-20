@@ -1050,6 +1050,12 @@ GlobalStorageKeys = {
 
 	WorldBoard = {
 		Yasir = 10100,
+
+		NightmareIsle = {
+			ankrahmunNorthEast = 10200,
+			darashiaNorth = 10201,
+			darashiaNorthWest = 10202
+		},
 	},
 
 	NaginataStone = 50058,

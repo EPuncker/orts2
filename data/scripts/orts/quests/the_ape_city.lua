@@ -1,3 +1,5 @@
+local theDeepestCatacombsLever = Action()
+
 local config = {
 	leverTime = 15 * 60,
 	leverPositions = {
@@ -34,8 +36,7 @@ local function revertWalls(leverPosition)
 	end
 end
 
-
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function theDeepestCatacombsLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid ~= 1945 then
 		player:sendTextMessage(MESSAGE_INFO_DESCR, 'It doesn\'t move.')
 		return true
@@ -85,3 +86,29 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(1946)
 	return true
 end
+
+theDeepestCatacombsLever:aid(12129)
+theDeepestCatacombsLever:uid(12131)
+theDeepestCatacombsLever:register()
+
+local theDeepestCatacombsSnakeDestroyer = Action()
+
+function theDeepestCatacombsSnakeDestroyer.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if target.itemid ~= 4861 then
+		return false
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline) ~= 17 or player:getStorageValue(PlayerStorageKeys.TheApeCity.SnakeDestroyer) == 1 then
+		return false
+	end
+
+	player:setStorageValue(PlayerStorageKeys.TheApeCity.SnakeDestroyer, 1)
+	item:remove()
+	target:transform(4862)
+	target:decay()
+	toPosition:sendMagicEffect(CONST_ME_FIREAREA)
+	return true
+end
+
+theDeepestCatacombsSnakeDestroyer:id(4846)
+theDeepestCatacombsSnakeDestroyer:register()

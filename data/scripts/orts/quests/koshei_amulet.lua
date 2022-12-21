@@ -1,3 +1,24 @@
+local boss = Action()
+
+function boss.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if target.itemid ~= 8272 then
+		return false
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus) == 2 and player:getStorageValue(PlayerStorageKeys.KosheiTheDeathless.RewardDoor) ~= 1 then
+		player:removeItem(8266, 1)
+		player:setStorageValue(PlayerStorageKeys.KosheiTheDeathless.RewardDoor, 1)
+		toPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
+		player:say("At last.. I have it back, my precious amulet. I am glad you didn't use it! I allow you to ...ahh... enter door ...ahh", TALKTYPE_MONSTER_SAY, false, player, toPosition)
+	end
+	return true
+end
+
+boss:id(8266)
+boss:register()
+
+local switch = Action()
+
 local config = {
 	{position = Position(33281, 32442, 8), itemId = 3698},
 	{position = Position(33286, 32444, 8), itemId = 3698},
@@ -15,7 +36,7 @@ local function revertCoffin()
 	end
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function switch.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local statuesInOrder, statueItem = true
 	for i = 1, #config do
 		local statue = config[i]
@@ -39,3 +60,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+switch:uid(3070)
+switch:register()

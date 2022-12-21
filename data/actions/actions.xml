@@ -43,18 +43,6 @@
 	<action uniqueid="3198" script="quests/wrath of the emperor/Mission11PaybackTimeLever.lua" />
 	<action uniqueid="3200" script="quests/wrath of the emperor/Mission12JustRewards.lua" />
 
-	<!-- The New Frontier Quest -->
-	<action uniqueid="3157" script="quests/the new frontier/arena.lua" />
-	<action itemid="11100" script="quests/the new frontier/beaver.lua" />
-	<action fromaid="8005" toaid="8006" script="quests/the new frontier/lever.lua" />
-	<action fromuid="3153" touid="3154" script="quests/the new frontier/vine.lua" />
-	<action uniqueid="3156" script="quests/the new frontier/retreat.lua" />
-
-	<!--- The Ape City Quest -->
-	<action actionid="12129" script="quests/the ape city/Mission9TheDeepestCatacombsLever.lua" />
-	<action uniqueid="12131" script="quests/the ape city/Mission9TheDeepestCatacombsLever.lua" />
-	<action itemid="4846" 	 script="quests/the ape city/Mission9TheDeepestCatacombsSnakedestroyer.lua" />
-
 	<!--- The Ancient Tombs Quest -->
 	<action actionid="12107" script="quests/the ancient tombs/OasisTombLeverDoor.lua" />
 	<action actionid="12105" script="quests/the ancient tombs/AncientRuinsTombInstruments.lua" />
@@ -133,14 +121,6 @@
 	<action actionid="8033" script="quests/dreamer challenge/ticTacTeleport.lua" />
 	<action fromuid="2246" touid="2249" script="quests/dreamer challenge/walls.lua" />
 
-	<!-- Explorer Society Quest -->
-	<action itemid="4869" script="quests/explorer society/botanist.lua" />
-	<action itemid="4865" script="quests/explorer society/butterfly.lua" />
-	<action uniqueid="3017" script="quests/explorer society/dragon.lua" />
-	<action itemid="4856" script="quests/explorer society/icicle.lua" />
-	<action itemid="7281" script="quests/explorer society/resonance.lua" />
-	<action itemid="7242" script="quests/explorer society/stone.lua" />
-
 	<!-- Ice Islands Quest -->
 	<action fromid="7243" toid="7244" script="quests/ice islands/anthill.lua" />
 	<action itemid="7289" script="quests/ice islands/charm.lua" />
@@ -167,10 +147,6 @@
 	<action actionid="2002" script="quests/inquisition/vampireHunt.lua" />
 	<action fromuid="9017" touid="9020" script="quests/inquisition/brotherLever.lua" />
 	<action uniqueid="9021" script="quests/inquisition/rewardDoor.lua" />
-
-	<!-- Koshei Amulet Quest -->
-	<action itemid="8266" script="quests/koshei amulet/boss.lua" />
-	<action uniqueid="3070" script="quests/koshei amulet/switch.lua" />
 
 	<!-- Pits Of Inferno Quest -->
 	<action actionid="8815" script="quests/pits of inferno/fountain.lua" />
@@ -200,20 +176,6 @@
 	<action uniqueid="50124" script="quests/the hidden city of beregar/wagonMazeExit.lua" />
 	<action itemid="10035" script="quests/the hidden city of beregar/ladder.lua" />
 
-	<!-- Thieves Guild Quest -->
-	<action itemid="8693" script="quests/the thieves guild/dwarfDisguiseKit.lua" />
-	<action itemid="8701" script="quests/the thieves guild/note.lua" />
-	<action fromaid="12501" toaid="12502" script="quests/the thieves guild/climbingVine.lua" />
-	<action itemid="8762" script="quests/the thieves guild/fishnappingKey.lua" />
-	<action actionid="12505" script="quests/the thieves guild/fishnappingDoor.lua" />
-
-	<!-- Secret Service Quest -->
-	<action itemid="7700" script="quests/secret service/amazonDisguiseKit.lua" />
-	<action itemid="7697" script="quests/secret service/ring.lua" />
-	<action fromid="7960" toid="7962" script="quests/secret service/tools.lua" />
-	<action itemid="7698" script="quests/secret service/rustBugs.lua" />
-	<action actionid="12574" script="quests/secret service/lever.lua" />
-
 	<!-- Quests -->
 	<action fromuid="9172" touid="9174" script="quests/warzone_rewards.lua" />
 	<action uniqueid="9177" script="quests/iron_helmet.lua" />
@@ -236,8 +198,6 @@
 	<action actionid="2001" script="quests/system2.lua" />
 	<action itemid="4863" script="quests/ectoplasmContainer.lua" />
 	<action itemid="7494" script="quests/holyWater.lua" />
-	<action actionid="5632" script="quests/serpentineTowerTorch.lua" />
-	<action actionid="5633" script="quests/serpentineTowerLever.lua" />
 	<action actionid="4210" script="quests/senjaCastleLever.lua" />
 
 	<!-- Tools -->

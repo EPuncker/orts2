@@ -33,9 +33,9 @@ end
 
 bloomingGriffinclaw:register()
 
-local watherSkin = Action()
+local waterSkin = Action()
 
-function watherSkin.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function waterSkin.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.itemid ~= 5663 then
 		return false
 	end
@@ -45,5 +45,5 @@ function watherSkin.onUse(player, item, fromPosition, target, toPosition, isHotk
 	return true
 end
 
-watherSkin:id(5938)
-watherSkin:register()
+waterSkin:id(5938)
+waterSkin:register()

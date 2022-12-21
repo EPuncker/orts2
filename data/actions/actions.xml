@@ -9,32 +9,6 @@
 	<action fromid="18488" toid="18492" script="other/offlinetraining.lua" />
 	<action itemid="12397" script="other/trainingbook.lua" />
 
-	<!-- Gravedigger -->
-	<action actionid="4630" script="quests/gravedigger/amforas.lua" />
-	<action actionid="4631" script="quests/gravedigger/brain.lua" />
-	<action itemid="21407" script="quests/gravedigger/bones.lua" />
-	<action itemid="21245" script="quests/gravedigger/tincture.lua" />
-	<action actionid="4636" script="quests/gravedigger/statue.lua" />
-	<action itemid="21247" script="quests/gravedigger/chalk.lua" />
-	<action itemid="21482" script="quests/gravedigger/key.lua" />
-	<action itemid="21448" script="quests/gravedigger/candles.lua" />
-	<action itemid="21248" script="quests/gravedigger/monks.lua" />
-	<action itemid="21417" script="quests/gravedigger/blood.lua" />
-	<action itemid="21449" script="quests/gravedigger/pyramids.lua" />
-	<action actionid="4650" script="quests/gravedigger/palanca.lua" />
-	<action itemid="21489" script="quests/gravedigger/key2.lua" />
-	<action itemid="21464" script="quests/gravedigger/cape.lua" />
-	<action actionid="4662" script="quests/gravedigger/scroll.lua" />
-	<action fromaid="4663" toaid="4667" script="quests/gravedigger/pyramids2.lua" />
-	<action actionid="4669" script="quests/gravedigger/estante.lua" />
-	<action uniqueid="4663" script="quests/gravedigger/caixa.lua" />
-	<action itemid="21251" script="quests/gravedigger/sacrifici.lua" />
-	<action fromaid="4651" toaid="4653" script="quests/gravedigger/inscriptions.lua" />
-	<action itemid="21446" script="quests/gravedigger/ashes.lua" />
-	<action itemid="21406" script="quests/gravedigger/hallowed.lua" />
-	<action itemid="21401" script="quests/gravedigger/tears.lua" />
-	<action itemid="21402" script="quests/gravedigger/flask.lua" />
-
 	<!-- Quests -->
 	<action uniqueid="9192" script="quests/orcedron.lua" />
 	<action uniqueid="50023" script="quests/triangletowerlever.lua" />

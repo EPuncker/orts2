@@ -101,7 +101,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 					end
 				end
 			end
-		else
+
 			if toPosition.x == CONTAINER_POSITION then
 				toPosition = player:getPosition()
 			end

@@ -23,6 +23,18 @@ local fluidMessage = {
 	[FLUID_MEAD] = "Aaaah..."
 }
 
+local function graveStoneTeleport(cid, fromPosition, toPosition)
+	local player = Player(cid)
+	if not player then
+		return true
+	end
+
+	player:teleportTo(toPosition)
+	player:say("Muahahahaha..", TALKTYPE_MONSTER_SAY, false, player)
+	fromPosition:sendMagicEffect(CONST_ME_DRAWBLOOD)
+	toPosition:sendMagicEffect(CONST_ME_MORTAREA)
+end
+
 local distillery = {[5513] = 5469, [5514] = 5470}
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
@@ -73,6 +85,22 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			end
 		elseif item.type == FLUID_NONE then
 			player:sendTextMessage(MESSAGE_STATUS_SMALL, "It is empty.")
+		else
+			if item.type == FLUID_BLOOD and target.actionid == 2023 then
+				toPosition.y = toPosition.y + 1
+				local creatures, destination = Tile(toPosition):getCreatures(), Position(32791, 32332, 10)
+				if #creatures == 0 then
+					graveStoneTeleport(player.uid, fromPosition, destination)
+				else
+					local creature
+					for i = 1, #creatures do
+						creature = creatures[i]
+						if creature and creature:isPlayer() then
+							graveStoneTeleport(creature.uid, toPosition, destination)
+						end
+					end
+				end
+			end
 		else
 			if toPosition.x == CONTAINER_POSITION then
 				toPosition = player:getPosition()

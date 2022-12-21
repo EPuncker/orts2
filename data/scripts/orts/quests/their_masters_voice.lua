@@ -1,3 +1,5 @@
+local slimeGobbler = Action()
+
 local position = {
 	Position(33313, 31852, 9),
 	Position(33313, 31865, 9),
@@ -45,7 +47,7 @@ local function summonMonster(name, position)
 	position:sendMagicEffect(CONST_ME_TELEPORT)
 end
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function slimeGobbler.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if not table.contains({13585, 13586, 13587, 13588, 13589}, target.itemid) then
 		return false
 	end
@@ -54,10 +56,12 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		target:transform(13590)
 		player:setStorageValue(PlayerStorageKeys.TheirMastersVoice.SlimeGobblerTimeout, os.time() + 5)
 		toPosition:sendMagicEffect(CONST_ME_POFF)
+
 		if not getFungusInArea(Position(33306, 31847, 9), Position(33369, 31919, 9)) then
 			for i = 1, #position do
 				addEvent(summonMonster, 5 * 1000, creatureNames[math.random(#creatureNames)], position[i])
 			end
+
 			player:getPosition():sendMagicEffect(CONST_ME_FIREWORK_RED)
 			player:say('COME! My servants! RISE!', TALKTYPE_MONSTER_SAY)
 			Game.setStorageValue(GlobalStorageKeys.TheirMastersVoice.ServantsKilled, 0)
@@ -69,3 +73,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+slimeGobbler:id(13601)
+slimeGobbler:register()

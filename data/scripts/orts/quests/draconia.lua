@@ -1,9 +1,11 @@
+local walls = Action()
+
 local config = {
 	[4249] = {position = Position(32792, 31581, 7), itemId = 1037},
 	[4250] = {position = Position(32790, 31594, 7), itemId = 1285}
 }
 
-function onUse(player, item, toPosition, target, fromPosition, isHotkey)
+function walls.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local wall = config[item.actionid]
 	if not wall then
 		return true
@@ -19,3 +21,6 @@ function onUse(player, item, toPosition, target, fromPosition, isHotkey)
 	item:transform(item.itemid == 1945 and 1946 or 1945)
 	return true
 end
+
+walls:aid(4249, 4250)
+walls:register()

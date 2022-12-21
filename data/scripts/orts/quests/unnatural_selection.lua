@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local rayOfLight = Action()
+
+function rayOfLight.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:getStorageValue(PlayerStorageKeys.UnnaturalSelection.Mission05) == 1 then
 		player:setStorageValue(PlayerStorageKeys.UnnaturalSelection.Questline, 11)
 		player:setStorageValue(PlayerStorageKeys.UnnaturalSelection.Mission05, 2) --Questlog, Unnatural Selection Quest "Mission 5: Ray of Light"
@@ -7,3 +9,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+rayOfLight:uid(12335)
+rayOfLight:register()

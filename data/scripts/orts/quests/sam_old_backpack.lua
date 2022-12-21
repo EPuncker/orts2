@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local door = Action()
+
+function door.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid ~= 1225 then
 		return true
 	end
@@ -9,3 +11,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+door:aid(42535)
+door:register()

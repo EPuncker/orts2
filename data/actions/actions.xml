@@ -148,7 +148,7 @@
 	<action uniqueid="50124" script="quests/the hidden city of beregar/wagonMazeExit.lua" />
 	<action itemid="10035" script="quests/the hidden city of beregar/ladder.lua" />
 
-	<!-- Quests -->>
+	<!-- Quests -->
 	<action uniqueid="9192" script="quests/orcedron.lua" />
 	<action uniqueid="50023" script="quests/triangletowerlever.lua" />
 	<action fromaid="50023" toaid="50024" script="quests/thaislighthouselever.lua" />

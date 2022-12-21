@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-	<!-- Rookgaard -->
-	<action actionid="5637" script="rookgaard/katana_quest_lever.lua" />
-	<action actionid="1002" script="rookgaard/katana_quest_door.lua" />
-
 	<!-- Weapons enchanting (Gems) -->
 	<action fromid="2146" toid="2147" script="other/enchanting.lua" />
 	<action fromid="2149" toid="2150" script="other/enchanting.lua" />

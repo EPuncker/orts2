@@ -13,19 +13,6 @@
 	<action fromid="18488" toid="18492" script="other/offlinetraining.lua" />
 	<action itemid="12397" script="other/trainingbook.lua" />
 
-	<!-- The Queen of the Banshees Quest -->
-	<action fromuid="50000" touid="50002" script="quests/the queen of the banshees/theFirstSeal.lua" />
-	<action fromuid="50005" touid="50010" script="quests/the queen of the banshees/theSixthSeal.lua" />
-	<action fromuid="50015" touid="50019" script="quests/the queen of the banshees/theThirdSeal.lua" />
-	<action actionid="50021" script="quests/the queen of the banshees/lastDoor.lua" />
-
-	<!-- Children of the Revolution -->
-	<action uniqueid="3164" script="quests/children of the revolution/Mission3ZeeKillingFieldzzChest.lua" />
-	<action itemid="10760" 	script="quests/children of the revolution/Mission3ZeeKillingFieldzzPoisonWater.lua" />
-	<action actionid="8013" script="quests/children of the revolution/Mission4ZzeWayofZztonezzLevers.lua" />
-	<action itemid="11106" 	script="quests/children of the revolution/Mission4ZzeWayofZztonezzGreaseOil.lua" />
-	<action uniqueid="3170" script="quests/children of the revolution/ZalamonDoor.lua" />
-
 	<!-- Wrath of the Emperor -->
 	<action itemid="12284" script="quests/wrath of the emperor/Mission01Crate.lua" />
 	<action fromuid="3171" touid="3174" script="quests/wrath of the emperor/Mission01Lights.lua" />
@@ -42,11 +29,6 @@
 	<action itemid="12318" script="quests/wrath of the emperor/Mission10AMessageofFreedomSceptre.lua" />
 	<action uniqueid="3198" script="quests/wrath of the emperor/Mission11PaybackTimeLever.lua" />
 	<action uniqueid="3200" script="quests/wrath of the emperor/Mission12JustRewards.lua" />
-
-	<!--- The Ancient Tombs Quest -->
-	<action actionid="12107" script="quests/the ancient tombs/OasisTombLeverDoor.lua" />
-	<action actionid="12105" script="quests/the ancient tombs/AncientRuinsTombInstruments.lua" />
-	<action fromaid="50242" toaid="50244" script="quests/the ancient tombs/activeTeleportSwitches.lua" />
 
 	<!-- Gravedigger -->
 	<action actionid="4630" script="quests/gravedigger/amforas.lua" />
@@ -99,13 +81,6 @@
 	<action uniqueid="2272" script="quests/dreamer challenge/ticTac.lua" />
 	<action actionid="8033" script="quests/dreamer challenge/ticTacTeleport.lua" />
 	<action fromuid="2246" touid="2249" script="quests/dreamer challenge/walls.lua" />
-
-	<!-- Ice Islands Quest -->
-	<action fromid="7243" toid="7244" script="quests/ice islands/anthill.lua" />
-	<action itemid="7289" script="quests/ice islands/charm.lua" />
-	<action itemid="7286" script="quests/ice islands/cure.lua" />
-	<action itemid="7253" script="quests/ice islands/paint.lua" />
-	<action itemid="2361" script="quests/ice islands/yakchal.lua" />
 
 	<!-- In Service Of Yalahar Quest -->
 	<action itemid="9737" script="quests/in service of yalahar/charm.lua" />

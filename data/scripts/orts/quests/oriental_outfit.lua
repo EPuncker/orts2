@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local calassaCombDoor = Action()
+
+function calassaCombDoor.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if item.itemid ~= 5745 then
 		return false
 	end
@@ -12,3 +14,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	player:teleportTo(toPosition, true)
 	return true
 end
+
+calassaCombDoor:aid(50161)
+calassaCombDoor:register()

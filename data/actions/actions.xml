@@ -91,27 +91,6 @@
 	<action fromuid="9008" touid="9011" script="quests/demon oak/demonOakChest.lua" />
 	<action uniqueid="9007" script="quests/demon oak/demonOakGravestone.lua" />
 
-	<!-- Arena Quest-->
-	<action actionid="13100" script="quests/svargrond arena/arena_door.lua" />
-	<action actionid="26100" script="quests/svargrond arena/arena_door.lua" />
-	<action actionid="27100" script="quests/svargrond arena/arena_door.lua" />
-	<action actionid="28100" script="quests/svargrond arena/arena_door.lua" />
-
-	<!-- Bigfoot Burden Quest -->
-	<action fromuid="3124" touid="3127" script="quests/bigfoot burden/music.lua" />
-	<action uniqueid="3143" script="quests/bigfoot burden/warzones.lua" />
-	<action fromuid="3147" touid="3150" script="quests/bigfoot burden/rewards.lua" />
-	<action itemid="18213" script="quests/bigfoot burden/extractor.lua" />
-	<action itemid="18219" script="quests/bigfoot burden/crystal.lua" />
-	<action itemid="18220" script="quests/bigfoot burden/mushroom.lua" />
-	<action itemid="18225" script="quests/bigfoot burden/shooting.lua" />
-	<action itemid="18312" script="quests/bigfoot burden/matchmaker.lua" />
-	<action itemid="18313" script="quests/bigfoot burden/package.lua" />
-	<action fromid="18328" toid="18331" script="quests/bigfoot burden/spores.lua" />
-	<action itemid="18336" script="quests/bigfoot burden/stone.lua" />
-	<action itemid="18339" script="quests/bigfoot burden/pig.lua" />
-	<action itemid="18343" script="quests/bigfoot burden/repair.lua" />
-
 	<!-- Dreamer Challenge Quest -->
 	<action fromuid="3041" touid="3043" script="quests/dreamer challenge/documentsLever.lua" />
 	<action fromuid="3045" touid="3047" script="quests/dreamer challenge/documentsLever.lua" />
@@ -140,13 +119,6 @@
 	<action fromuid="3088" touid="3090" script="quests/in service of yalahar/reward.lua" />
 	<action uniqueid="9031" script="quests/in service of yalahar/morikSummon.lua" />
 	<action fromaid="23700" toaid="23701" script="quests/in service of yalahar/YalaharMachineWargolems.lua" />
-
-	<!-- Inquisition Quest -->
-	<action fromuid="1300" touid="1308" script="quests/inquisition/rewards.lua" />
-	<action actionid="1004" script="quests/inquisition/ungreez.lua" />
-	<action actionid="2002" script="quests/inquisition/vampireHunt.lua" />
-	<action fromuid="9017" touid="9020" script="quests/inquisition/brotherLever.lua" />
-	<action uniqueid="9021" script="quests/inquisition/rewardDoor.lua" />
 
 	<!-- Pits Of Inferno Quest -->
 	<action actionid="8815" script="quests/pits of inferno/fountain.lua" />
@@ -177,7 +149,6 @@
 	<action itemid="10035" script="quests/the hidden city of beregar/ladder.lua" />
 
 	<!-- Quests -->
-	<action fromuid="9172" touid="9174" script="quests/warzone_rewards.lua" />
 	<action uniqueid="9177" script="quests/iron_helmet.lua" />
 	<action uniqueid="9192" script="quests/orcedron.lua" />
 	<action uniqueid="1912" script="quests/desertdungeonquest.lua" />
@@ -194,9 +165,7 @@
 	<action actionid="26300" script="quests/system.lua" />
 	<action actionid="27300" script="quests/system.lua" />
 	<action actionid="28300" script="quests/system.lua" />
-	<action actionid="50161" script="quests/calassaCombDoor.lua" />
 	<action actionid="2001" script="quests/system2.lua" />
-	<action itemid="4863" script="quests/ectoplasmContainer.lua" />
 	<action itemid="7494" script="quests/holyWater.lua" />
 	<action actionid="4210" script="quests/senjaCastleLever.lua" />
 

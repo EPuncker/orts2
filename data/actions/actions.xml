@@ -35,21 +35,6 @@
 	<action itemid="21401" script="quests/gravedigger/tears.lua" />
 	<action itemid="21402" script="quests/gravedigger/flask.lua" />
 
-	<!-- Pits Of Inferno Quest -->
-	<action actionid="8815" script="quests/pits of inferno/fountain.lua" />
-	<action actionid="2022" script="quests/pits of inferno/goshnar.lua" />
-	<action fromuid="2050" touid="2065" script="quests/pits of inferno/levers.lua" />
-	<action uniqueid="1021" script="quests/pits of inferno/oil.lua" />
-	<action uniqueid="3300" script="quests/pits of inferno/stoneLever.lua" />
-	<action fromuid="2025" touid="2028" script="quests/pits of inferno/walls.lua" />
-	<action fromuid="3301" touid="3302" script="quests/pits of inferno/ladderLevers.lua" />
-	<action uniqueid="3304" script="quests/pits of inferno/trapLever.lua" />
-	<action fromaid="39511" toaid="39512" script="quests/pits of inferno/bazirMirror.lua" />
-	<action fromuid="50095" touid="50104" script="quests/pits of inferno/bazirWrongLevers.lua" />
-	<action uniqueid="50105" script="quests/pits of inferno/bazirMazeLever.lua" />
-	<action uniqueid="50106" script="quests/pits of inferno/fireThroneLever.lua" />
-	<action actionid="50160" script="quests/pits of inferno/mazeStone.lua" />
-
 	<!-- Quests -->
 	<action uniqueid="9192" script="quests/orcedron.lua" />
 	<action uniqueid="50023" script="quests/triangletowerlever.lua" />

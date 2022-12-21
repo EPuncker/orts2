@@ -10,11 +10,6 @@
 	<action itemid="12397" script="other/trainingbook.lua" />
 
 	<!-- Quests -->
-	<action uniqueid="9192" script="quests/orcedron.lua" />
-	<action uniqueid="50023" script="quests/triangletowerlever.lua" />
-	<action fromaid="50023" toaid="50024" script="quests/thaislighthouselever.lua" />
-	<action actionid="50027" script="quests/hellgatelever.lua" />
-	<action actionid="50129" script="quests/liferinglever.lua" />
 	<action actionid="2000" script="quests/system.lua" />
 	<action actionid="2016" script="quests/system.lua" />
 	<action actionid="2215" script="quests/system.lua" />
@@ -25,8 +20,6 @@
 	<action actionid="27300" script="quests/system.lua" />
 	<action actionid="28300" script="quests/system.lua" />
 	<action actionid="2001" script="quests/system2.lua" />
-	<action itemid="7494" script="quests/holyWater.lua" />
-	<action actionid="4210" script="quests/senjaCastleLever.lua" />
 
 	<!-- Tools -->
 	<action itemid="8717" script="tools/lockPick.lua" />

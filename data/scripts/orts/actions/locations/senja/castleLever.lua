@@ -5,7 +5,9 @@ local wallPositions = {
 	Position(32189, 31626, 8)
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local castleLever = Action()
+
+function castleLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local wallItem
 	for i = 1, #wallPositions do
 		wallItem = Tile(wallPositions[i]):getItemById(1498)
@@ -18,3 +20,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:remove()
 	return true
 end
+
+castleLever:aid(4210)
+castleLever:register()

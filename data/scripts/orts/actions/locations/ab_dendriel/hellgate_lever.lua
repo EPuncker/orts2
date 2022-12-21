@@ -1,18 +1,18 @@
 local config = {
 	bridgePositions = {
-		Position(32410, 32232, 10),
-		Position(32411, 32232, 10),
-		Position(32412, 32232, 10),
-		Position(32410, 32231, 10),
-		Position(32411, 32231, 10),
-		Position(32412, 32231, 10)
+		Position(32627, 31699, 10),
+		Position(32628, 31699, 10),
+		Position(32629, 31699, 10)
 	},
-	removeCreaturePosition = Position(32409, 32231, 10),
+
+	removeCreaturePosition = Position(32630, 31699, 10),
 	bridgeID = 5770,
-	waterID = 4615
+	waterID = 493
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local hellgateLever = Action()
+
+function hellgateLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local tile, thing, creature
 	for i = 1, #config.bridgePositions do
 		tile = Tile(config.bridgePositions[i])
@@ -31,3 +31,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(item.itemid == 1945 and 1946 or 1945)
 	return true
 end
+
+hellgateLever:aid(50027)
+hellgateLever:register()

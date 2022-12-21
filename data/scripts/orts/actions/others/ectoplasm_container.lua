@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local ectoplasmContainer = Action()
+
+function ectoplasmContainer.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if target.actionid == 4206 then
 		if player:getStorageValue(PlayerStorageKeys.TibiaTales.IntoTheBonePit) ~= 1 then
 			return false
@@ -18,3 +20,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+ectoplasmContainer:id(4863)
+ectoplasmContainer:register()

@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local lightHouseLever = Action()
+
+function lightHouseLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	--first lever to open the ladder
 	if item.actionid == 50023 then
 		local laddertile = Tile(Position(32225, 32276, 8))
@@ -31,3 +33,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+lightHouseLever:aid(50023, 50024)
+lightHouseLever:register()

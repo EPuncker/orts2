@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local trianguleTowerLever = Action()
+
+function trianguleTowerLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local tile = Tile(Position(32566, 32119, 7))
 	if item.itemid == 1945 then
 		if tile:getItemById(1025) then
@@ -13,3 +15,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+trianguleTowerLever:uid(50023)
+trianguleTowerLever:register()

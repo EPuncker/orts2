@@ -1,7 +1,9 @@
 local stonePosition = Position(33171, 31897, 8)
 local relocatePosition = Position(33171, 31898, 8)
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local orcLeverRemoveStone = Action()
+
+function orcLeverRemoveStone.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local tile = Tile(Position(33171, 31897, 8))
 	if item.itemid == 1945 then
 		local stoneItem = tile:getItemById(1285)
@@ -16,3 +18,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+orcLeverRemoveStone:uid(9192)
+orcLeverRemoveStone:register()

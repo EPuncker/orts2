@@ -5,7 +5,9 @@ local config = {
 	{fromPosition = Position(32673, 32093, 8), toPosition = Position(32672, 32071, 8), sacrificePosition = Position(32673, 32094, 8), sacrificeId = 2376, vocationId = VOCATION_KNIGHT}
 }
 
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local sacrifice = Action()
+
+function sacrifice.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	item:transform(item.itemid == 1945 and 1946 or 1945)
 
 	if item.itemid ~= 1945 then
@@ -52,3 +54,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+sacrifice:uid(1912)
+sacrifice:register()

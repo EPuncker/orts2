@@ -1,4 +1,6 @@
-function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+local reward = Action()
+
+function reward.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local tile = Tile(Position({ x = 32780 , y = 32231 , z = 8}))
 	if item.itemid == 1945 then
 		if tile:getItemById(387) then
@@ -13,3 +15,6 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 	return true
 end
+
+reward:uid(9177)
+reward:register()

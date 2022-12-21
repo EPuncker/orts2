@@ -1,3 +1,5 @@
+local inquisitionQuestBosses = CreatureEvent("InquisitionBosses")
+
 local bosses = {
 	['ushuriel'] = 200,
 	['zugurosh'] = 201,
@@ -8,7 +10,7 @@ local bosses = {
 	['hellgorak'] = 205
 }
 
-function onKill(player, target)
+function inquisitionQuestBosses.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster then
 		return true
@@ -35,3 +37,27 @@ function onKill(player, target)
 	end
 	return true
 end
+
+inquisitionQuestBosses:register()
+
+local inquisitionQuestUngreez = CreatureEvent("InquisitionUngreez")
+
+function inquisitionQuestUngreez.onKill(creature, target)
+	local targetMonster = target:getMonster()
+	if not targetMonster then
+		return true
+	end
+
+	if targetMonster:getName():lower() ~= 'ungreez' then
+		return true
+	end
+
+	local player = creature:getPlayer()
+	if player:getStorageValue(PlayerStorageKeys.TheInquisition.Questline) == 18 then -- The Inquisition Questlog- 'Mission 6: The Demon Ungreez'
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Mission06, 2)
+		player:setStorageValue(PlayerStorageKeys.TheInquisition.Questline, 19)
+	end
+	return true
+end
+
+inquisitionQuestUngreez:register()

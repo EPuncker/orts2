@@ -209,3 +209,72 @@ end
 
 retreat:uid(3156)
 retreat:register()
+
+local shardOfCorruption = CreatureEvent("NewFrontierShardOfCorruption")
+
+function shardOfCorruption.onKill(creature, target)
+	local targetMonster = target:getMonster()
+	if not targetMonster then
+		return true
+	end
+
+	if targetMonster:getName():lower() ~= 'shard of corruption' then
+		return true
+	end
+
+	local player = creature:getPlayer()
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 12 then --Questlog, The New Frontier Quest 'Mission 04: The Mine Is Mine'
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission04, 2)
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 13)
+	end
+	return true
+end
+
+shardOfCorruption:register()
+
+local tireczKill = CreatureEvent("NewFrontierTirecz")
+
+local exitPosition = {Position(33053, 31022, 7), Position(33049, 31017, 2)}
+
+local function clearArena()
+	local spectators, spectator = Game.getSpectators(Position(33063, 31034, 3), false, false, 10, 10, 10, 10)
+	for i = 1, #spectators do
+		spectator = spectators[i]
+		if spectator:isPlayer() then
+			spectator:teleportTo(exitPosition[2])
+			exitPosition[2]:sendMagicEffect(CONST_ME_TELEPORT)
+		else
+			spectator:remove()
+		end
+	end
+end
+
+function tireczKill.onKill(creature, target)
+	local targetMonster = target:getMonster()
+	if not targetMonster then
+		return true
+	end
+
+	if targetMonster:getName():lower() ~= 'tirecz' then
+		return true
+	end
+
+	local spectators, spectator = Game.getSpectators(Position(33063, 31034, 3), false, true, 10, 10, 10, 10)
+	for i = 1, #spectators do
+		spectator = spectators[i]
+		spectator:teleportTo(exitPosition[1])
+		exitPosition[1]:sendMagicEffect(CONST_ME_TELEPORT)
+		spectator:say('You have won! As new champion take the ancient armor as reward before you leave.', TALKTYPE_MONSTER_SAY)
+		if spectator:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 25 then
+			-- Questlog: The New Frontier Quest 'Mission 09: Mortal Combat'
+			spectator:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission09, 2)
+			spectator:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 26)
+		end
+	end
+
+	Game.setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission09, -1)
+	clearArena()
+	return true
+end
+
+tireczKill:register()

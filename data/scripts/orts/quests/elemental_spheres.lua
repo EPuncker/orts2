@@ -1,3 +1,5 @@
+local overlordsKill = CreatureEvent("ElementalSpheresOverlords")
+
 local overlords = {
 	['energy overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.KnightBoss},
 	['fire overlord'] = {cStorage = PlayerStorageKeys.ElementalSphere.BossStorage, cGlobalStorage = GlobalStorageKeys.ElementalSphere.SorcererBoss},
@@ -6,7 +8,7 @@ local overlords = {
 	['lord of the elements'] = {}
 }
 
-function onKill(creature, target)
+function overlordsKill.onKill(creature, target)
 	if not target:isMonster() then
 		return true
 	end
@@ -28,3 +30,5 @@ function onKill(creature, target)
 	creature:say('You slayed ' .. bossName .. '.', TALKTYPE_MONSTER_SAY)
 	return true
 end
+
+overlordsKill:register()

@@ -1,4 +1,6 @@
-function onKill(creature, target)
+local arenaKill = CreatureEvent("SvargrondArenaKill")
+
+function arenaKill.onKill(creature, target)
 	local targetMonster = target:getMonster()
 	if not targetMonster then
 		return
@@ -39,3 +41,5 @@ function onKill(creature, target)
 	player:say('Victory! Head through the new teleporter into the next room.', TALKTYPE_MONSTER_SAY)
 	return true
 end
+
+arenaKill:register()

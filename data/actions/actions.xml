@@ -9,23 +9,6 @@
 	<action fromid="18488" toid="18492" script="other/offlinetraining.lua" />
 	<action itemid="12397" script="other/trainingbook.lua" />
 
-	<!-- Wrath of the Emperor -->
-	<action itemid="12284" script="quests/wrath of the emperor/Mission01Crate.lua" />
-	<action fromuid="3171" touid="3174" script="quests/wrath of the emperor/Mission01Lights.lua" />
-	<action itemid="12285" script="quests/wrath of the emperor/Mission02FirstContactRepairTeleport.lua" />
-	<action fromid="12289" toid="12290" script="quests/wrath of the emperor/Mission02FirstContactRepairTeleport.lua" />
-	<action itemid="12297" script="quests/wrath of the emperor/Mission02FirstContactRepairTeleport.lua" />
-	<action itemid="12300" script="quests/wrath of the emperor/Mission02FirstContactRepairTeleport.lua" />
-	<action itemid="12303" script="quests/wrath of the emperor/Mission02FirstContactRepairTeleport.lua" />
-	<action itemid="12316" script="quests/wrath of the emperor/Mission03TheKeeper.lua" />
-	<action itemid="12320" script="quests/wrath of the emperor/Mission03TheKeeper.lua" />
-	<action uniqueid="12354" script="quests/wrath of the emperor/Mission04SacramentoftheSnakeSceptre.lua" />
-	<action fromuid="3184" touid="3185" script="quests/wrath of the emperor/Mission08UninvitedGuestsLever.lua" />
-	<action itemid="12328" script="quests/wrath of the emperor/Mission09TheSleepingDragonMixture.lua" />
-	<action itemid="12318" script="quests/wrath of the emperor/Mission10AMessageofFreedomSceptre.lua" />
-	<action uniqueid="3198" script="quests/wrath of the emperor/Mission11PaybackTimeLever.lua" />
-	<action uniqueid="3200" script="quests/wrath of the emperor/Mission12JustRewards.lua" />
-
 	<!-- Gravedigger -->
 	<action actionid="4630" script="quests/gravedigger/amforas.lua" />
 	<action actionid="4631" script="quests/gravedigger/brain.lua" />
@@ -52,45 +35,6 @@
 	<action itemid="21401" script="quests/gravedigger/tears.lua" />
 	<action itemid="21402" script="quests/gravedigger/flask.lua" />
 
-	<!-- Elemental Spheres -->
-	<action uniqueid="9024" script="quests/elemental spheres/lever.lua" />
-	<action fromid="7911" toid="7912" script="quests/elemental spheres/machine.lua" />
-	<action fromid="7913" toid="7914" script="quests/elemental spheres/machine2.lua" />
-	<action fromid="7915" toid="7916" script="quests/elemental spheres/machine.lua" />
-	<action fromid="7917" toid="7918" script="quests/elemental spheres/machine2.lua" />
-	<action fromid="8298" toid="8299" script="quests/elemental spheres/soils.lua" />
-	<action fromid="8302" toid="8303" script="quests/elemental spheres/soils.lua" />
-	<action fromuid="9025" touid="9028" script="quests/elemental spheres/OAELever.lua" />
-	<action fromid="8304" toid="8306" script="quests/elemental spheres/soils2.lua" />
-	<action itemid="8300" script="quests/elemental spheres/soils2.lua" />
-
-	<!-- Demon Oak -->
-	<action itemid="8293" script="quests/demon oak/demonOak.lua" />
-	<action fromuid="9008" touid="9011" script="quests/demon oak/demonOakChest.lua" />
-	<action uniqueid="9007" script="quests/demon oak/demonOakGravestone.lua" />
-
-	<!-- Dreamer Challenge Quest -->
-	<action fromuid="3041" touid="3043" script="quests/dreamer challenge/documentsLever.lua" />
-	<action fromuid="3045" touid="3047" script="quests/dreamer challenge/documentsLever.lua" />
-	<action fromid="7844" toid="7846" script="quests/dreamer challenge/documents.lua" />
-	<action uniqueid="2004" script="quests/dreamer challenge/stoneTeleport.lua" />
-	<action uniqueid="2272" script="quests/dreamer challenge/ticTac.lua" />
-	<action actionid="8033" script="quests/dreamer challenge/ticTacTeleport.lua" />
-	<action fromuid="2246" touid="2249" script="quests/dreamer challenge/walls.lua" />
-
-	<!-- In Service Of Yalahar Quest -->
-	<action itemid="9737" script="quests/in service of yalahar/charm.lua" />
-	<action itemid="9733" script="quests/in service of yalahar/formula.lua" />
-	<action itemid="9741" script="quests/in service of yalahar/ghost.lua" />
-	<action uniqueid="3086" script="quests/in service of yalahar/lastFight.lua" />
-	<action fromid="9743" toid="9744" script="quests/in service of yalahar/matrix.lua" />
-	<action fromuid="3091" touid="3102" script="quests/in service of yalahar/mechanism.lua" />
-	<action fromuid="9235" touid="9236" script="quests/in service of yalahar/mechanism.lua" />
-	<action fromuid="3081" touid="3082" script="quests/in service of yalahar/mrWestDoor.lua" />
-	<action fromuid="3088" touid="3090" script="quests/in service of yalahar/reward.lua" />
-	<action uniqueid="9031" script="quests/in service of yalahar/morikSummon.lua" />
-	<action fromaid="23700" toaid="23701" script="quests/in service of yalahar/YalaharMachineWargolems.lua" />
-
 	<!-- Pits Of Inferno Quest -->
 	<action actionid="8815" script="quests/pits of inferno/fountain.lua" />
 	<action actionid="2022" script="quests/pits of inferno/goshnar.lua" />
@@ -105,19 +49,6 @@
 	<action uniqueid="50105" script="quests/pits of inferno/bazirMazeLever.lua" />
 	<action uniqueid="50106" script="quests/pits of inferno/fireThroneLever.lua" />
 	<action actionid="50160" script="quests/pits of inferno/mazeStone.lua" />
-
-	<!-- The Hidden City of Beregar -->
-	<action actionid="12606" script="quests/the hidden city of beregar/bargateLever.lua" />
-	<action actionid="50128" script="quests/the hidden city of beregar/deeperMineWagon.lua" />
-	<action fromaid="50098" toaid="50109" script="quests/the hidden city of beregar/oreWagon.lua" />
-	<action actionid="50112" script="quests/the hidden city of beregar/gapWagon.lua" />
-	<action actionid="50115" script="quests/the hidden city of beregar/tunnelWagon.lua" />
-	<action actionid="50117" script="quests/the hidden city of beregar/coalWagon.lua" />
-	<action fromuid="50108" touid="50111" script="quests/the hidden city of beregar/coalLevers.lua" />
-	<action fromaid="50122" toaid="50125" script="quests/the hidden city of beregar/coalExitWagons.lua" />
-	<action fromuid="50113" touid="50123" script="quests/the hidden city of beregar/wagonMazeLevers.lua" />
-	<action uniqueid="50124" script="quests/the hidden city of beregar/wagonMazeExit.lua" />
-	<action itemid="10035" script="quests/the hidden city of beregar/ladder.lua" />
 
 	<!-- Quests -->
 	<action uniqueid="9192" script="quests/orcedron.lua" />

@@ -16,7 +16,9 @@ local exitPositions = {
 	[6] = Position(32574, 31981, 7)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+local furyGates = MoveEvent()
+
+function furyGates.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -58,3 +60,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 	return true
 end
+
+furyGates:type("stepin")
+furyGates:aid(9710, 9711, 9712, 9713, 9714, 9715, 9716)
+furyGates:register()

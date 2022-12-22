@@ -7,7 +7,9 @@ local config = {
 	[9705] = Position(32655, 31688, 6)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+local abDendrielLift = MoveEvent()
+
+function abDendrielLift.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -22,3 +24,7 @@ function onStepIn(creature, item, position, fromPosition)
 	targetPosition:sendMagicEffect(CONST_ME_POFF)
 	return true
 end
+
+abDendrielLift:type("stepin")
+abDendrielLift:aid(9700, 9701, 9702, 9703, 9704, 9705)
+abDendrielLift:register()

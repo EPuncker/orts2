@@ -1,4 +1,6 @@
-function onStepIn(creature, item, position, fromPosition)
+local formorgarMines = MoveEvent()
+
+function formorgarMines.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -24,3 +26,7 @@ function onStepIn(creature, item, position, fromPosition)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+formorgarMines:type("stepin")
+formorgarMines:aid(3059, 3060, 3061)
+formorgarMines:register()

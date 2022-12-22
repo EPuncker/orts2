@@ -4,7 +4,9 @@ local config = {
 	[50086] = Position(32886, 32632, 11)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+local deeperBanutaShortcut = MoveEvent()
+
+function deeperBanutaShortcut.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -21,3 +23,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 	return true
 end
+
+deeperBanutaShortcut:type("stepin")
+deeperBanutaShortcut:aid(50084, 50085, 50086)
+deeperBanutaShortcut:register()

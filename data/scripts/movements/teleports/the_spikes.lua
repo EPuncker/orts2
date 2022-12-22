@@ -19,7 +19,9 @@ local config = {
 	[4243] = {destination = Position(32237, 32605, 15)}
 }
 
-function onStepIn(creature, item, position, fromPosition)
+local theSpikes = MoveEvent()
+
+function theSpikes.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -64,3 +66,11 @@ function onStepIn(creature, item, position, fromPosition)
 	targetPortal.destination:sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+theSpikes:type("stepin")
+
+for index, value in pairs(config) do
+	theSpikes:aid(index)
+end
+
+theSpikes:register()

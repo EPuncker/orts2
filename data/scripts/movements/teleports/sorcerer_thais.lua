@@ -1,6 +1,6 @@
-local exitPosition = Position(32308, 32267, 7)
+local sorcererThais = MoveEvent()
 
-function onStepIn(creature, item, position, fromPosition)
+function sorcererThais.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -10,7 +10,11 @@ function onStepIn(creature, item, position, fromPosition)
 		return true
 	end
 
-	player:teleportTo(exitPosition)
+	player:teleportTo(Position(32308, 32267, 7))
 	player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 	return true
 end
+
+sorcererThais:type("stepin")
+sorcererThais:aid(5555)
+sorcererThais:register()

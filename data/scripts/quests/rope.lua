@@ -1,4 +1,6 @@
-function onStepIn(creature, item, position, fromPosition)
+local edronRope = MoveEvent()
+
+function edronRope.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -12,3 +14,7 @@ function onStepIn(creature, item, position, fromPosition)
 	player:setStorageValue(PlayerStorageKeys.EdronRopeQuest, os.time() + 30)
 	return true
 end
+
+edronRope:type("stepin")
+edronRope:aid(4254)
+edronRope:register()

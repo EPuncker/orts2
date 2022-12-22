@@ -1,11 +1,11 @@
+local demonParchment = MoveEvent()
+
 local demonPositions = {
 	Position(33060, 31623, 15),
 	Position(33066, 31623, 15),
 	Position(33060, 31627, 15),
 	Position(33066, 31627, 15)
 }
-
-local time = 2 -- hours to recreate the parchment.
 
 local function recreateParchment(position)
 	local item = Tile(position):getItemById(1953)
@@ -20,12 +20,16 @@ local function recreateParchment(position)
 	end
 end
 
-function onRemoveItem(item, tile, position)
+function demonParchment.onRemoveItem(item, tile, position)
 	item:removeAttribute(ITEM_ATTRIBUTE_ACTIONID)
-	addEvent(recreateParchment, time * 60 * 60 * 1000, position)
+	addEvent(recreateParchment, 2 * 60 * 60 * 1000, position)
 
 	for i = 1, #demonPositions do
 		Game.createMonster('Demon', demonPositions[i])
 	end
 	return true
 end
+
+demonParchment:type("removeitem")
+demonParchment:aid(60999)
+demonParchment:register()

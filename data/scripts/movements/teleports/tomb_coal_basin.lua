@@ -9,7 +9,9 @@ local config = {
 	[9040] = {flamePosition = Position(33162, 32831, 10), toPosition = Position(33158, 32832, 10)}
 }
 
-function onAddItem(moveitem, tileitem, position)
+local tombCoalBasin = MoveEvent()
+
+function tombCoalBasin.onAddItem(moveitem, tileitem, position)
 	local targetCoalBasin = config[tileitem.uid]
 	if not targetCoalBasin then
 		return true
@@ -27,3 +29,7 @@ function onAddItem(moveitem, tileitem, position)
 	targetCoalBasin.toPosition:sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+tombCoalBasin:type("additem")
+tombCoalBasin:id(1485)
+tombCoalBasin:register()

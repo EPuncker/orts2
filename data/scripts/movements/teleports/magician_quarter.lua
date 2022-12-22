@@ -1,3 +1,5 @@
+local magicianQuarter = MoveEvent()
+
 local config = {
 	[31077] = {requireSoil = false, toPosition = Position(32908, 31081, 7), effect = CONST_ME_ENERGYHIT},
 	[31080] = {requireSoil = true, pushbackPosition = Position(32908, 31081, 7), toPosition = Position(32908, 31076, 7), effect = CONST_ME_ENERGYHIT},
@@ -5,7 +7,7 @@ local config = {
 	[31084] = {requireSoil = false, toPosition = Position(32906, 31080, 7), effect = CONST_ME_HITBYFIRE}
 }
 
-function onStepIn(creature, item, position, fromPosition)
+function magicianQuarter.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -29,3 +31,7 @@ function onStepIn(creature, item, position, fromPosition)
 	targetWall.toPosition:sendMagicEffect(targetWall.effect)
 	return true
 end
+
+magicianQuarter:type("stepin")
+magicianQuarter:aid(7813)
+magicianQuarter:register()

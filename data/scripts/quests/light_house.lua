@@ -35,3 +35,47 @@ end
 
 lightHouseLever:aid(50023, 50024)
 lightHouseLever:register()
+
+local stair = MoveEvent()
+
+function stair.onStepIn(creature, item, position, fromPosition)
+	if item.actionid == 50025 then
+		local stairsPosition = Position(32225, 32282, 9)
+		local stairsItem = Tile(stairsPosition):getItemById(424)
+		if stairsItem then
+			stairsItem:transform(8280)
+		end
+		item:transform(425)
+	elseif item.actionid == 50026 then
+		local player = creature:getPlayer()
+		if not player then
+			return true
+		end
+
+		player:teleportTo(Position(32225, 32274, 10))
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	end
+	return true
+end
+
+stair:type("stepin")
+stair:aid(50025, 50026)
+stair:register()
+
+stair = MoveEvent()
+
+function stair.onStepOut(creature, item, position, fromPosition)
+	local stairsPosition = Position(32225, 32282, 9)
+	local stairsItem = Tile(stairsPosition):getItemById(8280)
+	if stairsItem then
+		stairsItem:transform(424)
+	end
+
+	item:transform(426)
+	return true
+end
+
+stair:type("stepout")
+stair:aid(50025)
+stair:register()

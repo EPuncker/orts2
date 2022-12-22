@@ -673,3 +673,389 @@ end
 
 repair:id(18343)
 repair:register()
+
+local endurance = MoveEvent()
+
+local condition = Condition(CONDITION_PARALYZE)
+condition:setParameter(CONDITION_PARAM_TICKS, 2000)
+condition:setFormula(-0.9, 0, -0.9, 0)
+
+function endurance.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 7816 then
+		local chance = math.random(5)
+		if chance == 1 then
+			player:teleportTo(fromPosition)
+		elseif chance == 2 then
+			position.y = position.y + 1
+			player:teleportTo(position, true)
+			player:setDirection(DIRECTION_SOUTH)
+		elseif chance == 3 then
+			player:addCondition(condition)
+		end
+
+	elseif item.actionid == 7817 then
+		player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 11)
+		player:teleportTo(Position(32760, 31811, 10))
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You passed endurance test.')
+
+	elseif item.actionid == 7818 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 10 then
+			player:teleportTo(Position(32759, 31811, 11))
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		else
+			player:teleportTo(fromPosition)
+		end
+	end
+	return true
+end
+
+endurance:type("stepin")
+endurance:aid(7816, 7817, 7818)
+endurance:register()
+
+local gctsTeleports = MoveEvent()
+
+local destination = {
+	[4121] = {position = Position(32801, 31766, 9), storageValue = 1, needCrystal = true},
+	[3220] = {position = Position(32627, 31863, 11), storageValue = 1, needCrystal = true},
+	[3128] = {position = Position(33000, 31870, 13), storageValue = 14},
+	[3129] = {position = Position(32795, 31762, 10), storageValue = 14},
+	[3130] = {position = Position(32864, 31844, 11), storageValue = 15},
+	[3131] = {position = Position(32803, 31746, 10), storageValue = 15},
+	[3132] = {position = Position(32986, 31862, 9), storageValue = 15}, -- Gnomebase Alpha
+	[3133] = {position = Position(32796, 31781, 10), storageValue = 15}, -- City
+	[3134] = {position = Position(32959, 31953, 9), storageValue = 16}, -- Golems
+	[3135] = {position = Position(33001, 31915, 9), storageValue = 16}, -- Gnomebase Alpha
+	[3136] = {position = Position(32904, 31894, 13), storageValue = 16},
+	[3137] = {position = Position(32979, 31907, 9), storageValue = 16},
+	[35669] = {position = Position(32986, 31864, 9), storageValue = 1}, -- leave warzone 3
+	[3215] = {position = Position(32369, 32241, 7), storageValue = 1, needCrystal = true},
+	[3216] = {position = Position(32212, 31133, 7), storageValue = 1, needCrystal = true},
+	[3217] = {position = Position(32317, 32825, 7), storageValue = 1, needCrystal = true},
+	[3218] = {position = Position(33213, 32454, 1), storageValue = 1, needCrystal = true},
+	[3219] = {position = Position(33217, 31814, 8), storageValue = 1, needCrystal = true}
+}
+
+function gctsTeleports.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return
+	end
+
+	local teleportCrystal = destination[item.actionid]
+	if not teleportCrystal then
+		return
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) >= teleportCrystal.storageValue then
+		if not teleportCrystal.needCrystal or player:removeItem(18457, 1) then
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:teleportTo(teleportCrystal.position)
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		else
+			player:teleportTo(fromPosition)
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You need a teleport crystal to use this device.')
+		end
+		return true
+	end
+
+	-- There is no destination with storageValue == 2, should this check for storage?
+	if teleportCrystal.storageValue == 2 then
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have no idea on how to use this device. Xelvar in Kazordoon might tell you more about it.')
+	else
+		player:teleportTo(fromPosition)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'Sorry, you don\'t have access to use this teleport!')
+	end
+	return true
+end
+
+gctsTeleports:type("stepin")
+
+for index, value in pairs(destination) do
+	gctsTeleports:uid(index)
+end
+
+gctsTeleports:register()
+
+local shooting = MoveEvent()
+
+local function doCreateDummy(cid, position)
+	local player = Player(cid)
+	if not player then
+		return true
+	end
+
+	local tile = Tile(position)
+	if tile then
+		local thing = tile:getTopVisibleThing()
+		if thing and table.contains({18226, 18227}, thing.itemid) then
+			thing:remove()
+		end
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.BigfootBurden.Shooting) >= 5 then
+		player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 9)
+		return
+	end
+
+	position:sendMagicEffect(CONST_ME_POFF)
+	Game.createItem(math.random(18226, 18227), 1, position)
+	addEvent(doCreateDummy, 2 * 1000, cid, position)
+end
+
+function shooting.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) ~= 8 then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	local playerPosition = player:getPosition()
+	player:setStorageValue(PlayerStorageKeys.BigfootBurden.Shooting, 0)
+	position:sendMagicEffect(CONST_ME_MAGIC_BLUE)
+	doCreateDummy(player.uid, Position(playerPosition.x, playerPosition.y - 5, 10))
+	return true
+end
+
+shooting:type("stepin")
+shooting:aid(8030)
+shooting:register()
+
+local truffles = MoveEvent()
+
+function truffles.onStepIn(creature, item, position, fromPosition)
+	if creature:getName():lower() ~= 'mushroom sniffer' then
+		return true
+	end
+
+	local moldFloor = Tile(position):getItemById(18340)
+	if moldFloor.actionid == 100 then
+		return true
+	end
+
+	if math.random(3) < 3 then
+		moldFloor:transform(18218)
+		moldFloor:decay()
+		position:sendMagicEffect(CONST_ME_POFF)
+	else
+		moldFloor:transform(18341)
+		moldFloor:decay()
+		position:sendMagicEffect(CONST_ME_GROUNDSHAKER)
+	end
+	return true
+end
+
+truffles:type("stepin")
+truffles:id(18340)
+truffles:register()
+
+local warzone = MoveEvent()
+
+local bosses = {
+	[3144] = {position = Position(33099, 31950, 10), name = 'deathstrike'},
+	[3145] = {position = Position(33103, 31951, 11), name = 'gnomevil'},
+	[3146] = {position = Position(33081, 31902, 12), name = 'abyssador', checkItemId = 18463},
+}
+
+function warzone.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local boss = bosses[item.uid]
+	if boss.checkItemId then
+		if Tile(position):getItemById(boss.checkItemId) then
+			return true
+		end
+	end
+
+	player:teleportTo(boss.position)
+	boss.position:sendMagicEffect(CONST_ME_TELEPORT)
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have half an hour to heroically defeat ' .. boss.name .. '. Otherwise you\'ll be teleported out by the gnomish emergency device.')
+	return true
+end
+
+warzone:type("stepin")
+warzone:aid(3144, 3146)
+warzone:register()
+
+local warzoneTeleports = MoveEvent()
+
+local destinations = {
+	[3140] = {teleportPosition = Position(32996, 31922, 10), storage = 955, value = 1},
+	[3141] = {teleportPosition = Position(33011, 31943, 11), storage = 956, value = 2},
+	[3142] = {teleportPosition = Position(32989, 31909, 12), storage = 957, value = 3},
+}
+
+function warzoneTeleports.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local destination = destinations[item.uid]
+	if not destination then
+		return true
+	end
+
+	if player:getStorageValue(destination.storage) ~= destination.value then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	player:teleportTo(destination.teleportPosition)
+	destination.teleportPosition:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+warzoneTeleports:type("stepin")
+warzoneTeleports:aid(3140, 3141, 3142)
+warzoneTeleports:register()
+
+local xRay = MoveEvent()
+
+local messages = {
+	'Gnomedix: So let the examination begin! Now don\'t move. Don\'t be afraid. The good doctor gnome won\'t hurt you - hopefully!',
+	'Gnomedix: Now! Now! Don\'t panic! It\'s all over soon!',
+	'Gnomedix: Let me try a bigger chisel!',
+	'Gnomedix: We\'re almost don... holy gnome! What\'s THIS???',
+	'Gnomedix: I need a drill! Gnomenursey, quick!',
+	'Gnomedix: Hold still now! This might tickle a little..',
+	'Gnomedix: Take this, you evil ... whatever you are!',
+	'Gnomedix: I got it! Yikes! What was that? Uhm, well ... you passed the ear examination. Talk to Gnomaticus for your next test.'
+}
+
+local function sendTextMessages(cid, text, position)
+	local player = Player(cid)
+	if not player then
+		return true
+	end
+
+	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, text)
+	position:sendMagicEffect(CONST_ME_STUN)
+end
+
+local condition = Condition(CONDITION_OUTFIT)
+condition:setTicks(2000)
+condition:setOutfit({lookType = 33}) -- skeleton looktype
+
+function xRay.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.uid == 3122 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) == 4 then
+			player:addCondition(condition)
+			player:getPosition():sendMagicEffect(CONST_ME_ENERGYHIT)
+			player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 5)
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have been succesfully g-rayed. Now let Doctor Gnomedix inspect your ears!')
+			player:say('*Rrrrrrrrrrr...*', TALKTYPE_MONSTER_SAY)
+		elseif player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) < 4 then
+			player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'The x-ray is not ready.')
+			player:teleportTo(fromPosition, true)
+		end
+	elseif item.uid == 3123 then
+		if player:getStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine) ~= 6 then
+			return true
+		end
+
+		for i = 1, #messages do
+			addEvent(sendTextMessages, (i - 1) * 2000, player.uid, messages[i], player:getPosition())
+		end
+
+		player:setStorageValue(PlayerStorageKeys.BigfootBurden.QuestLine, 7)
+		position.y = position.y + 1
+		addEvent(Game.createMonster, 14 * 1000, 'Strange Slime', position)
+	end
+	return true
+end
+
+xRay:type("stepin")
+xRay:uid(3122, 3123)
+xRay:register()
+
+local versperothSpawn = MoveEvent()
+
+local versperothPosition = Position(33075, 31878, 12)
+
+local function removeMinion(mid)
+	local monster = Monster(mid)
+	if monster then
+		monster:getPosition():sendMagicEffect(CONST_ME_POFF)
+		monster:remove()
+	end
+end
+
+local function executeVersperothBattle(mid)
+	if Game.getStorageValue(GlobalStorageKeys.Versperoth.Battle) ~= 1 then
+		return
+	end
+
+	if mid then
+		local monster = Monster(mid)
+		if not monster then
+			return
+		end
+
+		Game.setStorageValue(GlobalStorageKeys.Versperoth.Health, monster:getMaxHealth() - monster:getHealth())
+		monster:remove()
+		versperothPosition:sendMagicEffect(CONST_ME_POFF)
+
+		local position, minionMonster
+		for i = 1, math.random(8, 10) do
+			position = Position(math.random(33066, 33086), math.random(31870, 31887), 12)
+			minionMonster = Game.createMonster('Minion of Versperoth', position)
+			position:sendMagicEffect(CONST_ME_TELEPORT)
+			if minionMonster then
+				addEvent(removeMinion, 20 * 1000, minionMonster.uid)
+			end
+		end
+		addEvent(executeVersperothBattle, 10 * 1000)
+		return
+	end
+
+	local monster = Game.createMonster('Versperoth', versperothPosition, false, true)
+	if monster then
+		versperothPosition:sendMagicEffect(CONST_ME_GROUNDSHAKER)
+		monster:addHealth(-Game.getStorageValue(GlobalStorageKeys.Versperoth.Health))
+
+		addEvent(executeVersperothBattle, 20 * 1000, monster.uid)
+	end
+end
+
+function versperothSpawn.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if false and Game.getStorageValue(GlobalStorageKeys.Versperoth.Battle) >= 1 then
+		return true
+	end
+
+	player:teleportTo(Position(33072, 31877, 12))
+	Game.setStorageValue(GlobalStorageKeys.Versperoth.Battle, 1)
+	Game.setStorageValue(GlobalStorageKeys.Versperoth.Health, 0)
+	executeVersperothBattle()
+	item:transform(18462)
+	return true
+end
+
+versperothSpawn:type("stepin")
+versperothSpawn:id(18463)
+versperothSpawn:register()

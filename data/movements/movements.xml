@@ -31,19 +31,6 @@
 	<movevent event="StepIn" fromaid="4541" toaid="4542" script="quests/gravedigger/tps4.lua" />
 	<movevent event="StepIn" actionid="4536" script="quests/gravedigger/necro.lua" />
 
-	<!-- Bigfoot Burden Quest -->
-	<movevent event="StepIn" fromaid="7816" toaid="7818" script="quests/bigfoot burden/endurance.lua" />
-	<movevent event="StepIn" actionid="4121" script="quests/bigfoot burden/GCTS.lua" />
-	<movevent event="StepIn" fromaid="3215" toaid="3220" script="quests/bigfoot burden/GCTS.lua" />
-	<movevent event="StepIn" fromaid="3128" toaid="3137" script="quests/bigfoot burden/GCTS.lua" />
-	<movevent event="StepIn" actionid="35669" script="quests/bigfoot burden/GCTS.lua" />
-	<movevent event="StepIn" actionid="8030" script="quests/bigfoot burden/shooting.lua" />
-	<movevent event="StepIn" itemid="18340" script="quests/bigfoot burden/truffles.lua" />
-	<movevent event="StepIn" fromuid="3144" touid="3146" script="quests/bigfoot burden/warzone.lua" />
-	<movevent event="StepIn" fromuid="3140" touid="3142" script="quests/bigfoot burden/warzoneTeleports.lua" />
-	<movevent event="StepIn" fromuid="3122" touid="3123" script="quests/bigfoot burden/xray.lua" />
-	<movevent event="StepIn" itemid="18463" script="quests/bigfoot burden/versperothSpawn.lua" />
-
 	<!-- Dreamer Challenge Quest -->
 	<movevent event="StepIn" fromuid="2241" touid="2242" script="quests/dreamer challenge/carrot.lua" />
 	<movevent event="StepIn" uniqueid="2243" script="quests/dreamer challenge/fireBugTeleport.lua" />

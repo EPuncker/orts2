@@ -2,9 +2,10 @@ local config = {
 	[5630] = {teleportPosition = Position(33145, 32863, 7), effect = CONST_ME_MAGIC_GREEN, potPosition = Position(33151, 32864, 7)},
 	[5631] = {teleportPosition = Position(33147, 32864, 7), effect = CONST_ME_MAGIC_GREEN}
 }
-local potPosition = Position(33145, 32862, 7)
 
-function onStepIn(cid, item, position)
+local whitePearl = MoveEvent()
+
+function whitePearl.onStepIn(creature, item, position, fromPosition)
 	local player = Player(cid)
 	if not player then
 		return true
@@ -15,6 +16,7 @@ function onStepIn(cid, item, position)
 		return true
 	end
 
+	local potPosition = Position(33145, 32862, 7)
 	if teleport.potPosition then
 		local potItem = Tile(potPosition):getItemById(2562)
 		if potItem then
@@ -28,3 +30,7 @@ function onStepIn(cid, item, position)
 	teleport.teleportPosition:sendMagicEffect(teleport.effect)
 	return true
 end
+
+whitePearl:type("stepin")
+whitePearl:aid(5630, 5631)
+whitePearl:register()

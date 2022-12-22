@@ -1,9 +1,11 @@
+local grayBeachVortex = MoveEvent()
+
 local config = {
 	[9238] = Position(33456, 31346, 8),
 	[9239] = Position(33199, 31978, 8)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+function grayBeachVortex.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -19,3 +21,7 @@ function onStepIn(creature, item, position, fromPosition)
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You dive into the vortex to swim below the rocks to the other side of the cave.')
 	return true
 end
+
+grayBeachVortex:type("stepin")
+grayBeachVortex:uid(9238, 9239)
+grayBeachVortex:register()

@@ -5,24 +5,11 @@
 	<movevent event="AddItem" tileitem="1" itemid="8058" script="others/itemteleports.lua" />
 	<movevent event="AddItem" tileitem="1" fromaid="50240" toaid="50241" script="others/itemteleports.lua" />
 
-	<!-- Rookgaard -->
-	<movevent event="StepIn" fromaid="50058" toaid = "50069" script="rookgaard/rookgaard tutorial island/tutorialTiles.lua" />
-	<movevent event="StepIn" fromaid="50075" toaid = "50079" script="rookgaard/rookgaard tutorial island/tutorialTiles.lua" />
-	<movevent event="StepIn" actionid="50081" script="rookgaard/rookgaard tutorial island/tutorialTiles.lua" />
-	<movevent event="StepIn" fromaid="50070" toaid = "50074" script="rookgaard/rookgaard tutorial island/tutorialStopTiles.lua" />
-	<movevent event="StepIn" itemid="8596" script="rookgaard/rookgaard tutorial island/tutorialStopTiles.lua" />
-	<movevent event="StepIn" actionid="50080" script="rookgaard/rookgaard tutorial island/tutorialStopTiles.lua" />
-	<movevent event="StepIn" fromaid="50088" toaid = "50089" script="rookgaard/rookgaard tutorial island/tutorialStopTiles.lua" />
-	<movevent event="StepIn" actionid="50241" script="rookgaard/premiumbridge.lua" />
-	<movevent event="StepIn" actionid="50240" script="rookgaard/levelbridge.lua" />
-	<movevent event="StepIn" fromaid="5635" toaid="5636" script="rookgaard/sword_of_fury.lua" />
-
 	<!-- Teleports -->
 	<movevent event="StepIn" fromaid="9700" toaid="9705" script="others/tpab.lua" />
 	<movevent event="StepIn" actionid="5555" script="others/sorcererthais.lua" />
 	<movevent event="StepIn" fromaid="9710" toaid="9716" script="others/furygates.lua" />
 	<movevent event="StepIn" fromaid="50084" toaid="50086" script="others/deeperBanutaShortcutTeleports.lua" />
-	<movevent event="StepIn" fromaid="50220" toaid="50229" script="others/vengothTeleports.lua" />
 
 	<!--- Shrines Portals -->
 	<movevent event="StepIn" fromuid="9069" touid="9116" script="others/shrinesportal.lua" />
@@ -34,9 +21,6 @@
 	<!-- Formorgar Mines Hoist -->
 	<movevent event="StepIn" fromuid="3059" touid="3061" script="others/hoist.lua" />
 
-	<!-- Yalahar Demons -->
-	<movevent event="StepIn" fromaid="4244" toaid ="4245" script="others/yalaharDemons.lua" />
-
 	<!-- The Spike Portals -->
 	<movevent event="StepIn" fromaid="4226" toaid ="4243" script="others/spikeTeleports.lua" />
 
@@ -46,31 +30,16 @@
 	<!-- Waterfall Quest (Port Hope) -->
 	<movevent event="StepIn" actionid="50022" script="others/waterfallquest.lua" />
 
-	<!-- Svargrond Citizen -->
-	<movevent event="StepIn" actionid="30032" script="others/svargrondCitizen.lua" />
-
-	<!-- Meriana Turtles -->
-	<movevent event="StepIn" fromuid="3206" touid="3213" script="others/turtles.lua" />
-
-	<!-- Adventurer's Guild -->
-	<movevent event="StepIn" actionid="4255" script="others/adventurersguild.lua" />
-
 	<!-- Edron Troll Cave - Rope Quest -->
 	<movevent event="StepIn" actionid="4254" script="others/edronropequest.lua" />
 
 	<!-- Outlaw Camp - Bright Sword Quest entrance -->
 	<movevent event="StepIn" actionid="5634" script="others/brightswordentrance.lua" />
 
-	<!-- Serpentine Tower - White Pearl Quest -->
-	<movevent event="StepIn" fromaid="5630" toaid="5631" script="others/ankrahmun/whitepearlquest.lua" />
-
 	<!-- Goroma Energy Barrier -->
 	<movevent event="StepIn" actionid="4000" script="others/goromaenergybarrier.lua" />
 
 	<!--- Others -->
-	<movevent event="StepIn" actionid="4256" script="others/roshamuulcarpet.lua" />
-	<movevent event="StepIn" uniqueid="9238" script="others/GrayBeachVortex.lua" />
-	<movevent event="StepIn" uniqueid="9239" script="others/GrayBeachVortex.lua" />
 	<movevent event="StepIn" fromaid="50025" toaid="50026" script="others/thaislighthousequest.lua" />
 	<movevent event="StepOut" actionid="50025" script="others/thaislighthousequest.lua" />
 	<movevent event="AddItem" tileitem="1" fromid="20932" toid="20937" script="others/bloodtiles.lua" />

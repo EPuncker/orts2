@@ -1,8 +1,7 @@
 local lightHouseLever = Action()
 
 function lightHouseLever.onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	--first lever to open the ladder
-	if item.actionid == 50023 then
+	if item.actionid == 50023 then --first lever to open the ladder
 		local laddertile = Tile(Position(32225, 32276, 8))
 			if item.itemid == 1945 then
 				laddertile:getItemById(9021):transform(8280)
@@ -11,8 +10,7 @@ function lightHouseLever.onUse(player, item, fromPosition, target, toPosition, i
 				laddertile:getItemById(8280):transform(9021)
 				item:transform(1945)
 			end
-	--second lever to open the portal to cyclops
-	elseif item.actionid == 50024 then
+	elseif item.actionid == 50024 then --second lever to open the portal to cyclops
 		local portaltile = Tile(Position(32232, 32276, 9))
 		if item.itemid == 1945 then
 			if portaltile:getItemById(1387) then
@@ -22,6 +20,7 @@ function lightHouseLever.onUse(player, item, fromPosition, target, toPosition, i
 				if portal then
 					portal:setActionId(50026)
 				end
+
 				item:transform(1946)
 			end
 		else

@@ -1,4 +1,6 @@
-function onStepIn(creature, item, position, fromPosition)
+local svargrondCitizen = MoveEvent()
+
+function svargrondCitizen.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -15,3 +17,7 @@ function onStepIn(creature, item, position, fromPosition)
 	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+svargrondCitizen:type("stepin")
+svargrondCitizen:aid(30032)
+svargrondCitizen:register()

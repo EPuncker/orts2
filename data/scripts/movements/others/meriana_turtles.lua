@@ -1,3 +1,5 @@
+local merianaTurtles = MoveEvent()
+
 local config = {
 	[3206] = Position(32359, 32901, 7),
 	[3207] = Position(32340, 32538, 7),
@@ -9,7 +11,7 @@ local config = {
 	[3213] = Position(32523, 32923, 7)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+function merianaTurtles.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -32,3 +34,7 @@ function onStepIn(creature, item, position, fromPosition)
 	targetPosition:sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+merianaTurtles:type("stepin")
+merianaTurtles:uid(3206, 3207, 3208, 3209, 3210, 3211, 3212, 3213)
+merianaTurtles:register()

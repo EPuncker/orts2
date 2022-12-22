@@ -1,3 +1,5 @@
+local swordOfFury = MoveEvent()
+
 local config = {
 	firePositions = {
 		Position(32100, 32084, 7),
@@ -9,15 +11,14 @@ local config = {
 		Position(32102, 32086, 7),
 		Position(32102, 32085, 7)
 	},
+
 	swordPosition = Position(32101, 32085, 7),
 
-	-- [actionid] = value which the storage must have to proceed
 	[5635] = -1,
 	[5636] = 0
 }
 
--- If players step on the 2 tiles in correct order Sword of Fury will disappear
-function onStepIn(creature, item, position, fromPosition)
+function swordOfFury.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -34,6 +35,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 
 	Game.setStorageValue(GlobalStorageKeys.SwordOfFury, storage + 1)
+
 	if storage == 0 then
 		local tmpItem
 		for i = 1, #config.firePositions do
@@ -51,3 +53,7 @@ function onStepIn(creature, item, position, fromPosition)
 	end
 	return true
 end
+
+swordOfFury:type("stepin")
+swordOfFury:aid(5635, 5636)
+swordOfFury:register()

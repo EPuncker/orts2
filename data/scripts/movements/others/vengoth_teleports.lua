@@ -1,3 +1,5 @@
+local vengothTeleports = MoveEvent()
+
 local config = {
 	[50220] = Position(32943, 31553, 1),
 	[50221] = Position(32938, 31573, 0),
@@ -11,7 +13,7 @@ local config = {
 	[50229] = Position(32951, 31552, 3)
 }
 
-function onStepIn(creature, item, position, fromPosition)
+function vengothTeleports.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -26,3 +28,9 @@ function onStepIn(creature, item, position, fromPosition)
 	targetPosition:sendMagicEffect(CONST_ME_PURPLEENERGY)
 	return true
 end
+
+for index, value in pairs(config) do
+	vengothTeleports:aid(index)
+end
+
+vengothTeleports:register()

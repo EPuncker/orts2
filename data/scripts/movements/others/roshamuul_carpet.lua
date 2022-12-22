@@ -1,4 +1,6 @@
-function onStepIn(creature, item, position, fromPosition)
+local roshamuulCarpet = MoveEvent()
+
+function roshamuulCarpet.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -11,3 +13,7 @@ function onStepIn(creature, item, position, fromPosition)
 	destination:sendMagicEffect(CONST_ME_POFF)
 	return true
 end
+
+roshamuulCarpet:type("stepin")
+roshamuulCarpet:aid(4256)
+roshamuulCarpet:register()

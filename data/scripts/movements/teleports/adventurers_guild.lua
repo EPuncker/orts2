@@ -1,4 +1,6 @@
-function onStepIn(creature, item, position, fromPosition)
+local adventurersGuild = MoveEvent()
+
+function adventurersGuild.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()
 	if not player then
 		return true
@@ -13,3 +15,7 @@ function onStepIn(creature, item, position, fromPosition)
 	destination:sendMagicEffect(CONST_ME_TELEPORT)
 	return true
 end
+
+adventurersGuild:type("stepin")
+adventurersGuild:aid(4255)
+adventurersGuild:register()

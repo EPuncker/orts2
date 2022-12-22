@@ -38,9 +38,9 @@ local storages = {
 	[4023] = PlayerStorageKeys.TibiaTales.RestInHallowedGround.Graves.Grave16
 }
 
-local hollyWater = Action()
+local holyWater = Action()
 
-function hollyWater.onUse(player, item, fromPosition, target, toPosition, isHotkey)
+function holyWater.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	-- Eclipse
 	if target.actionid == 2000 then
 		item:remove(1)
@@ -114,5 +114,5 @@ function hollyWater.onUse(player, item, fromPosition, target, toPosition, isHotk
 	return true
 end
 
-hollyWater:id(7494)
-hollyWater:register()
+holyWater:id(7494)
+holyWater:register()

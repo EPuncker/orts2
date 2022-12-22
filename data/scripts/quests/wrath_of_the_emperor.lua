@@ -488,3 +488,307 @@ end
 
 justRewards:uid(3200)
 justRewards:register()
+
+local prison = MoveEvent()
+
+function prison.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player or player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus) ~= 1 then
+		return true
+	end
+
+	if player:getCondition(CONDITION_OUTFIT) then
+		player:removeCondition(CONDITION_OUTFIT)
+	end
+
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.PrisonReleaseStatus, 0)
+
+	local destination = Position(33363, 31188, 8)
+	player:teleportTo(destination)
+	position:sendMagicEffect(CONST_ME_TELEPORT)
+	destination:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+prison:type("stepin")
+prison:uid(3175)
+prison:register()
+
+local crate = MoveEvent()
+
+function catchPlayer(cid)
+	local player = Player(cid)
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.GuardcaughtYou, 1)
+	player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus, 0)
+	player:teleportTo(Position(33361, 31206, 8), false)
+	player:say("The guards have spotted you. You were forcibly dragged into a small cell. It looks like you need to build another disguise.", TALKTYPE_MONSTER_SAY)
+	return true
+end
+
+function crate.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local playerId = player.uid
+	if item.actionid == 8015 then
+		player:say("You hear guards moving behind doors in the distance. If you have any sort of disguise with you, this is the moment to use it.", TALKTYPE_MONSTER_SAY)
+	elseif item.actionid == 8016 then
+		if Tile(Position(player:getPosition().y < 31094 and 33080 or 33385, player:getPosition().y, 8)):getItemById(12213) then
+			catchPlayer(playerId)
+		end
+	elseif item.actionid == 8017 or item.actionid == 32362 or item.itemid == 11436 then
+		catchPlayer(playerId)
+	elseif item.actionid == 8018 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light01) ~= 1 then
+			catchPlayer(playerId)
+		end
+	elseif item.actionid == 8019 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light02) ~= 1 then
+			catchPlayer(playerId)
+		end
+	elseif item.actionid == 8020 then
+		if Game.getStorageValue(GlobalStorageKeys.WrathOfTheEmperor.Light03) ~= 1 then
+			catchPlayer(playerId)
+		end
+	elseif item.actionid == 8021 then
+		player:say("Guards heavily patrol this area. Try to stay hidden and do not draw any attention to yourself by trying to attack.", TALKTYPE_MONSTER_SAY)
+	elseif item.actionid == 8022 then
+		if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus) ~= 1 then
+			catchPlayer(playerId)
+		end
+	elseif item.actionid == 8023 then
+		-- player:setStorageValue(PlayerStorageKeys.WrathoftheEmperor.CrateStatus, 0)
+		-- doSetCreatureOutfit(cid, {lookTypeEx = 12496}, 1)
+	end
+	return true
+end
+
+crate:type("stepin")
+crate:aid(8015, 8016, 8017, 8018, 8019, 8020, 8021, 8022, 8023, 32362)
+crate:register()
+
+local teleportsMuggyPlains = MoveEvent()
+
+local config = {
+	[12380] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33138, 31248, 6), Position(33211, 31065, 9)}},
+	[12381] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33211, 31065, 9), Position(33138, 31248, 6)}}
+}
+
+function teleportsMuggyPlains.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local targetTile = config[item.actionid]
+	if not targetTile then
+		return true
+	end
+
+	local hasStorageValue = player:getStorageValue(targetTile.storageKey) >= 5
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player:teleportTo(targetTile.toPosition[hasStorageValue and 1 or 2])
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	if not hasStorageValue then
+		player:say('This portal is not activated', TALKTYPE_MONSTER_SAY)
+	end
+	return true
+end
+
+teleportsMuggyPlains:type("stepin")
+teleportsMuggyPlains:aid(12380, 12381)
+teleportsMuggyPlains:register()
+
+local teleportsRebeltoZlak = MoveEvent()
+
+local config = {
+	[12382] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33078, 31219, 8), Position(33216, 31069, 9)}},
+	[12383] = {storageKey = PlayerStorageKeys.WrathoftheEmperor.Questline, toPosition = {Position(33216, 31069, 9), Position(33078, 31219, 8)}}
+}
+
+function teleportsRebeltoZlak.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local targetTile = config[item.actionid]
+	if not targetTile then
+		return true
+	end
+
+	local hasStorageValue = player:getStorageValue(targetTile.storageKey) >= 23
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player:teleportTo(targetTile.toPosition[hasStorageValue and 1 or 2])
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+
+	if not hasStorageValue then
+		player:say('This portal is not activated', TALKTYPE_MONSTER_SAY)
+	end
+	return true
+end
+
+teleportsRebeltoZlak:type("stepin")
+teleportsRebeltoZlak:aid(12382, 12383)
+teleportsRebeltoZlak:register()
+
+local keeper = MoveEvent()
+
+local function revertItem(position, itemId, transformId)
+	local item = Tile(position):getItemById(itemId)
+	if item then
+		item:transform(transformId)
+	end
+end
+
+function keeper.onStepIn(creature, item, position, fromPosition)
+	local monster = creature:isMonster()
+	if not monster then
+		return true
+	end
+
+	if monster:getName():lower() ~= 'the keeper' then
+		return true
+	end
+
+	doTargetCombat(0, monster, COMBAT_PHYSICALDAMAGE, -6000, -8000, CONST_ME_BIGPLANTS)
+	item:transform(12335)
+	addEvent(revertItem, math.random(10, 30) * 1000, position, 12335, 12334)
+	return true
+end
+
+keeper:type("stepin")
+keeper:id(12334)
+keeper:register()
+
+local dragonTeleport = MoveEvent()
+
+function dragonTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission09) == -1 then
+		player:teleportTo(fromPosition)
+		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	local sleepingdragon = Position(33240, 31247, 10)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player:teleportTo(sleepingdragon)
+	sleepingdragon:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+dragonTeleport:type("stepin")
+dragonTeleport:uid(12359)
+dragonTeleport:register()
+
+local realmTeleport = MoveEvent()
+
+function realmTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Mission10) < 2 or not player:hasBlessing(1) then
+		player:teleportTo(fromPosition)
+		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	local realm = Position(33028, 31086, 13)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player:teleportTo(realm)
+	realm:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+realmTeleport:type("stepin")
+realmTeleport:aid(8028)
+realmTeleport:register()
+
+local bossesTeleport = MoveEvent()
+
+local teleports = {
+	[3189] = {destination = Position(33041, 31086, 15), storage = GlobalStorageKeys.WrathOfTheEmperor.Bosses.Fury},
+	[3190] = {destination = Position(33091, 31083, 15), storage = GlobalStorageKeys.WrathOfTheEmperor.Bosses.Wrath},
+	[3191] = {destination = Position(33094, 31118, 15), storage = GlobalStorageKeys.WrathOfTheEmperor.Bosses.Scorn},
+	[3192] = {destination = Position(33038, 31119, 15), storage = GlobalStorageKeys.WrathOfTheEmperor.Bosses.Spite}
+}
+
+function bossesTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local teleport = teleports[item.uid]
+	if not teleport then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.BossStatus) == 5 then
+		local destination = Position(33072, 31151, 15)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:teleportTo(destination)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.BossStatus) ~= item.uid - 3188 then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	if Game.getStorageValue(teleport.storage) ~= 1 then
+		player:teleportTo(teleport.destination)
+		teleport.destination:sendMagicEffect(CONST_ME_TELEPORT)
+	else
+		player:teleportTo(fromPosition)
+	end
+	return true
+end
+
+bossesTeleport:type("stepin")
+bossesTeleport:uid(3189, 3190, 3191, 3192)
+bossesTeleport:register()
+
+local teleportToZalamon = MoveEvent()
+
+function teleportToZalamon.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) < 31 then
+		player:teleportTo(fromPosition)
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.WrathoftheEmperor.Questline) > 32 then
+		local destination = Position(33078, 31219, 8)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:teleportTo(destination)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	local destination = Position(33359, 31397, 9)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	player:teleportTo(destination)
+	destination:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+teleportToZalamon:type("stepin")
+teleportToZalamon:uid(3197)
+teleportToZalamon:register()

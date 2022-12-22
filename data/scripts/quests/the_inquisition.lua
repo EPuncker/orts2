@@ -312,7 +312,7 @@ entrace:type("stepin")
 entrace:uid(9014)
 entrace:register()
 
-local destroyPies = MoveEvent()
+local rewardRoomText = MoveEvent()
 
 function rewardRoomText.onStepIn(creature, item, position, fromPosition)
 	local player = creature:getPlayer()

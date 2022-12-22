@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
-	<!-- Draconia Quest -->
-	<movevent event="StepIn" actionid="4246" script="quests/draconia/escape.lua" />
-	<movevent event="StepIn" fromaid="4247" toaid="4248" script="quests/draconia/fall.lua" />
-	<movevent event="StepIn" fromaid="4251" toaid="4252" script="quests/draconia/walls.lua" />
-	<movevent event="StepOut" fromaid="4251" toaid="4252" script="quests/draconia/walls.lua" />
-	<movevent event="StepIn" actionid="4253" script="quests/draconia/exit.lua" />
-
 	<!-- The Queen of the Banshees Quest -->
 	<movevent event="StepIn" uniqueid="50004" script="quests/the queen of the banshees/theFirstSealFlame.lua" />
 	<movevent event="StepIn" uniqueid="50011" script="quests/the queen of the banshees/theSixthSealFlame.lua" />
@@ -19,26 +12,6 @@
 	<movevent event="StepIn" actionid="50017" script="quests/the queen of the banshees/theSecondSealPearl.lua" />
 	<movevent event="StepIn" uniqueid="50021" script="quests/the queen of the banshees/theSecondSealFlame.lua" />
 	<movevent event="StepIn" uniqueid="50022" script="quests/the queen of the banshees/theLastFlame.lua" />
-
-	<!-- Children of the Revolution -->
-	<movevent event="StepIn" uniqueid="3163" script="quests/children of the revolution/temple.lua" />
-	<movevent event="StepIn" uniqueid="3166" script="quests/children of the revolution/symbols.lua" />
-	<movevent event="StepIn" fromaid="8009" toaid="8011" script="quests/children of the revolution/spy.lua" />
-	<movevent event="StepIn" fromuid="3167" touid="3168" script="quests/children of the revolution/teleport.lua" />
-	<movevent event="StepIn" uniqueid="3169" script="quests/children of the revolution/stairs.lua" />
-	<movevent event="StepIn" actionid="8014" script="quests/children of the revolution/click.lua" />
-
-	<!-- Wrath of the Emperor -->
-	<movevent event="StepIn" uniqueid="3175" script="quests/wrath of the emperor/prison.lua" />
-	<movevent event="StepIn" fromaid="8015" toaid="8023" script="quests/wrath of the emperor/crate.lua" />
-	<movevent event="StepIn" actionid="32362" script="quests/wrath of the emperor/crate.lua" />
-	<movevent event="StepIn" fromaid="12380" toaid="12381" script="quests/wrath of the emperor/teleportsmuggyplains.lua" />
-	<movevent event="StepIn" fromaid="12382" toaid="12383" script="quests/wrath of the emperor/teleportsRebeltoZlak.lua" />
-	<movevent event="StepIn" itemid="12334" script="quests/wrath of the emperor/keeper.lua" />
-	<movevent event="StepIn" uniqueid="12359" script="quests/wrath of the emperor/dragonTeleport.lua" />
-	<movevent event="StepIn" actionid="8028" script="quests/wrath of the emperor/realmTeleport.lua" />
-	<movevent event="StepIn" fromuid="3189" touid="3192" script="quests/wrath of the emperor/bossesTeleport.lua" />
-	<movevent event="StepIn" uniqueid="3197" script="quests/wrath of the emperor/teleportToZalamon.lua" />
 
 	<!--- The Ancient Tombs Quest -->
 	<movevent event="StepIn" actionid="12101" script="quests/the ancient tombs/peninsulaTombmaze.lua" />
@@ -57,13 +30,6 @@
 	<movevent event="StepIn" fromaid="4534" toaid="4535" script="quests/gravedigger/tps3.lua" />
 	<movevent event="StepIn" fromaid="4541" toaid="4542" script="quests/gravedigger/tps4.lua" />
 	<movevent event="StepIn" actionid="4536" script="quests/gravedigger/necro.lua" />
-
-	<!-- Elemental Spheres Quest -->
-	<movevent event="AddItem" tileitem="1" itemid="8568" script="quests/elemental spheres/summonOverlord.lua" />
-	<movevent event="AddItem" tileitem="1" itemid="8569" script="quests/elemental spheres/summonOverlord.lua" />
-	<movevent event="AddItem" tileitem="1" itemid="8570" script="quests/elemental spheres/summonOverlord.lua" />
-	<movevent event="AddItem" tileitem="1" itemid="8578" script="quests/elemental spheres/summonOverlord.lua" />
-	<movevent event="StepIn" actionid="9029" script="quests/elemental spheres/AOETeleportOut.lua" />
 
 	<!-- Bigfoot Burden Quest -->
 	<movevent event="StepIn" fromaid="7816" toaid="7818" script="quests/bigfoot burden/endurance.lua" />
@@ -94,13 +60,6 @@
 	<movevent event="StepIn" uniqueid="9234" script="quests/dreamer challenge/deathRingTeleport.lua" />
 	<movevent event="StepIn" uniqueid="50147" script="quests/dreamer challenge/riddleTeleport.lua" />
 
-	<!-- In Service Of Yalahar Quest -->
-	<movevent event="StepIn" fromuid="7809" touid="7810" script="quests/in service of yalahar/lastFightTeleports.lua" />
-	<movevent event="StepIn" uniqueid="3087" script="quests/in service of yalahar/morik.lua" />
-	<movevent event="StepIn" actionid="7812" script="quests/in service of yalahar/quaraVortex.lua" />
-	<movevent event="StepIn" fromaid="23698" toaid="23699" script="quests/in service of yalahar/yalaharMachineWargolems.lua" />
-	<movevent event="StepIn" fromaid="23702" toaid="23703" script="quests/in service of yalahar/yalaharMachineWargolems.lua" />
-
 	<!-- Pits Of Inferno Quest -->
 	<movevent event="StepIn" fromuid="2090" touid="2096" script="quests/pits of inferno/checkThrones.lua" />
 	<movevent event="StepIn" fromaid="2040" toaid="2063" script="quests/pits of inferno/fireTiles.lua" />
@@ -118,16 +77,6 @@
 	<movevent event="StepIn" fromaid="16772" toaid="16774" script="quests/pits of inferno/bazirTiles.lua" />
 	<movevent event="StepIn" fromaid="50082" toaid="50083" script="quests/pits of inferno/bazirTiles.lua" />
 	<movevent event="StepIn" actionid="50087" script="quests/pits of inferno/puminTeleport.lua" />
-
-	<!-- the hidden city of beregar Quest -->
-	<movevent event="StepIn" actionid="50091" script="quests/the hidden city of beregar/oreWagon.lua" />
-	<movevent event="StepIn" fromaid="50092" toaid="50093" script="quests/the hidden city of beregar/elevator.lua" />
-	<movevent event="StepIn" actionid="50111" script="quests/the hidden city of beregar/gap.lua" />
-	<movevent event="StepIn" actionid="50116" script="quests/the hidden city of beregar/tunnel.lua" />
-	<movevent event="StepIn" uniqueid="50107" script="quests/the hidden city of beregar/bellow.lua" />
-	<movevent event="StepIn" uniqueid="50127" script="quests/the hidden city of beregar/pythiusTeleport.lua" />
-	<movevent event="StepIn" fromaid="50125" toaid="50126" script="quests/the hidden city of beregar/pythiusBossTeleport.lua" />
-	<movevent event="StepIn" actionid="50199" script="quests/the hidden city of beregar/bridgeTeleport.lua"/>
 
 	<!-- Decaying tiles -->
 	<movevent event="StepIn" itemid="293" script="decay.lua" />

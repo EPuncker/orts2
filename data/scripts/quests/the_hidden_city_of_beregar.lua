@@ -342,3 +342,234 @@ end
 
 ladder:id(10035)
 ladder:register()
+
+local oreWagon = MoveEvent()
+
+function oreWagon.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.OreWagon) ~= 1 then
+		player:setStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.OreWagon, 1)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You have found the entrance to the hidden city of Beregar and may now use the ore wagon.')
+	end
+	return true
+end
+
+oreWagon:type("stepin")
+oreWagon:aid(50091)
+oreWagon:register()
+
+local elevator = MoveEvent()
+
+local config = {
+	[50092] = Position(32612, 31499, 15),
+	[50093] = Position(32612, 31499, 14)
+}
+
+function elevator.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local teleport = config[item.actionid]
+	if not teleport then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.GoingDown) == 2 then
+		player:teleportTo(teleport)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	else
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You don\'t know how to use this yet.')
+	end
+	return true
+end
+
+elevator:type("stepin")
+elevator:aid(50092, 50093)
+elevator:register()
+
+local gap = MoveEvent()
+
+function gap.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	player:teleportTo(Position(32569, 31507, 9))
+	player:say('Use the wagon to pass the gap.', TALKTYPE_MONSTER_SAY)
+	return true
+end
+
+gap:type("stepin")
+gap:aid(50111)
+gap:register()
+
+local tunel = MoveEvent()
+
+function tunel.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	player:teleportTo(Position(32616, 31514, 9))
+	player:say('Use the ore wagon to pass this spot.', TALKTYPE_MONSTER_SAY)
+	return true
+end
+
+tunel:type("stepin")
+tunel:aid(50116)
+tunel:register()
+
+local bellow = MoveEvent()
+
+function bellow.onStepIn(creature, item, position, fromPosition)
+	if not creature:isPlayer() then
+		return true
+	end
+
+	local crucibleItem = Tile(Position(32699, 31495, 11)):getItemById(10040)
+	if not crucibleItem then
+		return true
+	end
+
+	if crucibleItem.actionid == 0 then
+		crucibleItem:setActionId(50120)
+		Position(32696, 31494, 11):sendMagicEffect(CONST_ME_POFF)
+	elseif crucibleItem.actionid == 50120 then
+		crucibleItem:setActionId(50121)
+		Position(32695, 31494, 10):sendMagicEffect(CONST_ME_POFF)
+	elseif crucibleItem.actionid == 50121 then
+		Tile(Position(32699, 31494, 11)):getItemById(8641):setActionId(50121)
+		creature:say('TSSSSHHHHH', TALKTYPE_MONSTER_SAY, false, 0, Position(32695, 31494, 11))
+		creature:say('CHOOOOOOOHHHHH', TALKTYPE_MONSTER_SAY, false, 0, Position(32698, 31492, 11))
+	end
+	return true
+end
+
+bellow:type("stepin")
+bellow:uid(50107)
+bellow:register()
+
+local pythiusTeleport = MoveEvent()
+
+function pythiusTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.hiddenCityOfBeregar.PythiusTheRotten) < os.time() then
+		position.y = position.y + 4
+		player:teleportTo(position)
+		player:say("OFFER ME SOMETHING IF YOU WANT TO PASS!", TALKTYPE_MONSTER_YELL, false, player, Position(32589, 31407, 15))
+		position:sendMagicEffect(CONST_ME_FIREAREA)
+		return true
+	end
+
+	local destination = Position(32601, 31397, 14)
+	player:teleportTo(destination)
+	position:sendMagicEffect(CONST_ME_TELEPORT)
+	destination:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+pythiusTeleport:type("stepin")
+pythiusTeleport:uid(50127)
+pythiusTeleport:register()
+
+local pythiusBossTeleport = MoveEvent()
+
+local function roomIsOccupied()
+	local spectators = Game.getSpectators(Position(32566, 31406, 15), false, true, 7, 7)
+	if #spectators ~= 0 then
+		return true
+	end
+
+	return false
+end
+
+function pythiusBossTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 50126 then
+		if player:getStorageValue(PlayerStorageKeys.QuestChests.FirewalkerBoots) == 1 or roomIsOccupied() then
+			player:teleportTo(fromPosition)
+			fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+			return true
+		end
+
+		item:remove()
+
+		local steamPosition = Position(32551, 31379, 15)
+		iterateArea(
+			function(position)
+				local groundItem = Tile(position):getGround()
+				if groundItem and groundItem.itemid == 5815 then
+					groundItem:transform(598)
+				end
+			end,
+			Position(32550, 31373, 15),
+			steamPosition
+		)
+
+		Game.createItem(1304, 1, steamPosition)
+		local steamItem = Game.createItem(9341, 1, steamPosition)
+		if steamItem then
+			steamItem:setActionId(50127)
+		end
+
+		local destination = Position(32560, 31404, 15)
+		player:teleportTo(destination)
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+
+		local monster = Game.createMonster('Pythius the Rotten', Position(32571, 31406, 15))
+		if monster then
+			monster:say("WHO IS SNEAKING AROUND BEHIND MY TREASURE?", TALKTYPE_MONSTER_YELL, false, player)
+		end
+	else
+		local spectators, spectator = Game.getSpectators(Position(32566, 31406, 15), false, false, 7, 7)
+		for i = 1, #spectators do
+			spectator = spectators[i]
+			if spectator:isMonster() then
+				spectator:remove()
+			end
+		end
+
+		local destination = Position(32552, 31378, 15)
+		player:teleportTo(destination)
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+	end
+	return true
+end
+
+pythiusBossTeleport:type("stepin")
+pythiusBossTeleport:aid(50125, 50126)
+pythiusBossTeleport:register()
+
+local bridgeTeleport = MoveEvent()
+
+function bridgeTeleport.onStepIn(creature, item, position, fromPosition)
+	if not creature:isPlayer() then
+		return true
+	end
+
+	creature:teleportTo(Position(32637, 31509, 10))
+	creature:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+bridgeTeleport:type("stepin")
+bridgeTeleport:aid(50199)
+bridgeTeleport:register()

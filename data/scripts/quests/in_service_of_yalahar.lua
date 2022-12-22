@@ -478,3 +478,94 @@ end
 
 yalaharMachineWargolems:aid(23700, 23701)
 yalaharMachineWargolems:register()
+
+local lastFightTeleports = MoveEvent()
+
+function lastFightTeleports.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.uid == 7809 then
+		if player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) == 51 then
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:teleportTo(Position(32783, 31174, 10))
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:say('The apparatus in the centre looks odd! You should inspect it.', TALKTYPE_MONSTER_SAY)
+		else
+			player:teleportTo(fromPosition)
+		end
+	elseif item.uid == 7810 then
+		if Game.getStorageValue(GlobalStorageKeys.InServiceOfYalahar.LastFight) ~= 1 then
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:teleportTo(Position(32784, 31178, 9))
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		else
+			player:teleportTo(fromPosition)
+		end
+	end
+	return true
+end
+
+lastFightTeleports:type("stepin")
+lastFightTeleports:uid(7809, 7810)
+lastFightTeleports:register()
+
+local morik = MoveEvent()
+
+function morik.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline) == 51 then -- StorageValue for Questlog 'Mission 10: The Final Battle'
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Mission10, 3)
+		player:setStorageValue(PlayerStorageKeys.InServiceofYalahar.Questline, 52)
+		player:say('It seems by defeating Azerus you have stopped this army from entering your world! Better leave this ghastly place forever.', TALKTYPE_MONSTER_SAY)
+		player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
+	end
+	return true
+end
+
+morik:type("stepin")
+morik:uid(3087)
+morik:register()
+
+local yalaharMachineWargolems = MoveEvent()
+
+local config = {
+	[23698] = {storage = GlobalStorageKeys.InServiceOfYalahar.WarGolemsMachine2, destination = Position(32869, 31312, 11)},
+	[23699] = {storage = GlobalStorageKeys.InServiceOfYalahar.WarGolemsMachine1, destination = Position(32881, 31312, 11)},
+	[23702] = {destination = Position(32876, 31321, 10)},
+	[23703] = {destination = Position(32875, 31321, 10)}
+}
+
+function yalaharMachineWargolems.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local machine = config[item.actionid]
+	if not machine then
+		return true
+	end
+
+	if machine.storage and Game.getStorageValue(machine.storage) ~= 1 then
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'The machines are not activated.')
+		player:teleportTo(fromPosition)
+		fromPosition:sendMagicEffect(CONST_ME_POFF)
+		return true
+	end
+
+	player:teleportTo(machine.destination)
+	position:sendMagicEffect(CONST_ME_ENERGYHIT)
+	machine.destination:sendMagicEffect(CONST_ME_ENERGYHIT)
+	return true
+end
+
+yalaharMachineWargolems:type("stepin")
+yalaharMachineWargolems:aid(23698, 23699, 23702, 23703)
+yalaharMachineWargolems:register()

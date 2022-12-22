@@ -112,3 +112,84 @@ end
 
 theDeepestCatacombsSnakeDestroyer:id(4846)
 theDeepestCatacombsSnakeDestroyer:register()
+
+local parchmentDecyphering = MoveEvent()
+
+function parchmentDecyphering.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline) == 7
+			and player:getStorageValue(PlayerStorageKeys.TheApeCity.ParchmentDecyphering) ~= 1 then
+		player:setStorageValue(PlayerStorageKeys.TheApeCity.ParchmentDecyphering, 1)
+	end
+
+	player:say("!-! -O- I_I (/( --I Morgathla", TALKTYPE_MONSTER_SAY)
+	return true
+end
+
+parchmentDecyphering:type("stepin")
+parchmentDecyphering:aid(12124)
+parchmentDecyphering:register()
+
+local theDeepestCatacombsFirstTeleport = MoveEvent()
+
+function theDeepestCatacombsFirstTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheApeCity.Questline) >= 17 then
+		player:teleportTo(Position(32749, 32536, 10))
+	else
+		player:teleportTo(fromPosition)
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have access to this area.')
+	end
+
+	position:sendMagicEffect(CONST_ME_TELEPORT)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+theDeepestCatacombsFirstTeleport:type("stepin")
+theDeepestCatacombsFirstTeleport:uid(12129)
+theDeepestCatacombsFirstTeleport:register()
+
+local theDeepestCatacombsSecondTeleport = MoveEvent()
+
+local amphoraPositions = {
+	Position(32792, 32527, 10),
+	Position(32823, 32525, 10),
+	Position(32876, 32584, 10),
+	Position(32744, 32586, 10)
+}
+
+function theDeepestCatacombsSecondTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	for i = 1, #amphoraPositions do
+		local amphoraItem = Tile(amphoraPositions[i]):getItemById(4997)
+		if not amphoraItem then
+			player:teleportTo(Position(32852, 32544, 10))
+			position:sendMagicEffect(CONST_ME_TELEPORT)
+			player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+			player:sendTextMessage(MESSAGE_STATUS_SMALL, "There are 4 large amphoras that must be broken in order to open the teleporter.")
+			return true
+		end
+	end
+
+	player:teleportTo(Position(32885, 32632, 11))
+	position:sendMagicEffect(CONST_ME_TELEPORT)
+	player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+theDeepestCatacombsSecondTeleport:type("stepin")
+theDeepestCatacombsSecondTeleport:uid(12130)
+theDeepestCatacombsSecondTeleport:register()

@@ -115,6 +115,7 @@ function paint.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 			player:setStorageValue(PlayerStorageKeys.TheIceIslands.Questline, 9)
 			player:setStorageValue(PlayerStorageKeys.TheIceIslands.Mission04, 2) -- Questlog The Ice Islands Quest, Nibelor 3: Artful Sabotage
 		end
+
 		player:say('You painted a baby seal.', TALKTYPE_MONSTER_SAY)
 		target:transform(7252)
 		addEvent(transformBack, 30 * 1000, toPosition, 7252, 7178)
@@ -139,7 +140,6 @@ local function summonMonster(name, position)
 	position:sendMagicEffect(CONST_ME_TELEPORT)
 end
 
-
 function yakchal.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	local sarcophagus = Position(32205, 31002, 14)
 	if toPosition.x == sarcophagus.x and toPosition.y == sarcophagus.y and toPosition.z == sarcophagus.z and target.itemid == 7362 and item.itemid == 2361 then
@@ -151,8 +151,10 @@ function yakchal.onUse(player, item, fromPosition, target, toPosition, isHotkey)
 				player:say("The frozen starlight shattered, but you have awoken the icewitch Yakchal from her slumber! She seems not amused...", TALKTYPE_MONSTER_SAY)
 				item:remove(1)
 			end
+
 			Game.createMonster("Yakchal", toPosition)
 			toPosition:sendMagicEffect(CONST_ME_TELEPORT)
+
 			local creature, pos
 			for i = 1, 4 do
 				creature = creatureName[i]
@@ -172,3 +174,68 @@ end
 
 yakchal:id(2361)
 yakchal:register()
+
+local helheim = MoveEvent()
+
+function helheim.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheIceIslands.Questline) ~= 30 then
+		return true
+	end
+
+	player:setStorageValue(PlayerStorageKeys.TheIceIslands.Mission07, 3) -- Questlog The Ice Islands Quest, The Secret of Helheim
+	player:setStorageValue(PlayerStorageKeys.TheIceIslands.Questline, 31)
+	player:say('You discovered the necromantic altar and should report about it.', TALKTYPE_MONSTER_SAY)
+	position:sendMagicEffect(CONST_ME_MAGIC_RED)
+
+	for x = -1, 1 do
+		for y = -1, 1 do
+			if y ~= 0 or x ~= 0 then
+				Position(position.x + x, position.y + y, position.z):sendMagicEffect(CONST_ME_MORTAREA)
+			end
+		end
+	end
+
+	Position(position.x, position.y - 1, position.z):sendMagicEffect(CONST_ME_YALAHARIGHOST)
+	return true
+end
+
+helheim:type("stepin")
+helheim:uid(12031)
+helheim:register()
+
+local nibelorDogSled = MoveEvent()
+
+local config = {
+	[12025] = {destination = Position(32407, 31067, 7), storage = PlayerStorageKeys.TheIceIslands.Mission06, value = 8},
+	[12026] = {destination = Position(32365, 31059, 7), storage = PlayerStorageKeys.TheIceIslands.Mission06, value = 8},
+	[12027] = {destination = Position(32329, 31045, 7), storage = PlayerStorageKeys.TheIceIslands.Mission03, value = 3},
+	[12028] = {destination = Position(32301, 31080, 7), storage = PlayerStorageKeys.TheIceIslands.Mission03, value = 3}
+}
+
+function nibelorDogSled.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local sled = config[item.uid]
+	if not sled then
+		return true
+	end
+
+	if player:getStorageValue(sled.storage) == sled.value and player:removeItem(2671, 1) then
+		player:getPosition():sendMagicEffect(CONST_ME_POFF)
+		player:teleportTo(sled.destination)
+		sled.destination:sendMagicEffect(CONST_ME_TELEPORT)
+	end
+	return true
+end
+
+nibelorDogSled:type("stepin")
+nibelorDogSled:aid(12025, 12026, 12027, 12028)
+nibelorDogSled:register()

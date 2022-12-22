@@ -217,3 +217,88 @@ end
 
 oakGravestone:uid(9007)
 oakGravestone:register()
+
+local entrace = MoveEvent()
+
+function entrace.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.DemonOak.Done) >= 1 then
+		player:teleportTo(DEMON_OAK_KICK_POSITION)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	if player:getLevel() < 120 then
+		player:say("LEAVE LITTLE FISH, YOU ARE NOT WORTH IT!", TALKTYPE_MONSTER_YELL, false, player, DEMON_OAK_POSITION)
+		player:teleportTo(DEMON_OAK_KICK_POSITION)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.DemonOak.Squares) == 5 and #Game.getSpectators(DEMON_OAK_POSITION, false, true, 9, 9, 6, 6) == 0 then
+		player:teleportTo(DEMON_OAK_ENTER_POSITION)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+		player:setStorageValue(PlayerStorageKeys.DemonOak.Progress, 1)
+		player:say("I AWAITED YOU! COME HERE AND GET YOUR REWARD!", TALKTYPE_MONSTER_YELL, false, player, DEMON_OAK_POSITION)
+	else
+		player:teleportTo(DEMON_OAK_KICK_POSITION)
+		player:getPosition():sendMagicEffect(CONST_ME_TELEPORT)
+	end
+	return true
+end
+
+entrace:type("stepin")
+entrace:uid(9000)
+entrace:register()
+
+local areaDamage = MoveEvent()
+
+function areaDamage.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if math.random(24) == 1 then
+		doTargetCombat(0, player, COMBAT_EARTHDAMAGE, -270, -310, CONST_ME_BIGPLANTS)
+	end
+	return true
+end
+
+areaDamage:type("stepin")
+areaDamage:id(8292)
+areaDamage:register()
+
+local squares = MoveEvent()
+
+local voices = {
+	'Release me and you will be rewarded greatefully!',
+	'What is this? Demon Legs lying here? Someone might have lost them!',
+	'I\'m trapped, come here and free me fast!!',
+	'I can bring your beloved back from the dead, just release me!',
+	'What a nice shiny golden armor. Come to me and you can have it!',
+	'Find a way in here and release me! Pleeeease hurry!',
+	'You can have my demon set, if you help me get out of here!'
+}
+
+function squares.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	local status = math.max(player:getStorageValue(PlayerStorageKeys.DemonOak.Squares), 0)
+	if item.uid - 9000 == status + 1 then
+		player:setStorageValue(PlayerStorageKeys.DemonOak.Squares, status + 1)
+		player:say(voices[math.random(#voices)], TALKTYPE_MONSTER_YELL, false, player, DEMON_OAK_POSITION)
+	end
+	return true
+end
+
+squares:type("stepin")
+squares:uid(9001, 9002, 9003, 9004, 9005)
+squares:register()

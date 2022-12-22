@@ -278,3 +278,117 @@ function tireczKill.onKill(creature, target)
 end
 
 tireczKill:register()
+
+local wayOut = MoveEvent()
+
+function wayOut.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 1 then --Questlog, The New Frontier Quest "Mission 01: New Land"
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission01, 2)
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 2)
+		player:say("You have found the passage through the mountains and can report about your success.", TALKTYPE_MONSTER_SAY)
+	end
+	return true
+end
+
+wayOut:type("stepin")
+wayOut:aid(8000)
+wayOut:register()
+
+local trap = MoveEvent()
+
+function trap.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 22 then
+		--Questlog, The New Frontier Quest 'Mission 07: Messengers Of Peace'
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Mission07, 2)
+		player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 23)
+	end
+
+	local destination = Position(33170, 31253, 11)
+	player:teleportTo(destination)
+	destination:sendMagicEffect(CONST_ME_POFF)
+	player:say('So far for the negotiating peace. Now you have other problems to handle.', TALKTYPE_MONSTER_SAY)
+	return true
+end
+
+trap:type("stepin")
+trap:aid(8007)
+trap:register()
+
+local minotaurBoss = MoveEvent()
+
+local config = {
+	arenaPosition = Position(33154, 31415, 7),
+	successPosition = Position(33145, 31419, 7)
+}
+
+local function completeTest(cid)
+	local player = Player(cid)
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) == 19 then
+		player:teleportTo(config.successPosition)
+		player:say('You have passed the test. Report to Curos.', TALKTYPE_MONSTER_SAY)
+	end
+end
+
+function minotaurBoss.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Questline) ~= 18 then
+		player:teleportTo(fromPosition)
+		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have access to this area.')
+		return true
+	end
+
+	addEvent(completeTest, 2 * 60 * 1000, player.uid)
+	player:setStorageValue(PlayerStorageKeys.TheNewFrontier.Questline, 19)
+	player:teleportTo(config.arenaPosition)
+	config.arenaPosition:sendMagicEffect(CONST_ME_TELEPORT)
+	return true
+end
+
+minotaurBoss:type("stepin")
+minotaurBoss:aid(12135)
+minotaurBoss:register()
+
+local jailExit = MoveEvent()
+
+function jailExit.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.TheNewFrontier.Mission08) >= 1 then
+		local destination = Position(33145, 31247, 6)
+		player:teleportTo(destination)
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		destination:sendMagicEffect(CONST_ME_TELEPORT)
+	else
+		player:teleportTo(fromPosition)
+		position:sendMagicEffect(CONST_ME_TELEPORT)
+		fromPosition:sendMagicEffect(CONST_ME_TELEPORT)
+		player:sendTextMessage(MESSAGE_STATUS_SMALL, 'You don\'t have access to this area.')
+	end
+	return true
+end
+
+jailExit:type("stepin")
+jailExit:aid(12138)
+jailExit:register()

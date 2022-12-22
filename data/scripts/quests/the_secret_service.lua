@@ -134,3 +134,43 @@ end
 
 lever:aid(12574)
 lever:register()
+
+local amazons = MoveEvent()
+
+function amazons.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.secretService.AVINMission03) == 1 then
+		player:setStorageValue(PlayerStorageKeys.secretService.AVINMission03, 2)
+		Game.createMonster('amazon', Position(32326, 31803, 8))
+		Game.createMonster('amazon', Position(32330, 31803, 8))
+	end
+	return true
+end
+
+amazons:type("stepin")
+amazons:aid(12583, 12584)
+amazons:register()
+
+local pirates = MoveEvent()
+
+function pirates.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.secretService.TBIMission03) == 1 then
+		player:setStorageValue(PlayerStorageKeys.secretService.TBIMission03, 2)
+		Game.createMonster('pirate buccaneer', Position(32641, 32733, 7))
+		Game.createMonster('pirate buccaneer', Position(32642, 32733, 7))
+	end
+	return true
+end
+
+pirates:type("stepin")
+pirates:aid(12571)
+pirates:register()

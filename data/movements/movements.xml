@@ -66,11 +66,11 @@
 	<movevent event="StepIn" uniqueid="9500" script="citizen.lua" />
 
 	<!-- Walkback when walking on quest chest -->
-	<movevent event="StepIn" itemid="1738" script="walkback.lua" />
-	<movevent event="StepIn" fromid="1740" toid="1741" script="walkback.lua" />
-	<movevent event="StepIn" fromid="1746" toid="1749" script="walkback.lua" />
-	<movevent event="StepIn" fromid="1714" toid="1717" script="walkback.lua" />
-	<movevent event="StepIn" actionid="5640" script="walkback.lua" />
+	<movevent event="StepIn" itemid="1738" script="walk_back.lua" />
+	<movevent event="StepIn" fromid="1740" toid="1741" script="walk_back.lua" />
+	<movevent event="StepIn" fromid="1746" toid="1749" script="walk_back.lua" />
+	<movevent event="StepIn" fromid="1714" toid="1717" script="walk_back.lua" />
+	<movevent event="StepIn" actionid="5640" script="walk_back.lua" />
 
 	<!-- Snow footprint tiles -->
 	<movevent event="StepOut" itemid="670" script="snow.lua" />
@@ -136,9 +136,15 @@
 	<movevent event="StepIn" itemid="7359" function="onStepInField" />
 	<movevent event="AddItem" itemid="7360" function="onAddField" />
 
+	<!-- Magic Wall NoPvp / Wild Growth NoPvp -->
+	<movevent event="StepIn" itemid="20669" function="onStepInField" />
+	<movevent event="StepIn" itemid="20670" function="onStepInField" />
+
 	<!-- Swimming -->
 	<movevent event="StepIn" fromid="4620" toid="4625" script="swimming.lua" />
 	<movevent event="StepOut" fromid="4620" toid="4625" script="swimming.lua" />
+
+	<!-- Drowning -->
 	<movevent event="StepIn" fromid="5405" toid="5410" script="drowning.lua" />
 	<movevent event="StepOut" fromid="5405" toid="5410" script="drowning.lua" />
 

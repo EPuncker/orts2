@@ -1,39 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
-	<!-- Dreamer Challenge Quest -->
-	<movevent event="StepIn" fromuid="2241" touid="2242" script="quests/dreamer challenge/carrot.lua" />
-	<movevent event="StepIn" uniqueid="2243" script="quests/dreamer challenge/fireBugTeleport.lua" />
-	<movevent event="StepIn" fromaid="2245" toaid="2246" script="quests/dreamer challenge/riddle.lua" />
-	<movevent event="StepOut" fromaid="2245" toaid="2246" script="quests/dreamer challenge/riddle.lua" />
-	<movevent event="StepIn" actionid="9031" script="quests/dreamer challenge/stoneTeleport.lua" />
-	<movevent event="AddItem" tileitem="1" actionid="8034" script="quests/dreamer challenge/stoneTeleport.lua" />
-	<movevent event="StepIn" fromuid="2250" touid="2255" script="quests/dreamer challenge/teleports.lua" />
-	<movevent event="StepIn" actionid="9032" script="quests/dreamer challenge/ticTeleport.lua" />
-	<movevent event="StepIn" fromuid="3048" touid="3056" script="quests/dreamer challenge/tower.lua" />
-	<movevent event="StepIn" uniqueid="9030" script="quests/dreamer challenge/wallsTeleport.lua" />
-	<movevent event="AddItem" tileitem="1" uniqueid="2244" script="quests/dreamer challenge/deathRing.lua" />
-	<movevent event="StepIn" actionid="9049" script="quests/dreamer challenge/clockTile.lua" />
-	<movevent event="StepIn" uniqueid="9234" script="quests/dreamer challenge/deathRingTeleport.lua" />
-	<movevent event="StepIn" uniqueid="50147" script="quests/dreamer challenge/riddleTeleport.lua" />
-
-	<!-- Pits Of Inferno Quest -->
-	<movevent event="StepIn" fromuid="2090" touid="2096" script="quests/pits of inferno/checkThrones.lua" />
-	<movevent event="StepIn" fromaid="2040" toaid="2063" script="quests/pits of inferno/fireTiles.lua" />
-	<movevent event="StepIn" uniqueid="2002" script="quests/pits of inferno/ladder.lua" />
-	<movevent event="StepOut" uniqueid="2002" script="quests/pits of inferno/ladder.lua" />
-	<movevent event="StepIn" actionid="4001" script="quests/pits of inferno/stone.lua" />
-	<movevent event="StepIn" actionid="4002" script="quests/pits of inferno/drawbridge.lua" />
-	<movevent event="StepOut" actionid="4002" script="quests/pits of inferno/drawbridge.lua" />
-	<movevent event="StepIn" fromaid="8816" toaid="8817" script="quests/pits of inferno/shortcuts.lua" />
-	<movevent event="StepIn" fromuid="2080" touid="2086" script="quests/pits of inferno/thrones.lua" />
-	<movevent event="StepIn" fromuid="2000" touid="2001" script="quests/pits of inferno/tibleTile.lua" />
-	<movevent event="StepIn" fromaid="28810" toaid="28834" script="quests/pits of inferno/tileTeleports.lua" />
-	<movevent event="StepIn" actionid="7799" script="quests/pits of inferno/trap.lua" />
-	<movevent event="StepIn" uniqueid="3303" script="quests/pits of inferno/secondTrap.lua" />
-	<movevent event="StepIn" fromaid="16772" toaid="16774" script="quests/pits of inferno/bazirTiles.lua" />
-	<movevent event="StepIn" fromaid="50082" toaid="50083" script="quests/pits of inferno/bazirTiles.lua" />
-	<movevent event="StepIn" actionid="50087" script="quests/pits of inferno/puminTeleport.lua" />
-
 	<!-- Decaying tiles -->
 	<movevent event="StepIn" itemid="293" script="decay.lua" />
 	<movevent event="StepIn" itemid="461" script="decay.lua" />

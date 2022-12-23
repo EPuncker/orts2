@@ -470,3 +470,112 @@ end
 
 flask:id(21402)
 flask:register()
+
+local amfora = MoveEvent()
+
+function amfora.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 4530 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission05) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission06) < 1 then
+		player:teleportTo(Position(32987, 32401, 9))
+	else
+		player:teleportTo(Position(32988, 32397, 9))
+	end
+
+	player:getPosition():sendMagicEffect(CONST_ME_POFF)
+	return true
+end
+
+amfora:type("stepin")
+amfora:aid(4530, 4531)
+amfora:register()
+
+local brain = MoveEvent()
+
+function brain.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 4532 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission08) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission09) < 1 then
+		player:teleportTo(Position(33022, 32338, 10))
+	else
+		player:teleportTo(Position(33022, 32334, 10))
+	end
+
+	player:getPosition():sendMagicEffect(CONST_ME_POFF)
+	return true
+end
+
+brain:type("stepin")
+brain:aid(4532, 4533)
+brain:register()
+
+local dormitori = MoveEvent()
+
+function dormitori.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 4534 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission55) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission56) < 1 then
+		player:setStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission56,1)
+		player:teleportTo(Position(33015, 32440, 10))
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, 'You should hurry, try not to dwell here any longer than a few minutes.')
+	else
+		player:teleportTo(Position(33018, 32437, 10))
+	end
+
+	player:getPosition():sendMagicEffect(CONST_ME_POFF)
+	return true
+end
+
+dormitori:type("stepin")
+dormitori:aid(4534, 4535)
+dormitori:register()
+
+local sacrificeTeleport = MoveEvent()
+
+function sacrificeTeleport.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if item.actionid == 4541 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission72) == 1 then
+		player:teleportTo(Position(33021, 32419, 11))
+	else
+		player:teleportTo(Position(33015, 32422, 11))
+	end
+
+	player:getPosition():sendMagicEffect(CONST_ME_POFF)
+	return true
+end
+
+sacrificeTeleport:type("stepin")
+sacrificeTeleport:aid(4541, 4542)
+sacrificeTeleport:register()
+
+local necromancerServant = MoveEvent()
+
+function necromancerServant.onStepIn(creature, item, position, fromPosition)
+	local player = creature:getPlayer()
+	if not player then
+		return true
+	end
+
+	if player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission56) == 1 and player:getStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission57) ~= 1 then
+		player:setStorageValue(PlayerStorageKeys.GravediggerOfDrefia.Mission57, 1)
+		Game.createMonster('Necromancer Servant', Position(33011, 32437, 11))
+	end
+	return true
+end
+
+necromancerServant:type("stepin")
+necromancerServant:aid(4536)
+necromancerServant:register()

@@ -1,36 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <movements>
-	<!-- The Queen of the Banshees Quest -->
-	<movevent event="StepIn" uniqueid="50004" script="quests/the queen of the banshees/theFirstSealFlame.lua" />
-	<movevent event="StepIn" uniqueid="50011" script="quests/the queen of the banshees/theSixthSealFlame.lua" />
-	<movevent event="StepIn" uniqueid="50012" script="quests/the queen of the banshees/theFifthSealFlame.lua" />
-	<movevent event="StepIn" fromaid="50014" toaid="50015" script="quests/the queen of the banshees/theFifthSealPath.lua" />
-	<movevent event="AddItem" tileitem="1" uniqueid="50013" script="quests/the queen of the banshees/theFourthSealSacrifice.lua" />
-	<movevent event="StepIn" uniqueid="50014" script="quests/the queen of the banshees/theFourthSealFlame.lua" />
-	<movevent event="StepIn" actionid="50016" script="quests/the queen of the banshees/theThirdSealWarlockTile.lua" />
-	<movevent event="StepIn" uniqueid="50020" script="quests/the queen of the banshees/theThirdSealFlame.lua" />
-	<movevent event="StepIn" actionid="50017" script="quests/the queen of the banshees/theSecondSealPearl.lua" />
-	<movevent event="StepIn" uniqueid="50021" script="quests/the queen of the banshees/theSecondSealFlame.lua" />
-	<movevent event="StepIn" uniqueid="50022" script="quests/the queen of the banshees/theLastFlame.lua" />
-
-	<!--- The Ancient Tombs Quest -->
-	<movevent event="StepIn" actionid="12101" script="quests/the ancient tombs/peninsulaTombmaze.lua" />
-	<movevent event="StepIn" fromuid="3950" touid="3956" script="quests/the ancient tombs/tombTeleports.lua" />
-	<movevent event="StepIn" actionid="12108" script="quests/the ancient tombs/tombTeleports.lua" />
-	<movevent event="AddItem" tileitem="1" actionid="60626" script="quests/the ancient tombs/craftHelmet.lua" />
-	<movevent event="StepIn" uniqueid="50135" script="quests/the ancient tombs/enterThalasTeleportSwitchesDone.lua" />
-	<movevent event="StepIn" uniqueid="50136" script="quests/the ancient tombs/enterThalasPoisonTile.lua" />
-	<movevent event="StepIn" uniqueid="50137" script="quests/the ancient tombs/enterDiprathTeleportSwitchesDone.lua" />
-	<movevent event="StepIn" uniqueid="50138" script="quests/the ancient tombs/enterAshmunrahTeleportSwitchesDone.lua" />
-	<movevent event="StepIn" fromuid="50139" touid="50146" script="quests/the ancient tombs/stepMorguthisBlueFlames.lua" />
-
-	<!-- Gravedigger -->
-	<movevent event="StepIn" fromaid="4530" toaid="4531" script="quests/gravedigger/tps.lua" />
-	<movevent event="StepIn" fromaid="4532" toaid="4533" script="quests/gravedigger/tps2.lua" />
-	<movevent event="StepIn" fromaid="4534" toaid="4535" script="quests/gravedigger/tps3.lua" />
-	<movevent event="StepIn" fromaid="4541" toaid="4542" script="quests/gravedigger/tps4.lua" />
-	<movevent event="StepIn" actionid="4536" script="quests/gravedigger/necro.lua" />
-
 	<!-- Dreamer Challenge Quest -->
 	<movevent event="StepIn" fromuid="2241" touid="2242" script="quests/dreamer challenge/carrot.lua" />
 	<movevent event="StepIn" uniqueid="2243" script="quests/dreamer challenge/fireBugTeleport.lua" />

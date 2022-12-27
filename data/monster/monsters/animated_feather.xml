@@ -17,10 +17,10 @@
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
+		<immunity ice="1" />
 	</immunities>
 	<elements>
 		<element firePercent="-18" />
-		<element icePercent="100" />
 	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-400" />

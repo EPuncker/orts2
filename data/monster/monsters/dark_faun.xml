@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dark Faun" nameDescription="a dark faun" race="blood" experience="900" speed="216">
 	<health now="1100" max="1100" />
-	<look type="980" head="94" body="95" legs="0" feet="94" corpse="0" />
+	<look type="980" head="94" body="95" legs="0" feet="94" corpse="28471" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

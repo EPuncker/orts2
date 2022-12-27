@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dark Soul" nameDescription="a dark soul" race="undead" experience="0" speed="160">
 	<health now="5000" max="5000" />
-	<look type="714" corpse="26397" />
+	<look type="714" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag illusionable="1" />

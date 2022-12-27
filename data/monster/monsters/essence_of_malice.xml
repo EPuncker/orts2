@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Essence Of Malice" nameDescription="Essence Of Malice" race="undead" experience="150000" speed="320">
 	<health now="250000" max="250000" />
-	<look type="351" corpse="11362" />
+	<look type="351" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />

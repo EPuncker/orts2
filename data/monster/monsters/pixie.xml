@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Pixie" nameDescription="a pixie" race="blood" experience="700" speed="240">
 	<health now="770" max="770" />
-	<look type="982" corpse="0" />
+	<look type="982" corpse="28467" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

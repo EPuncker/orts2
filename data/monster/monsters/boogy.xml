@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Boogy" nameDescription="a boogy" race="blood" experience="950" speed="210">
 	<health now="1300" max="1300" />
-	<look type="981" corpse="0" />
+	<look type="981" corpse="28475" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

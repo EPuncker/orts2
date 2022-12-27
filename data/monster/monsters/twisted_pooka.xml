@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Twisted Pooka" nameDescription="a twisted pooka" race="blood" experience="600" speed="230">
 	<health now="700" max="700" />
-	<look type="978" corpse="0" />
+	<look type="978" corpse="28483" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

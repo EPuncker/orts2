@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Faun" nameDescription="a faun" race="blood" experience="800" speed="210">
 	<health now="900" max="900" />
-	<look type="980" head="61" body="96" legs="95" feet="62" corpse="29102" />
+	<look type="980" head="61" body="96" legs="95" feet="62" corpse="28471" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

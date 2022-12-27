@@ -427,7 +427,6 @@
 	<monster name="Haunted Dragon" file="monsters/haunted_dragon.xml" />
 	<monster name="Haunted Treeling" file="monsters/haunted_treeling.xml" />
 	<monster name="Haunter" file="monsters/haunter.xml" />
-	<monster name="he Sinister Hermit Yellow" file="monsters/the_sinister_hermit_yellow.xml" />
 	<monster name="Hell Hole" file="monsters/hell_hole.xml" />
 	<monster name="Hellfire Fighter" file="monsters/hellfire_fighter.xml" />
 	<monster name="Hellflayer" file="monsters/hellflayer.xml" />
@@ -916,7 +915,8 @@
 	<monster name="The Sandking" file="monsters/the_sandking.xml" />
 	<monster name="The Shatterer" file="monsters/the_shatterer.xml" />
 	<monster name="The Shielded Thorn Knight" file="monsters/the_shielded_thorn_knight.xml" />
-	<monster name="The Sinister Hermit" file="monsters/the_sinister_hermit_blue.xml" />
+	<monster name="The Sinister Hermit Blue" file="monsters/the_sinister_hermit_blue.xml" />
+	<monster name="The Sinister Hermit Yellow" file="monsters/the_sinister_hermit_yellow.xml" />
 	<monster name="The Snapper" file="monsters/the_snapper.xml" />
 	<monster name="The Souldespoiler" file="monsters/the_souldespoiler.xml" />
 	<monster name="The Source Of Corruption" file="monsters/the_source_of_corruption.xml" />

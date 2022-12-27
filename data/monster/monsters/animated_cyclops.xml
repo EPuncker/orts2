@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Animated Cyclops" nameDescription="an animated cyclops" experience="150" speed="0">
+<monster name="Animated Cyclops" nameDescription="an animated cyclops" race="blood" experience="150" speed="190">
 	<health now="260" max="260" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="22" corpse="5962" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,12 +13,15 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-105" />
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="2148" name="gold coin" chance="85294" countmax="45" />
 		<item id="2666" name="meat" chance="26471" />

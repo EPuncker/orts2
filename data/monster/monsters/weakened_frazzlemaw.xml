@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Weakened Frazzlemaw" nameDescription="a weakened frazzlemaw" experience="1000" speed="300">
+<monster name="Weakened Frazzlemaw" nameDescription="a weakened frazzlemaw" race="blood" experience="1000" speed="300">
 	<health now="1200" max="1200" />
-	<look type="594" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="594" corpse="22567" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Misguided Bully" nameDescription="a misguided bully" experience="1200" speed="180">
+<monster name="Misguided Bully" nameDescription="a misguided bully" race="blood" experience="1200" speed="180">
 	<health now="2000" max="2000" />
-	<look type="159" head="58" body="21" legs="41" feet="76" addons="0" corpse="0" />
+	<look type="159" head="58" body="21" legs="41" feet="76" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,15 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-260" />
+		<attack name="physical" interval="2000" chance="15" min="0" max="-210" range="5" radius="1" target="1">
+			<attribute key="shootEffect" value="arrow" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="20" min="400" max="480" />
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,15 +34,6 @@
 		<element holyPercent="-30" />
 		<element deathPercent="0" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-260" />
-		<attack name="physical" interval="2000" chance="15" min="0" max="-210" range="5" radius="1" target="1">
-			<attribute key="shootEffect" value="arrow" />
-		</attack>
-	</attacks>
-	<defenses armor="30" defense="30">
-		<defense name="healing" interval="2000" chance="20" min="400" max="480" />
-	</defenses>
 	<loot>
 		<item id="2148" name="gold coin" chance="81581" countmax="173" />
 		<item id="2666" name="meat" chance="45048" />

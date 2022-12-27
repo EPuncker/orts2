@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Orc Cult Minion" nameDescription="an orc cult minion" experience="850" speed="210">
+<monster name="Orc Cult Minion" nameDescription="an orc cult minion" race="blood" experience="850" speed="210">
 	<health now="1000" max="1000" />
-	<look type="50" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="50" corpse="5996" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,13 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-200" />
+		<attack name="physical" interval="2000" chance="15" min="0" max="-150" range="5" radius="1" target="1">
+			<attribute key="shootEffect" value="spear" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -23,13 +30,6 @@
 		<element holyPercent="20" />
 		<element deathPercent="-10" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-200" />
-		<attack name="physical" interval="2000" chance="15" min="0" max="-150" range="5" radius="1" target="1">
-			<attribute key="shootEffect" value="spear" />
-		</attack>
-	</attacks>
-	<defenses armor="30" defense="30" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Orc powaaa!" />
 	</voices>

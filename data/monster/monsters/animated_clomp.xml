@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Animated Clomp" nameDescription="an animated clomp" experience="475" speed="0">
+<monster name="Animated Clomp" nameDescription="an animated clomp" race="blood" experience="475" speed="430">
 	<health now="900" max="900" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="860" corpse="25398" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

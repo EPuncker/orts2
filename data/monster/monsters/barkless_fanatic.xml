@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Barkless Fanatic" nameDescription="a barkless fanatic" experience="2500" speed="300">
+<monster name="Barkless Fanatic" nameDescription="a barkless fanatic" race="blood" experience="2500" speed="300">
 	<health now="3200" max="3200" />
-	<look type="990" head="0" body="0" legs="0" feet="0" addons="2" corpse="0" />
+	<look type="990" corpse="6012" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,17 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-230" />
+		<attack name="earth" interval="2000" chance="20" range="7" target="1" radius="4" min="-220" max="-450">
+			<attribute key="shootEffect" value="spear" />
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+		<attack name="earth" interval="2000" chance="10" radius="6" target="0" min="0" max="-150">
+			<attribute key="areaEffect" value="greenbubble" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -24,7 +35,6 @@
 		<element icePercent="15" />
 		<element deathPercent="15" />
 	</elements>
-	<defenses armor="30" defense="30" />
 	<voices interval="1000" chance="5">
 		<voice sentence="PAIN PURIFIES! PAIN PURIFIES!" />
 	</voices>

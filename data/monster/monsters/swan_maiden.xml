@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Swan Maiden" nameDescription="a swan maiden" experience="700" speed="234">
+<monster name="Swan Maiden" nameDescription="a swan maiden" race="blood" experience="700" speed="234">
 	<health now="800" max="800" />
-	<look type="138" head="0" body="0" legs="114" feet="78" addons="0" corpse="0" />
+	<look type="138" head="0" body="0" legs="114" feet="78" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,25 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-215" />
+		<attack name="energy" interval="2000" chance="15" range="7" target="1" min="-60" max="-115">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="11" range="7" target="1" min="-82" max="-215">
+			<attribute key="shootEffect" value="holy" />
+			<attribute key="areaEffect" value="holyarea" />
+		</attack>
+		<attack name="speed" interval="2000" chance="11" radius="6" speedchange="-450" duration="5000">
+			<attribute key="areaEffect" value="faeexplosion" />
+		</attack>
+	</attacks>
+	<defenses armor="54" defense="54">
+		<defense name="healing" interval="2000" chance="15" min="85" max="105">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,7 +44,6 @@
 		<element holyPercent="30" />
 		<element deathPercent="50" />
 	</elements>
-	<defenses armor="54" defense="54" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Nightmarish monster! This dream is not meant for you!" />
 		<voice sentence="You won't steal my robe! Back off!" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Putrid Mummy" nameDescription="a putrid mummy" experience="900" speed="170">
+<monster name="Putrid Mummy" nameDescription="a putrid mummy" race="undead" experience="900" speed="170">
 	<health now="1500" max="1500" />
-	<look type="976" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="976" corpse="6004" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,22 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-300" />
+		<attack name="earth" interval="2000" chance="20" range="1" target="1" min="-100" max="-150" poison="4">
+			<attribute key="shootEffect" value="earth" />
+			<attribute key="areaEffect" value="carniphila" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" range="7" target="1" speedchange="-226" duration="10000">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="40" defense="40">
+		<defense name="healing" interval="2000" chance="10" min="100" max="150">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,7 +41,6 @@
 		<element holyPercent="-25" />
 		<element deathPercent="100" />
 	</elements>
-	<defenses armor="40" defense="40" />
 	<voices interval="1000" chance="5">
 		<voice sentence="We will make you one of us!" />
 		<voice sentence="Come to mummy!" />

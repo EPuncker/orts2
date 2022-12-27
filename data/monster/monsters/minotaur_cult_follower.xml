@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Minotaur Cult Follower" nameDescription="a minotaur cult follower" experience="950" speed="230">
+<monster name="Minotaur Cult Follower" nameDescription="a minotaur cult follower" race="blood" experience="950" speed="230">
 	<health now="1600" max="1600" />
-	<look type="25" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="25" corpse="5969" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,17 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-150" />
+		<attack name="physical" interval="2000" chance="20" range="7" target="1" min="-180" max="-250">
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+	</attacks>
+	<defenses armor="32" defense="32">
+	<defense name="healing" interval="1000" chance="20" min="200" max="450">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -23,7 +34,6 @@
 		<element holyPercent="10" />
 		<element deathPercent="-10" />
 	</elements>
-	<defenses armor="32" defense="32" />
 	<voices interval="1000" chance="5">
 		<voice sentence="We will rule!" />
 	</voices>

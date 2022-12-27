@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Enfeebled Silencer" nameDescription="an enfeebled silencer" experience="1100" speed="330">
+<monster name="Enfeebled Silencer" nameDescription="an enfeebled silencer" race="blood" experience="1100" speed="330">
 	<health now="1100" max="1100" />
-	<look type="585" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="585" corpse="22489" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,22 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="80" attack="70" poison="200" />
+		<attack name="silencer skill reducer" range="3" interval="2000" chance="10" />
+		<attack name="manadrain" interval="2000" chance="15" radius="4" target="1" min="-40" max="-90">
+			<attribute key="shootEffect" value="onyxarrow" />
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="44" defense="44">
+		<defense name="speed" interval="2000" chance="15" speedchange="450" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" interval="2000" chance="10" min="80" max="225">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -26,7 +42,6 @@
 		<element holyPercent="-25" />
 		<element deathPercent="65" />
 	</elements>
-	<defenses armor="44" defense="44" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Prrrroooaaaah!!! PRROAAAH!!" />
 		<voice sentence="PRRRROOOOOAAAAAHHHH!!!" />

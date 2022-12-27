@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Pooka" nameDescription="a pooka" experience="500" speed="230">
+<monster name="Pooka" nameDescription="a pooka" race="blood" experience="500" speed="230">
 	<health now="500" max="500" />
-	<look type="977" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="977" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,21 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-120" />
+		<attack name="earth" interval="2000" chance="15" range="4" target="1" min="0" max="-50">
+			<attribute key="shootEffect" value="smallstone" />
+			<attribute key="areaEffect" value="stones" />
+		</attack>
+		<attack name="drunk" interval="2000" chance="11" length="4" spread="2" target="0" duration="5000">
+			<attribute key="areaEffect" value="stun" />
+		</attack>
+	</attacks>
+	<defenses armor="38" defense="38">
+		<defense name="healing" interval="2000" chance="25" min="40" max="60">
+			<attribute key="areaEffect" value="greenshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -25,7 +40,6 @@
 		<element holyPercent="20" />
 		<element deathPercent="10" />
 	</elements>
-	<defenses armor="38" defense="38" />
 	<voices interval="1000" chance="5">
 		<voice sentence="This was the initial trick, but the second follows quick!" />
 		<voice sentence="Hoppel-di-hopp!" />

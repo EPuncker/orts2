@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Minotaur Cult Prophet" nameDescription="a minotaur cult prophet" experience="1100" speed="240">
+<monster name="Minotaur Cult Prophet" nameDescription="a minotaur cult prophet" race="blood" experience="1100" speed="240">
 	<health now="1700" max="1700" />
-	<look type="23" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="23" corpse="5981" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,22 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-100" />
+		<attack name="energy" interval="2000" chance="15" range="7" min="-20" max="-350">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="fire" interval="2000" chance="15" range="7" radius="1" target="1" min="-50" max="-300">
+			<attribute key="shootEffect" value="fire" />
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+	</attacks>
+	<defenses armor="28" defense="28">
+		<defense name="heal monster" interval="2000" chance="20">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -24,7 +40,6 @@
 		<element holyPercent="10" />
 		<element deathPercent="-5" />
 	</elements>
-	<defenses armor="28" defense="28" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Bow to the power of the iron bull!" />
 	</voices>

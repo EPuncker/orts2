@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Animated Ogre Shaman" nameDescription="an animated ogre shaman" experience="625" speed="0">
+<monster name="Animated Ogre Shaman" nameDescription="an animated ogre shaman" race="blood" experience="625" speed="240">
 	<health now="800" max="800" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="859" corpse="24795" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,12 +13,28 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-269" fire="6" />
+		<attack name="fire" interval="2000" chance="15" range="7" min="-70" max="-180">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="outfit" interval="2000" chance="8" range="7" monster="chicken" duration="4000">
+			<attribute key="areaeffect" value="blueshimmer" />
+		</attack>
+		<attack name="earth" interval="2000" chance="20" length="8" spread="3" min="-15" max="-120">
+			<attribute key="areaEffect" value="carniphila" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="10" min="80" max="95">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="2148" name="gold coin" chance="100000" countmax="90" />
 		<item id="24844" name="ogre ear stud" chance="20000" />

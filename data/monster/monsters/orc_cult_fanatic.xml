@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Orc Cult Fanatic" nameDescription="an orc cult fanatic" experience="1100" speed="230">
+<monster name="Orc Cult Fanatic" nameDescription="an orc cult fanatic" race="blood" experience="1100" speed="230">
 	<health now="1300" max="1300" />
-	<look type="59" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="59" corpse="6001" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,13 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-200" />
+		<attack name="physical" interval="2000" chance="20" range="7" min="-250" max="-330">
+			<attribute key="shootEffect" value="throwingknife" />
+		</attack>
+	</attacks>
+	<defenses armor="22" defense="22" />
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -25,10 +32,6 @@
 		<element holyPercent="20" />
 		<element deathPercent="-10" />
 	</elements>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-200" />
-	</attacks>
-	<defenses armor="22" defense="22" />
 	<loot>
 		<item id="2148" name="gold coin" chance="100000" countmax="135" />
 		<item id="2667" name="fish" chance="31117" />

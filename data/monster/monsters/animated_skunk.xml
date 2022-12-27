@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Animated Skunk" nameDescription="an animated skunk" experience="3" speed="0">
+<monster name="Animated Skunk" nameDescription="an animated skunk" race="blood" experience="3" speed="120">
 	<health now="20" max="20" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="106" corpse="6035" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,12 +13,16 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-5" />
+		<attack name="earth" interval="2000" chance="10" range="1" target="1" min="-1" max="-3" />
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="9114" name="bulb of garlic" chance="4959" />
 	</loot>

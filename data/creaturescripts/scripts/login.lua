@@ -1,35 +1,3 @@
--- ordered as in creaturescripts.xml
-local events = {
-	'TutorialCockroach',
-	'ElementalSpheresOverlords',
-	'BigfootBurdenVersperoth',
-	'BigfootBurdenWarzone',
-	'BigfootBurdenWeeper',
-	'BigfootBurdenWiggler',
-	'SvargrondArenaKill',
-	'NewFrontierShardOfCorruption',
-	'NewFrontierTirecz',
-	'ServiceOfYalaharDiseasedTrio',
-	'ServiceOfYalaharAzerus',
-	'ServiceOfYalaharQuaraLeaders',
-	'InquisitionBosses',
-	'InquisitionUngreez',
-	'KillingInTheNameOfKills',
-	'MastersVoiceServants',
-	'SecretServiceBlackKnight',
-	'ThievesGuildNomad',
-	'WotELizardMagistratus',
-	'WotELizardNoble',
-	'WotEKeeper',
-	'WotEBosses',
-	'WotEZalamon',
-	'PlayerDeath',
-	'AdvanceSave',
-	'AdvanceRookgaard',
-	'PythiusTheRotten',
-	'DropLoot'
-}
-
 local function onMovementRemoveProtection(cid, oldPosition, time)
 	local player = Player(cid)
 	if not player then
@@ -70,9 +38,8 @@ function onLogin(player)
 	end
 
 	-- Events
-	for i = 1, #events do
-		player:registerEvent(events[i])
-	end
+	player:registerEvent("PlayerDeath")
+	player:registerEvent("DropLoot")
 
 	if player:getStorageValue(PlayerStorageKeys.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, os.time() + 10)

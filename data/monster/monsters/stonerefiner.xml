@@ -19,7 +19,6 @@
 			<attribute key="shootEffect" value="spear" />
 		</attack>
 	</attacks>
-	</attacks>
 	<defenses armor="20" defense="20" />
 	<immunities>
 		<immunity paralyze="1" />

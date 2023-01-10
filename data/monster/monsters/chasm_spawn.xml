@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Chasm Spawn" nameDescription="a chasm spawn" experience="2700" speed="230">
 	<health now="4500" max="4500" />
-	<look type="1037" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1037" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,23 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-250" />
+		<attack name="earth" interval="2000" chance="15" range="7" target="1" min="-5" max="-16">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="death" interval="2000" chance="15" range="7" target="1" min="-30" max="-60">
+			<attribute key="shootEffect" value="death" />
+		</attack>
+		<attack name="death" interval="2000" chance="15" range="3" length="3" spread="3" min="-70" max="-160">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="10" range="7" min="-40" max="-60" />
+		<attack name="earth" interval="2000" chance="10" length="3" spread="3"  min="-70" max="-140">
+			<attribute key="areaEffect" value="PLANTATTACK" />
+		</attack>
+	</attacks>
+	<defenses armor="74" defense="74" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -21,7 +38,6 @@
 	<elements>
 		<element firePercent="-30" />
 	</elements>
-	<defenses armor="74" defense="74" />
 	<loot>
 		<item id="30260" name="chasm spawn tail" chance="64519" />
 		<item id="30258" name="chasm spawn head" chance="33638" />

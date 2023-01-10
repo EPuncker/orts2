@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Aggressive Lava" nameDescription="an aggressive lava" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+<monster name="Aggressive Lava" nameDescription="an aggressive lava" race="undead" experience="0" speed="150">
+	<health now="5000" max="5000" />
+	<look type="614" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,10 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-450" />
+		<attack name="aggresive lava wave" interval="2000" chance="30" min="0" max="-650" />
+	</attacks>
 	<immunities>
 		<immunity drunk="1" />
 	</immunities>

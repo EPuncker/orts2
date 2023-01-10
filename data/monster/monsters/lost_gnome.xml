@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Lost Gnome" nameDescription="a lost gnome" experience="0" speed="0">
+<monster name="Lost Gnome" nameDescription="a lost gnome" race="blood" experience="0" speed="200">
 	<health now="10000" max="10000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="493" head="10" body="32" legs="15" feet="7" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="1" />

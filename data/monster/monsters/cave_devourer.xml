@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Cave Devourer" nameDescription="a cave devourer" experience="2380" speed="240">
 	<health now="4500" max="4500" />
-	<look type="1036" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1036" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
-		<flag convinceable="1" />
+		<flag convinceable="0" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
@@ -14,6 +14,15 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-400" />
+		<attack name="death" interval="2000" chance="15" range="3" length="6" spread="3" min="-70" max="-160">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="fire" interval="2000" chance="15" range="3" length="6" spread="3" min="-90" max="-160">
+			<attribute key="areaEffect" value="fire" />
+		</attack>
+	</attacks>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />

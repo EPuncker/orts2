@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Tunnel Tyrant" nameDescription="a tunnel tyrant" experience="3400" speed="240">
+<monster name="Tunnel Tyrant" nameDescription="a tunnel tyrant" race="blood" experience="3400" speed="240">
 	<health now="5200" max="5200" />
-	<look type="1035" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1035" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,16 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-400" />
+		<attack name="death" interval="2000" chance="15" range="3" length="6" spread="3" min="-70" max="-160">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="fire" interval="2000" chance="15" range="3" length="6" spread="3" min="-90" max="-160">
+			<attribute key="areaEffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="76" defense="76" />
 	<immunities>
 		<immunity invisible="1" />
 		<immunity drunk="1" />
@@ -21,7 +31,6 @@
 		<element energyPercent="20" />
 		<element icePercent="-30" />
 	</elements>
-	<defenses armor="76" defense="76" />
 	<loot>
 		<item id="30252" name="tunnel tyrant shell" chance="15862" />
 		<item id="30251" name="tunnel tyrant head" chance="11367" />

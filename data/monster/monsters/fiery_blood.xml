@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Fiery Blood" nameDescription="a fiery blood" experience="0" speed="0">
+<monster name="Fiery Blood" nameDescription="a fiery blood" race="undead" experience="0" speed="150">
 	<health now="25000" max="25000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="49" corpse="8964" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="1" />
@@ -13,6 +13,14 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-250" />
+		<attack name="aggresive lava wave" interval="2000" chance="30" min="0" max="-500" />
+		<attack name="firefield" interval="2000" chance="25" range="7" radius="3" target="1">
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity drunk="1" />
 	</immunities>
@@ -20,5 +28,4 @@
 		<element firePercent="100" />
 		<element deathPercent="100" />
 	</elements>
-	<defenses armor="30" defense="30" />
 </monster>

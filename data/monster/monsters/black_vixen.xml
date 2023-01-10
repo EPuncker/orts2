@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Black Vixen" nameDescription="" experience="3200" speed="0">
+<monster name="Black Vixen" nameDescription="Black Vixen" race="blood" experience="3200" speed="200">
 	<health now="3200" max="3200" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1038" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -14,6 +14,27 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-290" />
+		<attack name="physical" interval="1000" chance="20" range="7" min="100" max="720">
+			<attribute key="shootEffect" value="throwingstar" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-600" duration="20000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="death" interval="1000" chance="14" length="5" spread="0" min="-100" max="-700">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="outfit" interval="1000" chance="1" target="1" radius="1" monster="werewolf" duration="2000" />
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="4000" chance="15" min="150" max="345">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="15" duration="10000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -25,7 +46,6 @@
 		<element icePercent="10" />
 		<element deathPercent="50" />
 	</elements>
-	<defenses armor="30" defense="30" />
 	<voices interval="1000" chance="5">
 		<voice sentence="You are not clever enough to defeat me!" />
 	</voices>

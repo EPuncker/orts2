@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Shadowpelt" nameDescription="" experience="4600" speed="0">
+<monster name="Shadowpelt" nameDescription="Shadowpelt" race="blood" experience="4600" speed="230">
 	<health now="6000" max="6000" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1040" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -14,6 +14,24 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="50" attack="50" />
+		<attack name="physical" interval="100" chance="22" radius="3" min="-200" max="-310">
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+		<attack name="outfit" interval="1000" chance="1" target="1" radius="1" monster="Werebear" duration="2000" />
+		<attack name="lifedrain" interval="100" chance="15" radius="3" target="0" min="-100" max="-200">
+			<attribute key="areaEffect" value="whitenote" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="healing" interval="2000" chance="7" min="120" max="310">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="10" speedchange="520" duration="5000">
+			<attribute key="areaEffect" value="poff" />
+		</defense>
+	</defenses>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -24,7 +42,6 @@
 		<element firePercent="-5" />
 		<element icePercent="10" />
 	</elements>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="5896" name="bear paw" chance="100000" />
 		<item id="2152" name="platinum coin" chance="100000" countmax="3" />

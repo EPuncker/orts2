@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="The Duke Of The Depths" nameDescription="" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+<monster name="The Duke Of The Depths" nameDescription="The Duke Of The Depths" race="blood" experience="40000" speed="270">
+	<health now="50000" max="50000" />
+	<look type="1047" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />
@@ -14,12 +14,27 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-800" />
+		<attack name="fire" interval="2000" chance="15" range="3" length="6" spread="8" min="0" max="-1000">
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+		<attack name="fire" interval="2000" chance="20" range="3" length="9" spread="4" min="0" max="-1000">
+			<attribute key="areaEffect" value="fire" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15" radius="2" min="-135" max="-1000">
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+		<attack name="physical" interval="2000" chance="15" radius="8" min="0" max="-1000">
+			<attribute key="areaEffect" value="blackspark" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item name="heavy crystal fragment" chance="100000" />
 		<item id="7440" name="mastermind potion" chance="100000" countmax="3" />

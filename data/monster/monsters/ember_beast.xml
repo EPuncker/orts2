@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Ember Beast" nameDescription="an ember beast" experience="0" speed="0">
-	<health now="0" max="0" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+<monster name="Ember Beast" nameDescription="an ember beast" race="undead" experience="0" speed="220">
+	<health now="4000" max="4000" />
+	<look type="498" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,10 +13,15 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-400" />
+		<attack name="ember beast area" interval="1000" chance="20" min="-200" max="-450" />
+		<attack name="ember beast hur" interval="2000" chance="10" min="-200" max="-450" />
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 </monster>

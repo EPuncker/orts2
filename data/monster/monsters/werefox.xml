@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Werefox" nameDescription="a werefox" race="blood" experience="1600" speed="280">
 	<health now="1500" max="1500" />
-	<look type="1030" corpse="0" />
+	<look type="1030" corpse="30177" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

@@ -15,7 +15,7 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-450" />
-		<attack name="aggresive lava wave" interval="2000" chance="30" min="0" max="-650" />
+		<attack name="aggresive lava bomb" interval="2000" chance="30" min="0" max="-650" />
 	</attacks>
 	<immunities>
 		<immunity drunk="1" />

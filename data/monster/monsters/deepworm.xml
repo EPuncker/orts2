@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Deepworm" nameDescription="a deepworm" race="blood" experience="2300" speed="204">
 	<health now="3500" max="3500" />
-	<look type="1033" corpse="0" />
+	<look type="1033" corpse="30201" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />

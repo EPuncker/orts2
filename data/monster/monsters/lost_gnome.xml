@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lost Gnome" nameDescription="a lost gnome" race="blood" experience="0" speed="200">
 	<health now="10000" max="10000" />
-	<look type="493" head="10" body="32" legs="15" feet="7" corpse="0" />
+	<look type="493" head="10" body="32" legs="15" feet="7" corpse="33011" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="1" />
@@ -27,6 +27,6 @@
 	</voices>
 	<loot>
 		<item id="2148" name="gold coin" chance="62500" countmax="10" />
-		<item name="torch" chance="12500" />
+		<item id="2050" name="torch" chance="12500" />
 	</loot>
 </monster>

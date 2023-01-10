@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Black Vixen" nameDescription="Black Vixen" race="blood" experience="3200" speed="200">
 	<health now="3200" max="3200" />
-	<look type="1038" corpse="0" />
+	<look type="1038" corpse="30370" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />

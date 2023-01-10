@@ -46,7 +46,7 @@
 		<immunity drunk="1" />
 	</immunities>
 	<loot>
-		<item name="giant shimmering pearl" chance="50000" />
+		<item id="7632" name="giant shimmering pearl" chance="50000" />
 		<item id="15436" name="obujos' shell" chance="50000" />
 	</loot>
 </monster>

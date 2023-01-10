@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Makeshift Home" nameDescription="a makeshift home" race="blood" experience="1800" speed="0">
 	<health now="6900" max="6900" />
-	<look typeex="0" corpse="0" />
+	<look typeex="30022" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -15,9 +15,9 @@
 		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" min="-120" max="-200" />
+		<attack name="melee" interval="2000" min="0" max="-200" />
 		<attack name="physical" interval="2000" chance="60" range="3" target="1" min="-70" max="-230">
-		<attribute key="shootEffect" value="arrow" />
+			<attribute key="shootEffect" value="arrow" />
 		</attack>
 	</attacks>
 	<immunities>

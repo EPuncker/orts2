@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Ancient Spawn Of Morgathla" nameDescription="Ancient Spawn Of Morgathla" race="blood" experience="2400" speed="270">
+<monster name="Ancient Spawn Of Morgathla" nameDescription="Ancient Spawn Of Morgathla" race="vermin" experience="2400" speed="270">
 	<health now="50000" max="50000" />
 	<look type="1067" corpse="23375" />
 	<targetchange interval="2000" chance="5" />
@@ -15,7 +15,7 @@
 		<flag canwalkonpoison="0" />
 	</flags>
 	<attacks>
-		<attack name="melee" interval="2000" skill="90" attack="80" />
+		<attack name="melee" interval="2000" min="0" max="-410" />
 		<attack name="lifedrain" interval="2000" chance="8" range="7" radius="5" target="1" min="-135" max="-280">
 			<attribute key="shootEffect" value="whirlwindaxe" />
 			<attribute key="areaEffect" value="redspark" />
@@ -60,7 +60,7 @@
 		<item id="2135" name="scarab amulet" chance="18947" />
 		<item id="2154" name="yellow gem" chance="17895" countmax="2" />
 		<item id="2160" name="crystal coin" chance="16842" countmax="2" />
-		<item name="giant shimmering pearl" chance="15789" countmax="2" />
+		<item id="7632" name="giant shimmering pearl" chance="15789" countmax="2" />
 		<item id="2149" name="small emerald" chance="15789" countmax="20" />
 		<item id="8910" name="underworld rod" chance="15789" />
 		<item id="2150" name="small amethyst" chance="14737" countmax="20" />

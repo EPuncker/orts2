@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Stonerefiner" nameDescription="a stonerefiner" race="blood" experience="500" speed="220">
 	<health now="800" max="800" />
-	<look type="1032" corpse="0" />
+	<look type="1032" corpse="30192" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -15,7 +15,10 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-100" />
-		<attack name="berserk" interval="2000" chance="15" min="0" max="-70" />
+		<attack name="physical" interval="2000" chance="15" min="0" max="-70" />
+			<attribute key="shootEffect" value="spear" />
+		</attack>
+	</attacks>
 	</attacks>
 	<defenses armor="20" defense="20" />
 	<immunities>

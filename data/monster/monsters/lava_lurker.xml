@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lava Lurker" nameDescription="a lava lurker" race="fire" experience="4000" speed="116">
 	<health now="5900" max="5900" />
-	<look type="1041" corpse="0" />
+	<look type="1041" corpse="30242" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />

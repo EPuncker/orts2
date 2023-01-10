@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Reflection Of A Mage" nameDescription="a reflection of a Mage" experience="3250" speed="0">
+<monster name="Reflection Of A Mage" nameDescription="a reflection of a Mage" race="blood" experience="3250" speed="0">
 	<health now="3500" max="3500" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="416" corpse="13834" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,12 +13,26 @@
 		<flag canwalkonfire="0" />
 		<flag canwalkonpoison="0" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-78" />
+		<attack name="energy" interval="2000" chance="35" range="7" target="1" radius="5" min="-100" max="-200">
+			<attribute key="shootEffect" value="energyball" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="15" range="7" min="-100" max="-200" />
+		<attack name="energyfield" interval="2000" chance="15" range="7" radius="2" target="1">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="20" length="8" spread="0" min="-101" max="-300">
+			<attribute key="areaEffect" value="bigclouds" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drunk="1" />
 	</immunities>
-	<defenses armor="30" defense="30" />
 	<loot>
 		<item id="2148" name="gold coin" chance="100000" countmax="373" />
 		<item id="2114" name="piggy bank" chance="80000" />

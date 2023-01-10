@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Mole" nameDescription="a mole" race="blood" experience="100" speed="160">
 	<health now="200" max="200" />
-	<look type="1048" corpse="0" />
+	<look type="1048" corpse="30302" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

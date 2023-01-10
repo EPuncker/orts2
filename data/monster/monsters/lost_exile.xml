@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lost Exile" nameDescription="a lost exile" race="blood" experience="1800" speed="250">
 	<health now="1600" max="1600" />
-	<look type="537" corpse="0" />
+	<look type="537" corpse="19964" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

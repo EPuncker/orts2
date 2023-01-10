@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Shadowpelt" nameDescription="Shadowpelt" race="blood" experience="4600" speed="230">
 	<health now="6000" max="6000" />
-	<look type="1040" corpse="0" />
+	<look type="1040" corpse="30378" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag isboss="1" />

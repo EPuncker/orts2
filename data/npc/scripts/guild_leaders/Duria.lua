@@ -8,11 +8,12 @@ function onCreatureSay(cid, type, msg)		npcHandler:onCreatureSay(cid, type, msg)
 function onThink()							npcHandler:onThink()						end
 
 -- Spells Keyword:
-keywordHandler:addSpellKeyword({"find person"}, {npcHandler = npcHandler, spellName = "Find Person", price = 80, level = 8, vocation = VOCATION_KNIGHT})
-keywordHandler:addSpellKeyword({"light"}, {npcHandler = npcHandler, spellName = "Light", price = 0, level = 8, vocation = VOCATION_KNIGHT})
+keywordHandler:addSpellKeyword({"bruise bane"}, {npcHandler = npcHandler, spellName = "Bruise Bane", price = 0, level = 1, vocation = VOCATION_KNIGHT})
 keywordHandler:addSpellKeyword({"cure poison"}, {npcHandler = npcHandler, spellName = "Cure Poison", price = 150, level = 10, vocation = VOCATION_KNIGHT})
-keywordHandler:addSpellKeyword({"wound cleansing"}, {npcHandler = npcHandler, spellName = "Wound Cleansing", price = 0, level = 8, vocation = VOCATION_KNIGHT})
+keywordHandler:addSpellKeyword({"find person"}, {npcHandler = npcHandler, spellName = "Find Person", price = 80, level = 8, vocation = VOCATION_KNIGHT})
 keywordHandler:addSpellKeyword({"great light"}, {npcHandler = npcHandler, spellName = "Great Light", price = 500, level = 13, vocation = VOCATION_KNIGHT})
+keywordHandler:addSpellKeyword({"light"}, {npcHandler = npcHandler, spellName = "Light", price = 0, level = 8, vocation = VOCATION_KNIGHT})
+keywordHandler:addSpellKeyword({"wound cleansing"}, {npcHandler = npcHandler, spellName = "Wound Cleansing", price = 0, level = 8, vocation = VOCATION_KNIGHT})
 
 -- Transcripts:
 keywordHandler:addKeyword({"healing spells"}, StdModule.say, {npcHandler = npcHandler, text = "In this category I have {Wound Cleansing} and {Cure Poison}."})

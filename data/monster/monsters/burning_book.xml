@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Burning Book" nameDescription="a burning book" experience="11934" speed="440">
+<monster name="Burning Book" nameDescription="a burning book" race="fire" experience="11934" speed="440">
 	<health now="18000" max="18000" />
 	<look type="1061" head="79" body="113" legs="78" feet="112" addons="0" corpse="0" />
 	<targetchange interval="2000" chance="5" />
@@ -27,6 +27,12 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 		<attack name="fire" interval="2000" chance="15" min="-650" max="-900" radius="3" target="0">
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" length="5" spread="0" min="-400" max="-850">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="physical" interval="1500" chance="12" radius="3" min="-500" max="-900">
 			<attribute key="areaEffect" value="explosionarea" />
 		</attack>
 	</attacks>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Biting Book" nameDescription="a biting book" experience="9350" speed="480">
+<monster name="Biting Book" nameDescription="a biting book" race="undead" experience="9350" speed="480">
 	<health now="6500" max="6500" />
-	<look type="1066" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+	<look type="1066" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,15 +13,6 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
-	<immunities>
-		<immunity paralyze="1" />
-		<immunity invisible="1" />
-		<immunity drunk="1" />
-	</immunities>
-	<elements>
-		<element physicalPercent="50" />
-		<element deathPercent="0" />
-	</elements>
 	<attacks>
 		<attack name="melee" interval="2000" min="0" max="-1055" />
 		<attack name="physical" interval="2000" chance="15" min="0" max="-1210" range="3" radius="1" target="1">
@@ -35,6 +26,15 @@
 		</attack>
 	</attacks>
 	<defenses armor="76" defense="76" />
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drunk="1" />
+	</immunities>
+	<elements>
+		<element physicalPercent="50" />
+		<element deathPercent="0" />
+	</elements>
 	<loot>
 		<item id="2152" name="platinum coin" chance="75075" countmax="55" />
 		<item id="31225" name="book page" chance="61595" countmax="6" />

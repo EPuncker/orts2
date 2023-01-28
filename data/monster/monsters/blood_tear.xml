@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Blood Tear" nameDescription="a blood tear" experience="0" speed="0">
-	<health now="3500" max="3500" />
-	<look type="0" head="0" body="0" legs="0" feet="0" addons="0" corpse="0" />
+<monster name="Blood Tear" nameDescription="a blood tear" race="fire" experience="0" speed="116">
+	<health now="1000" max="1000" />
+	<look type="1041" corpse="0" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />

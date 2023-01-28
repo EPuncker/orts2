@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Brain Squid" nameDescription="a brain squid" experience="17672" speed="430">
+<monster name="Brain Squid" nameDescription="a brain squid" race="undead" experience="17672" speed="430">
 	<health now="18000" max="18000" />
 	<look type="1059" head="17" body="41" legs="77" feet="57" addons="0" corpse="0" />
 	<targetchange interval="2000" chance="5" />
@@ -13,6 +13,16 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="-100" max="-200" />
+		<attack name="energy" interval="2000" chance="15" range="7" min="-200" max="-470">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="13" radius="3" min="-200" max="-505">
+			<attribute key="areaEffect" value="energyarea" />
+		</attack>
+	</attacks>
+	<defenses armor="78" defense="78" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -23,7 +33,6 @@
 		<element holyPercent="100" />
 		<element deathPercent="-15" />
 	</elements>
-	<defenses armor="78" defense="78" />
 	<loot>
 		<item id="2152" name="platinum coin" chance="75181" countmax="20" />
 		<item id="18414" name="violet crystal shard" chance="34219" countmax="4" />

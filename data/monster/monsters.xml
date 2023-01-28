@@ -799,6 +799,7 @@
 	<monster name="Ravenous Beyondling" file="monsters/ravenous_beyondling.xml" />
 	<monster name="Ravenous Hunger" file="monsters/ravenous_hunger.xml" />
 	<monster name="Raxias" file="monsters/raxias.xml" />
+	<monster name="Ravenous Hunger" file="monsters/ravenous_hunger.xml" />
 	<monster name="Razzagorn" file="monsters/razzagorn.xml" />
 	<monster name="Red Butterfly" file="monsters/red_butterfly.xml" />
 	<monster name="Redeemed Soul" file="monsters/redeemed_soul.xml" />
@@ -934,6 +935,7 @@
 	<monster name="Stolen Knowledge Of Summoning" file="monsters/stolen_knowledge_of_summoning.xml" />
 	<monster name="Stolen Soul" file="monsters/stolen_soul.xml" />
 	<monster name="Stolen Tome Of Portals" file="monsters/stolen_tome_of_portals.xml" />
+	<monster name="Stolen Soul" file="monsters/stolen_soul.xml" />
 	<monster name="Stone Devourer" file="monsters/stone_devourer.xml" />
 	<monster name="Stone Golem" file="monsters/stone_golem.xml" />
 	<monster name="Stone Rhino" file="monsters/stone_rhino.xml" />

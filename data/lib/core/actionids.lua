@@ -4,3 +4,6 @@ actionIds = {
 	drawWell = 106, -- draw well teleport
 	levelDoor = 1000, -- level door
 }
+
+uniqueIds = {
+}

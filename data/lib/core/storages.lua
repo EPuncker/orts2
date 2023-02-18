@@ -1,3 +1,80 @@
+--[[
+Reserved player storage ranges:
+- 300000 to 301000+ reserved for achievements
+- 20000 to 21000+ reserved for achievement progress
+- 10000000 to 20000000 reserved for outfits and mounts on source
+]]--
+
+AccountStorageKeys = {
+}
+
+GlobalStorageKeys = {
+	FuryGates = 100,
+
+	TheirMastersVoice = {
+		CurrentServantWave = 984,
+		ServantsKilled = 985
+	},
+
+	InServiceOfYalahar = {
+		LastFight = 982,
+		WarGolemsMachine1 = 23700,
+		WarGolemsMachine2 = 23701
+	},
+
+	Yakchal = 987,
+	PitsOfInfernoLevers = 1000,
+	Warzones = 3143,
+	Weeper = 3144,
+
+	Versperoth = {
+		Battle = 3147,
+		Health = 3148
+	},
+
+	WrathOfTheEmperor = {
+		Light01 = 8018,
+		Light02 = 8019,
+		Light03 = 8020,
+		Light04 = 8021,
+
+		Bosses = {
+			Fury = 3189,
+			Wrath = 3190,
+			Scorn = 3191,
+			Spite = 3192
+		}
+	},
+
+	ElementalSphere = {
+		BossRoom = 10004,
+
+		KnightBoss = 8568,
+		SorcererBoss = 8569,
+		PaladinBoss = 8570,
+		DruidBoss = 8578,
+
+		Machine1 = 10005,
+		Machine2 = 10006,
+		Machine3 = 10007,
+		Machine4 = 10008
+	},
+
+	TheAncientTombs = {
+		ThalasSwitchesGlobalStorage = 200,
+		DiprathSwitchesGlobalStorage = 201,
+		AshmunrahSwitchesGlobalStorage = 202
+	},
+
+	WorldBoard = {
+		Yasir = 10100,
+	},
+
+	NaginataStone = 50058,
+	SwordOfFury = 5635,
+	CobraBastionFlask = 50059,
+}
+
 PlayerStorageKeys = {
 	SweetyCyclops = {
 		AmuletTimer = 48,
@@ -988,71 +1065,4 @@ PlayerStorageKeys = {
 	combatProtectionStorage = 50722,
 	achievementsBase = 300000,
 	achievementsCounter = 20000,
-}
-
-GlobalStorageKeys = {
-	FuryGates = 100,
-
-	TheirMastersVoice = {
-		CurrentServantWave = 984,
-		ServantsKilled = 985
-	},
-
-	InServiceOfYalahar = {
-		LastFight = 982,
-		WarGolemsMachine1 = 23700,
-		WarGolemsMachine2 = 23701
-	},
-
-	Yakchal = 987,
-	PitsOfInfernoLevers = 1000,
-	Warzones = 3143,
-	Weeper = 3144,
-
-	Versperoth = {
-		Battle = 3147,
-		Health = 3148
-	},
-
-	WrathOfTheEmperor = {
-		Light01 = 8018,
-		Light02 = 8019,
-		Light03 = 8020,
-		Light04 = 8021,
-
-		Bosses = {
-			Fury = 3189,
-			Wrath = 3190,
-			Scorn = 3191,
-			Spite = 3192
-		}
-	},
-
-	ElementalSphere = {
-		BossRoom = 10004,
-
-		KnightBoss = 8568,
-		SorcererBoss = 8569,
-		PaladinBoss = 8570,
-		DruidBoss = 8578,
-
-		Machine1 = 10005,
-		Machine2 = 10006,
-		Machine3 = 10007,
-		Machine4 = 10008
-	},
-
-	TheAncientTombs = {
-		ThalasSwitchesGlobalStorage = 200,
-		DiprathSwitchesGlobalStorage = 201,
-		AshmunrahSwitchesGlobalStorage = 202
-	},
-
-	WorldBoard = {
-		Yasir = 10100,
-	},
-
-	NaginataStone = 50058,
-	SwordOfFury = 5635,
-	CobraBastionFlask = 50059,
 }

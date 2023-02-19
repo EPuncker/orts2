@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Cursed Book" nameDescription="a cursed book" experience="13345" speed="440">
+<monster name="Cursed Book" nameDescription="a cursed book" race="ink" experience="13345" speed="440">
 	<health now="20000" max="20000" />
-	<look type="1061" head="79" body="81" legs="93" feet="0" addons="0" corpse="0" />
+	<look type="1061" head="79" body="81" legs="93" feet="0" addons="0" corpse="31470" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag pushable="0" />
@@ -13,6 +13,19 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-200" />
+		<attack name="physical" interval="1000" chance="15" range="7" min="-400" max="-680">
+			<attribute key="shootEffect" value="eartharrow" />
+		</attack>
+		<attack name="lifedrain" interval="1000" chance="10" length="5" spread="0" min="-400" max="-575">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="physical" interval="1000" chance="12" range="7" radius="3" min="-230" max="-880">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+	</attacks>
+	<defenses armor="82" defense="82" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -22,7 +35,6 @@
 		<element energyPercent="-10" />
 		<element earthPercent="100" />
 	</elements>
-	<defenses armor="82" defense="82" />
 	<loot>
 		<item id="2152" name="platinum coin" chance="75498" countmax="15" />
 		<item id="31225" name="book page" chance="64750" countmax="4" />

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<monster name="Falcon Paladin" nameDescription="a falcon paladin" experience="6544" speed="220">
+<monster name="Falcon Paladin" nameDescription="a falcon paladin" race="blood" experience="6544" speed="220">
 	<health now="8500" max="8500" />
-	<look type="1071" head="57" body="96" legs="38" feet="105" addons="2" corpse="0" />
+	<look type="1071" head="57" body="96" legs="38" feet="105" addons="2" corpse="31382" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag ignorespawnblock="1" />
@@ -14,6 +14,23 @@
 		<flag canwalkonfire="1" />
 		<flag canwalkonpoison="1" />
 	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-250" />
+		<attack name="physical" interval="2000" chance="50" range="5" target="1" min="-400" max="-550">
+			<attribute key="shootEffect" value="royalspear" />
+		</attack>
+		<attack name="physical" interval="2000" chance="20" range="5" target="1" min="-200" max="500">
+			<attribute key="shootEffect" value="bolt" />
+		</attack>
+		<attack name="energy" interval="2000" chance="15" range="7" radius="2" target="1" min="-350" max="-450">
+			<attribute key="shootEffect" value="powerbolt" />
+			<attribute key="areaEffect" value="energy" />
+		</attack>
+		<attack name="energy" interval="2000" chance="10" length="5" spread="0" min="-250" max="-350">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+	</attacks>
+	<defenses armor="82" defense="82" />
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
@@ -24,7 +41,6 @@
 		<element holyPercent="-10" />
 		<element deathPercent="50" />
 	</elements>
-	<defenses armor="82" defense="82" />
 	<voices interval="1000" chance="5">
 		<voice sentence="Uuunngh!" />
 	</voices>

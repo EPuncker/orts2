@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <actions>
-	<!-- Weapons Enchanting (Gems) -->
+	<!-- Enchanting -->
 	<action fromid="2146" toid="2147" script="others/enchanting.lua" />
 	<action fromid="2149" toid="2150" script="others/enchanting.lua" />
+	<action itemid="2342" script="others/enchanting.lua" />
 	<action fromid="7759" toid="7762" script="others/enchanting.lua" />
+	<action itemid="24739" script="others/enchanting.lua" />
 
 	<!-- Market -->
 	<action itemid="14405" function="market" />

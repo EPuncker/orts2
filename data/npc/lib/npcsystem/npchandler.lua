@@ -539,6 +539,7 @@ if not NpcHandler then
 				return
 			end
 		end
+		return false
 	end
 
 	-- Simply calls the underlying unGreet function.

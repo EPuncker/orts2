@@ -28,8 +28,8 @@ local stoneKeyword = keywordHandler:addKeyword({'adventurer\'s stone'}, StdModul
 
 local stoneKeyword = keywordHandler:addKeyword({'adventurer\'s stone'}, StdModule.say, {npcHandler = npcHandler, text = 'Ah, you want to replace your adventurer\'s stone for 30 gold?'})
 	stoneKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Here you are. Take care.', reset = true},
-		function(player) return player:getMoney() >= 30 end,
-		function(player) player:removeMoney(30) player:addItem(18559, 1) end
+		function(player) return player:getTotalMoney() >= 30 end,
+		function(player) player:removeTotalMoney(30) player:addItem(18559, 1) end
 	)
 	stoneKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Sorry, you don\'t have enough money.', reset = true})
 	stoneKeyword:addChildKeyword({''}, StdModule.say, {npcHandler = npcHandler, text = 'No problem.', reset = true})

@@ -23,8 +23,8 @@ function BeggarFirst(cid, message, keywords, parameters, node)
 	local player = Player(cid)
 	if player:isPremium() then
 		if player:getStorageValue(PlayerStorageKeys.OutfitQuest.BeggarFirstAddon) == -1 then
-			if player:getItemCount(5883) >= 100 and player:getMoney() >= 20000 then
-				if player:removeItem(5883, 100) and player:removeMoney(20000) then
+			if player:getItemCount(5883) >= 100 and player:getTotalMoney() >= 20000 then
+				if player:removeItem(5883, 100) and player:removeTotalMoney(20000) then
 					npcHandler:say("Ah, right! The beggar beard or beggar dress! Here you go.", cid)
 					player:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 					player:setStorageValue(PlayerStorageKeys.OutfitQuest.BeggarFirstAddon, 1)
@@ -99,7 +99,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:releaseFocus(cid)
 			npcHandler:resetNpc(cid)
 		elseif npcHandler.topic[cid] == 2 then
-			if not player:removeMoney(100) then
+			if not player:removeTotalMoney(100) then
 				npcHandler:say('You haven\'t got enough money for me.', cid)
 				npcHandler.topic[cid] = 0
 				return true
@@ -108,7 +108,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('Thank you very much. Can you spare 500 more gold pieces for me? I will give you a nice hint.', cid)
 			npcHandler.topic[cid] = 3
 		elseif npcHandler.topic[cid] == 3 then
-			if not player:removeMoney(500) then
+			if not player:removeTotalMoney(500) then
 				npcHandler:say('Sorry, that\'s not enough.', cid)
 				npcHandler.topic[cid] = 0
 				return true
@@ -117,7 +117,7 @@ local function creatureSayCallback(cid, type, msg)
 			npcHandler:say('That\'s great! I have stolen something from Dermot. You can buy it for 200 gold. Do you want to buy it?', cid)
 			npcHandler.topic[cid] = 4
 		elseif npcHandler.topic[cid] == 4 then
-			if not player:removeMoney(200) then
+			if not player:removeTotalMoney(200) then
 				npcHandler:say('Pah! I said 200 gold. You don\'t have that much.', cid)
 				npcHandler.topic[cid] = 0
 				return true

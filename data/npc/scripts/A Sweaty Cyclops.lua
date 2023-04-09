@@ -107,12 +107,12 @@ local function creatureSayCallback(cid, type, msg)
 				npcHandler.topic[cid] = 0
 			end
 		elseif npcHandler.topic[cid] == 9 then
-			if player:getItemCount(8262) > 0 and player:getItemCount(8263) > 0 and player:getItemCount(8264) > 0 and player:getItemCount(8265) > 0 and player:getMoney() >= 5000 then
+			if player:getItemCount(8262) > 0 and player:getItemCount(8263) > 0 and player:getItemCount(8264) > 0 and player:getItemCount(8265) > 0 and player:getTotalMoney() >= 5000 then
 				player:removeItem(8262, 1)
 				player:removeItem(8263, 1)
 				player:removeItem(8264, 1)
 				player:removeItem(8265, 1)
-				player:removeMoney(5000)
+				player:removeTotalMoney(5000)
 				player:setStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletTimer, os.time())
 				player:setStorageValue(PlayerStorageKeys.SweetyCyclops.AmuletStatus, 1)
 				npcHandler:say("Well, well, I do that! Big Ben makes lil' amulet unbroken with big hammer in big hands! No worry! Come back after sun hits the horizon 24 times and ask me for amulet.", cid)

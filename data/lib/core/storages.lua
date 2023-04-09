@@ -1,3 +1,81 @@
+--[[
+Reserved player storage ranges:
+- 300000 to 301000+ reserved for achievements
+- 20000 to 21000+ reserved for achievement progress
+- 10000000 to 20000000 reserved for outfits and mounts on source
+]] --
+
+AccountStorageKeys = {}
+
+GlobalStorageKeys = {
+	FuryGates = 100,
+
+	TheirMastersVoice = {
+		CurrentServantWave = 984,
+		ServantsKilled = 985
+	},
+
+	InServiceOfYalahar = {
+		LastFight = 982,
+		WarGolemsMachine1 = 23700,
+		WarGolemsMachine2 = 23701
+	},
+
+	Yakchal = 987,
+	PitsOfInfernoLevers = 1000,
+	Warzones = 3143,
+	Weeper = 3144,
+
+	Versperoth = {
+		Battle = 3147,
+		Health = 3148
+	},
+
+	WrathOfTheEmperor = {
+		Light01 = 8018,
+		Light02 = 8019,
+		Light03 = 8020,
+		Light04 = 8021,
+		Bosses = {
+			Fury = 3189,
+			Wrath = 3190,
+			Scorn = 3191,
+			Spite = 3192
+		}
+	},
+
+	ElementalSphere = {
+		BossRoom = 10004,
+		KnightBoss = 8568,
+		SorcererBoss = 8569,
+		PaladinBoss = 8570,
+		DruidBoss = 8578,
+		Machine1 = 10005,
+		Machine2 = 10006,
+		Machine3 = 10007,
+		Machine4 = 10008
+	},
+
+	TheAncientTombs = {
+		ThalasSwitchesGlobalStorage = 200,
+		DiprathSwitchesGlobalStorage = 201,
+		AshmunrahSwitchesGlobalStorage = 202
+	},
+
+	WorldBoard = {
+		Yasir = 10100,
+		NightmareIsle = {
+			ankrahmunNorthEast = 10200,
+			darashiaNorth = 10201,
+			darashiaNorthWest = 10202
+		}
+	},
+
+	NaginataStone = 50058,
+	SwordOfFury = 5635,
+	CobraBastionFlask = 50059
+}
+
 PlayerStorageKeys = {
 	SweetyCyclops = {
 		AmuletTimer = 48,
@@ -24,7 +102,7 @@ PlayerStorageKeys = {
 		Mission06 = 106,
 		Mission07 = 107,
 		packageDoor = 108
-	},
+   },
 
 	DjinnWar = {
 		Faction = {
@@ -65,7 +143,6 @@ PlayerStorageKeys = {
 		QuestLine = 900,
 		Test = 901,
 		Shooting = 902,
-
 		MelodyTone1 = 904,
 		MelodyTone2 = 905,
 		MelodyTone3 = 906,
@@ -73,48 +150,36 @@ PlayerStorageKeys = {
 		MelodyTone5 = 908,
 		MelodyTone6 = 909,
 		MelodyTone7 = 910,
-
 		MelodyStatus = 911,
-
 		Rank = 921,
-
 		MissionCrystalKeeper = 930,
 		CrystalKeeperTimout = 931,
 		RepairedCrystalCount = 932,
-
 		MissionRaidersOfTheLostSpark = 933,
 		ExtractedCount = 934,
 		RaidersOfTheLostSparkTimeout = 935,
-
 		MissionExterminators = 936,
 		ExterminatedCount = 937,
 		ExterminatorsTimeout = 938,
-
 		MissionMushroomDigger = 939,
 		MushroomCount = 940,
 		MushroomDiggerTimeout = 941,
-
 		MissionMatchmaker = 942,
 		MatchmakerStatus = 943,
 		MatchmakerTimeout = 944,
-
 		MissionTinkersBell = 945,
 		GolemCount = 946,
 		TinkerBellTimeout = 947,
-
 		MissionSporeGathering = 948,
 		SporeCount = 949,
 		SporeGatheringTimeout = 950,
-
 		MissionGrindstoneHunt = 951,
 		GrindstoneStatus = 952,
 		GrindstoneTimeout = 953,
-
 		WarzoneStatus = 954,
 		Warzone1Access = 955,
 		Warzone2Access = 956,
 		Warzone3Access = 957,
-
 		Warzone1Reward = 958,
 		Warzone2Reward = 959,
 		Warzone3Reward = 960
@@ -224,21 +289,18 @@ PlayerStorageKeys = {
 	Oramond = {
 		QuestLine = 10060,
 		VotingPoints = 10061,
-
 		MissionToTakeRoots = 20060,
-		HarvestedRootCount = 20061,
+		HarvestedRootCount = 20061
 	},
 
 	RathletonQuest = {
 		QuestLine = 10080,
 		VotesCasted = 10081,
-
-		Rank = 10082,
+		Rank = 10082
 	},
 
 	OutfitQuest = {
 		DefaultStart = 12010, -- until all outfit quests are completed
-
 		Afflicted = {
 			Outfit = 12005,
 			AddonPlagueMask = 12006,
@@ -249,7 +311,6 @@ PlayerStorageKeys = {
 			-- Mission storages for temporary questlog entries
 			MissionHat = 12009,
 			AddonHat = 12011,
-
 			MissionBackpack = 12008,
 			AddonBackpack = 12012,
 			AddonBackpackTimer = 12017
@@ -258,16 +319,13 @@ PlayerStorageKeys = {
 		-- Begger Outfit Quest
 		BeggarFirstAddon = 22029,
 		BeggarSecondAddon = 22030,
-
 		-- Druid-outfit Quest
 		DruidHatAddon = 12013,
 		DruidBodyAddon = 12014,
 		DruidAmuletDoor = 12020,
-
 		-- Barbarian-outfit Quest
 		BarbarianAddon = 12015,
 		BarbarianAddonWaitTimer = 12016,
-
 		-- Beggar
 		BeggarOutfit = 12018,
 		BeggarOutfitTimer = 12019,
@@ -299,27 +357,21 @@ PlayerStorageKeys = {
 		-- Nobleman Outfit
 		NoblemanFirstAddon = 12069,
 		NoblemanSecondAddon = 12070,
-
 		-- Norseman-outfit Quest
 		NorsemanAddon = 12065,
-
 		-- Warrior-outfit Quest
 		WarriorShoulderAddon = 12067,
 		WarriorSwordAddon = 12068,
 		WarriorShoulderTimer = 12071,
-
 		-- Wizard-outfit Quest
 		WizardAddon = 12066,
-
 		-- Pirate-outfit Quest
 		PirateSabreAddon = 50002,
 		PirateHatAddon = 22034,
-
 		-- Assassin Outfit
 		AssassinBaseOutfit = 50080,
 		AssassinFirstAddon = 50081,
 		AssassinSecondAddon = 50082,
-
 		NightmareOutfit = 50083,
 		NightmareDoor = 3040,
 		BrotherhoodOutfit = 50084,
@@ -542,10 +594,10 @@ PlayerStorageKeys = {
 		platinumReward = 12372,
 		backpackReward = 12373,
 		mainReward = 12374,
-
 		-- never set just added here
 		TeleportAccess = 1060
 	},
+
 	FriendsandTraders = {
 		DefaultStart = 12400,
 		TheSweatyCyclops = 12401,
@@ -567,7 +619,6 @@ PlayerStorageKeys = {
 		Mission10 = 12459,
 		Rank = 12460,
 		Door = 12461,
-
 		TravelCarlin = 251,
 		TravelEdron = 252,
 		TravelVenore = 253,
@@ -590,6 +641,7 @@ PlayerStorageKeys = {
 	},
 
 	CaptainHaba = 12540,
+
 	secretService = {
 		Quest = 12550,
 		TBIMission01 = 12551,
@@ -680,12 +732,10 @@ PlayerStorageKeys = {
 	KillingInTheNameOf = {
 		LugriNecromancers = 50000,
 		LugriNecromancerCount = 50001,
-
 		MissionTiquandasRevenge = 22222,
 		TiquandasRevengeTeleport = 22555,
 		MissionDemodras = 22223,
 		DemodrasTeleport = 22556
-
 	},
 
 	QueenOfBansheesQuest = {
@@ -696,7 +746,6 @@ PlayerStorageKeys = {
 		FifthSeal = 50015,
 		SixthSeal = 50014,
 		LastSeal = 50021,
-
 		ThirdSealWarlocks = 50017,
 		Kiss = 50020
 	},
@@ -728,7 +777,6 @@ PlayerStorageKeys = {
 		Done = 1010,
 		Progress = 1013,
 		Squares = 1014,
-
 		AxeBlowsBird = 8288,
 		AxeBlowsLeft = 8289,
 		AxeBlowsRight = 8290,
@@ -738,19 +786,15 @@ PlayerStorageKeys = {
 	SvargrondArena = {
 		Arena = 1100,
 		Pit = 1101,
-
 		QuestLogGreenhorn = 50140,
 		QuestLogScrapper = 50141,
 		QuestLogWarlord = 50142,
-
 		RewardGreenhorn = 26300,
 		RewardScrapper = 27300,
 		RewardWarlord = 28300,
-
 		TrophyGreenhorn = 1103,
 		TrophyScrapper = 1105,
 		TrophyWarlord = 1107,
-
 		-- Reward Doors
 		Greenhorn = 26100,
 		Scrapper = 27100,
@@ -761,56 +805,40 @@ PlayerStorageKeys = {
 		-- Todo: Move to a seperate range
 		KosheiTheDeathlessLegs = 3067,
 		KosheiTheDeathlessGold = 3068,
-
 		TutorialShovel = 50093,
 		TutorialRope = 50094,
-
 		DemonHelmetQuestDemonShield = 2212,
 		DemonHelmetQuestDemonHelmet = 2213,
 		DemonHelmetQuestSteelBoots = 2214,
-
 		FormorgarMinesHoistSkeleton = 3057,
 		FormorgarMinesHoistChest = 3058,
-
 		-- Custom Quests, currently not using system.lua (aid 2000)
 		BlackKnightTreeCrownShield = 490,
 		BlackKnightTreeCrownArmor = 491,
 		BlackKnightTreeKey = 9196,
-
 		KosheiAmulet1 = 3062,
 		KosheiAmulet2 = 3064,
-
 		SilverBrooch = 9185,
 		FamilyBrooch = 2286,
-
 		DCQGhoul = 9155,
-
 		FirewalkerBoots = 9130,
-
 		DeeperFibulaKey = 9136,
-
 		SixRubiesQuest = 50057,
-
 		ParchmentRoomQuest = 60994,
-
 		FathersBurdenQuestWood = 3500,
 		FathersBurdenQuestIron = 3501,
 		FathersBurdenQuestRoot = 3502,
 		FathersBurdenQuestCrystal = 3503,
 		FathersBurdenQuestSilk = 3504,
 		FathersBurdenQuestCloth = 3505,
-
 		OutlawCampKey1 = 3301,
 		OutlawCampKey2 = 3302,
 		OutlawCampKey3 = 3303,
-
 		DoubletQuest = 64121,
 		HoneyFlower = 64131,
 		BananaPalm = 64132,
-
 		WhisperMoss = 50033,
 		OldParchment = 50034,
-
 		DragahsSpellbook = 50148
 	},
 
@@ -818,9 +846,7 @@ PlayerStorageKeys = {
 		ShortcutHub = 8819,
 		ShortcutLevers = 8818,
 		Pumin = 50096,
-
 		WeaponReward = 10544,
-
 		ThroneInfernatil = 2080,
 		ThroneTafariel = 2081,
 		ThroneVerminor = 2082,
@@ -889,6 +915,7 @@ PlayerStorageKeys = {
 		SpecialLeaves = 3922,
 		Cigar = 3923,
 		Contract = 3924,
+
 		CookieDelivery = {
 			SimonTheBeggar = 3925,
 			Markwin = 3926,
@@ -940,14 +967,12 @@ PlayerStorageKeys = {
 	RentedHorseTimer = 50561,
 	FountainOfLife = 50572,
 	KnightwatchTowerDoor = 9054,
-
 	RookgaardHints = 50700,
 	RookgaardDestiny = 50701,
 
 	AdventurersGuild = {
 		Stone = 50702,
 		MagicDoor = 50703,
-
 		FreeStone = {
 			Azalea = 50706,
 			Brewster = 50707,
@@ -964,7 +989,6 @@ PlayerStorageKeys = {
 			Rahkem = 50725,
 			ZedrulonTheFallen = 50726
 		}
-
 	},
 
 	DreamersChallenge = {
@@ -987,72 +1011,5 @@ PlayerStorageKeys = {
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
 	achievementsBase = 300000,
-	achievementsCounter = 20000,
-}
-
-GlobalStorageKeys = {
-	FuryGates = 100,
-
-	TheirMastersVoice = {
-		CurrentServantWave = 984,
-		ServantsKilled = 985
-	},
-
-	InServiceOfYalahar = {
-		LastFight = 982,
-		WarGolemsMachine1 = 23700,
-		WarGolemsMachine2 = 23701
-	},
-
-	Yakchal = 987,
-	PitsOfInfernoLevers = 1000,
-	Warzones = 3143,
-	Weeper = 3144,
-
-	Versperoth = {
-		Battle = 3147,
-		Health = 3148
-	},
-
-	WrathOfTheEmperor = {
-		Light01 = 8018,
-		Light02 = 8019,
-		Light03 = 8020,
-		Light04 = 8021,
-
-		Bosses = {
-			Fury = 3189,
-			Wrath = 3190,
-			Scorn = 3191,
-			Spite = 3192
-		}
-	},
-
-	ElementalSphere = {
-		BossRoom = 10004,
-
-		KnightBoss = 8568,
-		SorcererBoss = 8569,
-		PaladinBoss = 8570,
-		DruidBoss = 8578,
-
-		Machine1 = 10005,
-		Machine2 = 10006,
-		Machine3 = 10007,
-		Machine4 = 10008
-	},
-
-	TheAncientTombs = {
-		ThalasSwitchesGlobalStorage = 200,
-		DiprathSwitchesGlobalStorage = 201,
-		AshmunrahSwitchesGlobalStorage = 202
-	},
-
-	WorldBoard = {
-		Yasir = 10100,
-	},
-
-	NaginataStone = 50058,
-	SwordOfFury = 5635,
-	CobraBastionFlask = 50059,
+	achievementsCounter = 20000
 }

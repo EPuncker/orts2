@@ -147,23 +147,23 @@ function Player.hasRookgaardShield(self)
 end
 
 function Player.isDruid(self)
-	return table.contains({2, 6}, self:getVocation():getId())
+	return table.contains({VOCATION_DRUID, VOCATION_ELDER_DRUID}, self:getVocation():getId())
 end
 
 function Player.isKnight(self)
-	return table.contains({4, 8}, self:getVocation():getId())
+	return table.contains({VOCATION_KNIGHT, VOCATION_ELITE_KNIGHT}, self:getVocation():getId())
 end
 
 function Player.isPaladin(self)
-	return table.contains({3, 7}, self:getVocation():getId())
+	return table.contains({VOCATION_PALADIN, VOCATION_ROYAL_PALADIN}, self:getVocation():getId())
 end
 
 function Player.isMage(self)
-	return table.contains({1, 2, 5, 6}, self:getVocation():getId())
+	return table.contains({VOCATION_SORCERER, VOCATION_DRUID, VOCATION_MASTER_SORCERER, VOCATION_ELDER_DRUID}, self:getVocation():getId())
 end
 
 function Player.isSorcerer(self)
-	return table.contains({1, 5}, self:getVocation():getId())
+	return table.contains({VOCATION_SORCERER, VOCATION_MASTER_SORCERER}, self:getVocation():getId())
 end
 
 function Player.getPremiumTime(self)
@@ -468,4 +468,26 @@ function Player.addAllMounts(self)
 	for mount = 1, #mounts do
 		self:addMount(mounts[mount].id)
 	end
+end
+
+function Player.setSpecialContainersAvailable(self, available)
+	local msg = NetworkMessage()
+	msg:addByte(0x2A)
+
+	msg:addByte(0x00) -- stash
+	msg:addByte(available and 0x01 or 0x00) -- market
+
+	msg:sendToPlayer(self)
+	msg:delete()
+	return true
+end
+
+function Player.addBankBalance(self, amount)
+	self:setBankBalance(self:getBankBalance() + amount)
+end
+
+function Player.isPromoted(self)
+	local vocation = self:getVocation()
+	local fromVocId = vocation:getDemotion():getId()
+	return vocation:getId() ~= fromVocId
 end

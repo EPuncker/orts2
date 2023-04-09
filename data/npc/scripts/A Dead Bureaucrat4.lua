@@ -15,10 +15,10 @@ local voices = {
 npcHandler:addModule(VoiceModule:new(voices))
 
 local config = {
-	[1] = "S O R C E R E R",
-	[2] = "D R U I D",
-	[3] = "P A L A D I N",
-	[4] = "K N I G H T"
+	[VOCATION_SORCERER] = "S O R C E R E R",
+	[VOCATION_DRUID] = "D R U I D",
+	[VOCATION_PALADIN] = "P A L A D I N",
+	[VOCATION_KNIGHT] = "K N I G H T"
 }
 
 local function greetCallback(cid)

@@ -53,7 +53,7 @@ local function creatureSayCallback(cid, type, msg)
 				return true
 			end
 
-			if player:removeMoney(ARENA[arenaId].price) then
+			if player:removeTotalMoney(ARENA[arenaId].price) then
 				player:setStorageValue(PlayerStorageKeys.SvargrondArena.Pit, 1)
 				npcHandler:say('As you wish! You can pass the door now and enter the teleporter to the pits.', cid)
 

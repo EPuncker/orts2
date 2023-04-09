@@ -85,9 +85,9 @@ keywordHandler:addAliasKeyword({'zerbrus'})
 -- Football
 local footballKeyword = keywordHandler:addKeyword({'football'}, StdModule.say, {npcHandler = npcHandler, text = 'Do you want to buy a football for 111 gold?'})
 	footballKeyword:addChildKeyword({'yes'}, StdModule.say, {npcHandler = npcHandler, text = 'Here you go.', reset = true},
-			function(player) return player:getMoney() >= 111 end,
+			function(player) return player:getTotalMoney() >= 111 end,
 			function(player)
-				if player:removeMoney(111) then
+				if player:removeTotalMoney(111) then
 					player:addItem(2109, 1)
 				end
 			end

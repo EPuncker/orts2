@@ -311,8 +311,7 @@ if not Modules then
 
 	-- Greeting callback function.
 	function FocusModule.onGreet(cid, message, keywords, parameters)
-		parameters.module.npcHandler:onGreet(cid, message)
-		return true
+		return parameters.module.npcHandler:onGreet(cid)
 	end
 
 	-- UnGreeting callback function.

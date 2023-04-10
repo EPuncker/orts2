@@ -77,6 +77,7 @@ function Creature:onTargetCombat(target)
 				end
 			end
 		end
+	end
 	return RETURNVALUE_NOERROR
 end
 

@@ -40,6 +40,7 @@ function onLogin(player)
 	-- Events
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("DropLoot")
+	player:registerEvent("BestiaryKills")
 
 	if player:getStorageValue(PlayerStorageKeys.combatProtectionStorage) <= os.time() then
 		player:setStorageValue(PlayerStorageKeys.combatProtectionStorage, os.time() + 10)

@@ -1012,5 +1012,7 @@ PlayerStorageKeys = {
 	combatProtectionStorage = 50722,
 	achievementsBase = 300000,
 	achievementsCounter = 20000,
+	achievementsTotal = 19999,
+
 	bestiaryKillsBase = 400000,
 }

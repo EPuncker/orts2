@@ -1,5 +1,5 @@
 local setting = {
-	{storage = GlobalStorageKeys.WorldBoard.NightmareIsle.darashiaNorthWest, teleportPosition = Position(33032, 32400, 7)}, 
+	{storage = GlobalStorageKeys.WorldBoard.NightmareIsle.darashiaNorthWest, teleportPosition = Position(33032, 32400, 7)},
 	{storage = GlobalStorageKeys.WorldBoard.NightmareIsle.darashiaNorth, teleportPosition = Position(33215, 32273, 7)},
 	{storage = GlobalStorageKeys.WorldBoard.NightmareIsle.darashiaNorthWest, teleportPosition = Position(33255, 32678, 7)}
 }

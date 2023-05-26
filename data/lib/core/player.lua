@@ -140,10 +140,10 @@ end
 function Player.hasRookgaardShield(self)
 	-- Wooden Shield, Studded Shield, Brass Shield, Plate Shield, Copper Shield
 	return self:getItemCount(2512) > 0
-			or self:getItemCount(2526) > 0
-			or self:getItemCount(2511) > 0
-			or self:getItemCount(2510) > 0
-			or self:getItemCount(2530) > 0
+		or self:getItemCount(2526) > 0
+		or self:getItemCount(2511) > 0
+		or self:getItemCount(2510) > 0
+		or self:getItemCount(2530) > 0
 end
 
 function Player.isDruid(self)
@@ -704,11 +704,11 @@ function Player.sendHighscores(self, entries, params)
 		msg:addU64(entry.points)
 	end
 
-    msg:addByte(0xFF) -- unknown
-    msg:addByte(0x00) -- display loyalty title column
-    msg:addByte(HIGHSCORES_CATEGORIES[params.category].type or 0x00)
+	msg:addByte(0xFF) -- unknown
+	msg:addByte(0x00) -- display loyalty title column
+	msg:addByte(HIGHSCORES_CATEGORIES[params.category].type or 0x00)
 
-    msg:addU32(entries.ts)
+	msg:addU32(entries.ts)
 
 	msg:sendToPlayer(self)
 	msg:delete()

@@ -2,7 +2,7 @@ function Monster:onDropLoot(corpse)
 	local onDropLoot = EventCallback.onDropLoot
 	if onDropLoot then
 		onDropLoot(self, corpse)
-	end	
+	end
 	local player = Player(corpse:getCorpseOwner())
 	if player then
 		player:updateKillTracker(self, corpse)

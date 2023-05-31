@@ -378,7 +378,7 @@ local function onSell(cid, item, subType, amount, ignoreCap, inBackpacks)
 	local player = Player(cid)
 	if items[item].sell then
 		player:addMoney(items[item].sell * amount)
-		player:removeItem(items[item].id, amount, -1, ignoreEquipped) and
+		player:removeItem(items[item].id, amount, -1, ignoreEquipped)
 		return player:sendTextMessage(MESSAGE_INFO_DESCR, "Sold "..amount.."x "..items[item].name.." for "..items[item].sell * amount.." gold.")
 	end
 	return true

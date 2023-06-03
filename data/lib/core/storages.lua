@@ -995,6 +995,7 @@ PlayerStorageKeys = {
 		Reward = 9050
 	},
 
+	-- Misc:
 	goldenOutfit = 30016,
 	Promotion = 30018, -- Promotion Storage cannot be changed, it is set in source code
 	delayLargeSeaShell = 30019,
@@ -1010,9 +1011,12 @@ PlayerStorageKeys = {
 	Factions = 50716,
 	MaryzaCookbook = 50721,
 	combatProtectionStorage = 50722,
-	achievementsBase = 300000,
-	achievementsCounter = 20000,
-	achievementsTotal = 19999,
 
+	-- Achievements:
+	achievementsTotal = 19999,
+	achievementsCounter = 20000,
+	achievementsBase = 300000,
+
+	-- Bestiary:
 	bestiaryKillsBase = 400000,
 }

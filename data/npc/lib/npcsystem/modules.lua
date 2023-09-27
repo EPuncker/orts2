@@ -631,7 +631,7 @@ if not Modules then
 		yesNode = nil,
 		noNode = nil,
 		noText = "",
-		maxCount = 100,
+		maxCount = ITEM_STACK_SIZE,
 		amount = 0
 	}
 

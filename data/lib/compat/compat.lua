@@ -340,12 +340,12 @@ setCombatFormula = Combat.setFormula
 setCombatParam = Combat.setParameter
 
 Combat.setCondition = function(...)
-	print("[Warning] Function Combat.setCondition was renamed to Combat.addCondition and will be removed in the future")
+	print("[Warning - " .. debug.getinfo(2).source:match("@?(.*)") .. "] Function Combat.setCondition was renamed to Combat.addCondition and will be removed in the future")
 	Combat.addCondition(...)
 end
 
 setCombatCondition = function(...)
-	print("[Warning] Function setCombatCondition was renamed to addCombatCondition and will be removed in the future")
+	print("[Warning - " .. debug.getinfo(2).source:match("@?(.*)") .. "] Function setCombatCondition was renamed to addCombatCondition and will be removed in the future")
 	Combat.addCondition(...)
 end
 
@@ -1447,7 +1447,7 @@ function doTileAddItemEx(pos, uid, flags)
 	return false
 end
 
-function table.contains(array, value) return table.contains(array, value) end
+function isInArray(array, value) return table.contains(array, value) end
 
 function doCreateItem(itemid, count, pos)
 	local tile = Tile(pos)

@@ -32,6 +32,7 @@ function loginEvents.onLogin(player)
 	for i = 1, #events do
 		player:registerEvent(events[i])
 	end
+
 	return true
 end
 

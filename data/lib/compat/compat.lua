@@ -1626,3 +1626,7 @@ function table.maxn(t)
 	end
 	return max
 end
+
+function getFormattedWorldTime()
+	return Game.getFormattedWorldTime()
+end
